@@ -96,6 +96,7 @@ export interface CompactModel {
   structured_output: boolean | null
   context_tokens: number | null
   params_b: number | null
+  weights_gb?: number | null
   released: string | null
   aliases: string[]
   releases: number
@@ -138,7 +139,7 @@ export interface ModelRecord extends Omit<CompactModel, "license" | "releases"> 
     structured_output: boolean | null
     context_tokens: number | null
   }
-  footprint: { params_b: number | null; runtimes: string[] }
+  footprint: { params_b: number | null; weights_gb?: number | null; runtimes: string[] }
   license: { id: string; class: string; url: string }
   openness: {
     weights: string

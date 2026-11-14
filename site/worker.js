@@ -211,11 +211,16 @@ async function renderComparison(request, env, ids) {
       "Size",
       records.map((model) => {
         const params = model.footprint?.params_b
+        const gb = model.footprint?.weights_gb
         return chip(
-          params == null ? "Unknown size" : `${params}B`,
-          params == null ? "/models/" : `/models/?min_params=${params}`,
+          params != null ? `${params}B` : gb != null ? `${gb}GB` : "Unknown size",
+          params != null ? `/models/?min_params=${params}` : gb != null ? `/models/?min_size_gb=${gb}` : "/models/",
           "capability",
-          params == null ? "No parameter count is recorded." : "Filter the model index to models of at least this parameter class.",
+          params != null
+            ? "Filter the model index to models of at least this parameter class."
+            : gb != null
+              ? "The model's Hugging Face storage footprint. Filter the model index by size."
+              : "No size is recorded.",
         )
       }),
     ),

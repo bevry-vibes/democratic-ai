@@ -3196,3 +3196,27 @@ html {
 .chip.pill-missing {
   color: #8f2f22 !important;
 }
+
+.tooltip-below:hover::after,
+.tooltip-below:focus-visible::after {
+  top: calc(100% + 0.45rem);
+  bottom: auto;
+}
+
+.badge-commons { --badge-ink: #2f5a40; }
+.badge-reciprocal { --badge-ink: #2f4f7a; }
+.badge-shared { --badge-ink: #6b431f; }
+.badge-closed { --badge-ink: #4a453f; }
+.badge-unproven { --badge-ink: #6b3f5a; }
+.badge-band-very { --badge-ink: #fff7f2; }
+.badge-band-strong { --badge-ink: #7a3524; }
+.badge-band-moderate { --badge-ink: #6b4f12; }
+.badge-band-emerging { --badge-ink: #355364; }
+.badge-band-weak { --badge-ink: #4d4841; }
+.badge-band-self { --badge-ink: var(--ink-faint); }
+.badge-free { --badge-ink: #3f5a3a; }
+
+a.badge:hover,
+a.badge:focus-visible {
+  color: var(--badge-ink, var(--ink));
+}

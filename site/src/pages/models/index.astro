@@ -168,12 +168,14 @@ const allTags = sortTags([...new Set(models.flatMap((model) => model.tags))])
       const licenseValue = params.get("license") ?? ""
       const minContext = Number(params.get("min_context") ?? 0)
       const minParams = Number(params.get("min_params") ?? 0)
+      const minSizeGb = Number(params.get("min_size_gb") ?? 0)
       const minBuilds = Number(params.get("min_builds") ?? 0)
       let visible = 0
       for (const row of rows) {
         const tags = row.dataset.tags?.split(" ") ?? []
         const contextTokens = Number(row.dataset.contextTokens || 0)
         const paramsB = Number(row.dataset.params || 0)
+        const sizeGb = Number(row.dataset.sizeGb || 0)
         const matches =
           (!search || row.dataset.name?.includes(search)) &&
           (required.length === 0 || required.every((value) => tags.includes(value))) &&
@@ -188,6 +190,7 @@ const allTags = sortTags([...new Set(models.flatMap((model) => model.tags))])
           (!licenseValue || row.dataset.license === licenseValue) &&
           (!minContext || contextTokens >= minContext) &&
           (!minParams || paramsB >= minParams) &&
+          (!minSizeGb || sizeGb >= minSizeGb) &&
           (!minBuilds || Number(row.dataset.builds || 0) >= minBuilds)
         row.classList.toggle("hidden", !matches)
         if (matches) visible++
@@ -266,6 +269,7 @@ const allTags = sortTags([...new Set(models.flatMap((model) => model.tags))])
       if (licenseValue) next.set("license", licenseValue)
       if (minContext) next.set("min_context", String(minContext))
       if (minParams) next.set("min_params", String(minParams))
+      if (minSizeGb) next.set("min_size_gb", String(minSizeGb))
       if (minBuilds) next.set("min_builds", String(minBuilds))
       if (mode !== "overall") next.set("sort", mode)
       if (orderMode !== "best") next.set("order", orderMode)

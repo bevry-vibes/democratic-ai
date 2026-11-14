@@ -199,6 +199,22 @@ const accessRows: PillRowData[] = [
   }),
 ]
 
+const paramsB = model.footprint.params_b
+const weightsGb = model.footprint.weights_gb ?? null
+const sizeLabel = paramsB != null ? `size:${paramsB}B` : weightsGb != null ? `size:${weightsGb}GB` : "size:unknown"
+const sizeExplanation =
+  paramsB != null
+    ? `Size is the model's parameter count, which helps estimate weights and memory. This model has ${formatParams(paramsB)}.`
+    : weightsGb != null
+      ? `Size is the model's storage footprint on Hugging Face. This model's files are ${weightsGb} GB.`
+      : "Size is the model's parameter count, which helps estimate weights and memory. It is not recorded for this model."
+const sizeHref =
+  paramsB != null
+    ? filterHref({ min_params: paramsB })
+    : weightsGb != null
+      ? filterHref({ min_size_gb: weightsGb })
+      : filterHref({ min_size_gb: 1 })
+
 const capabilityRows: PillRowData[] = [
   {
     label: "capability:structured-output",
@@ -224,14 +240,11 @@ const capabilityRows: PillRowData[] = [
     missing: model.capabilities.context_tokens == null,
   },
   {
-    label: model.footprint.params_b == null ? "size:unknown" : `size:${model.footprint.params_b}B`,
-    explanation:
-      model.footprint.params_b == null
-        ? "Size is the model's parameter count, which helps estimate weights and memory. It is not recorded for this model."
-        : `Size is the model's parameter count, which helps estimate weights and memory. This model has ${formatParams(model.footprint.params_b)}.`,
-    href: filterHref({ min_params: model.footprint.params_b ?? 1 }),
+    label: sizeLabel,
+    explanation: sizeExplanation,
+    href: sizeHref,
     tone: "tag-capability",
-    missing: model.footprint.params_b == null,
+    missing: paramsB == null && weightsGb == null,
   },
 ]
 
@@ -795,9 +808,9 @@ model: "${openRouterModel.id}"`}</code></pre>
             <div class="score-block">
               <strong>{scorecard.syndication.score}</strong><span class="faint">/{scorecard.syndication.max}</span>
               <a
-                class={`badge ${bandClass(scorecard.syndication.band)}`}
+                class={`badge ${bandClass(scorecard.syndication.band)} tooltip-below`}
                 href={`/models/?band=${scorecard.syndication.band}`}
-                title="Filter the model index to this syndication band. The band groups independent listings; it is not a quality grade."
+                data-tooltip="Filter the model index to this syndication band. The band groups independent listings; it is not a quality grade."
               >
                 {scorecard.syndication.band.replaceAll("-", " ")}
               </a>

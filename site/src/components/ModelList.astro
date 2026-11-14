@@ -49,6 +49,7 @@ const scorecardTip = (key: string) =>
         data-contexts={model.tags.filter((tag) => tag.startsWith("context:")).map((tag) => tag.slice(8)).join(" ")}
         data-context-tokens={model.context_tokens ?? ""}
         data-params={model.params_b ?? ""}
+        data-size-gb={model.weights_gb ?? ""}
         data-tier={model.tier}
         data-band={model.band}
         data-license={model.license}
