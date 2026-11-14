@@ -185,7 +185,7 @@ async function renderComparison(request, env, ids) {
       }),
     ),
     row(
-      "Runtime",
+      "Access",
       records.map((model) => {
         const runtimes = (model.tags ?? []).filter((tag) => tag.startsWith("access:"))
         return runtimes.length > 0

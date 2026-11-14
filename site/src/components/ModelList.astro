@@ -1,5 +1,6 @@
 ---
 import CountPill from "./CountPill.astro"
+import Pill from "./Pill.astro"
 import TagChips from "./TagChips.astro"
 import { formatContextCount, modelHref, scorecardAxes, type CompactModel } from "../lib/data"
 
@@ -79,20 +80,18 @@ const scorecardTip = (key: string) =>
           <p>{model.summary || "No description on the model card."}</p>
           <TagChips tags={model.tags} showNamespace>
             {model.context_tokens && (
-              <a
-                class="chip meta-context"
+              <Pill
+                label={`context:${formatContextCount(model.context_tokens)}`}
                 href={`${modelHref(model.id)}#capabilities`}
-                data-tooltip="The model's maximum context window."
-              >
-                context: {formatContextCount(model.context_tokens)}
-              </a>
+                tone="tag-capability"
+                tooltip="The model's maximum context window."
+              />
             )}
             {model.builds > 0 && (
-              <CountPill
-                label="builds"
-                count={model.builds}
+              <Pill
+                label={`builds:${model.builds}`}
                 href={`${modelHref(model.id)}#builds`}
-                tone="meta-builds"
+                tone="tag-release"
                 tooltip="A build is packaging, not a new model. It inherits the base task and terms."
               />
             )}

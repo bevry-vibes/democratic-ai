@@ -1875,10 +1875,10 @@ aside > .scorecard-overall {
 }
 
 .tag-license {
-  --pill-bg: #f0dfe4;
-  --pill-border: #d9b7c1;
-  --pill-text: #6e3547;
-  --pill-count: #9b5a6b;
+  --pill-bg: #ebe0e7;
+  --pill-border: #d8c6d2;
+  --pill-text: #5b4253;
+  --pill-count: #7c6273;
 }
 
 .tag-family {
@@ -2048,7 +2048,8 @@ aside > .scorecard-overall {
 .tag-runtime { --pill-count: #773a27; }
 .tag-language { --pill-count: #305b55; }
 .tag-context { --pill-count: #553d4c; }
-.tag-license { --pill-count: #74394a; }
+.tag-license { --pill-count: #7c6273; }
+.tag-licensing { --pill-count: #7c6273; }
 .tag-family { --pill-count: #504b45; }
 .tag-status { --pill-count: #50542b; }
 .tag-relation { --pill-count: #593e2c; }
@@ -3097,10 +3098,17 @@ html {
 }
 
 .tag-access {
-  --pill-bg: #dde8ec;
-  --pill-border: #c3d5dc;
-  --pill-text: #355364;
-  --pill-count: #5f7a8a;
+  --pill-bg: #f2ded7;
+  --pill-border: #dfb7a9;
+  --pill-text: #7a3524;
+  --pill-count: #b5624a;
+}
+
+.tag-licensing {
+  --pill-bg: #ebe0e7;
+  --pill-border: #d8c6d2;
+  --pill-text: #5b4253;
+  --pill-count: #7c6273;
 }
 
 .tag-capability {
@@ -3155,6 +3163,27 @@ html {
 }
 
 .pill-website:hover {
+  color: var(--clay-dark);
+  border-color: var(--clay);
+}
+
+.pill-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.9rem;
+  margin: 0.3rem 0 0;
+  padding: 0;
+}
+
+.pill-links a {
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule-strong);
+}
+
+.pill-links a:hover {
   color: var(--clay-dark);
   border-color: var(--clay);
 }

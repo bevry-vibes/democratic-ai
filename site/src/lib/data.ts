@@ -246,6 +246,7 @@ export const TAG_NAMESPACE_ORDER = [
   "access",
   "language",
   "context",
+  "licensing",
   "license",
   "family",
   "status",

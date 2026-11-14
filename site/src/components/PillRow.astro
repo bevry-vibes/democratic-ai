@@ -1,4 +1,10 @@
 ---
+interface PillLink {
+  label: string
+  href: string
+  external?: boolean
+}
+
 interface Props {
   label: string
   explanation: string
@@ -6,9 +12,10 @@ interface Props {
   tone?: string
   missing?: boolean
   website?: { label: string; href: string }
+  links?: PillLink[]
 }
 
-const { label, explanation, href, tone = "", missing = false, website } = Astro.props
+const { label, explanation, href, tone = "", missing = false, website, links = [] } = Astro.props
 ---
 
 <li class:list={["pill-row", { "pill-row-missing": missing }]}>
@@ -22,6 +29,19 @@ const { label, explanation, href, tone = "", missing = false, website } = Astro.
     <p class:list={{ "pill-missing-text": missing }}>{explanation}</p>
     {website && (
       <a class="pill-website" href={website.href} target="_blank" rel="noreferrer">↗ {website.label}</a>
+    )}
+    {links.length > 0 && (
+      <ul class="pill-links">
+        {links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noreferrer" : undefined}
+            >↗ {link.label}</a>
+          </li>
+        ))}
+      </ul>
     )}
   </div>
 </li>
