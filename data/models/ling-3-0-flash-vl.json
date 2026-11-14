@@ -8,25 +8,36 @@
   ],
   "organization": "ant-ling",
   "released": "2026-09-04",
+  "summary": "Native multimodal hybrid MoE model for image and video understanding, reasoning, and visual agents",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
     "modality:text",
+    "modality:video",
     "context:commercial-safe",
     "license:mit"
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
       "image",
-      "text"
+      "text",
+      "video"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 131072
   },
   "footprint": {
     "params_b": null,
@@ -92,11 +103,29 @@
   },
   "builds": [
     {
+      "id": "inclusionAI/Ling-3.0-flash-VL-fp8",
+      "name": "Ling-3.0-flash-VL-fp8",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL-fp8",
+      "runtime": [],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
       "id": "inclusionAI/Ling-3.0-flash-VL-int4",
       "name": "Ling-3.0-flash-VL-int4",
       "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL-int4",
       "runtime": [],
       "quantization": "INT4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "inclusionAI/Ling-3.0-flash-VL-fp4",
+      "name": "Ling-3.0-flash-VL-fp4",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL-fp4",
+      "runtime": [],
+      "quantization": "FP4",
       "relation": "quantized",
       "status": "build"
     }
@@ -110,5 +139,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "1 builds are attached."
+  "notes": "3 builds are attached."
 }

@@ -8,6 +8,7 @@
   ],
   "organization": "qwen",
   "released": "2026-09-20",
+  "summary": "",
   "tags": [
     "task:image-generation",
     "domain:vision",
@@ -19,7 +20,11 @@
     ],
     "languages": [],
     "modality": [],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

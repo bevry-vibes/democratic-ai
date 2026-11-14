@@ -8,6 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-06-23",
+  "summary": "",
   "tags": [
     "task:image-classification",
     "domain:vision",
@@ -22,7 +23,11 @@
     "modality": [],
     "runtimes": [
       "litert"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

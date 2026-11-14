@@ -8,19 +8,37 @@
   ],
   "organization": "stepfun",
   "released": "2026-09-20",
+  "summary": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
   "tags": [
+    "task:reasoning",
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:audio",
+    "modality:image",
+    "modality:text",
+    "modality:video",
     "license:other",
     "family:step"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "reasoning",
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
-    "runtimes": []
+    "modality": [
+      "audio",
+      "image",
+      "text",
+      "video"
+    ],
+    "runtimes": [],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 1000000
   },
   "footprint": {
     "params_b": null,
@@ -92,7 +110,7 @@
       "name": "Step-5-Preview-NVFP4",
       "url": "https://huggingface.co/stepfun-ai/Step-5-Preview-NVFP4",
       "runtime": [],
-      "quantization": "NVFP4",
+      "quantization": "FP4",
       "relation": "quantized",
       "status": "build"
     }

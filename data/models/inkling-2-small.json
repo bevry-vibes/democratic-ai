@@ -8,8 +8,11 @@
   ],
   "organization": "thinking-machines-lab",
   "released": "2026-11-04",
+  "summary": "Multimodal reasoning model for visual analysis, planning, and tool use",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
@@ -20,7 +23,9 @@
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
@@ -29,7 +34,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 1048576
   },
   "footprint": {
     "params_b": null,
@@ -120,6 +129,17 @@
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
+    },
+    {
+      "id": "thinkingmachines/Inkling-2-Small-MXFP8",
+      "name": "Inkling-2-Small-MXFP8",
+      "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small-MXFP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "MXFP8",
+      "relation": "quantized",
+      "status": "build"
     }
   ],
   "sources": [
@@ -131,5 +151,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "1 builds are attached."
+  "notes": "2 builds are attached."
 }

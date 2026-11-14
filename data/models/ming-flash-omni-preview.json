@@ -8,6 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2025-10-14",
+  "summary": "Compared to its predecessor, the upgraded version exhibits substantial improvements across multimodal understanding and generation.",
   "tags": [
     "task:image-generation",
     "task:transcription",
@@ -32,7 +33,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

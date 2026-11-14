@@ -8,6 +8,7 @@
   ],
   "organization": "xenova",
   "released": "2023-11-07",
+  "summary": "",
   "tags": [
     "task:image-generation",
     "domain:vision",
@@ -23,7 +24,11 @@
     "modality": [
       "image"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

@@ -8,19 +8,31 @@
   ],
   "organization": "ant-ling",
   "released": "2026-08-02",
+  "summary": "Hybrid-linear MoE reasoning model with 124B total and 5.1B active parameters for efficient agents",
   "tags": [
+    "task:reasoning",
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:text",
     "context:commercial-safe",
     "license:mit"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "reasoning",
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
-    "runtimes": []
+    "modality": [
+      "text"
+    ],
+    "runtimes": [],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": false,
+    "context_tokens": 262144
   },
   "footprint": {
     "params_b": null,
@@ -98,7 +110,17 @@
     ],
     "checked_at": "2026-11-14"
   },
-  "builds": [],
+  "builds": [
+    {
+      "id": "inclusionAI/Ling-3.0-flash-fp8",
+      "name": "Ling-3.0-flash-fp8",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-fp8",
+      "runtime": [],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",
@@ -108,5 +130,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "1 builds are attached."
 }

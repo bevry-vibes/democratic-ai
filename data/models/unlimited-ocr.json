@@ -8,6 +8,7 @@
   ],
   "organization": "baidu",
   "released": "2026-06-19",
+  "summary": "",
   "tags": [
     "task:image-understanding",
     "task:ocr",
@@ -31,7 +32,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

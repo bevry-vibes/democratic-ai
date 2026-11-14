@@ -8,28 +8,42 @@
   ],
   "organization": "qwen",
   "released": "2026-08-05",
+  "summary": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
+    "modality:pdf",
     "modality:text",
+    "modality:video",
     "runtime:python",
     "context:commercial-safe",
-    "license:apache-2.0"
+    "license:apache-2.0",
+    "family:qwen"
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
       "image",
-      "text"
+      "pdf",
+      "text",
+      "video"
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 262144
   },
   "footprint": {
     "params_b": 27,
@@ -159,7 +173,18 @@
       "name": "Qwen3.8-27B-NVFP4",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-NVFP4",
       "runtime": [],
-      "quantization": "NVFP4",
+      "quantization": "FP4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B-FP8",
+      "name": "Qwen3.8-27B-FP8",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
     },
@@ -179,7 +204,7 @@
       "name": "Qwen3.8-27B-NVFP4",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-NVFP4",
       "runtime": [],
-      "quantization": "NVFP4",
+      "quantization": "FP4",
       "relation": "quantized",
       "status": "build"
     }
@@ -193,5 +218,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "7 builds are attached."
+  "notes": "8 builds are attached."
 }

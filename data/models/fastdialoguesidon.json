@@ -8,6 +8,7 @@
   ],
   "organization": "higurashi",
   "released": "2026-10-26",
+  "summary": "FastDialogueSidon Weights for FastDialogueSidon, a fast one-step model for full-duplex two-speaker dialogue separation and joint restoration: up to 120 s of 16 kHz mono dialogue in, two separated 24 kHz speaker tracks out.",
   "tags": [
     "task:speech-separation",
     "domain:speech",
@@ -23,7 +24,11 @@
     "modality": [
       "audio"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

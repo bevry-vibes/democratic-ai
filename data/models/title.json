@@ -8,6 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-08-09",
+  "summary": "",
   "tags": [
     "task:text-generation",
     "task:title-generation",
@@ -24,7 +25,11 @@
     "modality": [],
     "runtimes": [
       "mlx"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

@@ -8,6 +8,7 @@
   ],
   "organization": "qwen",
   "released": "2026-10-09",
+  "summary": "",
   "tags": [
     "task:image-generation",
     "domain:vision",
@@ -26,7 +27,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,
@@ -88,6 +93,17 @@
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
+    },
+    {
+      "id": "unsloth/Qwen-Image-2.1-Turbo-FP8",
+      "name": "Qwen-Image-2.1-Turbo-FP8",
+      "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
     }
   ],
   "sources": [
@@ -99,5 +115,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "1 builds are attached."
+  "notes": "2 builds are attached."
 }

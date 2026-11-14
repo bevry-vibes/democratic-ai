@@ -8,6 +8,7 @@
   ],
   "organization": "edge0-ai",
   "released": "2026-08-19",
+  "summary": "",
   "tags": [
     "task:speech-synthesis",
     "domain:speech",
@@ -25,7 +26,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 0.1,

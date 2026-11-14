@@ -8,6 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-11-10",
+  "summary": "We use this global-to-zoom perception gap to construct supervision for vision-language models.",
   "tags": [
     "task:image-understanding",
     "domain:vision",
@@ -21,7 +22,11 @@
     "modality": [
       "image"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 4,

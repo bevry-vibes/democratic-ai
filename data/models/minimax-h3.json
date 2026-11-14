@@ -8,11 +8,15 @@
   ],
   "organization": "minimax",
   "released": "2026-07-28",
+  "summary": "MiniMax general-purpose video model with multimodal references and synchronized stereo audio. Open H3-Base checkpoints; Context-IR and 2K regeneration are not included in the initial weights release.",
   "tags": [
     "task:video-generation",
     "domain:vision",
+    "modality:image",
+    "modality:text",
     "modality:video",
-    "license:other"
+    "license:other",
+    "family:minimax"
   ],
   "capabilities": {
     "tasks": [
@@ -20,9 +24,15 @@
     ],
     "languages": [],
     "modality": [
+      "image",
+      "text",
       "video"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": false,
+    "reasoning": false,
+    "structured_output": null,
+    "context_tokens": 0
   },
   "footprint": {
     "params_b": null,
@@ -81,6 +91,15 @@
   },
   "builds": [
     {
+      "id": "unsloth/MiniMax-H3-FP8",
+      "name": "MiniMax-H3-FP8",
+      "url": "https://huggingface.co/unsloth/MiniMax-H3-FP8",
+      "runtime": [],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
       "id": "unsloth/MiniMax-H3-GGUF",
       "name": "MiniMax-H3-GGUF",
       "url": "https://huggingface.co/unsloth/MiniMax-H3-GGUF",
@@ -101,5 +120,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "1 builds are attached."
+  "notes": "2 builds are attached."
 }

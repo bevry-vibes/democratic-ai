@@ -8,6 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-09-16",
+  "summary": "Realtime-Venus A full-duplex interaction system with asynchronous delegation English | 简体中文 Realtime-Venus supports proactive audio-visual interaction, asynchronous delegation, and interruption-aware full-duplex dialogue.",
   "tags": [
     "task:real-time-interaction",
     "domain:multimodal",
@@ -28,7 +29,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

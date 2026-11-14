@@ -8,6 +8,7 @@
   ],
   "organization": "mistral",
   "released": "2026-10-14",
+  "summary": "",
   "tags": [
     "task:time-series-forecasting",
     "license:other"
@@ -18,7 +19,11 @@
     ],
     "languages": [],
     "modality": [],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

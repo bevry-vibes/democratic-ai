@@ -8,6 +8,7 @@
   ],
   "organization": "minimax",
   "released": "2026-11-08",
+  "summary": "",
   "tags": [
     "task:text-generation",
     "domain:language",
@@ -24,7 +25,11 @@
     "modality": [],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

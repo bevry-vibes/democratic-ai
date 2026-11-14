@@ -8,6 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-08-06",
+  "summary": "",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",
@@ -30,7 +31,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

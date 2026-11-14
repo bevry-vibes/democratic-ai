@@ -8,6 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2025-09-30",
+  "summary": "- ⚡ 3.5× Faster Convergence in Joint Vision-Language Training: The coherent representational space between understanding and generation—enabled by MingTok—reduces optimization conflicts across tasks, leading to dramatically faster convergence during end-to-end multimodal pretraining.",
   "tags": [
     "task:image-generation",
     "task:image-understanding",
@@ -29,7 +30,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 16,

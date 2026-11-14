@@ -8,28 +8,40 @@
   ],
   "organization": "qwen",
   "released": "2026-04-15",
+  "summary": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
     "modality:text",
+    "modality:video",
     "runtime:python",
     "context:commercial-safe",
-    "license:apache-2.0"
+    "license:apache-2.0",
+    "family:qwen"
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
       "image",
-      "text"
+      "text",
+      "video"
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 262144
   },
   "footprint": {
     "params_b": 35,
@@ -124,6 +136,17 @@
       "quantization": "MLX",
       "relation": "conversion",
       "status": "build"
+    },
+    {
+      "id": "Qwen/Qwen3.6-35B-A3B-FP8",
+      "name": "Qwen3.6-35B-A3B-FP8",
+      "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
     }
   ],
   "sources": [
@@ -135,5 +158,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "2 builds are attached."
+  "notes": "3 builds are attached."
 }

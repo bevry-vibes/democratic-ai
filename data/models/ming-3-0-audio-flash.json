@@ -8,6 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-09-03",
+  "summary": "Ming-3.0-audio-flash is a native audio-language model from inclusionAI.",
   "tags": [
     "task:audio-language",
     "task:speech-synthesis",
@@ -30,7 +31,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

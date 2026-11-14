@@ -8,8 +8,11 @@
   ],
   "organization": "meituan-longcat",
   "released": "2026-11-04",
+  "summary": "Meituan's multimodal reasoning model for long-horizon coding and agent tasks, with visual understanding and a 1M-token context window",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
@@ -19,14 +22,20 @@
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
       "image",
       "text"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 1000000
   },
   "footprint": {
     "params_b": null,
@@ -90,7 +99,17 @@
     ],
     "checked_at": "2026-11-14"
   },
-  "builds": [],
+  "builds": [
+    {
+      "id": "meituan-longcat/LongCat-2.5-W4A4",
+      "name": "LongCat-2.5-W4A4",
+      "url": "https://huggingface.co/meituan-longcat/LongCat-2.5-W4A4",
+      "runtime": [],
+      "quantization": "W4A4",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",
@@ -100,5 +119,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "1 builds are attached."
 }

@@ -8,6 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-09-12",
+  "summary": "",
   "tags": [
     "task:text-generation",
     "domain:language",
@@ -23,7 +24,11 @@
     "modality": [],
     "runtimes": [
       "mlx"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 4,

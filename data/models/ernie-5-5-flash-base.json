@@ -8,6 +8,7 @@
   ],
   "organization": "baidu",
   "released": "2026-10-21",
+  "summary": "",
   "tags": [
     "task:text-generation",
     "domain:language",
@@ -22,7 +23,11 @@
     "modality": [],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

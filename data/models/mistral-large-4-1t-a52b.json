@@ -8,6 +8,7 @@
   ],
   "organization": "mistral",
   "released": "2026-09-30",
+  "summary": "",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",
@@ -28,7 +29,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 52,
@@ -100,7 +105,18 @@
       "runtime": [
         "python"
       ],
-      "quantization": "NVFP4",
+      "quantization": "FP4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "unsloth/Mistral-Large-4-1T-A52B-FP8",
+      "name": "Mistral-Large-4-1T-A52B-FP8",
+      "url": "https://huggingface.co/unsloth/Mistral-Large-4-1T-A52B-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
     },
@@ -109,7 +125,7 @@
       "name": "Mistral-Large-4-1T-A52B-NVFP4",
       "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B-NVFP4",
       "runtime": [],
-      "quantization": "NVFP4",
+      "quantization": "FP4",
       "relation": "quantized",
       "status": "build"
     }
@@ -123,5 +139,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "3 builds are attached."
+  "notes": "4 builds are attached."
 }

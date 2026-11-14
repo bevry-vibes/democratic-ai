@@ -8,6 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-10-19",
+  "summary": "",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",
@@ -29,7 +30,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 2,
@@ -95,7 +100,18 @@
       "runtime": [
         "python"
       ],
-      "quantization": "NVFP4",
+      "quantization": "FP4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-VL-2B-FP8",
+      "name": "LFM3-VL-2B-FP8",
+      "url": "https://huggingface.co/LiquidAI/LFM3-VL-2B-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
     },
@@ -164,5 +180,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "6 builds are attached."
+  "notes": "7 builds are attached."
 }

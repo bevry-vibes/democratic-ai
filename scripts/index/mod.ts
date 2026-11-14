@@ -46,10 +46,60 @@ interface Watchlist {
   members: Array<{ id: string; kind: string; hugging_face?: string | null; x?: string[] }>
 }
 
+interface ModelsDevModel {
+  id: string
+  canonical_model_id?: string
+  name?: string
+  description?: string
+  family?: string
+  tool_call?: boolean
+  reasoning?: boolean
+  structured_output?: boolean
+  open_weights?: boolean
+  modalities?: { input?: string[]; output?: string[] }
+  limit?: { context?: number }
+}
+
+interface ModelsDevApi {
+  [provider: string]: { models?: Record<string, ModelsDevModel> }
+}
+
 const BUILD_MARKERS = [
   "-gguf", "-mlx", "-coreml", "-onnx", "-nvfp4", "-q8_0", "-q4_k_m", "-q4", "-q8", "-q6",
   "-4bit", "-8bit", "-bf16", "-int4", "-int8", "-ov", "-quant", "-dflash", "-singprobe", "-server",
+  "-fp8", "-fp4", "-mxfp8", "-w4a4", "-w8a8", "-q3k", "-q4k", "-q5k", "-q6k", "-litert-lm", "-coreai", "-lora", "-peft",
 ]
+
+function stripCard(value: string): string {
+  return value
+    .replace(/^---[\s\S]*?---\s*/, "")
+    .replace(/```[\s\S]*?```/g, " ")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/^#{1,6}\s+/gm, "")
+    .replace(/\s+/g, " ")
+    .trim()
+}
+
+async function cardExcerpt(id: string): Promise<string> {
+  const path = `data/raw/hf/model-cards/${slug(id)}/${isoDate()}.md`
+  try {
+    const text = stripCard(await Deno.readTextFile(path))
+    const sentences = text
+      .split(/(?<=[.!?])\s+/)
+      .map((sentence) => sentence.replace(/\*+/g, "").replace(/\s+/g, " ").trim())
+      .filter((sentence) => sentence.length > 0)
+    const useful = sentences.find(
+      (sentence) =>
+        sentence.length >= 50 &&
+        !/github|paper|project page|hugging face|modelscope|technical report|discord/i.test(sentence),
+    )
+    return (useful ?? sentences.find((sentence) => sentence.length >= 30) ?? text).slice(0, 400)
+  } catch {
+    return ""
+  }
+}
 
 function parseArgs(argv: string[]): { pull: string | null } {
   let pull: string | null = null
@@ -120,6 +170,17 @@ function paramsFrom(name: string): number | null {
 function quantizationFrom(title: string): string | null {
   const value = title.toLowerCase()
   if (value.includes("gguf")) return "GGUF"
+  if (value.includes("mxfp8")) return "MXFP8"
+  if (value.includes("fp8")) return "FP8"
+  if (value.includes("fp4")) return "FP4"
+  if (value.includes("w4a4")) return "W4A4"
+  if (value.includes("w8a8")) return "W8A8"
+  if (value.includes("q3k")) return "Q3_K"
+  if (value.includes("q4k")) return "Q4_K"
+  if (value.includes("q5k")) return "Q5_K"
+  if (value.includes("q6k")) return "Q6_K"
+  if (value.includes("litert")) return "LiteRT"
+  if (value.includes("coreai")) return "CoreAI"
   if (value.includes("nvfp4")) return "NVFP4"
   if (value.includes("q4_k_m") || value.includes("q4")) return "Q4"
   if (value.includes("q8")) return "Q8"
@@ -139,6 +200,7 @@ function quantizationFrom(title: string): string | null {
 function relationFrom(title: string, tags: string[]): string | null {
   if (tags.includes("relation:quantized")) return "quantized"
   if (tags.includes("relation:conversion")) return "conversion"
+  if (tags.includes("relation:adapter")) return "adapter"
   if (tags.includes("relation:probe")) return "probe"
   if (title.toLowerCase().includes("distill")) return "distilled"
   return null
@@ -204,6 +266,53 @@ async function main(): Promise<void> {
   const links = JSON.parse(await Deno.readTextFile("data/links.json")) as LinkIndex
   const syndication = JSON.parse(await Deno.readTextFile("data/syndication.json")) as Syndication
   const watchlist = JSON.parse(await Deno.readTextFile("data/watchlist.json")) as Watchlist
+  const vocabulary = JSON.parse(await Deno.readTextFile("data/tags.json")) as {
+    namespaces: Record<string, { values: Record<string, string> }>
+  }
+  let modelsDev: ModelsDevApi = {}
+  try {
+    modelsDev = JSON.parse(await Deno.readTextFile(`.cache/links/models-dev-${isoDate()}.json`)) as ModelsDevApi
+  } catch {
+    // models.dev cache absent
+  }
+  const modelsDevByKey = new Map<string, ModelsDevModel>()
+  const contextSamples = new Map<string, number[]>()
+  for (const provider of Object.values(modelsDev)) {
+    for (const [key, model] of Object.entries(provider.models ?? {})) {
+      const name = norm(model.canonical_model_id ?? key)
+      if (model.limit?.context) {
+        const samples = contextSamples.get(name) ?? []
+        samples.push(model.limit.context)
+        contextSamples.set(name, samples)
+      }
+      const existing = modelsDevByKey.get(name)
+      if (!existing) {
+        modelsDevByKey.set(name, model)
+        continue
+      }
+      const input = [...new Set([...(existing.modalities?.input ?? []), ...(model.modalities?.input ?? [])])]
+      const output = [...new Set([...(existing.modalities?.output ?? []), ...(model.modalities?.output ?? [])])]
+      modelsDevByKey.set(name, {
+        ...existing,
+        ...model,
+        canonical_model_id: existing.canonical_model_id ?? model.canonical_model_id,
+        description: existing.description ?? model.description,
+        family: existing.family ?? model.family,
+        tool_call: Boolean(existing.tool_call || model.tool_call),
+        reasoning: Boolean(existing.reasoning || model.reasoning),
+        structured_output: Boolean(existing.structured_output || model.structured_output),
+        open_weights: existing.open_weights ?? model.open_weights,
+        modalities: { input, output },
+        limit: existing.limit,
+      })
+    }
+  }
+  for (const [name, samples] of contextSamples) {
+    const sorted = samples.sort((a, b) => a - b)
+    const median = sorted[Math.floor((sorted.length - 1) / 2)]!
+    const entry = modelsDevByKey.get(name)
+    if (entry) entry.limit = { context: median }
+  }
   const orgMap = buildOrgMap(watchlist)
 
   const roots: TaggedItem[] = []
@@ -246,7 +355,18 @@ async function main(): Promise<void> {
     const sourceId = root.item.source_id
     const org = sourceId.split("/")[0] ?? ""
     const tags = root.tags.map((tag) => tag.tag)
-    const modelTags = tagList(tags)
+    const md = modelsDevByKey.get(norm(sourceId))
+    const card = md?.description ? "" : await cardExcerpt(sourceId)
+    const enriched = new Set(tags)
+    if (md?.tool_call) enriched.add("task:tool-calling")
+    if (md?.reasoning) enriched.add("task:reasoning")
+    for (const modality of [...(md?.modalities?.input ?? []), ...(md?.modalities?.output ?? [])]) {
+      enriched.add(`modality:${modality}`)
+    }
+    if (md?.family && Object.hasOwn(vocabulary.namespaces.family?.values ?? {}, md.family)) {
+      enriched.add(`family:${md.family}`)
+    }
+    const modelTags = tagList([...enriched])
     const licenseTag = tags.find((tag) => tag.startsWith("license:"))
     const licenseId = licenseTag ? licenseTag.slice("license:".length) : "unknown"
     const tier = tierFor(licenseId)
@@ -285,12 +405,17 @@ async function main(): Promise<void> {
       aliases: [sourceId],
       organization: orgId,
       released: root.item.published_at ? root.item.published_at.slice(0, 10) : null,
+      summary: md?.description ? md.description.slice(0, 400) : card,
       tags: modelTags,
       capabilities: {
         tasks,
         languages,
         modality: modalities,
         runtimes,
+        tool_calling: md?.tool_call ?? null,
+        reasoning: md?.reasoning ?? null,
+        structured_output: md?.structured_output ?? null,
+        context_tokens: md?.limit?.context ?? null,
       },
       footprint: {
         params_b: paramsFrom(base),
@@ -341,6 +466,9 @@ async function main(): Promise<void> {
       tier: tier.tier,
       score: synd?.score ?? 0,
       band: synd?.band ?? "self-only",
+      tool_calling: md?.tool_call ?? null,
+      reasoning: md?.reasoning ?? null,
+      context_tokens: md?.limit?.context ?? null,
       models_dev: link.models_dev ?? null,
       agent_detect: link.agent_detect ?? null,
       builds: buildEntries.length,

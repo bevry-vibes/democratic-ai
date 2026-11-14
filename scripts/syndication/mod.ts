@@ -55,6 +55,19 @@ const BUILD_MARKERS = [
   "-dflash",
   "-singprobe",
   "-server",
+  "-fp8",
+  "-fp4",
+  "-mxfp8",
+  "-w4a4",
+  "-w8a8",
+  "-q3k",
+  "-q4k",
+  "-q5k",
+  "-q6k",
+  "-litert-lm",
+  "-coreai",
+  "-lora",
+  "-peft",
 ]
 
 const WEIGHTS: Record<string, number> = {

@@ -8,22 +8,34 @@
   ],
   "organization": "webai",
   "released": "2026-09-30",
+  "summary": "Granite 4.2 8B is an instruct model capable of enhanced tool calling, instruction following, and chat capabilities.",
   "tags": [
+    "task:reasoning",
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:text",
     "runtime:llama.cpp",
     "context:commercial-safe",
     "license:apache-2.0"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "reasoning",
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
+    "modality": [
+      "text"
+    ],
     "runtimes": [
       "llama.cpp"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 131072
   },
   "footprint": {
     "params_b": 8,

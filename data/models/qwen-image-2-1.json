@@ -8,12 +8,15 @@
   ],
   "organization": "qwen",
   "released": "2026-09-14",
+  "summary": "Unified text-to-image generation and image editing model with native RGBA transparency and reference-image editing",
   "tags": [
     "task:image-generation",
     "domain:vision",
     "modality:image",
+    "modality:text",
     "runtime:python",
-    "license:other"
+    "license:other",
+    "family:qwen"
   ],
   "capabilities": {
     "tasks": [
@@ -21,11 +24,16 @@
     ],
     "languages": [],
     "modality": [
-      "image"
+      "image",
+      "text"
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": false,
+    "reasoning": false,
+    "structured_output": null,
+    "context_tokens": 8192
   },
   "footprint": {
     "params_b": null,
@@ -79,6 +87,17 @@
   },
   "builds": [
     {
+      "id": "unsloth/Qwen-Image-2.1-FP8",
+      "name": "Qwen-Image-2.1-FP8",
+      "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
       "id": "unsloth/Qwen-Image-2.1",
       "name": "Qwen-Image-2.1",
       "url": "https://huggingface.co/unsloth/Qwen-Image-2.1",
@@ -110,5 +129,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "2 builds are attached."
+  "notes": "3 builds are attached."
 }

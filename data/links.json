@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-14T04:09:52.257Z",
+  "updated_at": "2026-11-14T04:22:26.638Z",
   "pull_id": "20261114T025658Z",
   "sources": {
     "models_dev": {
       "url": "https://models.dev/api.json",
       "fetched_at": "2026-11-14",
-      "models": 2953,
+      "models": 2942,
       "note": "Only entries with a canonical_model_id are linked."
     },
     "agent_detect": {
@@ -17,10 +17,10 @@
     }
   },
   "counts": {
-    "models": 149,
-    "with_models_dev": 136,
-    "with_agent_detect": 79,
-    "unmatched": 515
+    "models": 171,
+    "with_models_dev": 156,
+    "with_agent_detect": 95,
+    "unmatched": 493
   },
   "models": {
     "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp": {
@@ -84,15 +84,39 @@
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-fin",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flash"
     },
+    "inclusionAI/Ling-3.0-flash-Fin-fp4": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-fin",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flash"
+    },
+    "inclusionAI/Ling-3.0-flash-Fin-fp8": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-fin",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flash"
+    },
     "inclusionAI/Ling-3.0-flash-Fin-int4": {
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-fin",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flash"
+    },
+    "inclusionAI/Ling-3.0-flash-fp8": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flash"
     },
     "inclusionAI/Ling-3.0-flash-Sante": {
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-sante",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flash"
     },
+    "inclusionAI/Ling-3.0-flash-Sante-fp8": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-sante",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flash"
+    },
     "inclusionAI/Ling-3.0-flash-VL": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-vl",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flashvl"
+    },
+    "inclusionAI/Ling-3.0-flash-VL-fp4": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-vl",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flashvl"
+    },
+    "inclusionAI/Ling-3.0-flash-VL-fp8": {
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-vl",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flashvl"
     },
@@ -171,6 +195,9 @@
     "LiquidAI/LFM3-1.7B": {
       "agent_detect": "https://agent-detect.bevry.me/model/lfm317b"
     },
+    "LiquidAI/LFM3-1.7B-FP8": {
+      "agent_detect": "https://agent-detect.bevry.me/model/lfm317b"
+    },
     "LiquidAI/LFM3-1.7B-GGUF": {
       "agent_detect": "https://agent-detect.bevry.me/model/lfm317b"
     },
@@ -193,6 +220,10 @@
       "models_dev": "https://models.dev/models/meituan/longcat-2.5",
       "agent_detect": "https://agent-detect.bevry.me/model/longcat25"
     },
+    "meituan-longcat/LongCat-2.5-W4A4": {
+      "models_dev": "https://models.dev/models/meituan/longcat-2.5",
+      "agent_detect": "https://agent-detect.bevry.me/model/longcat25"
+    },
     "MiniMaxAI/MiniMax-H3": {
       "models_dev": "https://models.dev/models/minimax/MiniMax-H3"
     },
@@ -211,6 +242,10 @@
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm27"
     },
     "MiniMaxAI/MiniMax-M3": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-M3",
+      "agent_detect": "https://agent-detect.bevry.me/model/minimaxm3"
+    },
+    "MiniMaxAI/MiniMax-M3-MXFP8": {
       "models_dev": "https://models.dev/models/minimax/MiniMax-M3",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm3"
     },
@@ -287,6 +322,9 @@
     "ornith-ai/Ornith-1.5-35B-A3B-DFlash": {
       "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b"
     },
+    "ornith-ai/Ornith-1.5-35B-A3B-FP8": {
+      "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b"
+    },
     "ornith-ai/Ornith-1.5-35B-A3B-GGUF": {
       "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b"
     },
@@ -310,7 +348,8 @@
       "agent_detect": "https://agent-detect.bevry.me/model/qwen3627b"
     },
     "Qwen/Qwen3.6-27B-FP8": {
-      "models_dev": "https://models.dev/models/alibaba/qwen3.6-27b"
+      "models_dev": "https://models.dev/models/alibaba/qwen3.6-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3627b"
     },
     "Qwen/Qwen3.6-35B-A3B": {
       "models_dev": "https://models.dev/models/alibaba/qwen3.6-35b-a3b"
@@ -321,17 +360,27 @@
     "Qwen/Qwen3.8-2.4T-A95B": {
       "models_dev": "https://models.dev/models/alibaba/qwen3.8-2.4t-a95b"
     },
+    "Qwen/Qwen3.8-2.4T-A95B-FP8": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-2.4t-a95b"
+    },
     "Qwen/Qwen3.8-27B": {
       "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
       "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b"
     },
     "Qwen/Qwen3.8-27B-FP8": {
-      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b"
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b"
     },
     "Qwen/Qwen3.8-Flash-Next": {
       "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next"
     },
+    "Qwen/Qwen3.8-Flash-Next-FP8": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next"
+    },
     "reflection/Beam-1.0-501B-A23B": {
+      "models_dev": "https://models.dev/models/reflection/beam-1.0-501b-a23b"
+    },
+    "reflection/Beam-1.0-501B-A23B-FP8": {
       "models_dev": "https://models.dev/models/reflection/beam-1.0-501b-a23b"
     },
     "reflection/Beam-1.0-501B-A23B-NVFP4": {
@@ -347,6 +396,10 @@
       "models_dev": "https://models.dev/models/stepfun/step-5-preview"
     },
     "thinkingmachines/Inkling-2-Small": {
+      "models_dev": "https://models.dev/models/thinkingmachines/inkling-2-small",
+      "agent_detect": "https://agent-detect.bevry.me/model/inkling2small"
+    },
+    "thinkingmachines/Inkling-2-Small-MXFP8": {
       "models_dev": "https://models.dev/models/thinkingmachines/inkling-2-small",
       "agent_detect": "https://agent-detect.bevry.me/model/inkling2small"
     },
@@ -372,14 +425,23 @@
     "unsloth/flint-GGUF": {
       "models_dev": "https://models.dev/models/recursive/flint"
     },
+    "unsloth/FLUX.1-dev-FP8": {
+      "models_dev": "https://models.dev/models/black-forest-labs/flux-1-dev"
+    },
     "unsloth/FLUX.1-dev-GGUF": {
       "models_dev": "https://models.dev/models/black-forest-labs/flux-1-dev"
     },
     "unsloth/FLUX.1-Kontext-dev-GGUF": {
       "models_dev": "https://models.dev/models/black-forest-labs/flux-1-kontext-dev"
     },
+    "unsloth/FLUX.1-schnell-FP8": {
+      "models_dev": "https://models.dev/models/black-forest-labs/flux-1-schnell"
+    },
     "unsloth/FLUX.1-schnell-GGUF": {
       "models_dev": "https://models.dev/models/black-forest-labs/flux-1-schnell"
+    },
+    "unsloth/FLUX.2-klein-4B-FP8": {
+      "models_dev": "https://models.dev/models/black-forest-labs/flux-2-klein-4b"
     },
     "unsloth/FLUX.2-klein-4B-GGUF": {
       "models_dev": "https://models.dev/models/black-forest-labs/flux-2-klein-4b"
@@ -389,6 +451,10 @@
       "agent_detect": "https://agent-detect.bevry.me/model/glm53"
     },
     "unsloth/GLM-5.3-Flash": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.3-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm53flash"
+    },
+    "unsloth/GLM-5.3-Flash-FP8": {
       "models_dev": "https://models.dev/models/zhipuai/glm-5.3-flash",
       "agent_detect": "https://agent-detect.bevry.me/model/glm53flash"
     },
@@ -423,6 +489,9 @@
     "unsloth/Kimi-K3.1-Pro": {
       "models_dev": "https://models.dev/models/moonshotai/kimi-k3.1-pro"
     },
+    "unsloth/MiniMax-H3-FP8": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-H3"
+    },
     "unsloth/MiniMax-H3-GGUF": {
       "models_dev": "https://models.dev/models/minimax/MiniMax-H3"
     },
@@ -437,6 +506,9 @@
     "unsloth/MiniMax-M3.1-Flash-GGUF": {
       "models_dev": "https://models.dev/models/minimax/MiniMax-M3.1-Flash",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm31flash"
+    },
+    "unsloth/Mistral-Large-4-1T-A52B-FP8": {
+      "agent_detect": "https://agent-detect.bevry.me/model/mistrallarge4"
     },
     "unsloth/Mistral-Large-4-1T-A52B-GGUF": {
       "agent_detect": "https://agent-detect.bevry.me/model/mistrallarge4"
@@ -466,6 +538,9 @@
       "models_dev": "https://models.dev/models/nvidia/nemotron-3.5-super-vl-120b-a12b"
     },
     "unsloth/Qwen-Image-2.1": {
+      "models_dev": "https://models.dev/models/alibaba/qwen-image-2.1"
+    },
+    "unsloth/Qwen-Image-2.1-FP8": {
       "models_dev": "https://models.dev/models/alibaba/qwen-image-2.1"
     },
     "unsloth/Qwen-Image-2.1-GGUF": {
@@ -506,6 +581,10 @@
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2.5-pro",
       "agent_detect": "https://agent-detect.bevry.me/model/mimov25pro"
     },
+    "XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash": {
+      "models_dev": "https://models.dev/models/xiaomi/mimo-v2.5-pro",
+      "agent_detect": "https://agent-detect.bevry.me/model/mimov25pro"
+    },
     "XiaomiMiMo/MiMo-V2.6-Flash-RL": {
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2.6-flash"
     },
@@ -518,7 +597,8 @@
       "agent_detect": "https://agent-detect.bevry.me/model/glm52"
     },
     "zai-org/GLM-5.2-FP8": {
-      "models_dev": "https://models.dev/models/zhipuai/glm-5.2"
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.2",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm52"
     },
     "zai-org/GLM-5.3": {
       "models_dev": "https://models.dev/models/zhipuai/glm-5.3",
@@ -656,7 +736,7 @@
     },
     {
       "id": "Edge0/Edge0-120B-q3k",
-      "name": "edge0-120b-q3k"
+      "name": "edge0-120b"
     }
   ]
 }

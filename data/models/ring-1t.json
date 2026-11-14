@@ -8,22 +8,32 @@
   ],
   "organization": "ant-ling",
   "released": "2025-10-10",
+  "summary": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
   "tags": [
+    "task:reasoning",
     "task:text-generation",
     "domain:language",
+    "modality:text",
     "runtime:python",
     "context:commercial-safe",
     "license:mit"
   ],
   "capabilities": {
     "tasks": [
+      "reasoning",
       "text-generation"
     ],
     "languages": [],
-    "modality": [],
+    "modality": [
+      "text"
+    ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": false,
+    "reasoning": true,
+    "structured_output": null,
+    "context_tokens": 128000
   },
   "footprint": {
     "params_b": null,

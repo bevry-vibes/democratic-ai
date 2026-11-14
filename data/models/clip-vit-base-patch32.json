@@ -8,6 +8,7 @@
   ],
   "organization": "xenova",
   "released": "2023-05-19",
+  "summary": "",
   "tags": [
     "task:image-classification",
     "domain:vision",
@@ -20,7 +21,11 @@
     ],
     "languages": [],
     "modality": [],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

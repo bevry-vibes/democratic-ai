@@ -8,6 +8,7 @@
   ],
   "organization": "mistral",
   "released": "2026-10-08",
+  "summary": "",
   "tags": [
     "task:transcription",
     "domain:speech",
@@ -22,7 +23,11 @@
     "modality": [
       "audio"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 4,

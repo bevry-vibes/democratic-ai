@@ -8,6 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-10-26",
+  "summary": "",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",
@@ -26,7 +27,11 @@
       "image",
       "text"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 27,

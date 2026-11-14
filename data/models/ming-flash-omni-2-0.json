@@ -8,6 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-02-10",
+  "summary": "Representing a generational advancement over its predecessor, it establishes new State-of-the-Art (SOTA) benchmarks among open-source omni-MLLMs.",
   "tags": [
     "task:image-generation",
     "task:image-understanding",
@@ -34,7 +35,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

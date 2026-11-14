@@ -8,6 +8,7 @@
   ],
   "organization": "boson-ai",
   "released": "2026-08-22",
+  "summary": "",
   "tags": [
     "task:transcription",
     "domain:speech",
@@ -27,7 +28,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 1.7,

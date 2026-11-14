@@ -8,6 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-11-05",
+  "summary": "",
   "tags": [
     "task:face-matching"
   ],
@@ -17,7 +18,11 @@
     ],
     "languages": [],
     "modality": [],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

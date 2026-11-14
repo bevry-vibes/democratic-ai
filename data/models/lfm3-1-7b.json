@@ -8,6 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-10-23",
+  "summary": "",
   "tags": [
     "task:text-generation",
     "domain:language",
@@ -23,7 +24,11 @@
     "modality": [],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 1.7,
@@ -96,7 +101,18 @@
       "runtime": [
         "python"
       ],
-      "quantization": "NVFP4",
+      "quantization": "FP4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-1.7B-FP8",
+      "name": "LFM3-1.7B-FP8",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
     },
@@ -165,5 +181,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "6 builds are attached."
+  "notes": "7 builds are attached."
 }

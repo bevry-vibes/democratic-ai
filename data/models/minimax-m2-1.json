@@ -8,21 +8,34 @@
   ],
   "organization": "minimax",
   "released": "2025-12-20",
+  "summary": "MiniMax model for chat, coding, office work, and agentic tasks",
   "tags": [
+    "task:reasoning",
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:text",
     "runtime:python",
-    "license:other"
+    "license:other",
+    "family:minimax"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "reasoning",
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
+    "modality": [
+      "text"
+    ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 204800
   },
   "footprint": {
     "params_b": null,

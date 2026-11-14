@@ -8,6 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-08-28",
+  "summary": "",
   "tags": [
     "task:image-generation",
     "domain:vision",
@@ -26,7 +27,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,
@@ -71,7 +76,19 @@
     ],
     "checked_at": "2026-11-14"
   },
-  "builds": [],
+  "builds": [
+    {
+      "id": "inclusionAI/LLaDA-Image-FP8",
+      "name": "LLaDA-Image-FP8",
+      "url": "https://huggingface.co/inclusionAI/LLaDA-Image-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",
@@ -81,5 +98,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "1 builds are attached."
 }

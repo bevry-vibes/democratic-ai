@@ -8,6 +8,7 @@
   ],
   "organization": "syzygy-research",
   "released": "2026-11-10",
+  "summary": "",
   "tags": [
     "task:speech-synthesis",
     "domain:speech",
@@ -23,7 +24,11 @@
     "modality": [
       "audio"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

@@ -8,6 +8,7 @@
   ],
   "organization": "higurashi",
   "released": "2026-11-12",
+  "summary": "Haru-4B Code · Technical blog · Technical blog (Japanese) Haru-4B is a low-latency and multilingual full-duplex continuous spoken dialogue foundation model: it listens and speaks at the same time, the way people do on a phone call.",
   "tags": [
     "task:speech-synthesis",
     "domain:speech",
@@ -23,7 +24,11 @@
     "modality": [
       "audio"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 4,

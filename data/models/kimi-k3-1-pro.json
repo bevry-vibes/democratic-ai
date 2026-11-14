@@ -8,27 +8,40 @@
   ],
   "organization": "moonshot-ai",
   "released": "2026-11-02",
+  "summary": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
+    "modality:pdf",
     "modality:text",
+    "modality:video",
     "runtime:python",
     "license:other"
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
       "image",
-      "text"
+      "pdf",
+      "text",
+      "video"
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 1048576
   },
   "footprint": {
     "params_b": null,

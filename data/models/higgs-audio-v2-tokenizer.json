@@ -8,6 +8,7 @@
   ],
   "organization": "boson-ai",
   "released": "2025-06-23",
+  "summary": "",
   "tags": [
     "task:embedding",
     "task:speech-synthesis",
@@ -25,7 +26,11 @@
     "modality": [],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

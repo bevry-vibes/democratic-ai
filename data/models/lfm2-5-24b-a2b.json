@@ -8,22 +8,34 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-10-12",
+  "summary": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
   "tags": [
+    "task:reasoning",
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:text",
     "runtime:python",
     "license:other",
     "family:lfm"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "reasoning",
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
+    "modality": [
+      "text"
+    ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": null,
+    "context_tokens": 128000
   },
   "footprint": {
     "params_b": 24,
@@ -110,6 +122,17 @@
       "status": "build"
     },
     {
+      "id": "LiquidAI/LFM2.5-24B-A2B-FP8",
+      "name": "LFM2.5-24B-A2B-FP8",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
       "id": "LiquidAI/LFM2.5-24B-A2B-MLX-8bit",
       "name": "LFM2.5-24B-A2B-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-MLX-8bit",
@@ -163,5 +186,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "7 builds are attached."
+  "notes": "8 builds are attached."
 }

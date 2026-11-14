@@ -8,6 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-11-12",
+  "summary": "Duo-1.2-causal-base A Reciprocal World Model for Full-Duplex Interaction Model Overview Duo is a full-duplex multimodal world model for real-time audio-visual interaction.",
   "tags": [
     "task:real-time-interaction",
     "task:world-model",
@@ -26,7 +27,11 @@
       "audio",
       "video"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

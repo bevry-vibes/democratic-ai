@@ -8,6 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2025-11-14",
+  "summary": "",
   "tags": [
     "task:embedding",
     "domain:embeddings",
@@ -23,7 +24,11 @@
     "modality": [],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 7,

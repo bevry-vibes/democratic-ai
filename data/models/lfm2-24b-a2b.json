@@ -8,9 +8,11 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-02-24",
+  "summary": "Efficient open Liquid MoE instruct model for on-device chat and tool calling",
   "tags": [
     "task:text-generation",
     "domain:language",
+    "modality:text",
     "runtime:python",
     "license:other"
   ],
@@ -19,10 +21,16 @@
       "text-generation"
     ],
     "languages": [],
-    "modality": [],
+    "modality": [
+      "text"
+    ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": false,
+    "reasoning": false,
+    "structured_output": null,
+    "context_tokens": 32768
   },
   "footprint": {
     "params_b": 24,

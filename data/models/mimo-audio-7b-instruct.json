@@ -8,6 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2025-09-18",
+  "summary": "In contrast, humans are able to generalize to new audio tasks with only a few examples or simple instructions.",
   "tags": [
     "task:audio-language",
     "domain:multimodal",
@@ -24,7 +25,11 @@
     "modality": [
       "audio"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 7,

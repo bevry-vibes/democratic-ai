@@ -8,6 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-10-05",
+  "summary": "",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",
@@ -29,7 +30,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

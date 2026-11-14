@@ -8,22 +8,32 @@
   ],
   "organization": "ant-ling",
   "released": "2025-10-02",
+  "summary": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
   "tags": [
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:text",
     "runtime:python",
     "context:commercial-safe",
     "license:mit"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
+    "modality": [
+      "text"
+    ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": false,
+    "structured_output": null,
+    "context_tokens": 128000
   },
   "footprint": {
     "params_b": null,

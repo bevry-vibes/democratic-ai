@@ -8,6 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-09-22",
+  "summary": "",
   "tags": [
     "task:speech-synthesis",
     "domain:speech",
@@ -26,7 +27,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

@@ -8,27 +8,39 @@
   ],
   "organization": "minimax",
   "released": "2026-10-17",
+  "summary": "Frontier multimodal coding model with 1M context window and tunable thinking depth",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
     "modality:text",
+    "modality:video",
     "runtime:python",
-    "license:other"
+    "license:other",
+    "family:minimax"
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
       "image",
-      "text"
+      "text",
+      "video"
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 1000000
   },
   "footprint": {
     "params_b": null,

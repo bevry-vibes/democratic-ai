@@ -8,22 +8,32 @@
   ],
   "organization": "ant-ling",
   "released": "2025-09-17",
+  "summary": "Efficient model for low-latency assistance, extraction, and routine automation",
   "tags": [
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:text",
     "runtime:python",
     "context:commercial-safe",
     "license:mit"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
+    "modality": [
+      "text"
+    ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": false,
+    "structured_output": true,
+    "context_tokens": 131000
   },
   "footprint": {
     "params_b": null,

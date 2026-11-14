@@ -8,6 +8,7 @@
   ],
   "organization": "meituan-longcat",
   "released": "2026-03-25",
+  "summary": "LongCat-Next Tech Report &nbsp;📄 Model Introduction We develop LongCat-Next, a native multimodal model that processes text, vision, and audio under a single autoregressive objective with minimal inductive bias beyond the language paradigm.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",
@@ -24,7 +25,11 @@
     "modality": [
       "image"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

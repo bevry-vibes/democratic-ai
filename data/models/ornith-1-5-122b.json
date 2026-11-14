@@ -8,22 +8,37 @@
   ],
   "organization": "ornith-ai",
   "released": "2026-10-16",
+  "summary": "Ornith 1.5 122B is an MIT-licensed open-weight model for coding, reasoning, tool use and image understanding. It accepts text and images across a shared 262,144-token context, with up to 32,768 output tokens. Reasoning is enabled by default; JSON object output and streaming are supported.",
   "tags": [
+    "task:reasoning",
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:image",
+    "modality:text",
     "runtime:python",
     "context:commercial-safe",
-    "license:mit"
+    "license:mit",
+    "family:ornith"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "reasoning",
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
+    "modality": [
+      "image",
+      "text"
+    ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 262144
   },
   "footprint": {
     "params_b": 122,
@@ -124,7 +139,18 @@
       "runtime": [
         "python"
       ],
-      "quantization": "NVFP4",
+      "quantization": "FP4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "ornith-ai/Ornith-1.5-122B-FP8",
+      "name": "Ornith-1.5-122B-FP8",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
     },
@@ -149,5 +175,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "6 builds are attached."
+  "notes": "7 builds are attached."
 }

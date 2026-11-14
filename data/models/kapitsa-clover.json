@@ -8,6 +8,7 @@
   ],
   "organization": "nace-ai",
   "released": "2026-11-08",
+  "summary": "",
   "tags": [
     "task:text-generation",
     "domain:language",
@@ -20,7 +21,11 @@
     ],
     "languages": [],
     "modality": [],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

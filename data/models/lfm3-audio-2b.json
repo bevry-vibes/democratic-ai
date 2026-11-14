@@ -8,6 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-09-08",
+  "summary": "API Try Docs Blog LFM3-Audio-2B LFM3-Audio-2B is a compact, fully featured audio model that runs locally on laptops and edge devices.",
   "tags": [
     "task:speech-synthesis",
     "task:tool-calling",
@@ -31,7 +32,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 2,
@@ -86,6 +91,17 @@
         "coreml"
       ],
       "quantization": "CoreML",
+      "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "FluidInference/lfm3-audio-2b-coreai",
+      "name": "lfm3-audio-2b-coreai",
+      "url": "https://huggingface.co/FluidInference/lfm3-audio-2b-coreai",
+      "runtime": [
+        "ios"
+      ],
+      "quantization": "CoreAI",
       "relation": "conversion",
       "status": "build"
     },
@@ -154,5 +170,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "6 builds are attached."
+  "notes": "7 builds are attached."
 }

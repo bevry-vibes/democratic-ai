@@ -8,6 +8,7 @@
   ],
   "organization": "minimax",
   "released": "2026-11-03",
+  "summary": "",
   "tags": [
     "task:image-generation",
     "domain:vision",
@@ -23,7 +24,11 @@
     "modality": [
       "image"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,
@@ -83,6 +88,15 @@
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
+    },
+    {
+      "id": "unsloth/MiniMax-H3-Image-FP8",
+      "name": "MiniMax-H3-Image-FP8",
+      "url": "https://huggingface.co/unsloth/MiniMax-H3-Image-FP8",
+      "runtime": [],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
     }
   ],
   "sources": [
@@ -94,5 +108,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "1 builds are attached."
+  "notes": "2 builds are attached."
 }

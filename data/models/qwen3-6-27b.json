@@ -8,28 +8,42 @@
   ],
   "organization": "qwen",
   "released": "2026-04-21",
+  "summary": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
+    "modality:pdf",
     "modality:text",
+    "modality:video",
     "runtime:python",
     "context:commercial-safe",
-    "license:apache-2.0"
+    "license:apache-2.0",
+    "family:qwen"
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
       "image",
-      "text"
+      "pdf",
+      "text",
+      "video"
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 262144
   },
   "footprint": {
     "params_b": 27,
@@ -109,7 +123,19 @@
     ],
     "checked_at": "2026-11-14"
   },
-  "builds": [],
+  "builds": [
+    {
+      "id": "Qwen/Qwen3.6-27B-FP8",
+      "name": "Qwen3.6-27B-FP8",
+      "url": "https://huggingface.co/Qwen/Qwen3.6-27B-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",
@@ -119,5 +145,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "1 builds are attached."
 }

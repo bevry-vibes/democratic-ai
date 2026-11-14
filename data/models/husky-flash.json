@@ -8,6 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-09-21",
+  "summary": "Husky Flash: Woof 1.0 4B for Husky, with the Flash draft Woof is the Pareto-frontier model that runs Underdog on your Mac and iPhone, even without wifi.",
   "tags": [
     "task:text-generation",
     "domain:language",
@@ -20,7 +21,11 @@
     ],
     "languages": [],
     "modality": [],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

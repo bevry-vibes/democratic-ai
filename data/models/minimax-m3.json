@@ -8,27 +8,41 @@
   ],
   "organization": "minimax",
   "released": "2026-06-02",
+  "summary": "MiniMax multimodal model for long-context coding, perception, and agent planning",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
+    "modality:pdf",
     "modality:text",
+    "modality:video",
     "runtime:python",
-    "license:other"
+    "license:other",
+    "family:minimax"
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
       "image",
-      "text"
+      "pdf",
+      "text",
+      "video"
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 1000000
   },
   "footprint": {
     "params_b": null,
@@ -110,6 +124,17 @@
   },
   "builds": [
     {
+      "id": "MiniMaxAI/MiniMax-M3-MXFP8",
+      "name": "MiniMax-M3-MXFP8",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3-MXFP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "MXFP8",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
       "id": "unsloth/MiniMax-M3-GGUF",
       "name": "MiniMax-M3-GGUF",
       "url": "https://huggingface.co/unsloth/MiniMax-M3-GGUF",
@@ -131,5 +156,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "1 builds are attached."
+  "notes": "2 builds are attached."
 }

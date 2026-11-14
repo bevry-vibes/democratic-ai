@@ -8,6 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2025-09-30",
+  "summary": "Its core is a unified continuous speech tokenizer that effectively unifies semantic and acoustic features within an end-to-end model.",
   "tags": [
     "task:audio-language",
     "task:speech-editing",
@@ -27,7 +28,11 @@
     "modality": [
       "audio"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 16,

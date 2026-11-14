@@ -1,9 +1,9 @@
 {
   "pull_id": "20261114T025658Z",
-  "generated_at": "2026-11-14T04:21:49.228Z",
-  "roots": 272,
-  "builds_attached": 140,
-  "builds_unmatched": 222,
+  "generated_at": "2026-11-14T04:23:36.287Z",
+  "roots": 240,
+  "builds_attached": 174,
+  "builds_unmatched": 220,
   "builds_unmatched_samples": [
     "ConwayResearch/woof-textfiller-4B-4bit-v2.1",
     "ConwayResearch/woof-textfiller-0.8B-4bit-v2.1",
@@ -16,8 +16,9 @@
     "ConwayResearch/underdog-llama-server",
     "Edge0/Edge0-120B-NVFP4",
     "Edge0/Edge0-145B-NVFP4",
+    "Edge0/Edge0-120B-q3k",
+    "Edge0/Edge0-145B-q3k",
     "Edge0/audio8-TTS-0.1B-ONNX-INT8",
-    "XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
     "ornith-ai/Ornith-1.5-35B-A3B-MLX-6bit",
     "ornith-ai/Ornith-1.5-9B-MLX-6bit",
     "badtheorylabs/Tinfield-1-Q4_K_XL-GGUF",
@@ -33,11 +34,10 @@
     "FluidInference/vela-3.0-coreml",
     "FluidInference/nemotron-3.5-transcribe-lite-coreml",
     "FluidInference/nemotron-labs-unified-asr-0.6b-coreml",
-    "FluidInference/bark-3.0-coreml",
-    "FluidInference/canary-1b-v2-coreml"
+    "FluidInference/bark-3.0-coreml"
   ],
   "skipped": {
-    "builds": 362,
+    "builds": 394,
     "probes": 29,
     "documentation": 1
   },

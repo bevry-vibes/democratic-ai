@@ -8,22 +8,37 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2026-04-27",
+  "summary": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
   "tags": [
+    "task:reasoning",
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:audio",
+    "modality:text",
     "runtime:python",
     "context:commercial-safe",
-    "license:mit"
+    "license:mit",
+    "family:mimo"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "reasoning",
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
+    "modality": [
+      "audio",
+      "text"
+    ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 1048576
   },
   "footprint": {
     "params_b": null,
@@ -103,7 +118,19 @@
     ],
     "checked_at": "2026-11-14"
   },
-  "builds": [],
+  "builds": [
+    {
+      "id": "XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
+      "name": "MiMo-V2.5-Pro-FP4-DFlash",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP4",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",
@@ -113,5 +140,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "1 builds are attached."
 }

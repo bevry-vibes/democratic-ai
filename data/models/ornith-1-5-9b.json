@@ -8,6 +8,7 @@
   ],
   "organization": "ornith-ai",
   "released": "2026-08-18",
+  "summary": "",
   "tags": [
     "task:text-generation",
     "domain:language",
@@ -23,7 +24,11 @@
     "modality": [],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 9,
@@ -85,7 +90,7 @@
       "runtime": [
         "python"
       ],
-      "quantization": "NVFP4",
+      "quantization": "FP4",
       "relation": "quantized",
       "status": "build"
     },

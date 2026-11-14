@@ -8,6 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-05-14",
+  "summary": "",
   "tags": [
     "task:speech-enhancement",
     "domain:speech",
@@ -22,7 +23,11 @@
     "modality": [
       "audio"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

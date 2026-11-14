@@ -8,6 +8,7 @@
   ],
   "organization": "syzygy-research",
   "released": "2026-08-05",
+  "summary": "",
   "tags": [
     "task:image-understanding",
     "domain:multimodal"
@@ -18,7 +19,11 @@
     ],
     "languages": [],
     "modality": [],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 35,

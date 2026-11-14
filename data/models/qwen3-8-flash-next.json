@@ -8,27 +8,39 @@
   ],
   "organization": "qwen",
   "released": "2026-08-24",
+  "summary": "Open-weight experimental preview of the Qwen4 architecture: hybrid-attention MoE (125B total, 6B active) with vision encoder for coding, agent tasks, and image and video understanding",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
     "modality:text",
+    "modality:video",
     "runtime:python",
-    "license:other"
+    "license:other",
+    "family:qwen"
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
       "image",
-      "text"
+      "text",
+      "video"
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 262144
   },
   "footprint": {
     "params_b": null,
@@ -129,6 +141,17 @@
       "status": "build"
     },
     {
+      "id": "Qwen/Qwen3.8-Flash-Next-FP8",
+      "name": "Qwen3.8-Flash-Next-FP8",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
       "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
       "name": "Qwen3.8-Flash-Next-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
@@ -160,5 +183,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "5 builds are attached."
+  "notes": "6 builds are attached."
 }

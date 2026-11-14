@@ -8,27 +8,40 @@
   ],
   "organization": "moonshot-ai",
   "released": "2026-06-13",
+  "summary": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
+    "modality:pdf",
     "modality:text",
+    "modality:video",
     "runtime:python",
     "license:other"
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
       "image",
-      "text"
+      "pdf",
+      "text",
+      "video"
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 1048576
   },
   "footprint": {
     "params_b": null,

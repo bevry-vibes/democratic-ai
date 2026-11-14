@@ -8,6 +8,7 @@
   ],
   "organization": "zai",
   "released": "2026-01-30",
+  "summary": "",
   "tags": [
     "task:image-understanding",
     "task:ocr",
@@ -25,7 +26,11 @@
     "modality": [],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

@@ -8,19 +8,31 @@
   ],
   "organization": "ant-ling",
   "released": "2026-09-03",
+  "summary": "Finance-enhanced model for financial research, multi-step investment workflows, and long-horizon planning and execution",
   "tags": [
+    "task:reasoning",
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:text",
     "context:commercial-safe",
     "license:mit"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "reasoning",
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
-    "runtimes": []
+    "modality": [
+      "text"
+    ],
+    "runtimes": [],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 256000
   },
   "footprint": {
     "params_b": null,
@@ -92,11 +104,29 @@
   },
   "builds": [
     {
+      "id": "inclusionAI/Ling-3.0-flash-Fin-fp8",
+      "name": "Ling-3.0-flash-Fin-fp8",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin-fp8",
+      "runtime": [],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
       "id": "inclusionAI/Ling-3.0-flash-Fin-int4",
       "name": "Ling-3.0-flash-Fin-int4",
       "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin-int4",
       "runtime": [],
       "quantization": "INT4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "inclusionAI/Ling-3.0-flash-Fin-fp4",
+      "name": "Ling-3.0-flash-Fin-fp4",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin-fp4",
+      "runtime": [],
+      "quantization": "FP4",
       "relation": "quantized",
       "status": "build"
     }
@@ -110,5 +140,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "1 builds are attached."
+  "notes": "3 builds are attached."
 }

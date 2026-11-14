@@ -8,28 +8,41 @@
   ],
   "organization": "zai",
   "released": "2026-08-25",
+  "summary": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
   "tags": [
     "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
     "domain:multimodal",
     "domain:vision",
     "modality:image",
+    "modality:pdf",
     "modality:text",
+    "modality:video",
     "runtime:python",
     "context:commercial-safe",
     "license:mit"
   ],
   "capabilities": {
     "tasks": [
-      "image-understanding"
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
     ],
     "languages": [],
     "modality": [
       "image",
-      "text"
+      "pdf",
+      "text",
+      "video"
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 1000000
   },
   "footprint": {
     "params_b": null,
@@ -122,6 +135,17 @@
       "status": "build"
     },
     {
+      "id": "unsloth/GLM-5.3-Flash-FP8",
+      "name": "GLM-5.3-Flash-FP8",
+      "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
       "id": "unsloth/GLM-5.3-Flash",
       "name": "GLM-5.3-Flash",
       "url": "https://huggingface.co/unsloth/GLM-5.3-Flash",
@@ -153,5 +177,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "3 builds are attached."
+  "notes": "4 builds are attached."
 }

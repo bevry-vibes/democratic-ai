@@ -8,6 +8,7 @@
   ],
   "organization": "ornith-ai",
   "released": "2026-08-18",
+  "summary": "",
   "tags": [
     "task:text-generation",
     "domain:language",
@@ -23,7 +24,11 @@
     "modality": [],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 397,
@@ -76,7 +81,7 @@
       "runtime": [
         "python"
       ],
-      "quantization": "NVFP4",
+      "quantization": "FP4",
       "relation": "quantized",
       "status": "build"
     },
@@ -100,6 +105,17 @@
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
+    },
+    {
+      "id": "ornith-ai/Ornith-1.5-397B-FP8",
+      "name": "Ornith-1.5-397B-FP8",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
     }
   ],
   "sources": [
@@ -111,5 +127,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "3 builds are attached."
+  "notes": "4 builds are attached."
 }

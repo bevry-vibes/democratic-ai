@@ -8,6 +8,7 @@
   ],
   "organization": "qwen",
   "released": "2025-09-23",
+  "summary": "",
   "tags": [
     "task:embedding",
     "domain:embeddings",
@@ -24,7 +25,11 @@
     "modality": [],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 0.6,

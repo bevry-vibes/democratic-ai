@@ -8,6 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-07-02",
+  "summary": "",
   "tags": [
     "task:pii-redaction",
     "task:structured-extraction",
@@ -24,7 +25,11 @@
     "modality": [],
     "runtimes": [
       "litert"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

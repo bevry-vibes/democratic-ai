@@ -8,6 +8,7 @@
   ],
   "organization": "webai",
   "released": "2026-07-22",
+  "summary": "",
   "tags": [
     "task:retrieval",
     "domain:vision",
@@ -23,7 +24,11 @@
     "modality": [],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 4,

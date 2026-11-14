@@ -8,19 +8,31 @@
   ],
   "organization": "ant-ling",
   "released": "2026-10-19",
+  "summary": "Health and medicine specialization of Ling 3.0 Flash for medical reasoning and evidence-based retrieval",
   "tags": [
+    "task:reasoning",
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:text",
     "context:commercial-safe",
     "license:mit"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "reasoning",
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
-    "runtimes": []
+    "modality": [
+      "text"
+    ],
+    "runtimes": [],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": false,
+    "context_tokens": 256000
   },
   "footprint": {
     "params_b": null,
@@ -77,7 +89,17 @@
     ],
     "checked_at": "2026-11-14"
   },
-  "builds": [],
+  "builds": [
+    {
+      "id": "inclusionAI/Ling-3.0-flash-Sante-fp8",
+      "name": "Ling-3.0-flash-Sante-fp8",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Sante-fp8",
+      "runtime": [],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",
@@ -87,5 +109,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "1 builds are attached."
 }

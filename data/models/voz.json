@@ -8,6 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-08-19",
+  "summary": "",
   "tags": [
     "task:transcription",
     "domain:speech",
@@ -25,7 +26,11 @@
     ],
     "runtimes": [
       "litert"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

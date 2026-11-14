@@ -8,22 +8,37 @@
   ],
   "organization": "zai",
   "released": "2026-06-16",
+  "summary": "Open flagship GLM for long-horizon coding agents and million-token context work",
   "tags": [
+    "task:reasoning",
     "task:text-generation",
+    "task:tool-calling",
     "domain:language",
+    "modality:image",
+    "modality:text",
     "runtime:python",
     "context:commercial-safe",
-    "license:mit"
+    "license:mit",
+    "family:glm"
   ],
   "capabilities": {
     "tasks": [
-      "text-generation"
+      "reasoning",
+      "text-generation",
+      "tool-calling"
     ],
     "languages": [],
-    "modality": [],
+    "modality": [
+      "image",
+      "text"
+    ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 1000000
   },
   "footprint": {
     "params_b": null,
@@ -103,7 +118,19 @@
     ],
     "checked_at": "2026-11-14"
   },
-  "builds": [],
+  "builds": [
+    {
+      "id": "zai-org/GLM-5.2-FP8",
+      "name": "GLM-5.2-FP8",
+      "url": "https://huggingface.co/zai-org/GLM-5.2-FP8",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "FP8",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",
@@ -113,5 +140,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "1 builds are attached."
 }

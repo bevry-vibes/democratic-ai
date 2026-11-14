@@ -8,6 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2025-12-18",
+  "summary": "Key improvements include a custom, LFM based audio detokenizer, `llama.cpp` compatible GGUFs for CPU inference, and better ASR and TTS performance.",
   "tags": [
     "task:speech-synthesis",
     "task:transcription",
@@ -25,7 +26,11 @@
     "modality": [
       "audio"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": 1.5,

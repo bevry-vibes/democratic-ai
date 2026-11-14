@@ -8,6 +8,7 @@
   ],
   "organization": "fluid-voice",
   "released": "2026-08-04",
+  "summary": "FluidAudio Web — raw model weights Model weights for fluidaudio-web: fully in-browser inference (WebGPU + WebAssembly) for FluidAudio's speech models.",
   "tags": [
     "task:transcription",
     "task:voice-activity-detection",
@@ -25,7 +26,11 @@
     "modality": [
       "audio"
     ],
-    "runtimes": []
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

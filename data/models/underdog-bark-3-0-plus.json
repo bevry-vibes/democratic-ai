@@ -8,6 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-10-15",
+  "summary": "",
   "tags": [
     "task:transcription",
     "domain:speech",
@@ -27,7 +28,11 @@
     ],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,

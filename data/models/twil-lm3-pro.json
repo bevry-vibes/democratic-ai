@@ -8,6 +8,7 @@
   ],
   "organization": "webai",
   "released": "2026-09-03",
+  "summary": "",
   "tags": [
     "task:text-generation",
     "domain:language",
@@ -22,7 +23,11 @@
     "modality": [],
     "runtimes": [
       "python"
-    ]
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
   },
   "footprint": {
     "params_b": null,
@@ -73,7 +78,19 @@
     ],
     "checked_at": "2026-11-14"
   },
-  "builds": [],
+  "builds": [
+    {
+      "id": "webAI-Official/TwIL-LM3-Pro-LiteRT-LM",
+      "name": "TwIL-LM3-Pro-LiteRT-LM",
+      "url": "https://huggingface.co/webAI-Official/TwIL-LM3-Pro-LiteRT-LM",
+      "runtime": [
+        "litert"
+      ],
+      "quantization": "LiteRT",
+      "relation": "conversion",
+      "status": "build"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",
@@ -83,5 +100,5 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "1 builds are attached."
 }
