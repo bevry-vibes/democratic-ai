@@ -44,20 +44,25 @@ The owner asked for:
 
 | Source | What happens without credentials | What is needed | Recommendation |
 | --- | --- | --- | --- |
-| X list `2084302656580034676` | `x.com` redirects to a login page. There is no public member list. | An X developer app attached to a Project, with pay-per-use access, plus user-context auth (OAuth 1.0a or an OAuth 2.0 user token). The list endpoints are excluded from the legacy free access. | Start from a manual member snapshot that the owner supplies. Add an authenticated sync later. Never block the build on X. |
+| X list `2084302656580034676` | `x.com` redirects to a login page. There is no public member list. | An X developer app attached to a Project, with pay-per-use credits. The list lookup and member endpoints accept app-only auth; the app only needs credits. | Start from a manual member snapshot that the owner supplies. Add an authenticated sync later. Never block the build on X. |
 | Hugging Face `balupton/following` | The HTML page returns 401. The public overview reports `numFollowing: 0` and `numFollowingOrgs: 13`. | An authenticated Hugging Face session or a `HF_TOKEN` with the right scope. | Treat the 13 followed organisations as the seed. Use a committed snapshot, refresh it with a token when one is documented. |
 
 #### Credential test (2026-11-14)
 
-The owner supplied credentials in `.dev.vars`. The tests reached the X API, but every list read failed at the account level.
+The owner supplied credentials in `.dev.vars`. The first test reached the API, but every read failed at the account level.
 
 | Attempt | Result |
 | --- | --- |
-| `GET /2/lists/:id/members` with the bearer token | 403 `client-not-enrolled` — the app is not attached to a Project. |
-| `GET /2/users/me` with OAuth 1.0a user context | The same 403. |
-| `GET /1.1/lists/list.json` with OAuth 1.0a | 403 code 453 — the access level covers only a subset of v1.1. |
+| First app, `GET /2/lists/:id/members` with the bearer token | 403 `client-not-enrolled` — the app was not attached to a Project. |
+| First app, `GET /2/users/me` with OAuth 1.0a user context | The same 403. |
+| First app, `GET /1.1/lists/list.json` with OAuth 1.0a | 403 code 453 — the access level covered only a subset of v1.1. |
+| Second app, `GET /2/lists/:id` with the bearer token | 402 `credits depleted` — the app is now enrolled, but the account has no pay-per-use credits. |
+| Second app, `GET /2/lists/:id/members` with the bearer token | The same 402. |
+| Second app, `GET /2/users/me` with the bearer token | 403 `Unsupported Authentication` — this endpoint needs user context, not app-only auth. |
 
-The fix is in the X developer portal: attach the app to a Project and enable pay-per-use access. Owned reads, including `GET /2/users/:id/owned_lists` and the list membership endpoints, cost USD 0.001 per resource. A list of 100 members therefore costs about USD 0.10. Until that is done, the list is a manual seed.
+The second result is the useful one: the list lookup and member endpoints accept app-only auth. They fail only because the account has no credits. Add credits in the X developer console and the existing bearer token will work. The cost is metered per resource; a list of 100 members is about USD 0.10 at the owned-read rate.
+
+`GET /2/users/me` is not needed. The list id is known, so the fetcher can start at `GET /2/lists/<id>` and continue to `/members`. Until credits exist, the list is a manual seed.
 
 #### Named members
 
@@ -760,7 +765,7 @@ Acceptance: a consumer answers a real selection question from the API; the expor
 
 The owner must decide these before Phase 1 ends. Each has a recommendation.
 
-1. **Private-list access.** Provide `HF_TOKEN`, or paste the 13 followed organisations and the X list members into `data/watchlist.json` for a manual seed. The X credentials exist but the app needs a Project and pay-per-use access before list reads work. *Recommendation: manual seed now, token sync in Phase 3.*
+1. **Private-list access.** Add pay-per-use credits to the new X app, and provide `HF_TOKEN`, or paste the 13 followed organisations and the X list members into `data/watchlist.json` for a manual seed. The X app is enrolled and the bearer token works for lists once credits exist. *Recommendation: manual seed now, token sync in Phase 3.*
 2. **Tier names.** Keep `Commons / Reciprocal / Shared / Closed / Unproven`, or split `Shared` into `Weights-only` and `Conditional`. *Recommendation: keep five tiers; the component values carry the split.*
 3. **Modality scope for the first release.** Text plus speech, or every modality. *Recommendation: text plus speech, because both consumers need them now.*
 4. **Authoring format.** JSON or YAML. *Recommendation: JSON with a schema and a `deno task new` scaffolder.*
