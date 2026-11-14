@@ -2282,3 +2282,19 @@ html {
   min-height: 2.2rem;
   border-radius: 999px;
 }
+
+/* The layout column is the measure. Do not cap paragraphs to a narrower one. */
+.lede,
+.page-head .lede,
+.section-head p,
+.prose,
+.prose p,
+.thesis-body,
+.thesis-body p,
+.method-body,
+.method-body p,
+.method-body > .panel > p,
+.method-body > .panel > ul,
+.method-body > .panel > ol {
+  max-width: none;
+}
