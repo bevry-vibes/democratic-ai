@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/aaif-goose/goose/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/aaif-goose/goose/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/aaif-goose/goose/releases.atom"/>
+  <title>Release notes from goose</title>
+  <updated>2026-11-10T00:53:41Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/846698999/v1.59.0</id>
+    <updated>2026-11-10T17:27:36Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/aaif-goose/goose/releases/tag/v1.59.0"/>
+    <title>v1.59.0</title>
+    <content type="html">&lt;h2&gt;✨ Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Minimal deferred MCP tools in ToolExecutionOperation &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13378&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13378/hovercard&quot;&gt;#13378&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Configurable and per-start voice instructions for live-voice &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13375&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13375/hovercard&quot;&gt;#13375&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Configurable GPT-Live endpoint, model and key &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13360&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13360/hovercard&quot;&gt;#13360&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Filter session/list by client tags (ACP) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13173&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13173/hovercard&quot;&gt;#13173&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Stop, approval, and tool hook operations for goose-agent (GDK) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13169&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13169/hovercard&quot;&gt;#13169&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resume completed delegates with a follow-up (subagent) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13106&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13106/hovercard&quot;&gt;#13106&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🐛 Bug Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Honor HTTP(S) docs roots in goose-doc-guide &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13381&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13381/hovercard&quot;&gt;#13381&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use uncorrelated IN for session keyword search &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13373&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13373/hovercard&quot;&gt;#13373&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Isolate session database initialization from application pool &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13324&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13324/hovercard&quot;&gt;#13324&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Refresh Databricks OAuth tokens before they expire &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13328&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13328/hovercard&quot;&gt;#13328&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reword compaction prompt that Opus 5.5 refuses as distillation &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13340&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13340/hovercard&quot;&gt;#13340&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Send Gemini thinking level and drop stream_options for Databricks &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13232&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13232/hovercard&quot;&gt;#13232&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Address new cargo-deny advisories (zip8) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13309&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13309/hovercard&quot;&gt;#13309&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📚 Documentation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Correct SECURITY_PROMPT_THRESHOLD sensitivity direction &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12954&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12954/hovercard&quot;&gt;#12954&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog post: Same Brain, Different Bill &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13197&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13197/hovercard&quot;&gt;#13197&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/846698999/v1.58.1</id>
+    <updated>2026-11-10T04:16:29Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/aaif-goose/goose/releases/tag/v1.58.1"/>
+    <title>v1.58.1</title>
+    <content type="html">&lt;h2&gt;🐛 &lt;strong&gt;Bug Fixes&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Reword compaction prompt that Opus 5.5 refuses as distillation &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13340&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13340/hovercard&quot;&gt;#13340&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Refresh Databricks OAuth tokens before they expire &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13328&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13328/hovercard&quot;&gt;#13328&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/846698999/v1.58.0</id>
+    <updated>2026-11-09T19:17:23Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/aaif-goose/goose/releases/tag/v1.58.0"/>
+    <title>v1.58.0</title>
+    <content type="html">&lt;h2&gt;✨ Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Opt-in context relevance operation &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12589&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12589/hovercard&quot;&gt;#12589&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Context window report and viewer &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/10462&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/10462/hovercard&quot;&gt;#10462&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AIHubMix declarative provider &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12997&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12997/hovercard&quot;&gt;#12997&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;RouterPlex declarative provider &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13068&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13068/hovercard&quot;&gt;#13068&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lemonade provider &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12920&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12920/hovercard&quot;&gt;#12920&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Collapse thinking by default with a setting to control it (desktop) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12660&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12660/hovercard&quot;&gt;#12660&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🐛 Bug Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Replace retired Spark X2 with Spark X2.5 in iflytek_astron &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12772&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12772/hovercard&quot;&gt;#12772&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Show current session ID in /status &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12607&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12607/hovercard&quot;&gt;#12607&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Keep session load on its replay fast path when stopped (desktop) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13190&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13190/hovercard&quot;&gt;#13190&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Replay OpenAI Responses reasoning across tool turns &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13222&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13222/hovercard&quot;&gt;#13222&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Route bare OpenAI GPT IDs to Mantle by ID shape (bedrock) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13211&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13211/hovercard&quot;&gt;#13211&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use supports_vision from /model/info (litellm) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13239&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13239/hovercard&quot;&gt;#13239&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Honor Retry-After on 429s mapped outside handle_status &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12986&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12986/hovercard&quot;&gt;#12986&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Classify typed context_length_exceeded errors as context overflow (openrouter) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13154&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13154/hovercard&quot;&gt;#13154&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Report failed manual compaction as an error (acp) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13099&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13099/hovercard&quot;&gt;#13099&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fall back to default inference for Bedrock provider models without document block support &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12932&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12932/hovercard&quot;&gt;#12932&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bump zstd to 0.14.3 for RUSTSEC advisories &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13162&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13162/hovercard&quot;&gt;#13162&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Restore Linux window icons (desktop) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13120&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13120/hovercard&quot;&gt;#13120&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resolve variant suffixes like :free and :nitro to the base model (openrouter) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12979&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12979/hovercard&quot;&gt;#12979&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use catalog_provider_id for vision lookup on custom providers &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12993&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12993/hovercard&quot;&gt;#12993&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Start the agent only once after a fork (desktop) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13139&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13139/hovercard&quot;&gt;#13139&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove jsonwebtoken to avoid ignoring its cargo-deny advisories &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13141&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13141/hovercard&quot;&gt;#13141&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use recipe settings in scheduled runs (scheduler) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13138&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13138/hovercard&quot;&gt;#13138&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use system trust for WebSockets (voice) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13075&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13075/hovercard&quot;&gt;#13075&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Stop telling the model a screenshot tool exists (computercontroller) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13279&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13279/hovercard&quot;&gt;#13279&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔧 Improvements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Replace Agent and AgentManager with one StateMachineServices per process &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12880&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12880/hovercard&quot;&gt;#12880&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Drop tool-specific tool call titles (desktop) &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13107&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13107/hovercard&quot;&gt;#13107&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove ACP client-delegated developer tools &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13144&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13144/hovercard&quot;&gt;#13144&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📚 Documentation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Say that code is not the only way to contribute &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13292&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13292/hovercard&quot;&gt;#13292&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Feature GDK on the main website &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13245&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13245/hovercard&quot;&gt;#13245&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Give GDK its own navigation and developer guides &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13165&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13165/hovercard&quot;&gt;#13165&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fikra API example for custom OpenAI endpoints &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13008&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13008/hovercard&quot;&gt;#13008&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/846698999/v1.57.0</id>
+    <updated>2026-10-28T19:42:57Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/aaif-goose/goose/releases/tag/v1.57.0"/>
+    <title>v1.57.0</title>
+    <content type="html">&lt;h2&gt;✨ Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Allowlist: require HTTPS and validate redirects, block on policy failure &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12619&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12619/hovercard&quot;&gt;#12619&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Allow callers to supply Goose session IDs &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13098&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13098/hovercard&quot;&gt;#13098&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🐛 Bug Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux window icons restored in desktop app &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13120&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13120/hovercard&quot;&gt;#13120&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OpenRouter: resolve variant suffixes like &lt;code&gt;:free&lt;/code&gt; and &lt;code&gt;:nitro&lt;/code&gt; to the base model &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12979&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12979/hovercard&quot;&gt;#12979&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use catalog_provider_id for vision lookup on custom providers &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12993&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12993/hovercard&quot;&gt;#12993&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Desktop: start the agent only once after a fork &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13139&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13139/hovercard&quot;&gt;#13139&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Scheduler: use recipe settings in scheduled runs &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13138&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13138/hovercard&quot;&gt;#13138&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Voice: use system trust for WebSockets &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13075&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13075/hovercard&quot;&gt;#13075&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prompt: surface MiniJinja render errors in custom system prompts &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12794&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12794/hovercard&quot;&gt;#12794&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Providers: request summarized thinking from Claude models &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13029&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13029/hovercard&quot;&gt;#13029&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Code-mode: keep recipe final_output tool for the model &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13102&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13102/hovercard&quot;&gt;#13102&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CLI: configure unavailable default provider &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13024&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13024/hovercard&quot;&gt;#13024&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Windows build error &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13081&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13081/hovercard&quot;&gt;#13081&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Developer: terminate owned shell process trees on cancellation &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12958&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12958/hovercard&quot;&gt;#12958&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ACP: fail session/prompt when a turn ends on an error &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13043&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13043/hovercard&quot;&gt;#13043&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Databricks: send the system prompt as system on the MLflow chat route &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13057&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13057/hovercard&quot;&gt;#13057&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔧 Improvements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bump zstd to 0.14.3 for RUSTSEC advisories &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13162&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13162/hovercard&quot;&gt;#13162&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove jsonwebtoken to avoid ignoring its cargo-deny advisories &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13141&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13141/hovercard&quot;&gt;#13141&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Address cargo-deny failures on main &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13076&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13076/hovercard&quot;&gt;#13076&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bump @modelcontextprotocol/sdk from 1.30.0 to 1.32.0 &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13059&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13059/hovercard&quot;&gt;#13059&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove ACP client-delegated developer tools &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13144&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13144/hovercard&quot;&gt;#13144&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Build release candidate even if there are conflicts &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12780&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12780/hovercard&quot;&gt;#12780&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/846698999/gdk-v0.1.0-alpha.13</id>
+    <updated>2026-10-24T17:41:22Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/aaif-goose/goose/releases/tag/gdk-v0.1.0-alpha.13"/>
+    <title>gdk-v0.1.0-alpha.13: chore(GDK): release v0.1.0-alpha.13 (#12876)</title>
+    <content type="html">&lt;p&gt;Co-authored-by: github-actions[bot] &amp;lt;41898282+github-actions[bot]@users.noreply.github.com&amp;gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/846698999/v1.56.0</id>
+    <updated>2026-10-23T15:57:25Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/aaif-goose/goose/releases/tag/v1.56.0"/>
+    <title>v1.56.0</title>
+    <content type="html">&lt;h2&gt;✨ Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Automatic thinking level operation for improved model reasoning &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12237&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12237/hovercard&quot;&gt;#12237&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resume failed or cancelled delegate subagents &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13015&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13015/hovercard&quot;&gt;#13015&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Subagent session link in UI with view-only subagent sessions &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12998&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12998/hovercard&quot;&gt;#12998&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Limit concurrent subagents with &lt;code&gt;GOOSE_MAX_CONCURRENT_SUBAGENTS&lt;/code&gt; &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12946&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12946/hovercard&quot;&gt;#12946&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Report session status via OSC 7501 in CLI &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12928&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12928/hovercard&quot;&gt;#12928&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Windows NSIS installer for desktop &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12869&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12869/hovercard&quot;&gt;#12869&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;IO Intelligence provider &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12795&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12795/hovercard&quot;&gt;#12795&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Provider-defined cache prices support &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12944&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12944/hovercard&quot;&gt;#12944&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Dangerous include history option &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13051&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13051/hovercard&quot;&gt;#13051&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Replace PCTX code mode with Boa JavaScript runtime &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12952&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12952/hovercard&quot;&gt;#12952&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🐛 Bug Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows build error &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13081&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13081/hovercard&quot;&gt;#13081&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Omit stream_options for Databricks Gemini model services &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12675&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12675/hovercard&quot;&gt;#12675&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Stale models issue &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13054&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13054/hovercard&quot;&gt;#13054&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Show model changes when provider reports no resolved model &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12914&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12914/hovercard&quot;&gt;#12914&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Show why an update install failed in desktop &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12628&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12628/hovercard&quot;&gt;#12628&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Keep &lt;code&gt;!&lt;/code&gt; in npx arguments on Windows &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12680&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12680/hovercard&quot;&gt;#12680&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Inherit active chat folder for New Chat &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12941&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12941/hovercard&quot;&gt;#12941&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bound long conversation rendering in desktop &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12976&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12976/hovercard&quot;&gt;#12976&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Drop ActionRequired and ToolConfirmationRequest blocks for Bedrock instead of sending blank text &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12843&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12843/hovercard&quot;&gt;#12843&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Missing GLM models in OpenCode Go and Zen &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12057&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12057/hovercard&quot;&gt;#12057&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Load the live model catalog in goose-acp &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12962&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12962/hovercard&quot;&gt;#12962&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Load recipe extensions for slash commands and delegation &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12938&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12938/hovercard&quot;&gt;#12938&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use the context length OpenRouter reports &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12853&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12853/hovercard&quot;&gt;#12853&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Context freeze preserved message must stay user-visible during compaction &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12692&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12692/hovercard&quot;&gt;#12692&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Do not present compaction countdowns to models &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12902&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12902/hovercard&quot;&gt;#12902&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Keep the agent&#39;s model list order in ACP &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12823&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12823/hovercard&quot;&gt;#12823&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Send session id as prompt_cache_key on OpenAI Responses requests &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12420&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12420/hovercard&quot;&gt;#12420&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Map Moonshot provider name to moonshotai for canonical model lookup &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12041&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12041/hovercard&quot;&gt;#12041&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tolerate missing created_at on OpenAI Responses stream events &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12241&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12241/hovercard&quot;&gt;#12241&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔧 Improvements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MCP tools now have provider-safe public names &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12875&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12875/hovercard&quot;&gt;#12875&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use global turn limit as subagent turn limit fallback &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12992&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12992/hovercard&quot;&gt;#12992&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optimise list session database query &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12940&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12940/hovercard&quot;&gt;#12940&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Skills discovery moved into GDK &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12935&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12935/hovercard&quot;&gt;#12935&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Run foreground subagents in the GDK &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12792&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12792/hovercard&quot;&gt;#12792&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Leave the login-shell PATH to whoever launches goose &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12799&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12799/hovercard&quot;&gt;#12799&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📚 Documentation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Distinguish native Rust APIs from shared bindings in GDK docs &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/13026&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/13026/hovercard&quot;&gt;#13026&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Correct toggle sidebar shortcut &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12901&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12901/hovercard&quot;&gt;#12901&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/846698999/v1.55.0</id>
+    <updated>2026-10-16T17:07:23Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/aaif-goose/goose/releases/tag/v1.55.0"/>
+    <title>v1.55.0</title>
+    <content type="html">&lt;h2&gt;✨ Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;AIgateway declarative provider &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12528&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12528/hovercard&quot;&gt;#12528&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Propagate W3C trace context from ACP prompts to MCP tool calls &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12697&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12697/hovercard&quot;&gt;#12697&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Surface provider x-request-id on responses and errors &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12587&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12587/hovercard&quot;&gt;#12587&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Honor supports_vision declared on custom provider models &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12769&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12769/hovercard&quot;&gt;#12769&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use live model metadata for OpenAI reasoning and prefer the Responses API &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12568&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12568/hovercard&quot;&gt;#12568&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cap auto-compaction at 225k tokens by default &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12790&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12790/hovercard&quot;&gt;#12790&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Improve askai bot relevance &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12728&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12728/hovercard&quot;&gt;#12728&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🐛 Bug Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Adaptive thinking for Claude Sonnet and Haiku 5.5 &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12761&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12761/hovercard&quot;&gt;#12761&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reject malformed GOOSE_MODE across ACP providers &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12846&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12846/hovercard&quot;&gt;#12846&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bedrock: don&#39;t retry non-context ValidationException on converse_stream &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12710&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12710/hovercard&quot;&gt;#12710&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;OpenRouter: do not set transforms field unconditionally &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/11374&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/11374/hovercard&quot;&gt;#11374&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Apply long-context price tiers to cost estimates &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12787&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12787/hovercard&quot;&gt;#12787&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Finish pending tools before enforcing max turns &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12702&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12702/hovercard&quot;&gt;#12702&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Not offer delegate to code-mode scripts &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12711&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12711/hovercard&quot;&gt;#12711&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Anthropic: forward unknown request_params to wire, mirroring openai engine &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12720&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12720/hovercard&quot;&gt;#12720&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Desktop: show copy button on messages with thinking blocks &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12726&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12726/hovercard&quot;&gt;#12726&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔧 Improvements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bind subagents by their parent&#39;s hooks, mode and approvals &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12802&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12802/hovercard&quot;&gt;#12802&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lease a session&#39;s selection and start each extension on first use &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12775&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12775/hovercard&quot;&gt;#12775&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make Stop end the run promptly and save what it produced &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12765&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12765/hovercard&quot;&gt;#12765&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make tool operations own tool call checks &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12865&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12865/hovercard&quot;&gt;#12865&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Not infer or steer while a tool approval is pending &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12808&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12808/hovercard&quot;&gt;#12808&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Leave the login-shell PATH to whoever launches goose &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12799&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12799/hovercard&quot;&gt;#12799&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Build turns from the session record: derive recipe prompt parts, persist prompt, goal and container &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12730&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12730/hovercard&quot;&gt;#12730&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Add ProviderManager and route session providers through it &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12745&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12745/hovercard&quot;&gt;#12745&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use typed structs for openai message formatting &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12725&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12725/hovercard&quot;&gt;#12725&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove background subagents and orchestrator; make Doctor session-only &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12729&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12729/hovercard&quot;&gt;#12729&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Avoid duplicate provider initialization for foreground subagents &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12705&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12705/hovercard&quot;&gt;#12705&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Refresh the model catalog on the blocking pool &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12727&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12727/hovercard&quot;&gt;#12727&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove false optionality in desktop props &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12776&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12776/hovercard&quot;&gt;#12776&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Delete the legacy agent loop &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12760&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12760/hovercard&quot;&gt;#12760&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📚 Documentation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Agentic State Machines &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12130&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12130/hovercard&quot;&gt;#12130&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/846698999/gdk-v0.1.0-alpha.12</id>
+    <updated>2026-10-13T17:29:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/aaif-goose/goose/releases/tag/gdk-v0.1.0-alpha.12"/>
+    <title>gdk-v0.1.0-alpha.12: chore(GDK): release v0.1.0-alpha.12 (#12561)</title>
+    <content type="html">&lt;p&gt;Co-authored-by: github-actions[bot] &amp;lt;41898282+github-actions[bot]@users.noreply.github.com&amp;gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/846698999/v1.54.0</id>
+    <updated>2026-10-08T18:56:22Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/aaif-goose/goose/releases/tag/v1.54.0"/>
+    <title>v1.54.0</title>
+    <content type="html">&lt;h2&gt;✨ Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Prompt for goose mode during first-time configure &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12629&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12629/hovercard&quot;&gt;#12629&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;HTML session export with an interactive viewer &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/11977&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/11977/hovercard&quot;&gt;#11977&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🐛 Bug Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Adaptive thinking for Claude Sonnet and Haiku 5.5 &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12761&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12761/hovercard&quot;&gt;#12761&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Treat a client extension selection as the exact session set &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12548&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12548/hovercard&quot;&gt;#12548&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support hyphenated GPT 6.1 Sol effort aliases &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12689&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12689/hovercard&quot;&gt;#12689&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use a system Node.js in the Windows npx wrapper &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12176&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12176/hovercard&quot;&gt;#12176&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Show thinking when GOOSE_CLI_SHOW_THINKING is set to any value &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12454&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12454/hovercard&quot;&gt;#12454&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Price Databricks GLM aliases from the zhipuai catalog &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12673&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12673/hovercard&quot;&gt;#12673&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Read messages from config for tom &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12634&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12634/hovercard&quot;&gt;#12634&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Preserve the service total when folding cache input tokens for Bedrock &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12586&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12586/hovercard&quot;&gt;#12586&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Refresh revoked Copilot tokens when listing models &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12627&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12627/hovercard&quot;&gt;#12627&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Refresh revoked GitHub Copilot API token once &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12616&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12616/hovercard&quot;&gt;#12616&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Recognize ASAR when validating update target &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12599&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12599/hovercard&quot;&gt;#12599&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Stamp the implemented protocol version in initialize &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12580&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12580/hovercard&quot;&gt;#12580&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Session naming/&quot;none&quot; reasoning effort fails for gpt-6.1-sol &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12605&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12605/hovercard&quot;&gt;#12605&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reflect loading state of chats &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12603&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12603/hovercard&quot;&gt;#12603&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Read cache write tokens from Responses API usage &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12509&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12509/hovercard&quot;&gt;#12509&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔧 Improvements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Route every extension operation through a lease &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12723&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12723/hovercard&quot;&gt;#12723&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Foreground subagents in the state machine loop &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12632&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12632/hovercard&quot;&gt;#12632&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resolve extensions into a per-inference lease &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12161&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12161/hovercard&quot;&gt;#12161&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove Nostr session sharing from goose core &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12453&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12453/hovercard&quot;&gt;#12453&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Detect vision support &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12594&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12594/hovercard&quot;&gt;#12594&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Upgrade rust to 1.99.0 &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12714&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12714/hovercard&quot;&gt;#12714&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📚 Documentation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Update Desktop permission mode instructions &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12626&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12626/hovercard&quot;&gt;#12626&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Clarify self-serve LLM provider path &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12552&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12552/hovercard&quot;&gt;#12552&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/846698999/v1.53.0</id>
+    <updated>2026-10-02T18:54:49Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/aaif-goose/goose/releases/tag/v1.53.0"/>
+    <title>v1.53.0</title>
+    <content type="html">&lt;h2&gt;✨ Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Resizable Picture-in-Picture window for MCP Apps &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12417&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12417/hovercard&quot;&gt;#12417&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fetch model metadata from models.dev live with bundled fallback &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12560&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12560/hovercard&quot;&gt;#12560&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Quoting action to append selected conversation text to composer &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12536&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12536/hovercard&quot;&gt;#12536&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lean ACP-only Goose binary &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/11961&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/11961/hovercard&quot;&gt;#11961&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Model discovery API for GDK Provider &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12497&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12497/hovercard&quot;&gt;#12497&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Meta Muse Code provider &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/11765&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/11765/hovercard&quot;&gt;#11765&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support for Opus 5.5, GPT-6-sol, GPT-6-luna &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12447&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12447/hovercard&quot;&gt;#12447&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Session rename command in CLI &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12236&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12236/hovercard&quot;&gt;#12236&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Show working directory in session remove command &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12232&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12232/hovercard&quot;&gt;#12232&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GDK agent loop runs on wasm32 &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12569&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12569/hovercard&quot;&gt;#12569&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🐛 Bug Fixes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Session naming and &quot;none&quot; reasoning effort for GPT-6.1-sol &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12605&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12605/hovercard&quot;&gt;#12605&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Strip inert parameters from session snapshots in recipes &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/11988&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/11988/hovercard&quot;&gt;#11988&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Preserve session context across reply lifecycle &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12516&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12516/hovercard&quot;&gt;#12516&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Report max_tokens truncation and flush tool calls for Bedrock &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/11872&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/11872/hovercard&quot;&gt;#11872&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Require a terminal for elicitation input in CLI &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12542&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12542/hovercard&quot;&gt;#12542&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Keep tool results consecutive when OpenAI-compatible tool images are emitted &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12233&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12233/hovercard&quot;&gt;#12233&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GDK tools with no args still advertise empty params input schema &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12527&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12527/hovercard&quot;&gt;#12527&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Passing thinking effort to Ollama models &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12555&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12555/hovercard&quot;&gt;#12555&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Estimate costs through canonical provider aliases &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/11916&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/11916/hovercard&quot;&gt;#11916&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resolve vision support from the canonical catalog for all providers &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12522&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12522/hovercard&quot;&gt;#12522&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Send Databricks v2 Claude model services through the Anthropic route &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12486&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12486/hovercard&quot;&gt;#12486&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Show tool output for tools without a priority annotation &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12436&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12436/hovercard&quot;&gt;#12436&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Treat an unavailable prompt classifier as no signal &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12452&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12452/hovercard&quot;&gt;#12452&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Guard MCP streamable-HTTP client redirects against SSRF &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/11501&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/11501/hovercard&quot;&gt;#11501&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resolve vision support from the canonical catalog in GDK so tool result images reach the model &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12440&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12440/hovercard&quot;&gt;#12440&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Prevent Extension Manager from disabling itself &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12270&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12270/hovercard&quot;&gt;#12270&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rename deepseek-v4-flash to deepseek-flash &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12269&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12269/hovercard&quot;&gt;#12269&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Auto-compact at tool boundaries in the unrolled agent loop &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12444&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12444/hovercard&quot;&gt;#12444&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remediate GHSA-6mg9-3cvh-9939 security vulnerability &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12537&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12537/hovercard&quot;&gt;#12537&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔧 Improvements&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Suppress warning when ending on a successful tool call &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12468&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12468/hovercard&quot;&gt;#12468&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Update rmcp to 3.4.1 &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12483&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12483/hovercard&quot;&gt;#12483&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove MCP sampling code &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12193&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12193/hovercard&quot;&gt;#12193&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Remove production code only reachable from tests &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12504&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12504/hovercard&quot;&gt;#12504&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pin remaining GitHub Actions to commit SHAs &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/11989&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/11989/hovercard&quot;&gt;#11989&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📚 Documentation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Warn about keyring hang in unattended ACP environments &lt;a href=&quot;https://github.com/aaif-goose/goose/pull/12173&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/aaif-goose/goose/pull/12173/hovercard&quot;&gt;#12173&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+</feed>

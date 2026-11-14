@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14",
+  "notes": "Fetch targets for the first pull. The pull records raw data only. Tagging and categorisation happen in a later pass.",
+  "windows": {
+    "feeds_days": 90,
+    "x_days": 14,
+    "x_limit": 20
+  },
+  "x": {
+    "list_id": "2084302656580034676",
+    "members_snapshot": "data/raw/x/lists/2084302656580034676/2026-11-14.members.json"
+  },
+  "hugging_face": {
+    "blog_feed": "https://huggingface.co/blog/feed.xml",
+    "model_limit": 100,
+    "dataset_limit": 100
+  },
+  "arxiv": {
+    "categories": ["cs.CL", "cs.LG", "cs.AI", "cs.CV", "eess.AS"]
+  },
+  "github": {
+    "repos": [
+      "ggml-org/llama.cpp",
+      "huggingface/transformers",
+      "vllm-project/vllm",
+      "ollama/ollama",
+      "unslothai/unsloth",
+      "open-webui/open-webui",
+      "sst/opencode",
+      "block/goose",
+      "cline/cline",
+      "zai-org/ZCode",
+      "ml-explore/mlx",
+      "microsoft/onnxruntime"
+    ]
+  },
+  "sitemaps": [
+    { "id": "simplifying-ai", "url": "https://simplifyingai.co/sitemap.xml" },
+    { "id": "llm-stats", "url": "https://llm-stats.com/sitemap.xml" },
+    { "id": "artificial-analysis", "url": "https://artificialanalysis.ai/sitemap.xml" },
+    { "id": "arena", "url": "https://arena.ai/sitemap.xml" },
+    { "id": "unsloth", "url": "https://unsloth.ai/sitemap.xml" },
+    { "id": "bigcode", "url": "https://www.bigcode-project.org/sitemap.xml" }
+  ]
+}

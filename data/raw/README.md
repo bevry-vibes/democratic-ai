@@ -39,3 +39,9 @@ The X list read was one list lookup plus one member page for 47 members. Owned r
 | `hf/users/balupton/2026-11-14.following.json` | The followed users. Empty at capture. |
 
 The curated view is [data/watchlist.json](../../watchlist.json).
+
+## Pulls
+
+`data/pulls/<timestamp>/` holds the normalised items and the manifest for one pull. The first pull on 2026-11-14 recorded 3,932 source-native items in `data/pulls/20261114T025658Z/`.
+
+The pull assigns only source-native tags. Task, runtime, and context tags are assigned in a later pass, after the data is complete.

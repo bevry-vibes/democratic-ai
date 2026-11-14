@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap><loc>https://llm-stats.com/sitemap/core.xml</loc></sitemap>
+  <sitemap><loc>https://llm-stats.com/sitemap/models.xml</loc></sitemap>
+  <sitemap><loc>https://llm-stats.com/sitemap/providers.xml</loc></sitemap>
+  <sitemap><loc>https://llm-stats.com/sitemap/organizations.xml</loc></sitemap>
+  <sitemap><loc>https://llm-stats.com/sitemap/benchmarks.xml</loc></sitemap>
+  <sitemap><loc>https://llm-stats.com/sitemap/comparisons.xml</loc></sitemap>
+  <sitemap><loc>https://llm-stats.com/sitemap/use-cases.xml</loc></sitemap>
+  <sitemap><loc>https://llm-stats.com/sitemap/news.xml</loc></sitemap>
+  <sitemap><loc>https://llm-stats.com/sitemap/releases.xml</loc></sitemap>
+  <sitemap><loc>https://llm-stats.com/sitemap/research.xml</loc></sitemap>
+</sitemapindex>

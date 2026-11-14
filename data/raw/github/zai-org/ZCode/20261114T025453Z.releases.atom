@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/zai-org/ZCode/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/zai-org/ZCode/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/zai-org/ZCode/releases.atom"/>
+  <title>Release notes from ZCode</title>
+  <updated>2026-11-03T09:30:55Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/1378288598/v3.17.2</id>
+    <updated>2026-11-04T10:41:06Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/zai-org/ZCode/releases/tag/v3.17.2"/>
+    <title>v3.17.2</title>
+    <content type="html">&lt;p&gt;ZCode 3.17.2&lt;/p&gt;
+&lt;p&gt;macOS arm64 · macOS x64 · Windows arm64 · Windows x64&lt;/p&gt;
+&lt;p&gt;Build source: &lt;code&gt;e6b675b40abb79e1d38d98d4e8750d0859cfedd9&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Verify downloads with the attached SHA256SUMS.&lt;/p&gt;
+</content>
+    <author>
+      <name>MBearo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/23232655?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/1378288598/v3.17.1</id>
+    <updated>2026-10-30T09:35:41Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/zai-org/ZCode/releases/tag/v3.17.1"/>
+    <title>v3.17.1</title>
+    <content type="html">&lt;p&gt;ZCode 3.17.1&lt;/p&gt;
+&lt;p&gt;macOS arm64 · macOS x64 · Windows arm64 · Windows x64&lt;/p&gt;
+&lt;p&gt;Build source: &lt;code&gt;be9380a5446305ed0bd6aa98d0dd547392c74e51&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Verify downloads with the attached SHA256SUMS.&lt;/p&gt;
+</content>
+    <author>
+      <name>MBearo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/23232655?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/1378288598/v3.15.1</id>
+    <updated>2026-10-10T11:02:17Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/zai-org/ZCode/releases/tag/v3.15.1"/>
+    <title>v3.15.1</title>
+    <content type="html">&lt;p&gt;v3.15.1&lt;/p&gt;</content>
+    <author>
+      <name>MBearo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/23232655?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/1378288598/v3.14.3</id>
+    <updated>2026-09-24T10:54:12Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/zai-org/ZCode/releases/tag/v3.14.3"/>
+    <title>v3.14.3</title>
+    <content type="html">&lt;p&gt;feat: update v3.14.3&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The concurrency limit of a running workflow can now be adjusted directly, without stopping the task.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Optimized the reuse logic when modifying and restarting workflows.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Improved the real-time status display for large workflows.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Improved the efficiency of workflow script submission and modification, reducing token consumption.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixed an issue where workflows could cause the interface to crash in some cases.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixed an issue where buttons on workflow cards were sometimes pushed out of the interface.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fixed an issue where the workflow tool took up too much context.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>MBearo</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/23232655?s=60&amp;v=4"/>
+  </entry>
+</feed>

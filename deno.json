@@ -1,0 +1,10 @@
+{
+  "lock": false,
+  "tasks": {
+    "fetch": "deno run -A scripts/fetch/mod.ts",
+    "fetch:check": "deno check scripts/fetch/mod.ts"
+  },
+  "imports": {
+    "@std/xml": "jsr:@std/xml@^0.2.0"
+  }
+}

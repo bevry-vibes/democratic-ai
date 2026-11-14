@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/ollama/ollama/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/ollama/ollama/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/ollama/ollama/releases.atom"/>
+  <title>Release notes from ollama</title>
+  <updated>2026-11-10T21:42:11Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.17-rc0</id>
+    <updated>2026-11-10T22:25:00Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.17-rc0"/>
+    <title>v0.40.17</title>
+    <content type="html">&lt;h2&gt;What&#39;s Changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Improve ChatGPT CLI restore and graceful restart by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/hoyyeva/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/hoyyeva&quot;&gt;@hoyyeva&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6251854019&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/19583&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/19583/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/19583&quot;&gt;#19583&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;cmd/launch: use thinking metadata for OpenCode settings by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/hoyyeva/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/hoyyeva&quot;&gt;@hoyyeva&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6122368894&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/19409&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/19409/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/19409&quot;&gt;#19409&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;llm: use mmap for Vulkan integrated GPUs by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/dhiltgen/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/dhiltgen&quot;&gt;@dhiltgen&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6309814784&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/19640&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/19640/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/19640&quot;&gt;#19640&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;rpreslar4765/Ollama by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/rpreslar4765/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/rpreslar4765&quot;&gt;@rpreslar4765&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;4877598143&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/17163&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/17163/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/17163&quot;&gt;#17163&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;mlx: support concurrent generation by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/dhiltgen/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/dhiltgen&quot;&gt;@dhiltgen&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;5970886020&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/19197&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/19197/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/19197&quot;&gt;#19197&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;llama.cpp: version bump b12257 by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/dhiltgen/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/dhiltgen&quot;&gt;@dhiltgen&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6315369343&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/19646&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/19646/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/19646&quot;&gt;#19646&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MLX, MLX-C: version bump by &lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/dhiltgen/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/dhiltgen&quot;&gt;@dhiltgen&lt;/a&gt; in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6316056226&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/19647&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/19647/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/19647&quot;&gt;#19647&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;New Contributors&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&quot;user-mention notranslate&quot; data-hovercard-type=&quot;user&quot; data-hovercard-url=&quot;/users/rpreslar4765/hovercard&quot; data-octo-click=&quot;hovercard-link-click&quot; data-octo-dimensions=&quot;link_type:self&quot; href=&quot;https://github.com/rpreslar4765&quot;&gt;@rpreslar4765&lt;/a&gt; made their first contribution in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;4877598143&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/17163&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/17163/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/17163&quot;&gt;#17163&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/ollama/ollama/compare/v0.40.16...v0.40.17-rc0&quot;&gt;&lt;tt&gt;v0.40.16...v0.40.17-rc0&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.16</id>
+    <updated>2026-11-09T23:45:36Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.16"/>
+    <title>v0.40.16</title>
+    <content type="html">&lt;h2&gt;Ripple Preview&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://ollama.com/library/ripple-preview&quot; rel=&quot;nofollow&quot;&gt;Ripple Preview&lt;/a&gt; from Ricursive Intelligence is a 65B dense model built for agentic coding.&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell notranslate position-relative overflow-auto&quot; data-snippet-clipboard-copy-content=&quot;ollama run ripple-preview&quot;&gt;&lt;pre&gt;ollama run ripple-preview&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;What&#39;s Changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Qwen3.8 Flash Next uses about 27 GiB less memory on Apple silicon&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ollama launch claude&lt;/code&gt; always routes Claude Code to the selected model&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ollama launch&lt;/code&gt; explains when a cloud model has been retired&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/v1/responses&lt;/code&gt; respects &lt;code&gt;truncation&lt;/code&gt; and no longer silently truncates by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/v1/models&lt;/code&gt; returns an empty list instead of &lt;code&gt;null&lt;/code&gt; when no models are installed&lt;/li&gt;
+&lt;li&gt;CUDA 13.5 support for Windows on ARM&lt;/li&gt;
+&lt;li&gt;Updated llama.cpp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/ollama/ollama/compare/v0.40.15...v0.40.16&quot;&gt;&lt;tt&gt;v0.40.15...v0.40.16&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.16-rc0</id>
+    <updated>2026-11-08T00:36:53Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.16-rc0"/>
+    <title>v0.40.16-rc0: Add ripple preview support to the MLX runner (#19592)</title>
+    <content type="html">&lt;p&gt;Add the Ripple model, renderer, parser and import registration.&lt;br&gt;
+Support per-layer NoPE in DFlash drafts.&lt;br&gt;
+Fuse MLP activation, value blending and attention gating.&lt;br&gt;
+Add reference fixtures and model/runner regression tests.&lt;/p&gt;</content>
+    <author>
+      <name>pdevine</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/75239?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.15</id>
+    <updated>2026-11-06T01:47:18Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.15"/>
+    <title>v0.40.15</title>
+    <content type="html">&lt;h2&gt;MiMo V2.6&lt;/h2&gt;
+&lt;p&gt;Xiaomi MiMo&#39;s &lt;a href=&quot;https://ollama.com/library/mimo-v2.6&quot; rel=&quot;nofollow&quot;&gt;mimo-v2.6&lt;/a&gt;, a 9B model built for code and agent workflows, is now supported in Ollama.&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell notranslate position-relative overflow-auto&quot; data-snippet-clipboard-copy-content=&quot;ollama run mimo-v2.6&quot;&gt;&lt;pre&gt;ollama run mimo-v2.6&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;AutoTrust decision models&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://ollama.com/library/autotrust-jev&quot; rel=&quot;nofollow&quot;&gt;AutoTrust&lt;/a&gt; decision models read text and return choices, yes or no probabilities, and ratings for the questions you supply. The family includes 9b, 35b, and 27b-vl sizes — the 35b and 27b-vl sizes can also read images.&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell notranslate position-relative overflow-auto&quot; data-snippet-clipboard-copy-content=&quot;ollama run autotrust-jev &amp;quot;A customer says their card was charged twice.&amp;quot; --ask &amp;quot;Is this a billing issue?&amp;quot;&quot;&gt;&lt;pre&gt;ollama run autotrust-jev &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;A customer says their card was charged twice.&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; --ask &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;Is this a billing issue?&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note: autotrust-jev is supported on Apple silicon in this release.&lt;/p&gt;
+&lt;h2&gt;What&#39;s Changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ollama launch now supports Kimi Code CLI — the successor to kimi-cli — and offers to migrate existing kimi-cli setups&lt;/li&gt;
+&lt;li&gt;ollama launch now fills in Pi&#39;s model list automatically so models can be picked inside Pi, and Claude Desktop&#39;s model&lt;br&gt;
+picker shows Ollama&#39;s actual model names&lt;/li&gt;
+&lt;li&gt;Recurrent and vision GGUF models can now serve more than one request at a time&lt;/li&gt;
+&lt;li&gt;Qwen3 and Qwen3.5 models using long-context (YaRN) scaling&lt;/li&gt;
+&lt;li&gt;Running ollama with no arguments opens the welcome launcher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/ollama/ollama/compare/v0.40.14...v0.40.15&quot;&gt;&lt;tt&gt;v0.40.14...v0.40.15&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.15-rc2</id>
+    <updated>2026-11-05T21:41:21Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.15-rc2"/>
+    <title>v0.40.15-rc2</title>
+    <content type="html">&lt;p&gt;cmd/launch: add Kimi Code CLI support (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6194448168&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/19506&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/19506/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/19506&quot;&gt;#19506&lt;/a&gt;)&lt;/p&gt;</content>
+    <author>
+      <name>jberg5</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/21697246?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.15-rc1</id>
+    <updated>2026-11-05T01:31:38Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.15-rc1"/>
+    <title>v0.40.15-rc1: llama.cpp: version bump b12111 (#19530)</title>
+    <content type="html">&lt;p&gt;Drop 002-metal-unary-cast-constexpr.patch: superseded by upstream fix&lt;/p&gt;</content>
+    <author>
+      <name>dhiltgen</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4033016?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.15-rc0</id>
+    <updated>2026-11-03T15:09:06Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.15-rc0"/>
+    <title>v0.40.15-rc0</title>
+    <content type="html">&lt;p&gt;model: add MiMo V2.6 renderer for Qwen3.5 (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6112867838&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/19400&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/19400/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/19400&quot;&gt;#19400&lt;/a&gt;)&lt;/p&gt;</content>
+    <author>
+      <name>dhiltgen</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4033016?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.14</id>
+    <updated>2026-11-03T06:57:31Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.14"/>
+    <title>v0.40.14</title>
+    <content type="html">&lt;h2&gt;What&#39;s Changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ollama launch claude&lt;/code&gt; now applies the model&#39;s output token limit for Claude Code, so cloud models no longer run into the 128k default cap&lt;/li&gt;
+&lt;li&gt;Cloud web search responses on &lt;code&gt;/api/chat&lt;/code&gt; are now decoded correctly, including compressed responses&lt;/li&gt;
+&lt;li&gt;OpenAI-compatible endpoints no longer override a model&#39;s packaged sampler defaults — clients that send no &lt;code&gt;temperature&lt;/code&gt;/&lt;code&gt;top_p&lt;/code&gt; get the model&#39;s own values instead of 1.0, matching &lt;code&gt;/api/chat&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/v1/responses&lt;/code&gt; now preserves readable input content, including prior assistant refusals, instead of flattening it&lt;/li&gt;
+&lt;li&gt;Ollama&#39;s app can now retry ChatGPT disconnect failures instead of leaving the connection in a broken state&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ollama launch codex&lt;/code&gt; verifies ChatGPT routing before configuring, and reports a clear error when routing is unavailable&lt;/li&gt;
+&lt;li&gt;Faster top-k sampling on MLX for large vocabularies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/ollama/ollama/compare/v0.40.13...v0.40.14&quot;&gt;&lt;tt&gt;v0.40.13...v0.40.14&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.14-rc0</id>
+    <updated>2026-11-03T00:59:50Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.14-rc0"/>
+    <title>v0.40.14-rc0</title>
+    <content type="html">&lt;p&gt;server: decode cloud web search responses (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6173517878&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/19476&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/19476/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/19476&quot;&gt;#19476&lt;/a&gt;)&lt;/p&gt;</content>
+    <author>
+      <name>ParthSareen</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/29360864?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.13</id>
+    <updated>2026-10-29T02:54:11Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.13"/>
+    <title>v0.40.13</title>
+    <content type="html">&lt;h2&gt;LFM3 on Linux and Windows&lt;/h2&gt;
+&lt;p&gt;Liquid AI&#39;s &lt;a href=&quot;https://ollama.com/library/lfm3&quot; rel=&quot;nofollow&quot;&gt;LFM3&lt;/a&gt; models, including text-to-speech in &lt;a href=&quot;https://ollama.com/library/lfm3-audio&quot; rel=&quot;nofollow&quot;&gt;lfm3-audio&lt;/a&gt; and &lt;a href=&quot;https://ollama.com/library/lfm3-omni&quot; rel=&quot;nofollow&quot;&gt;lfm3-omni&lt;/a&gt;, now run on Linux and Windows as well as Apple silicon.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/ollama/ollama/compare/v0.40.12...v0.40.13&quot;&gt;&lt;tt&gt;v0.40.12...v0.40.13&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+</feed>

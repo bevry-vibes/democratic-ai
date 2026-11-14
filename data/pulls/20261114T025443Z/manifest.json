@@ -1,0 +1,58 @@
+{
+  "pull_id": "20261114T025443Z",
+  "started_at": "2026-11-14T02:54:43.549Z",
+  "finished_at": "2026-11-14T02:54:45.874Z",
+  "windows": {
+    "feeds_since": "2026-08-16",
+    "x_since": "2026-10-31",
+    "x_limit_per_account": 20
+  },
+  "sources": [
+    {
+      "id": "hf-blog",
+      "status": "ok",
+      "items": 66,
+      "raw": [
+        "data/raw/hf/blog/20261114T025443Z.feed.xml"
+      ],
+      "detail": "907 feed entries, 66 inside the window",
+      "started_at": "2026-11-14T02:54:43.556Z",
+      "finished_at": "2026-11-14T02:54:44.044Z"
+    },
+    {
+      "id": "arxiv",
+      "status": "ok",
+      "items": 0,
+      "raw": [
+        "data/raw/arxiv/cs-cl/20261114T025443Z.feed.xml",
+        "data/raw/arxiv/cs-lg/20261114T025443Z.feed.xml",
+        "data/raw/arxiv/cs-ai/20261114T025443Z.feed.xml",
+        "data/raw/arxiv/cs-cv/20261114T025443Z.feed.xml",
+        "data/raw/arxiv/eess-as/20261114T025443Z.feed.xml"
+      ],
+      "detail": "5 categories, 0 feed entries, 0 failures. RSS covers only the most recent entries.",
+      "started_at": "2026-11-14T02:54:44.044Z",
+      "finished_at": "2026-11-14T02:54:45.872Z"
+    }
+  ],
+  "counts": {
+    "items": 66,
+    "by_kind": {
+      "article": 66
+    },
+    "by_source": {
+      "hf-blog": 66
+    },
+    "in_x_window": 0
+  },
+  "items": {
+    "path": "data/pulls/20261114T025443Z/items.jsonl",
+    "bytes": 45158
+  },
+  "notes": [
+    "This pull records raw data only. It assigns no task, runtime, use-case, or licence tags beyond source-native tags.",
+    "X data is fetched as the latest posts per account, with the 14-day window marked by in_window. Older fetched posts are kept.",
+    "arXiv RSS covers only the most recent entries. The feed window is narrower than the requested three months.",
+    "Every raw response is stored under data/raw/ and is never overwritten by a later pull."
+  ]
+}
