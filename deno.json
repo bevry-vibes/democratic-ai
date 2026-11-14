@@ -5,7 +5,9 @@
     "fetch:check": "deno check scripts/fetch/mod.ts",
     "tag": "deno run -A scripts/tag/mod.ts",
     "tag:check": "deno check scripts/tag/mod.ts scripts/tag/clef.ts",
-    "tag:clef": "deno run -A scripts/tag/clef.ts"
+    "tag:clef": "deno run -A scripts/tag/clef.ts",
+    "links": "deno run -A scripts/links/mod.ts",
+    "links:check": "deno check scripts/links/mod.ts"
   },
   "imports": {
     "@std/xml": "jsr:@std/xml@^0.2.0"

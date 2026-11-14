@@ -1,0 +1,662 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14T04:09:52.257Z",
+  "pull_id": "20261114T025658Z",
+  "sources": {
+    "models_dev": {
+      "url": "https://models.dev/api.json",
+      "fetched_at": "2026-11-14",
+      "models": 2953,
+      "note": "Only entries with a canonical_model_id are linked."
+    },
+    "agent_detect": {
+      "url": "https://agent-detect.bevry.me/data/index.json",
+      "fetched_at": "2026-11-14",
+      "models": 328,
+      "note": "Links use the agent-detect model id."
+    }
+  },
+  "counts": {
+    "models": 149,
+    "with_models_dev": 136,
+    "with_agent_detect": 79,
+    "unmatched": 515
+  },
+  "models": {
+    "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp": {
+      "models_dev": "https://models.dev/models/deepseek/deepseek-v4-flash-vision-exp",
+      "agent_detect": "https://agent-detect.bevry.me/model/deepseekv4flash"
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash": {
+      "models_dev": "https://models.dev/models/deepseek/deepseek-v4.1-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/deepseekv41flash"
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "models_dev": "https://models.dev/models/deepseek/deepseek-v4.1-flash-1017",
+      "agent_detect": "https://agent-detect.bevry.me/model/deepseekv41flash"
+    },
+    "inclusionAI/DeepSeek-V4-Flash-0731-singprobe": {
+      "models_dev": "https://models.dev/models/deepseek/deepseek-v4-flash-0731",
+      "agent_detect": "https://agent-detect.bevry.me/model/deepseekv4flash"
+    },
+    "inclusionAI/gemma-4-26B-A4B-it-singprobe": {
+      "models_dev": "https://models.dev/models/google/gemma-4-26b-a4b-it"
+    },
+    "inclusionAI/gemma-4-31B-it-singprobe": {
+      "models_dev": "https://models.dev/models/google/gemma-4-31b-it",
+      "agent_detect": "https://agent-detect.bevry.me/model/gemma431b"
+    },
+    "inclusionAI/gemma-4-E4B-it-singprobe": {
+      "models_dev": "https://models.dev/models/google/gemma-4-E4B-it"
+    },
+    "inclusionAI/GLM-5.2-singprobe": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.2",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm52"
+    },
+    "inclusionAI/GLM-5.3-Flash-singprobe": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.3-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm53flash"
+    },
+    "inclusionAI/GLM-5.3-singprobe": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.3",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm53"
+    },
+    "inclusionAI/gpt-oss-120b-singprobe": {
+      "models_dev": "https://models.dev/models/openai/gpt-oss-120b",
+      "agent_detect": "https://agent-detect.bevry.me/model/gptoss120b"
+    },
+    "inclusionAI/gpt-oss-20b-singprobe": {
+      "models_dev": "https://models.dev/models/openai/gpt-oss-20b",
+      "agent_detect": "https://agent-detect.bevry.me/model/gptoss20b"
+    },
+    "inclusionAI/Hy3-singprobe": {
+      "models_dev": "https://models.dev/models/tencent/hy3",
+      "agent_detect": "https://agent-detect.bevry.me/model/hy3"
+    },
+    "inclusionAI/Ling-2.6-1T": {
+      "agent_detect": "https://agent-detect.bevry.me/model/ling261t"
+    },
+    "inclusionAI/Ling-3.0-flash": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flash"
+    },
+    "inclusionAI/Ling-3.0-flash-Fin": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-fin",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flash"
+    },
+    "inclusionAI/Ling-3.0-flash-Fin-int4": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-fin",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flash"
+    },
+    "inclusionAI/Ling-3.0-flash-Sante": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-sante",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flash"
+    },
+    "inclusionAI/Ling-3.0-flash-VL": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-vl",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flashvl"
+    },
+    "inclusionAI/Ling-3.0-flash-VL-int4": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-vl",
+      "agent_detect": "https://agent-detect.bevry.me/model/ling30flashvl"
+    },
+    "inclusionAI/Ling-3.1-flash": {
+      "models_dev": "https://models.dev/models/inclusionai/ling-3.1-flash"
+    },
+    "inclusionAI/Llama-3.1-8B-Instruct-singprobe": {
+      "models_dev": "https://models.dev/models/meta/llama-3.1-8b-instruct"
+    },
+    "inclusionAI/Llama-3.2-1B-Instruct-singprobe": {
+      "models_dev": "https://models.dev/models/meta/llama-3.2-1b-instruct"
+    },
+    "inclusionAI/MiniMax-M2.7-singprobe": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-M2.7",
+      "agent_detect": "https://agent-detect.bevry.me/model/minimaxm27"
+    },
+    "inclusionAI/Qwen3-0.6B-singprobe": {
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3"
+    },
+    "inclusionAI/Qwen3-8B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3-8b"
+    },
+    "inclusionAI/Qwen3.5-0.8B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-0.8b"
+    },
+    "inclusionAI/Qwen3.5-122B-A10B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-122b-a10b"
+    },
+    "inclusionAI/Qwen3.5-27B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-27b"
+    },
+    "inclusionAI/Qwen3.5-2B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-2b"
+    },
+    "inclusionAI/Qwen3.5-35B-A3B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-35b-a3b"
+    },
+    "inclusionAI/Qwen3.5-397B-A17B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-397b-a17b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen35397ba17b"
+    },
+    "inclusionAI/Qwen3.5-4B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-4b"
+    },
+    "inclusionAI/Qwen3.5-9B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-9b"
+    },
+    "inclusionAI/Qwen3.6-27B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.6-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3627b"
+    },
+    "inclusionAI/Qwen3.6-35B-A3B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.6-35b-a3b"
+    },
+    "inclusionAI/Qwen3.8-27B-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b"
+    },
+    "inclusionAI/Qwen3.8-Flash-Next-singprobe": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next"
+    },
+    "inclusionAI/Step-3.7-Flash-singprobe": {
+      "models_dev": "https://models.dev/models/stepfun/step-3.7-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/step37flash"
+    },
+    "LiquidAI/LFM2-24B-A2B": {
+      "models_dev": "https://models.dev/models/liquid/lfm2-24b-a2b"
+    },
+    "LiquidAI/LFM2-24B-A2B-GGUF": {
+      "models_dev": "https://models.dev/models/liquid/lfm2-24b-a2b"
+    },
+    "LiquidAI/LFM3-1.7B": {
+      "agent_detect": "https://agent-detect.bevry.me/model/lfm317b"
+    },
+    "LiquidAI/LFM3-1.7B-GGUF": {
+      "agent_detect": "https://agent-detect.bevry.me/model/lfm317b"
+    },
+    "LiquidAI/LFM3-1.7B-MLX-4bit": {
+      "agent_detect": "https://agent-detect.bevry.me/model/lfm317b"
+    },
+    "LiquidAI/LFM3-1.7B-MLX-8bit": {
+      "agent_detect": "https://agent-detect.bevry.me/model/lfm317b"
+    },
+    "LiquidAI/LFM3-1.7B-MLX-bf16": {
+      "agent_detect": "https://agent-detect.bevry.me/model/lfm317b"
+    },
+    "LiquidAI/LFM3-1.7B-NVFP4": {
+      "agent_detect": "https://agent-detect.bevry.me/model/lfm317b"
+    },
+    "LiquidAI/LFM3-1.7B-ONNX": {
+      "agent_detect": "https://agent-detect.bevry.me/model/lfm317b"
+    },
+    "meituan-longcat/LongCat-2.5": {
+      "models_dev": "https://models.dev/models/meituan/longcat-2.5",
+      "agent_detect": "https://agent-detect.bevry.me/model/longcat25"
+    },
+    "MiniMaxAI/MiniMax-H3": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-H3"
+    },
+    "MiniMaxAI/MiniMax-M2": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-M2"
+    },
+    "MiniMaxAI/MiniMax-M2.1": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-M2.1"
+    },
+    "MiniMaxAI/MiniMax-M2.5": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-M2.5",
+      "agent_detect": "https://agent-detect.bevry.me/model/minimaxm25"
+    },
+    "MiniMaxAI/MiniMax-M2.7": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-M2.7",
+      "agent_detect": "https://agent-detect.bevry.me/model/minimaxm27"
+    },
+    "MiniMaxAI/MiniMax-M3": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-M3",
+      "agent_detect": "https://agent-detect.bevry.me/model/minimaxm3"
+    },
+    "MiniMaxAI/MiniMax-M3.1-Flash": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-M3.1-Flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/minimaxm31flash"
+    },
+    "mistralai/Mistral-Large-4-1T-A52B": {
+      "agent_detect": "https://agent-detect.bevry.me/model/mistrallarge4"
+    },
+    "mistralai/Mistral-Large-4-1T-A52B-NVFP4": {
+      "agent_detect": "https://agent-detect.bevry.me/model/mistrallarge4"
+    },
+    "mistralai/Mistral-Small-4-119B-2603-NVFP4": {
+      "models_dev": "https://models.dev/models/mistral/mistral-small-2603"
+    },
+    "moonshotai/Kimi-K3": {
+      "models_dev": "https://models.dev/models/moonshotai/kimi-k3",
+      "agent_detect": "https://agent-detect.bevry.me/model/kimik3"
+    },
+    "moonshotai/Kimi-K3.1-Pro": {
+      "models_dev": "https://models.dev/models/moonshotai/kimi-k3.1-pro"
+    },
+    "nace-ai/Qwen3.5-4B-MLX": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-4b"
+    },
+    "nace-ai/Qwen3.5-9B-GGUF": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-9b"
+    },
+    "nace-ai/Qwen3.5-9B-MLX": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-9b"
+    },
+    "nace-ai/Qwen3.5-9B-MLX-4bit": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.5-9b"
+    },
+    "nace-ai/Qwen3.6-35B-A3B-GGUF": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.6-35b-a3b"
+    },
+    "nace-ai/Qwen3.6-35B-A3B-MLX": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.6-35b-a3b"
+    },
+    "nace-ai/Qwen3.8-27B-GGUF": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b"
+    },
+    "nace-ai/Qwen3.8-27B-MLX": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b"
+    },
+    "nace-ai/Qwen3.8-27B-MLX-4bit": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b"
+    },
+    "nace-ai/Qwen3.8-27B-MLX-8bit": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b"
+    },
+    "nace-ai/Qwen3.8-27B-NVFP4": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b"
+    },
+    "nace-ai/Qwen3.8-Flash-Next-GGUF": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next"
+    },
+    "nace-ai/Qwen3.8-Flash-Next-MLX": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next"
+    },
+    "nace-ai/Qwen3.8-Flash-Next-MLX-4bit": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next"
+    },
+    "ornith-ai/Ornith-1.5-35B-A3B": {
+      "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b"
+    },
+    "ornith-ai/Ornith-1.5-35B-A3B-DFlash": {
+      "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b"
+    },
+    "ornith-ai/Ornith-1.5-35B-A3B-GGUF": {
+      "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b"
+    },
+    "ornith-ai/Ornith-1.5-35B-A3B-MLX": {
+      "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b"
+    },
+    "ornith-ai/Ornith-1.5-35B-A3B-MLX-4bit": {
+      "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b"
+    },
+    "ornith-ai/Ornith-1.5-35B-A3B-MLX-8bit": {
+      "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b"
+    },
+    "ornith-ai/Ornith-1.5-35B-A3B-NVFP4": {
+      "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b"
+    },
+    "Qwen/Qwen-Image-2.1": {
+      "models_dev": "https://models.dev/models/alibaba/qwen-image-2.1"
+    },
+    "Qwen/Qwen3.6-27B": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.6-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3627b"
+    },
+    "Qwen/Qwen3.6-27B-FP8": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.6-27b"
+    },
+    "Qwen/Qwen3.6-35B-A3B": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.6-35b-a3b"
+    },
+    "Qwen/Qwen3.6-35B-A3B-FP8": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.6-35b-a3b"
+    },
+    "Qwen/Qwen3.8-2.4T-A95B": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-2.4t-a95b"
+    },
+    "Qwen/Qwen3.8-27B": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b"
+    },
+    "Qwen/Qwen3.8-27B-FP8": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b"
+    },
+    "Qwen/Qwen3.8-Flash-Next": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next"
+    },
+    "reflection/Beam-1.0-501B-A23B": {
+      "models_dev": "https://models.dev/models/reflection/beam-1.0-501b-a23b"
+    },
+    "reflection/Beam-1.0-501B-A23B-NVFP4": {
+      "models_dev": "https://models.dev/models/reflection/beam-1.0-501b-a23b"
+    },
+    "stepfun-ai/Step-5-Preview": {
+      "models_dev": "https://models.dev/models/stepfun/step-5-preview"
+    },
+    "stepfun-ai/Step-5-Preview-BF16": {
+      "models_dev": "https://models.dev/models/stepfun/step-5-preview"
+    },
+    "stepfun-ai/Step-5-Preview-NVFP4": {
+      "models_dev": "https://models.dev/models/stepfun/step-5-preview"
+    },
+    "thinkingmachines/Inkling-2-Small": {
+      "models_dev": "https://models.dev/models/thinkingmachines/inkling-2-small",
+      "agent_detect": "https://agent-detect.bevry.me/model/inkling2small"
+    },
+    "unsloth/Beam-1.0-501B-A23B-GGUF": {
+      "models_dev": "https://models.dev/models/reflection/beam-1.0-501b-a23b"
+    },
+    "unsloth/DeepSeek-V4-Flash-Vision-Exp": {
+      "models_dev": "https://models.dev/models/deepseek/deepseek-v4-flash-vision-exp",
+      "agent_detect": "https://agent-detect.bevry.me/model/deepseekv4flash"
+    },
+    "unsloth/DeepSeek-V4-Flash-Vision-Exp-GGUF": {
+      "models_dev": "https://models.dev/models/deepseek/deepseek-v4-flash-vision-exp",
+      "agent_detect": "https://agent-detect.bevry.me/model/deepseekv4flash"
+    },
+    "unsloth/DeepSeek-V4.1-Flash-1017": {
+      "models_dev": "https://models.dev/models/deepseek/deepseek-v4.1-flash-1017",
+      "agent_detect": "https://agent-detect.bevry.me/model/deepseekv41flash"
+    },
+    "unsloth/DeepSeek-V4.1-Flash-1017-GGUF": {
+      "models_dev": "https://models.dev/models/deepseek/deepseek-v4.1-flash-1017",
+      "agent_detect": "https://agent-detect.bevry.me/model/deepseekv41flash"
+    },
+    "unsloth/flint-GGUF": {
+      "models_dev": "https://models.dev/models/recursive/flint"
+    },
+    "unsloth/FLUX.1-dev-GGUF": {
+      "models_dev": "https://models.dev/models/black-forest-labs/flux-1-dev"
+    },
+    "unsloth/FLUX.1-Kontext-dev-GGUF": {
+      "models_dev": "https://models.dev/models/black-forest-labs/flux-1-kontext-dev"
+    },
+    "unsloth/FLUX.1-schnell-GGUF": {
+      "models_dev": "https://models.dev/models/black-forest-labs/flux-1-schnell"
+    },
+    "unsloth/FLUX.2-klein-4B-GGUF": {
+      "models_dev": "https://models.dev/models/black-forest-labs/flux-2-klein-4b"
+    },
+    "unsloth/GLM-5.3": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.3",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm53"
+    },
+    "unsloth/GLM-5.3-Flash": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.3-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm53flash"
+    },
+    "unsloth/GLM-5.3-Flash-GGUF": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.3-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm53flash"
+    },
+    "unsloth/GLM-5.3-GGUF": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.3",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm53"
+    },
+    "unsloth/gpt-oss-120b": {
+      "models_dev": "https://models.dev/models/openai/gpt-oss-120b",
+      "agent_detect": "https://agent-detect.bevry.me/model/gptoss120b"
+    },
+    "unsloth/gpt-oss-120b-BF16": {
+      "models_dev": "https://models.dev/models/openai/gpt-oss-120b",
+      "agent_detect": "https://agent-detect.bevry.me/model/gptoss120b"
+    },
+    "unsloth/gpt-oss-20b": {
+      "models_dev": "https://models.dev/models/openai/gpt-oss-20b",
+      "agent_detect": "https://agent-detect.bevry.me/model/gptoss20b"
+    },
+    "unsloth/gpt-oss-20b-BF16": {
+      "models_dev": "https://models.dev/models/openai/gpt-oss-20b",
+      "agent_detect": "https://agent-detect.bevry.me/model/gptoss20b"
+    },
+    "unsloth/Inkling-2-Small-GGUF": {
+      "models_dev": "https://models.dev/models/thinkingmachines/inkling-2-small",
+      "agent_detect": "https://agent-detect.bevry.me/model/inkling2small"
+    },
+    "unsloth/Kimi-K3.1-Pro": {
+      "models_dev": "https://models.dev/models/moonshotai/kimi-k3.1-pro"
+    },
+    "unsloth/MiniMax-H3-GGUF": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-H3"
+    },
+    "unsloth/MiniMax-M3-GGUF": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-M3",
+      "agent_detect": "https://agent-detect.bevry.me/model/minimaxm3"
+    },
+    "unsloth/MiniMax-M3.1-Flash": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-M3.1-Flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/minimaxm31flash"
+    },
+    "unsloth/MiniMax-M3.1-Flash-GGUF": {
+      "models_dev": "https://models.dev/models/minimax/MiniMax-M3.1-Flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/minimaxm31flash"
+    },
+    "unsloth/Mistral-Large-4-1T-A52B-GGUF": {
+      "agent_detect": "https://agent-detect.bevry.me/model/mistrallarge4"
+    },
+    "unsloth/Mistral-Large-4-1T-A52B-NVFP4": {
+      "agent_detect": "https://agent-detect.bevry.me/model/mistrallarge4"
+    },
+    "unsloth/Muse-Spark-Open-816B-A42B": {
+      "models_dev": "https://models.dev/models/meta/muse-spark-open",
+      "agent_detect": "https://agent-detect.bevry.me/model/musespark12"
+    },
+    "unsloth/Muse-Spark-Open-816B-A42B-GGUF": {
+      "models_dev": "https://models.dev/models/meta/muse-spark-open",
+      "agent_detect": "https://agent-detect.bevry.me/model/musespark12"
+    },
+    "unsloth/Muse-Spark-Open-816B-A42B-NVFP4": {
+      "models_dev": "https://models.dev/models/meta/muse-spark-open",
+      "agent_detect": "https://agent-detect.bevry.me/model/musespark12"
+    },
+    "unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B": {
+      "models_dev": "https://models.dev/models/nvidia/nemotron-3.5-super-vl-120b-a12b"
+    },
+    "unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-GGUF": {
+      "models_dev": "https://models.dev/models/nvidia/nemotron-3.5-super-vl-120b-a12b"
+    },
+    "unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4": {
+      "models_dev": "https://models.dev/models/nvidia/nemotron-3.5-super-vl-120b-a12b"
+    },
+    "unsloth/Qwen-Image-2.1": {
+      "models_dev": "https://models.dev/models/alibaba/qwen-image-2.1"
+    },
+    "unsloth/Qwen-Image-2.1-GGUF": {
+      "models_dev": "https://models.dev/models/alibaba/qwen-image-2.1"
+    },
+    "unsloth/Qwen3-Coder-Next": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3-coder-next"
+    },
+    "unsloth/Qwen3.8-27B-GGUF": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b"
+    },
+    "unsloth/Qwen3.8-27B-NVFP4": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
+      "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b"
+    },
+    "unsloth/Qwen3.8-Flash-Next": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next"
+    },
+    "unsloth/Qwen3.8-Flash-Next-GGUF": {
+      "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next"
+    },
+    "webAI-Official/granite-4.2-8B": {
+      "models_dev": "https://models.dev/models/ibm/granite-4.2-8b"
+    },
+    "XiaomiMiMo/MiMo-V2-Flash": {
+      "models_dev": "https://models.dev/models/xiaomi/mimo-v2-flash"
+    },
+    "XiaomiMiMo/MiMo-V2.5": {
+      "models_dev": "https://models.dev/models/xiaomi/mimo-v2.5",
+      "agent_detect": "https://agent-detect.bevry.me/model/mimov25"
+    },
+    "XiaomiMiMo/MiMo-V2.5-DFlash": {
+      "models_dev": "https://models.dev/models/xiaomi/mimo-v2.5",
+      "agent_detect": "https://agent-detect.bevry.me/model/mimov25"
+    },
+    "XiaomiMiMo/MiMo-V2.5-Pro": {
+      "models_dev": "https://models.dev/models/xiaomi/mimo-v2.5-pro",
+      "agent_detect": "https://agent-detect.bevry.me/model/mimov25pro"
+    },
+    "XiaomiMiMo/MiMo-V2.6-Flash-RL": {
+      "models_dev": "https://models.dev/models/xiaomi/mimo-v2.6-flash"
+    },
+    "XiaomiMiMo/MiMo-V2.6-Pro-RL": {
+      "models_dev": "https://models.dev/models/xiaomi/mimo-v2.6-pro",
+      "agent_detect": "https://agent-detect.bevry.me/model/mimov26pro"
+    },
+    "zai-org/GLM-5.2": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.2",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm52"
+    },
+    "zai-org/GLM-5.2-FP8": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.2"
+    },
+    "zai-org/GLM-5.3": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.3",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm53"
+    },
+    "zai-org/GLM-5.3-BF16": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.3",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm53"
+    },
+    "zai-org/GLM-5.3-Flash": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.3-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm53flash"
+    },
+    "zai-org/GLM-5.3-Flash-BF16": {
+      "models_dev": "https://models.dev/models/zhipuai/glm-5.3-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/glm53flash"
+    }
+  },
+  "unmatched_samples": [
+    {
+      "id": "ConwayResearch/Underdog-Woof-Japanese",
+      "name": "underdog-woof-japanese"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Woof",
+      "name": "underdog-woof"
+    },
+    {
+      "id": "ConwayResearch/woof-textfiller-4B-4bit-v2.1",
+      "name": "woof-textfiller-4b-v2-1"
+    },
+    {
+      "id": "ConwayResearch/woof-textfiller-0.8B-4bit-v2.1",
+      "name": "woof-textfiller-0-8b-v2-1"
+    },
+    {
+      "id": "ConwayResearch/woof-selector-4B-4bit-v2.1",
+      "name": "woof-selector-4b-v2-1"
+    },
+    {
+      "id": "ConwayResearch/woof-2B-mlx-4bit-v1.1",
+      "name": "woof-2b-v1-1"
+    },
+    {
+      "id": "ConwayResearch/woof-2B-1.1-GGUF",
+      "name": "woof-2b-1-1"
+    },
+    {
+      "id": "ConwayResearch/woof-1.0-4B",
+      "name": "woof-1-0-4b"
+    },
+    {
+      "id": "ConwayResearch/pii-30M-mlx-4bit-v1.0",
+      "name": "pii-30m-v1-0"
+    },
+    {
+      "id": "ConwayResearch/pii-30M-coreml-ane-v1.0",
+      "name": "pii-30m-ane-v1-0"
+    },
+    {
+      "id": "ConwayResearch/husky-flash",
+      "name": "husky-flash"
+    },
+    {
+      "id": "ConwayResearch/dsv4-flash-0731-vision",
+      "name": "dsv4-flash-0731-vision"
+    },
+    {
+      "id": "ConwayResearch/bark-0.6B-4bit-v2.0",
+      "name": "bark-0-6b-v2-0"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Woof-4B-1.1",
+      "name": "underdog-woof-4b-1-1"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Woof-2B-1.1",
+      "name": "underdog-woof-2b-1-1"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Ternary-1.1",
+      "name": "underdog-ternary-1-1"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Saluki-27B-1.0",
+      "name": "underdog-saluki-27b-1-0"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Poodle-4B-DFlash",
+      "name": "underdog-poodle-4b"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Poodle-4B",
+      "name": "underdog-poodle-4b"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Bark-3.0-Pro",
+      "name": "underdog-bark-3-0-pro"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Bark-3.0-Plus",
+      "name": "underdog-bark-3-0-plus"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Bark-3.0-Clean",
+      "name": "underdog-bark-3-0-clean"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Bark-3.0",
+      "name": "underdog-bark-3-0"
+    },
+    {
+      "id": "ConwayResearch/Underdog-Bark-0.8B-1.0",
+      "name": "underdog-bark-0-8b-1-0"
+    },
+    {
+      "id": "ConwayResearch/Underdog-27B-1.1",
+      "name": "underdog-27b-1-1"
+    },
+    {
+      "id": "ConwayResearch/Underdog-27B-1.0",
+      "name": "underdog-27b-1-0"
+    },
+    {
+      "id": "ConwayResearch/underdog-llama-server",
+      "name": "underdog-llama"
+    },
+    {
+      "id": "Edge0/Edge0-120B-NVFP4",
+      "name": "edge0-120b"
+    },
+    {
+      "id": "Edge0/Edge0-145B-NVFP4",
+      "name": "edge0-145b"
+    },
+    {
+      "id": "Edge0/Edge0-120B-q3k",
+      "name": "edge0-120b-q3k"
+    }
+  ]
+}
