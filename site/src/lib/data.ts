@@ -86,6 +86,9 @@ export interface CompactModel {
   tags: string[]
   license: string
   tier: string
+  weights: string
+  training_data: string
+  training_code: string
   score: number
   band: string
   tool_calling: boolean | null
@@ -240,7 +243,7 @@ export const TAG_NAMESPACE_ORDER = [
   "task",
   "domain",
   "modality",
-  "runtime",
+  "access",
   "language",
   "context",
   "license",

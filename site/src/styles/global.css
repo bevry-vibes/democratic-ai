@@ -3131,50 +3131,30 @@ html {
   line-height: 1.5;
 }
 
-.pill-value {
-  color: var(--ink) !important;
-  font-weight: 600;
-  margin-bottom: 0.2rem !important;
-}
-
-.pill-missing-note {
-  display: inline-block;
-  margin-bottom: 0.2rem !important;
-  color: #8f2f22 !important;
-  font-size: 0.82rem !important;
-  text-decoration: underline dotted #b04a3a;
-  text-underline-offset: 3px;
-  cursor: help;
+.tag-explain li {
+  align-items: start;
 }
 
 .pill-missing {
   border-style: dotted !important;
   border-color: #b04a3a !important;
-  background: #fbe9e5 !important;
-  color: #8f2f22 !important;
 }
 
-.pill-links {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.3rem 0.9rem;
-  margin: 0.3rem 0 0;
-  padding: 0;
+.pill-missing-text {
+  text-decoration: underline dotted #b04a3a;
+  text-underline-offset: 3px;
 }
 
-.pill-links a {
+.pill-website {
+  display: inline-block;
+  margin-top: 0.3rem;
   color: var(--ink-soft);
   font-size: 0.8rem;
   text-decoration: none;
   border-bottom: 1px dotted var(--rule-strong);
 }
 
-.pill-links a:hover {
+.pill-website:hover {
   color: var(--clay-dark);
   border-color: var(--clay);
-}
-
-.tag-explain li {
-  align-items: start;
 }

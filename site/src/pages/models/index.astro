@@ -161,8 +161,14 @@ const allTags = sortTags([...new Set(models.flatMap((model) => model.tags))])
       const capabilityValue = params.get("capability") ?? ""
       const bandValue = params.get("band") ?? ""
       const tierValue = params.get("tier") ?? ""
+      const accessValue = params.get("access") ?? ""
+      const weightsValue = params.get("weights") ?? ""
+      const trainingDataValue = params.get("training_data") ?? ""
+      const trainingCodeValue = params.get("training_code") ?? ""
+      const licenseValue = params.get("license") ?? ""
       const minContext = Number(params.get("min_context") ?? 0)
       const minParams = Number(params.get("min_params") ?? 0)
+      const minBuilds = Number(params.get("min_builds") ?? 0)
       let visible = 0
       for (const row of rows) {
         const tags = row.dataset.tags?.split(" ") ?? []
@@ -175,8 +181,14 @@ const allTags = sortTags([...new Set(models.flatMap((model) => model.tags))])
           (!capabilityValue || row.dataset.capability?.split(" ").includes(capabilityValue)) &&
           (!bandValue || row.dataset.band === bandValue) &&
           (!tierValue || row.dataset.tier === tierValue) &&
+          (!accessValue || row.dataset.access?.split(" ").includes(accessValue)) &&
+          (!weightsValue || row.dataset.weights === weightsValue) &&
+          (!trainingDataValue || row.dataset.trainingData === trainingDataValue) &&
+          (!trainingCodeValue || row.dataset.trainingCode === trainingCodeValue) &&
+          (!licenseValue || row.dataset.license === licenseValue) &&
           (!minContext || contextTokens >= minContext) &&
-          (!minParams || paramsB >= minParams)
+          (!minParams || paramsB >= minParams) &&
+          (!minBuilds || Number(row.dataset.builds || 0) >= minBuilds)
         row.classList.toggle("hidden", !matches)
         if (matches) visible++
       }
@@ -247,8 +259,14 @@ const allTags = sortTags([...new Set(models.flatMap((model) => model.tags))])
       if (capabilityValue) next.set("capability", capabilityValue)
       if (bandValue) next.set("band", bandValue)
       if (tierValue) next.set("tier", tierValue)
+      if (accessValue) next.set("access", accessValue)
+      if (weightsValue) next.set("weights", weightsValue)
+      if (trainingDataValue) next.set("training_data", trainingDataValue)
+      if (trainingCodeValue) next.set("training_code", trainingCodeValue)
+      if (licenseValue) next.set("license", licenseValue)
       if (minContext) next.set("min_context", String(minContext))
       if (minParams) next.set("min_params", String(minParams))
+      if (minBuilds) next.set("min_builds", String(minBuilds))
       if (mode !== "overall") next.set("sort", mode)
       if (orderMode !== "best") next.set("order", orderMode)
       const query = next.toString()

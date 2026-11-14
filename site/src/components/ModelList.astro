@@ -51,6 +51,19 @@ const scorecardTip = (key: string) =>
         data-tier={model.tier}
         data-band={model.band}
         data-license={model.license}
+        data-access={[
+          "huggingface",
+          model.models_dev ? "models.dev" : "",
+          model.agent_detect ? "agent-detect" : "",
+          model.providers.includes("opencode") || model.providers.includes("opencode-go") ? "opencode" : "",
+          model.providers.includes("cloudflare-workers-ai") ? "cloudflare" : "",
+          model.providers.includes("openrouter") ? "openrouter" : "",
+        ].filter(Boolean).join(" ")}
+        data-weights={model.weights === "open-weight" ? "open" : model.weights}
+        data-training-data={model.training_data}
+        data-training-code={model.training_code}
+        data-builds={model.builds}
+        data-org={model.organization}
         data-overall={model.scorecard?.overall.score ?? -1}
         data-openness={axis(model, "openness") ?? -1}
         data-performance={axis(model, "performance") ?? -1}

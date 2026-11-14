@@ -187,10 +187,10 @@ async function renderComparison(request, env, ids) {
     row(
       "Runtime",
       records.map((model) => {
-        const runtimes = (model.tags ?? []).filter((tag) => tag.startsWith("runtime:"))
+        const runtimes = (model.tags ?? []).filter((tag) => tag.startsWith("access:"))
         return runtimes.length > 0
           ? runtimes
-              .map((tag) => chip(tag, `/tags/runtime/${encodeURIComponent(tag.slice(8))}/`, "tag-runtime", tagDefinition(tag)))
+              .map((tag) => chip(tag, `/tags/access/${encodeURIComponent(tag.slice("access:".length))}/`, "tag-access", tagDefinition(tag)))
               .join(" ")
           : "—"
       }),
@@ -295,6 +295,8 @@ export default {
       "/about/": "/#method",
     }
     if (legacy[url.pathname]) return Response.redirect(new URL(legacy[url.pathname], url), 301)
+    const oldRuntimeTag = url.pathname.match(/^\/tags\/runtime\/([^/]+)\/?$/)
+    if (oldRuntimeTag) return Response.redirect(new URL(`/tags/access/${oldRuntimeTag[1]}/`, url), 301)
     if (!url.pathname.startsWith("/comparison/")) return env.ASSETS.fetch(request)
 
     const ids = decodeURIComponent(url.pathname.slice("/comparison/".length))
