@@ -69,6 +69,12 @@
     "hugging_face": "Qwen/Qwen3.8-Flash-Next",
     "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next",
     "agent_detect": null,
+    "providers": [
+      "amd",
+      "requesty",
+      "tensorx",
+      "vultr"
+    ],
     "gated": null
   },
   "syndication": {

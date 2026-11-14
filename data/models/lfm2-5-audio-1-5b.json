@@ -63,6 +63,7 @@
     "hugging_face": "LiquidAI/LFM2.5-Audio-1.5B",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

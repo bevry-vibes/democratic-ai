@@ -493,6 +493,7 @@ async function main(): Promise<void> {
         hugging_face: sourceId,
         models_dev: link.models_dev ?? null,
         agent_detect: link.agent_detect ?? null,
+        providers: link.providers ?? [],
         gated: item.source_meta?.gated ?? null,
       },
       syndication: synd ?? { score: 0, points: 0, band: "self-only", sources: [] },
@@ -531,6 +532,7 @@ async function main(): Promise<void> {
       releases: folded.length,
       models_dev: link.models_dev ?? null,
       agent_detect: link.agent_detect ?? null,
+      providers: link.providers ?? [],
       builds: buildEntries.length,
     })
   }

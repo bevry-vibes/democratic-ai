@@ -57,6 +57,7 @@
     "hugging_face": "XiaomiMiMo/MiMo-7B-MTPs",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

@@ -54,6 +54,7 @@
     "hugging_face": "Qwen/Qwen-Image-2.1-PE-T2I",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

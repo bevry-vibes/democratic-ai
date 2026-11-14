@@ -62,6 +62,7 @@
     "hugging_face": "facebook/seamless-m4t-v2-large",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": false
   },
   "syndication": {

@@ -57,6 +57,7 @@
     "hugging_face": "inclusionAI/Ling-3.0-flash-dspark",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

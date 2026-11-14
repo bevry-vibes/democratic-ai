@@ -67,6 +67,28 @@
     "hugging_face": "XiaomiMiMo/MiMo-V2.5-Pro",
     "models_dev": "https://models.dev/models/xiaomi/mimo-v2.5-pro",
     "agent_detect": "https://agent-detect.bevry.me/model/mimov25pro",
+    "providers": [
+      "aihubmix",
+      "aimlapi",
+      "cline-pass",
+      "deepinfra",
+      "digitalocean",
+      "huggingface",
+      "kenari",
+      "kilo",
+      "llmtr",
+      "nano-gpt",
+      "novita-ai",
+      "opencode-go",
+      "openrouter",
+      "requesty",
+      "standardcompute",
+      "xiaomi",
+      "xiaomi-token-plan-ams",
+      "xiaomi-token-plan-cn",
+      "xiaomi-token-plan-sgp",
+      "zenmux"
+    ],
     "gated": null
   },
   "syndication": {

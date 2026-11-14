@@ -59,6 +59,9 @@
     "hugging_face": "MiniMaxAI/MiniMax-H3",
     "models_dev": "https://models.dev/models/minimax/MiniMax-H3",
     "agent_detect": null,
+    "providers": [
+      "vercel"
+    ],
     "gated": null
   },
   "syndication": {

@@ -67,6 +67,7 @@
     "hugging_face": "ConwayResearch/Underdog-Bark-3.0-Clean",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

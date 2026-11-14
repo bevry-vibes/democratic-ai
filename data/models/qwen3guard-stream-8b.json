@@ -64,6 +64,7 @@
     "hugging_face": "Qwen/Qwen3Guard-Stream-8B",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

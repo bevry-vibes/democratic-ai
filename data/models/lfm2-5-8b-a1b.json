@@ -63,6 +63,7 @@
     "hugging_face": "LiquidAI/LFM2.5-8B-A1B",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

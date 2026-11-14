@@ -55,6 +55,7 @@
     "hugging_face": "higurashi-ai/Haru-4B",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

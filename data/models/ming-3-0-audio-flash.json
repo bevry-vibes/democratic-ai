@@ -64,6 +64,7 @@
     "hugging_face": "inclusionAI/Ming-3.0-audio-flash",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

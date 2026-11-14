@@ -59,6 +59,7 @@
     "hugging_face": "bosonai/higgs-audio-v2-tokenizer",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

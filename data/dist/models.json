@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T06:37:25.637Z",
+  "generated_at": "2026-11-14T07:06:23.472Z",
   "pull_id": "20261114T063448Z",
   "aliases": [
     {
@@ -67,6 +67,58 @@
       "releases": 2,
       "models_dev": "https://models.dev/models/deepseek/deepseek-v4.1-flash-1017",
       "agent_detect": "https://agent-detect.bevry.me/model/deepseekv41flash",
+      "providers": [
+        "aiand",
+        "alibaba-token-plan",
+        "alibaba-token-plan-cn",
+        "amd",
+        "arcee",
+        "baseten",
+        "byteplus",
+        "cloudflare-workers-ai",
+        "cortecs",
+        "deepinfra",
+        "deepseek",
+        "digitalocean",
+        "edenai",
+        "empiriolabs",
+        "engy",
+        "fireworks-ai",
+        "frogbot",
+        "greenpt",
+        "hopper",
+        "huggingface",
+        "hyper",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "melious",
+        "merge-gateway",
+        "mistral",
+        "modular",
+        "morph",
+        "munito",
+        "nano-gpt",
+        "nearai",
+        "nebius",
+        "neuralwatt",
+        "novita-ai",
+        "ofox",
+        "ollama-cloud",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "prime",
+        "requesty",
+        "scaleway",
+        "synthetic",
+        "thinkingmachines",
+        "umans-ai",
+        "umans-ai-coding-plan",
+        "venice",
+        "vercel",
+        "wandb"
+      ],
       "builds": 4,
       "scorecard": {
         "overall": {
@@ -273,6 +325,96 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/zhipuai/glm-5.2",
       "agent_detect": "https://agent-detect.bevry.me/model/glm52",
+      "providers": [
+        "302ai",
+        "abacus",
+        "above",
+        "aihubmix",
+        "aimlapi",
+        "alibaba",
+        "alibaba-cn",
+        "alibaba-token-plan",
+        "alibaba-token-plan-cn",
+        "ambient",
+        "arcee",
+        "baseten",
+        "berget",
+        "boundless",
+        "byteplus",
+        "chutes",
+        "cline-pass",
+        "cloudflare-workers-ai",
+        "commandcode",
+        "cortecs",
+        "crossmodel",
+        "crusoe",
+        "databricks",
+        "deepinfra",
+        "digitalocean",
+        "dinference",
+        "edenai",
+        "empiriolabs",
+        "engy",
+        "evroc",
+        "friendli",
+        "gmicloud",
+        "google-vertex",
+        "greenpt",
+        "hpc-ai",
+        "huggingface",
+        "impossibl",
+        "inceptron",
+        "jalapeno",
+        "kenari",
+        "kilo",
+        "lilac",
+        "llmgateway",
+        "llmgateway-providers",
+        "merge-gateway",
+        "mistral",
+        "model-oracle-ai",
+        "morph",
+        "nano-gpt",
+        "nebius",
+        "neon",
+        "novita-ai",
+        "ofox",
+        "ollama-cloud",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "opper",
+        "orcarouter",
+        "pioneer",
+        "prime",
+        "regolo-ai",
+        "requesty",
+        "routing-run",
+        "scaleway",
+        "scnet-token-plan",
+        "scx-ai",
+        "sensenova",
+        "siliconflow",
+        "siliconflow-cn",
+        "standardcompute",
+        "synthetic",
+        "tempr",
+        "tensorx",
+        "togetherai",
+        "tokengo",
+        "unorouter",
+        "venice",
+        "vercel",
+        "vivgrid",
+        "volcengine",
+        "vultr",
+        "wafer.ai",
+        "wandb",
+        "zai",
+        "zai-coding-plan",
+        "zenmux",
+        "zhipuai"
+      ],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -442,6 +584,101 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/zhipuai/glm-5.3",
       "agent_detect": "https://agent-detect.bevry.me/model/glm53",
+      "providers": [
+        "302ai",
+        "agentrouter",
+        "aiand",
+        "aihubmix",
+        "aimlapi",
+        "aki-io",
+        "alibaba-cn",
+        "alibaba-token-plan",
+        "alibaba-token-plan-cn",
+        "amazon-bedrock",
+        "arcee",
+        "baseten",
+        "bothub",
+        "boundless",
+        "cline-pass",
+        "cloudferro-sherlock",
+        "cloudflare-workers-ai",
+        "commandcode",
+        "cortecs",
+        "crossmodel",
+        "deepinfra",
+        "digitalocean",
+        "edenai",
+        "empiriolabs",
+        "engy",
+        "fireworks-ai",
+        "friendli",
+        "frogbot",
+        "greenpt",
+        "huggingface",
+        "hyper",
+        "inceptron",
+        "inco",
+        "iteracompute",
+        "kenari",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "melious",
+        "merge-gateway",
+        "mistral",
+        "moark",
+        "modal",
+        "morph",
+        "nan",
+        "nano-gpt",
+        "nearai",
+        "nebius",
+        "neon",
+        "neuralwatt",
+        "novita-ai",
+        "nvidia",
+        "ofox",
+        "ollama-cloud",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "opper",
+        "orcarouter",
+        "perplexity-agent",
+        "privatemode-ai",
+        "requesty",
+        "runinfra",
+        "sambanova",
+        "scaleway",
+        "scnet-token-plan",
+        "siliconflow",
+        "siliconflow-cn",
+        "standardcompute",
+        "subconscious",
+        "synthetic",
+        "tempr",
+        "tensorx",
+        "thinkingmachines",
+        "tinfoil",
+        "togetherai",
+        "tokengo",
+        "tokenrouter",
+        "umans-ai",
+        "umans-ai-coding-plan",
+        "vancine",
+        "venice",
+        "vercel",
+        "vivgrid",
+        "volcengine-coding-plan",
+        "vultr",
+        "wally",
+        "wandb",
+        "zai",
+        "zai-coding-plan",
+        "zenmux",
+        "zhipuai",
+        "zhipuai-coding-plan"
+      ],
       "builds": 3,
       "scorecard": {
         "overall": {
@@ -608,6 +845,96 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/zhipuai/glm-5.3-flash",
       "agent_detect": "https://agent-detect.bevry.me/model/glm53flash",
+      "providers": [
+        "302ai",
+        "above",
+        "aiand",
+        "aihubmix",
+        "aimlapi",
+        "amd",
+        "arcee",
+        "baseten",
+        "berget",
+        "bothub",
+        "boundless",
+        "byteplus",
+        "cline-pass",
+        "cloudflare-workers-ai",
+        "commandcode",
+        "cortecs",
+        "crossmodel",
+        "deepinfra",
+        "digitalocean",
+        "edenai",
+        "empiriolabs",
+        "engy",
+        "fireworks-ai",
+        "friendli",
+        "frogbot",
+        "greenpt",
+        "huggingface",
+        "hyper",
+        "inceptron",
+        "inco",
+        "iteracompute",
+        "kenari",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "melious",
+        "merge-gateway",
+        "mistral",
+        "modal",
+        "morph",
+        "munito",
+        "munito-eu",
+        "nan",
+        "nano-gpt",
+        "nearai",
+        "nebius",
+        "neon",
+        "neuralwatt",
+        "novita-ai",
+        "nvidia",
+        "ofox",
+        "ollama-cloud",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "opper",
+        "orcarouter",
+        "pareto",
+        "perplexity-agent",
+        "privatemode-ai",
+        "requesty",
+        "runinfra",
+        "scnet-token-plan",
+        "siliconflow",
+        "siliconflow-cn",
+        "standardcompute",
+        "synthetic",
+        "tempr",
+        "tensorx",
+        "thinkingmachines",
+        "togetherai",
+        "tokengo",
+        "umans-ai",
+        "umans-ai-coding-plan",
+        "vancine",
+        "venice",
+        "vercel",
+        "vivgrid",
+        "volcengine",
+        "volcengine-coding-plan",
+        "vultr",
+        "wally",
+        "wandb",
+        "zai",
+        "zai-coding-plan",
+        "zenmux",
+        "zhipuai",
+        "zhipuai-coding-plan"
+      ],
       "builds": 4,
       "scorecard": {
         "overall": {
@@ -772,6 +1099,14 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/thinkingmachines/inkling-2-small",
       "agent_detect": "https://agent-detect.bevry.me/model/inkling2small",
+      "providers": [
+        "edenai",
+        "kilo",
+        "opencode",
+        "openrouter",
+        "prime",
+        "vercel"
+      ],
       "builds": 2,
       "scorecard": {
         "overall": {
@@ -945,6 +1280,92 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/moonshotai/kimi-k3",
       "agent_detect": "https://agent-detect.bevry.me/model/kimik3",
+      "providers": [
+        "302ai",
+        "abacus",
+        "aiand",
+        "aihubmix",
+        "aimlapi",
+        "ainetcafe",
+        "alibaba",
+        "alibaba-cn",
+        "amazon-bedrock",
+        "arcee",
+        "baseten",
+        "berget",
+        "boundless",
+        "chutes",
+        "cline-pass",
+        "cloudflare-ai-gateway",
+        "commandcode",
+        "cortecs",
+        "crossmodel",
+        "deepinfra",
+        "digitalocean",
+        "edenai",
+        "empiriolabs",
+        "engy",
+        "fireworks-ai",
+        "frogbot",
+        "github-copilot",
+        "greenpt",
+        "huggingface",
+        "hyper",
+        "impossibl",
+        "inco",
+        "iteracompute",
+        "jalapeno",
+        "kenari",
+        "kilo",
+        "kimi-code-plan-cn",
+        "kimi-code-plan-global",
+        "llmgateway",
+        "llmgateway-providers",
+        "melious",
+        "merge-gateway",
+        "moark",
+        "modal",
+        "moonshotai",
+        "moonshotai-cn",
+        "morph",
+        "nano-gpt",
+        "nearai",
+        "nebius",
+        "neon",
+        "neuralwatt",
+        "novita-ai",
+        "nvidia",
+        "ofox",
+        "ollama-cloud",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "opper",
+        "orcarouter",
+        "perplexity-agent",
+        "pioneer",
+        "prime",
+        "requesty",
+        "scnet-token-plan",
+        "sensenova",
+        "siliconflow",
+        "standardcompute",
+        "synthetic",
+        "tempr",
+        "tensorx",
+        "togetherai",
+        "tokengo",
+        "umans-ai",
+        "umans-ai-coding-plan",
+        "vancine",
+        "venice",
+        "vercel",
+        "vivgrid",
+        "volcengine-coding-plan",
+        "wallaby",
+        "wally",
+        "zenmux"
+      ],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -1120,6 +1541,17 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flash",
+      "providers": [
+        "aihubmix",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "nano-gpt",
+        "novita-ai",
+        "opencode",
+        "openrouter",
+        "vercel"
+      ],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -1314,6 +1746,31 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2.5",
       "agent_detect": "https://agent-detect.bevry.me/model/mimov25",
+      "providers": [
+        "aihubmix",
+        "aimlapi",
+        "cline-pass",
+        "deepinfra",
+        "huggingface",
+        "impossibl",
+        "inferx",
+        "kenari",
+        "kilo",
+        "llmtr",
+        "nano-gpt",
+        "novita-ai",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "requesty",
+        "standardcompute",
+        "venice",
+        "xiaomi",
+        "xiaomi-token-plan-ams",
+        "xiaomi-token-plan-cn",
+        "xiaomi-token-plan-sgp",
+        "zenmux"
+      ],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -1492,6 +1949,28 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2.5-pro",
       "agent_detect": "https://agent-detect.bevry.me/model/mimov25pro",
+      "providers": [
+        "aihubmix",
+        "aimlapi",
+        "cline-pass",
+        "deepinfra",
+        "digitalocean",
+        "huggingface",
+        "kenari",
+        "kilo",
+        "llmtr",
+        "nano-gpt",
+        "novita-ai",
+        "opencode-go",
+        "openrouter",
+        "requesty",
+        "standardcompute",
+        "xiaomi",
+        "xiaomi-token-plan-ams",
+        "xiaomi-token-plan-cn",
+        "xiaomi-token-plan-sgp",
+        "zenmux"
+      ],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -1674,6 +2153,45 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/minimax/MiniMax-M2.5",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm25",
+      "providers": [
+        "302ai",
+        "alibaba-token-plan",
+        "alibaba-token-plan-cn",
+        "amazon-bedrock",
+        "clarifai",
+        "cloudferro-sherlock",
+        "commandcode",
+        "cortecs",
+        "deepinfra",
+        "dinference",
+        "drun",
+        "edenai",
+        "frogbot",
+        "greenpt",
+        "hpc-ai",
+        "huggingface",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "meganova",
+        "merge-gateway",
+        "nano-gpt",
+        "novita-ai",
+        "ofox",
+        "opencode",
+        "openrouter",
+        "orcarouter",
+        "qiniu-ai",
+        "scnet-token-plan",
+        "siliconflow",
+        "tencent-coding-plan",
+        "tensorx",
+        "togetherai",
+        "tokengo",
+        "venice",
+        "vercel",
+        "zenmux"
+      ],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -1850,6 +2368,45 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/minimax/MiniMax-M2.7",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm27",
+      "providers": [
+        "302ai",
+        "abacus",
+        "aihubmix",
+        "auriko",
+        "commandcode",
+        "crossmodel",
+        "deepinfra",
+        "edenai",
+        "empiriolabs",
+        "fastrouter",
+        "frogbot",
+        "gmicloud",
+        "huggingface",
+        "kenari",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "merge-gateway",
+        "moark",
+        "nano-gpt",
+        "novita-ai",
+        "ofox",
+        "ollama-cloud",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "opper",
+        "orcarouter",
+        "requesty",
+        "scnet-token-plan",
+        "scx-ai",
+        "tempr",
+        "togetherai",
+        "unorouter",
+        "venice",
+        "vercel",
+        "zenmux"
+      ],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -2023,6 +2580,61 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/minimax/MiniMax-M3",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm3",
+      "providers": [
+        "302ai",
+        "abacus",
+        "aihubmix",
+        "ambient",
+        "boundless",
+        "cline-pass",
+        "commandcode",
+        "cortecs",
+        "crossmodel",
+        "deepinfra",
+        "edenai",
+        "empiriolabs",
+        "fireworks-ai",
+        "frogbot",
+        "gmicloud",
+        "huggingface",
+        "hyper",
+        "inco",
+        "iteracompute",
+        "jalapeno",
+        "kenari",
+        "kilo",
+        "lilac",
+        "llmgateway",
+        "llmgateway-providers",
+        "merge-gateway",
+        "modular",
+        "nano-gpt",
+        "nebius",
+        "novita-ai",
+        "ofox",
+        "ollama-cloud",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "opper",
+        "orcarouter",
+        "requesty",
+        "scnet-token-plan",
+        "siliconflow",
+        "standardcompute",
+        "synthetic",
+        "tempr",
+        "tensorx",
+        "togetherai",
+        "vancine",
+        "vercel",
+        "volcengine-coding-plan",
+        "vultr",
+        "wafer.ai",
+        "wally",
+        "wandb",
+        "zenmux"
+      ],
       "builds": 2,
       "scorecard": {
         "overall": {
@@ -2210,6 +2822,37 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/minimax/MiniMax-M3.1-Flash",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm31flash",
+      "providers": [
+        "cloudflare-ai-gateway",
+        "cortecs",
+        "digitalocean",
+        "edenai",
+        "empiriolabs",
+        "fireworks-ai",
+        "huggingface",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "merge-gateway",
+        "minimax",
+        "minimax-cn",
+        "minimax-cn-coding-plan",
+        "minimax-coding-plan",
+        "modular",
+        "nano-gpt",
+        "nebius",
+        "novita-ai",
+        "nvidia",
+        "ollama-cloud",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "requesty",
+        "sambanova",
+        "venice",
+        "vercel",
+        "zenmux"
+      ],
       "builds": 2,
       "scorecard": {
         "overall": {
@@ -2469,6 +3112,36 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/alibaba/qwen3.6-27b",
       "agent_detect": "https://agent-detect.bevry.me/model/qwen3627b",
+      "providers": [
+        "abacus",
+        "aiand",
+        "ambient",
+        "chutes",
+        "cortecs",
+        "deepinfra",
+        "empiriolabs",
+        "groq",
+        "huggingface",
+        "inferx",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "merge-gateway",
+        "nano-gpt",
+        "novita-ai",
+        "ofox",
+        "openrouter",
+        "ovhcloud",
+        "pendra",
+        "qvac",
+        "siliconflow",
+        "siliconflow-cn",
+        "stackit",
+        "synthetic",
+        "thinkingmachines",
+        "venice",
+        "vercel"
+      ],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -2657,6 +3330,61 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
       "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b",
+      "providers": [
+        "aiand",
+        "aimlapi",
+        "aki-io",
+        "ambient",
+        "amd",
+        "berget",
+        "blueclaw",
+        "cerebras",
+        "chutes",
+        "cloudflare-workers-ai",
+        "commandcode",
+        "cortecs",
+        "deepinfra",
+        "edenai",
+        "empiriolabs",
+        "engy",
+        "evroc",
+        "groq",
+        "hetzner",
+        "huggingface",
+        "hyper",
+        "iteracompute",
+        "kilo",
+        "kosmik",
+        "llmgateway",
+        "llmgateway-providers",
+        "llmtech",
+        "merge-gateway",
+        "munito",
+        "munito-eu",
+        "nano-gpt",
+        "nearai",
+        "nebius",
+        "neuralwatt",
+        "novita-ai",
+        "ofox",
+        "openrouter",
+        "opper",
+        "orcarouter",
+        "ovhcloud",
+        "prime",
+        "regolo-ai",
+        "runinfra",
+        "scaleway",
+        "siliconflow-cn",
+        "standardcompute",
+        "tempr",
+        "tensorx",
+        "thinkingmachines",
+        "venice",
+        "vercel",
+        "vultr",
+        "wandb"
+      ],
       "builds": 8,
       "scorecard": {
         "overall": {
@@ -2832,6 +3560,15 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/ibm/granite-4.2-8b",
       "agent_detect": null,
+      "providers": [
+        "edenai",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "nano-gpt",
+        "openrouter",
+        "wandb"
+      ],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -3018,6 +3755,43 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/moonshotai/kimi-k3.1-pro",
       "agent_detect": null,
+      "providers": [
+        "302ai",
+        "aiand",
+        "amazon-bedrock",
+        "baseten",
+        "cortecs",
+        "crossmodel",
+        "deepinfra",
+        "digitalocean",
+        "edenai",
+        "empiriolabs",
+        "engy",
+        "fireworks-ai",
+        "hyper",
+        "kilo",
+        "kimi-code-plan-cn",
+        "kimi-code-plan-global",
+        "llmgateway",
+        "llmgateway-providers",
+        "merge-gateway",
+        "moonshotai",
+        "moonshotai-cn",
+        "morph",
+        "nano-gpt",
+        "nearai",
+        "novita-ai",
+        "ofox",
+        "ollama-cloud",
+        "opencode-go",
+        "openrouter",
+        "prime",
+        "requesty",
+        "tinfoil",
+        "togetherai",
+        "venice",
+        "vercel"
+      ],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -3319,6 +4093,47 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/alibaba/qwen3.6-35b-a3b",
       "agent_detect": null,
+      "providers": [
+        "302ai",
+        "aihubmix",
+        "aki-io",
+        "ambient",
+        "boundless",
+        "cortecs",
+        "deepinfra",
+        "empiriolabs",
+        "engy",
+        "evroc",
+        "greenpt",
+        "hetzner",
+        "huggingface",
+        "inferx",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "llmtr",
+        "merge-gateway",
+        "nan",
+        "nano-gpt",
+        "nearai",
+        "neuralwatt",
+        "novita-ai",
+        "openrouter",
+        "opper",
+        "orcarouter",
+        "qvac",
+        "salad-cloud",
+        "scaleway",
+        "siliconflow",
+        "siliconflow-cn",
+        "thinkingmachines",
+        "umans-ai",
+        "umans-ai-coding-plan",
+        "venice",
+        "vercel",
+        "wandb",
+        "zenifra"
+      ],
       "builds": 3,
       "scorecard": {
         "overall": {
@@ -3510,6 +4325,31 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/alibaba/qwen3.8-2.4t-a95b",
       "agent_detect": null,
+      "providers": [
+        "aihubmix",
+        "aimlapi",
+        "cortecs",
+        "deepinfra",
+        "edenai",
+        "fireworks-ai",
+        "huggingface",
+        "hyper",
+        "iteracompute",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "merge-gateway",
+        "modal",
+        "novita-ai",
+        "openrouter",
+        "opper",
+        "requesty",
+        "runinfra",
+        "siliconflow",
+        "tensorx",
+        "venice",
+        "vercel"
+      ],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -3677,6 +4517,11 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-fin",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flash",
+      "providers": [
+        "novita-ai",
+        "opencode",
+        "vercel"
+      ],
       "builds": 3,
       "scorecard": {
         "overall": {
@@ -3898,6 +4743,15 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-vl",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flashvl",
+      "providers": [
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "nano-gpt",
+        "novita-ai",
+        "openrouter",
+        "vercel"
+      ],
       "builds": 3,
       "scorecard": {
         "overall": {
@@ -4061,6 +4915,10 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/meituan/longcat-2.5",
       "agent_detect": "https://agent-detect.bevry.me/model/longcat25",
+      "providers": [
+        "opencode",
+        "opencode-go"
+      ],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -4237,6 +5095,21 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/reflection/beam-1.0-501b-a23b",
       "agent_detect": null,
+      "providers": [
+        "cloudflare-ai-gateway",
+        "edenai",
+        "kilo",
+        "nano-gpt",
+        "nebius",
+        "ollama-cloud",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "reflection",
+        "togetherai",
+        "vercel",
+        "wandb"
+      ],
       "builds": 3,
       "scorecard": {
         "overall": {
@@ -4434,6 +5307,22 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/minimax/MiniMax-M2",
       "agent_detect": null,
+      "providers": [
+        "302ai",
+        "amazon-bedrock",
+        "cortecs",
+        "edenai",
+        "huggingface",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "merge-gateway",
+        "nano-gpt",
+        "ofox",
+        "qiniu-ai",
+        "vercel",
+        "zenmux"
+      ],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -4610,6 +5499,27 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/minimax/MiniMax-M2.1",
       "agent_detect": null,
+      "providers": [
+        "302ai",
+        "amazon-bedrock",
+        "cortecs",
+        "edenai",
+        "huggingface",
+        "jiekou",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "meganova",
+        "merge-gateway",
+        "moark",
+        "nano-gpt",
+        "ofox",
+        "opencode",
+        "poe",
+        "qiniu-ai",
+        "vercel",
+        "zenmux"
+      ],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -4790,6 +5700,12 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next",
       "agent_detect": null,
+      "providers": [
+        "amd",
+        "requesty",
+        "tensorx",
+        "vultr"
+      ],
       "builds": 6,
       "scorecard": {
         "overall": {
@@ -4956,6 +5872,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": "https://agent-detect.bevry.me/model/ling261t",
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -5108,6 +6025,10 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-sante",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flash",
+      "providers": [
+        "novita-ai",
+        "vercel"
+      ],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -5256,6 +6177,34 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2.6-pro",
       "agent_detect": "https://agent-detect.bevry.me/model/mimov26pro",
+      "providers": [
+        "above",
+        "aihubmix",
+        "boundless",
+        "cline-pass",
+        "crossmodel",
+        "deepinfra",
+        "empiriolabs",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "nano-gpt",
+        "neuralwatt",
+        "novita-ai",
+        "ollama-cloud",
+        "opencode-go",
+        "openrouter",
+        "requesty",
+        "standardcompute",
+        "tempr",
+        "vercel",
+        "vultr",
+        "xiaomi",
+        "xiaomi-token-plan-ams",
+        "xiaomi-token-plan-cn",
+        "xiaomi-token-plan-sgp",
+        "zenmux"
+      ],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -5404,6 +6353,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": "https://agent-detect.bevry.me/model/lfm317b",
+      "providers": [],
       "builds": 7,
       "scorecard": {
         "overall": {
@@ -5580,6 +6530,12 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2-flash",
       "agent_detect": null,
+      "providers": [
+        "jiekou",
+        "meganova",
+        "opencode",
+        "qiniu-ai"
+      ],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -5760,6 +6716,9 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/minimax/MiniMax-H3",
       "agent_detect": null,
+      "providers": [
+        "vercel"
+      ],
       "builds": 2,
       "scorecard": {
         "overall": {
@@ -5915,6 +6874,29 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/stepfun/step-5-preview",
       "agent_detect": null,
+      "providers": [
+        "aihubmix",
+        "aimlapi",
+        "commandcode",
+        "deepinfra",
+        "edenai",
+        "empiriolabs",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "nano-gpt",
+        "novita-ai",
+        "nvidia",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "requesty",
+        "stepfun",
+        "stepfun-ai",
+        "stepfun-ai-step-plan",
+        "stepfun-step-plan",
+        "vercel"
+      ],
       "builds": 2,
       "scorecard": {
         "overall": {
@@ -6082,6 +7064,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -6238,6 +7221,9 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/liquid/lfm2-24b-a2b",
       "agent_detect": null,
+      "providers": [
+        "togetherai"
+      ],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -6389,6 +7375,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -6545,6 +7532,36 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2.6-flash",
       "agent_detect": null,
+      "providers": [
+        "above",
+        "aihubmix",
+        "amd",
+        "boundless",
+        "cline-pass",
+        "crossmodel",
+        "deepinfra",
+        "empiriolabs",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "nan",
+        "nano-gpt",
+        "novita-ai",
+        "ollama-cloud",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "requesty",
+        "standardcompute",
+        "tempr",
+        "venice",
+        "vercel",
+        "vultr",
+        "xiaomi",
+        "xiaomi-token-plan-ams",
+        "xiaomi-token-plan-cn",
+        "xiaomi-token-plan-sgp"
+      ],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -6696,6 +7713,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": "https://agent-detect.bevry.me/model/mistrallarge4",
+      "providers": [],
       "builds": 4,
       "scorecard": {
         "overall": {
@@ -6851,6 +7869,9 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b",
       "agent_detect": null,
+      "providers": [
+        "runinfra"
+      ],
       "builds": 7,
       "scorecard": {
         "overall": {
@@ -7023,6 +8044,9 @@
       "releases": 0,
       "models_dev": "https://models.dev/models/alibaba/qwen-image-2.1",
       "agent_detect": null,
+      "providers": [
+        "nan"
+      ],
       "builds": 3,
       "scorecard": {
         "overall": {
@@ -7176,6 +8200,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -7336,6 +8361,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 7,
       "scorecard": {
         "overall": {
@@ -7489,6 +8515,7 @@
       "releases": 1,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -7653,6 +8680,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -7803,6 +8831,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -7953,6 +8982,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -8103,6 +9133,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -8252,6 +9283,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -8400,6 +9432,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -8547,6 +9580,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -8695,6 +9729,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -8845,6 +9880,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -8996,6 +10032,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -9148,6 +10185,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 2,
       "scorecard": {
         "overall": {
@@ -9299,6 +10337,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -9450,6 +10489,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -9608,6 +10648,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -9763,6 +10804,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -9910,6 +10952,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -10058,6 +11101,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -10207,6 +11251,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -10356,6 +11401,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -10505,6 +11551,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -10655,6 +11702,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -10803,6 +11851,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -10951,6 +12000,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -11099,6 +12149,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -11247,6 +12298,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -11395,6 +12447,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -11543,6 +12596,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -11696,6 +12750,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -11849,6 +12904,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -12002,6 +13058,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -12155,6 +13212,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -12313,6 +13371,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -12469,6 +13528,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -12622,6 +13682,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -12775,6 +13836,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -12925,6 +13987,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -13073,6 +14136,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -13220,6 +14284,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -13371,6 +14436,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -13521,6 +14587,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "task_performance": {
         "task": "transcription",
@@ -13688,6 +14755,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -13842,6 +14910,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -13990,6 +15059,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -14136,6 +15206,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -14282,6 +15353,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -14435,6 +15507,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -14586,6 +15659,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -14737,6 +15811,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -14888,6 +15963,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -15038,6 +16114,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -15188,6 +16265,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -15337,6 +16415,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -15485,6 +16564,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -15634,6 +16714,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -15781,6 +16862,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -15928,6 +17010,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -16077,6 +17160,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -16230,6 +17314,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -16377,6 +17462,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -16526,6 +17612,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -16678,6 +17765,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 4,
       "scorecard": {
         "overall": {
@@ -16830,6 +17918,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 4,
       "scorecard": {
         "overall": {
@@ -16982,6 +18071,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 3,
       "scorecard": {
         "overall": {
@@ -17134,6 +18224,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 3,
       "scorecard": {
         "overall": {
@@ -17282,6 +18373,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -17428,6 +18520,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -17576,6 +18669,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -17724,6 +18818,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 2,
       "scorecard": {
         "overall": {
@@ -17877,6 +18972,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -18026,6 +19122,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -18175,6 +19272,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -18322,6 +19420,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -18464,6 +19563,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -18614,6 +19714,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -18763,6 +19864,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -18911,6 +20013,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -19059,6 +20162,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -19206,6 +20310,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -19354,6 +20459,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -19502,6 +20608,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -19650,6 +20757,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -19798,6 +20906,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -19944,6 +21053,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -20091,6 +21201,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -20237,6 +21348,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -20384,6 +21496,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -20530,6 +21643,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -20676,6 +21790,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -20827,6 +21942,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -20973,6 +22089,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -21122,6 +22239,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -21269,6 +22387,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -21417,6 +22536,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -21564,6 +22684,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -21712,6 +22833,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -21860,6 +22982,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -22008,6 +23131,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -22161,6 +23285,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 8,
       "scorecard": {
         "overall": {
@@ -22316,6 +23441,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -22463,6 +23589,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -22611,6 +23738,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -22759,6 +23887,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -22909,6 +24038,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "task_performance": {
         "task": "transcription",
@@ -23069,6 +24199,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -23216,6 +24347,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -23372,6 +24504,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 7,
       "task_performance": {
         "task": "transcription",
@@ -23535,6 +24668,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 5,
       "scorecard": {
         "overall": {
@@ -23682,6 +24816,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -23830,6 +24965,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -23978,6 +25114,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -24125,6 +25262,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -24272,6 +25410,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -24420,6 +25559,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -24568,6 +25708,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -24716,6 +25857,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -24861,6 +26003,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -25010,6 +26153,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -25158,6 +26302,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -25306,6 +26451,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -25454,6 +26600,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -25604,6 +26751,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -25754,6 +26902,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -25904,6 +27053,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -26053,6 +27203,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -26201,6 +27352,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -26349,6 +27501,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -26502,6 +27655,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -26650,6 +27804,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -26798,6 +27953,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -26947,6 +28103,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -27096,6 +28253,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -27249,6 +28407,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -27398,6 +28557,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -27547,6 +28707,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -27696,6 +28857,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -27844,6 +29006,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -27991,6 +29154,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -28143,6 +29307,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -28295,6 +29460,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -28443,6 +29609,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 2,
       "scorecard": {
         "overall": {
@@ -28593,6 +29760,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -28742,6 +29910,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -28891,6 +30060,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -29039,6 +30209,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -29187,6 +30358,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -29335,6 +30507,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -29483,6 +30656,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -29631,6 +30805,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -29786,6 +30961,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 7,
       "scorecard": {
         "overall": {
@@ -29956,6 +31132,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 4,
       "scorecard": {
         "overall": {
@@ -30104,6 +31281,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 6,
       "scorecard": {
         "overall": {
@@ -30252,6 +31430,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -30398,6 +31577,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -30545,6 +31725,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -30694,6 +31875,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 2,
       "scorecard": {
         "overall": {
@@ -30844,6 +32026,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "task_performance": {
         "task": "transcription",
@@ -31007,6 +32190,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "task_performance": {
         "task": "transcription",
@@ -31169,6 +32353,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -31318,6 +32503,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -31467,6 +32653,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -31616,6 +32803,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -31767,6 +32955,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -31915,6 +33104,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -32063,6 +33253,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -32206,6 +33397,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -32357,6 +33549,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -32504,6 +33697,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -32654,6 +33848,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -32802,6 +33997,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -32945,6 +34141,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -33088,6 +34285,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -33231,6 +34429,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -33374,6 +34573,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -33526,6 +34726,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -33675,6 +34876,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -33823,6 +35025,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -33972,6 +35175,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -34119,6 +35323,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -34266,6 +35471,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -34414,6 +35620,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -34561,6 +35768,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -34710,6 +35918,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -34862,6 +36071,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -35010,6 +36220,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -35159,6 +36370,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -35309,6 +36521,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "task_performance": {
         "task": "transcription",
@@ -35472,6 +36685,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "task_performance": {
         "task": "transcription",
@@ -35635,6 +36849,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "task_performance": {
         "task": "transcription",
@@ -35801,6 +37016,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 1,
       "scorecard": {
         "overall": {
@@ -35950,6 +37166,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -36098,6 +37315,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -36245,6 +37463,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -36393,6 +37612,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -36541,6 +37761,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -36688,6 +37909,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -36835,6 +38057,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -36982,6 +38205,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -37130,6 +38354,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -37278,6 +38503,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -37426,6 +38652,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -37575,6 +38802,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {
@@ -37723,6 +38951,7 @@
       "releases": 0,
       "models_dev": null,
       "agent_detect": null,
+      "providers": [],
       "builds": 0,
       "scorecard": {
         "overall": {

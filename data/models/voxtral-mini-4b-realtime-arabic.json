@@ -60,6 +60,7 @@
     "hugging_face": "mistralai/Voxtral-Mini-4B-Realtime-Arabic",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

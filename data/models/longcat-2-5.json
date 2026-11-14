@@ -62,6 +62,10 @@
     "hugging_face": "meituan-longcat/LongCat-2.5",
     "models_dev": "https://models.dev/models/meituan/longcat-2.5",
     "agent_detect": "https://agent-detect.bevry.me/model/longcat25",
+    "providers": [
+      "opencode",
+      "opencode-go"
+    ],
     "gated": null
   },
   "syndication": {

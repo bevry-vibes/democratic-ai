@@ -70,6 +70,7 @@
     "hugging_face": "XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

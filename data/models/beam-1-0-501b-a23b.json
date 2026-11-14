@@ -60,6 +60,21 @@
     "hugging_face": "reflection/Beam-1.0-501B-A23B",
     "models_dev": "https://models.dev/models/reflection/beam-1.0-501b-a23b",
     "agent_detect": null,
+    "providers": [
+      "cloudflare-ai-gateway",
+      "edenai",
+      "kilo",
+      "nano-gpt",
+      "nebius",
+      "ollama-cloud",
+      "opencode",
+      "opencode-go",
+      "openrouter",
+      "reflection",
+      "togetherai",
+      "vercel",
+      "wandb"
+    ],
     "gated": null
   },
   "syndication": {

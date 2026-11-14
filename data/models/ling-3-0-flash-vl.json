@@ -64,6 +64,15 @@
     "hugging_face": "inclusionAI/Ling-3.0-flash-VL",
     "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-vl",
     "agent_detect": "https://agent-detect.bevry.me/model/ling30flashvl",
+    "providers": [
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "novita-ai",
+      "openrouter",
+      "vercel"
+    ],
     "gated": null
   },
   "syndication": {

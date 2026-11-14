@@ -70,6 +70,15 @@
     "hugging_face": "webAI-Official/granite-4.2-8B",
     "models_dev": "https://models.dev/models/ibm/granite-4.2-8b",
     "agent_detect": null,
+    "providers": [
+      "edenai",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "nano-gpt",
+      "openrouter",
+      "wandb"
+    ],
     "gated": null
   },
   "syndication": {

@@ -62,6 +62,7 @@
     "hugging_face": "inclusionAI/Realtime-Venus",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

@@ -59,6 +59,10 @@
     "hugging_face": "inclusionAI/Ling-3.0-flash-Sante",
     "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-sante",
     "agent_detect": "https://agent-detect.bevry.me/model/ling30flash",
+    "providers": [
+      "novita-ai",
+      "vercel"
+    ],
     "gated": null
   },
   "syndication": {

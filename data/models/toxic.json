@@ -58,6 +58,7 @@
     "hugging_face": "desert-ant-labs/toxic",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

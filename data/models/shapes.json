@@ -56,6 +56,7 @@
     "hugging_face": "desert-ant-labs/shapes",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

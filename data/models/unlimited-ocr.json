@@ -65,6 +65,7 @@
     "hugging_face": "baidu/Unlimited-OCR",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

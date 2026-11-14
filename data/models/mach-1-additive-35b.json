@@ -59,6 +59,7 @@
     "hugging_face": "SyzygyResearch/Mach-1-Additive-35B",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

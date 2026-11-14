@@ -56,6 +56,7 @@
     "hugging_face": "meituan-longcat/LongCat-Next",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

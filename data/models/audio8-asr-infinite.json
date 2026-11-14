@@ -60,6 +60,7 @@
     "hugging_face": "Edge0/Audio8-ASR-Infinite",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

@@ -62,6 +62,7 @@
     "hugging_face": "inclusionAI/Ling-1T",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

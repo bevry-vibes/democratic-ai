@@ -58,6 +58,7 @@
     "hugging_face": "inclusionAI/Duo-1.0-distill",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

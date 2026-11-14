@@ -51,6 +51,7 @@
     "hugging_face": "LiquidAI/LeapBundles",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

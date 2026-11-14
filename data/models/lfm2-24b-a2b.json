@@ -59,6 +59,9 @@
     "hugging_face": "LiquidAI/LFM2-24B-A2B",
     "models_dev": "https://models.dev/models/liquid/lfm2-24b-a2b",
     "agent_detect": null,
+    "providers": [
+      "togetherai"
+    ],
     "gated": null
   },
   "syndication": {

@@ -72,6 +72,7 @@
     "hugging_face": "inclusionAI/Ming-flash-omni-Preview",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

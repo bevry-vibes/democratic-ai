@@ -57,6 +57,7 @@
     "hugging_face": "nace-ai/kapitsa-super",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

@@ -55,6 +55,7 @@
     "hugging_face": "bosonai/Orze-ASR-3Way",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

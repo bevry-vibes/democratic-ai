@@ -59,6 +59,7 @@
     "hugging_face": "inclusionAI/Ming-UniAudio-16B-A3B-Edit",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

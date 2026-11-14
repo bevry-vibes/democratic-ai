@@ -58,6 +58,7 @@
     "hugging_face": "Xenova/trocr-small-handwritten",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

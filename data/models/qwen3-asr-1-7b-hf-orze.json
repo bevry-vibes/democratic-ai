@@ -67,6 +67,7 @@
     "hugging_face": "bosonai/Qwen3-ASR-1.7B-hf-orze",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

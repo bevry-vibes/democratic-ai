@@ -52,6 +52,7 @@
     "hugging_face": "inclusionAI/Ming-Image-0.1-Design-Layer",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

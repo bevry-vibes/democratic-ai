@@ -52,6 +52,7 @@
     "hugging_face": "inclusionAI/Ling-3.1-flash-base",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

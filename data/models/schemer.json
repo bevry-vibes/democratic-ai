@@ -50,6 +50,7 @@
     "hugging_face": "desert-ant-labs/schemer",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

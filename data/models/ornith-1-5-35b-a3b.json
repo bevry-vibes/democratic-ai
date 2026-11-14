@@ -67,6 +67,9 @@
     "hugging_face": "ornith-ai/Ornith-1.5-35B-A3B",
     "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b",
     "agent_detect": null,
+    "providers": [
+      "runinfra"
+    ],
     "gated": null
   },
   "syndication": {

@@ -64,6 +64,7 @@
     "hugging_face": "LiquidAI/LFM2.5-VL-3B-DSpark",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

@@ -70,6 +70,7 @@
     "hugging_face": "ConwayResearch/Underdog-Poodle-4B",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

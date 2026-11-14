@@ -62,6 +62,7 @@
     "hugging_face": "webAI-Official/TwIL-LM3-Pro",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

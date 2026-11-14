@@ -56,6 +56,7 @@
     "hugging_face": "baidu/ERNIE-5.5-Flash-Base",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

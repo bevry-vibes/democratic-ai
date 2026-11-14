@@ -150,11 +150,15 @@ async function main(): Promise<void> {
   )) as AgentDetectIndex
 
   const modelsDev = new Map<string, { url: string; canonical: string; name: string }>()
-  for (const provider of Object.values(api)) {
+  const providersByCanonical = new Map<string, Set<string>>()
+  for (const [providerId, provider] of Object.entries(api)) {
     for (const [key, model] of Object.entries(provider.models ?? {})) {
       const canonical = model.canonical_model_id
       if (!canonical) continue
       const url = `https://models.dev/models/${canonical}`
+      const providerSet = providersByCanonical.get(canonical) ?? new Set<string>()
+      providerSet.add(providerId)
+      providersByCanonical.set(canonical, providerSet)
       for (const candidate of [canonical, key, model.name ?? ""]) {
         const name = norm(candidate)
         if (!name) continue
@@ -177,7 +181,7 @@ async function main(): Promise<void> {
     }
   }
 
-  const models: Record<string, { models_dev?: string; agent_detect?: string }> = {}
+  const models: Record<string, { models_dev?: string; agent_detect?: string; providers?: string[] }> = {}
   const unmatched: Array<{ id: string; name: string }> = []
   let withModelsDev = 0
   let withAgentDetect = 0
@@ -194,6 +198,7 @@ async function main(): Promise<void> {
     models[id] = {
       ...(md ? { models_dev: md.url } : {}),
       ...(ad ? { agent_detect: ad.url } : {}),
+      ...(md ? { providers: [...(providersByCanonical.get(md.canonical) ?? [])].sort() } : {}),
     }
     if (md) withModelsDev++
     if (ad) withAgentDetect++

@@ -64,6 +64,27 @@
     "hugging_face": "MiniMaxAI/MiniMax-M2.1",
     "models_dev": "https://models.dev/models/minimax/MiniMax-M2.1",
     "agent_detect": null,
+    "providers": [
+      "302ai",
+      "amazon-bedrock",
+      "cortecs",
+      "edenai",
+      "huggingface",
+      "jiekou",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "meganova",
+      "merge-gateway",
+      "moark",
+      "nano-gpt",
+      "ofox",
+      "opencode",
+      "poe",
+      "qiniu-ai",
+      "vercel",
+      "zenmux"
+    ],
     "gated": null
   },
   "syndication": {

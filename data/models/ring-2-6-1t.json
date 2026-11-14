@@ -64,6 +64,7 @@
     "hugging_face": "inclusionAI/Ring-2.6-1T",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

@@ -50,6 +50,7 @@
     "hugging_face": "SyzygyResearch/Mach-1-Additive-35B-Multimodal",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

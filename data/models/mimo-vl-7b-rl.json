@@ -70,6 +70,7 @@
     "hugging_face": "XiaomiMiMo/MiMo-VL-7B-RL",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

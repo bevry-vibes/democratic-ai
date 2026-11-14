@@ -56,6 +56,7 @@
     "hugging_face": "XiaomiMiMo/MiMo-Audio-7B-Base",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

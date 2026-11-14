@@ -52,6 +52,7 @@
     "hugging_face": "mistralai/LIDstral-Arabic",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

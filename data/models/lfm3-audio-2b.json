@@ -65,6 +65,7 @@
     "hugging_face": "LiquidAI/LFM3-Audio-2B",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

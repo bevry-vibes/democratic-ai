@@ -69,6 +69,7 @@
     "hugging_face": "LiquidAI/d1-2B",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

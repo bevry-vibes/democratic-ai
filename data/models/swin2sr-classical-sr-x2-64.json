@@ -61,6 +61,7 @@
     "hugging_face": "Xenova/swin2SR-classical-sr-x2-64",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

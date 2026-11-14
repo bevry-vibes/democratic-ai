@@ -67,6 +67,14 @@
     "hugging_face": "thinkingmachines/Inkling-2-Small",
     "models_dev": "https://models.dev/models/thinkingmachines/inkling-2-small",
     "agent_detect": "https://agent-detect.bevry.me/model/inkling2small",
+    "providers": [
+      "edenai",
+      "kilo",
+      "opencode",
+      "openrouter",
+      "prime",
+      "vercel"
+    ],
     "gated": null
   },
   "syndication": {

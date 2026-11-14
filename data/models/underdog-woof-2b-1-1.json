@@ -57,6 +57,7 @@
     "hugging_face": "ConwayResearch/Underdog-Woof-2B-1.1",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

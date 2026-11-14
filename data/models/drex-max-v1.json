@@ -51,6 +51,7 @@
     "hugging_face": "nace-ai/drex-max-v1",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

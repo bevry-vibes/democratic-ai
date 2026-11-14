@@ -59,6 +59,7 @@
     "hugging_face": "Edge0/Audio8-TTS-Preview-0.1b",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

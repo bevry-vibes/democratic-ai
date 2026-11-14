@@ -68,6 +68,7 @@
     "hugging_face": "inclusionAI/ZwZ2-4B",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

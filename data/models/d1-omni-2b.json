@@ -65,6 +65,7 @@
     "hugging_face": "LiquidAI/d1-Omni-2B",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

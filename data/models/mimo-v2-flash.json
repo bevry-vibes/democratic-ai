@@ -65,6 +65,12 @@
     "hugging_face": "XiaomiMiMo/MiMo-V2-Flash",
     "models_dev": "https://models.dev/models/xiaomi/mimo-v2-flash",
     "agent_detect": null,
+    "providers": [
+      "jiekou",
+      "meganova",
+      "opencode",
+      "qiniu-ai"
+    ],
     "gated": null
   },
   "syndication": {

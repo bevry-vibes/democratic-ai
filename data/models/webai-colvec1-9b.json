@@ -63,6 +63,7 @@
     "hugging_face": "webAI-Official/webAI-ColVec1-9b",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {

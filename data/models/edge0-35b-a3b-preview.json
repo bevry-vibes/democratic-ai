@@ -64,6 +64,7 @@
     "hugging_face": "Edge0/Edge0-35B-A3B-preview",
     "models_dev": null,
     "agent_detect": null,
+    "providers": [],
     "gated": null
   },
   "syndication": {
