@@ -95,6 +95,32 @@ function stripCard(value: string): string {
     .trim()
 }
 
+async function cardLicense(id: string): Promise<string | null> {
+  const path = `data/raw/hf/model-cards/${slug(id)}/${isoDate()}.md`
+  try {
+    const text = await Deno.readTextFile(path)
+    const frontmatter = text.match(/^---\n([\s\S]*?)\n---/)
+    const declared = frontmatter?.[1].match(/^license:\s*([^\n]+)$/im)?.[1]?.trim().replace(/^["']|["']$/g, "")
+    if (declared) {
+      const normalized = declared.toLowerCase()
+      if (["apache-2.0", "mit", "cc-by-4.0", "cc-by-sa-4.0", "cc-by-nc-4.0", "other"].includes(normalized)) {
+        return normalized
+      }
+    }
+    const section = text.match(/^#{2,3}\s+Licen[cs]e\b([\s\S]*?)(?=^#{2,3}\s+|$(?![\s\S]))/im)
+    if (!section) return null
+    const body = section[1]
+    if (/apache\s+(?:license[,\s]+)?(?:version\s+)?2\.0|apache-2\.0/i.test(body)) return "apache-2.0"
+    if (/\bMIT\b/i.test(body)) return "mit"
+    if (/CC[-\s]?BY[-\s]?NC[-\s]?4\.0/i.test(body)) return "cc-by-nc-4.0"
+    if (/CC[-\s]?BY[-\s]?SA[-\s]?4\.0/i.test(body)) return "cc-by-sa-4.0"
+    if (/CC[-\s]?BY[-\s]?4\.0/i.test(body)) return "cc-by-4.0"
+    return null
+  } catch {
+    return null
+  }
+}
+
 async function cardUsage(id: string): Promise<Array<{ language: string; code: string }>> {
   const path = `data/raw/hf/model-cards/${slug(id)}/${isoDate()}.md`
   try {
@@ -187,7 +213,9 @@ function licenseClass(id: string): string {
 function tierFor(license: string): { tier: string; weights: string; data: string; code: string } {
   const cls = licenseClass(license)
   if (cls === "unknown") {
-    return { tier: "unproven", weights: "open-weight", data: "unknown", code: "unknown" }
+    // The weights are on Hugging Face. An unknown licence does not make the
+    // weights unproven; it makes the reuse terms unknown. Shared is the honest floor.
+    return { tier: "shared", weights: "open-weight", data: "unknown", code: "unknown" }
   }
   if (cls === "proprietary") {
     return { tier: "closed", weights: "closed", data: "unknown", code: "unknown" }
@@ -431,7 +459,7 @@ async function main(): Promise<void> {
     if (providerIds.has("openrouter")) enriched.add("runtime:openrouter")
     const modelTags = tagList([...enriched])
     const licenseTag = tags.find((tag) => tag.startsWith("license:"))
-    const licenseId = licenseTag ? licenseTag.slice("license:".length) : "unknown"
+    const licenseId = licenseTag ? licenseTag.slice("license:".length) : (await cardLicense(sourceId)) ?? "unknown"
     const tier = tierFor(licenseId)
     const tasks = modelTags.filter((tag) => tag.startsWith("task:")).map((tag) => tag.slice(5))
     const languages = modelTags.filter((tag) => tag.startsWith("language:")).map((tag) => tag.slice(9))

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T08:08:25.010Z",
+  "updated_at": "2026-11-14T08:20:20.770Z",
   "generated_on": "2026-11-14",
   "title": "Democratic AI Scorecard",
   "as_of": "2026-11-14",
@@ -7,7 +7,7 @@
   "openness_scored": 245,
   "performance_scored": 46,
   "research_scored": 13,
-  "average_overall": 44,
+  "average_overall": 44.1,
   "overall_scored": 245,
   "note": "Current values only. The scorecard computes openness from release terms and takes performance and research from current task benchmarks. Missing axes stay missing; they are not zero.",
   "applied": [
@@ -1686,10 +1686,10 @@
     },
     {
       "id": "voxtral-mini-4b-realtime-arabic",
-      "openness": 50,
+      "openness": 60,
       "performance": null,
       "research": null,
-      "overall": 33.3
+      "overall": 40
     },
     {
       "id": "voz",

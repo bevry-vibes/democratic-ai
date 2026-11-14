@@ -51,7 +51,7 @@
     "weights": "open-weight",
     "training_data": "unknown",
     "training_code": "unknown",
-    "tier": "unproven",
+    "tier": "shared",
     "tier_method": "reciprocity-v1",
     "evidence": [
       "https://huggingface.co/inclusionAI/UI-Venus-2-9B"
@@ -157,7 +157,7 @@
     },
     "openness_morality": {
       "score": 50,
-      "tier": "unproven",
+      "tier": "shared",
       "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed.",
       "components": [
         {
