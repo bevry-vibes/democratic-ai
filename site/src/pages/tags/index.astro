@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro"
+import CountPill from "../../components/CountPill.astro"
 import { allTagPairs, getIndex, getTags, tagLabel, tagPath } from "../../lib/data"
 
 const index = getIndex()
@@ -57,9 +58,12 @@ const namespaces = [...grouped.entries()].sort(
           {values
             .sort((a, b) => b.count - a.count || a.value.localeCompare(b.value))
             .map(({ tag, value, count, definition }) => (
-              <a class="chip" href={tagPath(tag)} title={definition ?? value} style="padding:0.35rem 0.7rem">
-                {tagLabel(tag)} <span class="faint">{count}</span>
-              </a>
+              <CountPill
+                label={tagLabel(tag)}
+                count={count}
+                href={tagPath(tag)}
+                tone={namespace === "task" ? "sage" : namespace === "domain" ? "sky" : namespace === "context" ? "ochre" : "plum"}
+              />
             ))}
         </div>
       </div>

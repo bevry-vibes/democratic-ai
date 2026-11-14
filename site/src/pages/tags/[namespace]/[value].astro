@@ -2,7 +2,7 @@
 import Base from "../../../layouts/Base.astro"
 import ScoreBadge from "../../../components/ScoreBadge.astro"
 import TagChips from "../../../components/TagChips.astro"
-import { allTagPairs, getIndex, getTags, modelHref, tagLabel } from "../../../lib/data"
+import { allTagPairs, formatContext, getIndex, getTags, modelHref, performanceForTask, tagLabel } from "../../../lib/data"
 
 export function getStaticPaths() {
   const vocabulary = getTags()
@@ -14,10 +14,7 @@ export function getStaticPaths() {
   return [...tags].map((tag) => {
     const [namespace, ...rest] = tag.split(":")
     const value = rest.join(":")
-    return {
-      params: { namespace, value },
-      props: { tag },
-    }
+    return { params: { namespace, value }, props: { tag } }
   })
 }
 
@@ -30,10 +27,31 @@ const index = getIndex()
 const vocabulary = getTags()
 const [namespace, ...rest] = tag.split(":")
 const value = rest.join(":")
+const definition = vocabulary.namespaces[namespace!]?.values?.[value]
+const task = namespace === "task" ? value : ""
+const metricLabel =
+  task === "code" || task === "tool-calling" || task === "reasoning" || task === "text-generation"
+    ? "Code/Reasoning"
+    : task === "retrieval"
+      ? "Research/Citation"
+      : null
+
 const models = index.models
   .filter((model) => model.tags.includes(tag))
-  .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name))
-const definition = vocabulary.namespaces[namespace!]?.values?.[value]
+  .sort((a, b) => {
+    if (metricLabel) {
+      const av = performanceForTask(a, task).value ?? -1
+      const bv = performanceForTask(b, task).value ?? -1
+      if (bv !== av) return bv - av
+    }
+    return b.score - a.score || a.name.localeCompare(b.name)
+  })
+
+const contexts = [...new Set(models.flatMap((model) => model.tags.filter((t) => t.startsWith("context:"))))]
+  .map((t) => t.slice("context:".length))
+  .sort()
+const licenses = [...new Set(models.map((model) => model.license))].sort()
+const defaultSort = metricLabel ? "performance" : "syndication"
 ---
 
 <Base
@@ -45,32 +63,150 @@ const definition = vocabulary.namespaces[namespace!]?.values?.[value]
       <p class="eyebrow"><a href="/tags/">Tags</a> / {namespace}</p>
       <h1>{tagLabel(tag)}</h1>
       <p class="lede">{definition ?? "A tag in the catalogue."}</p>
-      <p class="mono-small muted">{tag} · {models.length} models</p>
+      <p class="mono-small muted">
+        {tag} · {models.length} models
+        {metricLabel ? ` · ranked by ${metricLabel}` : ""}
+      </p>
     </div>
   </section>
 
-  <section class="wrap" style="padding:1.8rem 0 3rem">
-    <div class="list">
-      {models.map((model) => (
-        <a class="list-row" href={modelHref(model.id)}>
-          <div>
-            <h3>{model.name}</h3>
-            <p class="mono-small">{model.organization}</p>
-          </div>
-          <div>
-            <p>{model.summary || "No summary yet."}</p>
-            <div class="chips"><TagChips tags={model.tags.filter((t) => t.startsWith("task:"))} limit={2} links={false} /></div>
-          </div>
-          <div class="chips">
-            {model.tags.includes("context:on-device") && <span class="chip context">on-device</span>}
-            <span class="chip license">{model.license}</span>
-          </div>
-          <div class="right">
-            <ScoreBadge score={model.score} band={model.band} />
-          </div>
-        </a>
-      ))}
+  <section class="wrap" style="padding:1.6rem 0 3rem">
+    <div class="filters" style="grid-template-columns:minmax(12rem,1.6fr) repeat(3,minmax(9rem,0.8fr))">
+      <div class="field">
+        <label for="q">Search</label>
+        <input id="q" type="search" placeholder="Name, organisation, or summary" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="context">Context</label>
+        <select id="context">
+          <option value="">All contexts</option>
+          {contexts.map((context) => <option value={context}>{context.replaceAll("-", " ")}</option>)}
+        </select>
+      </div>
+      <div class="field">
+        <label for="license">Licence</label>
+        <select id="license">
+          <option value="">All licences</option>
+          {licenses.map((license) => <option value={license}>{license}</option>)}
+        </select>
+      </div>
+      <div class="field">
+        <label for="sort">Sort</label>
+        <select id="sort">
+          {metricLabel && <option value="performance">{metricLabel}</option>}
+          <option value="syndication">Syndication</option>
+          <option value="name">Name</option>
+        </select>
+      </div>
     </div>
-    {models.length === 0 && <div class="empty">No models carry this tag yet.</div>}
+
+    <div class="filter-meta">
+      <span id="count">Showing {models.length} of {models.length} models</span>
+      <span class="faint">
+        {metricLabel
+          ? `${metricLabel} comes from the July 2026 scorecard. Missing scores are not zero; they sort last.`
+          : "Sorted by independent listings, then name."}
+      </span>
+    </div>
+
+    <div class="list" id="tag-list">
+      {models.map((model) => {
+        const performance = metricLabel ? performanceForTask(model, task) : null
+        return (
+          <a
+            class="list-row"
+            href={modelHref(model.id)}
+            data-name={`${model.name} ${model.organization} ${model.summary}`.toLowerCase()}
+            data-contexts={model.tags.filter((t) => t.startsWith("context:")).map((t) => t.slice(8)).join(" ")}
+            data-license={model.license}
+            data-performance={performance?.value ?? -1}
+            data-score={model.score}
+          >
+            <div>
+              <h3>{model.name}</h3>
+              <p class="mono-small">{model.organization}</p>
+            </div>
+            <div>
+              <p>{model.summary || "No description on the model card."}</p>
+              <div class="chips">
+                <TagChips tags={model.tags.filter((t) => t.startsWith("task:"))} limit={2} links={false} />
+              </div>
+            </div>
+            <div class="chips">
+              {performance && (
+                performance.value == null ? (
+                  <span class="performance none">No {metricLabel} score</span>
+                ) : (
+                  <span class="performance"><strong>{performance.value}</strong> {metricLabel}</span>
+                )
+              )}
+              {model.tags.includes("context:on-device") && <span class="chip context">on-device</span>}
+              {model.context_tokens && <span class="chip">{formatContext(model.context_tokens)}</span>}
+            </div>
+            <div class="right">
+              <ScoreBadge score={model.score} band={model.band} />
+              <span class="chip license">{model.license}</span>
+            </div>
+          </a>
+        )
+      })}
+    </div>
+
+    <div class="empty hidden" id="empty">No model matches those filters.</div>
   </section>
+
+  <script define:vars={{ defaultSort }}>
+    const q = document.getElementById("q")
+    const context = document.getElementById("context")
+    const license = document.getElementById("license")
+    const sort = document.getElementById("sort")
+    const count = document.getElementById("count")
+    const empty = document.getElementById("empty")
+    const list = document.getElementById("tag-list")
+    const rows = [...document.querySelectorAll("#tag-list .list-row")]
+    const params = new URLSearchParams(location.search)
+    if (q && params.get("q")) q.value = params.get("q")
+    if (context && params.get("context")) context.value = params.get("context")
+    if (license && params.get("license")) license.value = params.get("license")
+    if (sort) sort.value = params.get("sort") ?? defaultSort
+
+    function apply() {
+      const search = q?.value.trim().toLowerCase() ?? ""
+      const contextValue = context?.value ?? ""
+      const licenseValue = license?.value ?? ""
+      let visible = 0
+      for (const row of rows) {
+        const matches =
+          (!search || row.dataset.name?.includes(search)) &&
+          (!contextValue || row.dataset.contexts?.split(" ").includes(contextValue)) &&
+          (!licenseValue || row.dataset.license === licenseValue)
+        row.classList.toggle("hidden", !matches)
+        if (matches) visible++
+      }
+      if (count) count.textContent = `Showing ${visible} of ${rows.length} models`
+      empty?.classList.toggle("hidden", visible > 0)
+
+      const mode = sort?.value ?? defaultSort
+      const sorted = [...rows].sort((a, b) => {
+        if (mode === "performance") {
+          const diff = Number(b.dataset.performance) - Number(a.dataset.performance)
+          if (diff !== 0) return diff
+        }
+        if (mode === "name") return (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "")
+        return Number(b.dataset.score) - Number(a.dataset.score) || (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "")
+      })
+      for (const row of sorted) list?.append(row)
+
+      const next = new URLSearchParams()
+      if (search) next.set("q", search)
+      if (contextValue) next.set("context", contextValue)
+      if (licenseValue) next.set("license", licenseValue)
+      if (mode !== defaultSort) next.set("sort", mode)
+      const query = next.toString()
+      history.replaceState(null, "", query ? `?${query}` : location.pathname)
+    }
+
+    for (const control of [q, context, license, sort]) control?.addEventListener("input", apply)
+    apply()
+  </script>
 </Base>

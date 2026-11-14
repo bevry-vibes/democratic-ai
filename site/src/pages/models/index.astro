@@ -79,7 +79,7 @@ const licenses = [...new Set(models.map((model) => model.license))].sort()
             <p class="mono-small">{model.organization}</p>
           </div>
           <div>
-            <p>{model.summary || "No summary yet."}</p>
+            <p>{model.summary || "No description on the model card."}</p>
             <div class="chips">
               <TagChips tags={model.tags.filter((tag) => tag.startsWith("task:"))} limit={2} links={false} />
             </div>

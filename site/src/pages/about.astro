@@ -24,10 +24,11 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
   <section class="wrap detail-grid">
     <div>
       <div class="panel">
-        <h2>The reciprocity tiers</h2>
+        <h2>Release terms, not a grade</h2>
         <p>
-          The tier is computed from three things: what the release provides, what the licence permits, and how strong
-          the evidence is. It is not a quality score.
+          The tier records how much of the release is open: weights, training data, recipe, and access. It is not a
+          quality score or a moral grade. <strong>Open-weight is a real return to the commons.</strong> Open data and
+          open code add to it. The catalogue records the difference without treating open-weight as a failure.
         </p>
         <div class="table-wrap">
           <table>
@@ -43,8 +44,32 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
         </div>
         <p class="muted" style="font-size:0.88rem;margin-top:0.8rem">
           Most records are <strong>unproven</strong> on training data today. That means the data statement is
-          unchecked, not that the model is closed. A conditional licence can cap a record at <strong>shared</strong>
-          before the data question is resolved. The next pass will assess training data and code.
+          unchecked, not that the model is closed. Open-weight is a real contribution; open data and open code add
+          to it. A conditional licence can cap a record at <strong>shared</strong> before the data question is
+          resolved. The next pass will assess training data and code.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h2>The scorecard</h2>
+        <p>
+          The catalogue also carries the July 2026 AI Market Scorecard. It grades three independent axes, not one
+          ladder:
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Axis</th><th>What it measures</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Openness/Morality</strong></td><td>Commons contribution, liberation valence, and third-party harm. Open-weight earns partial marks; open-source with open data earns full marks.</td></tr>
+              <tr><td><strong>Code/Reasoning</strong></td><td>Agentic coding and reasoning, grounded in SWE-bench, Terminal-Bench, and LiveCodeBench.</td></tr>
+              <tr><td><strong>Research/Citation</strong></td><td>Whether the model can cite sources, and how often it fabricates them.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted" style="font-size:0.88rem;margin-top:0.8rem">
+          A model can be A+ on openness and F on citation. The scorecard keeps those axes separate. Where a model
+          has a scorecard entry, its page shows the three scores and the source. Missing is not zero.
+          <a href="https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310" target="_blank" rel="noreferrer">Read the scorecard</a>.
         </p>
       </div>
 

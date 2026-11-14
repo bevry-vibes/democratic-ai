@@ -4,6 +4,7 @@ import path from "node:path"
 import { marked } from "marked"
 import Base from "../layouts/Base.astro"
 import ModelCard from "../components/ModelCard.astro"
+import CountPill from "../components/CountPill.astro"
 import { getIndex, getSyndication, tagLabel, tagPath, taskCounts, topModels } from "../lib/data"
 
 const index = getIndex()
@@ -85,9 +86,7 @@ const readmeHtml = marked.parse(readme) as string
       </p>
       <div class="flex wrap-gap">
         {tasks.map(({ task, count }) => (
-          <a class="chip task" href={tagPath(`task:${task}`)} style="font-size:0.9rem;padding:0.4rem 0.8rem">
-            {tagLabel(`task:${task}`)} <span class="faint">{count}</span>
-          </a>
+          <CountPill label={tagLabel(`task:${task}`)} count={count} href={tagPath(`task:${task}`)} tone="sage" />
         ))}
       </div>
     </div>

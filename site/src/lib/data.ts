@@ -18,6 +18,16 @@ export interface CompactModel {
   tool_calling: boolean | null
   reasoning: boolean | null
   context_tokens: number | null
+  performance?: {
+    openness_morality: number
+    code_reasoning: number | null
+    research_citation: number
+    source: string
+    as_of: string
+    match: string
+    note: string
+    name: string
+  } | null
   models_dev: string | null
   agent_detect: string | null
   builds: number
@@ -189,6 +199,18 @@ export function formatScore(score: number): string {
 export function formatParams(params: number | null): string {
   if (params == null) return "Unknown size"
   return `${params}B parameters`
+}
+
+export function performanceForTask(model: CompactModel, task: string): { label: string; value: number | null } {
+  const performance = model.performance
+  if (!performance) return { label: "Task score", value: null }
+  if (["code", "tool-calling", "reasoning", "text-generation"].includes(task)) {
+    return { label: "Code/Reasoning", value: performance.code_reasoning }
+  }
+  if (task === "retrieval") {
+    return { label: "Research/Citation", value: performance.research_citation }
+  }
+  return { label: "Task score", value: null }
 }
 
 export function formatContext(tokens: number | null): string {

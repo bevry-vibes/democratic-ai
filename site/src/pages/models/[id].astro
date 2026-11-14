@@ -33,7 +33,7 @@ const taskTags = model.tags.filter((tag) => tag.startsWith("task:"))
         <span class="chip license">{model.license.id}</span>
         <span class="chip">{model.organization}</span>
         {model.released && <span class="chip">{model.released}</span>}
-        {model.builds.length > 0 && <span class="chip">{model.builds.length} builds</span>}
+        {model.builds.length > 0 && <span class="chip">{model.builds.length} {model.builds.length === 1 ? "build" : "builds"}</span>}
       </div>
     </div>
   </section>
@@ -126,6 +126,27 @@ const taskTags = model.tags.filter((tag) => tag.startsWith("task:"))
             </li>
           ))}
         </ul>
+      </div>
+
+      <div class="panel">
+        <h2>Scorecard</h2>
+        {model.performance ? (
+          <>
+            <dl class="definition">
+              <dt>Openness/Morality</dt><dd>{model.performance.openness_morality}/100</dd>
+              <dt>Code/Reasoning</dt><dd>{model.performance.code_reasoning == null ? "Inconclusive" : `${model.performance.code_reasoning}/100`}</dd>
+              <dt>Research/Citation</dt><dd>{model.performance.research_citation}/100</dd>
+            </dl>
+            <p class="muted" style="font-size:0.82rem;margin-top:0.8rem">
+              {model.performance.note} {model.performance.match === "family" ? "This is a family match, not an exact version score." : ""}
+            </p>
+            <a class="mono-small" href={model.performance.source} target="_blank" rel="noreferrer">Scorecard source ({model.performance.as_of})</a>
+          </>
+        ) : (
+          <p class="muted" style="font-size:0.9rem">
+            No scorecard entry for this model yet. Missing is not zero.
+          </p>
+        )}
       </div>
 
       <div class="panel">

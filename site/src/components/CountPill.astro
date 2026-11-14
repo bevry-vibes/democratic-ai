@@ -1,0 +1,15 @@
+---
+interface Props {
+  label: string
+  count: number
+  href: string
+  tone?: "sage" | "sky" | "ochre" | "plum"
+}
+
+const { label, count, href, tone = "sage" } = Astro.props
+---
+
+<a class={`count-pill ${tone}`} href={href}>
+  <span class="count-pill-label">{label}</span>
+  <span class="count-pill-count">{count}</span>
+</a>
