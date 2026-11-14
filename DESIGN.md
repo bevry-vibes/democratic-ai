@@ -238,7 +238,7 @@ The site carries its own current scorecard. It does not repeat a frozen external
 
 - **Openness/Morality** — computed from current release terms: weights, training data, training code, and licence. Training-data ethics are not assessed.
 - **Performance/Intelligence** — the model's current measured performance on its task. Coding models use a primary agentic benchmark composite: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench. Speech models use average WER converted to an index. Other models use the best current primary benchmark.
-- **Research/Citation** — current research benchmarks where available. Citation accuracy is a separate question and is marked when it is not measured.
+- **Citation/Research** — current research benchmarks where available. Citation accuracy is a separate question and is marked when it is not measured.
 - **Syndication** — current independent listings. It is a signal, not quality.
 
 The axes are independent. A model can be strong on one and weak on another. A missing score is not zero. A base-model match, a model-card figure, and an aggregator figure are labelled. The numbers are index scores, not percentages, and do not need to sum to 100.

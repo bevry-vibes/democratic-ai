@@ -65,7 +65,7 @@ const scorecardTip = (key: string) =>
     : key === "performance"
       ? "Performance/Intelligence: current measured performance on the model's task."
       : key === "research"
-        ? "Research/Citation: current research benchmarks. Citation accuracy is separate."
+        ? "Citation/Research: current research benchmarks. Citation accuracy is separate."
         : "Syndication: independent listings, not quality."
 ---
 
@@ -127,7 +127,7 @@ const scorecardTip = (key: string) =>
             <option value="performance">Performance/Intelligence</option>
             <option value="overall">Overall score</option>
             <option value="openness">Openness/Morality</option>
-            <option value="research">Research/Citation</option>
+            <option value="research">Citation/Research</option>
             <option value="syndication">Syndication</option>
             <option value="released">Release date</option>
             <option value="name">Name</option>
@@ -333,7 +333,7 @@ const scorecardTip = (key: string) =>
         overall: "overall score",
         performance: "Performance/Intelligence",
         openness: "Openness/Morality",
-        research: "Research/Citation",
+        research: "Citation/Research",
         syndication: "independent listings",
         released: "release date",
         name: "name",

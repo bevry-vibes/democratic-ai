@@ -63,7 +63,7 @@ The catalogue carries its own current scorecard. It is not a frozen table from a
 
 - **Openness/Morality** — what the release gives back: weights, training data, training code, and reuse terms.
 - **Performance/Intelligence** — how well the model does its job on a current primary benchmark. Coding models use agentic coding benchmarks. Speech models use average word error rate. Other models use the best current primary benchmark.
-- **Research/Citation** — current research benchmarks where they exist. Citation accuracy is a separate question, and the record says when it is not measured.
+- **Citation/Research** — current research benchmarks where they exist. Citation accuracy is a separate question, and the record says when it is not measured.
 - **Syndication** — independent listings, not quality.
 
 The numbers are index scores, not percentages. They do not need to sum to 100. A missing score is not zero. A model-card figure, an aggregator figure, and a base-model match are labelled. A later update may inherit its base model's primary result when it has no comparable benchmark of its own, and the record says so.

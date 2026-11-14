@@ -79,7 +79,9 @@ export interface CompactModel {
   band: string
   tool_calling: boolean | null
   reasoning: boolean | null
+  structured_output: boolean | null
   context_tokens: number | null
+  params_b: number | null
   released: string | null
   aliases: string[]
   releases: number

@@ -89,8 +89,8 @@ const formatDate = (value: string | null | undefined) =>
         )}
         <a
           class={`badge ${tierClass(model.openness.tier)}`}
-          href="/about/#release-terms"
-          data-tooltip={tierDescription(model.openness.tier)}
+          href={`/models/?tier=${model.openness.tier}`}
+          data-tooltip={`Filter the model index to ${model.openness.tier} models. ${tierDescription(model.openness.tier)}`}
         >
           {model.openness.tier}
         </a>
@@ -117,19 +117,19 @@ const formatDate = (value: string | null | undefined) =>
         <dl class="definition">
           <dt>Tool calling</dt>
           <dd>
-            <a class={`chip ${capabilityClass(model.capabilities.tool_calling)}`} href="#capabilities" data-tooltip="Whether the model can call tools and APIs.">
+            <a class={`chip ${capabilityClass(model.capabilities.tool_calling)}`} href={`/models/?capability=tool-calling`} data-tooltip="Filter the model index to models that can call tools and APIs.">
               {bool(model.capabilities.tool_calling)}
             </a>
           </dd>
           <dt>Reasoning</dt>
           <dd>
-            <a class={`chip ${capabilityClass(model.capabilities.reasoning)}`} href="#capabilities" data-tooltip="Whether the model supports multi-step reasoning.">
+            <a class={`chip ${capabilityClass(model.capabilities.reasoning)}`} href={`/models/?capability=reasoning`} data-tooltip="Filter the model index to models that support multi-step reasoning.">
               {bool(model.capabilities.reasoning)}
             </a>
           </dd>
           <dt>Structured output</dt>
           <dd>
-            <a class={`chip ${capabilityClass(model.capabilities.structured_output)}`} href="#capabilities" data-tooltip="Whether the model can return typed or schema-constrained output.">
+            <a class={`chip ${capabilityClass(model.capabilities.structured_output)}`} href={`/models/?capability=structured-output`} data-tooltip="Filter the model index to models that can return typed or schema-constrained output.">
               {bool(model.capabilities.structured_output)}
             </a>
           </dd>
@@ -137,15 +137,16 @@ const formatDate = (value: string | null | undefined) =>
           <dd>
             <a
               class="chip meta-context"
-              href="#capabilities"
-              data-tooltip="The model's maximum context window."
+              href={model.capabilities.context_tokens ? `/models/?min_context=${model.capabilities.context_tokens}` : "/models/"}
+              data-tooltip="Filter the model index to models with at least this context window."
             >
               context: {formatContextCount(model.capabilities.context_tokens)}
             </a>
           </dd>
           <dt>Size</dt>
           <dd>
-            <a class="chip capability" href="#capabilities" data-tooltip="The parameter count recorded for the release.">
+            <a class="chip capability" href={model.footprint.params_b ? `/models/?min_params=${model.footprint.params_b}` : "/models/"}
+              data-tooltip="Filter the model index to models of at least this parameter class.">
               {formatParams(model.footprint.params_b)}
             </a>
           </dd>
@@ -384,7 +385,7 @@ const formatDate = (value: string | null | undefined) =>
           </div>
 
           <div class="panel scorecard-panel scorecard-research" id="scorecard-research">
-            <h2>Research/Citation</h2>
+            <h2>Citation/Research</h2>
             <div class="score-block">
               <strong class={scorecard.research_citation.score == null ? "unmeasured" : ""}>{formatIndex(scorecard.research_citation.score)}</strong>
               {scorecard.research_citation.score == null && <span class="faint">Not measured</span>}
@@ -412,8 +413,8 @@ const formatDate = (value: string | null | undefined) =>
               <strong>{scorecard.syndication.score}</strong><span class="faint">/{scorecard.syndication.max}</span>
               <a
                 class={`badge ${bandClass(scorecard.syndication.band)}`}
-                href="/about/#syndication"
-                data-tooltip="The syndication band groups the independent-listing score. It is not a quality grade."
+                href={`/models/?band=${scorecard.syndication.band}`}
+                data-tooltip="Filter the model index to this syndication band. The band groups independent listings; it is not a quality grade."
               >
                 {scorecard.syndication.band.replaceAll("-", " ")}
               </a>

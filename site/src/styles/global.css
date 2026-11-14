@@ -2158,3 +2158,18 @@ aside > .scorecard-overall {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+
+.badge,
+.count-pill {
+  text-decoration: none;
+}
+
+html {
+  scroll-padding-top: 5.4rem;
+}
+
+.scorecard-panel,
+.thesis-section,
+.method-section {
+  scroll-margin-top: 0;
+}
