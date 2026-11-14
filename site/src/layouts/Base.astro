@@ -17,7 +17,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site)
 const nav = [
   { href: "/models/", label: "Models" },
   { href: "/#tags", label: "Tags" },
-  { href: "/#thesis", label: "Thesis" },
+  { href: "/#thesis", label: "Democracy" },
   { href: "/#method", label: "Method" },
   { href: "/data/", label: "API" },
 ]
@@ -95,5 +95,31 @@ const isCurrent = (href: string) => current === href || current.startsWith(href)
         </p>
       </div>
     </footer>
+    <script>
+      const anchorTarget = (hash: string) => {
+        if (!hash || hash === "#") return null
+        try {
+          return document.getElementById(decodeURIComponent(hash.slice(1)))
+        } catch {
+          return null
+        }
+      }
+      const fadeAnchor = (target: Element | null) => {
+        if (!target) return
+        target.classList.remove("anchor-fade")
+        void (target as HTMLElement).offsetWidth
+        target.classList.add("anchor-fade")
+        window.setTimeout(() => target.classList.remove("anchor-fade"), 1800)
+      }
+      const fadeCurrentAnchor = () => fadeAnchor(anchorTarget(window.location.hash))
+      window.addEventListener("hashchange", fadeCurrentAnchor)
+      document.addEventListener("click", (event) => {
+        const link = (event.target as Element | null)?.closest?.("a[href^='#']") as HTMLAnchorElement | null
+        if (!link) return
+        const target = anchorTarget(link.getAttribute("href") ?? "")
+        if (target) window.setTimeout(() => fadeAnchor(target), 0)
+      })
+      if (window.location.hash) fadeCurrentAnchor()
+    </script>
   </body>
 </html>

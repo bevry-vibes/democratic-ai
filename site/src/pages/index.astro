@@ -4,14 +4,14 @@ import ModelList from "../components/ModelList.astro"
 import TagIndex from "../components/TagIndex.astro"
 import ThesisContent from "../components/ThesisContent.astro"
 import MethodContent from "../components/MethodContent.astro"
-import { getIndex, taskCounts } from "../lib/data"
+import { getIndex, sortTags, taskCounts } from "../lib/data"
 
 const index = getIndex()
 const models = [...index.models].sort(
   (a, b) => (b.scorecard?.overall.score ?? -1) - (a.scorecard?.overall.score ?? -1) || a.name.localeCompare(b.name),
 )
 const tasks = taskCounts(index)
-const namespaceCount = new Set(index.models.flatMap((model) => model.tags.map((tag) => tag.split(":")[0]))).size
+const allTags = sortTags([...new Set(models.flatMap((model) => model.tags))])
 ---
 
 <Base
@@ -19,7 +19,7 @@ const namespaceCount = new Set(index.models.flatMap((model) => model.tags.map((t
   description="A catalogue of reciprocal AI models, judged by what they give back: open weights, open data, open code, and reuse terms."
 >
   <section class="hero home-hero">
-    <div class="wrap home-hero-grid">
+    <div class="wrap">
       <div>
         <p class="eyebrow">The Democratic AI catalogue</p>
         <h1>AI that takes from the commons should give back.</h1>
@@ -29,19 +29,10 @@ const namespaceCount = new Set(index.models.flatMap((model) => model.tags.map((t
           then choose a model for the job.
         </p>
         <p class="hero-meta">
-          {index.models.length} models · {tasks.length} task tags · {namespaceCount} tag namespaces · last index{" "}
+          <a href="#models">{index.models.length} models</a> · <a href="#tags">{tasks.length} task tags</a> · last index{" "}
           {index.generated_at.slice(0, 10)}
         </p>
       </div>
-      <nav class="hero-jump" aria-label="On this page">
-        <p class="eyebrow">On this page</p>
-        <a href="#models">Models</a>
-        <a href="#tags">Tags</a>
-        <a href="#runtime">Runtime</a>
-        <a href="#thesis">Thesis</a>
-        <a href="#method">Method</a>
-        <a href="#api">API</a>
-      </nav>
     </div>
   </section>
 
@@ -52,14 +43,78 @@ const namespaceCount = new Set(index.models.flatMap((model) => model.tags.map((t
           <p class="eyebrow">The catalogue</p>
           <h2>Models</h2>
         </div>
+      </div>
+      <div class="models-intro">
+        <p class="muted">
+          All {index.models.length} models, strongest current overall score first. Scroll the list to load the rest.
+        </p>
         <a href="/models/">Open the full index →</a>
       </div>
-      <p class="muted" style="margin-bottom:1rem">
-        All {index.models.length} models, strongest current overall score first. Scroll the list to load the rest.
-      </p>
+      <div class="filters" style="--filter-cols:minmax(12rem,1.2fr) repeat(2,minmax(8rem,0.7fr)) minmax(18rem,1.6fr)">
+        <div class="field">
+          <label for="q">Search</label>
+          <input id="q" type="search" placeholder="Name, organisation, or summary" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label>Filter <span class="field-hint">all required</span></label>
+          <details class="combo" id="filter-combo">
+            <summary><span id="filter-summary">All tags</span></summary>
+            <div class="combo-panel">
+              {allTags.map((available) => (
+                <label class="combo-option">
+                  <input type="checkbox" name="filter" value={available} />
+                  <span>{available}</span>
+                </label>
+              ))}
+            </div>
+          </details>
+        </div>
+        <div class="field">
+          <label>Options <span class="field-hint">any required</span></label>
+          <details class="combo" id="options-combo">
+            <summary><span id="options-summary">Any tag</span></summary>
+            <div class="combo-panel">
+              {allTags.map((available) => (
+                <label class="combo-option">
+                  <input type="checkbox" name="options" value={available} />
+                  <span>{available}</span>
+                </label>
+              ))}
+            </div>
+          </details>
+        </div>
+        <div class="field">
+          <label for="sort">Sort</label>
+          <div class="sort-control">
+            <select id="sort">
+              <option value="overall">Overall score</option>
+              <option value="syndication">Syndication</option>
+              <option value="performance">Performance/Intelligence</option>
+              <option value="openness">Openness/Morality</option>
+              <option value="research">Citation/Research</option>
+              <option value="released">Release date</option>
+              <option value="name">Name</option>
+            </select>
+            <button id="order" class="order-toggle" type="button" aria-label="Reverse the sort order">
+              High first
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-meta">
+        <span id="count">Showing {models.length} models</span>
+        <span class="faint" id="sort-note">Sorted by overall score, high first</span>
+      </div>
+
       <div class="home-model-scroll" data-home-models>
         <ModelList models={models} listId="home-model-list" lazyFrom={14} />
       </div>
+
+      <div class="empty hidden" id="empty">
+        No model matches those filters. Try a broader task or clear the search.
+      </div>
+
       <div class="home-more">
         <span>{index.models.length} models in the catalogue, sorted by overall score.</span>
         <a href="/models/">See all models →</a>
@@ -74,7 +129,6 @@ const namespaceCount = new Set(index.models.flatMap((model) => model.tags.map((t
           <p class="eyebrow">Classification</p>
           <h2>Tags</h2>
         </div>
-        <span class="mono-small faint">{namespaceCount} namespaces</span>
       </div>
       <p class="lede" style="margin-bottom:1.4rem">
         Tags are additive. A model can carry several tasks, modalities, runtimes, and languages. There is no single
@@ -144,10 +198,6 @@ const namespaceCount = new Set(index.models.flatMap((model) => model.tags.map((t
           <a class="button secondary" href="https://openrouter.ai" target="_blank" rel="noreferrer">OpenRouter →</a>
         </div>
       </div>
-      <p class="muted runtime-note">
-        Need to run it yourself? The model page lists local runtimes, an approximate memory range, weights on Hugging
-        Face, and the full models.dev provider list.
-      </p>
     </div>
   </section>
 
@@ -164,7 +214,6 @@ const namespaceCount = new Set(index.models.flatMap((model) => model.tags.map((t
         everyone who came before. The question is not whether a model learned from the commons. It did. The question
         is what it gives back.
       </p>
-      <p class="mono-small muted" style="margin-bottom:1.8rem">A living reference · updated 14 November 2026</p>
       <ThesisContent />
     </div>
   </section>
@@ -203,27 +252,84 @@ const namespaceCount = new Set(index.models.flatMap((model) => model.tags.map((t
   </section>
 
   <script>
+    const q = document.getElementById("q") as HTMLInputElement | null
+    const filterCombo = document.getElementById("filter-combo")
+    const optionsCombo = document.getElementById("options-combo")
+    const filterSummary = document.getElementById("filter-summary")
+    const optionsSummary = document.getElementById("options-summary")
+    const filterChecks = [...document.querySelectorAll<HTMLInputElement>("#filter-combo input[type=checkbox]")]
+    const optionChecks = [...document.querySelectorAll<HTMLInputElement>("#options-combo input[type=checkbox]")]
+    const sort = document.getElementById("sort") as HTMLSelectElement | null
+    const order = document.getElementById("order")
+    const count = document.getElementById("count")
+    const note = document.getElementById("sort-note")
+    const empty = document.getElementById("empty")
     const scroller = document.querySelector<HTMLElement>("[data-home-models]")
-    const rows = [...document.querySelectorAll<HTMLElement>("#home-model-list .lazy-row")]
+    const rows = [...document.querySelectorAll<HTMLElement>("#home-model-list .list-row")]
     const CHUNK = 18
     let cursor = 0
 
+    const params = new URLSearchParams(location.search)
+    let orderMode = params.get("order") === "worst" ? "worst" : "best"
+    if (q && params.get("q")) q.value = params.get("q")!
+    if (sort && params.get("sort")) sort.value = params.get("sort")!
+    for (const box of filterChecks) box.checked = (params.get("filter") ?? "").split(",").filter(Boolean).includes(box.value)
+    for (const box of optionChecks) box.checked = (params.get("options") ?? "").split(",").filter(Boolean).includes(box.value)
+
+    function selected(boxes: HTMLInputElement[]): string[] {
+      return boxes.filter((box) => box.checked).map((box) => box.value)
+    }
+
+    function updateSummaries(): void {
+      const filterCount = selected(filterChecks).length
+      const optionCount = selected(optionChecks).length
+      if (filterSummary) filterSummary.textContent = filterCount ? `${filterCount} selected` : "All tags"
+      if (optionsSummary) optionsSummary.textContent = optionCount ? `${optionCount} selected` : "Any tag"
+    }
+
+    function setOrderLabel(): void {
+      if (!order) return
+      const mode = sort?.value ?? "overall"
+      if (mode === "name") order.textContent = orderMode === "best" ? "A–Z" : "Z–A"
+      else if (mode === "released") order.textContent = orderMode === "best" ? "Newest" : "Oldest"
+      else order.textContent = orderMode === "best" ? "High first" : "Low first"
+    }
+
+    function number(row: HTMLElement, key: string): number | null {
+      const raw = row.dataset[key]
+      if (!raw) return null
+      const value = Number(raw)
+      return Number.isFinite(value) && value >= 0 ? value : null
+    }
+
+    function compare(a: HTMLElement, b: HTMLElement, key: string): number {
+      const av = number(a, key)
+      const bv = number(b, key)
+      if (av == null && bv == null) return 0
+      if (av == null) return 1
+      if (bv == null) return -1
+      if (av === bv) return 0
+      const best = -1 * (av - bv)
+      return orderMode === "best" ? best : -best
+    }
+
     function markLast(): void {
-      const visible = [...document.querySelectorAll<HTMLElement>("#home-model-list .list-row:not(.lazy-row)")]
-      for (const row of visible) row.classList.remove("last-visible")
+      const visible = rows.filter((row) => !row.classList.contains("lazy-row") && !row.classList.contains("hidden"))
+      for (const row of rows) row.classList.remove("last-visible")
       visible.at(-1)?.classList.add("last-visible")
     }
 
     function reveal(): void {
-      if (cursor >= rows.length) return
-      for (const row of rows.slice(cursor, cursor + CHUNK)) row.classList.remove("lazy-row")
+      const lazy = rows.filter((row) => row.classList.contains("lazy-row"))
+      if (cursor >= lazy.length) return
+      for (const row of lazy.slice(cursor, cursor + CHUNK)) row.classList.remove("lazy-row")
       cursor += CHUNK
       markLast()
     }
 
     function fill(): void {
       if (!scroller) return
-      while (cursor < rows.length && scroller.scrollHeight <= scroller.clientHeight + 4) reveal()
+      while (rows.some((row) => row.classList.contains("lazy-row")) && scroller.scrollHeight <= scroller.clientHeight + 4) reveal()
       markLast()
     }
 
@@ -232,7 +338,113 @@ const namespaceCount = new Set(index.models.flatMap((model) => model.tags.map((t
       if (scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 240) reveal()
     }
 
+    function apply(fromUser = false): void {
+      const search = q?.value.trim().toLowerCase() ?? ""
+      const required = selected(filterChecks)
+      const optional = selected(optionChecks)
+      let visible = 0
+      for (const row of rows) {
+        const tags = row.dataset.tags?.split(" ") ?? []
+        const matches =
+          (!search || row.dataset.name?.includes(search)) &&
+          (required.length === 0 || required.every((value) => tags.includes(value))) &&
+          (optional.length === 0 || optional.some((value) => tags.includes(value)))
+        row.classList.toggle("hidden", !matches)
+        if (matches) {
+          visible++
+          if (fromUser) row.classList.remove("lazy-row")
+        }
+      }
+      if (count) {
+        count.textContent = fromUser
+          ? `Showing ${visible} of ${rows.length} models`
+          : `${rows.length} models · scroll to load more`
+      }
+      empty?.classList.toggle("hidden", visible > 0)
+      updateSummaries()
+
+      const mode = sort?.value ?? "overall"
+      setOrderLabel()
+      const sorted = [...rows].sort((a, b) => {
+        if (mode === "name") {
+          const diff = (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "")
+          return orderMode === "best" ? diff : -diff
+        }
+        if (mode === "released") {
+          const av = a.dataset.released ?? ""
+          const bv = b.dataset.released ?? ""
+          if (!av && !bv) return 0
+          if (!av) return 1
+          if (!bv) return -1
+          const diff = av.localeCompare(bv)
+          return orderMode === "best" ? -diff : diff
+        }
+        const key =
+          mode === "overall"
+            ? "overall"
+            : mode === "openness"
+              ? "openness"
+              : mode === "performance"
+                ? "performance"
+                : mode === "research"
+                  ? "research"
+                  : "score"
+        return compare(a, b, key) || (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "")
+      })
+      for (const row of sorted) document.getElementById("home-model-list")?.append(row)
+
+      if (note) {
+        const labels: Record<string, string> = {
+          overall: "overall score",
+          syndication: "independent listings",
+          performance: "Performance/Intelligence",
+          openness: "Openness/Morality",
+          research: "Citation/Research",
+          released: "release date",
+          name: "name",
+        }
+        const label = labels[mode] ?? mode
+        const direction =
+          mode === "name"
+            ? orderMode === "best"
+              ? "A–Z"
+              : "Z–A"
+            : mode === "released"
+              ? orderMode === "best"
+                ? "newest first"
+                : "oldest first"
+              : orderMode === "best"
+                ? "high first"
+                : "low first"
+        note.textContent = `Sorted by ${label}, ${direction}. Missing scores sort last.`
+      }
+
+      markLast()
+
+      const next = new URLSearchParams()
+      if (search) next.set("q", search)
+      if (required.length > 0) next.set("filter", required.join(","))
+      if (optional.length > 0) next.set("options", optional.join(","))
+      if (mode !== "overall") next.set("sort", mode)
+      if (orderMode !== "best") next.set("order", orderMode)
+      const query = next.toString()
+      history.replaceState(null, "", query ? `?${query}` : location.pathname)
+    }
+
+    q?.addEventListener("input", () => apply(true))
+    for (const box of [...filterChecks, ...optionChecks]) box.addEventListener("change", () => apply(true))
+    sort?.addEventListener("input", () => apply(true))
+    order?.addEventListener("click", () => {
+      orderMode = orderMode === "best" ? "worst" : "best"
+      apply(true)
+    })
     scroller?.addEventListener("scroll", maybeReveal, { passive: true })
+    document.addEventListener("click", (event) => {
+      for (const combo of [filterCombo, optionsCombo]) {
+        if (combo && !combo.contains(event.target as Node)) combo.removeAttribute("open")
+      }
+    })
+    apply(false)
     fill()
   </script>
 </Base>

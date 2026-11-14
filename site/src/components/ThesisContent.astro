@@ -1,15 +1,3 @@
----
-const sections = [
-  { id: "open-weights", label: "Open weights are a start" },
-  { id: "piracy", label: "Piracy is not liberation" },
-  { id: "axes", label: "Four independent axes" },
-  { id: "performance", label: "Performance is not a licence" },
-  { id: "citations", label: "Citations are part of the commons" },
-  { id: "living", label: "A living reference" },
-  { id: "ask", label: "What we ask" },
-]
----
-
 <div class="thesis-layout">
   <article class="thesis-body">
     <p class="thesis-standfirst">
@@ -173,14 +161,6 @@ const sections = [
         <li>The axes are independent; a missing score is not zero.</li>
       </ul>
     </div>
-    <nav class="thesis-nav" aria-label="Thesis sections">
-      <p class="eyebrow">In this argument</p>
-      <ul>
-        {sections.map((section) => (
-          <li><a href={`#${section.id}`}>{section.label}</a></li>
-        ))}
-      </ul>
-    </nav>
     <div class="thesis-note">
       <p class="eyebrow">The test</p>
       <p class="mb-0">Not whether a model is useful. Whether the value it takes from the commons returns to the commons.</p>

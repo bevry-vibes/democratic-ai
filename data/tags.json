@@ -63,13 +63,13 @@
       }
     },
     "modality": {
-      "definition": "The input or output medium.",
+      "definition": "The input or output medium. A model can accept or produce more than one.",
       "values": {
-        "text": "Text.",
-        "audio": "Audio.",
-        "image": "Image.",
-        "video": "Video.",
-        "pdf": "PDF documents."
+        "text": "Text input and text output: chat, writing, code, and document analysis.",
+        "audio": "Audio input or output: speech recognition, speech synthesis, or sound generation.",
+        "image": "Image input or output: vision, image generation, or editing.",
+        "video": "Video input or output: understanding or generating moving images.",
+        "pdf": "PDF document input: reports, papers, and scanned pages."
       }
     },
     "runtime": {
@@ -141,35 +141,35 @@
       }
     },
     "family": {
-      "definition": "The model family or base lineage.",
+      "definition": "The model family or base lineage. A family groups models that share a builder or a base architecture. It is not a quality rank.",
       "values": {
-        "qwen": "Qwen.",
-        "llama": "Llama.",
-        "gemma": "Gemma.",
-        "glm": "GLM.",
-        "deepseek": "DeepSeek.",
-        "kimi": "Kimi.",
-        "minimax": "MiniMax.",
-        "olmo": "OLMo.",
-        "pythia": "Pythia.",
-        "bloom": "BLOOM.",
-        "mistral": "Mistral.",
-        "smollm": "SmolLM.",
-        "lfm": "Liquid Foundation Model.",
-        "bonsai": "Bonsai.",
-        "whisper": "Whisper.",
-        "kokoro": "Kokoro.",
-        "piper": "Piper.",
-        "higgs": "Higgs Audio.",
-        "chatterbox": "Chatterbox.",
-        "parakeet": "Parakeet ASR.",
-        "mimo": "Xiaomi MiMo.",
-        "ornith": "Ornith.",
-        "beam": "Beam.",
-        "step": "Step.",
-        "drex": "Drex.",
-        "tinfield": "Tinfield.",
-        "mach": "Mach."
+        "qwen": "Qwen is Alibaba's family of open-weight language and multimodal models.",
+        "llama": "Llama is Meta's family of open-weight language models.",
+        "gemma": "Gemma is Google's family of lightweight open models.",
+        "glm": "GLM is Zhipu AI's family of open-weight language and multimodal models.",
+        "deepseek": "DeepSeek is the model family from DeepSeek, known for open-weight reasoning and coding models.",
+        "kimi": "Kimi is Moonshot AI's family of long-context language models.",
+        "minimax": "MiniMax is the model family from MiniMax, covering text, speech, and image models.",
+        "olmo": "OLMo is the Allen Institute for AI's family of fully open language models.",
+        "pythia": "Pythia is EleutherAI's family of open research language models.",
+        "bloom": "BLOOM is the BigScience collaborative family of open multilingual language models.",
+        "mistral": "Mistral is Mistral AI's family of open-weight language and speech models.",
+        "smollm": "SmolLM is Hugging Face's family of small open language models.",
+        "lfm": "LFM is Liquid AI's Liquid Foundation Model family, designed for efficient on-device use.",
+        "bonsai": "Bonsai is a family of compact open models.",
+        "whisper": "Whisper is OpenAI's open speech-recognition family.",
+        "kokoro": "Kokoro is an open text-to-speech family.",
+        "piper": "Piper is an open text-to-speech family for local and on-device use.",
+        "higgs": "Higgs Audio is Boson AI's open speech and audio family.",
+        "chatterbox": "Chatterbox is Resemble AI's open speech-generation family.",
+        "parakeet": "Parakeet is NVIDIA's family of speech-recognition models.",
+        "mimo": "MiMo is Xiaomi's family of open language and multimodal models.",
+        "ornith": "Ornith is the model family from Ornith AI.",
+        "beam": "Beam is the model family from Reflection.",
+        "step": "Step is StepFun's family of open language and audio models.",
+        "drex": "Drex is the model family from Nace AI.",
+        "tinfield": "Tinfield is a model family name used in the catalogue.",
+        "mach": "Mach is the model family from Syzygy Research."
       }
     },
     "status": {
