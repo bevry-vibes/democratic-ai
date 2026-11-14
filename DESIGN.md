@@ -242,7 +242,11 @@ The site also carries the July 2026 AI Market Scorecard. It grades three indepen
 
 The axes are independent. A model can be A+ on openness and F on citation. A missing score is not zero. A family match carries the score for the named model family, not an exact version, and the record says so.
 
-Task lists rank by the axis that matches the task: Code/Reasoning for code, tool-calling, reasoning, and text generation; Research/Citation for retrieval. Other tasks stay ordered by independent listings.
+Task lists rank by the axis that matches the task: Code/Reasoning for code, tool-calling, reasoning, and text generation; Research/Citation for retrieval.
+
+Speech has its own measured axis. The catalogue uses average WER from the Open ASR Leaderboard's English short-form tab, and a model-card figure only when the leaderboard has no row. Lower is better. A card figure is marked as self-reported; a base-model row is marked as a base-model match. Do not compare a six-set card average to the seven-set leaderboard average, and do not rank benchmark-fitted development numbers with independent results. Missing is not zero.
+
+Sorting is a view, not a score. A page can order by task performance, Openness/Morality, Code/Reasoning, Research/Citation, syndication, release date, or name, in either direction. Missing values stay last in both directions.
 
 ## Evaluation doctrine
 

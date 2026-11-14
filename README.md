@@ -67,6 +67,10 @@ The catalogue also carries the July 2026 AI Market Scorecard for the models it c
 
 The axes are independent. A model can be strong on one and weak on another. A missing score is not zero. A family match is marked as a family match.
 
+For speech models, the catalogue also carries **average word error rate (WER)** from the Open ASR Leaderboard, or a figure the model card reports where the leaderboard has no row. Lower is better. A self-reported figure is marked with a star. A base-model match is marked as a base-model match. Missing is not zero.
+
+Tag pages sort by task performance, openness and morality, code and reasoning, research and citation, syndication, release date, or name. The button beside the sort control reverses the order. Missing scores always sort last.
+
 ## Browse by tags
 
 Tags let a model belong to several jobs at once.
