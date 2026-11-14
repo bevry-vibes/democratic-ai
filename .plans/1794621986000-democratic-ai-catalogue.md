@@ -19,11 +19,15 @@ The catalogue therefore records four dimensions separately:
 3. **Lineage** — the base model and the relation, so a re-licence is visible.
 4. **Conduct** — whether a provider trains on user data, using the `agent-detect` vocabulary.
 
-Fit is the second axis. A use case plus a set of constraints yields a verdict with reasons and evidence. The `translation-comparison-en-id` work is the model: direction, latency class, provider, quantization, prompt, test set, and the failure that matters. The catalogue generalises that method instead of inventing a new score.
+Classification is tag-based. A model can carry several jobs, modalities, runtimes, and languages. Task tags follow the Desert Ant pattern: name the model for the job it does, then tag it so it is findable across constraints.
+
+Evaluations are downstream overlays. The core index is complete without them. A report for a specific use case — such as `translation-id-en` — adds measured results and a recommendation on top of the index. It can live in this repository or in a downstream project.
+
+Tagging happens after the pull. The fetch stage records source-native metadata only; a separate pass proposes task, runtime, and context tags with evidence.
 
 The site is an Astro static build on Cloudflare Workers at `democratic-ai.bevry.workers.dev`. It is editorial and warm, not a technical dashboard. The home page renders `README.md` directly, and the generated blocks in both are produced from `data/`, so the two cannot drift. CI runs the generator in check mode and fails on a difference.
 
-A weekly GitHub Actions job fetches releases and metadata, runs a **permitted** agent to propose assessments and a journal draft, and opens a pull request. A person reviews the evidence and merges. Deployment happens on merge. The job gates itself first with `agent-detect check-reciprocal`, so the repository's own maintenance obeys the policy it documents.
+A weekly GitHub Actions job fetches releases and metadata, runs a **permitted** agent to propose tags and a journal draft, and opens a pull request. A person reviews the evidence and merges. Deployment happens on merge. The job gates itself first with `agent-detect check-reciprocal`, so the repository's own maintenance obeys the policy it documents.
 
 ## What was asked
 
@@ -161,7 +165,7 @@ Four repositories already hold verified evidence. The first import must use them
 The import shape is a one-way conversion, not a shared database:
 
 1. `agent-detect` model rules → `data/models/*.json` + `data/sources/*.json`.
-2. `tts-comparison` findings → speech model records with `contexts: ["on-device"]` and `domains: ["speech"]`.
+2. `tts-comparison` findings → speech model records with tags `["domain:speech", "context:on-device"]`.
 3. `translation-comparison-en-id` results and recommendation → `data/evaluations/*.json` + `data/recommendations/translation-id-en.json`.
 4. `pati-*` plans and field reports → use-case constraints, caveats, and field evidence.
 5. Conflicts stay visible with both sources. The importer never overwrites a newer assessment.
@@ -462,7 +466,7 @@ A discovery record is the journal's structured twin:
   "type": "release",
   "summary": "A quantised build of Qwen3.8-Flash-Next with a streaming-MoE runtime and a custom community licence.",
   "entities": ["edge0-145b"],
-  "domains": ["language"],
+  "tags": ["domain:language", "context:on-device"],
   "sources": ["edge0-blog-145b", "hf-edge0-145b"],
   "verified_at": "2026-11-14"
 }
@@ -819,7 +823,7 @@ The first consumer query is speech, on-device, Apple Silicon, with a clean licen
 
 **`translation-comparison-en-id`**
 
-It is both a source and a consumer. Its measured runs are imported as evaluation records; its `recommendation.json` seeds the first recommendation; its site stays the live benchmark. The catalogue links to the run and records the verdict, not a duplicate of every sample. When the catalogue's fit index changes, the comparison can check that its live results still support the recorded verdict.
+It is both a source and a consumer. Its measured runs are imported into the first overlay report; its `recommendation.json` seeds that report; its site stays the live benchmark. The catalogue links to the run and records the verdict, not a duplicate of every sample. When the catalogue's tags or report change, the comparison can check that its live results still support the recorded verdict.
 
 **`pati-website` and `pati-reports`**
 

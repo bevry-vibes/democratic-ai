@@ -51,7 +51,9 @@ A model can release its weights and still keep its training data and recipe secr
 
 The tiers describe what you can reuse. They are not a judgement on the worth of a project. When the weights are available, a conditional licence — such as a non-commercial term or a user cap — makes the model **Shared** even when the weights are open. Each record shows the exact licence, the evidence, and the date of the last check.
 
-## Browse by context
+## Browse by tags
+
+Tags let a model belong to several jobs at once.
 
 - **Runs on your device** — small models, quantised builds, and local runtimes for phones, laptops, and single-board computers.
 - **Speaks your language** — sovereign and multilingual models, with a focus on Indonesian and low-resource languages.
@@ -59,7 +61,7 @@ The tiers describe what you can reuse. They are not a judgement on the worth of 
 - **Writes code and drives agents** — tool-calling models that fit consumer hardware.
 - **Builds on the commons** — datasets, evaluations, and runtimes that make openness auditable.
 
-Each model record lists its domain, its licence, its lineage, and the hardware it needs. You can filter by tier, domain, language, licence class, and device.
+Each model record lists its tags, licence, lineage, and hardware needs. You can filter by tier, task, modality, runtime, language, licence class, and device.
 
 ## Read the journal
 
