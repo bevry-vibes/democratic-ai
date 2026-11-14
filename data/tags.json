@@ -45,7 +45,15 @@
         "tool-calling": "Call tools and APIs reliably.",
         "reasoning": "Work through multi-step problems.",
         "retrieval": "Find relevant content.",
-        "embedding": "Produce a vector representation."
+        "embedding": "Produce a vector representation.",
+        "text-generation": "Generate text, chat, or complete a prompt.",
+        "image-generation": "Generate or edit images.",
+        "video-generation": "Generate or edit video.",
+        "image-understanding": "Read and describe images or documents.",
+        "audio-classification": "Assign labels to audio.",
+        "voice-activity-detection": "Detect speech activity in audio.",
+        "time-series-forecasting": "Forecast a time series.",
+        "ocr": "Read text from images or documents."
       }
     },
     "modality": {
@@ -72,7 +80,8 @@
         "onnx": "Through ONNX Runtime.",
         "android": "On Android.",
         "ios": "On iOS.",
-        "hosted": "Through a hosted API."
+        "hosted": "Through a hosted API.",
+        "webgpu": "In a browser through WebGPU."
       }
     },
     "language": {
@@ -114,7 +123,14 @@
         "rail": "A Responsible AI licence.",
         "source-available": "Source-available, not OSI open source.",
         "proprietary": "Proprietary.",
-        "unknown": "Not checked or not stated."
+        "unknown": "Not checked or not stated.",
+        "other": "A custom or unspecified licence. The exact terms need a manual check.",
+        "openmdw-1.1": "OpenMDW 1.1.",
+        "odc-by": "Open Data Commons Attribution.",
+        "cc-by-nc-sa-4.0": "CC BY-NC-SA 4.0.",
+        "bigscience-openrail-m": "BigScience OpenRAIL-M.",
+        "llama3.1": "The Llama 3.1 community licence.",
+        "llama3.2": "The Llama 3.2 community licence."
       }
     },
     "family": {
@@ -138,7 +154,15 @@
         "kokoro": "Kokoro.",
         "piper": "Piper.",
         "higgs": "Higgs Audio.",
-        "chatterbox": "Chatterbox."
+        "chatterbox": "Chatterbox.",
+        "parakeet": "Parakeet ASR.",
+        "mimo": "Xiaomi MiMo.",
+        "ornith": "Ornith.",
+        "beam": "Beam.",
+        "step": "Step.",
+        "drex": "Drex.",
+        "tinfield": "Tinfield.",
+        "mach": "Mach."
       }
     },
     "status": {

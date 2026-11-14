@@ -1,0 +1,377 @@
+{
+  "pull_id": "20261114T025658Z",
+  "generated_at": "2026-11-14T03:14:58.080Z",
+  "generated_on": "2026-11-14",
+  "vocabulary_status": "proposed",
+  "items": 3932,
+  "tagged_items": 3745,
+  "needs_review": 78,
+  "by_kind": {
+    "article": {
+      "items": 66,
+      "tagged": 27,
+      "review": 0
+    },
+    "model": {
+      "items": 664,
+      "tagged": 664,
+      "review": 78
+    },
+    "dataset": {
+      "items": 50,
+      "tagged": 50,
+      "review": 0
+    },
+    "post": {
+      "items": 869,
+      "tagged": 869,
+      "review": 0
+    },
+    "release": {
+      "items": 108,
+      "tagged": 108,
+      "review": 0
+    },
+    "page": {
+      "items": 2175,
+      "tagged": 2027,
+      "review": 0
+    }
+  },
+  "tag_counts": {
+    "source:sitemap": 2175,
+    "domain:evaluation": 2016,
+    "source:x": 869,
+    "source:hf-model": 664,
+    "context:commercial-safe": 352,
+    "domain:vision": 296,
+    "domain:language": 289,
+    "license:other": 273,
+    "task:text-generation": 252,
+    "runtime:python": 221,
+    "license:apache-2.0": 212,
+    "domain:tooling": 187,
+    "domain:speech": 183,
+    "modality:image": 183,
+    "domain:multimodal": 177,
+    "context:agents": 165,
+    "task:image-understanding": 137,
+    "org:ant-ling": 135,
+    "modality:text": 129,
+    "license:mit": 129,
+    "runtime:llama.cpp": 120,
+    "org:unsloth": 119,
+    "org:liquid-ai": 116,
+    "org:fluid-voice": 112,
+    "source:github-release": 108,
+    "family:qwen": 107,
+    "context:on-device": 105,
+    "family:lfm": 99,
+    "runtime:mlx": 82,
+    "domain:code": 80,
+    "task:code": 80,
+    "runtime:coreml": 79,
+    "task:image-generation": 74,
+    "source:hf-blog": 66,
+    "org:nace-ai": 64,
+    "modality:audio": 63,
+    "task:transcription": 51,
+    "source:hf-dataset": 50,
+    "domain:datasets": 50,
+    "org:ornith-ai": 48,
+    "org:underdog-ai": 45,
+    "task:tool-calling": 42,
+    "org:moonshot-ai": 42,
+    "org:qwen": 41,
+    "task:reasoning": 41,
+    "org:xiaomi-mimo": 39,
+    "task:speech-synthesis": 38,
+    "org:desert-ant-labs": 38,
+    "org:webai": 38,
+    "context:non-commercial": 31,
+    "org:edge0-ai": 31,
+    "task:text-classification": 29,
+    "license:cc-by-nc-4.0": 28,
+    "org:minimax": 28,
+    "org:zai": 28,
+    "org:mistral": 28,
+    "org:syzygy-research": 27,
+    "org:xenova": 26,
+    "org:bad-theory-labs": 25,
+    "org:prism-ml": 24,
+    "org:baidu": 24,
+    "org:hugging-face": 24,
+    "org:meituan-longcat": 23,
+    "org:stepfun": 23,
+    "org:deepseek": 23,
+    "org:reflection": 21,
+    "org:pi": 20,
+    "org:sahil-mahendrakar": 20,
+    "org:zcode": 20,
+    "org:simplifying-ai": 20,
+    "org:zixuan-li": 20,
+    "org:llm-stats": 20,
+    "org:openmoss": 20,
+    "org:cline": 20,
+    "org:artificial-analysis": 20,
+    "org:arena": 20,
+    "org:moonbit": 20,
+    "org:truefoundry": 20,
+    "org:fabio-angela": 20,
+    "org:samuel-zeng": 20,
+    "task:embedding": 19,
+    "context:privacy": 19,
+    "runtime:onnx": 19,
+    "org:wan": 19,
+    "org:higurashi": 18,
+    "org:opencode": 18,
+    "org:kilo": 18,
+    "org:bigcode": 18,
+    "runtime:litert": 14,
+    "org:goose": 13,
+    "family:parakeet": 11,
+    "domain:embeddings": 11,
+    "license:cc-by-4.0": 11,
+    "family:minimax": 11,
+    "task:ocr": 10,
+    "runtime:ios": 9,
+    "modality:video": 9,
+    "task:video-generation": 9,
+    "task:diarization": 8,
+    "family:gemma": 8,
+    "family:glm": 8,
+    "task:structured-extraction": 7,
+    "task:pii-redaction": 7,
+    "family:mimo": 7,
+    "family:drex": 7,
+    "family:mistral": 7,
+    "family:mach": 6,
+    "domain:governance": 6,
+    "family:deepseek": 5,
+    "task:voice-activity-detection": 5,
+    "task:image-classification": 5,
+    "task:speech-enhancement": 5,
+    "family:step": 5,
+    "org:boson-ai": 5,
+    "task:content-moderation": 4,
+    "task:retrieval": 4,
+    "family:ornith": 4,
+    "family:tinfield": 4,
+    "license:openmdw-1.1": 4,
+    "task:time-series-forecasting": 4,
+    "task:audio-classification": 3,
+    "family:whisper": 3,
+    "task:translation": 3,
+    "license:odc-by": 3,
+    "task:language-identification": 2,
+    "task:title-generation": 2,
+    "task:emoji-suggestion": 2,
+    "family:kokoro": 2,
+    "family:chatterbox": 2,
+    "family:llama": 2,
+    "license:cc-by-nc-sa-4.0": 2,
+    "family:beam": 2,
+    "org:thinking-machines-lab": 2,
+    "context:reproducible": 1,
+    "task:filler-word-detection": 1,
+    "task:topic-tagging": 1,
+    "task:clip-selection": 1,
+    "task:word-timestamps": 1,
+    "task:face-matching": 1,
+    "license:bigscience-openrail-m": 1,
+    "runtime:webgpu": 1,
+    "license:llama3.2": 1,
+    "license:llama3.1": 1,
+    "family:bonsai": 1,
+    "family:smollm": 1,
+    "context:sovereign": 1
+  },
+  "review_samples": [
+    {
+      "kind": "model",
+      "title": "ConwayResearch/woof-textfiller-4B-4bit-v2.1",
+      "url": "https://huggingface.co/ConwayResearch/woof-textfiller-4B-4bit-v2.1",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "ConwayResearch/woof-textfiller-0.8B-4bit-v2.1",
+      "url": "https://huggingface.co/ConwayResearch/woof-textfiller-0.8B-4bit-v2.1",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "ConwayResearch/woof-selector-4B-4bit-v2.1",
+      "url": "https://huggingface.co/ConwayResearch/woof-selector-4B-4bit-v2.1",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "ConwayResearch/husky-flash",
+      "url": "https://huggingface.co/ConwayResearch/husky-flash",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "ConwayResearch/Underdog-Poodle-4B-DFlash",
+      "url": "https://huggingface.co/ConwayResearch/Underdog-Poodle-4B-DFlash",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "ConwayResearch/underdog-llama-server",
+      "url": "https://huggingface.co/ConwayResearch/underdog-llama-server",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "XiaomiMiMo/MiMo-Audio-Tokenizer",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-Audio-Tokenizer",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "XiaomiMiMo/MiMo-Audio-7B-Instruct",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-Audio-7B-Instruct",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "XiaomiMiMo/MiMo-Audio-7B-Base",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-Audio-7B-Base",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "meituan-longcat/LongCat-Next",
+      "url": "https://huggingface.co/meituan-longcat/LongCat-Next",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/citenet-coreml",
+      "url": "https://huggingface.co/FluidInference/citenet-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/mario-student-coreml",
+      "url": "https://huggingface.co/FluidInference/mario-student-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/d3-mini-coreml",
+      "url": "https://huggingface.co/FluidInference/d3-mini-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/vela-2.0-0.3b-coreml",
+      "url": "https://huggingface.co/FluidInference/vela-2.0-0.3b-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/decision-2.0-kai-coreml",
+      "url": "https://huggingface.co/FluidInference/decision-2.0-kai-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/decision-2.0-eos-coreml",
+      "url": "https://huggingface.co/FluidInference/decision-2.0-eos-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/sauerkrautlm-doom-coreml",
+      "url": "https://huggingface.co/FluidInference/sauerkrautlm-doom-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/nanojev-coreml",
+      "url": "https://huggingface.co/FluidInference/nanojev-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/fluidaudio-web",
+      "url": "https://huggingface.co/FluidInference/fluidaudio-web",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/lfm2-5-350m-rlcd-coreml",
+      "url": "https://huggingface.co/FluidInference/lfm2-5-350m-rlcd-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/decision-1.0-lex-coreml",
+      "url": "https://huggingface.co/FluidInference/decision-1.0-lex-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/decision-1.0-kai-coreml",
+      "url": "https://huggingface.co/FluidInference/decision-1.0-kai-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/decision-1.0-lex-snake-coreml",
+      "url": "https://huggingface.co/FluidInference/decision-1.0-lex-snake-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "FluidInference/kev-0.6b-coreml",
+      "url": "https://huggingface.co/FluidInference/kev-0.6b-coreml",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Duo-1.0-distill",
+      "url": "https://huggingface.co/inclusionAI/Duo-1.0-distill",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Duo-1.2-causal-base",
+      "url": "https://huggingface.co/inclusionAI/Duo-1.2-causal-base",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Duo-1.0-distill-quant",
+      "url": "https://huggingface.co/inclusionAI/Duo-1.0-distill-quant",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Duo-1.0-causal-base",
+      "url": "https://huggingface.co/inclusionAI/Duo-1.0-causal-base",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/SingVL_S1_4B_GGUF",
+      "url": "https://huggingface.co/inclusionAI/SingVL_S1_4B_GGUF",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/ZoomGain-9B",
+      "url": "https://huggingface.co/inclusionAI/ZoomGain-9B",
+      "reason": "model has no task tag"
+    }
+  ],
+  "notes": [
+    "The pass is rules-first. It reads source-native tags and specific title or text phrases. It does not call a language model.",
+    "A model with no task tag is marked needs_review. It is not guessed.",
+    "Sitemap pages are discovery links, not catalogue records. They carry source:sitemap and a domain when the sitemap itself is a known evaluation or tooling source.",
+    "No tag is written to a model record. This file is a proposal for review."
+  ]
+}

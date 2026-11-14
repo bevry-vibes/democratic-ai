@@ -2,7 +2,10 @@
   "lock": false,
   "tasks": {
     "fetch": "deno run -A scripts/fetch/mod.ts",
-    "fetch:check": "deno check scripts/fetch/mod.ts"
+    "fetch:check": "deno check scripts/fetch/mod.ts",
+    "tag": "deno run -A scripts/tag/mod.ts",
+    "tag:check": "deno check scripts/tag/mod.ts scripts/tag/clef.ts",
+    "tag:clef": "deno run -A scripts/tag/clef.ts"
   },
   "imports": {
     "@std/xml": "jsr:@std/xml@^0.2.0"

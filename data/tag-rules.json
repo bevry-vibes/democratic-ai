@@ -1,0 +1,588 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14",
+  "notes": "Rules for the first tagging pass. High precision first: a rule publishes a tag only when the source field or the text is specific. Everything else goes to needs_review. A human accepts the vocabulary before any tag is written to a model record.",
+  "pipelines": {
+    "text-generation": [
+      "domain:language",
+      "task:text-generation"
+    ],
+    "image-text-to-text": [
+      "domain:multimodal",
+      "modality:image",
+      "modality:text",
+      "task:image-understanding"
+    ],
+    "text-to-image": [
+      "domain:vision",
+      "task:image-generation",
+      "modality:image"
+    ],
+    "automatic-speech-recognition": [
+      "domain:speech",
+      "task:transcription",
+      "modality:audio"
+    ],
+    "text-classification": [
+      "domain:language",
+      "task:text-classification"
+    ],
+    "text-to-speech": [
+      "domain:speech",
+      "task:speech-synthesis",
+      "modality:audio"
+    ],
+    "any-to-any": [
+      "domain:multimodal"
+    ],
+    "image-to-image": [
+      "domain:vision",
+      "task:image-generation",
+      "modality:image"
+    ],
+    "feature-extraction": [
+      "domain:embeddings",
+      "task:embedding"
+    ],
+    "audio-to-audio": [
+      "domain:speech",
+      "modality:audio"
+    ],
+    "token-classification": [
+      "domain:language",
+      "task:structured-extraction"
+    ],
+    "zero-shot-classification": [
+      "domain:language",
+      "task:text-classification"
+    ],
+    "audio-text-to-text": [
+      "domain:speech",
+      "domain:multimodal"
+    ],
+    "voice-activity-detection": [
+      "domain:speech",
+      "task:voice-activity-detection"
+    ],
+    "time-series-forecasting": [
+      "task:time-series-forecasting"
+    ],
+    "audio-classification": [
+      "domain:speech",
+      "task:audio-classification"
+    ],
+    "image-classification": [
+      "domain:vision",
+      "task:image-classification"
+    ],
+    "image-text-to-video": [
+      "domain:vision",
+      "task:video-generation",
+      "modality:video"
+    ],
+    "text-to-video": [
+      "domain:vision",
+      "task:video-generation",
+      "modality:video"
+    ],
+    "image-to-video": [
+      "domain:vision",
+      "task:video-generation",
+      "modality:video"
+    ],
+    "image-to-text": [
+      "domain:vision",
+      "task:image-understanding"
+    ],
+    "visual-document-retrieval": [
+      "domain:vision",
+      "task:retrieval"
+    ],
+    "zero-shot-image-classification": [
+      "domain:vision",
+      "task:image-classification"
+    ],
+    "image-text-to-image": [
+      "domain:vision",
+      "task:image-generation"
+    ],
+    "fill-mask": [
+      "domain:language"
+    ],
+    "text-ranking": [
+      "domain:language",
+      "task:retrieval"
+    ],
+    "translation": [
+      "domain:language",
+      "task:translation"
+    ]
+  },
+  "libraries": {
+    "transformers": "runtime:python",
+    "mlx": "runtime:mlx",
+    "coreml": "runtime:coreml",
+    "gguf": "runtime:llama.cpp",
+    "llama.cpp": "runtime:llama.cpp",
+    "ggml": "runtime:llama.cpp",
+    "litert": "runtime:litert",
+    "onnxruntime": "runtime:onnx",
+    "onnx": "runtime:onnx",
+    "fluidaudio": "runtime:ios",
+    "diffusers": "runtime:python"
+  },
+  "families": {
+    "qwen": "qwen",
+    "liquidai": "lfm",
+    "meta-llama": "llama",
+    "gemma": "gemma",
+    "zai-org": "glm",
+    "thudm": "glm",
+    "deepseek": "deepseek",
+    "moonshot": "kimi",
+    "minimax": "minimax",
+    "allenai": "olmo",
+    "eleuther": "pythia",
+    "bigscience": "bloom",
+    "mistral": "mistral",
+    "huggingfacetb": "smollm",
+    "prism-ml": "bonsai",
+    "whisper": "whisper",
+    "kokoro": "kokoro",
+    "piper": "piper",
+    "higgs": "higgs",
+    "chatterbox": "chatterbox",
+    "parakeet": "parakeet",
+    "mimo": "mimo",
+    "ornith": "ornith",
+    "beam": "beam",
+    "step": "step",
+    "drex": "drex",
+    "tinfield": "tinfield",
+    "mach": "mach"
+  },
+  "keywords": {
+    "task:transcription": [
+      "automatic speech recognition",
+      "speech-to-text",
+      "transcription",
+      "transcribe",
+      "whisper",
+      "parakeet",
+      "wav2vec"
+    ],
+    "task:speech-synthesis": [
+      "text-to-speech",
+      "speech synthesis",
+      "voice cloning",
+      "tts model",
+      "kokoro",
+      "piper",
+      "chatterbox",
+      "higgs audio"
+    ],
+    "task:speech-enhancement": [
+      "denoise",
+      "denoising",
+      "dereverb",
+      "speech enhancement",
+      "enhance speech",
+      "localvqe"
+    ],
+    "task:translation": [
+      "translation",
+      "translator",
+      "bilingual",
+      "id-en",
+      "en-id",
+      "machine translation"
+    ],
+    "task:code": [
+      "code generation",
+      "coding",
+      "coder",
+      "programming",
+      "swe-bench",
+      "software engineering"
+    ],
+    "task:reasoning": [
+      "reasoning",
+      "chain of thought",
+      "math"
+    ],
+    "task:tool-calling": [
+      "tool calling",
+      "function calling",
+      "tool use",
+      "tool-use",
+      "agentic"
+    ],
+    "task:topic-tagging": [
+      "topic tagging",
+      "topic classification",
+      "content tagging"
+    ],
+    "task:pii-redaction": [
+      "pii",
+      "redaction",
+      "redact"
+    ],
+    "task:content-moderation": [
+      "moderation",
+      "toxic",
+      "hate speech"
+    ],
+    "task:image-generation": [
+      "text-to-image",
+      "image generation",
+      "diffusion",
+      "flux",
+      "stable diffusion"
+    ],
+    "task:video-generation": [
+      "text-to-video",
+      "image-to-video",
+      "video generation"
+    ],
+    "task:embedding": [
+      "embedding",
+      "sentence-transformers",
+      "retrieval model"
+    ],
+    "task:ocr": [
+      "ocr",
+      "optical character",
+      "scanned document"
+    ],
+    "task:language-identification": [
+      "language identification",
+      "language detection",
+      "langid"
+    ],
+    "task:face-matching": [
+      "face matching",
+      "face recognition",
+      "face detection"
+    ],
+    "task:clip-selection": [
+      "clip selection",
+      "video highlights"
+    ],
+    "task:emoji-suggestion": [
+      "emoji suggestion"
+    ],
+    "task:title-generation": [
+      "title generation",
+      "titles and descriptions"
+    ],
+    "task:filler-word-detection": [
+      "filler word"
+    ],
+    "task:word-timestamps": [
+      "word timestamp",
+      "word-level timestamp",
+      "forced alignment"
+    ],
+    "task:diarization": [
+      "diarization",
+      "diarize",
+      "speaker identification"
+    ],
+    "task:voice-activity-detection": [
+      "voice activity"
+    ],
+    "task:time-series-forecasting": [
+      "time series",
+      "forecasting"
+    ],
+    "task:image-understanding": [
+      "vision-language",
+      "image understanding",
+      "visual question",
+      "vlm"
+    ],
+    "task:structured-extraction": [
+      "structured extraction",
+      "schema extraction",
+      "json extraction"
+    ]
+  },
+  "contexts": {
+    "context:on-device": [
+      "on-device",
+      "on device",
+      "offline",
+      "browser",
+      "webgpu",
+      "wasm",
+      "edge device",
+      "phone",
+      "mobile",
+      "local-first",
+      "no cloud"
+    ],
+    "context:privacy": [
+      "privacy",
+      "private",
+      "local-only",
+      "local only"
+    ],
+    "context:sovereign": [
+      "sovereign"
+    ],
+    "context:agents": [
+      "agent",
+      "agents",
+      "agentic",
+      "harness"
+    ],
+    "context:reproducible": [
+      "open data",
+      "open recipe",
+      "reproducible"
+    ]
+  },
+  "domains": {
+    "domain:speech": [
+      "speech",
+      "audio",
+      "voice",
+      "tts",
+      "asr",
+      "transcrib"
+    ],
+    "domain:vision": [
+      "image",
+      "video",
+      "vision",
+      "diffusion",
+      "ocr"
+    ],
+    "domain:code": [
+      "coding",
+      "code generation",
+      "coder",
+      "programming"
+    ],
+    "domain:multimodal": [
+      "multimodal",
+      "any-to-any",
+      "vlm",
+      "vision-language"
+    ],
+    "domain:evaluation": [
+      "benchmark",
+      "leaderboard",
+      "evaluation"
+    ],
+    "domain:tooling": [
+      "runtime",
+      "inference server",
+      "harness",
+      "sdk",
+      "cli"
+    ],
+    "domain:governance": [
+      "policy",
+      "regulation",
+      "governance"
+    ]
+  },
+  "title_tasks": {
+    "task:transcription": [
+      "whisper",
+      "parakeet",
+      "wav2vec",
+      "asr",
+      "speech-to-text",
+      "vibevoice"
+    ],
+    "task:speech-synthesis": [
+      "tts",
+      "text-to-speech",
+      "kokoro",
+      "piper",
+      "chatterbox",
+      "higgs"
+    ],
+    "task:speech-enhancement": [
+      "denoise",
+      "dereverb",
+      "localvqe",
+      "speech-enhance"
+    ],
+    "task:diarization": [
+      "diarization",
+      "diarize",
+      "speaker"
+    ],
+    "task:word-timestamps": [
+      "align",
+      "alignment",
+      "word-timestamp"
+    ],
+    "task:image-generation": [
+      "text-to-image",
+      "image-generation",
+      "diffusion",
+      "flux",
+      "stable-diffusion",
+      "qwen-image"
+    ],
+    "task:video-generation": [
+      "text-to-video",
+      "image-to-video",
+      "video-generation",
+      "wan2",
+      "wan-"
+    ],
+    "task:image-understanding": [
+      "vision-language",
+      "vlm",
+      "-vl-",
+      "vl-",
+      "-vl",
+      "multimodal",
+      "image-text",
+      "vl"
+    ],
+    "task:embedding": [
+      "embed",
+      "bge",
+      "e5-",
+      "sentence-transformer",
+      "retrieval"
+    ],
+    "task:code": [
+      "coder",
+      "code-",
+      "-code",
+      "coding",
+      "swe-"
+    ],
+    "task:reasoning": [
+      "reason",
+      "think",
+      "math"
+    ],
+    "task:tool-calling": [
+      "tool",
+      "agent"
+    ],
+    "task:ocr": [
+      "ocr",
+      "document"
+    ],
+    "task:face-matching": [
+      "face"
+    ],
+    "task:topic-tagging": [
+      "gist",
+      "tagger",
+      "topic"
+    ],
+    "task:pii-redaction": [
+      "redact",
+      "pii"
+    ],
+    "task:content-moderation": [
+      "toxic",
+      "moderator",
+      "safety"
+    ],
+    "task:emoji-suggestion": [
+      "emo"
+    ],
+    "task:title-generation": [
+      "title"
+    ],
+    "task:filler-word-detection": [
+      "uhm",
+      "filler"
+    ],
+    "task:voice-activity-detection": [
+      "vad",
+      "voice-activity"
+    ],
+    "task:language-identification": [
+      "tongue",
+      "langid",
+      "language-id"
+    ],
+    "task:clip-selection": [
+      "clips",
+      "highlight"
+    ],
+    "task:time-series-forecasting": [
+      "forecast",
+      "time-series"
+    ],
+    "task:structured-extraction": [
+      "schemer",
+      "extract",
+      "json-schema"
+    ]
+  },
+  "title_runtimes": {
+    "runtime:llama.cpp": [
+      "gguf",
+      "ggml"
+    ],
+    "runtime:mlx": [
+      "mlx"
+    ],
+    "runtime:coreml": [
+      "coreml"
+    ],
+    "runtime:onnx": [
+      "onnx",
+      "openvino",
+      "-ov"
+    ],
+    "runtime:litert": [
+      "litert"
+    ],
+    "runtime:webgpu": [
+      "webgpu"
+    ]
+  },
+  "desert_ant": {
+    "align": "task:word-timestamps",
+    "clear": "task:speech-enhancement",
+    "clips": "task:clip-selection",
+    "ear": "task:language-identification",
+    "emo": "task:emoji-suggestion",
+    "eye": "task:image-classification",
+    "gist": "task:topic-tagging",
+    "moderator": "task:content-moderation",
+    "redact": "task:pii-redaction",
+    "shapes": "task:image-classification",
+    "title": "task:title-generation",
+    "tongue": "task:language-identification",
+    "toxic": "task:content-moderation",
+    "uhm": "task:filler-word-detection",
+    "voz": "task:transcription",
+    "who": "task:diarization",
+    "face": "task:face-matching",
+    "schemer": "task:structured-extraction"
+  },
+  "sitemaps": {
+    "llm-stats": [
+      "domain:evaluation"
+    ],
+    "artificial-analysis": [
+      "domain:evaluation"
+    ],
+    "arena": [
+      "domain:evaluation"
+    ],
+    "unsloth": [
+      "domain:tooling"
+    ],
+    "bigcode": [
+      "domain:datasets",
+      "domain:code"
+    ],
+    "simplifying-ai": []
+  }
+}

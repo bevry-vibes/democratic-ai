@@ -36,6 +36,13 @@ export async function writeJSON(path: string, value: unknown): Promise<WriteResu
   return await writeNew(path, JSON.stringify(value, null, 2) + "\n")
 }
 
+/** Replace a generated artefact. Never use this for a raw snapshot. */
+export async function writeReplace(path: string, body: string): Promise<WriteResult> {
+  await ensureDir(path)
+  await Deno.writeTextFile(path, body)
+  return { path, reused: false, bytes: new TextEncoder().encode(body).byteLength }
+}
+
 export async function writeText(path: string, body: string): Promise<WriteResult> {
   return await writeNew(path, body)
 }
