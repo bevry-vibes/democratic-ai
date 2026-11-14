@@ -72,6 +72,16 @@ The second result is the useful one: the list lookup and member endpoints accept
 
 The common pattern is important: **the most interesting democratic-AI work is often a derivative of a permissive base, re-released under more restrictive terms.** A catalogue that only records “open weights yes/no” will miss this.
 
+#### X list seed (2026-11-14)
+
+The list is named **Democratic AI** and its description is “AIs that are for the people, not empire”. It has 47 members.
+
+`data/watchlist.json` records 46 entities for the 47 handles, because the two Kimi accounts merge into one organisation. The seed has 34 organisations, 7 projects, and 5 people. By role: 27 model labs, 6 agent harnesses, 3 evaluators, 2 infrastructure providers, 3 tooling projects, and the rest are a platform, a data lab, a media account, and individuals.
+
+The context distribution is a useful signal: 11 entities are on-device, 7 are agent-related, 2 are edge, 2 are privacy-focused, and 1 is sovereign. The owner's list leans strongly toward on-device and consumer-owned AI, which supports the proposed first-release scope of text plus on-device speech.
+
+32 of the 46 entities have a verified Hugging Face identity. The rest are harnesses, evaluators, people, or labs without a public Hugging Face organisation.
+
 ### The seed landscape
 
 These facts were checked against the Hugging Face API on 2026-11-14. They are seeds for the first import, not yet accepted records. The tier is the rule output for the evidence available today.

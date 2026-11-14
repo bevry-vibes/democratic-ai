@@ -1,0 +1,1130 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14",
+  "x_list": {
+    "id": "2084302656580034676",
+    "name": "Democratic AI",
+    "description": "AIs that are for the people, not empire",
+    "url": "https://x.com/i/lists/2084302656580034676",
+    "owner_id": "49753661",
+    "member_count": 47,
+    "private": false,
+    "created_at": "2026-08-03T15:37:32.000Z",
+    "fetched_at": "2026-11-14"
+  },
+  "members": [
+    {
+      "id": "underdog-ai",
+      "name": "Underdog AI",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "UnderdogAI"
+      ],
+      "x_url": "https://x.com/UnderdogAI",
+      "website": "https://underdog.ai/",
+      "hugging_face": "ConwayResearch",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [
+        "on-device"
+      ],
+      "x_bio": "Your Private Personal AI. 100% on device\nAsk your friend for an invite to Underdog 🦴\nthe Dog host of the Dogpark Podcast",
+      "x_followers": 10126,
+      "notes": "Consumer on-device models; the Saluki 27B build is a 2-bit Qwen3.8 derivative.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "edge0-ai",
+      "name": "Edge0",
+      "kind": "organization",
+      "roles": [
+        "model-lab",
+        "runtime"
+      ],
+      "x": [
+        "Edge0_AI"
+      ],
+      "x_url": "https://x.com/Edge0_AI",
+      "website": "https://edge0.ai/",
+      "hugging_face": "Edge0",
+      "github": "Edge0-AI",
+      "domains": [
+        "language"
+      ],
+      "contexts": [
+        "on-device",
+        "edge"
+      ],
+      "x_bio": "https://t.co/YJ88R0IWCp | On-device foundation models. High intelligence, low memory, low power",
+      "x_followers": 871,
+      "notes": "Streaming-MoE runtime and quantised model builds for consumer hardware.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "desert-ant-labs",
+      "name": "Desert Ant Labs",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "desertantlabs"
+      ],
+      "x_url": "https://x.com/desertantlabs",
+      "website": "https://desertant.com/",
+      "hugging_face": "desert-ant-labs",
+      "github": "Desert-Ant-Labs",
+      "domains": [
+        "speech",
+        "vision",
+        "language"
+      ],
+      "contexts": [
+        "on-device",
+        "edge",
+        "privacy"
+      ],
+      "x_bio": "European AI lab building opinionated on-device models and SDKs. Little brains in every product.",
+      "x_followers": 4232,
+      "notes": "Small on-device models with Swift, Kotlin, and JavaScript SDKs; source-available weights.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "xiaomi-mimo",
+      "name": "Xiaomi MiMo",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "XiaomiMiMoDevs"
+      ],
+      "x_url": "https://x.com/XiaomiMiMoDevs",
+      "website": "https://github.com/XiaomiMiMo",
+      "hugging_face": "XiaomiMiMo",
+      "github": "XiaomiMiMo",
+      "domains": [
+        "language",
+        "code"
+      ],
+      "contexts": [
+        "on-device"
+      ],
+      "x_bio": "",
+      "x_followers": 3418,
+      "notes": "Xiaomi MiMo model family for on-device and agent use.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "ornith-ai",
+      "name": "Ornith",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "ornith_"
+      ],
+      "x_url": "https://x.com/ornith_",
+      "website": "https://ornith.ai/",
+      "hugging_face": "ornith-ai",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [],
+      "x_bio": "Once you have tasted flight, you will walk the earth with your eyes turned skywards.",
+      "x_followers": 20323,
+      "notes": "Ornith 1.5 model family; role inferred from the Hugging Face organisation and profile bio.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "pi",
+      "name": "Pi",
+      "kind": "project",
+      "roles": [
+        "harness"
+      ],
+      "x": [
+        "pidotdev"
+      ],
+      "x_url": "https://x.com/pidotdev",
+      "website": "https://pi.dev/",
+      "hugging_face": null,
+      "github": null,
+      "domains": [
+        "tooling"
+      ],
+      "contexts": [
+        "agents"
+      ],
+      "x_bio": "There are many agent harnesses, but this one is yours",
+      "x_followers": 61942,
+      "notes": "Agent harness.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "moonshot-ai",
+      "name": "Moonshot AI (Kimi)",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "KimiDevs",
+        "Kimi_Moonshot"
+      ],
+      "x_url": "https://x.com/Kimi_Moonshot",
+      "website": "https://www.kimi.ai/",
+      "hugging_face": "moonshotai",
+      "github": null,
+      "domains": [
+        "language",
+        "code"
+      ],
+      "contexts": [],
+      "x_bio": "Built by Moonshot AI to empower everyone to be superhuman. \nPR: globalpr@moonshot.ai\nDC: https://t.co/wBsBTn6fmE",
+      "x_followers": 393774,
+      "notes": "Kimi model family; the developer and main accounts are merged into one entry.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "bad-theory-labs",
+      "name": "Bad Theory Labs",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "Badtheorylabs"
+      ],
+      "x_url": "https://x.com/Badtheorylabs",
+      "website": "https://badtheorylabs.com/",
+      "hugging_face": "badtheorylabs",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [
+        "on-device"
+      ],
+      "x_bio": "making intelligence efficient enough to own.",
+      "x_followers": 4298,
+      "notes": "Efficient models; profile bio says \"making intelligence efficient enough to own\".",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "sahil-mahendrakar",
+      "name": "Sahil Mahendrakar",
+      "kind": "person",
+      "roles": [
+        "researcher"
+      ],
+      "x": [
+        "sahilmdkr"
+      ],
+      "x_url": "https://x.com/sahilmdkr",
+      "website": "https://sahilmahendrakar.com/",
+      "hugging_face": null,
+      "github": null,
+      "domains": [],
+      "contexts": [],
+      "x_bio": "building something new with @suhaaspk\nprev. @aws, @columbia ('24)",
+      "x_followers": 276,
+      "notes": "Individual; profile says \"building something new\", previously AWS and Columbia.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "syzygy-research",
+      "name": "Syzygy Research",
+      "kind": "organization",
+      "roles": [
+        "model-lab",
+        "researcher"
+      ],
+      "x": [
+        "syzygyeng"
+      ],
+      "x_url": "https://x.com/syzygyeng",
+      "website": "https://withsyzygy.com/",
+      "hugging_face": "SyzygyResearch",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [],
+      "x_bio": "Scaling Intelligence Density",
+      "x_followers": 1430,
+      "notes": "Research lab; profile bio says \"Scaling Intelligence Density\".",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "zcode",
+      "name": "ZCode",
+      "kind": "project",
+      "roles": [
+        "harness"
+      ],
+      "x": [
+        "zcode_ai"
+      ],
+      "x_url": "https://x.com/zcode_ai",
+      "website": "https://zcode.z.ai/",
+      "hugging_face": null,
+      "github": "zai-org/ZCode",
+      "domains": [
+        "tooling"
+      ],
+      "contexts": [
+        "agents"
+      ],
+      "x_bio": "🎉 The Z Code community is here! We've created a Discord server for all ZCode users — https://t.co/oK1pV02Prf",
+      "x_followers": 20783,
+      "notes": "Agent harness from Z.ai; open-source client and runtime, Apache-2.0.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "opencode",
+      "name": "OpenCode",
+      "kind": "project",
+      "roles": [
+        "harness"
+      ],
+      "x": [
+        "opencode"
+      ],
+      "x_url": "https://x.com/opencode",
+      "website": "https://opencode.ai/",
+      "hugging_face": null,
+      "github": null,
+      "domains": [
+        "tooling"
+      ],
+      "contexts": [
+        "agents"
+      ],
+      "x_bio": "The open source coding agent",
+      "x_followers": 232832,
+      "notes": "Open-source coding agent.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "simplifying-ai",
+      "name": "Simplifying AI",
+      "kind": "organization",
+      "roles": [
+        "media"
+      ],
+      "x": [
+        "simplifyinAI"
+      ],
+      "x_url": "https://x.com/simplifyinAI",
+      "website": "https://simplifyingai.co/",
+      "hugging_face": null,
+      "github": null,
+      "domains": [],
+      "contexts": [],
+      "x_bio": "Helping you master AI daily with step-by-step AI guides, latest news & practical tools • DM for Collabs",
+      "x_followers": 40739,
+      "notes": "AI news and guides; a discovery source, not a model source.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "meituan-longcat",
+      "name": "Meituan LongCat",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "Meituan_LongCat"
+      ],
+      "x_url": "https://x.com/Meituan_LongCat",
+      "website": "https://longcat.ai/",
+      "hugging_face": "meituan-longcat",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [],
+      "x_bio": "Official account of Meituan LongCat LLM 🐱\nJoin our Discord 👉 https://t.co/W14Lg4KfOg\nSubscribe our YouTube 👉 https://t.co/xexreQlwqZ",
+      "x_followers": 15206,
+      "notes": "LongCat model family from Meituan.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "fluid-voice",
+      "name": "FluidVoice",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "FluidVoiceApp"
+      ],
+      "x_url": "https://x.com/FluidVoiceApp",
+      "website": "https://www.fluidvoice.com/",
+      "hugging_face": "FluidInference",
+      "github": null,
+      "domains": [
+        "speech"
+      ],
+      "contexts": [
+        "on-device",
+        "privacy"
+      ],
+      "x_bio": "AI Research lab focused on  on-device dictation and more.\nTry out FluidVoice at https://t.co/RRPbdflERx\n\n500K downloads. 12K GitHub stars.",
+      "x_followers": 3992,
+      "notes": "On-device dictation and speech models.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "ant-ling",
+      "name": "Ant Ling (InclusionAI)",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "AntLingAGI"
+      ],
+      "x_url": "https://x.com/AntLingAGI",
+      "website": "https://www.ant-ling.com/en/",
+      "hugging_face": "inclusionAI",
+      "github": null,
+      "domains": [
+        "language",
+        "multimodal"
+      ],
+      "contexts": [],
+      "x_bio": "MoE model series with foundation (Ling), reasoning (Ring) and any-to-any (Ming) from Ant Group’s AGI initiative, @TheInclusionAI.  https://t.co/6LEkFlo2cq",
+      "x_followers": 16204,
+      "notes": "Ling, Ring, and Ming model families from Ant Group.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "prism-ml",
+      "name": "PrismML",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "PrismML"
+      ],
+      "x_url": "https://x.com/PrismML",
+      "website": "https://prismml.com/",
+      "hugging_face": "prism-ml",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [
+        "on-device"
+      ],
+      "x_bio": "Centering AI research on efficiency.\n\nhttps://t.co/88MQHGCeFD",
+      "x_followers": 29783,
+      "notes": "Efficient model research; the Bonsai ternary model family.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "nace-ai",
+      "name": "Nace AI",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "NaceAI"
+      ],
+      "x_url": "https://x.com/NaceAI",
+      "website": "https://nace.ai/",
+      "hugging_face": "nace-ai",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [
+        "on-device"
+      ],
+      "x_bio": "Small models that learn your business, run it, and are yours.",
+      "x_followers": 2258,
+      "notes": "Small models for private, on-device business use.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "kilo",
+      "name": "Kilo",
+      "kind": "project",
+      "roles": [
+        "harness"
+      ],
+      "x": [
+        "kilocode"
+      ],
+      "x_url": "https://x.com/kilocode",
+      "website": "https://kilo.ai/",
+      "hugging_face": null,
+      "github": null,
+      "domains": [
+        "tooling"
+      ],
+      "contexts": [
+        "agents"
+      ],
+      "x_bio": "Kilo is the all-in-one agentic engineering platform. \n5M+ Kilo Coders. Open source since day one!",
+      "x_followers": 29326,
+      "notes": "Open-source agentic engineering platform, acquired by Anaconda.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "zixuan-li",
+      "name": "Zixuan Li",
+      "kind": "person",
+      "roles": [
+        "researcher"
+      ],
+      "x": [
+        "ZixuanLi_"
+      ],
+      "x_url": "https://x.com/ZixuanLi_",
+      "website": "https://z.ai/",
+      "hugging_face": null,
+      "github": null,
+      "domains": [],
+      "contexts": [],
+      "x_bio": "Lead https://t.co/KepyJGAtVs @Zai_org.",
+      "x_followers": 40522,
+      "notes": "Individual; profile names Z.ai.",
+      "verified_at": "2026-11-14",
+      "affiliation": "zai"
+    },
+    {
+      "id": "stepfun",
+      "name": "StepFun",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "StepFun_ai"
+      ],
+      "x_url": "https://x.com/StepFun_ai",
+      "website": "https://stepfun.ai/",
+      "hugging_face": "stepfun-ai",
+      "github": null,
+      "domains": [
+        "language",
+        "speech",
+        "multimodal"
+      ],
+      "contexts": [],
+      "x_bio": "Scale-up possibilities for everyone.\nAPI Platform: https://t.co/XlaiCy4DGm\nHuggingFace: https://t.co/isMgbv7XSm",
+      "x_followers": 16758,
+      "notes": "Step model family.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "wan",
+      "name": "Wan",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "Alibaba_Wan"
+      ],
+      "x_url": "https://x.com/Alibaba_Wan",
+      "website": "https://wan.video/",
+      "hugging_face": "Wan-AI",
+      "github": null,
+      "domains": [
+        "vision"
+      ],
+      "contexts": [],
+      "x_bio": "Video & Image Generation Model from @Ali_TongyiLab\nDiscord: https://t.co/RI6qTtAnFA",
+      "x_followers": 32248,
+      "notes": "Video and image generation models from Alibaba Tongyi Lab.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "llm-stats",
+      "name": "LLM Stats",
+      "kind": "organization",
+      "roles": [
+        "evaluation"
+      ],
+      "x": [
+        "LlmStats"
+      ],
+      "x_url": "https://x.com/LlmStats",
+      "website": "https://llm-stats.com/",
+      "hugging_face": "LlmStats",
+      "github": null,
+      "domains": [
+        "evaluation"
+      ],
+      "contexts": [],
+      "x_bio": "Independent AI evaluations lab.\n\nWe measure performance on real world tasks.",
+      "x_followers": 1974,
+      "notes": "Independent evaluations on real-world tasks.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "openmoss",
+      "name": "OpenMOSS",
+      "kind": "organization",
+      "roles": [
+        "model-lab",
+        "researcher"
+      ],
+      "x": [
+        "Open_MOSS"
+      ],
+      "x_url": "https://x.com/Open_MOSS",
+      "website": "https://openmoss.ai/",
+      "hugging_face": "OpenMOSS",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [],
+      "x_bio": "An open research lab building artificial general intelligence.\n\nJoin Discord ⚡️ https://t.co/FLvN5uXGlK",
+      "x_followers": 1039,
+      "notes": "Open research lab; MOSS model family.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "goose",
+      "name": "goose",
+      "kind": "project",
+      "roles": [
+        "harness"
+      ],
+      "x": [
+        "goose_oss"
+      ],
+      "x_url": "https://x.com/goose_oss",
+      "website": "https://goose-docs.ai/",
+      "hugging_face": null,
+      "github": "block/goose",
+      "domains": [
+        "tooling"
+      ],
+      "contexts": [
+        "agents"
+      ],
+      "x_bio": "Your native open source AI agent. Desktop app, CLI, and API — for code, workflows, and everything in between.",
+      "x_followers": 14195,
+      "notes": "Open-source native AI agent from Block.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "kind": "project",
+      "roles": [
+        "harness"
+      ],
+      "x": [
+        "cline"
+      ],
+      "x_url": "https://x.com/cline",
+      "website": "https://github.com/cline/cline",
+      "hugging_face": null,
+      "github": "cline/cline",
+      "domains": [
+        "tooling"
+      ],
+      "contexts": [
+        "agents"
+      ],
+      "x_bio": "The open source coding agent that takes over your editor, terminal, and browser to complete work autonomously.\n\nnpm i -g cline",
+      "x_followers": 81619,
+      "notes": "Open-source coding agent.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "MiniMax_AI"
+      ],
+      "x_url": "https://x.com/MiniMax_AI",
+      "website": "https://www.minimax.io/",
+      "hugging_face": "MiniMaxAI",
+      "github": null,
+      "domains": [
+        "language",
+        "speech"
+      ],
+      "contexts": [],
+      "x_bio": "Code: @MiniMax_Code \nMiniMax Design: @Hailuo_AI\nAPI: https://t.co/fHRdSV73Hr\nM Plan: https://t.co/XfJWSyauda",
+      "x_followers": 131577,
+      "notes": "MiniMax model family.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "reflection",
+      "name": "Reflection",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "reflection_ai"
+      ],
+      "x_url": "https://x.com/reflection_ai",
+      "website": "https://reflection.ai/",
+      "hugging_face": "reflection",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [],
+      "x_bio": "Make intelligence open and accessible to all",
+      "x_followers": 27982,
+      "notes": "Open-model lab; the Beam model family.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "Alibaba_Qwen"
+      ],
+      "x_url": "https://x.com/Alibaba_Qwen",
+      "website": "https://qwen.ai/",
+      "hugging_face": "Qwen",
+      "github": null,
+      "domains": [
+        "language",
+        "vision",
+        "code"
+      ],
+      "contexts": [],
+      "x_bio": "Open foundation models for AGI.",
+      "x_followers": 316388,
+      "notes": "Open foundation models from Alibaba.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "higurashi",
+      "name": "Higurashi",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "HigurashiAI"
+      ],
+      "x_url": "https://x.com/HigurashiAI",
+      "website": "https://higurashi.ai/",
+      "hugging_face": "higurashi-ai",
+      "github": null,
+      "domains": [
+        "speech"
+      ],
+      "contexts": [],
+      "x_bio": "Scaling Speech AI",
+      "x_followers": 1158,
+      "notes": "Speech AI model lab.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "artificial-analysis",
+      "name": "Artificial Analysis",
+      "kind": "organization",
+      "roles": [
+        "evaluation"
+      ],
+      "x": [
+        "ArtificialAnlys"
+      ],
+      "x_url": "https://x.com/ArtificialAnlys",
+      "website": "https://artificialanalysis.ai/",
+      "hugging_face": "artificialanalysis",
+      "github": null,
+      "domains": [
+        "evaluation"
+      ],
+      "contexts": [],
+      "x_bio": "Independent analysis of AI",
+      "x_followers": 178644,
+      "notes": "Independent AI analysis and benchmarks.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "unsloth",
+      "name": "Unsloth",
+      "kind": "organization",
+      "roles": [
+        "tooling"
+      ],
+      "x": [
+        "UnslothAI"
+      ],
+      "x_url": "https://x.com/UnslothAI",
+      "website": "https://unsloth.ai/",
+      "hugging_face": "unsloth",
+      "github": null,
+      "domains": [
+        "tooling"
+      ],
+      "contexts": [],
+      "x_bio": "Run and train models locally with the Unsloth Desktop app. 🦥 https://t.co/2kXqhhvdCD",
+      "x_followers": 105519,
+      "notes": "Local training and inference tooling.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "zai",
+      "name": "Z.ai",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "Zai_org"
+      ],
+      "x_url": "https://x.com/Zai_org",
+      "website": "https://z.ai/",
+      "hugging_face": "zai-org",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [],
+      "x_bio": "The AI Lab behind GLM models, dedicated to inspiring the development of AGI to benefit humanity.\nhttps://t.co/gOw7WpwkJt\nhttps://t.co/ot9sGVXU8x",
+      "x_followers": 169399,
+      "notes": "The GLM model family.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "deepseek_ai"
+      ],
+      "x_url": "https://x.com/deepseek_ai",
+      "website": "https://www.deepseek.com/",
+      "hugging_face": "deepseek-ai",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [],
+      "x_bio": "Unravel the mystery of AGI with curiosity. Answer the essential question with long-termism.",
+      "x_followers": 1209048,
+      "notes": "DeepSeek model family.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral AI",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "MistralAI"
+      ],
+      "x_url": "https://x.com/MistralAI",
+      "website": "https://mistral.ai/",
+      "hugging_face": "mistralai",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [],
+      "x_bio": "Frontier AI in your hands. Get work done with @MistralVibe at https://t.co/JsGnCVMUFq.",
+      "x_followers": 228970,
+      "notes": "Mistral model family.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "arena",
+      "name": "Arena",
+      "kind": "organization",
+      "roles": [
+        "evaluation"
+      ],
+      "x": [
+        "arena"
+      ],
+      "x_url": "https://x.com/arena",
+      "website": "https://arena.ai/leaderboard",
+      "hugging_face": null,
+      "github": null,
+      "domains": [
+        "evaluation"
+      ],
+      "contexts": [],
+      "x_bio": "Where AI meets the real world. We measure and advance the frontier of AI through community-driven evaluation. We’re hiring → https://t.co/XBZCrseaWF",
+      "x_followers": 241453,
+      "notes": "Community-driven model evaluation.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "liquid-ai",
+      "name": "Liquid AI",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "liquidai"
+      ],
+      "x_url": "https://x.com/liquidai",
+      "website": "https://www.liquid.ai/",
+      "hugging_face": "LiquidAI",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [
+        "on-device"
+      ],
+      "x_bio": "Build efficient general-purpose AI at every scale.",
+      "x_followers": 47721,
+      "notes": "Efficient general-purpose models, including the LFM family.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "moonbit",
+      "name": "MoonBit",
+      "kind": "project",
+      "roles": [
+        "tooling"
+      ],
+      "x": [
+        "moonbitlang"
+      ],
+      "x_url": "https://x.com/moonbitlang",
+      "website": "https://www.moonbitlang.com/",
+      "hugging_face": null,
+      "github": null,
+      "domains": [
+        "tooling",
+        "code"
+      ],
+      "contexts": [
+        "agents"
+      ],
+      "x_bio": "The Language and Toolchain for Agents at Scale\nReliable, readable, and fast\nDownload: https://t.co/e7mHbvYClv",
+      "x_followers": 3624,
+      "notes": "Language and toolchain for agents.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "bigcode",
+      "name": "BigCode",
+      "kind": "organization",
+      "roles": [
+        "data-lab",
+        "model-lab"
+      ],
+      "x": [
+        "BigCodeProject"
+      ],
+      "x_url": "https://x.com/BigCodeProject",
+      "website": "https://www.bigcode-project.org/",
+      "hugging_face": "bigcode",
+      "github": null,
+      "domains": [
+        "code",
+        "datasets"
+      ],
+      "contexts": [],
+      "x_bio": "Open and responsible research and development of large language models for code. #BigCodeProject run by @huggingface + @ServiceNowRSRCH",
+      "x_followers": 9017,
+      "notes": "Open code models and data, run by Hugging Face and ServiceNow Research.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "webai",
+      "name": "webAI",
+      "kind": "organization",
+      "roles": [
+        "infrastructure",
+        "model-lab"
+      ],
+      "x": [
+        "thewebAI"
+      ],
+      "x_url": "https://x.com/thewebAI",
+      "website": "https://www.webai.com/",
+      "hugging_face": "webAI-Official",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [
+        "sovereign"
+      ],
+      "x_bio": "Sovereign AI for enterprises. Build AI you own on infrastructure you control. Private, specialized models that run where your data lives.",
+      "x_followers": 6789,
+      "notes": "Sovereign AI infrastructure and models for enterprises.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "truefoundry",
+      "name": "TrueFoundry",
+      "kind": "organization",
+      "roles": [
+        "infrastructure"
+      ],
+      "x": [
+        "truefoundry"
+      ],
+      "x_url": "https://x.com/truefoundry",
+      "website": "https://www.truefoundry.com/",
+      "hugging_face": "truefoundry",
+      "github": null,
+      "domains": [
+        "tooling"
+      ],
+      "contexts": [],
+      "x_bio": "TrueFoundry is a unified platform with an enterprise-grade AI Gateway - combining LLM, MCP, and Agent Gateway to securely manage, route, and govern AI workloads",
+      "x_followers": 1287,
+      "notes": "Enterprise AI gateway and orchestration.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "baidu",
+      "name": "Baidu",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "Baidu_Inc"
+      ],
+      "x_url": "https://x.com/Baidu_Inc",
+      "website": "https://ernie.baidu.com/",
+      "hugging_face": "baidu",
+      "github": null,
+      "domains": [
+        "language"
+      ],
+      "contexts": [],
+      "x_bio": "Baidu Inc. is a leading AI company with a strong Internet foundation. \nMedia Contact: intlcomm@baidu.com",
+      "x_followers": 151387,
+      "notes": "ERNIE model family.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "hugging-face",
+      "name": "Hugging Face",
+      "kind": "organization",
+      "roles": [
+        "platform"
+      ],
+      "x": [
+        "huggingface"
+      ],
+      "x_url": "https://x.com/huggingface",
+      "website": "https://huggingface.co/",
+      "hugging_face": "huggingface",
+      "github": null,
+      "domains": [
+        "tooling",
+        "datasets"
+      ],
+      "contexts": [],
+      "x_bio": "The AI community building the future. https://t.co/TpiXQMQ9rZ",
+      "x_followers": 844362,
+      "notes": "Open model, dataset, and tooling platform.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "xenova",
+      "name": "Xenova",
+      "kind": "person",
+      "roles": [
+        "developer"
+      ],
+      "x": [
+        "xenovacom"
+      ],
+      "x_url": "https://x.com/xenovacom",
+      "website": "https://github.com/huggingface/transformers.js",
+      "hugging_face": "Xenova",
+      "github": null,
+      "domains": [
+        "tooling"
+      ],
+      "contexts": [
+        "on-device"
+      ],
+      "x_bio": "Bringing the power of machine learning to the web. Currently working on Transformers.js (@huggingface 🤗)",
+      "x_followers": 21247,
+      "notes": "Individual; builds Transformers.js and browser-side inference.",
+      "verified_at": "2026-11-14",
+      "affiliation": "hugging-face"
+    },
+    {
+      "id": "fabio-angela",
+      "name": "Fabio Angela",
+      "kind": "person",
+      "roles": [
+        "developer"
+      ],
+      "x": [
+        "FabioAngela79"
+      ],
+      "x_url": "https://x.com/FabioAngela79",
+      "website": "https://github.com/MithrilMan/",
+      "hugging_face": null,
+      "github": null,
+      "domains": [],
+      "contexts": [],
+      "x_bio": "L'arroganza umilia anche quando hai ragione, l'umiltà esalta anche quando hai torto.\n\nLongtime developer, so many ideas, so much passion, too much maybe!",
+      "x_followers": 319,
+      "notes": "Individual developer and community member.",
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "samuel-zeng",
+      "name": "Samuel Zeng",
+      "kind": "person",
+      "roles": [
+        "founder"
+      ],
+      "x": [
+        "SamuelZengML"
+      ],
+      "x_url": "https://x.com/SamuelZengML",
+      "website": "https://edge0.ai/",
+      "hugging_face": null,
+      "github": null,
+      "domains": [],
+      "contexts": [
+        "on-device"
+      ],
+      "x_bio": "Founder, https://t.co/rfLQ050cr0 | On-device foundation models. Powerful intelligence, finally on your device. | MIT TR35\nhttps://t.co/WQ9mrGQA21",
+      "x_followers": 5071,
+      "notes": "Founder; profile links to Edge0.",
+      "verified_at": "2026-11-14",
+      "affiliation": "edge0-ai"
+    }
+  ],
+  "notes": "Seeded from the owner's public X list on 2026-11-14. The two Kimi accounts are merged into one entity. Follower counts are context, not a quality signal."
+}
