@@ -10,6 +10,7 @@ import {
   metricForTask,
   modelHref,
   scorecardAxes,
+  sortTags,
   tagLabel,
 } from "../../../lib/data"
 
@@ -52,15 +53,14 @@ const models = [...tagged].sort((a, b) => {
   return b.score - a.score || a.name.localeCompare(b.name)
 })
 
-const contexts = [...new Set(models.flatMap((model) => model.tags.filter((t) => t.startsWith("context:"))))]
-  .map((t) => t.slice("context:".length))
-  .sort()
-const licenses = [...new Set(models.map((model) => model.license))].sort()
+const allTags = sortTags([...new Set(models.flatMap((model) => model.tags))])
 const axis = (model: (typeof models)[number], key: "openness" | "performance" | "research" | "syndication") =>
   scorecardAxes(model).find((entry) => entry.key === key)?.value ?? null
 const scorecardTone = (key: string) => `score-${key}`
 const scorecardTip = (key: string) =>
-  key === "openness"
+  key === "overall"
+    ? "Overall score: weighted mean of the available axes. Missing axes are excluded, not zero."
+    : key === "openness"
     ? "Openness/Morality: what the release gives back. Computed from current release terms."
     : key === "performance"
       ? "Performance/Intelligence: current measured performance on the model's task."
@@ -107,28 +107,42 @@ const scorecardTip = (key: string) =>
         <input id="q" type="search" placeholder="Name, organisation, or summary" autocomplete="off" />
       </div>
       <div class="field">
-        <label for="context">Context</label>
-        <select id="context">
-          <option value="">All contexts</option>
-          {contexts.map((context) => <option value={context}>{context.replaceAll("-", " ")}</option>)}
-        </select>
+        <label>Filter <span class="field-hint">all required</span></label>
+        <details class="combo" id="filter-combo">
+          <summary><span id="filter-summary">All tags</span></summary>
+          <div class="combo-panel">
+            {allTags.map((available) => (
+              <label class="combo-option">
+                <input type="checkbox" name="filter" value={available} />
+                <span>{available}</span>
+              </label>
+            ))}
+          </div>
+        </details>
       </div>
       <div class="field">
-        <label for="license">Licence</label>
-        <select id="license">
-          <option value="">All licences</option>
-          {licenses.map((license) => <option value={license}>{license}</option>)}
-        </select>
+        <label>Options <span class="field-hint">any required</span></label>
+        <details class="combo" id="options-combo">
+          <summary><span id="options-summary">Any tag</span></summary>
+          <div class="combo-panel">
+            {allTags.map((available) => (
+              <label class="combo-option">
+                <input type="checkbox" name="options" value={available} />
+                <span>{available}</span>
+              </label>
+            ))}
+          </div>
+        </details>
       </div>
       <div class="field">
         <label for="sort">Sort</label>
         <div class="sort-control">
           <select id="sort">
-            <option value="performance">Performance/Intelligence</option>
             <option value="overall">Overall score</option>
+            <option value="syndication">Syndication</option>
+            <option value="performance">Performance/Intelligence</option>
             <option value="openness">Openness/Morality</option>
             <option value="research">Citation/Research</option>
-            <option value="syndication">Syndication</option>
             <option value="released">Release date</option>
             <option value="name">Name</option>
             {hasTaskMetric && <option value="task">{metric!.label}</option>}
@@ -161,8 +175,7 @@ const scorecardTip = (key: string) =>
           <div
             class="list-row"
             data-name={`${model.name} ${model.organization} ${model.summary}`.toLowerCase()}
-            data-contexts={model.tags.filter((t) => t.startsWith("context:")).map((t) => t.slice(8)).join(" ")}
-            data-license={model.license}
+            data-tags={model.tags.join(" ")}
             data-overall={model.scorecard?.overall.score ?? -1}
             data-openness={axis(model, "openness") ?? -1}
             data-performance={axis(model, "performance") ?? -1}
@@ -231,8 +244,12 @@ const scorecardTip = (key: string) =>
 
   <script define:vars={{ defaultSort }}>
     const q = document.getElementById("q")
-    const context = document.getElementById("context")
-    const license = document.getElementById("license")
+    const filterCombo = document.getElementById("filter-combo")
+    const optionsCombo = document.getElementById("options-combo")
+    const filterSummary = document.getElementById("filter-summary")
+    const optionsSummary = document.getElementById("options-summary")
+    const filterChecks = [...document.querySelectorAll("#filter-combo input[type=checkbox]")]
+    const optionChecks = [...document.querySelectorAll("#options-combo input[type=checkbox]")]
     const sort = document.getElementById("sort")
     const order = document.getElementById("order")
     const count = document.getElementById("count")
@@ -243,9 +260,23 @@ const scorecardTip = (key: string) =>
     const params = new URLSearchParams(location.search)
     let orderMode = params.get("order") === "worst" ? "worst" : "best"
     if (q && params.get("q")) q.value = params.get("q")
-    if (context && params.get("context")) context.value = params.get("context")
-    if (license && params.get("license")) license.value = params.get("license")
     if (sort && params.get("sort")) sort.value = params.get("sort")
+
+    const selectedFilter = (params.get("filter") ?? "").split(",").filter(Boolean)
+    const selectedOptions = (params.get("options") ?? "").split(",").filter(Boolean)
+    for (const box of filterChecks) box.checked = selectedFilter.includes(box.value)
+    for (const box of optionChecks) box.checked = selectedOptions.includes(box.value)
+
+    function selected(boxes) {
+      return boxes.filter((box) => box.checked).map((box) => box.value)
+    }
+
+    function updateSummaries() {
+      const filterCount = selected(filterChecks).length
+      const optionCount = selected(optionChecks).length
+      if (filterSummary) filterSummary.textContent = filterCount ? `${filterCount} selected` : "All tags"
+      if (optionsSummary) optionsSummary.textContent = optionCount ? `${optionCount} selected` : "Any tag"
+    }
 
     function setOrderLabel() {
       if (!order) return
@@ -311,19 +342,21 @@ const scorecardTip = (key: string) =>
 
     function apply() {
       const search = q?.value.trim().toLowerCase() ?? ""
-      const contextValue = context?.value ?? ""
-      const licenseValue = license?.value ?? ""
+      const required = selected(filterChecks)
+      const optional = selected(optionChecks)
       let visible = 0
       for (const row of rows) {
+        const tags = row.dataset.tags?.split(" ") ?? []
         const matches =
           (!search || row.dataset.name?.includes(search)) &&
-          (!contextValue || row.dataset.contexts?.split(" ").includes(contextValue)) &&
-          (!licenseValue || row.dataset.license === licenseValue)
+          (required.length === 0 || required.every((value) => tags.includes(value))) &&
+          (optional.length === 0 || optional.some((value) => tags.includes(value)))
         row.classList.toggle("hidden", !matches)
         if (matches) visible++
       }
       if (count) count.textContent = `Showing ${visible} of ${rows.length} models`
       empty?.classList.toggle("hidden", visible > 0)
+      updateSummaries()
 
       const mode = sort?.value ?? defaultSort
       setOrderLabel()
@@ -358,18 +391,25 @@ const scorecardTip = (key: string) =>
 
       const next = new URLSearchParams()
       if (search) next.set("q", search)
-      if (contextValue) next.set("context", contextValue)
-      if (licenseValue) next.set("license", licenseValue)
+      if (required.length > 0) next.set("filter", required.join(","))
+      if (optional.length > 0) next.set("options", optional.join(","))
       if (mode !== defaultSort) next.set("sort", mode)
       if (orderMode !== "best") next.set("order", orderMode)
       const query = next.toString()
       history.replaceState(null, "", query ? `?${query}` : location.pathname)
     }
 
-    for (const control of [q, context, license, sort]) control?.addEventListener("input", apply)
+    q?.addEventListener("input", apply)
+    for (const box of [...filterChecks, ...optionChecks]) box.addEventListener("change", apply)
+    sort?.addEventListener("input", apply)
     order?.addEventListener("click", () => {
       orderMode = orderMode === "best" ? "worst" : "best"
       apply()
+    })
+    document.addEventListener("click", (event) => {
+      for (const combo of [filterCombo, optionsCombo]) {
+        if (combo && !combo.contains(event.target)) combo.removeAttribute("open")
+      }
     })
     apply()
   </script>

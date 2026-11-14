@@ -16,7 +16,9 @@ const axis = (model: (typeof models)[number], key: "openness" | "performance" | 
   scorecardAxes(model).find((entry) => entry.key === key)?.value ?? null
 const scorecardTone = (key: string) => `score-${key}`
 const scorecardTip = (key: string) =>
-  key === "openness"
+  key === "overall"
+    ? "Overall score: weighted mean of the available axes. Missing axes are excluded, not zero."
+    : key === "openness"
     ? "Openness/Morality: what the release gives back. Computed from current release terms."
     : key === "performance"
       ? "Performance/Intelligence: current measured performance on the model's task."

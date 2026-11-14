@@ -348,16 +348,22 @@ export function formatIndex(value: number | null | undefined): string {
   return Number.isInteger(value) ? String(value) : value.toFixed(1)
 }
 
-export const SCORECARD_AXIS_ORDER = ["syndication", "performance", "openness", "research"] as const
+export const SCORECARD_AXIS_ORDER = ["overall", "syndication", "performance", "openness", "research"] as const
 
 export function scorecardAxes(model: CompactModel): Array<{
-  key: "openness" | "performance" | "research" | "syndication"
+  key: "overall" | "openness" | "performance" | "research" | "syndication"
   label: string
   value: number | null
   display: string
 }> {
   const scorecard = model.scorecard
   const entries = {
+    overall: {
+      key: "overall" as const,
+      label: "overall",
+      value: scorecard?.overall.score ?? null,
+      display: scorecard?.overall.score == null ? "—" : String(Math.round(scorecard.overall.score)),
+    },
     openness: {
       key: "openness" as const,
       label: "openness",
