@@ -3112,10 +3112,10 @@ html {
 }
 
 .tag-capability {
-  --pill-bg: #e4e9dd;
-  --pill-border: #cbd5c1;
-  --pill-text: #41513a;
-  --pill-count: #6f7f5e;
+  --pill-bg: #e4e4f4;
+  --pill-border: #c8c8e2;
+  --pill-text: #3f3f6b;
+  --pill-count: #6666a0;
 }
 
 .tag-terms {
@@ -3187,4 +3187,8 @@ html {
 .pill-links a:hover {
   color: var(--clay-dark);
   border-color: var(--clay);
+}
+
+.pill-row-missing {
+  opacity: 0.9;
 }

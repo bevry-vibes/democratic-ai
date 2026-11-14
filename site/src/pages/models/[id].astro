@@ -111,25 +111,59 @@ const orgWebsites: Record<string, string> = {
   "nace-ai": "https://nace.ai",
 }
 
+const providers = model.access.providers ?? []
+const providerModels = model.access.provider_models ?? {}
+const openCodeProvider = providerModels.opencode?.length ? "opencode" : providerModels["opencode-go"]?.length ? "opencode-go" : null
+const openCodeModels = openCodeProvider ? providerModels[openCodeProvider] : []
+const isFreeProviderModel = (entry: { id: string; cost: { input?: number; output?: number } | null }) =>
+  entry.cost?.input === 0 && entry.cost?.output === 0
+const openCode = openCodeModels.find(isFreeProviderModel) ?? openCodeModels[0]
+const openCodeFree = openCode ? isFreeProviderModel(openCode) : false
+const cloudflareModel = providerModels["cloudflare-workers-ai"]?.[0]
+const openRouterModel = providerModels.openrouter?.[0]
+
 const accessInfoLinks: Record<string, PillLinkData> = {
-  huggingface: { label: "Hugging Face model card", href: `https://huggingface.co/${model.access.hugging_face}`, external: true },
-  vllm: { label: "vLLM", href: "https://docs.vllm.ai", external: true },
-  sglang: { label: "SGLang", href: "https://docs.sglang.ai", external: true },
-  opencode: { label: "OpenCode", href: "https://opencode.ai", external: true },
-  cloudflare: { label: "Cloudflare Workers AI", href: "https://developers.cloudflare.com/workers-ai/", external: true },
-  openrouter: { label: "OpenRouter", href: "https://openrouter.ai", external: true },
-  python: { label: "Python", href: "https://www.python.org", external: true },
-  mlx: { label: "MLX", href: "https://ml-explore.github.io/mlx/", external: true },
-  "llama.cpp": { label: "llama.cpp", href: "https://github.com/ggml-org/llama.cpp", external: true },
-  ollama: { label: "Ollama", href: "https://ollama.com", external: true },
-  litert: { label: "LiteRT", href: "https://ai.google.dev/edge/litert", external: true },
-  webgpu: { label: "WebGPU", href: "https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API", external: true },
-  onnx: { label: "ONNX Runtime", href: "https://onnxruntime.ai", external: true },
-  coreml: { label: "Core ML", href: "https://developer.apple.com/documentation/coreml", external: true },
-  android: { label: "Android", href: "https://developer.android.com", external: true },
-  ios: { label: "iOS", href: "https://developer.apple.com/ios/", external: true },
-  node: { label: "Node.js", href: "https://nodejs.org", external: true },
-  browser: { label: "WebAssembly", href: "https://webassembly.org", external: true },
+  huggingface: { label: "Go to the Hugging Face entry for this model", href: `https://huggingface.co/${model.access.hugging_face}`, external: true },
+  vllm: { label: "Go to the vLLM website", href: "https://docs.vllm.ai", external: true },
+  sglang: { label: "Go to the SGLang website", href: "https://docs.sglang.ai", external: true },
+  opencode: { label: "Go to the OpenCode website", href: "https://opencode.ai", external: true },
+  cloudflare: { label: "Go to the Cloudflare Workers AI website", href: "https://developers.cloudflare.com/workers-ai/", external: true },
+  openrouter: { label: "Go to the OpenRouter website", href: "https://openrouter.ai", external: true },
+  python: { label: "Go to the Python website", href: "https://www.python.org", external: true },
+  mlx: { label: "Go to the MLX website", href: "https://ml-explore.github.io/mlx/", external: true },
+  "llama.cpp": { label: "Go to the llama.cpp website", href: "https://github.com/ggml-org/llama.cpp", external: true },
+  ollama: { label: "Go to the Ollama website", href: "https://ollama.com", external: true },
+  litert: { label: "Go to the LiteRT website", href: "https://ai.google.dev/edge/litert", external: true },
+  webgpu: { label: "Go to the WebGPU documentation", href: "https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API", external: true },
+  onnx: { label: "Go to the ONNX Runtime website", href: "https://onnxruntime.ai", external: true },
+  coreml: { label: "Go to the Core ML documentation", href: "https://developer.apple.com/documentation/coreml", external: true },
+  android: { label: "Go to the Android developer site", href: "https://developer.android.com", external: true },
+  ios: { label: "Go to the iOS developer site", href: "https://developer.apple.com/ios/", external: true },
+  node: { label: "Go to the Node.js website", href: "https://nodejs.org", external: true },
+  browser: { label: "Go to the WebAssembly website", href: "https://webassembly.org", external: true },
+}
+
+const runtimeInfo = (runtime: string): PillLinkData | null => {
+  if (runtime === "opencode") {
+    return openCode
+      ? { label: "Go to the OpenCode entry for this model", href: `https://opencode.ai/console/models/${openCode.id}`, external: true }
+      : accessInfoLinks.opencode
+  }
+  if (runtime === "cloudflare") {
+    return cloudflareModel
+      ? {
+          label: "Go to the Cloudflare entry for this model",
+          href: `https://developers.cloudflare.com/workers-ai/models/${encodeURIComponent(cloudflareModel.id)}/`,
+          external: true,
+        }
+      : accessInfoLinks.cloudflare
+  }
+  if (runtime === "openrouter") {
+    return openRouterModel
+      ? { label: "Go to the OpenRouter entry for this model", href: `https://openrouter.ai/${openRouterModel.id}`, external: true }
+      : accessInfoLinks.openrouter
+  }
+  return accessInfoLinks[runtime] ?? null
 }
 
 const accessRows: PillRowData[] = [
@@ -149,7 +183,7 @@ const accessRows: PillRowData[] = [
     tone: "tag-access",
     missing: !model.access.models_dev,
     links: model.access.models_dev
-      ? [{ label: "models.dev entry", href: model.access.models_dev, external: true }]
+      ? [{ label: "Go to the models.dev entry for this model", href: model.access.models_dev, external: true }]
       : [],
   },
   {
@@ -161,12 +195,12 @@ const accessRows: PillRowData[] = [
     tone: "tag-access",
     missing: !model.access.agent_detect,
     links: model.access.agent_detect
-      ? [{ label: "agent-detect entry", href: model.access.agent_detect, external: true }]
+      ? [{ label: "Go to the agent-detect entry for this model", href: model.access.agent_detect, external: true }]
       : [],
   },
   ...accessTags.map((tag) => {
     const runtime = tag.slice("access:".length)
-    const info = accessInfoLinks[runtime]
+    const info = runtimeInfo(runtime)
     return {
       label: `access:${runtime}`,
       explanation: tagDefinition(tag),
@@ -328,26 +362,9 @@ const termsCardRows: PillRowData[] = [
   ...termRows,
 ]
 
-const providers = model.access.providers ?? []
-const providerModels = model.access.provider_models ?? {}
-const openCodeProvider = providerModels.opencode?.length ? "opencode" : providerModels["opencode-go"]?.length ? "opencode-go" : null
-const openCodeModels = openCodeProvider ? providerModels[openCodeProvider] : []
-const isFreeProviderModel = (entry: { id: string; cost: { input?: number; output?: number } | null }) =>
-  entry.cost?.input === 0 && entry.cost?.output === 0
-const openCode = openCodeModels.find(isFreeProviderModel) ?? openCodeModels[0]
-const openCodeFree = openCode ? isFreeProviderModel(openCode) : false
-const cloudflareModel = providerModels["cloudflare-workers-ai"]?.[0]
-const openRouterModel = providerModels.openrouter?.[0]
 const hostedRuntimes = new Set(["opencode", "cloudflare", "openrouter", "hosted"])
 const localRuntimes = model.capabilities.runtimes.filter((runtime) => !hostedRuntimes.has(runtime))
 const usage = model.usage ?? []
-const hasOpenCode = Boolean(openCode)
-const hasCloudflare = Boolean(cloudflareModel)
-const hasOpenRouter = Boolean(openRouterModel)
-const openCodeStep = 1
-const cloudflareStep = hasOpenCode ? 2 : 1
-const openRouterStep = (hasOpenCode ? 1 : 0) + (hasCloudflare ? 1 : 0) + 1
-const diyStep = (hasOpenCode ? 1 : 0) + (hasCloudflare ? 1 : 0) + (hasOpenRouter ? 1 : 0) + 1
 const memoryLow = model.footprint.params_b == null ? null : Math.ceil(model.footprint.params_b * 0.55)
 const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.footprint.params_b * 2)
 ---
@@ -515,7 +532,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
 
         {openCode && (
           <>
-            <h3>{openCodeStep}. Use OpenCode (recommended)</h3>
+            <h3>Use OpenCode (recommended)</h3>
             <p>
               <a href="https://opencode.ai" target="_blank" rel="noreferrer">OpenCode</a> is an open-source coding
               agent for the terminal, desktop, and web. It is the simplest way to run this model, and free models stay
@@ -523,13 +540,14 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
             </p>
             <div class="chips">
               <Pill
-                label={`opencode/${openCode.id}`}
+                label="access:opencode"
                 href="/models/?filter=access:opencode"
-                tone="tag-status"
-                tooltip="The OpenCode Console model ID. Opens models available on OpenCode."
+                tone="tag-access"
+                tooltip="Through OpenCode, the open-source coding agent."
               />
               {openCodeFree && <span class="badge badge-free">free</span>}
             </div>
+            <p class="muted" style="font-size:0.86rem">Model: <code>{openCode.id}</code></p>
             <ol class="steps">
               <li>
                 <a href="https://opencode.ai" target="_blank" rel="noreferrer">Install OpenCode</a> and open the TUI.
@@ -554,16 +572,17 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
 
         {cloudflareModel && (
           <>
-            <h3>{cloudflareStep}. Run on Cloudflare Workers AI</h3>
+            <h3>Run on Cloudflare Workers AI</h3>
             <p>Cloudflare hosts this model. You need a Cloudflare account and a Worker.</p>
             <div class="chips">
               <Pill
-                label={cloudflareModel.id}
+                label="access:cloudflare"
                 href="/models/?filter=access:cloudflare"
-                tone="tag-source"
-                tooltip="The Cloudflare Workers AI model ID. Opens models available on Cloudflare."
+                tone="tag-access"
+                tooltip="Through Cloudflare Workers AI."
               />
             </div>
+            <p class="muted" style="font-size:0.86rem">Model: <code>{cloudflareModel.id}</code></p>
             <ol class="steps">
               <li>
                 <a href="https://developers.cloudflare.com/workers-ai/get-started/workers-wrangler/" target="_blank" rel="noreferrer">
@@ -586,16 +605,17 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
 
         {openRouterModel && (
           <>
-            <h3>{openRouterStep}. Use OpenRouter</h3>
+            <h3>Use OpenRouter</h3>
             <p>OpenRouter gives you one API key and one endpoint for many hosted models.</p>
             <div class="chips">
               <Pill
-                label={openRouterModel.id}
-                href={`https://openrouter.ai/${openRouterModel.id}`}
-                tone="tag-source"
-                tooltip="The OpenRouter model ID."
+                label="access:openrouter"
+                href="/models/?filter=access:openrouter"
+                tone="tag-access"
+                tooltip="Through the OpenRouter API."
               />
             </div>
+            <p class="muted" style="font-size:0.86rem">Model: <code>{openRouterModel.id}</code></p>
             <ol class="steps">
               <li>
                 <a href="https://openrouter.ai" target="_blank" rel="noreferrer">Create an OpenRouter account</a>
@@ -611,53 +631,50 @@ model: "${openRouterModel.id}"`}</code></pre>
           </>
         )}
 
-        <h3>{diyStep}. Run it yourself</h3>
-        <p>
-          {usage.length > 0
-            ? "The Hugging Face model card gives the current install and run commands."
-            : "You can run the weights locally when your machine has enough memory and a supported runtime."}
-        </p>
-        {localRuntimes.length > 0 && (
+        <h3>Use another provider</h3>
+        {model.access.models_dev ? (
+          <>
+            <p>Other hosted providers and pricing are listed on models.dev.</p>
+            <a class="mono-small" href={model.access.models_dev} target="_blank" rel="noreferrer">
+              Go to the models.dev entry for this model
+            </a>
+          </>
+        ) : (
+          <p class="muted">No other hosted provider is recorded for this model.</p>
+        )}
+
+        <h3>Run it locally</h3>
+        {localRuntimes.length > 0 ? (
           <div class="chips">
             {localRuntimes.map((runtime) => (
-              <Pill label={runtime} href={tagPath(`access:${runtime}`)} tone="tag-access" tooltip={tagDefinition(`access:${runtime}`)} />
+              <Pill
+                label={`access:${runtime}`}
+                href={tagPath(`access:${runtime}`)}
+                tone="tag-access"
+                tooltip={tagDefinition(`access:${runtime}`)}
+              />
             ))}
           </div>
-        )}
-        {localRuntimes.length === 0 && usage.length === 0 && (
-          <div class="chips">
-            <Pill label="no runtime recorded" tone="capability-unknown" tooltip="No local runtime is recorded for this model." />
-          </div>
+        ) : (
+          <p class="muted">No local runtime is recorded for this model.</p>
         )}
         {usage.length > 0 && (
           <>
+            <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
+              The model card gives these install and run commands.
+            </p>
             {usage.map((block) => (
               <pre><code>{block.code}</code></pre>
             ))}
-            <p class="muted" style="font-size:0.86rem">
-              From the <a href={`https://huggingface.co/${model.access.hugging_face}`} target="_blank" rel="noreferrer">Hugging Face model card</a>.
-              Follow it for the current full instructions.
-            </p>
           </>
         )}
-        <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
-          {model.footprint.params_b == null
-            ? "Parameter count is unknown. Check the model card for memory requirements."
-            : `Plan for roughly ${memoryLow}–${memoryHigh} GB of weights before KV cache and runtime overhead.`}
-        </p>
-        {providers.length > 0 && (
-          <p class="muted" style="font-size:0.86rem">
-            {`${providers.length} hosted providers are listed on models.dev.`}
-            {model.access.models_dev && (
-              <>
-                {" "}
-                <a href={model.access.models_dev} target="_blank" rel="noreferrer">See the providers on models.dev</a>.
-              </>
-            )}
+        {model.footprint.params_b != null && (
+          <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
+            Plan for roughly {memoryLow}–{memoryHigh} GB of weights before KV cache and runtime overhead.
           </p>
         )}
         <a class="mono-small" href={`https://huggingface.co/${model.access.hugging_face}`} target="_blank" rel="noreferrer">
-          Get the weights on Hugging Face
+          Go to the Hugging Face entry for this model
         </a>
       </div>
 
