@@ -51,11 +51,11 @@ A model can release its weights and still keep its training data and recipe secr
 | --- | --- |
 | **Commons** | Weights, training data, and training code are open. The licence permits reuse. |
 | **Reciprocal** | Weights and training code are open. The training data is documented or open. The licence permits reuse. |
-| **Shared** | Weights are available, but the training data stays closed or the licence restricts reuse. |
+| **Shared** | Weights are available, but the training data is not open and the licence may restrict reuse. |
 | **Closed** | The weights are not available. |
-| **Unproven** | The evidence is not sufficient to make a determination. |
+| **Unproven** | The evidence about the weights is not sufficient to make a determination. |
 
-The tiers describe what you can reuse. They are not a judgement on the worth of a project. **Open-weight is a real contribution to the commons.** Open data and open code add to it. When the weights are available, a conditional licence — such as a non-commercial term or a user cap — makes the model **Shared** even when the weights are open. Each record shows the exact licence, the evidence, and the date of the last check.
+The tiers describe what you can reuse. They are not a judgement on the worth of a project. **Open-weight is a real contribution to the commons.** Open data and open code add to it. Most records are **shared**: the weights are open, the training data is unchecked, and the licence may add conditions. **Unproven** is reserved for records where the weights themselves are not evidenced. Each record shows the exact licence, the evidence, and the date of the last check.
 
 ## Scorecard
 
