@@ -130,6 +130,14 @@ Contexts are tags for a consumer's constraint. They do not change the tier.
 
 `on-device` means the model can run on consumer hardware without a network connection. `edge` means the model targets phones, wearables, or embedded devices. A model can be both.
 
+### Use cases
+
+A use case is a job with constraints and success criteria. It is not a domain. A domain says what a model is; a use case says what a person needs to do, under which limits.
+
+The first six use cases are in `data/use-cases.json`: Indonesian↔English translation, offline speech transcription, on-device speech synthesis, on-device topic tagging, student report generation, and coding agents.
+
+A use case carries its own evidence and decision. It does not inherit a tier from the models it recommends. A reciprocal model can be a poor fit; a shared model can be the best fit.
+
 ### Discoveries
 
 A discovery is a dated change in the field: a release, a paper, a licence change, a benchmark result, or a policy decision. A discovery links to the entities it affects. The journal is the chronological view; a discovery page is the topical view.

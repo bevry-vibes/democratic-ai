@@ -253,11 +253,12 @@ A model moves between tiers only through a recorded evidence change. The journal
 
 ### 2. Categories
 
-Three facets, as DESIGN.md records:
+Four facets, as DESIGN.md records:
 
 - **Tier** — computed: `commons`, `reciprocal`, `shared`, `closed`, `unproven`.
 - **Domain** — editorial: `language`, `code`, `vision`, `speech`, `multimodal`, `embeddings`, `datasets`, `tooling`, `evaluation`, `governance`.
 - **Context** — tags: `on-device`, `edge`, `multilingual`, `low-resource`, `sovereign`, `privacy`, `education`, `accessibility`, `science`, `agents`, `reproducible`.
+- **Use case** — the job: `translation`, `transcription`, `speech-synthesis`, `classification`, `report-generation`, `code`, `retrieval`, `agent-tools`.
 
 The README presents the tiers first, because they are the distinctive idea, then five consumer-oriented browse sections:
 
