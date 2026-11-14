@@ -70,7 +70,30 @@ const tagCards = TAG_NAMESPACE_ORDER.map((namespace) => ({
   label: tagCardLabels[namespace] ?? namespace,
   tags: model.tags.filter((tag) => tag.startsWith(`${namespace}:`)),
 })).filter((card) => card.tags.length > 0)
+const runtimeOrder = TAG_NAMESPACE_ORDER.indexOf("runtime")
+const tagCardsBeforeAccess = tagCards.filter((card) => TAG_NAMESPACE_ORDER.indexOf(card.namespace) < runtimeOrder)
+const tagCardsAfterAccess = tagCards.filter((card) => TAG_NAMESPACE_ORDER.indexOf(card.namespace) > runtimeOrder)
+const runtimeTags = model.tags.filter((tag) => tag.startsWith("runtime:"))
 const structuredOutputDefinition = "Return typed or schema-constrained output."
+const runtimeLabels: Record<string, string> = {
+  opencode: "OpenCode",
+  cloudflare: "Cloudflare Workers AI",
+  openrouter: "OpenRouter",
+  python: "Python",
+  mlx: "MLX",
+  "llama.cpp": "llama.cpp",
+  litert: "LiteRT",
+  webgpu: "WebGPU",
+  hosted: "Hosted API",
+  browser: "Browser",
+  node: "Node",
+  onnx: "ONNX Runtime",
+  ollama: "Ollama",
+  android: "Android",
+  ios: "iOS",
+  coreml: "Core ML",
+}
+const runtimeLabel = (runtime: string) => runtimeLabels[runtime] ?? runtime
 const formatDate = (value: string | null | undefined) =>
   value
     ? new Date(value).toLocaleDateString("en-GB", {
@@ -159,7 +182,89 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
 
   <section class="wrap detail-grid">
     <div>
-      {tagCards.map((card) => (
+      {tagCardsBeforeAccess.map((card) => (
+        <div class="panel">
+          <h2>{card.label}</h2>
+          <ul class="tag-explain">
+            {card.tags.map((tag) => (
+              <li>
+                <Pill label={tag} href={tagPath(tag)} tone={tagStatus(tag)} tooltip={tagDefinition(tag)} />
+                <span>{tagDefinition(tag)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      <div class="panel" id="access">
+        <h2>Access</h2>
+        <ul class="tag-explain">
+          <li>
+            <Pill
+              label="Hugging Face"
+              href={`https://huggingface.co/${model.access.hugging_face}`}
+              tooltip="The weights and model card on Hugging Face."
+            />
+            <span>
+              The weights and model card at{" "}
+              <a href={`https://huggingface.co/${model.access.hugging_face}`} target="_blank" rel="noreferrer">
+                {model.access.hugging_face}
+              </a>.
+            </span>
+          </li>
+          <li>
+            {model.access.models_dev ? (
+              <Pill label="models.dev" href={model.access.models_dev} tooltip="Hosted providers, pricing, and model metadata." />
+            ) : (
+              <Pill label="models.dev" tooltip="No models.dev entry is recorded for this model." />
+            )}
+            <span>
+              {model.access.models_dev
+                ? "Hosted providers, pricing, and model metadata."
+                : "No models.dev entry is recorded for this model."}
+            </span>
+          </li>
+          <li>
+            {model.access.agent_detect ? (
+              <Pill label="agent-detect" href={model.access.agent_detect} tooltip="Harness and provider identification." />
+            ) : (
+              <Pill label="agent-detect" tooltip="No agent-detect entry is recorded for this model." />
+            )}
+            <span>
+              {model.access.agent_detect
+                ? "Harness and provider identification."
+                : "No agent-detect entry is recorded for this model."}
+            </span>
+          </li>
+          {runtimeTags.map((tag) => {
+            const runtime = tag.slice(8)
+            return (
+              <li>
+                <Pill
+                  label={runtimeLabel(runtime)}
+                  href={tagPath(tag)}
+                  tone={tagStatus(tag)}
+                  tooltip={tagDefinition(tag)}
+                />
+                <span>{tagDefinition(tag)}</span>
+              </li>
+            )
+          })}
+          {model.access.gated === true || model.access.gated === "auto" || model.access.gated === "manual" ? (
+            <li>
+              <Pill label="Gated" tooltip="Access requires approval or acceptance of terms." />
+              <span>Access requires approval or acceptance of terms.</span>
+            </li>
+          ) : model.access.gated === false ? (
+            <li>
+              <Pill label="Open access" tooltip="No approval is required to access the weights." />
+              <span>No approval is required to access the weights.</span>
+            </li>
+          ) : null}
+        </ul>
+      </div>
+
+      {tagCardsAfterAccess.map((card) => (
         <div class="panel">
           <h2>{card.label}</h2>
           <ul class="tag-explain">
@@ -320,43 +425,6 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
         <p class="muted" style="font-size:0.82rem;margin-top:0.8rem">
           Training-data and training-code evidence is not assessed in this pass. `unknown` means unchecked, not closed.
         </p>
-      </div>
-
-      <div class="panel" id="access">
-        <h2>Access</h2>
-        <ul class="tag-explain">
-          <li>
-            <Pill
-              label={model.access.hugging_face}
-              href={`https://huggingface.co/${model.access.hugging_face}`}
-              tooltip="The weights and model card on Hugging Face."
-            />
-            <span>The weights and model card on Hugging Face.</span>
-          </li>
-          <li>
-            {model.access.models_dev ? (
-              <Pill label="models.dev" href={model.access.models_dev} tooltip="Hosted providers, pricing, and model metadata." />
-            ) : (
-              <Pill label="No entry" tooltip="No models.dev entry is recorded for this model." />
-            )}
-            <span>Hosted providers, pricing, and model metadata.</span>
-          </li>
-          <li>
-            {model.access.agent_detect ? (
-              <Pill label="agent-detect" href={model.access.agent_detect} tooltip="Harness and provider identification." />
-            ) : (
-              <Pill label="No entry" tooltip="No agent-detect entry is recorded for this model." />
-            )}
-            <span>Harness and provider identification.</span>
-          </li>
-          <li>
-            <Pill
-              label={model.access.gated === true || model.access.gated === "auto" || model.access.gated === "manual" ? "Gated" : model.access.gated === false ? "Open access" : "Gated: unknown"}
-              tooltip="Whether access requires approval or acceptance of terms."
-            />
-            <span>Whether access requires approval or acceptance of terms.</span>
-          </li>
-        </ul>
       </div>
 
       <div class="panel" id="builds">
