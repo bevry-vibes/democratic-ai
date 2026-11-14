@@ -1,7 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro"
 import CountPill from "../../components/CountPill.astro"
-import { allTagPairs, getIndex, getTags, tagLabel, tagPath } from "../../lib/data"
+import { TAG_NAMESPACE_ORDER, allTagPairs, getIndex, getTags, tagLabel, tagPath } from "../../lib/data"
 
 const index = getIndex()
 const vocabulary = getTags()
@@ -26,9 +26,8 @@ for (const { tag, count } of allTagPairs(index)) {
   grouped.set(namespace!, list)
 }
 
-const namespaceOrder = ["task", "domain", "context", "modality", "runtime", "language", "license", "family", "status", "relation", "source"]
 const namespaces = [...grouped.entries()].sort(
-  (a, b) => namespaceOrder.indexOf(a[0]) - namespaceOrder.indexOf(b[0]) || a[0].localeCompare(b[0]),
+  (a, b) => TAG_NAMESPACE_ORDER.indexOf(a[0]) - TAG_NAMESPACE_ORDER.indexOf(b[0]) || a[0].localeCompare(b[0]),
 )
 ---
 
@@ -62,7 +61,7 @@ const namespaces = [...grouped.entries()].sort(
                 label={tagLabel(tag)}
                 count={count}
                 href={tagPath(tag)}
-                tone={namespace === "task" ? "sage" : namespace === "domain" ? "sky" : namespace === "context" ? "ochre" : "plum"}
+                tone={`tag-${namespace}`}
                 tooltip={definition ?? vocabulary.namespaces[namespace]?.definition ?? "A tag in the catalogue."}
               />
             ))}

@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro"
 import CountPill from "../../components/CountPill.astro"
 import TagChips from "../../components/TagChips.astro"
 import {
+  TAG_NAMESPACE_ORDER,
   bandClass,
   formatContextCount,
   formatIndex,
@@ -31,23 +32,15 @@ const { model: compact } = Astro.props
 const model = getModel(compact.id) as ModelRecord
 const scorecard = model.scorecard
 const bool = (value: boolean | null | undefined) => (value === true ? "Yes" : value === false ? "No" : "Unknown")
-const TAG_GROUPS = [
-  "task",
-  "domain",
-  "modality",
-  "runtime",
-  "language",
-  "context",
-  "license",
-  "family",
-  "status",
-  "relation",
-]
-const tagGroups = TAG_GROUPS.map((namespace) => ({
+const capabilityClass = (value: boolean | null | undefined) =>
+  value === true ? "capability-yes" : value === false ? "capability-no" : "capability-unknown"
+const tagGroups = TAG_NAMESPACE_ORDER.map((namespace) => ({
   namespace,
   tags: model.tags.filter((tag) => tag.startsWith(`${namespace}:`)),
 })).filter((group) => group.tags.length > 0)
-const otherTags = model.tags.filter((tag) => !TAG_GROUPS.some((namespace) => tag.startsWith(`${namespace}:`)))
+const otherTags = model.tags.filter(
+  (tag) => !TAG_NAMESPACE_ORDER.some((namespace) => tag.startsWith(`${namespace}:`)),
+)
 const formatDate = (value: string | null | undefined) =>
   value
     ? new Date(value).toLocaleDateString("en-GB", {
@@ -83,7 +76,7 @@ const formatDate = (value: string | null | undefined) =>
             label="builds"
             count={model.builds.length}
             href="#builds"
-            tone="plum"
+            tone="meta-builds"
             tooltip="A build is packaging, not a new model. It inherits the base task and terms."
           />
         )}
@@ -95,14 +88,14 @@ const formatDate = (value: string | null | undefined) =>
           {model.openness.tier}
         </a>
         <a
-          class="chip"
+          class="chip tag-org"
           href={`/models/?q=${encodeURIComponent(model.organization)}`}
           data-tooltip="The organisation or author. Opens the model index filtered to this organisation."
         >
           org:{model.organization}
         </a>
         {model.released && (
-          <a class="chip" href="/models/?sort=released" data-tooltip="Release date. Opens the model index sorted by release date.">
+          <a class="chip meta-released" href="/models/?sort=released" data-tooltip="Release date. Opens the model index sorted by release date.">
             released:{model.released}
           </a>
         )}
@@ -115,20 +108,40 @@ const formatDate = (value: string | null | undefined) =>
       <div class="panel" id="capabilities">
         <h2>Capabilities</h2>
         <dl class="definition">
-          <dt>Tool calling</dt><dd>{bool(model.capabilities.tool_calling)}</dd>
-          <dt>Reasoning</dt><dd>{bool(model.capabilities.reasoning)}</dd>
-          <dt>Structured output</dt><dd>{bool(model.capabilities.structured_output)}</dd>
+          <dt>Tool calling</dt>
+          <dd>
+            <a class={`chip ${capabilityClass(model.capabilities.tool_calling)}`} href="#capabilities" data-tooltip="Whether the model can call tools and APIs.">
+              {bool(model.capabilities.tool_calling)}
+            </a>
+          </dd>
+          <dt>Reasoning</dt>
+          <dd>
+            <a class={`chip ${capabilityClass(model.capabilities.reasoning)}`} href="#capabilities" data-tooltip="Whether the model supports multi-step reasoning.">
+              {bool(model.capabilities.reasoning)}
+            </a>
+          </dd>
+          <dt>Structured output</dt>
+          <dd>
+            <a class={`chip ${capabilityClass(model.capabilities.structured_output)}`} href="#capabilities" data-tooltip="Whether the model can return typed or schema-constrained output.">
+              {bool(model.capabilities.structured_output)}
+            </a>
+          </dd>
           <dt>Context</dt>
           <dd>
-            <CountPill
-              label="context"
-              count={formatContextCount(model.capabilities.context_tokens)}
+            <a
+              class="chip meta-context"
               href="#capabilities"
-              tone="sky"
-              tooltip="The model's maximum context window."
-            />
+              data-tooltip="The model's maximum context window."
+            >
+              context: {formatContextCount(model.capabilities.context_tokens)}
+            </a>
           </dd>
-          <dt>Size</dt><dd>{formatParams(model.footprint.params_b)}</dd>
+          <dt>Size</dt>
+          <dd>
+            <a class="chip capability" href="#capabilities" data-tooltip="The parameter count recorded for the release.">
+              {formatParams(model.footprint.params_b)}
+            </a>
+          </dd>
           <dt>Modality</dt>
           <dd>
             {model.capabilities.modality.length > 0 ? (
@@ -241,13 +254,56 @@ const formatDate = (value: string | null | undefined) =>
     <aside id="scorecard">
       {scorecard ? (
         <>
+          <div class="panel scorecard-panel scorecard-overall" id="scorecard-overall">
+            <h2>Overall score</h2>
+            <div class="score-block">
+              <strong>{formatIndex(scorecard.overall.score)}</strong>
+              <span class="faint">{scorecard.overall.coverage} of 4 axes</span>
+            </div>
+            <p class="muted" style="font-size:0.84rem">{scorecard.overall.note}</p>
+            <ul class="benchmark-list">
+              {scorecard.overall.components.map((component) => (
+                <li>
+                  <span>
+                    {component.label}
+                    {component.included ? ` · ${formatIndex(component.score)}` : " · excluded"}
+                  </span>
+                  <span class="mono-small">
+                    {component.included ? `${component.effective_weight}% · ${formatIndex(component.contribution)}` : "—"}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p class="mono-small muted">
+              Base weights: openness 30, performance 40, research 15, syndication 15. Missing axes are excluded and the
+              remaining weights are renormalised.
+            </p>
+          </div>
+
           <div class="panel scorecard-panel scorecard-openness" id="scorecard-openness">
             <h2>Openness/Morality</h2>
             <div class="score-block"><strong>{formatIndex(scorecard.openness_morality.score)}</strong></div>
             <ul class="benchmark-list">
               {scorecard.openness_morality.components.map((component) => (
                 <li>
-                  <span>{component.label} · {component.value}</span>
+                  <span>
+                    {component.label} ·{" "}
+                    <a
+                      class={`chip ${component.label === "Licence" ? "tag-license" : ""}`.trim()}
+                      href={component.label === "Licence" ? tagPath(`license:${component.value}`) : "/about/#release-terms"}
+                      data-tooltip={
+                        component.label === "Licence"
+                          ? tagDefinition(`license:${component.value}`)
+                          : component.label === "Weights"
+                            ? "open-weight means the trained weights are downloadable. It does not mean the training data or code are open."
+                            : component.label === "Training data"
+                              ? "open means the data is published. documented means it is described but not released. unknown means unchecked, not closed."
+                              : "open means the training code is published. documented means it is described but not released. unknown means unchecked, not closed."
+                      }
+                    >
+                      {component.value}
+                    </a>
+                  </span>
                   <span class="mono-small">{component.points}/{component.max}</span>
                 </li>
               ))}
@@ -377,7 +433,7 @@ const formatDate = (value: string | null | undefined) =>
           <dt>Licence</dt>
           <dd>
             <a
-              class="chip license"
+              class="chip tag-license"
               href={tagPath(`license:${model.license.id}`)}
               data-tooltip={tagDefinition(`license:${model.license.id}`)}
             >

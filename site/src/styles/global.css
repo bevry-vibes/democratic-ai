@@ -1782,3 +1782,261 @@ aside [data-tooltip]:focus-visible::after,
     outline-offset: 3px;
   }
 }
+
+aside > .scorecard-overall {
+  order: 0;
+}
+
+/* One pill geometry. Colour comes from the tone variables below. */
+.chip,
+.badge,
+.count-pill {
+  height: 1.7rem;
+  min-height: 1.7rem;
+  font-size: 0.76rem;
+  line-height: 1;
+}
+
+.chip {
+  padding: 0 0.62rem;
+  background: var(--pill-bg, var(--paper-2));
+  border-color: var(--pill-border, var(--rule));
+  color: var(--pill-text, var(--ink-soft));
+}
+
+.badge {
+  padding: 0 0.62rem;
+  font-weight: 600;
+}
+
+.count-pill-label {
+  padding: 0 0.68rem;
+  background: var(--pill-bg, var(--paper-2));
+  border-color: var(--pill-border, var(--rule));
+  color: var(--pill-text, var(--ink-soft));
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.count-pill-count {
+  min-width: 1.7rem;
+  padding: 0 0.5rem;
+  background: var(--pill-count, var(--ink-faint));
+  border-color: var(--pill-count, var(--ink-faint));
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.definition .count-pill {
+  width: fit-content;
+}
+
+/* Tag namespaces: one hue each, shared by chips and count pills. */
+.tag-task {
+  --pill-bg: #e4e9dd;
+  --pill-border: #cbd5c1;
+  --pill-text: #41513a;
+  --pill-count: #6f7f5e;
+}
+
+.tag-domain {
+  --pill-bg: #dde8ec;
+  --pill-border: #c3d5dc;
+  --pill-text: #355364;
+  --pill-count: #5f7a8a;
+}
+
+.tag-modality {
+  --pill-bg: #f2e6c8;
+  --pill-border: #e3d09f;
+  --pill-text: #6b4f12;
+  --pill-count: #b98a2e;
+}
+
+.tag-runtime {
+  --pill-bg: #f2ded7;
+  --pill-border: #dfb7a9;
+  --pill-text: #7a3524;
+  --pill-count: #b5624a;
+}
+
+.tag-language {
+  --pill-bg: #dcebe8;
+  --pill-border: #b5d3ce;
+  --pill-text: #2e5c57;
+  --pill-count: #4f7f78;
+}
+
+.tag-context {
+  --pill-bg: #ebe0e7;
+  --pill-border: #d8c6d2;
+  --pill-text: #5b4253;
+  --pill-count: #7c6273;
+}
+
+.tag-license {
+  --pill-bg: #f0dfe4;
+  --pill-border: #d9b7c1;
+  --pill-text: #6e3547;
+  --pill-count: #9b5a6b;
+}
+
+.tag-family {
+  --pill-bg: #e8e4de;
+  --pill-border: #d4cec5;
+  --pill-text: #4d4841;
+  --pill-count: #7a746b;
+}
+
+.tag-status {
+  --pill-bg: #e9e9d5;
+  --pill-border: #d2d2b2;
+  --pill-text: #55552c;
+  --pill-count: #757a3f;
+}
+
+.tag-relation {
+  --pill-bg: #efe3da;
+  --pill-border: #dcc7b8;
+  --pill-text: #5f4330;
+  --pill-count: #8a6248;
+}
+
+.tag-org {
+  --pill-bg: #e5e7ea;
+  --pill-border: #cbd0d6;
+  --pill-text: #444a52;
+  --pill-count: #5f6670;
+}
+
+.tag-source {
+  --pill-bg: #e1e7ef;
+  --pill-border: #c0cedd;
+  --pill-text: #344a66;
+  --pill-count: #5d708c;
+}
+
+.tag-other {
+  --pill-bg: var(--paper-2);
+  --pill-border: var(--rule);
+  --pill-text: var(--ink-soft);
+  --pill-count: var(--ink-faint);
+}
+
+/* Scorecard axes: unique colours, not shared with any tag namespace. */
+.score-openness {
+  --pill-bg: #e2e5f2;
+  --pill-border: #b9c0dd;
+  --pill-text: #33427a;
+  --pill-count: #4b5fa8;
+}
+
+.score-performance {
+  --pill-bg: #f4dfe5;
+  --pill-border: #d9b4c0;
+  --pill-text: #6e2740;
+  --pill-count: #a13b6a;
+}
+
+.score-research {
+  --pill-bg: #dceceb;
+  --pill-border: #b3d3d1;
+  --pill-text: #245b59;
+  --pill-count: #2f7d7a;
+}
+
+.score-syndication {
+  --pill-bg: #e9e1f3;
+  --pill-border: #cbbadf;
+  --pill-text: #4f356e;
+  --pill-count: #6f4a9a;
+}
+
+.score-overall {
+  --pill-bg: #f3e8ce;
+  --pill-border: #dcc69a;
+  --pill-text: #6f5514;
+  --pill-count: #a07a12;
+}
+
+.score-coverage {
+  --pill-bg: #e6e8eb;
+  --pill-border: #c9ced5;
+  --pill-text: #4e5560;
+  --pill-count: #6a7380;
+}
+
+/* Metadata and capability pills. */
+.meta-builds {
+  --pill-bg: #dfe8ec;
+  --pill-border: #bfd2da;
+  --pill-text: #315361;
+  --pill-count: #3f6f8a;
+}
+
+.meta-context {
+  --pill-bg: #dcecef;
+  --pill-border: #b8d4da;
+  --pill-text: #285761;
+  --pill-count: #2f7f8f;
+}
+
+.meta-released {
+  --pill-bg: #ece8df;
+  --pill-border: #d4cec1;
+  --pill-text: #555045;
+  --pill-count: #6f6a58;
+}
+
+.capability,
+.capability-unknown {
+  --pill-bg: var(--paper-2);
+  --pill-border: var(--rule);
+  --pill-text: var(--ink-soft);
+  --pill-count: var(--ink-faint);
+}
+
+.capability-yes {
+  --pill-bg: #e4efe2;
+  --pill-border: #bcd1b6;
+  --pill-text: #3f5a3a;
+  --pill-count: #5f7f55;
+}
+
+.capability-no {
+  --pill-bg: #f5e0dc;
+  --pill-border: #dfb9b0;
+  --pill-text: #75352c;
+  --pill-count: #a04a3a;
+}
+
+/* Tier badges have their own palette, separate from tag namespaces. */
+.badge-commons {
+  background: #dceadf;
+  border-color: #a9c9b2;
+  color: #2f5a40;
+}
+
+.badge-reciprocal {
+  background: #dfe7f2;
+  border-color: #b4c5dc;
+  color: #2f4f7a;
+}
+
+.badge-shared {
+  background: #f0e2d2;
+  border-color: #d8bfa4;
+  color: #6b431f;
+}
+
+.badge-closed {
+  background: #e6e2dc;
+  border-color: #cfc8be;
+  color: #4a453f;
+}
+
+.badge-unproven {
+  background: #ede1e8;
+  border-color: #d4bdcc;
+  color: #6b3f5a;
+}

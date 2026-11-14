@@ -36,17 +36,17 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
             <tbody>
               <tr><td><span class="badge badge-commons">commons</span></td><td>Weights, training data, and training code are open, with a reusable licence.</td></tr>
               <tr><td><span class="badge badge-reciprocal">reciprocal</span></td><td>Weights and recipe are open, data is open or documented, with a reusable licence.</td></tr>
-              <tr><td><span class="badge badge-shared">shared</span></td><td>Weights are available, but the data is closed or the licence restricts reuse.</td></tr>
+              <tr><td><span class="badge badge-shared">shared</span></td><td>Weights are available, but the training data is not open and the licence may restrict reuse.</td></tr>
               <tr><td><span class="badge badge-closed">closed</span></td><td>The weights are not available.</td></tr>
               <tr><td><span class="badge badge-unproven">unproven</span></td><td>The evidence is not sufficient to make a determination.</td></tr>
             </tbody>
           </table>
         </div>
         <p class="muted">
-          Most records are <strong>unproven</strong> on training data today. That means the data statement is
-          unchecked, not that the model is closed. Open-weight is a real contribution; open data and open code add
-          to it. A conditional licence can cap a record at <strong>shared</strong> before the data question is
-          resolved. The next pass will assess training data and code.
+          Most records are <strong>shared</strong>: the weights are open, the training data is unchecked, and the
+          licence may add conditions. <strong>Unproven</strong> is reserved for records where the weights themselves
+          are not evidenced. Open-weight is a real contribution; open data and open code add to it. The next pass
+          will assess training data and code.
         </p>
       </section>
 

@@ -16,6 +16,15 @@ export interface Scorecard {
     score: number | null
     coverage: number
     weights: Record<string, number>
+    components: Array<{
+      key: string
+      label: string
+      score: number | null
+      weight: number
+      included: boolean
+      effective_weight: number
+      contribution: number | null
+    }>
     note: string
   }
   openness_morality: {
@@ -209,7 +218,7 @@ export function getReadme(): string {
   return fs.readFileSync(path.join(root, "README.md"), "utf8")
 }
 
-const NAMESPACE_ORDER = [
+export const TAG_NAMESPACE_ORDER = [
   "task",
   "domain",
   "modality",
@@ -228,8 +237,10 @@ export function sortTags(tags: string[]): string[] {
   return [...tags].sort((a, b) => {
     const [aNamespace, ...aRest] = a.split(":")
     const [bNamespace, ...bRest] = b.split(":")
-    const aIndex = NAMESPACE_ORDER.indexOf(aNamespace!) === -1 ? NAMESPACE_ORDER.length : NAMESPACE_ORDER.indexOf(aNamespace!)
-    const bIndex = NAMESPACE_ORDER.indexOf(bNamespace!) === -1 ? NAMESPACE_ORDER.length : NAMESPACE_ORDER.indexOf(bNamespace!)
+    const aIndex =
+      TAG_NAMESPACE_ORDER.indexOf(aNamespace!) === -1 ? TAG_NAMESPACE_ORDER.length : TAG_NAMESPACE_ORDER.indexOf(aNamespace!)
+    const bIndex =
+      TAG_NAMESPACE_ORDER.indexOf(bNamespace!) === -1 ? TAG_NAMESPACE_ORDER.length : TAG_NAMESPACE_ORDER.indexOf(bNamespace!)
     if (aIndex !== bIndex) return aIndex - bIndex
     return aRest.join(":").localeCompare(bRest.join(":"))
   })
@@ -248,13 +259,9 @@ export function tagPath(tag: string): string {
   return `/tags/${namespace}/${rest.join(":")}/`
 }
 
-export function tagStatus(tag: string): "task" | "domain" | "context" | "license" | "other" {
+export function tagStatus(tag: string): string {
   const namespace = tagNamespace(tag)
-  if (namespace === "task") return "task"
-  if (namespace === "domain") return "domain"
-  if (namespace === "context") return "context"
-  if (namespace === "license") return "license"
-  return "other"
+  return TAG_NAMESPACE_ORDER.includes(namespace) ? `tag-${namespace}` : "tag-other"
 }
 
 export function tierClass(tier: string): string {
@@ -377,9 +384,9 @@ export function scorecardAxes(model: CompactModel): Array<{
 export function tierDescription(tier: string): string {
   if (tier === "commons") return "Weights, training data, and training code are open. The licence permits reuse."
   if (tier === "reciprocal") return "Weights and training code are open, and the training data is documented or open. The licence permits reuse."
-  if (tier === "shared") return "The weights are available, but the training data stays closed or the licence restricts reuse."
+  if (tier === "shared") return "The weights are available, but the training data is not open and the licence may restrict reuse. Shared is the floor for an open-weight release with unchecked data."
   if (tier === "closed") return "The weights are not available."
-  return "The evidence is not sufficient to make a determination. Unproven is not the same as closed."
+  return "The evidence about the weights is not sufficient to make a determination. Unproven is not the same as closed."
 }
 
 export function tagDefinition(tag: string): string {

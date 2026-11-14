@@ -14,8 +14,7 @@ const bands = ["very-strong", "strong", "moderate", "emerging", "weak", "self-on
 const defaultSort = "syndication"
 const axis = (model: (typeof models)[number], key: "openness" | "performance" | "research" | "syndication") =>
   scorecardAxes(model).find((entry) => entry.key === key)?.value ?? null
-const scorecardTone = (key: string) =>
-  key === "openness" ? "sage" : key === "performance" ? "ochre" : key === "research" ? "sky" : "plum"
+const scorecardTone = (key: string) => `score-${key}`
 const scorecardTip = (key: string) =>
   key === "openness"
     ? "Openness/Morality: what the release gives back. Computed from current release terms."
@@ -118,20 +117,20 @@ const scorecardTip = (key: string) =>
               <p>{model.summary || "No description on the model card."}</p>
               <TagChips tags={model.tags} showNamespace>
                 {model.context_tokens && (
-                  <CountPill
-                    label="context"
-                    count={formatContextCount(model.context_tokens)}
+                  <a
+                    class="chip meta-context"
                     href={`${modelHref(model.id)}#capabilities`}
-                    tone="sky"
-                    tooltip="The model's maximum context window."
-                  />
+                    data-tooltip="The model's maximum context window."
+                  >
+                    context: {formatContextCount(model.context_tokens)}
+                  </a>
                 )}
                 {model.builds > 0 && (
                   <CountPill
                     label="builds"
                     count={model.builds}
                     href={`${modelHref(model.id)}#builds`}
-                    tone="plum"
+                    tone="meta-builds"
                     tooltip="A build is packaging, not a new model. It inherits the base task and terms."
                   />
                 )}
