@@ -1,0 +1,71 @@
+# 2020 June 3
+# https://github.com/bevry/base
+
+# System Files
+**/.DS_Store
+
+# Temp Files
+**/.docpad.db
+**/*.log
+**/*.cpuprofile
+**/*.heapsnapshot
+
+# Editor Files
+.c9/
+.vscode/
+
+# Yarn Files
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.pnp/
+
+# Private Files
+.env
+.idea
+.cake_task_cache
+
+# Build Caches
+build/
+bower_components/
+node_modules/
+.next/
+
+# -------------------------------------
+# CDN Inclusions, Git Exclusions
+
+# Build Outputs
+**/out.*
+**/*.out.*
+**/out/
+**/output/
+*compiled*
+edition*/
+coffeejs/
+coffee/
+es5/
+es2015/
+esnext/
+docs/
+
+# =====================================
+# CUSTOM
+
+.now
+
+# Local fetch cache and scratch space
+.cache/
+.temp/
+
+# Astro and Cloudflare build output
+site/.astro/
+site/.wrangler/
+site/dist/
+site/node_modules/
+
+# Local secrets
+.dev.vars
+site/.dev.vars
