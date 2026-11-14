@@ -20,24 +20,37 @@ const onDevice = model.tags.includes("context:on-device")
     </div>
     <div class="card-score">
       <CountPill
-        label="syndication"
-        count={`${model.score}/10`}
+        label="overall"
+        count={model.scorecard?.overall.score == null ? "—" : Math.round(model.scorecard.overall.score)}
         href={`${modelHref(model.id)}#scorecard`}
-        tone="plum"
-        tooltip="Independent listings, not quality. The model's own host has weight 0."
+        tone="ochre"
+        tooltip={
+          model.scorecard?.overall.score == null
+            ? "No overall score is available."
+            : `Weighted mean of ${model.scorecard.overall.coverage} of 4 axes: openness, performance, research, and syndication. Missing axes are excluded, not zero.`
+        }
       />
     </div>
   </div>
   {model.summary && <p class="summary">{model.summary}</p>}
   <div class="meta">
+    {model.scorecard?.overall.coverage != null && (
+      <CountPill
+        label="coverage"
+        count={`${model.scorecard.overall.coverage}/4`}
+        href={`${modelHref(model.id)}#scorecard`}
+        tone="neutral"
+        tooltip="How many scorecard axes have a current value. A missing axis is not zero."
+      />
+    )}
     {task && (
       <a class="chip task" href={tagPath(`task:${task}`)} data-tooltip={tagDefinition(`task:${task}`)}>
-        {tagLabel(`task:${task}`)}
+        task: {tagLabel(`task:${task}`)}
       </a>
     )}
     {onDevice && (
       <a class="chip context" href={tagPath("context:on-device")} data-tooltip={tagDefinition("context:on-device")}>
-        on-device
+        context: on-device
       </a>
     )}
     {model.context_tokens && (
@@ -59,7 +72,7 @@ const onDevice = model.tags.includes("context:on-device")
       />
     )}
     <a class="chip license" href={tagPath(`license:${model.license}`)} data-tooltip={tagDefinition(`license:${model.license}`)}>
-      {model.license}
+      license: {model.license}
     </a>
   </div>
 </div>

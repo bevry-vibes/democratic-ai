@@ -241,9 +241,17 @@ const formatDate = (value: string | null | undefined) =>
     <aside id="scorecard">
       {scorecard ? (
         <>
-          <div class="panel scorecard-panel scorecard-openness">
+          <div class="panel scorecard-panel scorecard-openness" id="scorecard-openness">
             <h2>Openness/Morality</h2>
             <div class="score-block"><strong>{formatIndex(scorecard.openness_morality.score)}</strong></div>
+            <ul class="benchmark-list">
+              {scorecard.openness_morality.components.map((component) => (
+                <li>
+                  <span>{component.label} · {component.value}</span>
+                  <span class="mono-small">{component.points}/{component.max}</span>
+                </li>
+              ))}
+            </ul>
             <p class="muted" style="font-size:0.84rem">{scorecard.openness_morality.note}</p>
             <p class="mono-small muted">
               Tier:
@@ -256,7 +264,7 @@ const formatDate = (value: string | null | undefined) =>
             </p>
           </div>
 
-          <div class="panel scorecard-panel scorecard-performance">
+          <div class="panel scorecard-panel scorecard-performance" id="scorecard-performance">
             <h2>Performance/Intelligence</h2>
             <div class="score-block">
               <strong class={scorecard.performance.score == null ? "unmeasured" : ""}>{formatIndex(scorecard.performance.score)}</strong>
@@ -296,7 +304,7 @@ const formatDate = (value: string | null | undefined) =>
             )}
           </div>
 
-          <div class="panel scorecard-panel scorecard-research">
+          <div class="panel scorecard-panel scorecard-research" id="scorecard-research">
             <h2>Research/Citation</h2>
             <div class="score-block">
               <strong class={scorecard.research_citation.score == null ? "unmeasured" : ""}>{formatIndex(scorecard.research_citation.score)}</strong>
@@ -313,12 +321,13 @@ const formatDate = (value: string | null | undefined) =>
                 ))}
               </ul>
             )}
+            <p class="mono-small muted">Citation accuracy: {scorecard.research_citation.citation}</p>
             {scorecard.research_citation.source && (
               <a class="mono-small" href={scorecard.research_citation.source} target="_blank" rel="noreferrer">Source</a>
             )}
           </div>
 
-          <div class="panel scorecard-panel scorecard-syndication">
+          <div class="panel scorecard-panel scorecard-syndication" id="scorecard-syndication">
             <h2>Syndication</h2>
             <div class="score-block">
               <strong>{scorecard.syndication.score}</strong><span class="faint">/{scorecard.syndication.max}</span>

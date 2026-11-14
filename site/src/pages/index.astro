@@ -57,14 +57,15 @@ const readmeHtml = marked.parse(readme) as string
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Independent listings</p>
-          <h2>Models with a wider web of trust</h2>
+          <p class="eyebrow">The overall score</p>
+          <h2>Models that return the most, and perform</h2>
         </div>
         <a href="/models/">All models →</a>
       </div>
       <p class="muted" style="max-width:44rem;margin-bottom:1.4rem">
-        A high score means at least one independent source lists the model: models.dev, agent-detect, OpenRouter, LLM
-        Stats, Artificial Analysis, or a research paper. The model’s own Hugging Face page counts for zero.
+        The overall score combines the current scorecard axes: openness, performance, research, and syndication. It is
+        a weighted mean of the axes that have a current value. Missing axes are excluded, not treated as zero, and
+        each card shows its coverage. It is a guide, not a single grade.
       </p>
       <div class="card-grid">
         {top.map((model) => <ModelCard model={model} />)}

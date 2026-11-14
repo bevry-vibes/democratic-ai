@@ -12,10 +12,17 @@ export interface BenchmarkEvidence {
 }
 
 export interface Scorecard {
+  overall: {
+    score: number | null
+    coverage: number
+    weights: Record<string, number>
+    note: string
+  }
   openness_morality: {
     score: number
     tier: string
     note: string
+    components: Array<{ label: string; value: string; points: number; max: number }>
   }
   performance: {
     score: number | null
@@ -36,6 +43,7 @@ export interface Scorecard {
     source: string | null
     as_of: string | null
     note: string
+    citation: string
   }
   syndication: {
     score: number
@@ -343,19 +351,19 @@ export function scorecardAxes(model: CompactModel): Array<{
       key: "openness",
       label: "openness",
       value: scorecard?.openness_morality.score ?? null,
-      display: formatIndex(scorecard?.openness_morality.score),
+      display: scorecard?.openness_morality.score == null ? "—" : String(Math.round(scorecard.openness_morality.score)),
     },
     {
       key: "performance",
       label: "performance",
       value: scorecard?.performance.score ?? null,
-      display: formatIndex(scorecard?.performance.score),
+      display: scorecard?.performance.score == null ? "—" : String(Math.round(scorecard.performance.score)),
     },
     {
       key: "research",
       label: "research",
       value: scorecard?.research_citation.score ?? null,
-      display: formatIndex(scorecard?.research_citation.score),
+      display: scorecard?.research_citation.score == null ? "—" : String(Math.round(scorecard.research_citation.score)),
     },
     {
       key: "syndication",
@@ -416,8 +424,16 @@ export function taskCounts(index: ModelIndex): Array<{ task: string; count: numb
 
 export function topModels(index: ModelIndex, limit = 12): CompactModel[] {
   return [...index.models]
-    .filter((model) => model.score > 0)
-    .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name))
+    .filter((model) => model.scorecard?.overall.score != null && model.scorecard.overall.coverage >= 3)
+    .sort((a, b) => {
+      const overall = (b.scorecard?.overall.score ?? 0) - (a.scorecard?.overall.score ?? 0)
+      if (overall !== 0) return overall
+      const coverage = (b.scorecard?.overall.coverage ?? 0) - (a.scorecard?.overall.coverage ?? 0)
+      if (coverage !== 0) return coverage
+      const performance = (b.scorecard?.performance.score ?? 0) - (a.scorecard?.performance.score ?? 0)
+      if (performance !== 0) return performance
+      return b.score - a.score || a.name.localeCompare(b.name)
+    })
     .slice(0, limit)
 }
 
