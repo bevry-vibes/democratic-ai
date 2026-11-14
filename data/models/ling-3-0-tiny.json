@@ -6,6 +6,7 @@
   "aliases": [
     "inclusionAI/Ling-3.0-tiny"
   ],
+  "releases": [],
   "organization": "ant-ling",
   "released": "2026-08-10",
   "summary": "Ling 3.0 Tiny is a mixture-of-experts model from InclusionAI, with 1.3B active parameters out of 7.9B total. It is designed for responsive agents, instruction following, and multi-turn conversations, with switchable...",
@@ -99,5 +100,49 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "",
+  "scorecard": {
+    "openness_morality": {
+      "score": 60,
+      "tier": "unproven",
+      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed."
+    },
+    "performance": {
+      "score": 27.7,
+      "basis": "primary",
+      "match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "score": 27.7153558052434,
+          "group": "artificial-analysis",
+          "self_reported": false
+        }
+      ],
+      "own_benchmarks": [],
+      "metric": null,
+      "source": "https://artificialanalysis.ai/models/ling-3-0-tiny",
+      "as_of": "2026-11-14T05:38:29.228Z",
+      "note": "Mean of the available Artificial Analysis terminal or coding evaluations. Independent test run."
+    },
+    "research_citation": {
+      "score": null,
+      "basis": null,
+      "benchmarks": [],
+      "source": null,
+      "as_of": null,
+      "note": "Not measured. No current research benchmark is recorded."
+    },
+    "syndication": {
+      "score": 4,
+      "max": 10,
+      "band": "emerging",
+      "note": "Independent listings, not quality. The model's own host has weight 0."
+    },
+    "as_of": "2026-11-14",
+    "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Research/Citation uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
+    "source": "internal://democratic-ai/scorecard-v2"
+  }
 }

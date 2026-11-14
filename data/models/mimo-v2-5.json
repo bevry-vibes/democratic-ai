@@ -6,6 +6,7 @@
   "aliases": [
     "XiaomiMiMo/MiMo-V2.5"
   ],
+  "releases": [],
   "organization": "xiaomi-mimo",
   "released": "2026-04-27",
   "summary": "Open MiMo model for multimodal coding agents and long-context automation",
@@ -135,5 +136,64 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "1 builds are attached."
+  "notes": "1 builds are attached.",
+  "scorecard": {
+    "openness_morality": {
+      "score": 60,
+      "tier": "unproven",
+      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed."
+    },
+    "performance": {
+      "score": 61,
+      "basis": "primary",
+      "match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 56.1,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2",
+          "name": "Terminal-Bench 2.0",
+          "group": "terminal",
+          "score": 65.8,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "metric": null,
+      "source": "https://llm-stats.com/models/mimo-v2.5",
+      "as_of": "2026-11-14T05:30:45.812Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "research_citation": {
+      "score": 16.9,
+      "basis": "research",
+      "benchmarks": [
+        {
+          "id": "researchclawbench",
+          "name": "ResearchClawBench",
+          "group": "researchclawbench",
+          "score": 16.9,
+          "self_reported": true
+        }
+      ],
+      "source": "https://llm-stats.com/models/mimo-v2.5",
+      "as_of": "2026-11-14T05:30:45.812Z",
+      "note": "Mean of current research benchmarks. Citation accuracy is not measured."
+    },
+    "syndication": {
+      "score": 10,
+      "max": 10,
+      "band": "very-strong",
+      "note": "Independent listings, not quality. The model's own host has weight 0."
+    },
+    "as_of": "2026-11-14",
+    "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Research/Citation uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
+    "source": "internal://democratic-ai/scorecard-v2"
+  }
 }

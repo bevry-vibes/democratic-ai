@@ -1,0 +1,232 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/glm-5-2",
+  "fetched_at": "2026-11-14T05:38:25.138Z",
+  "model": {
+    "id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
+    "slug": "glm-5-2",
+    "name": "GLM-5.2 (Max)",
+    "shortName": "GLM-5.2 (max)",
+    "suffix": "Max",
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-06-16",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "effort": {
+      "slug": "max",
+      "label": "max",
+      "level": 60
+    },
+    "release": {
+      "slug": "glm-5-2",
+      "name": "GLM-5.2",
+      "deprecatedTo": "glm-5-3"
+    },
+    "deprecated": true,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 753,
+    "inferenceParametersActiveBillions": 40,
+    "sizeClass": "large",
+    "contextWindowTokens": 1000000,
+    "licenseName": "MIT",
+    "licenseUrl": "https://opensource.org/license/mit",
+    "modelWeightsSourceUrl": "https://huggingface.co/zai-org/GLM-5.2",
+    "microevalsEnabled": true,
+    "intelligenceIndex": null,
+    "capabilities": {
+      "financeAndAccounting": 32.0992799640326,
+      "strategyAndOps": 29.9673025478602,
+      "legal": 28.5312116915082,
+      "healthcareAndMedical": 28.6972387528169,
+      "economics": 32.0643666666667
+    },
+    "omniscience": 0.6333333333333333,
+    "omniscienceAccuracy": 0.21066666666666667,
+    "omniscienceHallucinationRate": 0.25886824324324326,
+    "mlcrOverall": 0.127777777777778,
+    "gdpPdfAllPass": 0.104,
+    "gdpval": 1380.2,
+    "gdpvalInterval": {
+      "lower": 1365.19,
+      "upper": 1395.21
+    },
+    "itBenchSre": 0.426553672316384,
+    "tau2": 0.991228070175439,
+    "tauBanking": 0.34639175257732,
+    "terminalbenchHard": 0.507575757575758,
+    "terminalBench21": 0.779026217228464,
+    "terminalBench40": 0.0101010101010101,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": 0.177,
+    "critptAgenticHard": null,
+    "scicode": 0.511574074074074,
+    "lcr": 0.783333333333333,
+    "ifbench": 0.733333333333333,
+    "hle": 0.411492122335496,
+    "gpqa": 0.894949494949495,
+    "critpt": 0.208571428571429,
+    "apexAgents": 0.337020648967552,
+    "mmmuPro": null,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.2839897721005435,
+    "enterpriseOpsGym": 0.42733512384362876,
+    "price1mInputTokens": 1.4,
+    "price1mOutputTokens": 4.4,
+    "cacheHitPrice": 0.26,
+    "cacheHitDiscountPercent": 0.8142857142857143,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 2.15,
+    "price1mBlended7To2To1": 0.9019999999999999,
+    "price1mBlended0To1To1": 2.9000000000000004,
+    "price1mBlended100To1To1": 0.3117647058823529,
+    "price1mBlended0To100To1": 1.4297029702970299,
+    "openness": {
+      "opennessIndex": 44.44444444444444,
+      "modelAvailability": 6,
+      "transparencyMethodology": 2,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 1226.25,
+        "lower95ci": 1219.86,
+        "upper95ci": 1232.9
+      }
+    },
+    "headline": {
+      "outputSpeed": 68.52491690862801,
+      "timeToFirstToken": 2.177398605924972,
+      "timeToFirstAnswerToken": 25.854947862195846
+    },
+    "multiTurn": {
+      "timeToFirstToken": 2.457432022800027
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 1.36345150439988
+      },
+      "10k": {
+        "timeToFirstToken": 1.5741391747498326
+      },
+      "100k": {
+        "timeToFirstToken": 2.75450488800004
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "Z AI"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "Z AI"
+    },
+    "creator": {
+      "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+      "slug": "zai",
+      "name": "Z AI",
+      "logo": "/img/logos/zai.svg",
+      "color": "#1c7ff8",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "baseten",
+        "name": "Baseten",
+        "logo": "/img/logos/baseten.svg"
+      },
+      {
+        "slug": "coreweave",
+        "name": "CoreWeave",
+        "logo": "/img/logos/coreweave.svg"
+      },
+      {
+        "slug": "databricks",
+        "name": "Databricks",
+        "logo": "/img/logos/databricks.png"
+      },
+      {
+        "slug": "deepinfra",
+        "name": "DeepInfra",
+        "logo": "/img/logos/deepinfra.webp"
+      },
+      {
+        "slug": "fireworks",
+        "name": "Fireworks",
+        "logo": "/img/logos/fireworks.svg"
+      },
+      {
+        "slug": "friendli-ai",
+        "name": "FriendliAI",
+        "logo": "/img/logos/friendliai.svg"
+      },
+      {
+        "slug": "gmi",
+        "name": "GMI",
+        "logo": "/img/logos/gmi.svg"
+      },
+      {
+        "slug": "mistral",
+        "name": "Mistral",
+        "logo": "/img/logos/mistral.svg"
+      },
+      {
+        "slug": "multiverse-computing",
+        "name": "Multiverse Computing",
+        "logo": "/img/logos/multiversecomputing.svg"
+      },
+      {
+        "slug": "nebius",
+        "name": "Nebius",
+        "logo": "/img/logos/nebius.svg"
+      },
+      {
+        "slug": "novita",
+        "name": "Novita",
+        "logo": "/img/logos/novita.svg"
+      },
+      {
+        "slug": "parasail",
+        "name": "Parasail",
+        "logo": "/img/logos/parasail.svg"
+      },
+      {
+        "slug": "scaleway",
+        "name": "Scaleway",
+        "logo": "/img/logos/scaleway.svg"
+      },
+      {
+        "slug": "siliconflow",
+        "name": "SiliconFlow",
+        "logo": "/img/logos/siliconflow.png"
+      },
+      {
+        "slug": "togetherai",
+        "name": "Together AI",
+        "logo": "/img/logos/togetherai.svg"
+      },
+      {
+        "slug": "zai",
+        "name": "Zai",
+        "logo": "/img/logos/zai.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

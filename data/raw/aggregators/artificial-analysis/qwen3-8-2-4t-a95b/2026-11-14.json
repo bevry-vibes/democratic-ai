@@ -1,0 +1,172 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
+  "fetched_at": "2026-11-14T05:38:35.076Z",
+  "model": {
+    "id": "8df710d3-9dae-4498-9b4e-9818238e6f31",
+    "slug": "qwen3-8-2-4t-a95b",
+    "name": "Qwen3.8 2.4T A95B",
+    "shortName": "Qwen3.8 2.4T A95B",
+    "suffix": null,
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-08-12",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "qwen3-8-2-4t-a95b",
+      "name": "Qwen3.8 2.4T A95B",
+      "deprecatedTo": null
+    },
+    "deprecated": false,
+    "isOpenWeights": true,
+    "openSourceCategorization": "commercial-license",
+    "parameters": 2400,
+    "inferenceParametersActiveBillions": 95,
+    "sizeClass": "large",
+    "contextWindowTokens": 262000,
+    "licenseName": "Qwen3.8-Max License",
+    "licenseUrl": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/blob/main/LICENSE",
+    "modelWeightsSourceUrl": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+    "microevalsEnabled": true,
+    "intelligenceIndex": null,
+    "capabilities": {
+      "financeAndAccounting": 41.2547979711224,
+      "strategyAndOps": 44.4130023991704,
+      "legal": 36.9811598410859,
+      "healthcareAndMedical": 39.02798253787,
+      "economics": 37.2541
+    },
+    "omniscience": 7.766666666666667,
+    "omniscienceAccuracy": 0.314,
+    "omniscienceHallucinationRate": 0.34450923226433433,
+    "mlcrOverall": 0.305555555555556,
+    "gdpPdfAllPass": 0.156,
+    "gdpval": 1613.86,
+    "gdpvalInterval": {
+      "lower": 1596.01,
+      "upper": 1631.7
+    },
+    "itBenchSre": null,
+    "tau2": null,
+    "tauBanking": 0.490721649484536,
+    "terminalbenchHard": null,
+    "terminalBench21": 0.820224719101124,
+    "terminalBench40": 0.111111111111111,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": 0.201,
+    "critptAgenticHard": null,
+    "scicode": 0.540509259259259,
+    "lcr": 0.803333333333333,
+    "ifbench": null,
+    "hle": 0.424467099165894,
+    "gpqa": 0.935353535353535,
+    "critpt": 0.2,
+    "apexAgents": null,
+    "mmmuPro": null,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.572473765458222,
+    "enterpriseOpsGym": 0.4735899731423456,
+    "price1mInputTokens": 2,
+    "price1mOutputTokens": 6,
+    "cacheHitPrice": 0.25,
+    "cacheHitDiscountPercent": 0.875,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 3,
+    "price1mBlended7To2To1": 1.175,
+    "price1mBlended0To1To1": 4,
+    "price1mBlended100To1To1": 0.3235294117647059,
+    "price1mBlended0To100To1": 2.0396039603960396,
+    "openness": {
+      "opennessIndex": 27.77777777777778,
+      "modelAvailability": 4,
+      "transparencyMethodology": 1,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 1429.66,
+        "lower95ci": 1422.23,
+        "upper95ci": 1437.21
+      }
+    },
+    "headline": {
+      "outputSpeed": 39.749623565453035,
+      "timeToFirstToken": 4.984827928804977,
+      "timeToFirstAnswerToken": 114.84298285844234
+    },
+    "multiTurn": {
+      "timeToFirstToken": 3.510443693613207
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 1.942083127617606
+      },
+      "10k": {
+        "timeToFirstToken": 3.2244523707058828
+      },
+      "100k": {
+        "timeToFirstToken": 14.211100993666756
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "Alibaba"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "Alibaba"
+    },
+    "creator": {
+      "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+      "slug": "alibaba",
+      "name": "Alibaba",
+      "logo": "/img/logos/alibaba.svg",
+      "color": "#ff7018",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "alibaba_cloud",
+        "name": "Alibaba Cloud",
+        "logo": "/img/logos/alibaba.svg"
+      },
+      {
+        "slug": "deepinfra",
+        "name": "DeepInfra",
+        "logo": "/img/logos/deepinfra.webp"
+      },
+      {
+        "slug": "digitalocean",
+        "name": "DigitalOcean",
+        "logo": "/img/logos/digitalocean.svg"
+      },
+      {
+        "slug": "fireworks",
+        "name": "Fireworks",
+        "logo": "/img/logos/fireworks.svg"
+      },
+      {
+        "slug": "modal",
+        "name": "Modal",
+        "logo": "/img/logos/modal.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

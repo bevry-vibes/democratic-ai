@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14",
+  "note": "Benchmark values read from a model's own card when no aggregator primary row exists. These are self-reported and use the same primary benchmark family as the aggregator score.",
+  "models": {
+    "qwen3-8-2-4t-a95b": {
+      "performance": 77.2,
+      "benchmarks": [
+        { "id": "terminal-bench-2.1", "name": "Terminal-Bench 2.1", "score": 86.6, "self_reported": true },
+        { "id": "swe-bench-pro", "name": "SWE-bench Pro", "score": 67.7, "self_reported": true }
+      ],
+      "source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "as_of": "2026-11-14",
+      "note": "Mean of the model card's Terminal-Bench 2.1 and SWE-bench Pro rows."
+    },
+    "ornith-1-5-35b-a3b": {
+      "performance": 68.8,
+      "benchmarks": [
+        { "id": "terminal-bench-2.1", "name": "Terminal-Bench 2.1", "score": 67.8, "self_reported": true },
+        { "id": "swe-bench-verified", "name": "SWE-bench Verified", "score": 79, "self_reported": true },
+        { "id": "swe-bench-pro", "name": "SWE-bench Pro", "score": 59.6, "self_reported": true }
+      ],
+      "source": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B",
+      "as_of": "2026-11-14",
+      "note": "Mean of the model card's Terminal-Bench 2.1, SWE-bench Verified, and SWE-bench Pro rows."
+    },
+    "ornith-1-5-122b": {
+      "performance": 80.9,
+      "benchmarks": [
+        { "id": "terminal-bench-2.1", "name": "Terminal-Bench 2.1", "score": 81.2, "self_reported": true },
+        { "id": "swe-bench-verified", "name": "SWE-bench Verified", "score": 84.5, "self_reported": true },
+        { "id": "swe-bench-pro", "name": "SWE-bench Pro", "score": 76.9, "self_reported": true }
+      ],
+      "source": "https://huggingface.co/ornith-ai/Ornith-1.5-122B",
+      "as_of": "2026-11-14",
+      "note": "Mean of the model card's Terminal-Bench 2.1, SWE-bench Verified, and SWE-bench Pro rows."
+    },
+    "lfm2-5-24b-a2b": {
+      "performance": 51,
+      "benchmarks": [
+        { "id": "swe-bench-verified", "name": "SWE-Bench Verified (OpenCode)", "score": 51, "self_reported": true }
+      ],
+      "source": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+      "as_of": "2026-11-14",
+      "note": "The model card reports SWE-Bench Verified with the OpenCode harness."
+    }
+  }
+}

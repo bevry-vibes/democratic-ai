@@ -1,0 +1,224 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
+  "fetched_at": "2026-11-14T05:38:36.214Z",
+  "model": {
+    "id": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
+    "slug": "qwen3-8-flash-next",
+    "name": "Qwen3.8-Flash-Next",
+    "shortName": "Qwen3.8-Flash-Next",
+    "suffix": null,
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-08-26",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "qwen3-8-flash-next",
+      "name": "Qwen3.8-Flash-Next",
+      "deprecatedTo": null
+    },
+    "deprecated": false,
+    "isOpenWeights": true,
+    "openSourceCategorization": "commercial-license",
+    "parameters": 180,
+    "inferenceParametersActiveBillions": 6,
+    "sizeClass": "large",
+    "contextWindowTokens": 256000,
+    "licenseName": "Qwen Community License 1.0",
+    "licenseUrl": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/blob/main/LICENSE",
+    "modelWeightsSourceUrl": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+    "microevalsEnabled": true,
+    "intelligenceIndex": 28.5750026655353,
+    "capabilities": {
+      "financeAndAccounting": 39.0035791237154,
+      "strategyAndOps": 44.4560899214778,
+      "legal": 35.0601365291842,
+      "healthcareAndMedical": 36.410208163767,
+      "engineering": 32.966291017316,
+      "economics": 36.0573666666667
+    },
+    "omniscience": -12.233333333333333,
+    "omniscienceAccuracy": 0.23533333333333334,
+    "omniscienceHallucinationRate": 0.46774193548387094,
+    "mlcrOverall": 0.205555555555556,
+    "gdpPdfAllPass": 0.156,
+    "gdpval": 1636.77,
+    "gdpvalInterval": {
+      "lower": 1619.16,
+      "upper": 1654.38
+    },
+    "itBenchSre": null,
+    "tau2": null,
+    "tauBanking": 0.45360824742268,
+    "terminalbenchHard": null,
+    "terminalBench21": 0.861423220973783,
+    "terminalBench40": 0.252525252525253,
+    "frontierCode": null,
+    "frontierCode20": 0.271362121212121,
+    "terminalBenchScience": 0.0714285714285714,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": 0.163,
+    "critptAgenticHard": 0.245,
+    "scicode": 0.505787037037037,
+    "lcr": 0.796666666666667,
+    "ifbench": null,
+    "hle": 0.380444856348471,
+    "gpqa": 0.923232323232323,
+    "critpt": 0.111428571428571,
+    "apexAgents": null,
+    "mmmuPro": 0.786127167630058,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.559083218951688,
+    "price1mInputTokens": 0.15,
+    "price1mOutputTokens": 0.47,
+    "cacheHitPrice": 0.016,
+    "cacheHitDiscountPercent": 0.8933333333333333,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.22999999999999998,
+    "price1mBlended7To2To1": 0.08819999999999999,
+    "price1mBlended0To1To1": 0.31,
+    "price1mBlended100To1To1": 0.02176470588235294,
+    "price1mBlended0To100To1": 0.15316831683168317,
+    "intelligenceIndexTimePerTask": 2119.529247940636,
+    "intelligenceIndexCost": {
+      "total": 390.26625564064,
+      "input": 316.88364224064,
+      "nonCacheInput": 1.85499435,
+      "cacheRead": 264.52679609664,
+      "cacheWrite": 50.50185179399993,
+      "output": 73.3826134,
+      "reasoning": 55.22985886,
+      "answer": 18.152754539999997
+    },
+    "intelligenceIndexCostPerTask": {
+      "cost": {
+        "total": 0.5693810918846318,
+        "input": 0.4999591821641277,
+        "nonCacheInput": 0.0008600989125,
+        "cacheRead": 0.4253161214346214,
+        "cacheWrite": 0.07378296181700636,
+        "output": 0.06942190972050413,
+        "reasoning": 0.0457369467003243,
+        "answer": 0.023684963020179813
+      },
+      "evaluations": [
+        {
+          "slug": "aa-briefcase",
+          "weightedCostPerTask": 0.2407052670014505
+        },
+        {
+          "slug": "automationbench-aa",
+          "weightedCostPerTask": 0.0013336577756697106
+        },
+        {
+          "slug": "terminalbench-4-0",
+          "weightedCostPerTask": 0.08779630434427273
+        },
+        {
+          "slug": "frontiercode-2-0",
+          "weightedCostPerTask": 0.07263771958493183
+        },
+        {
+          "slug": "omniscience",
+          "weightedCostPerTask": 0.00029792647449999995
+        },
+        {
+          "slug": "gdp-pdf",
+          "weightedCostPerTask": 0.00108708941
+        },
+        {
+          "slug": "hle-diamond",
+          "weightedCostPerTask": 0.0020972812719999997
+        },
+        {
+          "slug": "critpt-v2-hard",
+          "weightedCostPerTask": 0.007853091820150001
+        },
+        {
+          "slug": "terminal-bench-science",
+          "weightedCostPerTask": 0.1555727542016571
+        }
+      ]
+    },
+    "canonicalIntelligenceIndexTokenCount": {
+      "input": 16881970397,
+      "output": 156133220,
+      "answer": 38622882,
+      "reasoning": 117510338
+    },
+    "intelligenceIndexOutputTokensPerTask": {
+      "reasoning": 97312.6525538815,
+      "answer": 50393.538340808125,
+      "output": 147706.19089468964
+    },
+    "openness": {
+      "opennessIndex": 38.888888888888886,
+      "modelAvailability": 5,
+      "transparencyMethodology": 2,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 1571.51,
+        "lower95ci": 1564.32,
+        "upper95ci": 1579.7
+      }
+    },
+    "headline": {
+      "outputSpeed": 69.68820601942765,
+      "timeToFirstToken": 2.560670882560404,
+      "timeToFirstAnswerToken": 96.0653370954625
+    },
+    "multiTurn": {
+      "timeToFirstToken": 1.837466579849961
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 1.3925092363125338
+      },
+      "10k": {
+        "timeToFirstToken": 2.0469855249999473
+      },
+      "100k": {
+        "timeToFirstToken": 6.412130794500057
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "Alibaba"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "Alibaba"
+    },
+    "creator": {
+      "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+      "slug": "alibaba",
+      "name": "Alibaba",
+      "logo": "/img/logos/alibaba.svg",
+      "color": "#ff7018",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "alibaba_cloud",
+        "name": "Alibaba Cloud",
+        "logo": "/img/logos/alibaba.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": true,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": true,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

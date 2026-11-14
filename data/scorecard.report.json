@@ -1,86 +1,1435 @@
 {
-  "updated_at": "2026-11-14T05:19:49.272Z",
-  "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
-  "as_of": "2026-07-18",
-  "models": 240,
-  "matched": 10,
-  "exact": 5,
-  "family": 5,
-  "unmatched_scorecard_entries": [
-    "OLMo 3 32B",
-    "StarCoder2 15B",
-    "OLMo 2 13B/7B",
-    "Tulu 3",
-    "Pythia",
-    "Amber / CrystalCoder",
-    "Kagi Assistant",
-    "NVIDIA Nemotron 3 Super",
-    "DeepSeek V4 Pro-Max",
-    "GLM-5.1",
-    "Kimi K2.6",
-    "Tencent Hy3",
-    "GPT-oss 20B",
-    "Phi-4",
-    "Gemma 4 31B",
-    "Kimi K2.7 Code",
-    "Llama 4 Maverick",
-    "Perplexity Sonar",
-    "Mistral Medium 3.5",
-    "Claude Fable 5 / Opus 4.8",
-    "Grok 4.5"
-  ],
-  "matches": [
+  "updated_at": "2026-11-14T05:45:22.467Z",
+  "generated_on": "2026-11-14",
+  "title": "Democratic AI Scorecard",
+  "as_of": "2026-11-14",
+  "models": 237,
+  "openness_scored": 237,
+  "performance_scored": 46,
+  "research_scored": 13,
+  "note": "Current values only. The scorecard computes openness from release terms and takes performance and research from current task benchmarks. Missing axes stay missing; they are not zero.",
+  "applied": [
     {
-      "model": "deepseek-v4-1-flash",
-      "scorecard": "DeepSeek V4 Flash",
-      "match": "exact"
+      "id": "deepseek-v4-1-flash-1017",
+      "openness": 60,
+      "performance": 90.6,
+      "research": null
     },
     {
-      "model": "deepseek-v4-1-flash-1017",
-      "scorecard": "DeepSeek V4 Flash",
-      "match": "family"
+      "id": "glm-5-2",
+      "openness": 60,
+      "performance": 72.4,
+      "research": null
     },
     {
-      "model": "deepseek-v4-flash-vision-exp",
-      "scorecard": "DeepSeek V4 Flash",
-      "match": "family"
+      "id": "glm-5-3",
+      "openness": 55,
+      "performance": 88.2,
+      "research": null
     },
     {
-      "model": "glm-5-2",
-      "scorecard": "GLM-5.2",
-      "match": "exact"
+      "id": "glm-5-3-flash",
+      "openness": 60,
+      "performance": 84.3,
+      "research": null
     },
     {
-      "model": "kimi-k3",
-      "scorecard": "Kimi K3",
-      "match": "exact"
+      "id": "inkling-2-small",
+      "openness": 60,
+      "performance": 82.2,
+      "research": 90.2
     },
     {
-      "model": "minimax-m3",
-      "scorecard": "MiniMax M3",
-      "match": "exact"
+      "id": "kimi-k3",
+      "openness": 55,
+      "performance": 88.3,
+      "research": 93.1
     },
     {
-      "model": "minimax-m3-1-flash",
-      "scorecard": "MiniMax M3",
-      "match": "family"
+      "id": "ling-3-0-flash",
+      "openness": 60,
+      "performance": 65.5,
+      "research": 72.9
     },
     {
-      "model": "qwen3-6-27b",
-      "scorecard": "Qwen 3.6-27B",
-      "match": "exact"
+      "id": "mimo-v2-5",
+      "openness": 60,
+      "performance": 61,
+      "research": 16.9
     },
     {
-      "model": "granite-4-2-8b",
-      "scorecard": "IBM Granite 4.0",
-      "match": "family"
+      "id": "mimo-v2-5-pro",
+      "openness": 60,
+      "performance": 61,
+      "research": null
     },
     {
-      "model": "kimi-k3-1-pro",
-      "scorecard": "Kimi K3",
-      "match": "family"
+      "id": "minimax-m2-5",
+      "openness": 55,
+      "performance": 67.8,
+      "research": 76.3
+    },
+    {
+      "id": "minimax-m2-7",
+      "openness": 55,
+      "performance": 56.6,
+      "research": null
+    },
+    {
+      "id": "minimax-m3",
+      "openness": 55,
+      "performance": 68.5,
+      "research": 83.5
+    },
+    {
+      "id": "minimax-m3-1-flash",
+      "openness": 55,
+      "performance": 68.5,
+      "research": null
+    },
+    {
+      "id": "qwen3-6-27b",
+      "openness": 60,
+      "performance": 68.5,
+      "research": null
+    },
+    {
+      "id": "qwen3-8-27b",
+      "openness": 60,
+      "performance": 75,
+      "research": null
+    },
+    {
+      "id": "granite-4-2-8b",
+      "openness": 60,
+      "performance": 40.2,
+      "research": null
+    },
+    {
+      "id": "kimi-k3-1-pro",
+      "openness": 55,
+      "performance": 88.3,
+      "research": 92.1
+    },
+    {
+      "id": "qwen3-6-35b-a3b",
+      "openness": 60,
+      "performance": 63.7,
+      "research": 60.1
+    },
+    {
+      "id": "qwen3-8-2-4t-a95b",
+      "openness": 55,
+      "performance": 77.2,
+      "research": null
+    },
+    {
+      "id": "ling-3-0-flash-fin",
+      "openness": 60,
+      "performance": 65.5,
+      "research": null
+    },
+    {
+      "id": "ling-3-0-flash-vl",
+      "openness": 60,
+      "performance": 64.4,
+      "research": null
+    },
+    {
+      "id": "longcat-2-5",
+      "openness": 60,
+      "performance": 88.4,
+      "research": 77.7
+    },
+    {
+      "id": "beam-1-0-501b-a23b",
+      "openness": 60,
+      "performance": 79,
+      "research": 78.7
+    },
+    {
+      "id": "minimax-m2",
+      "openness": 55,
+      "performance": 76.2,
+      "research": 44
+    },
+    {
+      "id": "minimax-m2-1",
+      "openness": 55,
+      "performance": 72.5,
+      "research": 62
+    },
+    {
+      "id": "qwen3-8-flash-next",
+      "openness": 55,
+      "performance": 77.2,
+      "research": null
+    },
+    {
+      "id": "ling-3-0-flash-sante",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-v2-6-pro-rl",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm3-1-7b",
+      "openness": 55,
+      "performance": 43.3,
+      "research": null
+    },
+    {
+      "id": "ling-2-6-1t",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-v2-flash",
+      "openness": 60,
+      "performance": 64.2,
+      "research": 58.3
+    },
+    {
+      "id": "minimax-h3",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "step-5-preview",
+      "openness": 55,
+      "performance": 35.9,
+      "research": null
+    },
+    {
+      "id": "ling-3-0-tiny",
+      "openness": 60,
+      "performance": 27.7,
+      "research": null
+    },
+    {
+      "id": "lfm2-24b-a2b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-v2-6-flash-rl",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mistral-large-4-1t-a52b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ornith-1-5-35b-a3b",
+      "openness": 60,
+      "performance": 68.8,
+      "research": null
+    },
+    {
+      "id": "qwen-image-2-1",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm3-vl-2b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ling-3-1-flash-1019",
+      "openness": 60,
+      "performance": 24.9,
+      "research": null
+    },
+    {
+      "id": "ling-flash-2-0",
+      "openness": 60,
+      "performance": 58.9,
+      "research": null
+    },
+    {
+      "id": "ring-2-6-1t",
+      "openness": 60,
+      "performance": 43.1,
+      "research": null
+    },
+    {
+      "id": "duo-1-0-causal-base",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "duo-1-0-distill",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "duo-1-2-causal-base",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "fastdialoguesidon",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "longcat-next",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-flash-omni-2-0",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-flash-omni-preview",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-univision-16b-a3b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "realtime-venus",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "zoomgain-4b",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "zoomgain-9b",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ace-step-webgpu-models",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "align",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "audio8-asr-infinite",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "audio8-tts-preview-0-1b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "audio8-tts-preview-0-6b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "audio8-tts-realistic-air",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "bert-base-ner",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "clear",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "clef-text-0-6b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "clef-vision-0-8b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "clip-vit-base-patch32",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "clips",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "d1-2b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "d1-3b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "d1-omni-2b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "d1-omni-600m",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "drex-dlm",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "drex-max-v1",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "drex-v1-5",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "drex-v2-0",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "dsv4-flash-0731-vision",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ear",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "edge0-35b-a3b-preview",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "edge0-8b-a1b-preview",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "emo",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ernie-5-5-flash-base",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "eye",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "face",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "fluidaudio-web",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "gist",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "glm-ocr",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "haru-4b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "higgs-audio-v2-tokenizer",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "higgs-tts-3-4b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "husky-flash",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "kapitsa-27b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "kapitsa-35b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "kapitsa-4b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "kapitsa-9b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "kapitsa-bolt",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "kapitsa-clover",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "kapitsa-dory",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "kapitsa-flint",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "kapitsa-lightning",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "kapitsa-super",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lbs-27b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "leapbundles",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lemondecider",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-1-2b-longevity",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-2-6b-longevity",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-1-2b-base",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-1-2b-instruct",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-1-2b-thinking",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-2-6b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-24b-a2b",
+      "openness": 55,
+      "performance": 51,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-24b-a2b-base",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-24b-a2b-dspark",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-350m",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-8b-a1b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-audio-1-5b",
+      "openness": 55,
+      "performance": 92.5,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-vl-3b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-5-vl-3b-dspark",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm2-8b-a1b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm3-1-7b-base",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lfm3-audio-2b",
+      "openness": 55,
+      "performance": 93.8,
+      "research": null
+    },
+    {
+      "id": "lfm3-omni-2b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "lidstral-arabic",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ling-1t",
+      "openness": 60,
+      "performance": 67.7,
+      "research": null
+    },
+    {
+      "id": "ling-2-5-1t",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ling-2-6-flash",
+      "openness": 60,
+      "performance": 24.3,
+      "research": null
+    },
+    {
+      "id": "ling-3-0-flash-dspark",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ling-3-0-flash-ubtree",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ling-3-0-tiny-ubtree",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ling-3-1-flash-base",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ling-mini-2-0",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "liquid-codec",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "llada-image",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "llada-image-turbo",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "llada-ui",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "llada2-2-flash",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "llada2-2-mini",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mach-1-additive-35b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mach-1-additive-35b-multimodal",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mach-2-additive-medium",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mach-boom",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-7b-base",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-7b-mtps",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-7b-rl",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-7b-rl-0530",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-7b-rl-zero",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-7b-sft",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-audio-7b-base",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-audio-7b-instruct",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-audio-tokenizer",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-v2-5-asr",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-v2-5-base",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-v2-5-pro-base",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-v2-6-distill-qwen-9b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-v2-6-flash-mopd",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-v2-6-pro-mopd",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-v2-flash-base",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-vl-7b-rl",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-vl-7b-rl-2508",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-vl-7b-sft",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "mimo-vl-7b-sft-2508",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-3-0-asr-tiny",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-3-0-audio-flash",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-3-0-audio-tiny",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-3-0-tts-0-5b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-3-0-tts-tiny",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-image-0-1-design",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-image-0-1-design-layer",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-uniaudio-16b-a3b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ming-uniaudio-16b-a3b-edit",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "minimax-h3-image",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "minimax-h3-image-pe",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "minimax-music3",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "moderator",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ornith-1-5-122b",
+      "openness": 60,
+      "performance": 80.9,
+      "research": null
+    },
+    {
+      "id": "ornith-1-5-397b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ornith-1-5-9b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "orze-asr-3way",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "qwen-drive-1-0-4b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "qwen-image-2-1-pe-i2i",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "qwen-image-2-1-pe-t2i",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "qwen-image-2-1-turbo",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "qwen3-asr-1-7b-hf-beam4",
+      "openness": 60,
+      "performance": 93.9,
+      "research": null
+    },
+    {
+      "id": "qwen3-asr-1-7b-hf-orze",
+      "openness": 60,
+      "performance": 93.9,
+      "research": null
+    },
+    {
+      "id": "qwen3guard-stream-0-6b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "qwen3guard-stream-4b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "qwen3guard-stream-8b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "redact",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ring-1t",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ring-2-5-1t",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ring-flash-2-0",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ring-mini-2-0",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "schemer",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "shapes",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "singvl-s1-4b",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "swin2sr-classical-sr-x2-64",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "timestral-123m",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "timestral-209m",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "timestral-28m",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "timestral-5m",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "tinfield-1",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "title",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "tongue",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "toxic",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "trocr-small-handwritten",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "twil-8b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "twil-lm2",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "twil-lm3",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "twil-lm3-pro",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "uhm",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "ui-venus-2-9b",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "underdog-27b-1-0",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "underdog-27b-1-1",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "underdog-bark-0-8b-1-0",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "underdog-bark-3-0",
+      "openness": 55,
+      "performance": 95.1,
+      "research": null
+    },
+    {
+      "id": "underdog-bark-3-0-clean",
+      "openness": 55,
+      "performance": 94.2,
+      "research": null
+    },
+    {
+      "id": "underdog-bark-3-0-plus",
+      "openness": 55,
+      "performance": 95.2,
+      "research": null
+    },
+    {
+      "id": "underdog-bark-3-0-pro",
+      "openness": 55,
+      "performance": 95.7,
+      "research": null
+    },
+    {
+      "id": "underdog-poodle-4b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "underdog-saluki-27b-1-0",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "underdog-ternary-1-1",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "underdog-woof",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "underdog-woof-2b-1-1",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "underdog-woof-4b-1-1",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "underdog-woof-japanese",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "unlimited-ocr",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "unlimited-ocr-2",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "vit-gpt2-image-captioning",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "voxtral-mini-4b-realtime-arabic",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "voz",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "webai-colvec1-1-4b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "webai-colvec1-1-8b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "webai-colvec1-9b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "who",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "woof-1-0-4b",
+      "openness": 55,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "zwz-2b",
+      "openness": 60,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "zwz2-27b",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "zwz2-4b",
+      "openness": 50,
+      "performance": null,
+      "research": null
+    },
+    {
+      "id": "zwz2-9b",
+      "openness": 50,
+      "performance": null,
+      "research": null
     }
-  ],
-  "note": "Family matches carry the scorecard result for the named model family, not an exact version. Check the source before relying on a score.",
-  "generated_on": "2026-11-14"
+  ]
 }

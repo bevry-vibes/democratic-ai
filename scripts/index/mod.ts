@@ -42,6 +42,17 @@ interface Syndication {
   models: Record<string, SyndicationModel>
 }
 
+interface ModelAliases {
+  aliases: Array<{
+    id: string
+    canonical_id: string
+    hugging_face: string
+    canonical_hugging_face: string
+    relation: string
+    note: string
+  }>
+}
+
 interface Watchlist {
   members: Array<{ id: string; kind: string; hugging_face?: string | null; x?: string[] }>
 }
@@ -266,6 +277,9 @@ async function main(): Promise<void> {
   const links = JSON.parse(await Deno.readTextFile("data/links.json")) as LinkIndex
   const syndication = JSON.parse(await Deno.readTextFile("data/syndication.json")) as Syndication
   const watchlist = JSON.parse(await Deno.readTextFile("data/watchlist.json")) as Watchlist
+  const aliasFile = JSON.parse(await Deno.readTextFile("data/model-aliases.json")) as ModelAliases
+  const aliases = aliasFile.aliases
+  const aliasHf = new Set(aliases.map((alias) => alias.hugging_face))
   const vocabulary = JSON.parse(await Deno.readTextFile("data/tags.json")) as {
     namespaces: Record<string, { values: Record<string, string> }>
   }
@@ -330,6 +344,11 @@ async function main(): Promise<void> {
     const key = norm(root.item.source_id)
     if (!rootByKey.has(key)) rootByKey.set(key, root)
   }
+  const rootByHf = new Map(roots.map((root) => [root.item.source_id, root]))
+  for (const alias of aliases) {
+    const canonical = rootByHf.get(alias.canonical_hugging_face)
+    if (canonical) rootByKey.set(norm(alias.hugging_face), canonical)
+  }
 
   const buildsByRoot = new Map<string, TaggedItem[]>()
   const unmatchedBuilds: string[] = []
@@ -351,6 +370,7 @@ async function main(): Promise<void> {
   let buildCount = 0
 
   for (const root of roots) {
+    if (aliasHf.has(root.item.source_id)) continue
     const item = itemMap.get(`${root.item.source}|${root.item.source_id}`) ?? (root.item as unknown as PullItem)
     const sourceId = root.item.source_id
     const org = sourceId.split("/")[0] ?? ""
@@ -358,6 +378,11 @@ async function main(): Promise<void> {
     const md = modelsDevByKey.get(norm(sourceId))
     const card = md?.description ? "" : await cardExcerpt(sourceId)
     const enriched = new Set(tags)
+    const folded = aliases.filter((alias) => alias.canonical_hugging_face === sourceId)
+    for (const alias of folded) {
+      const aliasRoot = rootByHf.get(alias.hugging_face)
+      for (const tag of aliasRoot?.tags ?? []) enriched.add(tag.tag)
+    }
     if (md?.tool_call) enriched.add("task:tool-calling")
     if (md?.reasoning) enriched.add("task:reasoning")
     for (const modality of [...(md?.modalities?.input ?? []), ...(md?.modalities?.output ?? [])]) {
@@ -402,7 +427,21 @@ async function main(): Promise<void> {
       id,
       kind: "model",
       name: base,
-      aliases: [sourceId],
+      aliases: [sourceId, ...folded.map((alias) => alias.hugging_face)],
+      releases: folded.map((alias) => {
+        const aliasRoot = rootByHf.get(alias.hugging_face)
+        const aliasItem = aliasRoot
+          ? itemMap.get(`${aliasRoot.item.source}|${aliasRoot.item.source_id}`) ?? (aliasRoot.item as unknown as PullItem)
+          : null
+        return {
+          id: alias.id,
+          name: aliasRoot ? baseName(alias.hugging_face) : alias.id,
+          hugging_face: alias.hugging_face,
+          released: aliasItem?.published_at ? aliasItem.published_at.slice(0, 10) : null,
+          relation: alias.relation,
+          note: alias.note,
+        }
+      }),
       organization: orgId,
       released: root.item.published_at ? root.item.published_at.slice(0, 10) : null,
       summary: md?.description ? md.description.slice(0, 400) : card,
@@ -471,6 +510,8 @@ async function main(): Promise<void> {
       reasoning: md?.reasoning ?? null,
       context_tokens: md?.limit?.context ?? null,
       released: root.item.published_at ? root.item.published_at.slice(0, 10) : null,
+      aliases: [sourceId, ...folded.map((alias) => alias.hugging_face)],
+      releases: folded.length,
       models_dev: link.models_dev ?? null,
       agent_detect: link.agent_detect ?? null,
       builds: buildEntries.length,
@@ -499,6 +540,7 @@ async function main(): Promise<void> {
   }
 
   const report = {
+    aliases_folded: aliases.length,
     pull_id: pullId,
     generated_at: new Date().toISOString(),
     roots: models.length,
@@ -519,7 +561,21 @@ async function main(): Promise<void> {
   await writeReplace("data/models.report.json", JSON.stringify(report, null, 2) + "\n")
   await writeReplace(
     "data/dist/models.json",
-    JSON.stringify({ generated_at: new Date().toISOString(), pull_id: pullId, models: compact }, null, 2) + "\n",
+    JSON.stringify(
+      {
+        generated_at: new Date().toISOString(),
+        pull_id: pullId,
+        aliases: aliases.map((alias) => ({
+          id: alias.id,
+          canonical_id: alias.canonical_id,
+          hugging_face: alias.hugging_face,
+          relation: alias.relation,
+        })),
+        models: compact,
+      },
+      null,
+      2,
+    ) + "\n",
   )
 
   console.log(`pull ${pullId}`)

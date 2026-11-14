@@ -1,0 +1,178 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/qwen3-6-35b-a3b",
+  "fetched_at": "2026-11-14T05:38:34.837Z",
+  "model": {
+    "id": "8665ca00-c687-44c7-875c-22618cb31c4f",
+    "slug": "qwen3-6-35b-a3b",
+    "name": "Qwen3.6 35B A3B (Reasoning)",
+    "shortName": "Qwen3.6 35B A3B",
+    "suffix": "Reasoning",
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-04-16",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "qwen3-6-35b-a3b",
+      "name": "Qwen3.6 35B A3B",
+      "deprecatedTo": null
+    },
+    "deprecated": false,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 36,
+    "inferenceParametersActiveBillions": 3,
+    "sizeClass": "small",
+    "contextWindowTokens": 262144,
+    "licenseName": "Apache 2.0",
+    "licenseUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/main/LICENSE",
+    "modelWeightsSourceUrl": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+    "microevalsEnabled": false,
+    "intelligenceIndex": null,
+    "capabilities": {},
+    "omniscience": null,
+    "mlcrOverall": 0.05,
+    "gdpPdfAllPass": 0.066,
+    "gdpval": 898.86,
+    "gdpvalInterval": {
+      "lower": 881.22,
+      "upper": 916.49
+    },
+    "itBenchSre": null,
+    "tau2": 0.953216374269006,
+    "tauBanking": 0.0927835051546392,
+    "terminalbenchHard": 0.348484848484849,
+    "terminalBench21": 0.449438202247191,
+    "terminalBench40": 0,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": 0.069,
+    "critptAgenticHard": null,
+    "scicode": 0.365740740740741,
+    "lcr": 0.716666666666667,
+    "ifbench": 0.643537414965986,
+    "hle": 0.222428174235403,
+    "gpqa": 0.841414141414142,
+    "critpt": 0.00285714285714286,
+    "apexAgents": null,
+    "mmmuPro": 0.75028901734104,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.05208565614505884,
+    "price1mInputTokens": 0.375,
+    "price1mOutputTokens": 2.25,
+    "cacheHitPrice": null,
+    "cacheHitDiscountPercent": null,
+    "pricePer1k1mpImages": 0.254,
+    "price1mBlended0To3To1": 0.84375,
+    "price1mBlended7To2To1": 0.5625,
+    "price1mBlended0To1To1": 1.3125,
+    "price1mBlended100To1To1": 0.39338235294117646,
+    "price1mBlended0To100To1": 0.3935643564356436,
+    "openness": {
+      "opennessIndex": 38.888888888888886,
+      "modelAvailability": 6,
+      "transparencyMethodology": 1,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 712.58,
+        "lower95ci": 703.4,
+        "upper95ci": 721.16
+      }
+    },
+    "headline": {
+      "outputSpeed": 118.21941493688014,
+      "timeToFirstToken": 3.219473707056539,
+      "timeToFirstAnswerToken": 19.16877028735929
+    },
+    "multiTurn": {
+      "timeToFirstToken": 1.4721948853777667
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 1.0634597489412005
+      },
+      "10k": {
+        "timeToFirstToken": 1.9703135992646803
+      },
+      "100k": {
+        "timeToFirstToken": 11.86648423800005
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "Alibaba"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "Alibaba"
+    },
+    "creator": {
+      "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+      "slug": "alibaba",
+      "name": "Alibaba",
+      "logo": "/img/logos/alibaba.svg",
+      "color": "#ff7018",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "alibaba_cloud",
+        "name": "Alibaba Cloud",
+        "logo": "/img/logos/alibaba.svg"
+      },
+      {
+        "slug": "coreweave",
+        "name": "CoreWeave",
+        "logo": "/img/logos/coreweave.svg"
+      },
+      {
+        "slug": "deepinfra",
+        "name": "DeepInfra",
+        "logo": "/img/logos/deepinfra.webp"
+      },
+      {
+        "slug": "gmi",
+        "name": "GMI",
+        "logo": "/img/logos/gmi.svg"
+      },
+      {
+        "slug": "novita",
+        "name": "Novita",
+        "logo": "/img/logos/novita.svg"
+      },
+      {
+        "slug": "parasail",
+        "name": "Parasail",
+        "logo": "/img/logos/parasail.svg"
+      },
+      {
+        "slug": "scaleway",
+        "name": "Scaleway",
+        "logo": "/img/logos/scaleway.svg"
+      },
+      {
+        "slug": "siliconflow",
+        "name": "SiliconFlow",
+        "logo": "/img/logos/siliconflow.png"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": true,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": true,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

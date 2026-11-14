@@ -18,7 +18,10 @@
     "asr:fetch": "deno run -A scripts/asr/fetch.ts",
     "asr": "deno run -A scripts/asr/mod.ts",
     "asr:check": "deno check scripts/asr/fetch.ts scripts/asr/mod.ts",
-    "overlays": "deno task scorecard && deno task asr"
+    "overlays": "deno task benchmarks && deno task asr && deno task scorecard",
+    "benchmarks:fetch": "deno run -A scripts/benchmarks/fetch.ts",
+    "benchmarks": "deno run -A scripts/benchmarks/mod.ts",
+    "benchmarks:check": "deno check scripts/benchmarks/fetch.ts scripts/benchmarks/mod.ts"
   },
   "imports": {
     "@std/xml": "jsr:@std/xml@^0.2.0"

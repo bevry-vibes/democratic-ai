@@ -1,0 +1,127 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/minimax-m2",
+  "fetched_at": "2026-11-14T05:38:31.352Z",
+  "model": {
+    "id": "f74ea286-cd29-4eb4-af14-1389b19c21e5",
+    "slug": "minimax-m2",
+    "name": "MiniMax-M2",
+    "shortName": "MiniMax-M2",
+    "suffix": null,
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2025-10-26",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "minimax-m2",
+      "name": "MiniMax-M2",
+      "deprecatedTo": "minimax-m2-1"
+    },
+    "deprecated": true,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 230,
+    "inferenceParametersActiveBillions": 10,
+    "sizeClass": "large",
+    "contextWindowTokens": 204800,
+    "licenseName": "Modified MIT",
+    "licenseUrl": "https://github.com/MiniMax-AI/MiniMax-M2/blob/main/LICENSE",
+    "modelWeightsSourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+    "microevalsEnabled": false,
+    "intelligenceIndex": null,
+    "capabilities": {},
+    "omniscience": null,
+    "gdpval": null,
+    "itBenchSre": null,
+    "tau2": 0.868421052631579,
+    "tauBanking": null,
+    "terminalbenchHard": 0.257575757575758,
+    "terminalBench21": null,
+    "terminalBench40": null,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": null,
+    "critptAgenticHard": null,
+    "scicode": null,
+    "lcr": 0.643333333333333,
+    "ifbench": 0.72312925170068,
+    "hle": 0.136700648748842,
+    "gpqa": 0.776767676767677,
+    "critpt": 0.00857142857142857,
+    "apexAgents": null,
+    "mmmuPro": null,
+    "livecodebench": 0.826455026455027,
+    "aime25": 0.783333333333333,
+    "analystAgent": null,
+    "price1mInputTokens": 0.3,
+    "price1mOutputTokens": 1.2,
+    "cacheHitPrice": null,
+    "cacheHitDiscountPercent": null,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.5249999999999999,
+    "price1mBlended7To2To1": 0.39,
+    "price1mBlended0To1To1": 0.75,
+    "price1mBlended100To1To1": 0.3088235294117647,
+    "price1mBlended0To100To1": 0.3089108910891089,
+    "openness": {
+      "opennessIndex": 27.77777777777778,
+      "modelAvailability": 4,
+      "transparencyMethodology": 1,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "headline": {
+      "outputSpeed": 96.48065234198661,
+      "timeToFirstToken": 1.3209521928777692,
+      "timeToFirstAnswerToken": 7.313051715530562
+    },
+    "multiTurn": {
+      "timeToFirstToken": 0.6600544098667057
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 0.6709003240832296
+      },
+      "10k": {
+        "timeToFirstToken": 0.9923281305832473
+      },
+      "100k": {
+        "timeToFirstToken": 4.28232147300002
+      }
+    },
+    "performanceDataSource": {
+      "type": "median"
+    },
+    "priceDataSource": {
+      "type": "median"
+    },
+    "creator": {
+      "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+      "slug": "minimax",
+      "name": "MiniMax",
+      "logo": "/img/logos/minimax.svg",
+      "color": "#EB3568",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "amazon_bedrock",
+        "name": "Amazon Bedrock",
+        "logo": "/img/logos/aws.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

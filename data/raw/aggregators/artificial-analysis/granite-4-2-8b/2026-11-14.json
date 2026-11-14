@@ -1,0 +1,227 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/granite-4-2-8b",
+  "fetched_at": "2026-11-14T05:38:26.486Z",
+  "model": {
+    "id": "adfae555-f489-4f3e-9064-c6b7fcdd0783",
+    "slug": "granite-4-2-8b",
+    "name": "Granite 4.2 8B",
+    "shortName": "Granite 4.2 8B",
+    "suffix": null,
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-08-25",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "granite-4-2-8b",
+      "name": "Granite 4.2 8B",
+      "deprecatedTo": null
+    },
+    "deprecated": false,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 8,
+    "inferenceParametersActiveBillions": null,
+    "sizeClass": "small",
+    "contextWindowTokens": 131072,
+    "licenseName": "Apache 2.0",
+    "licenseUrl": "https://www.apache.org/licenses/LICENSE-2.0",
+    "modelWeightsSourceUrl": "https://huggingface.co/ibm-granite/granite-4.2-8b",
+    "microevalsEnabled": true,
+    "intelligenceIndex": 5.09826495217051,
+    "capabilities": {
+      "financeAndAccounting": 14.7949351062944,
+      "strategyAndOps": 6.94571475667168,
+      "legal": 14.5810085941302,
+      "engineering": 14.6,
+      "economics": 14.6233333333333
+    },
+    "omniscience": -16.666666666666668,
+    "omniscienceAccuracy": 0.11766666666666667,
+    "omniscienceHallucinationRate": 0.32225160559123533,
+    "gdpPdfAllPass": 0.006,
+    "gdpval": 498.38,
+    "gdpvalInterval": {
+      "lower": 474.86,
+      "upper": 521.89
+    },
+    "itBenchSre": null,
+    "tau2": null,
+    "tauBanking": 0.0762886597938144,
+    "terminalbenchHard": null,
+    "terminalBench21": 0.183520599250936,
+    "terminalBench40": 0,
+    "frontierCode": null,
+    "frontierCode20": 0,
+    "terminalBenchScience": 0,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": 0.04,
+    "critptAgenticHard": 0,
+    "scicode": 0.314814814814815,
+    "lcr": 0.45,
+    "ifbench": null,
+    "hle": 0.0968489341983318,
+    "gpqa": 0.631313131313131,
+    "critpt": 0.00285714285714286,
+    "apexAgents": null,
+    "mmmuPro": null,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.020571262692004582,
+    "price1mInputTokens": 0.06,
+    "price1mOutputTokens": 0.25,
+    "cacheHitPrice": 0.015,
+    "cacheHitDiscountPercent": 0.75,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.1075,
+    "price1mBlended7To2To1": 0.0475,
+    "price1mBlended0To1To1": 0.155,
+    "price1mBlended100To1To1": 0.017745098039215687,
+    "price1mBlended0To100To1": 0.06188118811881188,
+    "intelligenceIndexTimePerTask": 671.7051979728233,
+    "intelligenceIndexCost": {
+      "total": 46.88331265019501,
+      "input": 27.45713415019501,
+      "nonCacheInput": 0.14653187999999998,
+      "cacheRead": 21.959760349935,
+      "cacheWrite": 5.350841920260008,
+      "output": 19.4261785,
+      "reasoning": 15.98624375,
+      "answer": 3.43993475
+    },
+    "intelligenceIndexCostPerTask": {
+      "cost": {
+        "total": 0.0404628507686443,
+        "input": 0.027584083211092496,
+        "nonCacheInput": 0.000055688553,
+        "cacheRead": 0.02214887645254368,
+        "cacheWrite": 0.00537951820554881,
+        "output": 0.012878767557551808,
+        "reasoning": 0.009265989519273193,
+        "answer": 0.0036127780382786165
+      },
+      "evaluations": [
+        {
+          "slug": "aa-briefcase",
+          "weightedCostPerTask": 0.01326289280389121
+        },
+        {
+          "slug": "automationbench-aa",
+          "weightedCostPerTask": 0.0010967382962484022
+        },
+        {
+          "slug": "terminalbench-4-0",
+          "weightedCostPerTask": 0.003987194739707576
+        },
+        {
+          "slug": "frontiercode-2-0",
+          "weightedCostPerTask": 0.01175765216888693
+        },
+        {
+          "slug": "omniscience",
+          "weightedCostPerTask": 0.00016743660899999998
+        },
+        {
+          "slug": "gdp-pdf",
+          "weightedCostPerTask": 0.00014833853
+        },
+        {
+          "slug": "hle-diamond",
+          "weightedCostPerTask": 0.000331862339
+        },
+        {
+          "slug": "critpt-v2-hard",
+          "weightedCostPerTask": 0.00071962592882875
+        },
+        {
+          "slug": "terminal-bench-science",
+          "weightedCostPerTask": 0.008991109353081431
+        }
+      ]
+    },
+    "canonicalIntelligenceIndexTokenCount": {
+      "input": 1555606920,
+      "output": 77704714,
+      "answer": 13759739,
+      "reasoning": 63944975
+    },
+    "intelligenceIndexOutputTokensPerTask": {
+      "reasoning": 37063.95807709277,
+      "answer": 14451.112153114467,
+      "output": 51515.07023020724
+    },
+    "openness": {
+      "opennessIndex": 72.22222222222223,
+      "modelAvailability": 6,
+      "transparencyMethodology": 4,
+      "transparencyPostTrainingData": 1.5,
+      "transparencyPreTrainingData": 1.5
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 310.46,
+        "lower95ci": 301.01,
+        "upper95ci": 318.84
+      }
+    },
+    "headline": {
+      "outputSpeed": 76.69297540897027,
+      "timeToFirstToken": 6.38883878689893,
+      "timeToFirstAnswerToken": 54.30359718011979
+    },
+    "multiTurn": {
+      "timeToFirstToken": 4.040164317599979
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 8.13521121640622
+      },
+      "10k": {
+        "timeToFirstToken": 8.57734702068751
+      },
+      "100k": {
+        "timeToFirstToken": 9.499981531499913
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "IBM"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "IBM"
+    },
+    "creator": {
+      "id": "512ef1e4-e02e-4532-a5f2-d11a40962498",
+      "slug": "ibm",
+      "name": "IBM",
+      "logo": "/img/logos/ibm.svg",
+      "color": "#0f62fe",
+      "country": "us"
+    },
+    "hosts": [
+      {
+        "slug": "coreweave",
+        "name": "CoreWeave",
+        "logo": "/img/logos/coreweave.svg"
+      },
+      {
+        "slug": "deepinfra",
+        "name": "DeepInfra",
+        "logo": "/img/logos/deepinfra.webp"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/minimax-m2-7",
+  "fetched_at": "2026-11-14T05:38:32.989Z",
+  "model": {
+    "id": "4bbceacb-cf47-464b-b60f-e1d1fe016d67",
+    "slug": "minimax-m2-7",
+    "name": "MiniMax-M2.7",
+    "shortName": "MiniMax-M2.7",
+    "suffix": null,
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-03-18",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "minimax-m2-7",
+      "name": "MiniMax-M2.7",
+      "deprecatedTo": "minimax-m3"
+    },
+    "deprecated": true,
+    "isOpenWeights": true,
+    "openSourceCategorization": "non-commercial",
+    "parameters": 230,
+    "inferenceParametersActiveBillions": 10,
+    "sizeClass": "large",
+    "contextWindowTokens": 204800,
+    "licenseName": "NON-COMMERCIAL LICENSE",
+    "licenseUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7/blob/main/LICENSE",
+    "modelWeightsSourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+    "microevalsEnabled": true,
+    "intelligenceIndex": null,
+    "capabilities": {},
+    "omniscience": null,
+    "mlcrOverall": 0.0555555555555556,
+    "gdpPdfAllPass": 0.06,
+    "gdpval": 1015.49,
+    "gdpvalInterval": {
+      "lower": 998.76,
+      "upper": 1032.22
+    },
+    "itBenchSre": 0.264595103578154,
+    "tau2": 0.847953216374269,
+    "tauBanking": 0.0989690721649484,
+    "terminalbenchHard": 0.393939393939394,
+    "terminalBench21": 0.554307116104869,
+    "terminalBench40": 0,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": null,
+    "critptAgenticHard": null,
+    "scicode": 0.501157407407407,
+    "lcr": 0.783333333333333,
+    "ifbench": 0.757142857142857,
+    "hle": 0.29610750695088,
+    "gpqa": 0.873737373737374,
+    "critpt": 0.00571428571428571,
+    "apexAgents": 0.106194690265487,
+    "mmmuPro": null,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": 0.1125,
+    "automationBenchPartialScore": 0.044352902503728975,
+    "price1mInputTokens": 0.3,
+    "price1mOutputTokens": 1.2,
+    "cacheHitPrice": 0.06,
+    "cacheHitDiscountPercent": 0.8,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.5249999999999999,
+    "price1mBlended7To2To1": 0.22199999999999998,
+    "price1mBlended0To1To1": 0.75,
+    "price1mBlended100To1To1": 0.07352941176470588,
+    "price1mBlended0To100To1": 0.3089108910891089,
+    "openness": {
+      "opennessIndex": 22.22222222222222,
+      "modelAvailability": 3,
+      "transparencyMethodology": 1,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 720.4,
+        "lower95ci": 711.17,
+        "upper95ci": 728.95
+      }
+    },
+    "headline": {
+      "outputSpeed": 43.18353029127811,
+      "timeToFirstToken": 4.436443056487032,
+      "timeToFirstAnswerToken": 16.389993226360144
+    },
+    "multiTurn": {
+      "timeToFirstToken": 1.6809706678907002
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 1.2308396242501285
+      },
+      "10k": {
+        "timeToFirstToken": 2.35555059099986
+      },
+      "100k": {
+        "timeToFirstToken": 17.9893561200001
+      }
+    },
+    "performanceDataSource": {
+      "type": "median"
+    },
+    "priceDataSource": {
+      "type": "median"
+    },
+    "creator": {
+      "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+      "slug": "minimax",
+      "name": "MiniMax",
+      "logo": "/img/logos/minimax.svg",
+      "color": "#EB3568",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "gmi",
+        "name": "GMI",
+        "logo": "/img/logos/gmi.svg"
+      },
+      {
+        "slug": "novita",
+        "name": "Novita",
+        "logo": "/img/logos/novita.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

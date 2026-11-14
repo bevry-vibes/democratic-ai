@@ -6,6 +6,7 @@
   "aliases": [
     "Qwen/Qwen-Image-2.1"
   ],
+  "releases": [],
   "organization": "qwen",
   "released": "2026-09-14",
   "summary": "Unified text-to-image generation and image editing model with native RGBA transparency and reference-image editing",
@@ -129,5 +130,41 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "3 builds are attached."
+  "notes": "3 builds are attached.",
+  "scorecard": {
+    "openness_morality": {
+      "score": 55,
+      "tier": "shared",
+      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed."
+    },
+    "performance": {
+      "score": null,
+      "basis": null,
+      "match": null,
+      "inherited_from": null,
+      "benchmarks": [],
+      "own_benchmarks": [],
+      "metric": null,
+      "source": null,
+      "as_of": null,
+      "note": "Not measured. No current benchmark is recorded."
+    },
+    "research_citation": {
+      "score": null,
+      "basis": null,
+      "benchmarks": [],
+      "source": null,
+      "as_of": null,
+      "note": "Not measured. No current research benchmark is recorded."
+    },
+    "syndication": {
+      "score": 3,
+      "max": 10,
+      "band": "emerging",
+      "note": "Independent listings, not quality. The model's own host has weight 0."
+    },
+    "as_of": "2026-11-14",
+    "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Research/Citation uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
+    "source": "internal://democratic-ai/scorecard-v2"
+  }
 }

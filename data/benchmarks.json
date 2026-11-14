@@ -1,0 +1,1574 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14T05:45:22.340Z",
+  "source": "https://llm-stats.com",
+  "sources": [
+    "https://llm-stats.com",
+    "https://artificialanalysis.ai",
+    "model cards"
+  ],
+  "as_of": "2026-11-14",
+  "method": "A primary score is the mean of the benchmarks the scorecard already used. A secondary or tertiary score is a weaker fallback and says so. A base match borrows the base model's primary result only when the update has no comparable primary benchmark. Missing is not zero.",
+  "models": {
+    "mimo-v2-flash": {
+      "performance": 64.2,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 73.4,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2",
+          "name": "Terminal-Bench 2.0",
+          "group": "terminal",
+          "score": 38.5,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench-v6",
+          "name": "LiveCodeBench v6",
+          "group": "livecodebench",
+          "score": 80.6,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 58.3,
+      "research_benchmarks": [
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "browsecomp",
+          "score": 58.3,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/mimo-v2-flash",
+      "as_of": "2026-11-14T05:30:44.557Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "qwen3-8-flash-next": {
+      "performance": 77.2,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 62.5,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench-v6",
+          "name": "LiveCodeBench v6",
+          "group": "livecodebench",
+          "score": 91.9,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/qwen3.8-flash-next",
+      "as_of": "2026-11-14T05:30:56.509Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "glm-5-3": {
+      "performance": 88.2,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 88.2,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/glm-5.3",
+      "as_of": "2026-11-14T05:30:32.991Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "granite-4-2-8b": {
+      "performance": 40.2,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 47.7,
+          "self_reported": true
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 19.1,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 20.6,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench-v6",
+          "name": "LiveCodeBench v6",
+          "group": "livecodebench",
+          "score": 73.2,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/granite-4.2-8b",
+      "as_of": "2026-11-14T05:30:35.466Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "glm-5-2": {
+      "performance": 72.4,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 62.1,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 82.7,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/glm-5.2",
+      "as_of": "2026-11-14T05:30:30.922Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "longcat-2-5": {
+      "performance": 88.4,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 88.4,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 77.7,
+      "research_benchmarks": [
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "browsecomp",
+          "score": 91.9,
+          "self_reported": true
+        },
+        {
+          "id": "finsearchcomp-t3",
+          "name": "FinSearchComp-T3",
+          "group": "finsearchcomp",
+          "score": 63.4,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/longcat-2.5",
+      "as_of": "2026-11-14T05:30:41.965Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "minimax-m2-7": {
+      "performance": 56.6,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 56.2,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2",
+          "name": "Terminal-Bench 2.0",
+          "group": "terminal",
+          "score": 57,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/minimax-m2.7",
+      "as_of": "2026-11-14T05:30:52.191Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "qwen3-6-27b": {
+      "performance": 68.5,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 77.2,
+          "self_reported": true
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 53.5,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2",
+          "name": "Terminal-Bench 2.0",
+          "group": "terminal",
+          "score": 59.3,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench-v6",
+          "name": "LiveCodeBench v6",
+          "group": "livecodebench",
+          "score": 83.9,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/qwen3.6-27b",
+      "as_of": "2026-11-14T05:30:54.529Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "mimo-v2-5": {
+      "performance": 61,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 56.1,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2",
+          "name": "Terminal-Bench 2.0",
+          "group": "terminal",
+          "score": 65.8,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 16.9,
+      "research_benchmarks": [
+        {
+          "id": "researchclawbench",
+          "name": "ResearchClawBench",
+          "group": "researchclawbench",
+          "score": 16.9,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/mimo-v2.5",
+      "as_of": "2026-11-14T05:30:45.812Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "qwen3-6-35b-a3b": {
+      "performance": 63.7,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 73.4,
+          "self_reported": true
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 49.5,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2",
+          "name": "Terminal-Bench 2.0",
+          "group": "terminal",
+          "score": 51.5,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench-v6",
+          "name": "LiveCodeBench v6",
+          "group": "livecodebench",
+          "score": 80.4,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 60.1,
+      "research_benchmarks": [
+        {
+          "id": "widesearch",
+          "name": "WideSearch",
+          "group": "widesearch",
+          "score": 60.1,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/qwen3.6-35b-a3b",
+      "as_of": "2026-11-14T05:30:55.044Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "mimo-v2-5-pro": {
+      "performance": 61,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 78.9,
+          "self_reported": true
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 57.2,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2",
+          "name": "Terminal-Bench 2.0",
+          "group": "terminal",
+          "score": 68.4,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench-v6",
+          "name": "LiveCodeBench v6",
+          "group": "livecodebench",
+          "score": 39.6,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/mimo-v2.5-pro",
+      "as_of": "2026-11-14T05:30:46.349Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "kimi-k3": {
+      "performance": 88.3,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 88.3,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 93.1,
+      "research_benchmarks": [
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "browsecomp",
+          "score": 91.2,
+          "self_reported": true
+        },
+        {
+          "id": "deepsearchqa",
+          "name": "DeepSearchQA",
+          "group": "deepsearchqa",
+          "score": 95,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/kimi-k3",
+      "as_of": "2026-11-14T05:30:36.397Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "minimax-m2-1": {
+      "performance": 72.5,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 67,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench",
+          "name": "LiveCodeBench",
+          "group": "livecodebench",
+          "score": 78,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 62,
+      "research_benchmarks": [
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "browsecomp",
+          "score": 62,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/minimax-m2.1",
+      "as_of": "2026-11-14T05:30:49.921Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "ling-3-0-flash-fin": {
+      "performance": 65.5,
+      "performance_basis": "primary",
+      "performance_match": "base",
+      "inherited_from": "ling-3.0-flash",
+      "benchmarks": [
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 56.6,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 57,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench-v6",
+          "name": "LiveCodeBench v6",
+          "group": "livecodebench",
+          "score": 82.8,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [
+        {
+          "id": "apex-agents",
+          "name": "APEX-Agents",
+          "group": "own",
+          "score": 29.2,
+          "self_reported": true
+        },
+        {
+          "id": "finance-agent-v1.1",
+          "name": "Finance Agent v1.1",
+          "group": "own",
+          "score": 69.2,
+          "self_reported": true
+        },
+        {
+          "id": "finance-agent-v2",
+          "name": "Finance Agent v2",
+          "group": "own",
+          "score": 59.8,
+          "self_reported": true
+        },
+        {
+          "id": "spreadsheetbench-2",
+          "name": "SpreadsheetBench 2",
+          "group": "own",
+          "score": 21.8,
+          "self_reported": true
+        },
+        {
+          "id": "spreadsheetbench-v1",
+          "name": "SpreadSheetBench-v1",
+          "group": "own",
+          "score": 86.5,
+          "self_reported": true
+        },
+        {
+          "id": "tau3-banking",
+          "name": "Tau3 Banking",
+          "group": "own",
+          "score": 41,
+          "self_reported": true
+        }
+      ],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/ling-3.0-flash-fin",
+      "as_of": "2026-11-14T05:30:40.128Z",
+      "note": "The update has no comparable benchmark of its own, so this uses the base model's primary result."
+    },
+    "minimax-m2": {
+      "performance": 76.2,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 69.4,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench",
+          "name": "LiveCodeBench",
+          "group": "livecodebench",
+          "score": 83,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 44,
+      "research_benchmarks": [
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "browsecomp",
+          "score": 44,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/minimax-m2",
+      "as_of": "2026-11-14T05:30:49.405Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "lfm3-1-7b": {
+      "performance": 43.3,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 43.4,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 12.9,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench-v6",
+          "name": "LiveCodeBench v6",
+          "group": "livecodebench",
+          "score": 73.5,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/lfm3-1.7b",
+      "as_of": "2026-11-14T05:30:37.644Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "kimi-k3-1-pro": {
+      "performance": 88.3,
+      "performance_basis": "primary",
+      "performance_match": "base",
+      "inherited_from": "kimi-k3",
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 88.3,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [
+        {
+          "id": "aa-briefcase-1.1",
+          "name": "AA-Briefcase v1.1",
+          "group": "own",
+          "score": 55.9,
+          "self_reported": true
+        },
+        {
+          "id": "agents-last-exam",
+          "name": "Agents' Last Exam",
+          "group": "own",
+          "score": 43.2,
+          "self_reported": true
+        },
+        {
+          "id": "apex-agents",
+          "name": "APEX-Agents",
+          "group": "own",
+          "score": 67.2,
+          "self_reported": true
+        },
+        {
+          "id": "automationbench-aa",
+          "name": "AutomationBench-AA",
+          "group": "own",
+          "score": 73.3,
+          "self_reported": true
+        },
+        {
+          "id": "benchcad",
+          "name": "BenchCAD",
+          "group": "own",
+          "score": 72.8,
+          "self_reported": true
+        },
+        {
+          "id": "benchcad-with-python-tool",
+          "name": "BenchCAD (with Python tool)",
+          "group": "own",
+          "score": 92.7,
+          "self_reported": true
+        },
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "own",
+          "score": 92.1,
+          "self_reported": true
+        },
+        {
+          "id": "deepswe",
+          "name": "DeepSWE",
+          "group": "own",
+          "score": 75.5,
+          "self_reported": true
+        },
+        {
+          "id": "exploitbench",
+          "name": "ExploitBench",
+          "group": "own",
+          "score": 74.7,
+          "self_reported": true
+        },
+        {
+          "id": "exploitgym",
+          "name": "ExploitGym",
+          "group": "own",
+          "score": 20.7,
+          "self_reported": true
+        },
+        {
+          "id": "gdpval-aa-2.1",
+          "name": "GDPval-AA 2.1",
+          "group": "own",
+          "score": 61.5,
+          "self_reported": true
+        },
+        {
+          "id": "harveys-legal-agent-benchmark",
+          "name": "Harvey's Legal Agent Benchmark",
+          "group": "own",
+          "score": 23.7,
+          "self_reported": true
+        },
+        {
+          "id": "kimi-code-bench-v2",
+          "name": "Kimi Code Bench v2",
+          "group": "own",
+          "score": 77.1,
+          "self_reported": true
+        },
+        {
+          "id": "officeqa-pro",
+          "name": "OfficeQA Pro",
+          "group": "own",
+          "score": 67.4,
+          "self_reported": true
+        },
+        {
+          "id": "posttrainbench",
+          "name": "PostTrainBench",
+          "group": "own",
+          "score": 36.5,
+          "self_reported": true
+        },
+        {
+          "id": "swe-marathon",
+          "name": "SWE-Marathon",
+          "group": "own",
+          "score": 51.7,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-4.0",
+          "name": "Terminal-Bench 4.0",
+          "group": "own",
+          "score": 65.7,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-science-0.1",
+          "name": "Terminal-Bench-Science 0.1",
+          "group": "own",
+          "score": 38.1,
+          "self_reported": true
+        }
+      ],
+      "research": 92.1,
+      "research_benchmarks": [
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "browsecomp",
+          "score": 92.1,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/kimi-k3.1-pro",
+      "as_of": "2026-11-14T05:30:37.160Z",
+      "note": "The update has no comparable benchmark of its own, so this uses the base model's primary result."
+    },
+    "minimax-m3": {
+      "performance": 68.5,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 80.5,
+          "self_reported": true
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 59,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 66,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 83.5,
+      "research_benchmarks": [
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "browsecomp",
+          "score": 83.5,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/minimax-m3",
+      "as_of": "2026-11-14T05:30:52.755Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "minimax-m3-1-flash": {
+      "performance": 68.5,
+      "performance_basis": "primary",
+      "performance_match": "base",
+      "inherited_from": "minimax-m3",
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 80.5,
+          "self_reported": true
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 59,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 66,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [
+        {
+          "id": "agents-last-exam",
+          "name": "Agents' Last Exam",
+          "group": "own",
+          "score": 29.6,
+          "self_reported": true
+        },
+        {
+          "id": "automationbench-1.0.6",
+          "name": "AutomationBench v1.0.6",
+          "group": "own",
+          "score": 62.8,
+          "self_reported": true
+        },
+        {
+          "id": "bankertoolbench",
+          "name": "BankerToolBench",
+          "group": "own",
+          "score": 76.2,
+          "self_reported": true
+        },
+        {
+          "id": "cybergym",
+          "name": "CyberGym",
+          "group": "own",
+          "score": 82.2,
+          "self_reported": true
+        },
+        {
+          "id": "deepswe-1.1",
+          "name": "DeepSWE 1.1",
+          "group": "own",
+          "score": 73.7,
+          "self_reported": true
+        },
+        {
+          "id": "loca-bench-256k",
+          "name": "LOCA-Bench (256k)",
+          "group": "own",
+          "score": 60.3,
+          "self_reported": true
+        },
+        {
+          "id": "nl2repo",
+          "name": "NL2Repo",
+          "group": "own",
+          "score": 61.2,
+          "self_reported": true
+        },
+        {
+          "id": "osworld-2.0",
+          "name": "OSWorld 2.0",
+          "group": "own",
+          "score": 61.7,
+          "self_reported": true
+        },
+        {
+          "id": "posttrainbench",
+          "name": "PostTrainBench",
+          "group": "own",
+          "score": 39.3,
+          "self_reported": true
+        },
+        {
+          "id": "swe-refactor-bench",
+          "name": "SWE Refactor Bench",
+          "group": "own",
+          "score": 23,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-4.0",
+          "name": "Terminal-Bench 4.0",
+          "group": "own",
+          "score": 38.1,
+          "self_reported": true
+        }
+      ],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/minimax-m3.1-flash",
+      "as_of": "2026-11-14T05:30:53.247Z",
+      "note": "The update has no comparable benchmark of its own, so this uses the base model's primary result."
+    },
+    "deepseek-v4-1-flash-1017": {
+      "performance": 90.6,
+      "performance_basis": "primary",
+      "performance_match": "base",
+      "inherited_from": "deepseek-v4.1-flash",
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 90.6,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [
+        {
+          "id": "agents-last-exam",
+          "name": "Agents' Last Exam",
+          "group": "own",
+          "score": 35.4,
+          "self_reported": true
+        },
+        {
+          "id": "automationbench",
+          "name": "AutomationBench",
+          "group": "own",
+          "score": 60.5,
+          "self_reported": true
+        },
+        {
+          "id": "deepswe-1.1",
+          "name": "DeepSWE 1.1",
+          "group": "own",
+          "score": 77,
+          "self_reported": true
+        },
+        {
+          "id": "nl2repo",
+          "name": "NL2Repo",
+          "group": "own",
+          "score": 68.2,
+          "self_reported": true
+        },
+        {
+          "id": "program-bench",
+          "name": "Program Bench",
+          "group": "own",
+          "score": 29.1,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-4.0",
+          "name": "Terminal-Bench 4.0",
+          "group": "own",
+          "score": 42.3,
+          "self_reported": true
+        }
+      ],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/deepseek-v4.1-flash-1017",
+      "as_of": "2026-11-14T05:30:28.652Z",
+      "note": "The update has no comparable benchmark of its own, so this uses the base model's primary result."
+    },
+    "ling-3-1-flash-1019": {
+      "performance": 24.9,
+      "performance_basis": "secondary",
+      "performance_match": "base",
+      "inherited_from": "ling-3-1-flash",
+      "benchmarks": [
+        {
+          "id": "terminal-bench-4.0",
+          "name": "Terminal-Bench 4.0",
+          "score": 32.8282828282828,
+          "group": "artificial-analysis",
+          "self_reported": false
+        },
+        {
+          "id": "frontier-code-2.0",
+          "name": "FrontierCode 2.0",
+          "score": 17.0090151515151,
+          "group": "artificial-analysis",
+          "self_reported": false
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": false,
+      "source": "https://artificialanalysis.ai/models/ling-3-1-flash",
+      "as_of": "2026-11-14T05:38:29.488Z",
+      "note": "Mean of the available Artificial Analysis terminal or coding evaluations. Independent test run."
+    },
+    "ling-3-0-flash": {
+      "performance": 65.5,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 56.6,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 57,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench-v6",
+          "name": "LiveCodeBench v6",
+          "group": "livecodebench",
+          "score": 82.8,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 72.9,
+      "research_benchmarks": [
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "browsecomp",
+          "score": 72.2,
+          "self_reported": true
+        },
+        {
+          "id": "widesearch",
+          "name": "WideSearch",
+          "group": "widesearch",
+          "score": 73.6,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/ling-3.0-flash",
+      "as_of": "2026-11-14T05:30:39.648Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "beam-1-0-501b-a23b": {
+      "performance": 79,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 81.6,
+          "self_reported": true
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 66.1,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 80.1,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench",
+          "name": "LiveCodeBench",
+          "group": "livecodebench",
+          "score": 88.3,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 78.7,
+      "research_benchmarks": [
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "browsecomp",
+          "score": 76.8,
+          "self_reported": true
+        },
+        {
+          "id": "deepsearchqa",
+          "name": "DeepSearchQA",
+          "group": "deepsearchqa",
+          "score": 80.5,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/beam-1.0-501b-a23b",
+      "as_of": "2026-11-14T05:30:24.785Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "minimax-m2-5": {
+      "performance": 67.8,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 80.2,
+          "self_reported": true
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 55.4,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 76.3,
+      "research_benchmarks": [
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "browsecomp",
+          "score": 76.3,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/minimax-m2.5",
+      "as_of": "2026-11-14T05:30:51.025Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "inkling-2-small": {
+      "performance": 82.2,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 82.2,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": 90.2,
+      "research_benchmarks": [
+        {
+          "id": "browsecomp",
+          "name": "BrowseComp",
+          "group": "browsecomp",
+          "score": 90.2,
+          "self_reported": true
+        }
+      ],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/inkling-2-small",
+      "as_of": "2026-11-14T05:30:35.932Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "glm-5-3-flash": {
+      "performance": 84.3,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 84.3,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/glm-5.3-flash",
+      "as_of": "2026-11-14T05:30:33.450Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "qwen3-8-27b": {
+      "performance": 75,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 61.7,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 73,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench-v6",
+          "name": "LiveCodeBench v6",
+          "group": "livecodebench",
+          "score": 90.3,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://llm-stats.com/models/qwen3.8-27b",
+      "as_of": "2026-11-14T05:30:56.020Z",
+      "note": "Mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench."
+    },
+    "qwen3-8-2-4t-a95b": {
+      "performance": 77.2,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "score": 86.6,
+          "self_reported": true,
+          "group": "card"
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-bench Pro",
+          "score": 67.7,
+          "self_reported": true,
+          "group": "card"
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "as_of": "2026-11-14",
+      "note": "Mean of the model card's Terminal-Bench 2.1 and SWE-bench Pro rows."
+    },
+    "ornith-1-5-35b-a3b": {
+      "performance": 68.8,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "score": 67.8,
+          "self_reported": true,
+          "group": "card"
+        },
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-bench Verified",
+          "score": 79,
+          "self_reported": true,
+          "group": "card"
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-bench Pro",
+          "score": 59.6,
+          "self_reported": true,
+          "group": "card"
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B",
+      "as_of": "2026-11-14",
+      "note": "Mean of the model card's Terminal-Bench 2.1, SWE-bench Verified, and SWE-bench Pro rows."
+    },
+    "ornith-1-5-122b": {
+      "performance": 80.9,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "score": 81.2,
+          "self_reported": true,
+          "group": "card"
+        },
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-bench Verified",
+          "score": 84.5,
+          "self_reported": true,
+          "group": "card"
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-bench Pro",
+          "score": 76.9,
+          "self_reported": true,
+          "group": "card"
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://huggingface.co/ornith-ai/Ornith-1.5-122B",
+      "as_of": "2026-11-14",
+      "note": "Mean of the model card's Terminal-Bench 2.1, SWE-bench Verified, and SWE-bench Pro rows."
+    },
+    "lfm2-5-24b-a2b": {
+      "performance": 51,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified (OpenCode)",
+          "score": 51,
+          "self_reported": true,
+          "group": "card"
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": true,
+      "source": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+      "as_of": "2026-11-14",
+      "note": "The model card reports SWE-Bench Verified with the OpenCode harness."
+    },
+    "ling-3-0-tiny": {
+      "performance": 27.7,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "score": 27.7153558052434,
+          "group": "artificial-analysis",
+          "self_reported": false
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": false,
+      "source": "https://artificialanalysis.ai/models/ling-3-0-tiny",
+      "as_of": "2026-11-14T05:38:29.228Z",
+      "note": "Mean of the available Artificial Analysis terminal or coding evaluations. Independent test run."
+    },
+    "ling-2-6-flash": {
+      "performance": 24.3,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "score": 24.3445692883895,
+          "group": "artificial-analysis",
+          "self_reported": false
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": false,
+      "source": "https://artificialanalysis.ai/models/ling-2-6-flash",
+      "as_of": "2026-11-14T05:39:06.133Z",
+      "note": "Mean of the available Artificial Analysis terminal or coding evaluations. Independent test run."
+    },
+    "step-5-preview": {
+      "performance": 35.9,
+      "performance_basis": "secondary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-4.0",
+          "name": "Terminal-Bench 4.0",
+          "score": 33.3333333333333,
+          "group": "artificial-analysis",
+          "self_reported": false
+        },
+        {
+          "id": "frontier-code",
+          "name": "FrontierCode",
+          "score": 38.4270666666667,
+          "group": "artificial-analysis",
+          "self_reported": false
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": false,
+      "source": "https://artificialanalysis.ai/models/step-5-preview",
+      "as_of": "2026-11-14T05:39:06.878Z",
+      "note": "Mean of the available Artificial Analysis terminal or coding evaluations. Independent test run."
+    },
+    "ling-3-0-flash-vl": {
+      "performance": 64.4,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "score": 64.4194756554307,
+          "group": "artificial-analysis",
+          "self_reported": false
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": false,
+      "source": "https://artificialanalysis.ai/models/ling-3-0-flash-vl",
+      "as_of": "2026-11-14T05:39:06.380Z",
+      "note": "Mean of the available Artificial Analysis terminal or coding evaluations. Independent test run."
+    },
+    "ring-2-6-1t": {
+      "performance": 43.1,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "score": 43.0711610486891,
+          "group": "artificial-analysis",
+          "self_reported": false
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": false,
+      "source": "https://artificialanalysis.ai/models/ring-2-6-1t",
+      "as_of": "2026-11-14T05:38:36.457Z",
+      "note": "Mean of the available Artificial Analysis terminal or coding evaluations. Independent test run."
+    },
+    "ling-flash-2-0": {
+      "performance": 58.9,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "livecodebench",
+          "name": "LiveCodeBench",
+          "score": 58.94179894179899,
+          "group": "artificial-analysis",
+          "self_reported": false
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": false,
+      "source": "https://artificialanalysis.ai/models/ling-flash-2-0",
+      "as_of": "2026-11-14T05:38:30.167Z",
+      "note": "Mean of the available Artificial Analysis terminal or coding evaluations. Independent test run."
+    },
+    "ling-1t": {
+      "performance": 67.7,
+      "performance_basis": "primary",
+      "performance_match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "livecodebench",
+          "name": "LiveCodeBench",
+          "score": 67.72486772486769,
+          "group": "artificial-analysis",
+          "self_reported": false
+        }
+      ],
+      "own_benchmarks": [],
+      "research": null,
+      "research_benchmarks": [],
+      "self_reported": false,
+      "source": "https://artificialanalysis.ai/models/ling-1t",
+      "as_of": "2026-11-14T05:39:05.860Z",
+      "note": "Mean of the available Artificial Analysis terminal or coding evaluations. Independent test run."
+    }
+  }
+}

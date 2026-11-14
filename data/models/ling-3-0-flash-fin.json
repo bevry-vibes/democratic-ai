@@ -6,6 +6,7 @@
   "aliases": [
     "inclusionAI/Ling-3.0-flash-Fin"
   ],
+  "releases": [],
   "organization": "ant-ling",
   "released": "2026-09-03",
   "summary": "Finance-enhanced model for financial research, multi-step investment workflows, and long-horizon planning and execution",
@@ -140,5 +141,106 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "3 builds are attached."
+  "notes": "3 builds are attached.",
+  "scorecard": {
+    "openness_morality": {
+      "score": 60,
+      "tier": "unproven",
+      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed."
+    },
+    "performance": {
+      "score": 65.5,
+      "basis": "primary",
+      "match": "base",
+      "inherited_from": "ling-3.0-flash",
+      "benchmarks": [
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 56.6,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 57,
+          "self_reported": true
+        },
+        {
+          "id": "livecodebench-v6",
+          "name": "LiveCodeBench v6",
+          "group": "livecodebench",
+          "score": 82.8,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [
+        {
+          "id": "apex-agents",
+          "name": "APEX-Agents",
+          "group": "own",
+          "score": 29.2,
+          "self_reported": true
+        },
+        {
+          "id": "finance-agent-v1.1",
+          "name": "Finance Agent v1.1",
+          "group": "own",
+          "score": 69.2,
+          "self_reported": true
+        },
+        {
+          "id": "finance-agent-v2",
+          "name": "Finance Agent v2",
+          "group": "own",
+          "score": 59.8,
+          "self_reported": true
+        },
+        {
+          "id": "spreadsheetbench-2",
+          "name": "SpreadsheetBench 2",
+          "group": "own",
+          "score": 21.8,
+          "self_reported": true
+        },
+        {
+          "id": "spreadsheetbench-v1",
+          "name": "SpreadSheetBench-v1",
+          "group": "own",
+          "score": 86.5,
+          "self_reported": true
+        },
+        {
+          "id": "tau3-banking",
+          "name": "Tau3 Banking",
+          "group": "own",
+          "score": 41,
+          "self_reported": true
+        }
+      ],
+      "metric": null,
+      "source": "https://llm-stats.com/models/ling-3.0-flash-fin",
+      "as_of": "2026-11-14T05:30:40.128Z",
+      "note": "The update has no comparable benchmark of its own, so this uses the base model's primary result."
+    },
+    "research_citation": {
+      "score": null,
+      "basis": null,
+      "benchmarks": [],
+      "source": null,
+      "as_of": null,
+      "note": "Not measured. No current research benchmark is recorded."
+    },
+    "syndication": {
+      "score": 8,
+      "max": 10,
+      "band": "strong",
+      "note": "Independent listings, not quality. The model's own host has weight 0."
+    },
+    "as_of": "2026-11-14",
+    "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Research/Citation uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
+    "source": "internal://democratic-ai/scorecard-v2"
+  }
 }

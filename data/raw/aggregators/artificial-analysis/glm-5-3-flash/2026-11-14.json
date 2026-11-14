@@ -1,0 +1,452 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/glm-5-3-flash",
+  "fetched_at": "2026-11-14T05:38:25.872Z",
+  "model": {
+    "id": "19496b81-9f41-4214-a77a-1df803b3c5ae",
+    "slug": "glm-5-3-flash",
+    "name": "GLM-5.3-Flash",
+    "shortName": "GLM-5.3-Flash",
+    "suffix": null,
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-08-26",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "effort": {
+      "slug": "max",
+      "label": "max",
+      "level": 60
+    },
+    "release": {
+      "slug": "glm-5-3-flash",
+      "name": "GLM-5.3-Flash",
+      "deprecatedTo": null
+    },
+    "deprecated": false,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 320,
+    "inferenceParametersActiveBillions": 18,
+    "sizeClass": "large",
+    "contextWindowTokens": 1000000,
+    "licenseName": "MIT",
+    "licenseUrl": "https://opensource.org/license/mit",
+    "modelWeightsSourceUrl": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+    "microevalsEnabled": true,
+    "intelligenceIndex": 27.803889160883,
+    "capabilities": {
+      "financeAndAccounting": 38.7814197143663,
+      "strategyAndOps": 44.5029692426297,
+      "legal": 34.7866558870673,
+      "healthcareAndMedical": 36.5867215100658,
+      "engineering": 34.4534900974026,
+      "economics": 35.2693
+    },
+    "omniscience": 0.6666666666666666,
+    "omniscienceAccuracy": 0.282,
+    "omniscienceHallucinationRate": 0.38347260909935005,
+    "mlcrOverall": 0.116666666666667,
+    "harveyLab": 0.008333333333333333,
+    "gdpPdfAllPass": 0.154,
+    "gdpval": 1648.28,
+    "gdpvalInterval": {
+      "lower": 1631.87,
+      "upper": 1664.69
+    },
+    "itBenchSre": 0.512429378531074,
+    "tau2": null,
+    "tauBanking": 0.472164948453608,
+    "terminalbenchHard": null,
+    "terminalBench21": 0.842696629213483,
+    "terminalBench40": 0.328282828282828,
+    "frontierCode": 0.409957333333333,
+    "frontierCode20": 0.176070454545455,
+    "terminalBenchScience": 0.0476190476190476,
+    "healthbench": null,
+    "vialsScore": 0.39751552795031053,
+    "mkaClimbWsr": 0.3623837773322437,
+    "healthbenchProfessional": null,
+    "hleDiamond": 0.182,
+    "critptAgenticHard": 0.245,
+    "scicode": 0.516203703703704,
+    "lcr": 0.8,
+    "ifbench": null,
+    "hle": 0.398517145505097,
+    "gpqa": 0.912121212121212,
+    "critpt": 0.154285714285714,
+    "apexAgents": null,
+    "mmmuPro": null,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": 0.25,
+    "automationBenchPartialScore": 0.6036862782167782,
+    "enterpriseOpsGym": 0.3321396598030439,
+    "price1mInputTokens": 0.15,
+    "price1mOutputTokens": 0.5,
+    "cacheHitPrice": 0.03,
+    "cacheHitDiscountPercent": 0.8,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.2375,
+    "price1mBlended7To2To1": 0.101,
+    "price1mBlended0To1To1": 0.325,
+    "price1mBlended100To1To1": 0.035784313725490194,
+    "price1mBlended0To100To1": 0.15346534653465346,
+    "intelligenceIndexTimePerTask": 2841.6546302854654,
+    "intelligenceIndexCost": {
+      "total": 377.9398815625881,
+      "input": 315.7968670625881,
+      "nonCacheInput": 2.5534296,
+      "cacheRead": 286.383439759353,
+      "cacheWrite": 26.859997703235088,
+      "output": 62.14301450000001,
+      "reasoning": 49.578273,
+      "answer": 12.5647415
+    },
+    "intelligenceIndexCostPerTask": {
+      "cost": {
+        "total": 0.5833103440014082,
+        "input": 0.5162078813098567,
+        "nonCacheInput": 0.0012134105325,
+        "cacheRead": 0.4763751378166728,
+        "cacheWrite": 0.038619332960684115,
+        "output": 0.0671024626915514,
+        "reasoning": 0.05129263631841814,
+        "answer": 0.01580982637313326
+      },
+      "evaluations": [
+        {
+          "slug": "aa-briefcase",
+          "weightedCostPerTask": 0.14759783137736707
+        },
+        {
+          "slug": "automationbench-aa",
+          "weightedCostPerTask": 0.0016171765955884324
+        },
+        {
+          "slug": "terminalbench-4-0",
+          "weightedCostPerTask": 0.08891509918482425
+        },
+        {
+          "slug": "frontiercode-2-0",
+          "weightedCostPerTask": 0.06678222297267274
+        },
+        {
+          "slug": "omniscience",
+          "weightedCostPerTask": 0.00024407702249999995
+        },
+        {
+          "slug": "gdp-pdf",
+          "weightedCostPerTask": 0.0015936517750000001
+        },
+        {
+          "slug": "hle-diamond",
+          "weightedCostPerTask": 0.00156666836
+        },
+        {
+          "slug": "critpt-v2-hard",
+          "weightedCostPerTask": 0.03556060524893
+        },
+        {
+          "slug": "terminal-bench-science",
+          "weightedCostPerTask": 0.23943301146452575
+        }
+      ]
+    },
+    "canonicalIntelligenceIndexTokenCount": {
+      "input": 9742204174,
+      "output": 124286029,
+      "answer": 25129483,
+      "reasoning": 99156546
+    },
+    "intelligenceIndexOutputTokensPerTask": {
+      "reasoning": 102585.2726368363,
+      "answer": 31619.652746266514,
+      "output": 134204.92538310282
+    },
+    "openness": {
+      "opennessIndex": 44.44444444444444,
+      "modelAvailability": 6,
+      "transparencyMethodology": 2,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 1449.78,
+        "lower95ci": 1442.78,
+        "upper95ci": 1457.75
+      }
+    },
+    "aa3dElo": 937.3386,
+    "aa3dEloInterval": {
+      "lower": 909.979,
+      "upper": 964.6983
+    },
+    "code2videoElo": 974.54,
+    "code2videoEloInterval": {
+      "lower": 954.71,
+      "upper": 994.36
+    },
+    "personalityBench": {
+      "scores": {
+        "lexicallyVaried": 1606.61,
+        "eloquent": 1578.25,
+        "literate": 946.3,
+        "naturalSounding": 1392.46,
+        "metaphorical": 1502.84,
+        "structured": 792.13,
+        "scannable": 1000.78,
+        "summarizesBottomLine": 950.54,
+        "answerFirst": 902.15,
+        "informationDense": 1414.1,
+        "evidenceBased": 1205.15,
+        "resourceSpecific": 1353.74,
+        "providesActionableGuidance": 976.08,
+        "pragmatic": 1193.63,
+        "truthful": 713.93,
+        "admitsUncertainty": 778.4,
+        "disclaimsWithAssumptions": 769.98,
+        "flagsNuances": 1096.09,
+        "sycophantic": 870.7,
+        "friendly": 1084.33,
+        "humorous": 1286.64,
+        "sincere": 1331.54,
+        "emotionallyIntelligent": 1183.98,
+        "direct": 738.84,
+        "confident": 1190.77,
+        "opinionated": 1180.5,
+        "constructivelyPushesBack": 1327.83,
+        "creative": 1425.32,
+        "openEnded": 886,
+        "slop": 1236.9
+      },
+      "indexScores": {
+        "expressiveness": 94.28846153846153,
+        "organization": 39.07692307692308,
+        "informativeness": 63.82692307692307,
+        "transparency": 65.73076923076923,
+        "warmth": 86.67307692307692,
+        "conviction": 80.96153846153847,
+        "imagination": 80.96153846153847,
+        "slop": 31.461538461538463
+      },
+      "indexIntervals": {
+        "expressiveness": {
+          "lower": 92,
+          "upper": 95
+        },
+        "organization": {
+          "lower": 28,
+          "upper": 51
+        },
+        "informativeness": {
+          "lower": 56,
+          "upper": 65
+        },
+        "transparency": {
+          "lower": 59,
+          "upper": 80
+        },
+        "warmth": {
+          "lower": 85,
+          "upper": 92
+        },
+        "conviction": {
+          "lower": 73,
+          "upper": 90
+        },
+        "imagination": {
+          "lower": 80,
+          "upper": 87
+        },
+        "slop": {
+          "lower": 29,
+          "upper": 35
+        }
+      }
+    },
+    "personalityBenchMeans": {
+      "charCount": 2605.24333333333,
+      "wordCount": 401.427777777778,
+      "sentenceCount": 26.6366666666667,
+      "paragraphCount": 7.61333333333333,
+      "avgSentenceLength": 16.0801107192122,
+      "listCount": 1.56222222222222,
+      "headingCount": 0.968888888888889,
+      "tableCount": 0.0311111111111111,
+      "emDashCount": 6.92333333333333,
+      "contractionCount": 9.97222222222222,
+      "exclamationCount": 0.0933333333333333,
+      "questionCount": 1.54111111111111,
+      "parentheticalCount": 3.47777777777778,
+      "quoteCount": 6.93444444444444,
+      "colonCount": 6.07111111111111,
+      "ellipsisCount": 0.07,
+      "boldCount": 6.50777777777778,
+      "italicsCount": 2.01888888888889,
+      "emojiCount": 0.0155555555555556,
+      "acronymCount": 2.12444444444444,
+      "endsWithQuestion": 0.101111111111111
+    },
+    "headline": {
+      "outputSpeed": 47.227739765694515,
+      "timeToFirstToken": 3.7038729574346423,
+      "timeToFirstAnswerToken": 106.61343577547588
+    },
+    "multiTurn": {
+      "timeToFirstToken": 3.6132045322320714
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 1.5629647289999025
+      },
+      "10k": {
+        "timeToFirstToken": 2.2503385654117563
+      },
+      "100k": {
+        "timeToFirstToken": 7.570320853499982
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "Z AI"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "Z AI"
+    },
+    "creator": {
+      "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+      "slug": "zai",
+      "name": "Z AI",
+      "logo": "/img/logos/zai.svg",
+      "color": "#1c7ff8",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "baseten",
+        "name": "Baseten",
+        "logo": "/img/logos/baseten.svg"
+      },
+      {
+        "slug": "bitdeer",
+        "name": "Bitdeer AI",
+        "logo": "/img/logos/bitdeer.svg"
+      },
+      {
+        "slug": "coreweave",
+        "name": "CoreWeave",
+        "logo": "/img/logos/coreweave.svg"
+      },
+      {
+        "slug": "crusoe",
+        "name": "Crusoe",
+        "logo": "/img/logos/crusoe.svg"
+      },
+      {
+        "slug": "databricks",
+        "name": "Databricks",
+        "logo": "/img/logos/databricks.png"
+      },
+      {
+        "slug": "deepinfra",
+        "name": "DeepInfra",
+        "logo": "/img/logos/deepinfra.webp"
+      },
+      {
+        "slug": "digitalocean",
+        "name": "DigitalOcean",
+        "logo": "/img/logos/digitalocean.svg"
+      },
+      {
+        "slug": "fireworks",
+        "name": "Fireworks",
+        "logo": "/img/logos/fireworks.svg"
+      },
+      {
+        "slug": "friendli-ai",
+        "name": "FriendliAI",
+        "logo": "/img/logos/friendliai.svg"
+      },
+      {
+        "slug": "gmi",
+        "name": "GMI",
+        "logo": "/img/logos/gmi.svg"
+      },
+      {
+        "slug": "inco",
+        "name": "Inco",
+        "logo": "/img/logos/inco.svg"
+      },
+      {
+        "slug": "lithos-ai",
+        "name": "LithosAI",
+        "logo": "/img/logos/lithos-ai.svg"
+      },
+      {
+        "slug": "makora",
+        "name": "Makora",
+        "logo": "/img/logos/makora.svg"
+      },
+      {
+        "slug": "modal",
+        "name": "Modal",
+        "logo": "/img/logos/modal.svg"
+      },
+      {
+        "slug": "nebius",
+        "name": "Nebius",
+        "logo": "/img/logos/nebius.svg"
+      },
+      {
+        "slug": "novita",
+        "name": "Novita",
+        "logo": "/img/logos/novita.svg"
+      },
+      {
+        "slug": "parasail",
+        "name": "Parasail",
+        "logo": "/img/logos/parasail.svg"
+      },
+      {
+        "slug": "primalabs",
+        "name": "PrimaLabs",
+        "logo": "/img/logos/primalabs.svg"
+      },
+      {
+        "slug": "siliconflow",
+        "name": "SiliconFlow",
+        "logo": "/img/logos/siliconflow.png"
+      },
+      {
+        "slug": "togetherai",
+        "name": "Together AI",
+        "logo": "/img/logos/togetherai.svg"
+      },
+      {
+        "slug": "wafer",
+        "name": "Wafer",
+        "logo": "/img/logos/wafer.svg"
+      },
+      {
+        "slug": "zai",
+        "name": "Zai",
+        "logo": "/img/logos/zai.svg"
+      },
+      {
+        "slug": "zyphra",
+        "name": "Zyphra",
+        "logo": "/img/logos/zyphra.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": true,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

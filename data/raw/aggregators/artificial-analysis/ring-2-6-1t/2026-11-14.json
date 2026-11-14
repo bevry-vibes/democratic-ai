@@ -1,0 +1,152 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/ring-2-6-1t",
+  "fetched_at": "2026-11-14T05:38:36.457Z",
+  "model": {
+    "id": "eb4ba465-3fcd-4065-9fe2-e8225e7b2c6c",
+    "slug": "ring-2-6-1t",
+    "name": "Ring-2.6-1T",
+    "shortName": "Ring-2.6-1T",
+    "suffix": null,
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-05-08",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "effort": {
+      "slug": "xhigh",
+      "label": "xhigh",
+      "level": 50
+    },
+    "release": {
+      "slug": "ring-2-6-1t",
+      "name": "Ring-2.6-1T",
+      "deprecatedTo": null
+    },
+    "deprecated": false,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 1000,
+    "inferenceParametersActiveBillions": 63,
+    "sizeClass": "large",
+    "contextWindowTokens": 262144,
+    "licenseName": "MIT",
+    "licenseUrl": "https://opensource.org/license/mit",
+    "modelWeightsSourceUrl": "https://huggingface.co/inclusionAI/Ring-2.6-1T",
+    "microevalsEnabled": true,
+    "intelligenceIndex": null,
+    "capabilities": {
+      "strategyAndOps": 9.02623109532018
+    },
+    "omniscience": -36.03333333333333,
+    "omniscienceAccuracy": 0.263,
+    "omniscienceHallucinationRate": 0.845771144278607,
+    "mlcrOverall": 0.0388888888888889,
+    "gdpPdfAllPass": 0.038,
+    "gdpval": 752.76,
+    "gdpvalInterval": {
+      "lower": 734.01,
+      "upper": 771.51
+    },
+    "itBenchSre": null,
+    "tau2": 0.923976608187135,
+    "tauBanking": 0.179381443298969,
+    "terminalbenchHard": 0.287878787878788,
+    "terminalBench21": 0.430711610486891,
+    "terminalBench40": 0.00505050505050505,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": null,
+    "critptAgenticHard": null,
+    "scicode": 0.450231481481481,
+    "lcr": 0.7,
+    "ifbench": 0.445578231292517,
+    "hle": 0.215940685820204,
+    "gpqa": 0.856565656565657,
+    "critpt": 0.0371428571428571,
+    "apexAgents": null,
+    "mmmuPro": null,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.007178659181731186,
+    "price1mInputTokens": 0.3,
+    "price1mOutputTokens": 2.5,
+    "cacheHitPrice": null,
+    "cacheHitDiscountPercent": null,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.85,
+    "price1mBlended7To2To1": 0.52,
+    "price1mBlended0To1To1": 1.4,
+    "price1mBlended100To1To1": 0.32156862745098036,
+    "price1mBlended0To100To1": 0.3217821782178218,
+    "openness": {
+      "opennessIndex": 38.888888888888886,
+      "modelAvailability": 6,
+      "transparencyMethodology": 1,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 658.82,
+        "lower95ci": 650.03,
+        "upper95ci": 668.18
+      }
+    },
+    "headline": {
+      "outputSpeed": 99.02011804551005,
+      "timeToFirstToken": 4.77255340377083,
+      "timeToFirstAnswerToken": 13.00649576692919
+    },
+    "multiTurn": {
+      "timeToFirstToken": 3.0978539801666636
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 1.047127434500036
+      },
+      "10k": {
+        "timeToFirstToken": 2.495510504625028
+      },
+      "100k": {
+        "timeToFirstToken": 15.799120542999924
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "InclusionAI"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "InclusionAI"
+    },
+    "creator": {
+      "id": "4df238a9-d4fd-4cf2-ab1e-d12956c41f9b",
+      "slug": "inclusionai",
+      "name": "InclusionAI",
+      "logo": "/img/logos/inclusionai.jpg",
+      "color": "#4fb5ff",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "inclusionai",
+        "name": "InclusionAI",
+        "logo": "/img/logos/inclusionai.jpg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

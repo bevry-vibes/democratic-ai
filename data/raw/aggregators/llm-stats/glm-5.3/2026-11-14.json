@@ -1,0 +1,1731 @@
+{
+  "source_url": "https://llm-stats.com/models/glm-5.3",
+  "fetched_at": "2026-11-14T05:30:32.991Z",
+  "model": {
+    "model_id": "glm-5.3",
+    "name": "GLM-5.3",
+    "model_type": "llm",
+    "organization": {
+      "id": "zai-org",
+      "name": "Zhipu AI",
+      "website": "https://z.ai"
+    },
+    "description": "GLM-5.3 is Z.AI's open-weight flagship for complex coding, long-horizon agentic work, and cybersecurity tasks. It uses the same base model as GLM-5.2, with its capability gains coming from post-training. The Hugging Face checkpoint is a text-only 753B-parameter MoE (about 40B active) with 78 layers, 256 routed experts plus one shared expert, eight routed experts selected per token, DeepSeek Sparse Attention with IndexShare, and a 1,048,576-token context window. It supports up to 128K output tokens, function calling, structured output, context caching, and always-on thinking with low, high, and max reasoning-effort levels. The downloadable FP8 and BF16 weights are available under the custom GLM-5.3 License, which permits use, modification, redistribution, sale, deployment, and fine-tuning but requires Model-as-a-Service businesses above US$10B in annual revenue to pass a Z.AI security review before commercial use.",
+    "release_date": "2026-08-14",
+    "announcement_date": "2026-08-14",
+    "multimodal": false,
+    "knowledge_cutoff": null,
+    "param_count": 753000000000,
+    "training_tokens": null,
+    "available_in_zeroeval": true,
+    "zeroeval_pricing_tier": null,
+    "reviews_count": 0,
+    "reviews_avg_rating": 0,
+    "license": {
+      "id": "glm_5_3",
+      "name": "GLM-5.3 License",
+      "allow_commercial": true,
+      "description": "Open-weights license permitting use, modification, distribution, sublicensing, sale, deployment, and fine-tuning. Model-as-a-Service businesses with more than US$10B in aggregate revenue over any consecutive 12-month period must pass Z.AI's security review before commercial use. The license is source-available/open-weight rather than an OSI-approved open-source license."
+    },
+    "model_family": null,
+    "fine_tuned_from": null,
+    "tags": {
+      "moe": "true",
+      "thinking": "true",
+      "architecture": "glm_moe_dsa",
+      "open_weights": "true",
+      "context_length": "1048576",
+      "routed_experts": "256",
+      "active_parameters": "40000000000",
+      "experts_per_token": "8",
+      "reasoning_efforts": "low,high,max",
+      "always_on_thinking": "true"
+    },
+    "sources": {
+      "api_ref": "https://docs.z.ai/guides/llm/glm-5.3",
+      "playground": "https://zcode.z.ai",
+      "paper": "https://arxiv.org/abs/2602.15763",
+      "scorecard_blog": "https://z.ai/blog/glm-5.3",
+      "repo": "https://github.com/zai-org/GLM-5",
+      "weights": "https://huggingface.co/zai-org/GLM-5.3"
+    },
+    "benchmarks": [
+      {
+        "benchmark_id": "agents-last-exam",
+        "name": "Agents' Last Exam",
+        "description": "Agents' Last Exam is a challenging benchmark for AI agents on hard, long-horizon tasks that test sustained reasoning, planning, and tool use, reported with and without tool access.",
+        "categories": [
+          "reasoning",
+          "agents",
+          "tool_calling"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.285,
+        "normalized_score": 0.285,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "ALE-CLI; Claude Code harness; max reasoning effort; 1M-token context",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "automationbench",
+        "name": "AutomationBench",
+        "description": "AutomationBench is a tool-use benchmark that evaluates AI agents on automating real-world workflows, testing their ability to orchestrate tools and complete multi-step automation tasks.",
+        "categories": [
+          "reasoning",
+          "agents",
+          "tool_calling"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.482,
+        "normalized_score": 0.482,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "AutomationBench v1.0.6",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "cybergym",
+        "name": "CyberGym",
+        "description": "CyberGym is a benchmark for evaluating AI agents on cybersecurity tasks, testing their ability to identify vulnerabilities, perform security analysis, and complete security-related challenges in a controlled environment.",
+        "categories": [
+          "safety",
+          "agents",
+          "code"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.845,
+        "normalized_score": 0.845,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "Claude Code 2.1.207; max reasoning effort; single-run Pass@1 over 1,507 tasks",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "deepswe-1.1",
+        "name": "DeepSWE 1.1",
+        "description": "DeepSWE 1.1 evaluates software engineering agents using the mini-swe-agent harness.",
+        "categories": [
+          "agents",
+          "code"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.669,
+        "normalized_score": 0.669,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "DeepSWE v1.1; mini-swe-agent harness; max reasoning effort",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "exploitbench",
+        "name": "ExploitBench",
+        "description": "ExploitBench is a cybersecurity benchmark that evaluates a model's ability to discover and exploit software vulnerabilities, reported as the fraction of challenges where the model captures the target (Cap%).",
+        "categories": [
+          "safety",
+          "agents",
+          "code"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.544,
+        "normalized_score": 0.544,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "Claude Code 2.1.207; max reasoning effort; average coverage over 41 tasks and 3 revisions",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "exploitgym",
+        "name": "ExploitGym",
+        "description": "ExploitGym is a large-scale, realistic benchmark built from real-world vulnerabilities across userspace programs, Google's V8 engine, and the Linux kernel. Given a vulnerability and a proof-of-vulnerability input, agents must craft a working end-to-end exploit that achieves unauthorized code execution.",
+        "categories": [
+          "safety",
+          "agents",
+          "code"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.15,
+        "normalized_score": 0.15,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "Six-hour normalized inference-time budget; Claude Code 2.1.207; max reasoning effort",
+        "verification_date": null,
+        "verification_notes": "105 of 869 tasks completed at the two-hour cap and 130 of 869 at the six-hour cap; normalized using 115 tokens per second. The stored score is the six-hour result, matching existing catalog convention."
+      },
+      {
+        "benchmark_id": "frontierswe",
+        "name": "FrontierSWE",
+        "description": "FrontierSWE measures whether an agent can complete open-ended technical projects at the scale of hours to tens of hours, spanning systems optimization, large-scale code construction, and applied ML research. Performance is reported as a dominance score, where higher is better.",
+        "categories": [
+          "agents",
+          "code"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.781,
+        "normalized_score": 0.781,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "Claude Code 2.1.207; max reasoning effort",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "gdpval-aa",
+        "name": "GDPval-AA",
+        "description": "GDPval-AA evaluates AI agents on economically valuable professional knowledge-work tasks and reports performance as an Elo score.",
+        "categories": [
+          "legal",
+          "reasoning",
+          "finance",
+          "general",
+          "agents"
+        ],
+        "modality": "text",
+        "max_score": 3000,
+        "score": 1769,
+        "normalized_score": 0.59,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "GDPval-AA v2 Elo (max_score 3000)",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "humanity's-last-exam",
+        "name": "Humanity's Last Exam",
+        "description": "Humanity's Last Exam (HLE) is a multi-modal academic benchmark with 2,500 questions across mathematics, humanities, and natural sciences, designed to test LLM capabilities at the frontier of human knowledge with unambiguous, verifiable solutions",
+        "categories": [
+          "math",
+          "reasoning",
+          "vision"
+        ],
+        "modality": "multimodal",
+        "max_score": 1,
+        "score": 0.625,
+        "normalized_score": 0.625,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "With tools; 300K-token context; GPT-5.6 Luna judge",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "nl2repo",
+        "name": "NL2Repo",
+        "description": "NL2Repo evaluates long-horizon coding capabilities including repository-level understanding, where models must generate or modify code across entire repositories from natural language specifications.",
+        "categories": [
+          "agents",
+          "code"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.58,
+        "normalized_score": 0.58,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "1M-token context; rule-based and LLM-based anti-hacking checks",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "posttrainbench",
+        "name": "PostTrainBench",
+        "description": "PostTrainBench evaluates a model's ability to autonomously post-train base models. Given pretrain-only base models, the agent must complete the full pipeline of data synthesis, training, evaluation, and iteration within a time budget, scored across downstream benchmarks such as AIME2025, BFCL, GPQA Main, GSM8K, and HumanEval.",
+        "categories": [
+          "reasoning",
+          "agents",
+          "code",
+          "systems"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.398,
+        "normalized_score": 0.398,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "Claude Code 2.1.207; max reasoning effort; weighted average of 3 runs",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "program-bench",
+        "name": "Program Bench",
+        "description": "Program Bench evaluates code-generation agents by asking them to recreate a program's behavior from only a compiled binary and documentation. It spans 200 tasks from small CLI tools to large systems such as FFmpeg and SQLite, with submissions judged against more than 248,000 fuzz-generated behavioral tests.",
+        "categories": [
+          "agents",
+          "code"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.19,
+        "normalized_score": 0.19,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "Almost Solved metric",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "swe-marathon",
+        "name": "SWE-Marathon",
+        "description": "SWE-Marathon is an ultra-long-horizon software engineering benchmark covering tasks such as building compilers, optimizing kernels, and developing production-grade services. It measures whether agents can sustain quality across extremely long engineering trajectories.",
+        "categories": [
+          "agents",
+          "code"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.425,
+        "normalized_score": 0.425,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "SWE-Marathon v1.1; Claude Code 2.1.207; max reasoning effort",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "terminal-bench-2.1",
+        "name": "Terminal-Bench 2.1",
+        "description": "Terminal-Bench 2.1 is an updated release of the Terminal-Bench benchmark that tests AI agents' ability to operate a computer via the terminal. It evaluates how well models handle real-world, end-to-end tasks autonomously, including compiling code, training models, setting up servers, system administration, data science workflows, and security tasks.",
+        "categories": [
+          "reasoning",
+          "agents",
+          "code",
+          "tool_calling"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.882,
+        "normalized_score": 0.882,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "Claude Code 2.1.207; max reasoning effort",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "terminal-bench-3.0",
+        "name": "Terminal-Bench 3.0",
+        "description": "Terminal-Bench 3.0 is a release of the Terminal-Bench benchmark that tests AI agents' ability to operate a computer via the terminal on real-world, end-to-end tasks.",
+        "categories": [
+          "reasoning",
+          "agents",
+          "code",
+          "tool_calling"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.283,
+        "normalized_score": 0.283,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "Claude Code 2.1.207; max reasoning effort",
+        "verification_date": null,
+        "verification_notes": null
+      },
+      {
+        "benchmark_id": "terminal-bench-4.0",
+        "name": "Terminal-Bench 4.0",
+        "description": "Terminal-Bench 4.0 evaluates AI agents on real-world work in terminal and command-line containerized environments across 66 tasks, with emphasis on science-adjacent and frontier engineering problems. Relative to earlier Terminal-Bench releases, 4.0 increases timeouts and adaptively raises RAM/CPU on selected tasks to reduce harness and resource confounds.",
+        "categories": [
+          "reasoning",
+          "agents",
+          "code",
+          "tool_calling"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.418,
+        "normalized_score": 0.418,
+        "verified": false,
+        "self_reported": false,
+        "self_reported_source": "https://www.tbench.ai/",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "Terminal-Bench 4.0 public leaderboard; resolution rate 41.8% ± 3.2%; Claude Code agent; max effort.",
+        "verification_date": null,
+        "verification_notes": "8.7B tokens; total cost: $2.7k."
+      },
+      {
+        "benchmark_id": "toolathlon",
+        "name": "Toolathlon",
+        "description": "Tool Decathlon is a comprehensive benchmark for evaluating AI agents' ability to use multiple tools across diverse task categories. It measures proficiency in tool selection, sequencing, and execution across ten different tool-use scenarios.",
+        "categories": [
+          "reasoning",
+          "agents",
+          "tool_calling"
+        ],
+        "modality": "text",
+        "max_score": 1,
+        "score": 0.73,
+        "normalized_score": 0.73,
+        "verified": false,
+        "self_reported": true,
+        "self_reported_source": "https://z.ai/blog/glm-5.3",
+        "evaluated_by": null,
+        "index_scope": "all",
+        "analysis_method": "Toolathlon Verified",
+        "verification_date": null,
+        "verification_notes": null
+      }
+    ],
+    "providers": [
+      {
+        "provider_id": "deepinfra",
+        "name": "DeepInfra",
+        "website": "https://deepinfra.com/",
+        "deprecated": false,
+        "deprecated_at": null,
+        "pricing": {
+          "input_per_million": 1.2,
+          "cached_input_per_million": 0.12,
+          "cache_write_per_million": null,
+          "output_per_million": 4,
+          "per_image": null,
+          "per_second_video_720p": null,
+          "per_second_video_1080p": null,
+          "per_second_video_high": null,
+          "per_minute_audio": null,
+          "per_million_chars": null
+        },
+        "pricing_options": [],
+        "quantization": "fp4",
+        "limits": {
+          "max_input_tokens": 1048576,
+          "max_output_tokens": 1048576
+        },
+        "performance": {
+          "throughput": null,
+          "latency": null
+        },
+        "features": {
+          "web_search": null,
+          "function_calling": null,
+          "structured_output": null,
+          "code_execution": null,
+          "batch_inference": null,
+          "finetuning": null
+        },
+        "modalities": {
+          "input": {
+            "text": true,
+            "image": false,
+            "audio": false,
+            "video": false
+          },
+          "output": {
+            "text": true,
+            "image": false,
+            "audio": false,
+            "video": false
+          }
+        }
+      },
+      {
+        "provider_id": "friendli",
+        "name": "FriendliAI",
+        "website": "https://friendli.ai/",
+        "deprecated": false,
+        "deprecated_at": null,
+        "pricing": {
+          "input_per_million": 1.4,
+          "cached_input_per_million": 0.26,
+          "cache_write_per_million": null,
+          "output_per_million": 4.4,
+          "per_image": null,
+          "per_second_video_720p": null,
+          "per_second_video_1080p": null,
+          "per_second_video_high": null,
+          "per_minute_audio": null,
+          "per_million_chars": null
+        },
+        "pricing_options": [],
+        "quantization": null,
+        "limits": {
+          "max_input_tokens": 1000000,
+          "max_output_tokens": 131072
+        },
+        "performance": {
+          "throughput": null,
+          "latency": null
+        },
+        "features": {
+          "web_search": null,
+          "function_calling": null,
+          "structured_output": null,
+          "code_execution": null,
+          "batch_inference": null,
+          "finetuning": null
+        },
+        "modalities": {
+          "input": {
+            "text": true,
+            "image": false,
+            "audio": false,
+            "video": false
+          },
+          "output": {
+            "text": true,
+            "image": false,
+            "audio": false,
+            "video": false
+          }
+        }
+      },
+      {
+        "provider_id": "novita",
+        "name": "Novita",
+        "website": "https://novita.ai/",
+        "deprecated": false,
+        "deprecated_at": null,
+        "pricing": {
+          "input_per_million": 1.4,
+          "cached_input_per_million": 0.26,
+          "cache_write_per_million": null,
+          "output_per_million": 4.4,
+          "per_image": null,
+          "per_second_video_720p": null,
+          "per_second_video_1080p": null,
+          "per_second_video_high": null,
+          "per_minute_audio": null,
+          "per_million_chars": null
+        },
+        "pricing_options": [],
+        "quantization": null,
+        "limits": {
+          "max_input_tokens": 1048576,
+          "max_output_tokens": 131072
+        },
+        "performance": {
+          "throughput": null,
+          "latency": null
+        },
+        "features": {
+          "web_search": null,
+          "function_calling": null,
+          "structured_output": null,
+          "code_execution": null,
+          "batch_inference": null,
+          "finetuning": null
+        },
+        "modalities": {
+          "input": {
+            "text": true,
+            "image": false,
+            "audio": false,
+            "video": false
+          },
+          "output": {
+            "text": true,
+            "image": false,
+            "audio": false,
+            "video": false
+          }
+        }
+      },
+      {
+        "provider_id": "z",
+        "name": "ZAI",
+        "website": "https://zai.com",
+        "deprecated": false,
+        "deprecated_at": null,
+        "pricing": {
+          "input_per_million": 1.4,
+          "cached_input_per_million": 0.26,
+          "cache_write_per_million": null,
+          "output_per_million": 4.4,
+          "per_image": null,
+          "per_second_video_720p": null,
+          "per_second_video_1080p": null,
+          "per_second_video_high": null,
+          "per_minute_audio": null,
+          "per_million_chars": null
+        },
+        "pricing_options": [],
+        "quantization": null,
+        "limits": {
+          "max_input_tokens": 1000000,
+          "max_output_tokens": 131072
+        },
+        "performance": {
+          "throughput": null,
+          "latency": null
+        },
+        "features": {
+          "web_search": null,
+          "function_calling": null,
+          "structured_output": null,
+          "code_execution": null,
+          "batch_inference": null,
+          "finetuning": null
+        },
+        "modalities": {
+          "input": {
+            "text": true,
+            "image": false,
+            "audio": false,
+            "video": false
+          },
+          "output": {
+            "text": true,
+            "image": false,
+            "audio": false,
+            "video": false
+          }
+        }
+      }
+    ],
+    "benchmark_rankings": [
+      {
+        "benchmark_id": "agents-last-exam",
+        "benchmark_name": "Agents' Last Exam",
+        "models": [
+          {
+            "model_id": "muse-ember-1.0",
+            "model_name": "Muse Ember",
+            "score": 0.616,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-6.1-terra",
+            "model_name": "GPT-6.1 Terra",
+            "score": 0.6,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-6-astra",
+            "model_name": "GPT-6 Astra",
+            "score": 0.593,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-6-sol",
+            "model_name": "GPT-6 Sol",
+            "score": 0.564,
+            "rank": 4,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-5.6-sol",
+            "model_name": "GPT-5.6 Sol",
+            "score": 0.527,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "qwen3.8-max",
+            "model_name": "Qwen3.8 Max",
+            "score": 0.524,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "qwen3.8-flash-next",
+            "model_name": "Qwen3.8-Flash-Next",
+            "score": 0.512,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "qwen3.8-flash",
+            "model_name": "Qwen3.8 Flash",
+            "score": 0.512,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-6-luna",
+            "model_name": "GPT-6 Luna",
+            "score": 0.509,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-5.6-terra",
+            "model_name": "GPT-5.6 Terra",
+            "score": 0.504,
+            "rank": 10,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.285,
+            "rank": 21,
+            "is_current_model": true
+          }
+        ]
+      },
+      {
+        "benchmark_id": "automationbench",
+        "benchmark_name": "AutomationBench",
+        "models": [
+          {
+            "model_id": "ernie-5.5-flash-preview",
+            "model_name": "ERNIE 5.5 Flash Preview",
+            "score": 0.619,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "deepseek-v4.1-flash-1017",
+            "model_name": "DeepSeek-V4.1-Flash-1017",
+            "score": 0.605,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "mistral-large-4",
+            "model_name": "Mistral Large 4",
+            "score": 0.599,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "deepseek-v4.1-flash",
+            "model_name": "DeepSeek-V4.1-Flash",
+            "score": 0.5479999999999999,
+            "rank": 4,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gemini-4-carbon",
+            "model_name": "Gemini 4 Carbon",
+            "score": 0.539,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-fable-5-2",
+            "model_name": "Claude Fable 5.2",
+            "score": 0.514,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gemini-4-argon",
+            "model_name": "Gemini 4 Argon",
+            "score": 0.513,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-spark-1.3",
+            "model_name": "Muse Spark 1.3",
+            "score": 0.494,
+            "rank": 8,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3-flash",
+            "model_name": "GLM-5.3-Flash",
+            "score": 0.488,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.482,
+            "rank": 10,
+            "is_current_model": true
+          }
+        ]
+      },
+      {
+        "benchmark_id": "cybergym",
+        "benchmark_name": "CyberGym",
+        "models": [
+          {
+            "model_id": "mimo-v2.6-flash",
+            "model_name": "MiMo-V2.6-Flash",
+            "score": 0.951,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "mimo-v2.6-pro",
+            "model_name": "MiMo-V2.6-Pro",
+            "score": 0.94,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "deepseek-v4.1-flash",
+            "model_name": "DeepSeek-V4.1-Flash",
+            "score": 0.8809999999999999,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gemini-3.8-flash-cyber",
+            "model_name": "Gemini 3.8 Flash Cyber",
+            "score": 0.862,
+            "rank": 4,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.845,
+            "rank": 5,
+            "is_current_model": true
+          },
+          {
+            "model_id": "deepseek-v4-pro-0813",
+            "model_name": "DeepSeek-V4-Pro-0813",
+            "score": 0.833,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gemini-3.5-flash-cyber",
+            "model_name": "Gemini 3.5 Flash Cyber",
+            "score": 0.832,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-mythos-preview",
+            "model_name": "Claude Mythos Preview",
+            "score": 0.831,
+            "rank": 8,
+            "is_current_model": false
+          },
+          {
+            "model_id": "minimax-m3.1-flash",
+            "model_name": "MiniMax M3.1 Flash",
+            "score": 0.822,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "mistral-large-4",
+            "model_name": "Mistral Large 4",
+            "score": 0.82,
+            "rank": 10,
+            "is_current_model": false
+          }
+        ]
+      },
+      {
+        "benchmark_id": "deepswe-1.1",
+        "benchmark_name": "DeepSWE 1.1",
+        "models": [
+          {
+            "model_id": "muse-wonder-full",
+            "model_name": "Muse Wonder Full",
+            "score": 0.79,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-wonder-full-1.0",
+            "model_name": "Muse Wonder Full",
+            "score": 0.79,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-wonder-1.0",
+            "model_name": "Muse Wonder",
+            "score": 0.788,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-wonder",
+            "model_name": "Muse Wonder",
+            "score": 0.788,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gemini-4-argon",
+            "model_name": "Gemini 4 Argon",
+            "score": 0.779,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "deepseek-v4.1-flash-1017",
+            "model_name": "DeepSeek-V4.1-Flash-1017",
+            "score": 0.77,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-spark-1.3",
+            "model_name": "Muse Spark 1.3",
+            "score": 0.754,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-6.1-sol",
+            "model_name": "GPT-6.1 Sol",
+            "score": 0.7522,
+            "rank": 8,
+            "is_current_model": false
+          },
+          {
+            "model_id": "ember-1",
+            "model_name": "Ember-1",
+            "score": 0.752,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-fable-5-2",
+            "model_name": "Claude Fable 5.2",
+            "score": 0.743,
+            "rank": 10,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.669,
+            "rank": 30,
+            "is_current_model": true
+          }
+        ]
+      },
+      {
+        "benchmark_id": "exploitgym",
+        "benchmark_name": "ExploitGym",
+        "models": [
+          {
+            "model_id": "gemini-4-carbon",
+            "model_name": "Gemini 4 Carbon",
+            "score": 0.535,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-6-cyber",
+            "model_name": "GPT-6 Cyber",
+            "score": 0.485,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-6-astra",
+            "model_name": "GPT-6 Astra",
+            "score": 0.424,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-5.6-sol",
+            "model_name": "GPT-5.6 Sol",
+            "score": 0.337,
+            "rank": 4,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-5.6-terra",
+            "model_name": "GPT-5.6 Terra",
+            "score": 0.232,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "kimi-k3.1-pro",
+            "model_name": "Kimi K3.1 Pro",
+            "score": 0.207,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "mimo-v2.6-pro",
+            "model_name": "MiMo-V2.6-Pro",
+            "score": 0.178,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "deepseek-v4.1-flash",
+            "model_name": "DeepSeek-V4.1-Flash",
+            "score": 0.153,
+            "rank": 8,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.15,
+            "rank": 9,
+            "is_current_model": true
+          },
+          {
+            "model_id": "gpt-5.6-luna",
+            "model_name": "GPT-5.6 Luna",
+            "score": 0.124,
+            "rank": 10,
+            "is_current_model": false
+          }
+        ]
+      },
+      {
+        "benchmark_id": "frontierswe",
+        "benchmark_name": "FrontierSWE",
+        "models": [
+          {
+            "model_id": "claude-fable-5",
+            "model_name": "Claude Fable 5",
+            "score": 0.9,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "kimi-k3",
+            "model_name": "Kimi K3",
+            "score": 0.812,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.781,
+            "rank": 3,
+            "is_current_model": true
+          },
+          {
+            "model_id": "claude-opus-4-8",
+            "model_name": "Claude Opus 4.8",
+            "score": 0.75,
+            "rank": 4,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.2",
+            "model_name": "GLM-5.2",
+            "score": 0.74,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "qwen3.8-max",
+            "model_name": "Qwen3.8 Max",
+            "score": 0.735,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-5.5",
+            "model_name": "GPT-5.5",
+            "score": 0.73,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-opus-4-7",
+            "model_name": "Claude Opus 4.7",
+            "score": 0.63,
+            "rank": 8,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-opus-4-6",
+            "model_name": "Claude Opus 4.6",
+            "score": 0.56,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-5.4",
+            "model_name": "GPT-5.4",
+            "score": 0.54,
+            "rank": 10,
+            "is_current_model": false
+          }
+        ]
+      },
+      {
+        "benchmark_id": "gdpval-aa",
+        "benchmark_name": "GDPval-AA",
+        "models": [
+          {
+            "model_id": "claude-fable-5-1",
+            "model_name": "Claude Fable 5.1",
+            "score": 1853,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3-flash",
+            "model_name": "GLM-5.3-Flash",
+            "score": 1773,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 1769,
+            "rank": 3,
+            "is_current_model": true
+          },
+          {
+            "model_id": "muse-spark-1.3",
+            "model_name": "Muse Spark 1.3",
+            "score": 1754,
+            "rank": 4,
+            "is_current_model": false
+          },
+          {
+            "model_id": "grok-4.6",
+            "model_name": "Grok 4.6",
+            "score": 1753,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "hy4-preview",
+            "model_name": "Hy4 preview",
+            "score": 1678,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "inkling-2-small",
+            "model_name": "Inkling 2 Small",
+            "score": 1630,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gemini-3.8-flash",
+            "model_name": "Gemini 3.8 Flash",
+            "score": 1545,
+            "rank": 8,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gemini-3.7-flash",
+            "model_name": "Gemini 3.7 Flash",
+            "score": 1525,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "k2-horizon-375b-a23b",
+            "model_name": "K2 Horizon 375B-A23B",
+            "score": 1441,
+            "rank": 10,
+            "is_current_model": false
+          }
+        ]
+      },
+      {
+        "benchmark_id": "humanity's-last-exam",
+        "benchmark_name": "Humanity's Last Exam",
+        "models": [
+          {
+            "model_id": "claude-fable-5-2",
+            "model_name": "Claude Fable 5.2",
+            "score": 0.732,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-fable-5-1",
+            "model_name": "Claude Fable 5.1",
+            "score": 0.65,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-opus-5",
+            "model_name": "Claude Opus 5",
+            "score": 0.647,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-mythos-preview",
+            "model_name": "Claude Mythos Preview",
+            "score": 0.647,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-fable-5",
+            "model_name": "Claude Fable 5",
+            "score": 0.645,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.625,
+            "rank": 6,
+            "is_current_model": true
+          },
+          {
+            "model_id": "muse-spark-1.1",
+            "model_name": "Muse Spark 1.1",
+            "score": 0.621,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "deepseek-v4-pro-0813",
+            "model_name": "DeepSeek-V4-Pro-0813",
+            "score": 0.6,
+            "rank": 8,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-spark",
+            "model_name": "Muse Spark",
+            "score": 0.584,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-opus-4-8",
+            "model_name": "Claude Opus 4.8",
+            "score": 0.579,
+            "rank": 10,
+            "is_current_model": false
+          }
+        ]
+      },
+      {
+        "benchmark_id": "nl2repo",
+        "benchmark_name": "NL2Repo",
+        "models": [
+          {
+            "model_id": "deepseek-v4.1-flash-1017",
+            "model_name": "DeepSeek-V4.1-Flash-1017",
+            "score": 0.682,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "ernie-5.5-flash-preview",
+            "model_name": "ERNIE 5.5 Flash Preview",
+            "score": 0.648,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "deepseek-v4.1-flash",
+            "model_name": "DeepSeek-V4.1-Flash",
+            "score": 0.64,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "deepseek-v4-pro-0813",
+            "model_name": "DeepSeek-V4-Pro-0813",
+            "score": 0.615,
+            "rank": 4,
+            "is_current_model": false
+          },
+          {
+            "model_id": "minimax-m3.1-flash",
+            "model_name": "MiniMax M3.1 Flash",
+            "score": 0.612,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "longcat-2.5",
+            "model_name": "LongCat-2.5",
+            "score": 0.605,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "hy4-preview",
+            "model_name": "Hy4 preview",
+            "score": 0.589,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.58,
+            "rank": 8,
+            "is_current_model": true
+          },
+          {
+            "model_id": "deepseek-v4-flash-vision-exp",
+            "model_name": "DeepSeek-V4-Flash-Vision-Exp",
+            "score": 0.577,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3-flash",
+            "model_name": "GLM-5.3-Flash",
+            "score": 0.563,
+            "rank": 10,
+            "is_current_model": false
+          }
+        ]
+      },
+      {
+        "benchmark_id": "program-bench",
+        "benchmark_name": "Program Bench",
+        "models": [
+          {
+            "model_id": "claude-opus-5-5",
+            "model_name": "Claude Opus 5.5",
+            "score": 0.912,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-fable-5-2",
+            "model_name": "Claude Fable 5.2",
+            "score": 0.856,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-haiku-5-5",
+            "model_name": "Claude Haiku 5.5",
+            "score": 0.82,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-sonnet-5-5",
+            "model_name": "Claude Sonnet 5.5",
+            "score": 0.797,
+            "rank": 4,
+            "is_current_model": false
+          },
+          {
+            "model_id": "kimi-k3",
+            "model_name": "Kimi K3",
+            "score": 0.778,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.2",
+            "model_name": "GLM-5.2",
+            "score": 0.637,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-wonder-full",
+            "model_name": "Muse Wonder Full",
+            "score": 0.59,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-wonder-full-1.0",
+            "model_name": "Muse Wonder Full",
+            "score": 0.59,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "kimi-k2.7-code",
+            "model_name": "Kimi K2.7 Code",
+            "score": 0.536,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "seed-2.1-pro",
+            "model_name": "Seed 2.1 Pro",
+            "score": 0.503,
+            "rank": 10,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.19,
+            "rank": 19,
+            "is_current_model": true
+          }
+        ]
+      },
+      {
+        "benchmark_id": "swe-marathon",
+        "benchmark_name": "SWE-Marathon",
+        "models": [
+          {
+            "model_id": "muse-wonder-full-1.0",
+            "model_name": "Muse Wonder Full",
+            "score": 0.575,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-wonder-full",
+            "model_name": "Muse Wonder Full",
+            "score": 0.575,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-wonder",
+            "model_name": "Muse Wonder",
+            "score": 0.531,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-wonder-1.0",
+            "model_name": "Muse Wonder",
+            "score": 0.531,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "kimi-k3.1-pro",
+            "model_name": "Kimi K3.1 Pro",
+            "score": 0.517,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "grok-4.7",
+            "model_name": "Grok 4.7",
+            "score": 0.46,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.425,
+            "rank": 7,
+            "is_current_model": true
+          },
+          {
+            "model_id": "kimi-k3",
+            "model_name": "Kimi K3",
+            "score": 0.42,
+            "rank": 8,
+            "is_current_model": false
+          },
+          {
+            "model_id": "hy4-preview",
+            "model_name": "Hy4 preview",
+            "score": 0.319,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "grok-4.5",
+            "model_name": "Grok 4.5",
+            "score": 0.29,
+            "rank": 10,
+            "is_current_model": false
+          }
+        ]
+      },
+      {
+        "benchmark_id": "terminal-bench-2.1",
+        "benchmark_name": "Terminal-Bench 2.1",
+        "models": [
+          {
+            "model_id": "swe-2",
+            "model_name": "SWE-2",
+            "score": 0.928,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "deepseek-v4.1-flash",
+            "model_name": "DeepSeek-V4.1-Flash",
+            "score": 0.9059999999999999,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "mimo-v2.6-pro",
+            "model_name": "MiMo-V2.6-Pro",
+            "score": 0.899,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gemini-3.8-flash",
+            "model_name": "Gemini 3.8 Flash",
+            "score": 0.894,
+            "rank": 4,
+            "is_current_model": false
+          },
+          {
+            "model_id": "swe-2-flash",
+            "model_name": "SWE-2 Flash",
+            "score": 0.892,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-spark-1.3",
+            "model_name": "Muse Spark 1.3",
+            "score": 0.888,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-5.6-sol",
+            "model_name": "GPT-5.6 Sol",
+            "score": 0.888,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "longcat-2.5",
+            "model_name": "LongCat-2.5",
+            "score": 0.884,
+            "rank": 8,
+            "is_current_model": false
+          },
+          {
+            "model_id": "kimi-k3",
+            "model_name": "Kimi K3",
+            "score": 0.883,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.882,
+            "rank": 10,
+            "is_current_model": true
+          }
+        ]
+      },
+      {
+        "benchmark_id": "terminal-bench-4.0",
+        "benchmark_name": "Terminal-Bench 4.0",
+        "models": [
+          {
+            "model_id": "claude-sonnet-5-5",
+            "model_name": "Claude Sonnet 5.5",
+            "score": 0.706,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-mythos-5-2",
+            "model_name": "Claude Mythos 5.2",
+            "score": 0.705,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-fable-5-2",
+            "model_name": "Claude Fable 5.2",
+            "score": 0.676,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-opus-5-5",
+            "model_name": "Claude Opus 5.5",
+            "score": 0.664,
+            "rank": 4,
+            "is_current_model": false
+          },
+          {
+            "model_id": "kimi-k3.1-pro",
+            "model_name": "Kimi K3.1 Pro",
+            "score": 0.657,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-mythos-5-1",
+            "model_name": "Claude Mythos 5.1",
+            "score": 0.609,
+            "rank": 6,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gpt-6-astra",
+            "model_name": "GPT-6 Astra",
+            "score": 0.577,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "gemini-4-argon",
+            "model_name": "Gemini 4 Argon",
+            "score": 0.574,
+            "rank": 8,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-wonder-full-1.0",
+            "model_name": "Muse Wonder Full",
+            "score": 0.571,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "claude-fable-5-1",
+            "model_name": "Claude Fable 5.1",
+            "score": 0.558,
+            "rank": 10,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.418,
+            "rank": 17,
+            "is_current_model": true
+          }
+        ]
+      },
+      {
+        "benchmark_id": "toolathlon",
+        "benchmark_name": "Toolathlon",
+        "models": [
+          {
+            "model_id": "glm-5.3-flash",
+            "model_name": "GLM-5.3-Flash",
+            "score": 0.784,
+            "rank": 1,
+            "is_current_model": false
+          },
+          {
+            "model_id": "muse-spark-1.1",
+            "model_name": "Muse Spark 1.1",
+            "score": 0.756,
+            "rank": 2,
+            "is_current_model": false
+          },
+          {
+            "model_id": "deepseek-v4-pro-0813",
+            "model_name": "DeepSeek-V4-Pro-0813",
+            "score": 0.741,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "hy4-preview",
+            "model_name": "Hy4 preview",
+            "score": 0.741,
+            "rank": 3,
+            "is_current_model": false
+          },
+          {
+            "model_id": "qwen3.8-flash-next",
+            "model_name": "Qwen3.8-Flash-Next",
+            "score": 0.735,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "qwen3.8-flash",
+            "model_name": "Qwen3.8 Flash",
+            "score": 0.735,
+            "rank": 5,
+            "is_current_model": false
+          },
+          {
+            "model_id": "kimi-k3",
+            "model_name": "Kimi K3",
+            "score": 0.732,
+            "rank": 7,
+            "is_current_model": false
+          },
+          {
+            "model_id": "glm-5.3",
+            "model_name": "GLM-5.3",
+            "score": 0.73,
+            "rank": 8,
+            "is_current_model": true
+          },
+          {
+            "model_id": "qwen3.8-max",
+            "model_name": "Qwen3.8 Max",
+            "score": 0.725,
+            "rank": 9,
+            "is_current_model": false
+          },
+          {
+            "model_id": "deepseek-v4-flash-0731",
+            "model_name": "DeepSeek-V4-Flash-0731",
+            "score": 0.703,
+            "rank": 10,
+            "is_current_model": false
+          }
+        ]
+      }
+    ],
+    "comparison_model": null
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/minimax-m2-5",
+  "fetched_at": "2026-11-14T05:38:32.536Z",
+  "model": {
+    "id": "12adec16-19fe-4d92-aeff-5ef3eb7e780a",
+    "slug": "minimax-m2-5",
+    "name": "MiniMax-M2.5",
+    "shortName": "MiniMax-M2.5",
+    "suffix": null,
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-02-12",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "minimax-m2-5",
+      "name": "MiniMax-M2.5",
+      "deprecatedTo": "minimax-m2-7"
+    },
+    "deprecated": true,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 230,
+    "inferenceParametersActiveBillions": 10,
+    "sizeClass": "large",
+    "contextWindowTokens": 204800,
+    "licenseName": "MIT",
+    "licenseUrl": "https://opensource.org/license/mit",
+    "modelWeightsSourceUrl": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
+    "microevalsEnabled": false,
+    "intelligenceIndex": null,
+    "capabilities": {},
+    "omniscience": null,
+    "gdpval": null,
+    "itBenchSre": null,
+    "tau2": 0.953216374269006,
+    "tauBanking": null,
+    "terminalbenchHard": 0.348484848484849,
+    "terminalBench21": null,
+    "terminalBench40": null,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": null,
+    "critptAgenticHard": null,
+    "scicode": null,
+    "lcr": 0.733333333333333,
+    "ifbench": 0.716326530612245,
+    "hle": 0.205282669138091,
+    "gpqa": 0.848484848484848,
+    "critpt": 0.0114285714285714,
+    "apexAgents": null,
+    "mmmuPro": null,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "price1mInputTokens": 0.3,
+    "price1mOutputTokens": 1.2,
+    "cacheHitPrice": 0.03,
+    "cacheHitDiscountPercent": 0.8,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.5249999999999999,
+    "price1mBlended7To2To1": 0.20099999999999998,
+    "price1mBlended0To1To1": 0.75,
+    "price1mBlended100To1To1": 0.04411764705882353,
+    "price1mBlended0To100To1": 0.3089108910891089,
+    "openness": {
+      "opennessIndex": 27.77777777777778,
+      "modelAvailability": 4,
+      "transparencyMethodology": 1,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "headline": {
+      "outputSpeed": 41.97232945399888,
+      "timeToFirstToken": 4.258144787836686,
+      "timeToFirstAnswerToken": 23.55516602115653
+    },
+    "multiTurn": {
+      "timeToFirstToken": 1.7216135392510477
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 1.0869213128583382
+      },
+      "10k": {
+        "timeToFirstToken": 2.403059607408394
+      },
+      "100k": {
+        "timeToFirstToken": 16.894047189000247
+      }
+    },
+    "performanceDataSource": {
+      "type": "median"
+    },
+    "priceDataSource": {
+      "type": "median"
+    },
+    "creator": {
+      "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+      "slug": "minimax",
+      "name": "MiniMax",
+      "logo": "/img/logos/minimax.svg",
+      "color": "#EB3568",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "deepinfra",
+        "name": "DeepInfra",
+        "logo": "/img/logos/deepinfra.webp"
+      },
+      {
+        "slug": "digitalocean",
+        "name": "DigitalOcean",
+        "logo": "/img/logos/digitalocean.svg"
+      },
+      {
+        "slug": "gmi",
+        "name": "GMI",
+        "logo": "/img/logos/gmi.svg"
+      },
+      {
+        "slug": "novita",
+        "name": "Novita",
+        "logo": "/img/logos/novita.svg"
+      },
+      {
+        "slug": "togetherai",
+        "name": "Together AI",
+        "logo": "/img/logos/togetherai.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

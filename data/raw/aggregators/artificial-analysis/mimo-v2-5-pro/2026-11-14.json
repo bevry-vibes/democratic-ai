@@ -1,0 +1,125 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+  "fetched_at": "2026-11-14T05:38:30.807Z",
+  "model": {
+    "id": "00f1248e-78e3-4230-8dc8-5e13ba8645e2",
+    "slug": "mimo-v2-5-pro",
+    "name": "MiMo-V2.5-Pro (Reasoning)",
+    "shortName": "MiMo-V2.5-Pro",
+    "suffix": "Reasoning",
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-04-22",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "mimo-v2-5-pro",
+      "name": "MiMo-V2.5-Pro",
+      "deprecatedTo": "mimo-v2-6-pro"
+    },
+    "deprecated": true,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 1023,
+    "inferenceParametersActiveBillions": 42,
+    "sizeClass": "large",
+    "contextWindowTokens": 1000000,
+    "licenseName": "MIT",
+    "licenseUrl": "https://opensource.org/license/mit",
+    "modelWeightsSourceUrl": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+    "microevalsEnabled": true,
+    "intelligenceIndex": null,
+    "capabilities": {},
+    "omniscience": null,
+    "mlcrOverall": 0.0555555555555556,
+    "gdpPdfAllPass": 0.04,
+    "gdpval": 1127.94,
+    "gdpvalInterval": {
+      "lower": 1111.8,
+      "upper": 1144.09
+    },
+    "itBenchSre": 0.382297551789077,
+    "tau2": 0.941520467836257,
+    "tauBanking": 0.0989690721649484,
+    "terminalbenchHard": 0.431818181818182,
+    "terminalBench21": 0.651685393258427,
+    "terminalBench40": 0,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": null,
+    "critptAgenticHard": null,
+    "scicode": 0.505787037037037,
+    "lcr": 0.796666666666667,
+    "ifbench": 0.798639455782313,
+    "hle": 0.356811862835959,
+    "gpqa": 0.865656565656566,
+    "critpt": 0.04,
+    "apexAgents": 0.0243362831858407,
+    "mmmuPro": null,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": 0.2,
+    "automationBenchPartialScore": 0.13703616508004313,
+    "price1mInputTokens": 0.348,
+    "price1mOutputTokens": 0.696,
+    "cacheHitPrice": 0.002,
+    "cacheHitDiscountPercent": 0.9942528735632183,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.435,
+    "price1mBlended7To2To1": 0.1406,
+    "price1mBlended0To1To1": 0.522,
+    "price1mBlended100To1To1": 0.01219607843137255,
+    "price1mBlended0To100To1": 0.3514455445544554,
+    "openness": {
+      "opennessIndex": 38.888888888888886,
+      "modelAvailability": 6,
+      "transparencyMethodology": 1,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 884.35,
+        "lower95ci": 877.09,
+        "upper95ci": 891.51
+      }
+    },
+    "headline": null,
+    "multiTurn": null,
+    "workloads": {},
+    "performanceDataSource": {
+      "type": "median"
+    },
+    "priceDataSource": {
+      "type": "median"
+    },
+    "creator": {
+      "id": "5147c8b4-61d5-4070-9324-8adf8aa144c2",
+      "slug": "xiaomi",
+      "name": "Xiaomi",
+      "logo": "/img/logos/xiaomi.svg",
+      "color": "#ff6900",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "gmi",
+        "name": "GMI",
+        "logo": "/img/logos/gmi.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/ling-3-0-flash",
+  "fetched_at": "2026-11-14T05:38:28.988Z",
+  "model": {
+    "id": "e33dc369-ae81-40e0-8c4e-28b002d02197",
+    "slug": "ling-3-0-flash",
+    "name": "Ling 3.0 Flash",
+    "shortName": "Ling 3.0 Flash",
+    "suffix": null,
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-08-04",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "ling-3-0-flash",
+      "name": "Ling 3.0 Flash",
+      "deprecatedTo": "ling-3-1-flash-1001"
+    },
+    "deprecated": true,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 124,
+    "inferenceParametersActiveBillions": 5.1,
+    "sizeClass": "medium",
+    "contextWindowTokens": 262144,
+    "licenseName": "MIT",
+    "licenseUrl": "https://opensource.org/license/mit",
+    "modelWeightsSourceUrl": "https://huggingface.co/inclusionAI/Ling-3.0-flash",
+    "microevalsEnabled": false,
+    "intelligenceIndex": null,
+    "capabilities": {},
+    "omniscience": null,
+    "mlcrOverall": 0.05,
+    "gdpPdfAllPass": 0.054,
+    "gdpval": 956.1,
+    "gdpvalInterval": {
+      "lower": 933.41,
+      "upper": 978.78
+    },
+    "itBenchSre": null,
+    "tau2": null,
+    "tauBanking": 0.272164948453608,
+    "terminalbenchHard": null,
+    "terminalBench21": 0.554307116104869,
+    "terminalBench40": 0,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": 0.072,
+    "critptAgenticHard": null,
+    "scicode": 0.420138888888889,
+    "lcr": 0.73,
+    "ifbench": null,
+    "hle": 0.236793327154773,
+    "gpqa": 0.854545454545454,
+    "critpt": 0.0171428571428571,
+    "apexAgents": null,
+    "mmmuPro": null,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.03219648917147413,
+    "price1mInputTokens": 0.075,
+    "price1mOutputTokens": 0.22,
+    "cacheHitPrice": 0.015,
+    "cacheHitDiscountPercent": 0.8,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.11124999999999999,
+    "price1mBlended7To2To1": 0.0475,
+    "price1mBlended0To1To1": 0.1475,
+    "price1mBlended100To1To1": 0.017598039215686274,
+    "price1mBlended0To100To1": 0.07643564356435643,
+    "openness": {
+      "opennessIndex": 44.44444444444444,
+      "modelAvailability": 6,
+      "transparencyMethodology": 2,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 799.11,
+        "lower95ci": 790.78,
+        "upper95ci": 806.85
+      }
+    },
+    "headline": {
+      "outputSpeed": 169.36188085044714,
+      "timeToFirstToken": 2.033448267133242,
+      "timeToFirstAnswerToken": 9.465951916683267
+    },
+    "multiTurn": {
+      "timeToFirstToken": 1.273402866099861
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 0.7554793595000213
+      },
+      "10k": {
+        "timeToFirstToken": 1.429889763000086
+      },
+      "100k": {
+        "timeToFirstToken": 6.19511188199976
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "InclusionAI"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "InclusionAI"
+    },
+    "creator": {
+      "id": "4df238a9-d4fd-4cf2-ab1e-d12956c41f9b",
+      "slug": "inclusionai",
+      "name": "InclusionAI",
+      "logo": "/img/logos/inclusionai.jpg",
+      "color": "#4fb5ff",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "deepinfra",
+        "name": "DeepInfra",
+        "logo": "/img/logos/deepinfra.webp"
+      },
+      {
+        "slug": "inclusionai",
+        "name": "InclusionAI",
+        "logo": "/img/logos/inclusionai.jpg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

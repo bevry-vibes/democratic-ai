@@ -1,0 +1,145 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/ling-3-0-tiny",
+  "fetched_at": "2026-11-14T05:38:29.228Z",
+  "model": {
+    "id": "7eaf926c-5f39-4e58-ae50-c38b5fc630fc",
+    "slug": "ling-3-0-tiny",
+    "name": "Ling 3.0 Tiny",
+    "shortName": "Ling 3.0 Tiny",
+    "suffix": null,
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-08-06",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "ling-3-0-tiny",
+      "name": "Ling 3.0 Tiny",
+      "deprecatedTo": null
+    },
+    "deprecated": false,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 7.9,
+    "inferenceParametersActiveBillions": 1.3,
+    "sizeClass": "small",
+    "contextWindowTokens": 262144,
+    "licenseName": "MIT",
+    "licenseUrl": "https://opensource.org/license/mit",
+    "modelWeightsSourceUrl": "https://huggingface.co/inclusionAI/Ling-3.0-tiny-int4",
+    "microevalsEnabled": false,
+    "intelligenceIndex": null,
+    "capabilities": {
+      "strategyAndOps": 9.67848348019493
+    },
+    "omniscience": -15.866666666666667,
+    "omniscienceAccuracy": 0.37933333333333336,
+    "omniscienceHallucinationRate": 0.8668098818474759,
+    "mlcrOverall": 0.1,
+    "gdpPdfAllPass": 0.008,
+    "gdpval": 567.85,
+    "gdpvalInterval": {
+      "lower": 542.52,
+      "upper": 593.17
+    },
+    "itBenchSre": null,
+    "tau2": null,
+    "tauBanking": 0.208247422680412,
+    "terminalbenchHard": null,
+    "terminalBench21": 0.277153558052434,
+    "terminalBench40": 0,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": null,
+    "critptAgenticHard": null,
+    "scicode": 0.241898148148148,
+    "lcr": 0.603333333333333,
+    "ifbench": null,
+    "hle": 0.0931417979610751,
+    "gpqa": 0.734343434343434,
+    "critpt": 0,
+    "apexAgents": null,
+    "mmmuPro": null,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.002807334937855976,
+    "price1mInputTokens": 0,
+    "price1mOutputTokens": 0,
+    "cacheHitPrice": null,
+    "cacheHitDiscountPercent": null,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0,
+    "price1mBlended7To2To1": 0,
+    "price1mBlended0To1To1": 0,
+    "price1mBlended100To1To1": 0,
+    "price1mBlended0To100To1": 0,
+    "openness": {
+      "opennessIndex": 38.888888888888886,
+      "modelAvailability": 6,
+      "transparencyMethodology": 1,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 475.35,
+        "lower95ci": 465.5,
+        "upper95ci": 483.79
+      }
+    },
+    "headline": {
+      "outputSpeed": 189.69461262184555,
+      "timeToFirstToken": 3.0263317434801915,
+      "timeToFirstAnswerToken": 11.711198274276702
+    },
+    "multiTurn": {
+      "timeToFirstToken": 1.6850327293666527
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 3.725918612968804
+      },
+      "10k": {
+        "timeToFirstToken": 3.0246068950624676
+      },
+      "100k": {
+        "timeToFirstToken": 6.352366764749918
+      }
+    },
+    "performanceDataSource": {
+      "type": "median"
+    },
+    "priceDataSource": {
+      "type": "median"
+    },
+    "creator": {
+      "id": "4df238a9-d4fd-4cf2-ab1e-d12956c41f9b",
+      "slug": "inclusionai",
+      "name": "InclusionAI",
+      "logo": "/img/logos/inclusionai.jpg",
+      "color": "#4fb5ff",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "inclusionai",
+        "name": "InclusionAI",
+        "logo": "/img/logos/inclusionai.jpg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

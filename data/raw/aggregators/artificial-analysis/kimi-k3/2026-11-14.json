@@ -1,0 +1,311 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/kimi-k3",
+  "fetched_at": "2026-11-14T05:38:27.698Z",
+  "model": {
+    "id": "f7d2fc3e-1f7b-405f-818c-07952a4af78f",
+    "slug": "kimi-k3",
+    "name": "Kimi K3 (Max)",
+    "shortName": "Kimi K3 (max)",
+    "suffix": "Max",
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-07-16",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "effort": {
+      "slug": "max",
+      "label": "max",
+      "level": 60
+    },
+    "release": {
+      "slug": "kimi-k3",
+      "name": "Kimi K3",
+      "deprecatedTo": "kimi-k3-1-pro"
+    },
+    "deprecated": true,
+    "isOpenWeights": true,
+    "openSourceCategorization": "commercial-license",
+    "parameters": 2800,
+    "inferenceParametersActiveBillions": 104,
+    "sizeClass": "large",
+    "contextWindowTokens": 1048576,
+    "licenseName": "Kimi K3 License",
+    "licenseUrl": "https://huggingface.co/moonshotai/Kimi-K3/blob/main/LICENSE",
+    "modelWeightsSourceUrl": "https://huggingface.co/moonshotai/Kimi-K3",
+    "microevalsEnabled": true,
+    "intelligenceIndex": null,
+    "capabilities": {},
+    "omniscience": null,
+    "mlcrOverall": 0.216666666666667,
+    "harveyLab": 0.05277777777777778,
+    "gdpPdfAllPass": 0.22,
+    "gdpval": 1542.33,
+    "gdpvalInterval": {
+      "lower": 1525,
+      "upper": 1559.66
+    },
+    "itBenchSre": 0.476930320150659,
+    "tau2": null,
+    "tauBanking": 0.45979381443299,
+    "terminalbenchHard": null,
+    "terminalBench21": 0.850187265917603,
+    "terminalBench40": 0.126262626262626,
+    "frontierCode": 0.436099333333333,
+    "frontierCode20": null,
+    "terminalBenchScience": 0.080952380952381,
+    "healthbench": 0.5472420823039508,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": 0.5324162977753611,
+    "hleDiamond": 0.269,
+    "critptAgenticHard": 0.405,
+    "scicode": 0.594907407407407,
+    "lcr": 0.886666666666667,
+    "ifbench": null,
+    "hle": 0.468952734012975,
+    "gpqa": 0.935353535353535,
+    "critpt": 0.234285714285714,
+    "apexAgents": 0.412979351032448,
+    "mmmuPro": 0.805202312138728,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": 0.3875,
+    "automationBenchPartialScore": 0.5827297780015204,
+    "enterpriseOpsGym": 0.45329752312742466,
+    "price1mInputTokens": 3,
+    "price1mOutputTokens": 15,
+    "cacheHitPrice": 0.3,
+    "cacheHitDiscountPercent": 0.9,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 6,
+    "price1mBlended7To2To1": 2.31,
+    "price1mBlended0To1To1": 9,
+    "price1mBlended100To1To1": 0.47058823529411764,
+    "price1mBlended0To100To1": 3.118811881188119,
+    "openness": {
+      "opennessIndex": 38.888888888888886,
+      "modelAvailability": 4,
+      "transparencyMethodology": 3,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 1497.06,
+        "lower95ci": 1490.71,
+        "upper95ci": 1503.92
+      }
+    },
+    "aa3dElo": 984.221,
+    "aa3dEloInterval": {
+      "lower": 956.6938,
+      "upper": 1011.7483
+    },
+    "code2videoElo": 1041.34,
+    "code2videoEloInterval": {
+      "lower": 1021.57,
+      "upper": 1061.1
+    },
+    "personalityBench": {
+      "scores": {
+        "lexicallyVaried": 1625.79,
+        "eloquent": 1580.62,
+        "literate": 962.07,
+        "naturalSounding": 1315.51,
+        "metaphorical": 1472.8,
+        "structured": 859.44,
+        "scannable": 1024.97,
+        "summarizesBottomLine": 885.1,
+        "answerFirst": 886.93,
+        "informationDense": 1394.72,
+        "evidenceBased": 1218.61,
+        "resourceSpecific": 1398.2,
+        "providesActionableGuidance": 899.5,
+        "pragmatic": 1094.92,
+        "truthful": 737.75,
+        "admitsUncertainty": 816.93,
+        "disclaimsWithAssumptions": 819.33,
+        "flagsNuances": 1022.18,
+        "sycophantic": 899.36,
+        "friendly": 1115.77,
+        "humorous": 1330.85,
+        "sincere": 1342.1,
+        "emotionallyIntelligent": 1178.05,
+        "direct": 741.24,
+        "confident": 1174.29,
+        "opinionated": 1108.27,
+        "constructivelyPushesBack": 1356.95,
+        "creative": 1413,
+        "openEnded": 958.11,
+        "slop": 1240.12
+      },
+      "indexScores": {
+        "expressiveness": 92.38461538461539,
+        "organization": 35.26923076923077,
+        "informativeness": 56.21153846153846,
+        "transparency": 67.63461538461539,
+        "warmth": 90.48076923076923,
+        "conviction": 73.34615384615384,
+        "imagination": 88.57692307692308,
+        "slop": 33.36538461538461
+      },
+      "indexIntervals": {
+        "expressiveness": {
+          "lower": 91,
+          "upper": 95
+        },
+        "organization": {
+          "lower": 26,
+          "upper": 49
+        },
+        "informativeness": {
+          "lower": 52,
+          "upper": 64
+        },
+        "transparency": {
+          "lower": 59,
+          "upper": 81
+        },
+        "warmth": {
+          "lower": 86,
+          "upper": 94
+        },
+        "conviction": {
+          "lower": 68,
+          "upper": 83
+        },
+        "imagination": {
+          "lower": 82,
+          "upper": 94
+        },
+        "slop": {
+          "lower": 29,
+          "upper": 36
+        }
+      }
+    },
+    "personalityBenchMeans": {
+      "charCount": 2593.69666666667,
+      "wordCount": 396.655555555556,
+      "sentenceCount": 26.4155555555556,
+      "paragraphCount": 7.81888888888889,
+      "avgSentenceLength": 16.2660604554039,
+      "listCount": 1.50111111111111,
+      "headingCount": 1.16222222222222,
+      "tableCount": 0.0222222222222222,
+      "emDashCount": 6.7,
+      "contractionCount": 9.63888888888889,
+      "exclamationCount": 0.104444444444444,
+      "questionCount": 1.70111111111111,
+      "parentheticalCount": 3.45555555555556,
+      "quoteCount": 6.82444444444444,
+      "colonCount": 5.89555555555556,
+      "ellipsisCount": 0.0477777777777778,
+      "boldCount": 6.56555555555556,
+      "italicsCount": 1.94333333333333,
+      "emojiCount": 0.00888888888888889,
+      "acronymCount": 2.08777777777778,
+      "endsWithQuestion": 0.133333333333333
+    },
+    "headline": {
+      "outputSpeed": 47.373904640774775,
+      "timeToFirstToken": 6.2157887310650635,
+      "timeToFirstAnswerToken": 81.85825544451417
+    },
+    "multiTurn": {
+      "timeToFirstToken": 5.52792211304666
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 2.61529813983348
+      },
+      "10k": {
+        "timeToFirstToken": 7.968589352416916
+      },
+      "100k": {
+        "timeToFirstToken": 10.127078555
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "Kimi"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "Kimi"
+    },
+    "creator": {
+      "id": "0a177021-87dd-4250-9a37-f01df196bfe0",
+      "slug": "kimi",
+      "name": "Kimi",
+      "logo": "/img/logos/kimi.jpg",
+      "color": "#047AFE",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "amazon_bedrock",
+        "name": "Amazon Bedrock",
+        "logo": "/img/logos/aws.svg"
+      },
+      {
+        "slug": "baseten",
+        "name": "Baseten",
+        "logo": "/img/logos/baseten.svg"
+      },
+      {
+        "slug": "databricks",
+        "name": "Databricks",
+        "logo": "/img/logos/databricks.png"
+      },
+      {
+        "slug": "digitalocean",
+        "name": "DigitalOcean",
+        "logo": "/img/logos/digitalocean.svg"
+      },
+      {
+        "slug": "fireworks",
+        "name": "Fireworks",
+        "logo": "/img/logos/fireworks.svg"
+      },
+      {
+        "slug": "kimi",
+        "name": "Kimi",
+        "logo": "/img/logos/kimi.jpg"
+      },
+      {
+        "slug": "makora",
+        "name": "Makora",
+        "logo": "/img/logos/makora.svg"
+      },
+      {
+        "slug": "modal",
+        "name": "Modal",
+        "logo": "/img/logos/modal.svg"
+      },
+      {
+        "slug": "nebius",
+        "name": "Nebius",
+        "logo": "/img/logos/nebius.svg"
+      },
+      {
+        "slug": "parasail",
+        "name": "Parasail",
+        "logo": "/img/logos/parasail.svg"
+      },
+      {
+        "slug": "togetherai",
+        "name": "Together AI",
+        "logo": "/img/logos/togetherai.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": true,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

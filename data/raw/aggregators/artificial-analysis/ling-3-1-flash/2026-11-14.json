@@ -1,0 +1,206 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/ling-3-1-flash",
+  "fetched_at": "2026-11-14T05:38:29.488Z",
+  "model": {
+    "id": "539ed227-38f4-4bea-a015-117057c14b18",
+    "slug": "ling-3-1-flash",
+    "name": "Ling 3.1 Flash 1019",
+    "shortName": "Ling 3.1 Flash 1019",
+    "suffix": null,
+    "chartDefaultSelected": true,
+    "chartHighlighted": false,
+    "releaseDate": "2026-10-22",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "ling-3-1-flash",
+      "name": "Ling 3.1 Flash 1019",
+      "deprecatedTo": null
+    },
+    "deprecated": false,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 560,
+    "inferenceParametersActiveBillions": 25,
+    "sizeClass": "large",
+    "contextWindowTokens": 1048576,
+    "licenseName": "MIT",
+    "licenseUrl": "https://opensource.org/license/mit",
+    "modelWeightsSourceUrl": "https://huggingface.co/inclusionAI/Ling-3.1-flash-1019",
+    "microevalsEnabled": false,
+    "intelligenceIndex": 29.570119369837,
+    "capabilities": {
+      "financeAndAccounting": 42.5771940432937,
+      "strategyAndOps": 47.5752820598436,
+      "legal": 35.5238998100481,
+      "healthcareAndMedical": 38.3191932892266,
+      "engineering": 35.4586687770563,
+      "economics": 36.4779333333333
+    },
+    "omniscience": -0.13333333333333333,
+    "omniscienceAccuracy": 0.2653333333333333,
+    "omniscienceHallucinationRate": 0.3629764065335753,
+    "mlcrOverall": 0.15,
+    "gdpPdfAllPass": 0.126,
+    "gdpval": 1654.99,
+    "gdpvalInterval": {
+      "lower": 1630.85,
+      "upper": 1679.13
+    },
+    "itBenchSre": null,
+    "tau2": null,
+    "tauBanking": null,
+    "terminalbenchHard": null,
+    "terminalBench21": null,
+    "terminalBench40": 0.328282828282828,
+    "frontierCode": null,
+    "frontierCode20": 0.170090151515151,
+    "terminalBenchScience": 0.0428571428571429,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": 0.172,
+    "critptAgenticHard": 0.385,
+    "scicode": 0.568287037037037,
+    "lcr": 0.823333333333333,
+    "ifbench": null,
+    "hle": 0.43466172381835,
+    "gpqa": null,
+    "critpt": 0.26,
+    "apexAgents": null,
+    "mmmuPro": null,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.6754660741517774,
+    "price1mInputTokens": 0.3,
+    "price1mOutputTokens": 0.9,
+    "cacheHitPrice": 0.06,
+    "cacheHitDiscountPercent": 0.8,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.44999999999999996,
+    "price1mBlended7To2To1": 0.192,
+    "price1mBlended0To1To1": 0.6,
+    "price1mBlended100To1To1": 0.07058823529411765,
+    "price1mBlended0To100To1": 0.30594059405940593,
+    "intelligenceIndexCost": {
+      "total": 2009.2272456813478,
+      "input": 1793.5237380813478,
+      "nonCacheInput": 1.3500317999999998,
+      "cacheRead": 1104.9196852296627,
+      "cacheWrite": 687.2540210516852,
+      "output": 215.7035076,
+      "reasoning": 162.3933504,
+      "answer": 53.3101572
+    },
+    "intelligenceIndexCostPerTask": {
+      "cost": {
+        "total": 3.185145018337793,
+        "input": 2.9829052930508153,
+        "nonCacheInput": 0.0005833773450000001,
+        "cacheRead": 1.8567356990981327,
+        "cacheWrite": 1.1255862166076824,
+        "output": 0.20223972528697784,
+        "reasoning": 0.13616195772853854,
+        "answer": 0.0660777675584393
+      },
+      "evaluations": [
+        {
+          "slug": "aa-briefcase",
+          "weightedCostPerTask": 0.5819430592680703
+        },
+        {
+          "slug": "automationbench-aa",
+          "weightedCostPerTask": 0.007554568510381111
+        },
+        {
+          "slug": "terminalbench-4-0",
+          "weightedCostPerTask": 0.6591385235192073
+        },
+        {
+          "slug": "frontiercode-2-0",
+          "weightedCostPerTask": 0.3533156531141242
+        },
+        {
+          "slug": "omniscience",
+          "weightedCostPerTask": 0.0015654050849999998
+        },
+        {
+          "slug": "gdp-pdf",
+          "weightedCostPerTask": 0.0017129655000000003
+        },
+        {
+          "slug": "hle-diamond",
+          "weightedCostPerTask": 0.00430837647
+        },
+        {
+          "slug": "critpt-v2-hard",
+          "weightedCostPerTask": 0.032028840558996005
+        },
+        {
+          "slug": "terminal-bench-science",
+          "weightedCostPerTask": 1.5435776263120138
+        }
+      ]
+    },
+    "canonicalIntelligenceIndexTokenCount": {
+      "input": 20710674930,
+      "output": 239670564,
+      "answer": 59233508,
+      "reasoning": 180437056
+    },
+    "intelligenceIndexOutputTokensPerTask": {
+      "reasoning": 151291.06414282057,
+      "answer": 73419.74173159922,
+      "output": 224710.8058744198
+    },
+    "openness": {
+      "opennessIndex": 38.888888888888886,
+      "modelAvailability": 6,
+      "transparencyMethodology": 1,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 1519.51,
+        "lower95ci": 1509.47,
+        "upper95ci": 1530.58
+      }
+    },
+    "headline": null,
+    "multiTurn": null,
+    "workloads": {},
+    "performanceDataSource": {
+      "type": "median"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "InclusionAI"
+    },
+    "creator": {
+      "id": "4df238a9-d4fd-4cf2-ab1e-d12956c41f9b",
+      "slug": "inclusionai",
+      "name": "InclusionAI",
+      "logo": "/img/logos/inclusionai.jpg",
+      "color": "#4fb5ff",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "inclusionai",
+        "name": "InclusionAI",
+        "logo": "/img/logos/inclusionai.jpg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

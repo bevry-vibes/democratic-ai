@@ -6,6 +6,7 @@
   "aliases": [
     "ornith-ai/Ornith-1.5-35B-A3B"
   ],
+  "releases": [],
   "organization": "ornith-ai",
   "released": "2026-08-18",
   "summary": "Mixture-of-experts coding-reasoning model for agentic software tasks, tool use, and image understanding",
@@ -177,5 +178,63 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "7 builds are attached."
+  "notes": "7 builds are attached.",
+  "scorecard": {
+    "openness_morality": {
+      "score": 60,
+      "tier": "unproven",
+      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed."
+    },
+    "performance": {
+      "score": 68.8,
+      "basis": "primary",
+      "match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "score": 67.8,
+          "self_reported": true,
+          "group": "card"
+        },
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-bench Verified",
+          "score": 79,
+          "self_reported": true,
+          "group": "card"
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-bench Pro",
+          "score": 59.6,
+          "self_reported": true,
+          "group": "card"
+        }
+      ],
+      "own_benchmarks": [],
+      "metric": null,
+      "source": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B",
+      "as_of": "2026-11-14",
+      "note": "Mean of the model card's Terminal-Bench 2.1, SWE-bench Verified, and SWE-bench Pro rows."
+    },
+    "research_citation": {
+      "score": null,
+      "basis": null,
+      "benchmarks": [],
+      "source": null,
+      "as_of": null,
+      "note": "Not measured. No current research benchmark is recorded."
+    },
+    "syndication": {
+      "score": 3,
+      "max": 10,
+      "band": "emerging",
+      "note": "Independent listings, not quality. The model's own host has weight 0."
+    },
+    "as_of": "2026-11-14",
+    "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Research/Citation uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
+    "source": "internal://democratic-ai/scorecard-v2"
+  }
 }

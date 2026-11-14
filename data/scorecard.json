@@ -1,258 +1,27 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "updated_at": "2026-11-14",
-  "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
-  "title": "AI Market Scorecard — Openness, Ethics, Capability & Research",
-  "as_of": "2026-07-18",
-  "scale": "0–100, higher is better. The three axes are independent.",
+  "title": "Democratic AI Scorecard",
+  "as_of": "2026-11-14",
+  "scale": "Index scores, higher is better. The numbers are not percentages and do not need to sum to 100. Openness/Morality and Performance/Intelligence use a 0\u2013100 index; Syndication uses 0\u201310.",
+  "source": "internal://democratic-ai/scorecard-v2",
   "axes": {
-    "openness_morality": "How the model was built and released: commons contribution, liberation valence, and third-party harm.",
-    "code_reasoning": "Agentic coding and reasoning: SWE-bench Verified, SWE-bench Pro, Terminal-Bench, and LiveCodeBench.",
-    "research_citation": "Whether the model can cite sources: inline citations, web grounding, and citation hallucination."
+    "openness_morality": "What the release gives back: weights, training data, training code, and reuse terms. Computed from the current model record. Training-data ethics are not assessed.",
+    "performance": "The model's current measured performance on its task: agentic coding benchmarks for coding models, average WER for speech models, or another current primary benchmark. The number is an index, not a percentage.",
+    "research_citation": "Current research benchmarks where available. Citation accuracy is a separate question and is marked when it is not measured.",
+    "syndication": "Independent listings, not quality. The model's own host has weight 0. A build inherits its base model's score."
   },
-  "models": [
-    {
-      "name": "OLMo 3 32B",
-      "lab": "Ai2",
-      "match": ["olmo-3-32b", "olmo-3-1-32b", "olmo-3"],
-      "openness_morality": 98,
-      "code_reasoning": 35,
-      "research_citation": 30,
-      "note": "Full open science; weak coder; no native citations."
-    },
-    {
-      "name": "StarCoder2 15B",
-      "lab": "BigCode",
-      "match": ["starcoder2"],
-      "openness_morality": 97,
-      "code_reasoning": 45,
-      "research_citation": 25,
-      "note": "Clean code provenance; not agentic."
-    },
-    {
-      "name": "OLMo 2 13B/7B",
-      "lab": "Ai2",
-      "match": ["olmo-2"],
-      "openness_morality": 95,
-      "code_reasoning": 33,
-      "research_citation": 30,
-      "note": "Full open science; general-purpose."
-    },
-    {
-      "name": "IBM Granite 4.0",
-      "lab": "IBM",
-      "match": ["granite-4-0", "granite-4"],
-      "openness_morality": 93,
-      "code_reasoning": 55,
-      "research_citation": 35,
-      "note": "Open science; mid coder; no native citations."
-    },
-    {
-      "name": "Tulu 3",
-      "lab": "Ai2",
-      "match": ["tulu-3"],
-      "openness_morality": 94,
-      "code_reasoning": 30,
-      "research_citation": 30,
-      "note": "Open alignment reference; weak coder."
-    },
-    {
-      "name": "Pythia",
-      "lab": "EleutherAI",
-      "match": ["pythia"],
-      "openness_morality": 93,
-      "code_reasoning": 28,
-      "research_citation": 25,
-      "note": "Research model; not competitive for coding."
-    },
-    {
-      "name": "Amber / CrystalCoder",
-      "lab": "LLM360",
-      "match": ["amber", "crystalcoder"],
-      "openness_morality": 92,
-      "code_reasoning": 30,
-      "research_citation": 25,
-      "note": "Maximum transparency; small research model."
-    },
-    {
-      "name": "Kagi Assistant",
-      "lab": "Kagi",
-      "match": ["kagi"],
-      "openness_morality": 85,
-      "code_reasoning": 85,
-      "research_citation": 88,
-      "note": "Ethical broker; best citations."
-    },
-    {
-      "name": "NVIDIA Nemotron 3 Super",
-      "lab": "NVIDIA",
-      "match": ["nemotron-3-super", "nemotron-3"],
-      "openness_morality": 82,
-      "code_reasoning": 58,
-      "research_citation": 35,
-      "note": "Corporate open science; custom licence; no native citations."
-    },
-    {
-      "name": "GLM-5.2",
-      "lab": "Zhipu / Z.ai",
-      "match": ["glm-5-2"],
-      "openness_morality": 78,
-      "code_reasoning": 88,
-      "research_citation": 55,
-      "note": "Liberator; top open coder; citations via vendor only."
-    },
-    {
-      "name": "DeepSeek V4 Flash",
-      "lab": "DeepSeek",
-      "match": ["deepseek-v4-flash", "deepseek-v4-1-flash"],
-      "openness_morality": 76,
-      "code_reasoning": 83,
-      "research_citation": 50,
-      "note": "Liberator; strong coder; citations via vendor only. The match may include the V4.1 family."
-    },
-    {
-      "name": "DeepSeek V4 Pro-Max",
-      "lab": "DeepSeek",
-      "match": ["deepseek-v4-pro", "deepseek-v4-1-pro"],
-      "openness_morality": 74,
-      "code_reasoning": 86,
-      "research_citation": 50,
-      "note": "Liberator; frontier open coder."
-    },
-    {
-      "name": "GLM-5.1",
-      "lab": "Zhipu / Z.ai",
-      "match": ["glm-5-1"],
-      "openness_morality": 73,
-      "code_reasoning": 74,
-      "research_citation": 55,
-      "note": "Liberator; mid coder."
-    },
-    {
-      "name": "Kimi K2.6",
-      "lab": "Moonshot AI",
-      "match": ["kimi-k2-6"],
-      "openness_morality": 70,
-      "code_reasoning": 84,
-      "research_citation": 58,
-      "note": "Liberator with privacy caveat."
-    },
-    {
-      "name": "MiniMax M3",
-      "lab": "MiniMax",
-      "match": ["minimax-m3"],
-      "openness_morality": 68,
-      "code_reasoning": 85,
-      "research_citation": 45,
-      "note": "Liberator with marketing delay."
-    },
-    {
-      "name": "Tencent Hy3",
-      "lab": "Tencent",
-      "match": ["hy3"],
-      "openness_morality": 67,
-      "code_reasoning": 75,
-      "research_citation": 45,
-      "note": "Late liberator; mid coder."
-    },
-    {
-      "name": "Qwen 3.6-27B",
-      "lab": "Alibaba",
-      "match": ["qwen3-6-27b"],
-      "openness_morality": 65,
-      "code_reasoning": 77,
-      "research_citation": 55,
-      "note": "Half liberator; strong small coder."
-    },
-    {
-      "name": "Kimi K3",
-      "lab": "Moonshot AI",
-      "match": ["kimi-k3"],
-      "openness_morality": 63,
-      "code_reasoning": 77,
-      "research_citation": 55,
-      "note": "Vapourware liberator at the snapshot; strong coder unverified."
-    },
-    {
-      "name": "GPT-oss 20B",
-      "lab": "OpenAI",
-      "match": ["gpt-oss-20b"],
-      "openness_morality": 58,
-      "code_reasoning": 70,
-      "research_citation": 40,
-      "note": "Corporate half-liberator; good local coder."
-    },
-    {
-      "name": "Phi-4",
-      "lab": "Microsoft",
-      "match": ["phi-4"],
-      "openness_morality": 57,
-      "code_reasoning": 68,
-      "research_citation": 35,
-      "note": "Small model; silent distillation."
-    },
-    {
-      "name": "Gemma 4 31B",
-      "lab": "Google",
-      "match": ["gemma-4-31b"],
-      "openness_morality": 55,
-      "code_reasoning": 64,
-      "research_citation": 40,
-      "note": "Neutral corporate; generalist."
-    },
-    {
-      "name": "Kimi K2.7 Code",
-      "lab": "Moonshot AI",
-      "match": ["kimi-k2-7-code"],
-      "openness_morality": 60,
-      "code_reasoning": null,
-      "research_citation": 40,
-      "note": "Vendor-only custom benchmarks; coding is inconclusive."
-    },
-    {
-      "name": "Llama 4 Maverick",
-      "lab": "Meta",
-      "match": ["llama-4-maverick"],
-      "openness_morality": 45,
-      "code_reasoning": 58,
-      "research_citation": 40,
-      "note": "Open facade with scale limits; weak coder."
-    },
-    {
-      "name": "Perplexity Sonar",
-      "lab": "Perplexity AI",
-      "match": ["perplexity", "sonar"],
-      "openness_morality": 40,
-      "code_reasoning": 78,
-      "research_citation": 82,
-      "note": "Best citation UX; not open weights."
-    },
-    {
-      "name": "Mistral Medium 3.5",
-      "lab": "Mistral AI",
-      "match": ["mistral-medium-3-5"],
-      "openness_morality": 38,
-      "code_reasoning": 78,
-      "research_citation": 40,
-      "note": "Open weights with restrictions; strong coder."
-    },
-    {
-      "name": "Claude Fable 5 / Opus 4.8",
-      "lab": "Anthropic",
-      "match": ["claude-fable-5", "claude-opus-4-8"],
-      "openness_morality": 25,
-      "code_reasoning": 95,
-      "research_citation": 55,
-      "note": "Closed; best coder; citation afterthought."
-    },
-    {
-      "name": "Grok 4.5",
-      "lab": "xAI / X",
-      "match": ["grok-4-5"],
-      "openness_morality": 22,
-      "code_reasoning": 77,
-      "research_citation": 35,
-      "note": "Closed; user-data training; worst citation hallucination."
+  "rubric": {
+    "openness_morality": {
+      "weights_open": 50,
+      "training_data_open": 25,
+      "training_data_documented": 15,
+      "training_code_open": 15,
+      "training_code_documented": 5,
+      "license_permissive": 10,
+      "license_conditional": 5,
+      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed."
     }
-  ]
+  },
+  "notes": "The scorecard is the site's current assessment. It computes openness from release terms, takes performance from current benchmarks or task metrics, and keeps syndication as a separate axis. A missing axis is not zero."
 }

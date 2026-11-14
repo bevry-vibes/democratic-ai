@@ -6,6 +6,7 @@
   "aliases": [
     "inclusionAI/Ling-1T"
   ],
+  "releases": [],
   "organization": "ant-ling",
   "released": "2025-10-02",
   "summary": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
@@ -88,5 +89,49 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "",
+  "scorecard": {
+    "openness_morality": {
+      "score": 60,
+      "tier": "unproven",
+      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed."
+    },
+    "performance": {
+      "score": 67.7,
+      "basis": "primary",
+      "match": "exact",
+      "inherited_from": null,
+      "benchmarks": [
+        {
+          "id": "livecodebench",
+          "name": "LiveCodeBench",
+          "score": 67.72486772486769,
+          "group": "artificial-analysis",
+          "self_reported": false
+        }
+      ],
+      "own_benchmarks": [],
+      "metric": null,
+      "source": "https://artificialanalysis.ai/models/ling-1t",
+      "as_of": "2026-11-14T05:39:05.860Z",
+      "note": "Mean of the available Artificial Analysis terminal or coding evaluations. Independent test run."
+    },
+    "research_citation": {
+      "score": null,
+      "basis": null,
+      "benchmarks": [],
+      "source": null,
+      "as_of": null,
+      "note": "Not measured. No current research benchmark is recorded."
+    },
+    "syndication": {
+      "score": 0,
+      "max": 10,
+      "band": "self-only",
+      "note": "Independent listings, not quality. The model's own host has weight 0."
+    },
+    "as_of": "2026-11-14",
+    "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Research/Citation uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
+    "source": "internal://democratic-ai/scorecard-v2"
+  }
 }

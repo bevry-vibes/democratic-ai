@@ -1,0 +1,149 @@
+{
+  "source_url": "https://llm-stats.com/models/minimax-h3",
+  "fetched_at": "2026-11-14T05:30:47.517Z",
+  "model": {
+    "model_id": "minimax-h3",
+    "name": "MiniMax H3 (Hailuo 3.0)",
+    "model_type": "video",
+    "organization": {
+      "id": "minimax",
+      "name": "MiniMax",
+      "website": "https://www.minimaxi.com/"
+    },
+    "description": "MiniMax H3 (also known as Hailuo 3.0 / hailuo-3) is MiniMax's omni-modal video generation system. It accepts text, image, video, and audio references and generates 4–15s clips at 768P (2K via H3-Regenerate-2K) with native 32 kHz stereo audio. Open weights are published on Hugging Face under the MiniMax H3 Community License. Official MiniMax PAYG pricing: $0.08/s at 768P and $0.13/s at 2K (audio refs free; first 5 images free). Reported leaderboard scores (no matching catalog video Elo ids yet): Artificial Analysis T2V/I2V/Editing w/ audio 1237 / 1193 / 1127; Arena text-to-video 1453; Arena image-to-video 1476.",
+    "release_date": "2026-08-03",
+    "announcement_date": "2026-07-31",
+    "multimodal": true,
+    "knowledge_cutoff": null,
+    "param_count": null,
+    "training_tokens": null,
+    "available_in_zeroeval": true,
+    "zeroeval_pricing_tier": null,
+    "reviews_count": 0,
+    "reviews_avg_rating": 0,
+    "license": {
+      "id": "minimax_h3_community_license",
+      "name": "MiniMax H3 Community License Agreement",
+      "allow_commercial": false,
+      "description": "MiniMax H3 Community License Agreement - restricted community license with territory, attribution, and revenue-threshold commercial authorization requirements."
+    },
+    "model_family": null,
+    "fine_tuned_from": null,
+    "tags": null,
+    "sources": {
+      "api_ref": "https://platform.minimax.io/docs/api-reference/video-generation-v2-create",
+      "playground": "https://hailuoai.video",
+      "paper": null,
+      "scorecard_blog": "https://www.minimax.io/news/minimax-h3-open-source",
+      "repo": null,
+      "weights": "https://huggingface.co/MiniMaxAI/MiniMax-H3"
+    },
+    "benchmarks": [],
+    "providers": [
+      {
+        "provider_id": "minimax",
+        "name": "MiniMax",
+        "website": "https://platform.minimax.io",
+        "deprecated": false,
+        "deprecated_at": null,
+        "pricing": {
+          "input_per_million": null,
+          "cached_input_per_million": null,
+          "cache_write_per_million": null,
+          "output_per_million": null,
+          "per_image": null,
+          "per_second_video_720p": 0.08,
+          "per_second_video_1080p": null,
+          "per_second_video_high": 0.13,
+          "per_minute_audio": null,
+          "per_million_chars": null
+        },
+        "pricing_options": [],
+        "quantization": null,
+        "limits": {
+          "max_input_tokens": null,
+          "max_output_tokens": null
+        },
+        "performance": {
+          "throughput": null,
+          "latency": null
+        },
+        "features": {
+          "web_search": null,
+          "function_calling": null,
+          "structured_output": null,
+          "code_execution": null,
+          "batch_inference": null,
+          "finetuning": null
+        },
+        "modalities": {
+          "input": {
+            "text": true,
+            "image": true,
+            "audio": true,
+            "video": true
+          },
+          "output": {
+            "text": false,
+            "image": false,
+            "audio": true,
+            "video": true
+          }
+        }
+      },
+      {
+        "provider_id": "higgsfield",
+        "name": "Higgsfield",
+        "website": "https://higgsfield.ai",
+        "deprecated": false,
+        "deprecated_at": null,
+        "pricing": {
+          "input_per_million": null,
+          "cached_input_per_million": null,
+          "cache_write_per_million": null,
+          "output_per_million": null,
+          "per_image": null,
+          "per_second_video_720p": null,
+          "per_second_video_1080p": null,
+          "per_second_video_high": 0.13,
+          "per_minute_audio": null,
+          "per_million_chars": null
+        },
+        "pricing_options": [],
+        "quantization": null,
+        "limits": {
+          "max_input_tokens": null,
+          "max_output_tokens": null
+        },
+        "performance": {
+          "throughput": null,
+          "latency": null
+        },
+        "features": {
+          "web_search": null,
+          "function_calling": null,
+          "structured_output": null,
+          "code_execution": null,
+          "batch_inference": null,
+          "finetuning": null
+        },
+        "modalities": {
+          "input": {
+            "text": true,
+            "image": true,
+            "audio": true,
+            "video": true
+          },
+          "output": {
+            "text": false,
+            "image": false,
+            "audio": false,
+            "video": true
+          }
+        }
+      }
+    ],
+    "benchmark_rankings": [],
+    "comparison_model": null
+  }
+}

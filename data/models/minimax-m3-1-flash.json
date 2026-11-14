@@ -6,6 +6,7 @@
   "aliases": [
     "MiniMaxAI/MiniMax-M3.1-Flash"
   ],
+  "releases": [],
   "organization": "minimax",
   "released": "2026-10-17",
   "summary": "Frontier multimodal coding model with 1M context window and tunable thinking depth",
@@ -154,14 +155,140 @@
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
   "notes": "2 builds are attached.",
-  "performance": {
-    "openness_morality": 68,
-    "code_reasoning": 85,
-    "research_citation": 45,
-    "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
-    "as_of": "2026-07-18",
-    "match": "family",
-    "note": "Liberator with marketing delay.",
-    "name": "MiniMax M3"
+  "scorecard": {
+    "openness_morality": {
+      "score": 55,
+      "tier": "shared",
+      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed."
+    },
+    "performance": {
+      "score": 68.5,
+      "basis": "primary",
+      "match": "base",
+      "inherited_from": "minimax-m3",
+      "benchmarks": [
+        {
+          "id": "swe-bench-verified",
+          "name": "SWE-Bench Verified",
+          "group": "swe_verified",
+          "score": 80.5,
+          "self_reported": true
+        },
+        {
+          "id": "swe-bench-pro",
+          "name": "SWE-Bench Pro",
+          "group": "swe_pro",
+          "score": 59,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-2.1",
+          "name": "Terminal-Bench 2.1",
+          "group": "terminal",
+          "score": 66,
+          "self_reported": true
+        }
+      ],
+      "own_benchmarks": [
+        {
+          "id": "agents-last-exam",
+          "name": "Agents' Last Exam",
+          "group": "own",
+          "score": 29.6,
+          "self_reported": true
+        },
+        {
+          "id": "automationbench-1.0.6",
+          "name": "AutomationBench v1.0.6",
+          "group": "own",
+          "score": 62.8,
+          "self_reported": true
+        },
+        {
+          "id": "bankertoolbench",
+          "name": "BankerToolBench",
+          "group": "own",
+          "score": 76.2,
+          "self_reported": true
+        },
+        {
+          "id": "cybergym",
+          "name": "CyberGym",
+          "group": "own",
+          "score": 82.2,
+          "self_reported": true
+        },
+        {
+          "id": "deepswe-1.1",
+          "name": "DeepSWE 1.1",
+          "group": "own",
+          "score": 73.7,
+          "self_reported": true
+        },
+        {
+          "id": "loca-bench-256k",
+          "name": "LOCA-Bench (256k)",
+          "group": "own",
+          "score": 60.3,
+          "self_reported": true
+        },
+        {
+          "id": "nl2repo",
+          "name": "NL2Repo",
+          "group": "own",
+          "score": 61.2,
+          "self_reported": true
+        },
+        {
+          "id": "osworld-2.0",
+          "name": "OSWorld 2.0",
+          "group": "own",
+          "score": 61.7,
+          "self_reported": true
+        },
+        {
+          "id": "posttrainbench",
+          "name": "PostTrainBench",
+          "group": "own",
+          "score": 39.3,
+          "self_reported": true
+        },
+        {
+          "id": "swe-refactor-bench",
+          "name": "SWE Refactor Bench",
+          "group": "own",
+          "score": 23,
+          "self_reported": true
+        },
+        {
+          "id": "terminal-bench-4.0",
+          "name": "Terminal-Bench 4.0",
+          "group": "own",
+          "score": 38.1,
+          "self_reported": true
+        }
+      ],
+      "metric": null,
+      "source": "https://llm-stats.com/models/minimax-m3.1-flash",
+      "as_of": "2026-11-14T05:30:53.247Z",
+      "note": "The update has no comparable benchmark of its own, so this uses the base model's primary result."
+    },
+    "research_citation": {
+      "score": null,
+      "basis": null,
+      "benchmarks": [],
+      "source": null,
+      "as_of": null,
+      "note": "Not measured. No current research benchmark is recorded."
+    },
+    "syndication": {
+      "score": 10,
+      "max": 10,
+      "band": "very-strong",
+      "note": "Independent listings, not quality. The model's own host has weight 0."
+    },
+    "as_of": "2026-11-14",
+    "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Research/Citation uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
+    "source": "internal://democratic-ai/scorecard-v2"
   }
 }

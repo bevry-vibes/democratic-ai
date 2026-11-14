@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14",
+  "note": "Aggregator pages that are not yet linked from the syndication record. They fill a Code/Performance gap for a model with no primary benchmark elsewhere.",
+  "artificial_analysis": [
+    "https://artificialanalysis.ai/models/ling-3-0-flash-vl",
+    "https://artificialanalysis.ai/models/ling-1t",
+    "https://artificialanalysis.ai/models/ling-2-6-flash",
+    "https://artificialanalysis.ai/models/step-5-preview"
+  ]
+}

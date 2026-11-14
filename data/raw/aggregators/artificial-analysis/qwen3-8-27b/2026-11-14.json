@@ -1,0 +1,381 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/qwen3-8-27b",
+  "fetched_at": "2026-11-14T05:38:35.506Z",
+  "model": {
+    "id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
+    "slug": "qwen3-8-27b",
+    "name": "Qwen3.8 27B (Xhigh)",
+    "shortName": "Qwen3.8 27B (xhigh)",
+    "suffix": "Xhigh",
+    "chartDefaultSelected": true,
+    "chartHighlighted": false,
+    "releaseDate": "2026-08-14",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "effort": {
+      "slug": "xhigh",
+      "label": "xhigh",
+      "level": 50
+    },
+    "release": {
+      "slug": "qwen3-8-27b",
+      "name": "Qwen3.8 27B",
+      "deprecatedTo": null
+    },
+    "deprecated": false,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 27,
+    "inferenceParametersActiveBillions": null,
+    "sizeClass": "small",
+    "contextWindowTokens": 256000,
+    "licenseName": "Apache 2.0",
+    "licenseUrl": "https://www.apache.org/licenses/LICENSE-2.0",
+    "modelWeightsSourceUrl": "https://huggingface.co/Qwen/Qwen3.8-27B",
+    "microevalsEnabled": true,
+    "intelligenceIndex": 20.1068756031705,
+    "capabilities": {
+      "financeAndAccounting": 35.5342795986396,
+      "strategyAndOps": 38.9754312294711,
+      "legal": 33.2328384842471,
+      "healthcareAndMedical": 34.6069830486149,
+      "engineering": 28.0993576839827,
+      "economics": 33.748
+    },
+    "omniscience": -6.366666666666666,
+    "omniscienceAccuracy": 0.173,
+    "omniscienceHallucinationRate": 0.2861749294639258,
+    "mlcrOverall": 0.227777777777778,
+    "gdpPdfAllPass": 0.164,
+    "gdpval": 1426.15,
+    "gdpvalInterval": {
+      "lower": 1407.03,
+      "upper": 1445.28
+    },
+    "itBenchSre": null,
+    "tau2": null,
+    "tauBanking": 0.480412371134021,
+    "terminalbenchHard": null,
+    "terminalBench21": 0.797752808988764,
+    "terminalBench40": 0.0555555555555556,
+    "frontierCode": 0.342324,
+    "frontierCode20": 0.149142929292929,
+    "terminalBenchScience": 0.00476190476190476,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": 0.153,
+    "critptAgenticHard": 0.04,
+    "scicode": 0.466435185185185,
+    "lcr": 0.82,
+    "ifbench": null,
+    "hle": 0.33920296570899,
+    "gpqa": 0.905050505050505,
+    "critpt": 0.0542857142857143,
+    "apexAgents": null,
+    "mmmuPro": 0.763005780346821,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.48242443682241926,
+    "enterpriseOpsGym": 0.4422560429722471,
+    "price1mInputTokens": 0.5,
+    "price1mOutputTokens": 3,
+    "cacheHitPrice": 0.1,
+    "cacheHitDiscountPercent": 0.8,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 1.125,
+    "price1mBlended7To2To1": 0.47000000000000003,
+    "price1mBlended0To1To1": 1.75,
+    "price1mBlended100To1To1": 0.1323529411764706,
+    "price1mBlended0To100To1": 0.5247524752475248,
+    "intelligenceIndexTimePerTask": 2645.3553150758135,
+    "intelligenceIndexCost": {
+      "total": 2390.035898580784,
+      "input": 2006.9441185807839,
+      "nonCacheInput": 6.78749,
+      "cacheRead": 731.3346659798041,
+      "cacheWrite": 1268.8219626009798,
+      "output": 383.09177999999997,
+      "reasoning": 290.218413,
+      "answer": 92.873367
+    },
+    "intelligenceIndexCostPerTask": {
+      "cost": {
+        "total": 3.5295494751410654,
+        "input": 3.2001430836141562,
+        "nonCacheInput": 0.0031703152249999995,
+        "cacheRead": 1.1806566654988,
+        "cacheWrite": 2.016316102890356,
+        "output": 0.3294063915269094,
+        "reasoning": 0.21709330076695815,
+        "answer": 0.11231309075995126
+      },
+      "evaluations": [
+        {
+          "slug": "aa-briefcase",
+          "weightedCostPerTask": 0.4867903184489102
+        },
+        {
+          "slug": "automationbench-aa",
+          "weightedCostPerTask": 0.013848064013953243
+        },
+        {
+          "slug": "terminalbench-4-0",
+          "weightedCostPerTask": 0.4566854604683295
+        },
+        {
+          "slug": "frontiercode-2-0",
+          "weightedCostPerTask": 0.67159739395748
+        },
+        {
+          "slug": "omniscience",
+          "weightedCostPerTask": 0.001570463025
+        },
+        {
+          "slug": "gdp-pdf",
+          "weightedCostPerTask": 0.00481371825
+        },
+        {
+          "slug": "hle-diamond",
+          "weightedCostPerTask": 0.0103653854
+        },
+        {
+          "slug": "critpt-v2-hard",
+          "weightedCostPerTask": 0.05248746124045438
+        },
+        {
+          "slug": "terminal-bench-science",
+          "weightedCostPerTask": 1.831391210336938
+        }
+      ]
+    },
+    "canonicalIntelligenceIndexTokenCount": {
+      "input": 9864565565,
+      "output": 127697260,
+      "answer": 30957789,
+      "reasoning": 96739471
+    },
+    "intelligenceIndexOutputTokensPerTask": {
+      "reasoning": 72364.43358898605,
+      "answer": 37437.69691998375,
+      "output": 109802.1305089698
+    },
+    "openness": {
+      "opennessIndex": 38.888888888888886,
+      "modelAvailability": 6,
+      "transparencyMethodology": 1,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 1391.36,
+        "lower95ci": 1384.36,
+        "upper95ci": 1398.74
+      }
+    },
+    "code2videoElo": 949.04,
+    "code2videoEloInterval": {
+      "lower": 928.96,
+      "upper": 969.12
+    },
+    "personalityBench": {
+      "scores": {
+        "lexicallyVaried": 510.91,
+        "eloquent": 987.42,
+        "literate": 608.47,
+        "naturalSounding": 655.54,
+        "metaphorical": 1184.64,
+        "structured": 583.59,
+        "scannable": 1205.53,
+        "summarizesBottomLine": 1097.87,
+        "answerFirst": 963.77,
+        "informationDense": 1021.17,
+        "evidenceBased": 713.52,
+        "resourceSpecific": 1449.14,
+        "providesActionableGuidance": 1396.03,
+        "pragmatic": 640.11,
+        "truthful": 183.43,
+        "admitsUncertainty": 767.64,
+        "disclaimsWithAssumptions": 812.96,
+        "flagsNuances": 932.09,
+        "sycophantic": 1104.16,
+        "friendly": 913.47,
+        "humorous": 797.97,
+        "sincere": 473.98,
+        "emotionallyIntelligent": 821.55,
+        "direct": 636.02,
+        "confident": 1017.42,
+        "opinionated": 1008.8,
+        "constructivelyPushesBack": 1085.28,
+        "creative": 826.16,
+        "openEnded": 717.79,
+        "slop": 1822.37
+      },
+      "indexScores": {
+        "expressiveness": 21.942307692307693,
+        "organization": 61.92307692307693,
+        "informativeness": 37.17307692307692,
+        "transparency": 35.26923076923077,
+        "warmth": 35.26923076923077,
+        "conviction": 37.17307692307692,
+        "imagination": 33.36538461538461,
+        "slop": 79.0576923076923
+      },
+      "indexIntervals": {
+        "expressiveness": {
+          "lower": 21,
+          "upper": 26
+        },
+        "organization": {
+          "lower": 52,
+          "upper": 74
+        },
+        "informativeness": {
+          "lower": 31,
+          "upper": 41
+        },
+        "transparency": {
+          "lower": 31,
+          "upper": 40
+        },
+        "warmth": {
+          "lower": 34,
+          "upper": 39
+        },
+        "conviction": {
+          "lower": 34,
+          "upper": 44
+        },
+        "imagination": {
+          "lower": 27,
+          "upper": 39
+        },
+        "slop": {
+          "lower": 76,
+          "upper": 82
+        }
+      }
+    },
+    "personalityBenchMeans": {
+      "charCount": 6774.31888888889,
+      "wordCount": 1029.61333333333,
+      "sentenceCount": 79.3477777777778,
+      "paragraphCount": 37.8988888888889,
+      "avgSentenceLength": 14.5656781279619,
+      "listCount": 10.8555555555556,
+      "headingCount": 12.6488888888889,
+      "tableCount": 0.167777777777778,
+      "emDashCount": 2.49333333333333,
+      "contractionCount": 12.0088888888889,
+      "exclamationCount": 0.0277777777777778,
+      "questionCount": 9.44777777777778,
+      "parentheticalCount": 0.504444444444444,
+      "quoteCount": 25.07,
+      "colonCount": 22.5866666666667,
+      "ellipsisCount": 0.223333333333333,
+      "boldCount": 17.4966666666667,
+      "italicsCount": 0.92,
+      "emojiCount": 0,
+      "acronymCount": 5.19555555555556,
+      "endsWithQuestion": 0.0122222222222222
+    },
+    "headline": {
+      "outputSpeed": 41.50751692342053,
+      "timeToFirstToken": 5.634599292370063,
+      "timeToFirstAnswerToken": 139.08527194732167
+    },
+    "multiTurn": {
+      "timeToFirstToken": 3.4984716496518566
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 1.4749276527352901
+      },
+      "10k": {
+        "timeToFirstToken": 3.8776084845294796
+      },
+      "100k": {
+        "timeToFirstToken": 17.959644668000035
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "Alibaba"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "Alibaba"
+    },
+    "creator": {
+      "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+      "slug": "alibaba",
+      "name": "Alibaba",
+      "logo": "/img/logos/alibaba.svg",
+      "color": "#ff7018",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "alibaba_cloud",
+        "name": "Alibaba Cloud",
+        "logo": "/img/logos/alibaba.svg"
+      },
+      {
+        "slug": "coreweave",
+        "name": "CoreWeave",
+        "logo": "/img/logos/coreweave.svg"
+      },
+      {
+        "slug": "crusoe",
+        "name": "Crusoe",
+        "logo": "/img/logos/crusoe.svg"
+      },
+      {
+        "slug": "deepinfra",
+        "name": "DeepInfra",
+        "logo": "/img/logos/deepinfra.webp"
+      },
+      {
+        "slug": "modular",
+        "name": "Modular",
+        "logo": "/img/logos/modular.svg"
+      },
+      {
+        "slug": "multiverse-computing",
+        "name": "Multiverse Computing",
+        "logo": "/img/logos/multiversecomputing.svg"
+      },
+      {
+        "slug": "nebius",
+        "name": "Nebius",
+        "logo": "/img/logos/nebius.svg"
+      },
+      {
+        "slug": "parasail",
+        "name": "Parasail",
+        "logo": "/img/logos/parasail.svg"
+      },
+      {
+        "slug": "siliconflow",
+        "name": "SiliconFlow",
+        "logo": "/img/logos/siliconflow.png"
+      },
+      {
+        "slug": "wafer",
+        "name": "Wafer",
+        "logo": "/img/logos/wafer.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": true,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": true,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

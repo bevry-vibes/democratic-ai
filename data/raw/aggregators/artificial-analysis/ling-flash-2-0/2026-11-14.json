@@ -1,0 +1,127 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/ling-flash-2-0",
+  "fetched_at": "2026-11-14T05:38:30.167Z",
+  "model": {
+    "id": "882a5da3-94ca-4602-8693-c45970df17e2",
+    "slug": "ling-flash-2-0",
+    "name": "Ling-flash-2.0",
+    "shortName": "Ling-flash-2.0",
+    "suffix": null,
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2025-09-17",
+    "knowledgeCutoffDate": null,
+    "isReasoning": false,
+    "release": {
+      "slug": "ling-flash-2-0",
+      "name": "Ling-flash-2.0",
+      "deprecatedTo": "ling-2-6-flash"
+    },
+    "deprecated": true,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 103,
+    "inferenceParametersActiveBillions": 6.1,
+    "sizeClass": "medium",
+    "contextWindowTokens": 128000,
+    "licenseName": "MIT",
+    "licenseUrl": "https://opensource.org/license/mit",
+    "modelWeightsSourceUrl": "https://huggingface.co/inclusionAI/Ling-flash-2.0",
+    "microevalsEnabled": false,
+    "intelligenceIndex": null,
+    "capabilities": {},
+    "omniscience": null,
+    "gdpval": null,
+    "itBenchSre": null,
+    "tau2": 0.207602339181287,
+    "tauBanking": null,
+    "terminalbenchHard": 0.106060606060606,
+    "terminalBench21": null,
+    "terminalBench40": null,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": null,
+    "critptAgenticHard": null,
+    "scicode": null,
+    "lcr": 0.176666666666667,
+    "ifbench": 0.343537414965986,
+    "hle": 0.06209453197405,
+    "gpqa": 0.656565656565657,
+    "critpt": 0,
+    "apexAgents": null,
+    "mmmuPro": null,
+    "livecodebench": 0.58941798941799,
+    "aime25": 0.653333333333333,
+    "analystAgent": null,
+    "price1mInputTokens": 0.14,
+    "price1mOutputTokens": 0.57,
+    "cacheHitPrice": null,
+    "cacheHitDiscountPercent": null,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.2475,
+    "price1mBlended7To2To1": 0.183,
+    "price1mBlended0To1To1": 0.355,
+    "price1mBlended100To1To1": 0.14421568627450984,
+    "price1mBlended0To100To1": 0.14425742574257427,
+    "openness": {
+      "opennessIndex": 44.44444444444444,
+      "modelAvailability": 6,
+      "transparencyMethodology": 2,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "headline": {
+      "outputSpeed": 40.41169155391113,
+      "timeToFirstToken": 4.368167930319866,
+      "timeToFirstAnswerToken": 4.368167930319866
+    },
+    "multiTurn": {
+      "timeToFirstToken": 1.2482547957998815
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 1.384094271000095
+      },
+      "10k": {
+        "timeToFirstToken": 2.504022229999975
+      },
+      "100k": {
+        "timeToFirstToken": 15.4562135589995
+      }
+    },
+    "performanceDataSource": {
+      "type": "median"
+    },
+    "priceDataSource": {
+      "type": "median"
+    },
+    "creator": {
+      "id": "4df238a9-d4fd-4cf2-ab1e-d12956c41f9b",
+      "slug": "inclusionai",
+      "name": "InclusionAI",
+      "logo": "/img/logos/inclusionai.jpg",
+      "color": "#4fb5ff",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "siliconflow",
+        "name": "SiliconFlow",
+        "logo": "/img/logos/siliconflow.png"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": false,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

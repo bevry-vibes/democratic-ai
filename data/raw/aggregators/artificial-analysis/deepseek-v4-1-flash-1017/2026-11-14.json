@@ -1,0 +1,430 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+  "fetched_at": "2026-11-14T05:38:24.642Z",
+  "model": {
+    "id": "f151fd0b-2139-40cf-a3ec-995e8cedc592",
+    "slug": "deepseek-v4-1-flash-1017",
+    "name": "DeepSeek V4.1 Flash 1017 (Max)",
+    "shortName": "DeepSeek V4.1 Flash 1017 (max)",
+    "suffix": "Max",
+    "chartDefaultSelected": true,
+    "chartHighlighted": true,
+    "releaseDate": "2026-10-17",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "effort": {
+      "slug": "max",
+      "label": "max",
+      "level": 60
+    },
+    "release": {
+      "slug": "deepseek-v4-1-flash-1017",
+      "name": "DeepSeek V4.1 Flash 1017",
+      "deprecatedTo": null
+    },
+    "deprecated": false,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 552,
+    "inferenceParametersActiveBillions": 16,
+    "sizeClass": "large",
+    "contextWindowTokens": 1000000,
+    "licenseName": "MIT",
+    "licenseUrl": "https://opensource.org/license/mit",
+    "modelWeightsSourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "microevalsEnabled": true,
+    "intelligenceIndex": 32.5896393532027,
+    "capabilities": {
+      "financeAndAccounting": 42.1551910183355,
+      "strategyAndOps": 49.2213705313234,
+      "legal": 37.7326735484239,
+      "healthcareAndMedical": 41.322605095221,
+      "engineering": 37.5970801948052,
+      "economics": 38.4946333333333
+    },
+    "omniscience": 0.9,
+    "omniscienceAccuracy": 0.396,
+    "omniscienceHallucinationRate": 0.640728476821192,
+    "mlcrOverall": 0.266666666666667,
+    "gdpPdfAllPass": 0.172,
+    "gdpval": 1745.77,
+    "gdpvalInterval": {
+      "lower": 1724.98,
+      "upper": 1766.56
+    },
+    "itBenchSre": null,
+    "tau2": null,
+    "tauBanking": null,
+    "terminalbenchHard": null,
+    "terminalBench21": null,
+    "terminalBench40": 0.338383838383838,
+    "frontierCode": 0.436605666666667,
+    "frontierCode20": 0.284711616161616,
+    "terminalBenchScience": 0.128571428571429,
+    "healthbench": null,
+    "vialsScore": 0.40372670807453415,
+    "mkaClimbWsr": 0.3854301910448201,
+    "healthbenchProfessional": null,
+    "hleDiamond": 0.253,
+    "critptAgenticHard": 0.25,
+    "scicode": 0.559027777777778,
+    "lcr": 0.826666666666667,
+    "ifbench": null,
+    "hle": 0.433271547729379,
+    "gpqa": null,
+    "critpt": 0.24,
+    "apexAgents": null,
+    "mmmuPro": 0.80635838150289,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.6664095364949257,
+    "price1mInputTokens": 0.3,
+    "price1mOutputTokens": 1.2,
+    "cacheHitPrice": 0.006,
+    "cacheHitDiscountPercent": 0.98,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 0.5249999999999999,
+    "price1mBlended7To2To1": 0.1842,
+    "price1mBlended0To1To1": 0.75,
+    "price1mBlended100To1To1": 0.020588235294117643,
+    "price1mBlended0To100To1": 0.3089108910891089,
+    "intelligenceIndexTimePerTask": 842.7941319437502,
+    "intelligenceIndexCost": {
+      "total": 520.6317440908241,
+      "input": 311.4045944908241,
+      "nonCacheInput": 2.5188315,
+      "cacheRead": 114.76751892875869,
+      "cacheWrite": 194.11824406206537,
+      "output": 209.22714960000002,
+      "reasoning": 161.36075160000001,
+      "answer": 47.866398000000004
+    },
+    "intelligenceIndexCostPerTask": {
+      "cost": {
+        "total": 0.60210514783598,
+        "input": 0.43535110077222494,
+        "nonCacheInput": 0.00115320576,
+        "cacheRead": 0.1782037281167598,
+        "cacheWrite": 0.2559941668954651,
+        "output": 0.16675404706375513,
+        "reasoning": 0.10873805404567916,
+        "answer": 0.05801599301807599
+      },
+      "evaluations": [
+        {
+          "slug": "aa-briefcase",
+          "weightedCostPerTask": 0.10174279394993427
+        },
+        {
+          "slug": "automationbench-aa",
+          "weightedCostPerTask": 0.00869545266608313
+        },
+        {
+          "slug": "terminalbench-4-0",
+          "weightedCostPerTask": 0.08800788931797693
+        },
+        {
+          "slug": "frontiercode-2-0",
+          "weightedCostPerTask": 0.07782720515114401
+        },
+        {
+          "slug": "omniscience",
+          "weightedCostPerTask": 0.00027124232999999997
+        },
+        {
+          "slug": "gdp-pdf",
+          "weightedCostPerTask": 0.00211691805
+        },
+        {
+          "slug": "hle-diamond",
+          "weightedCostPerTask": 0.00616897224
+        },
+        {
+          "slug": "critpt-v2-hard",
+          "weightedCostPerTask": 0.020002991725989815
+        },
+        {
+          "slug": "terminal-bench-science",
+          "weightedCostPerTask": 0.29727168240485186
+        }
+      ]
+    },
+    "canonicalIntelligenceIndexTokenCount": {
+      "input": 19783376740,
+      "output": 174355958,
+      "answer": 39888665,
+      "reasoning": 134467293
+    },
+    "intelligenceIndexOutputTokensPerTask": {
+      "reasoning": 90615.04503806597,
+      "answer": 48346.660848396656,
+      "output": 138961.70588646265
+    },
+    "openness": {
+      "opennessIndex": 44.44444444444444,
+      "modelAvailability": 6,
+      "transparencyMethodology": 2,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 1570.42,
+        "lower95ci": 1560.41,
+        "upper95ci": 1580.42
+      }
+    },
+    "personalityBench": {
+      "scores": {
+        "lexicallyVaried": 1098.06,
+        "eloquent": 1069.92,
+        "literate": 901.41,
+        "naturalSounding": 781.93,
+        "metaphorical": 1181.53,
+        "structured": 851.26,
+        "scannable": 1051.69,
+        "summarizesBottomLine": 1132.07,
+        "answerFirst": 978.13,
+        "informationDense": 1472.71,
+        "evidenceBased": 882.73,
+        "resourceSpecific": 1592.76,
+        "providesActionableGuidance": 1470.6,
+        "pragmatic": 1005.79,
+        "truthful": 768.59,
+        "admitsUncertainty": 942.06,
+        "disclaimsWithAssumptions": 854.04,
+        "flagsNuances": 1160.13,
+        "sycophantic": 858.53,
+        "friendly": 677.22,
+        "humorous": 902.56,
+        "sincere": 737.66,
+        "emotionallyIntelligent": 639.31,
+        "direct": 908.93,
+        "confident": 1331.79,
+        "opinionated": 1163.18,
+        "constructivelyPushesBack": 1316.79,
+        "creative": 1016.91,
+        "openEnded": 599.74,
+        "slop": 1330.88
+      },
+      "indexScores": {
+        "expressiveness": 52.40384615384616,
+        "organization": 88.57692307692308,
+        "informativeness": 71.4423076923077,
+        "transparency": 86.67307692307692,
+        "warmth": 27.653846153846153,
+        "conviction": 94.28846153846153,
+        "imagination": 37.17307692307692,
+        "slop": 39.07692307692308
+      },
+      "indexIntervals": {
+        "expressiveness": {
+          "lower": 45,
+          "upper": 59
+        },
+        "organization": {
+          "lower": 74,
+          "upper": 97
+        },
+        "informativeness": {
+          "lower": 66,
+          "upper": 74
+        },
+        "transparency": {
+          "lower": 82,
+          "upper": 95
+        },
+        "warmth": {
+          "lower": 26,
+          "upper": 32
+        },
+        "conviction": {
+          "lower": 92,
+          "upper": 97
+        },
+        "imagination": {
+          "lower": 28,
+          "upper": 42
+        },
+        "slop": {
+          "lower": 36,
+          "upper": 43
+        }
+      }
+    },
+    "personalityBenchMeans": {
+      "charCount": 3638.77666666667,
+      "wordCount": 536.977777777778,
+      "sentenceCount": 41.8888888888889,
+      "paragraphCount": 9.58222222222222,
+      "avgSentenceLength": 13.814361982257,
+      "listCount": 2.64555555555556,
+      "headingCount": 2.47111111111111,
+      "tableCount": 0.123333333333333,
+      "emDashCount": 5.74333333333333,
+      "contractionCount": 8.91555555555555,
+      "exclamationCount": 0.0355555555555556,
+      "questionCount": 3.2,
+      "parentheticalCount": 0.794444444444444,
+      "quoteCount": 13.3733333333333,
+      "colonCount": 9.71888888888889,
+      "ellipsisCount": 0.0955555555555556,
+      "boldCount": 12.74,
+      "italicsCount": 0.721111111111111,
+      "emojiCount": 0.00555555555555556,
+      "acronymCount": 3.89333333333333,
+      "endsWithQuestion": 0.00111111111111111
+    },
+    "headline": {
+      "outputSpeed": 164.8821469199992,
+      "timeToFirstToken": 1.3186722303050367,
+      "timeToFirstAnswerToken": 45.665487427838535
+    },
+    "multiTurn": {
+      "timeToFirstToken": 1.096158105276769
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 0.9062416984374407
+      },
+      "10k": {
+        "timeToFirstToken": 1.1683390918124874
+      },
+      "100k": {
+        "timeToFirstToken": 2.548978275749985
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "DeepSeek"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "DeepSeek"
+    },
+    "creator": {
+      "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+      "slug": "deepseek",
+      "name": "DeepSeek",
+      "logo": "/img/logos/deepseek.svg",
+      "color": "#2243e6",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "baseten",
+        "name": "Baseten",
+        "logo": "/img/logos/baseten.svg"
+      },
+      {
+        "slug": "bitdeer",
+        "name": "Bitdeer AI",
+        "logo": "/img/logos/bitdeer.svg"
+      },
+      {
+        "slug": "coreweave",
+        "name": "CoreWeave",
+        "logo": "/img/logos/coreweave.svg"
+      },
+      {
+        "slug": "deepinfra",
+        "name": "DeepInfra",
+        "logo": "/img/logos/deepinfra.webp"
+      },
+      {
+        "slug": "deepseek",
+        "name": "DeepSeek",
+        "logo": "/img/logos/deepseek.svg"
+      },
+      {
+        "slug": "digitalocean",
+        "name": "DigitalOcean",
+        "logo": "/img/logos/digitalocean.svg"
+      },
+      {
+        "slug": "fireworks",
+        "name": "Fireworks",
+        "logo": "/img/logos/fireworks.svg"
+      },
+      {
+        "slug": "gmi",
+        "name": "GMI",
+        "logo": "/img/logos/gmi.svg"
+      },
+      {
+        "slug": "inco",
+        "name": "Inco",
+        "logo": "/img/logos/inco.svg"
+      },
+      {
+        "slug": "lithos-ai",
+        "name": "LithosAI",
+        "logo": "/img/logos/lithos-ai.svg"
+      },
+      {
+        "slug": "makora",
+        "name": "Makora",
+        "logo": "/img/logos/makora.svg"
+      },
+      {
+        "slug": "modal",
+        "name": "Modal",
+        "logo": "/img/logos/modal.svg"
+      },
+      {
+        "slug": "modular",
+        "name": "Modular",
+        "logo": "/img/logos/modular.svg"
+      },
+      {
+        "slug": "nebius",
+        "name": "Nebius",
+        "logo": "/img/logos/nebius.svg"
+      },
+      {
+        "slug": "novita",
+        "name": "Novita",
+        "logo": "/img/logos/novita.svg"
+      },
+      {
+        "slug": "parasail",
+        "name": "Parasail",
+        "logo": "/img/logos/parasail.svg"
+      },
+      {
+        "slug": "primalabs",
+        "name": "PrimaLabs",
+        "logo": "/img/logos/primalabs.svg"
+      },
+      {
+        "slug": "scaleway",
+        "name": "Scaleway",
+        "logo": "/img/logos/scaleway.svg"
+      },
+      {
+        "slug": "siliconflow",
+        "name": "SiliconFlow",
+        "logo": "/img/logos/siliconflow.png"
+      },
+      {
+        "slug": "togetherai",
+        "name": "Together AI",
+        "logo": "/img/logos/togetherai.svg"
+      },
+      {
+        "slug": "wafer",
+        "name": "Wafer",
+        "logo": "/img/logos/wafer.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": true,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

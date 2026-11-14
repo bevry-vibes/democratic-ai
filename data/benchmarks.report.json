@@ -1,0 +1,14 @@
+{
+  "updated_at": "2026-11-14T05:45:22.340Z",
+  "generated_on": "2026-11-14",
+  "source": "https://llm-stats.com",
+  "models": 237,
+  "scored": 38,
+  "primary": 36,
+  "secondary": 2,
+  "tertiary": 0,
+  "inherited": 5,
+  "card_reported": 4,
+  "artificial_analysis": 8,
+  "note": "A primary score is the mean of the benchmarks the scorecard already used. A secondary or tertiary score is a weaker fallback and says so. A base match borrows the base model's primary result only when the update has no comparable primary benchmark. Missing is not zero."
+}

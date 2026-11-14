@@ -1,0 +1,158 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/qwen3-6-27b",
+  "fetched_at": "2026-11-14T05:38:34.405Z",
+  "model": {
+    "id": "8c29d66d-bf98-4ea3-8572-5409353ecc66",
+    "slug": "qwen3-6-27b",
+    "name": "Qwen3.6 27B (Reasoning)",
+    "shortName": "Qwen3.6 27B",
+    "suffix": "Reasoning",
+    "chartDefaultSelected": false,
+    "chartHighlighted": false,
+    "releaseDate": "2026-04-22",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "release": {
+      "slug": "qwen3-6-27b",
+      "name": "Qwen3.6 27B",
+      "deprecatedTo": "qwen3-8-27b"
+    },
+    "deprecated": true,
+    "isOpenWeights": true,
+    "openSourceCategorization": "permissive",
+    "parameters": 27.8,
+    "inferenceParametersActiveBillions": null,
+    "sizeClass": "small",
+    "contextWindowTokens": 262144,
+    "licenseName": "Apache 2.0",
+    "licenseUrl": "https://huggingface.co/Qwen/Qwen3.5-122B-A10B/blob/main/LICENSE",
+    "modelWeightsSourceUrl": "https://huggingface.co/Qwen/Qwen3.6-27B",
+    "microevalsEnabled": true,
+    "intelligenceIndex": null,
+    "capabilities": {},
+    "omniscience": null,
+    "mlcrOverall": 0.105555555555556,
+    "gdpPdfAllPass": 0.11,
+    "gdpval": 992.58,
+    "gdpvalInterval": {
+      "lower": 975.8,
+      "upper": 1009.35
+    },
+    "itBenchSre": null,
+    "tau2": 0.941520467836257,
+    "tauBanking": 0.167010309278351,
+    "terminalbenchHard": 0.348484848484849,
+    "terminalBench21": 0.606741573033708,
+    "terminalBench40": 0,
+    "frontierCode": null,
+    "frontierCode20": null,
+    "terminalBenchScience": null,
+    "healthbench": null,
+    "vialsScore": null,
+    "mkaClimbWsr": null,
+    "healthbenchProfessional": null,
+    "hleDiamond": null,
+    "critptAgenticHard": null,
+    "scicode": 0.428240740740741,
+    "lcr": 0.773333333333333,
+    "ifbench": 0.675510204081633,
+    "hle": 0.230769230769231,
+    "gpqa": 0.842424242424242,
+    "critpt": 0.0114285714285714,
+    "apexAgents": null,
+    "mmmuPro": 0.746242774566474,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": null,
+    "automationBenchPartialScore": 0.11045223588713587,
+    "price1mInputTokens": 0.6,
+    "price1mOutputTokens": 3.6,
+    "cacheHitPrice": null,
+    "cacheHitDiscountPercent": null,
+    "pricePer1k1mpImages": 0.615,
+    "price1mBlended0To3To1": 1.35,
+    "price1mBlended7To2To1": 0.9,
+    "price1mBlended0To1To1": 2.1,
+    "price1mBlended100To1To1": 0.6294117647058823,
+    "price1mBlended0To100To1": 0.6297029702970297,
+    "openness": {
+      "opennessIndex": 38.888888888888886,
+      "modelAvailability": 6,
+      "transparencyMethodology": 1,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 816.39,
+        "lower95ci": 808.81,
+        "upper95ci": 823.23
+      }
+    },
+    "headline": {
+      "outputSpeed": 58.62419204417926,
+      "timeToFirstToken": 7.45621459020742,
+      "timeToFirstAnswerToken": 47.96782405063433
+    },
+    "multiTurn": {
+      "timeToFirstToken": 2.5384872724480902
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 1.230986130200014
+      },
+      "10k": {
+        "timeToFirstToken": 3.6440341737002298
+      },
+      "100k": {
+        "timeToFirstToken": 32.24680542
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "Alibaba"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "Alibaba"
+    },
+    "creator": {
+      "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+      "slug": "alibaba",
+      "name": "Alibaba",
+      "logo": "/img/logos/alibaba.svg",
+      "color": "#ff7018",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "alibaba_cloud",
+        "name": "Alibaba Cloud",
+        "logo": "/img/logos/alibaba.svg"
+      },
+      {
+        "slug": "deepinfra",
+        "name": "DeepInfra",
+        "logo": "/img/logos/deepinfra.webp"
+      },
+      {
+        "slug": "novita",
+        "name": "Novita",
+        "logo": "/img/logos/novita.svg"
+      },
+      {
+        "slug": "siliconflow",
+        "name": "SiliconFlow",
+        "logo": "/img/logos/siliconflow.png"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": true,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": true,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

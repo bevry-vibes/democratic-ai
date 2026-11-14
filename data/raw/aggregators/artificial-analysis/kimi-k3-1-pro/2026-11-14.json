@@ -1,0 +1,415 @@
+{
+  "source_url": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+  "fetched_at": "2026-11-14T05:38:28.141Z",
+  "model": {
+    "id": "665c67ca-09eb-48f0-a7a3-0096e1d5de51",
+    "slug": "kimi-k3-1-pro",
+    "name": "Kimi K3.1 Pro",
+    "shortName": "Kimi K3.1 Pro",
+    "suffix": null,
+    "chartDefaultSelected": true,
+    "chartHighlighted": true,
+    "releaseDate": "2026-10-23",
+    "knowledgeCutoffDate": null,
+    "isReasoning": true,
+    "effort": {
+      "slug": "max",
+      "label": "max",
+      "level": 60
+    },
+    "release": {
+      "slug": "kimi-k3-1-pro",
+      "name": "Kimi K3.1 Pro",
+      "deprecatedTo": null
+    },
+    "deprecated": false,
+    "isOpenWeights": true,
+    "openSourceCategorization": "commercial-license",
+    "parameters": 2800,
+    "inferenceParametersActiveBillions": 104,
+    "sizeClass": "large",
+    "contextWindowTokens": 1000000,
+    "licenseName": "Kimi K3.1-Pro Licence",
+    "licenseUrl": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro/blob/main/LICENSE",
+    "modelWeightsSourceUrl": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+    "microevalsEnabled": true,
+    "intelligenceIndex": 46.4526236744189,
+    "capabilities": {
+      "financeAndAccounting": 53.3401318791032,
+      "strategyAndOps": 57.6179402267059,
+      "legal": 49.2309839816268,
+      "healthcareAndMedical": 51.6212909429693,
+      "engineering": 50.8937710497836,
+      "economics": 49.9351833333333
+    },
+    "omniscience": 29.866666666666667,
+    "omniscienceAccuracy": 0.48933333333333334,
+    "omniscienceHallucinationRate": 0.3733681462140992,
+    "mlcrOverall": 0.383333333333333,
+    "gdpPdfAllPass": 0.314,
+    "gdpval": 1860.57,
+    "gdpvalInterval": {
+      "lower": 1832.42,
+      "upper": 1888.71
+    },
+    "itBenchSre": null,
+    "tau2": null,
+    "tauBanking": null,
+    "terminalbenchHard": null,
+    "terminalBench21": null,
+    "terminalBench40": 0.671717171717172,
+    "frontierCode": 0.470664,
+    "frontierCode20": 0.254519444444444,
+    "terminalBenchScience": 0.342857142857143,
+    "healthbench": null,
+    "vialsScore": 0.453416149068323,
+    "mkaClimbWsr": 0.43859188154676043,
+    "healthbenchProfessional": null,
+    "hleDiamond": 0.373,
+    "critptAgenticHard": 0.495,
+    "scicode": 0.607638888888889,
+    "lcr": 0.863333333333333,
+    "ifbench": null,
+    "hle": 0.524559777571826,
+    "gpqa": null,
+    "critpt": 0.245714285714286,
+    "apexAgents": null,
+    "mmmuPro": 0.838728323699422,
+    "livecodebench": null,
+    "aime25": null,
+    "analystAgent": 0.3875,
+    "automationBenchPartialScore": 0.7329771090921112,
+    "price1mInputTokens": 2,
+    "price1mOutputTokens": 10,
+    "cacheHitPrice": 0.2,
+    "cacheHitDiscountPercent": 0.9,
+    "pricePer1k1mpImages": null,
+    "price1mBlended0To3To1": 4,
+    "price1mBlended7To2To1": 1.54,
+    "price1mBlended0To1To1": 6,
+    "price1mBlended100To1To1": 0.3137254901960784,
+    "price1mBlended0To100To1": 2.0792079207920793,
+    "intelligenceIndexTimePerTask": 2374.9936892377946,
+    "intelligenceIndexCost": {
+      "total": 3152.800614059493,
+      "input": 2021.012864059493,
+      "nonCacheInput": 35.794538,
+      "cacheRead": 1333.4202786600565,
+      "cacheWrite": 651.7980473994363,
+      "output": 1131.78775,
+      "reasoning": 865.23064,
+      "answer": 266.55711
+    },
+    "intelligenceIndexCostPerTask": {
+      "cost": {
+        "total": 3.6812002895742055,
+        "input": 2.958810587259056,
+        "nonCacheInput": 0.016748667700000004,
+        "cacheRead": 2.1020636936657997,
+        "cacheWrite": 0.8399982258932563,
+        "output": 0.722389702315149,
+        "reasoning": 0.4422975523008582,
+        "answer": 0.2800921500142909
+      },
+      "evaluations": [
+        {
+          "slug": "aa-briefcase",
+          "weightedCostPerTask": 1.0830954549961667
+        },
+        {
+          "slug": "automationbench-aa",
+          "weightedCostPerTask": 0.04143776763703401
+        },
+        {
+          "slug": "terminalbench-4-0",
+          "weightedCostPerTask": 0.5265564268428178
+        },
+        {
+          "slug": "frontiercode-2-0",
+          "weightedCostPerTask": 0.35690445271263926
+        },
+        {
+          "slug": "omniscience",
+          "weightedCostPerTask": 0.0064380597
+        },
+        {
+          "slug": "gdp-pdf",
+          "weightedCostPerTask": 0.026091902
+        },
+        {
+          "slug": "hle-diamond",
+          "weightedCostPerTask": 0.036473238
+        },
+        {
+          "slug": "critpt-v2-hard",
+          "weightedCostPerTask": 0.07017241618169667
+        },
+        {
+          "slug": "terminal-bench-science",
+          "weightedCostPerTask": 1.534030571503851
+        }
+      ]
+    },
+    "canonicalIntelligenceIndexTokenCount": {
+      "input": 7010897686,
+      "output": 113178775,
+      "answer": 26655711,
+      "reasoning": 86523064
+    },
+    "intelligenceIndexOutputTokensPerTask": {
+      "reasoning": 44229.755230085815,
+      "answer": 28009.215001429086,
+      "output": 72238.9702315149
+    },
+    "openness": {
+      "opennessIndex": 33.333333333333336,
+      "modelAvailability": 4,
+      "transparencyMethodology": 2,
+      "transparencyPostTrainingData": 0,
+      "transparencyPreTrainingData": 0
+    },
+    "briefcaseBreakdown": {
+      "overall": {
+        "elo": 1673.56,
+        "lower95ci": 1663.56,
+        "upper95ci": 1685.46
+      }
+    },
+    "aa3dElo": 1112.0815,
+    "aa3dEloInterval": {
+      "lower": 1082.9978,
+      "upper": 1141.1653
+    },
+    "personalityBench": {
+      "scores": {
+        "lexicallyVaried": 1147.75,
+        "eloquent": 1189.33,
+        "literate": 1048.43,
+        "naturalSounding": 944.7,
+        "metaphorical": 1043.53,
+        "structured": 966,
+        "scannable": 969.88,
+        "summarizesBottomLine": 1073.03,
+        "answerFirst": 975.95,
+        "informationDense": 1126.25,
+        "evidenceBased": 853.4,
+        "resourceSpecific": 1122.5,
+        "providesActionableGuidance": 1169.88,
+        "pragmatic": 974.12,
+        "truthful": 990.89,
+        "admitsUncertainty": 917.81,
+        "disclaimsWithAssumptions": 953.12,
+        "flagsNuances": 1097.92,
+        "sycophantic": 1017.1,
+        "friendly": 860.31,
+        "humorous": 998.11,
+        "sincere": 1017.76,
+        "emotionallyIntelligent": 897.38,
+        "direct": 979.12,
+        "confident": 1107.04,
+        "opinionated": 1089.29,
+        "constructivelyPushesBack": 1055.51,
+        "creative": 1021.06,
+        "openEnded": 784.47,
+        "slop": 1083.01
+      },
+      "indexScores": {
+        "expressiveness": 65.73076923076923,
+        "organization": 82.86538461538461,
+        "informativeness": 31.461538461538463,
+        "transparency": 88.57692307692308,
+        "warmth": 58.11538461538461,
+        "conviction": 65.73076923076923,
+        "imagination": 54.30769230769231,
+        "slop": 21.942307692307693
+      },
+      "indexIntervals": {
+        "expressiveness": {
+          "lower": 59,
+          "upper": 69
+        },
+        "organization": {
+          "lower": 73,
+          "upper": 96
+        },
+        "informativeness": {
+          "lower": 30,
+          "upper": 39
+        },
+        "transparency": {
+          "lower": 82,
+          "upper": 95
+        },
+        "warmth": {
+          "lower": 51,
+          "upper": 60
+        },
+        "conviction": {
+          "lower": 60,
+          "upper": 73
+        },
+        "imagination": {
+          "lower": 47,
+          "upper": 56
+        },
+        "slop": {
+          "lower": 18,
+          "upper": 24
+        }
+      }
+    },
+    "personalityBenchMeans": {
+      "charCount": 2661.92111111111,
+      "wordCount": 389.16,
+      "sentenceCount": 27.1122222222222,
+      "paragraphCount": 8.56555555555556,
+      "avgSentenceLength": 14.8800576109948,
+      "listCount": 1.71333333333333,
+      "headingCount": 1.73111111111111,
+      "tableCount": 0.0933333333333333,
+      "emDashCount": 2.92888888888889,
+      "contractionCount": 5.47777777777778,
+      "exclamationCount": 0.0222222222222222,
+      "questionCount": 1.81888888888889,
+      "parentheticalCount": 0.317777777777778,
+      "quoteCount": 6.11222222222222,
+      "colonCount": 5.67222222222222,
+      "ellipsisCount": 0.06,
+      "boldCount": 9.26111111111111,
+      "italicsCount": 0.616666666666667,
+      "emojiCount": 0.00444444444444444,
+      "acronymCount": 1.59555555555556,
+      "endsWithQuestion": 0.0633333333333333
+    },
+    "headline": {
+      "outputSpeed": 30.41648934010369,
+      "timeToFirstToken": 4.433392820092647,
+      "timeToFirstAnswerToken": 186.55652609456277
+    },
+    "multiTurn": {
+      "timeToFirstToken": 3.779765922572554
+    },
+    "workloads": {
+      "1k": {
+        "timeToFirstToken": 2.7037092382646373
+      },
+      "10k": {
+        "timeToFirstToken": 3.478866512823563
+      },
+      "100k": {
+        "timeToFirstToken": 9.07848340175002
+      }
+    },
+    "performanceDataSource": {
+      "type": "firstParty",
+      "providerName": "Kimi"
+    },
+    "priceDataSource": {
+      "type": "firstParty",
+      "providerName": "Kimi"
+    },
+    "creator": {
+      "id": "0a177021-87dd-4250-9a37-f01df196bfe0",
+      "slug": "kimi",
+      "name": "Kimi",
+      "logo": "/img/logos/kimi.jpg",
+      "color": "#047AFE",
+      "country": "cn"
+    },
+    "hosts": [
+      {
+        "slug": "amazon_bedrock",
+        "name": "Amazon Bedrock",
+        "logo": "/img/logos/aws.svg"
+      },
+      {
+        "slug": "baseten",
+        "name": "Baseten",
+        "logo": "/img/logos/baseten.svg"
+      },
+      {
+        "slug": "databricks",
+        "name": "Databricks",
+        "logo": "/img/logos/databricks.png"
+      },
+      {
+        "slug": "deepinfra",
+        "name": "DeepInfra",
+        "logo": "/img/logos/deepinfra.webp"
+      },
+      {
+        "slug": "digitalocean",
+        "name": "DigitalOcean",
+        "logo": "/img/logos/digitalocean.svg"
+      },
+      {
+        "slug": "fireworks",
+        "name": "Fireworks",
+        "logo": "/img/logos/fireworks.svg"
+      },
+      {
+        "slug": "inco",
+        "name": "Inco",
+        "logo": "/img/logos/inco.svg"
+      },
+      {
+        "slug": "kimi",
+        "name": "Kimi",
+        "logo": "/img/logos/kimi.jpg"
+      },
+      {
+        "slug": "lithos-ai",
+        "name": "LithosAI",
+        "logo": "/img/logos/lithos-ai.svg"
+      },
+      {
+        "slug": "modal",
+        "name": "Modal",
+        "logo": "/img/logos/modal.svg"
+      },
+      {
+        "slug": "nebius",
+        "name": "Nebius",
+        "logo": "/img/logos/nebius.svg"
+      },
+      {
+        "slug": "parasail",
+        "name": "Parasail",
+        "logo": "/img/logos/parasail.svg"
+      },
+      {
+        "slug": "primalabs",
+        "name": "PrimaLabs",
+        "logo": "/img/logos/primalabs.svg"
+      },
+      {
+        "slug": "siliconflow",
+        "name": "SiliconFlow",
+        "logo": "/img/logos/siliconflow.png"
+      },
+      {
+        "slug": "systalyze",
+        "name": "Systalyze",
+        "logo": "/img/logos/systalyze.svg"
+      },
+      {
+        "slug": "togetherai",
+        "name": "Together AI",
+        "logo": "/img/logos/togetherai.svg"
+      },
+      {
+        "slug": "wafer",
+        "name": "Wafer",
+        "logo": "/img/logos/wafer.svg"
+      }
+    ],
+    "inputModalityText": true,
+    "inputModalityImage": true,
+    "inputModalitySpeech": false,
+    "inputModalityVideo": false,
+    "outputModalityText": true,
+    "outputModalityImage": false,
+    "outputModalitySpeech": false,
+    "outputModalityVideo": false
+  }
+}

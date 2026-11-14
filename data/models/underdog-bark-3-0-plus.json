@@ -6,6 +6,7 @@
   "aliases": [
     "ConwayResearch/Underdog-Bark-3.0-Plus"
   ],
+  "releases": [],
   "organization": "underdog-ai",
   "released": "2026-10-15",
   "summary": "Underdog Bark 3.0 Plus Bark 3.0 Plus is state-of-the-art speech recognition under 1 GB: a 0.6B English model in a 180 MB download that averages 4.76 % word error across the Open ASR Leaderboard's seven English sets, more accurate than every other open model under 1 GB, and more accurate than NVIDIA's Parakeet TDT 0.6B v3 (4.94 %) and Qwen3-ASR-0.6B (5.16 %), which are 10 to 14 times its size.",
@@ -106,5 +107,41 @@
     "match": "exact",
     "via": null,
     "note": "Self-reported. The card cites the leaderboard's published comparison as of 9 October 2026."
+  },
+  "scorecard": {
+    "openness_morality": {
+      "score": 55,
+      "tier": "shared",
+      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed."
+    },
+    "performance": {
+      "score": 95.2,
+      "basis": "task",
+      "match": "exact",
+      "inherited_from": null,
+      "benchmarks": [],
+      "own_benchmarks": [],
+      "metric": "Average WER",
+      "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Plus",
+      "as_of": "2026-10-09",
+      "note": "Derived from Average WER (4.76%) reported by model-card."
+    },
+    "research_citation": {
+      "score": null,
+      "basis": null,
+      "benchmarks": [],
+      "source": null,
+      "as_of": null,
+      "note": "Not measured. No current research benchmark is recorded."
+    },
+    "syndication": {
+      "score": 0,
+      "max": 10,
+      "band": "self-only",
+      "note": "Independent listings, not quality. The model's own host has weight 0."
+    },
+    "as_of": "2026-11-14",
+    "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Research/Citation uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
+    "source": "internal://democratic-ai/scorecard-v2"
   }
 }

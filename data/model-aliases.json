@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14",
+  "note": "When a release is the same model under a new name, or a later update of the same lineage, the older record folds into the canonical page. The alias keeps a redirect and a release-history entry. A build is still a build, never a model page.",
+  "aliases": [
+    {
+      "id": "deepseek-v4-flash-vision-exp",
+      "canonical_id": "deepseek-v4-1-flash-1017",
+      "hugging_face": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "canonical_hugging_face": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "relation": "legacy name",
+      "note": "The 1017 release now serves the deepseek-v4-flash-vision-exp API name."
+    },
+    {
+      "id": "deepseek-v4-1-flash",
+      "canonical_id": "deepseek-v4-1-flash-1017",
+      "hugging_face": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "canonical_hugging_face": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "relation": "previous release",
+      "note": "1017 is the 17 October 2026 update of V4.1 Flash."
+    },
+    {
+      "id": "ling-3-1-flash",
+      "canonical_id": "ling-3-1-flash-1019",
+      "hugging_face": "inclusionAI/Ling-3.1-flash",
+      "canonical_hugging_face": "inclusionAI/Ling-3.1-flash-1019",
+      "relation": "previous release",
+      "note": "1019 is the 27 October 2026 update of Ling-3.1-flash."
+    }
+  ]
+}
