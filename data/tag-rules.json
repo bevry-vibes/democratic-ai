@@ -715,5 +715,11 @@
       "domain:vision",
       "modality:image"
     ]
-  }
+  },
+  "packager_orgs": [
+    "unsloth",
+    "mlx-community",
+    "bartowski",
+    "thebloke"
+  ]
 }

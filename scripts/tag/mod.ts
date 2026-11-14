@@ -16,6 +16,7 @@ interface TagRuleFile {
   build_markers: Record<string, string[]>
   relation_markers: Record<string, string[]>
   model_overrides: Record<string, string[]>
+  packager_orgs: string[]
 }
 
 interface TagVocabulary {
@@ -237,6 +238,10 @@ function tagItem(item: PullItem, rules: TagRuleFile, orgMap: Map<string, string>
   if (author) {
     const org = orgMap.get(author.toLowerCase()) ?? slug(author)
     tags.add(`org:${org}`, 0.8, "source-native", `source_meta:author=${author}`)
+    if (item.kind === "model" && rules.packager_orgs.includes(author.toLowerCase())) {
+      tags.add("status:build", 0.95, "rule", `packager:${author}`)
+      tags.add("relation:repackaged", 0.95, "rule", `packager:${author}`)
+    }
   }
 
   applyList(tags, text, rules.keywords, 0.65, 0.85, "rule", "keyword")

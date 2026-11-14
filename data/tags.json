@@ -210,7 +210,8 @@
         "merge": "A merge of two or more models.",
         "adapter": "An adapter or LoRA on a base model.",
         "conversion": "A runtime conversion, such as MLX, CoreML, ONNX, or OpenVINO.",
-        "probe": "An internal evaluation probe."
+        "probe": "An internal evaluation probe.",
+        "repackaged": "A repackaged or redistributed copy of a base model by a packaging organisation."
       }
     }
   }
