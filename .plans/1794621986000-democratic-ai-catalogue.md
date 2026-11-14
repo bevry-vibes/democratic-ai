@@ -747,6 +747,30 @@ Rate and safety rules:
 - Never print or commit a token.
 - Never overwrite a raw snapshot.
 
+### Tagging pass (implemented)
+
+`scripts/tag/` has two stages:
+
+- `mod.ts` — the rules-first pass. It reads source-native tags and specific title or text phrases, maps organisations from the watchlist, and writes `tags.rules.jsonl` plus `tags.report.json`. It never calls a model.
+- `clef.ts` — the confirmation gate. It sends only the models the rules mark `needs_review` to Clef-Flash, with one independent yes/no question per task. It accepts a task at 0.8 or above and caches every response under `data/raw/clef/`. It writes `tags.proposed.jsonl` and `tags.clef.report.json`.
+
+Why not Gist: Gist's 36 topics describe a subject, such as technology or finance. They are not the job a model performs. Gist cannot label `task:speech-synthesis` or `task:translation`. It may help with a future `domain:` hint, but it is not a task labeller.
+
+Why Clef only on review: the rules already cover most models from source-native fields. Clef is useful as a confirmation gate, not as a primary labeller. The pati-reports evaluation showed Clef `noul` is a calibrated yes/no signal, while a single `choice` is poor for multi-label work.
+
+First results on the 2026-11-14 pull:
+
+| Metric | Value |
+| --- | --- |
+| Models | 664 |
+| Models with a task tag from the rules | 603 |
+| Models sent to Clef | 78 |
+| Tasks accepted by Clef at 0.8 | 17 models |
+| Models still in review | 61 |
+| Clef input cost | about USD 0.08 |
+
+A model in review keeps its licence, runtime, family, and org tags. It has no task tag, so it reads `unmeasured` for a task. It is not guessed.
+
 ### 11. CI/CD
 
 **`ci.yml`** runs on every pull request and on `main`:
@@ -905,7 +929,8 @@ Acceptance: the repository is initialised, the skills are referenced, and the ow
 
 - The fetch pipeline (implemented): raw snapshots, pull manifests, and source-native items.
 - `data/tags.json` with the namespace vocabulary and definitions.
-- `scripts/tag.ts` — a human-gated tagging pass that reads the pulls and proposes `task:`, `runtime:`, and `context:` tags with evidence.
+- `data/tag-rules.json` with the pipeline, library, family, keyword, title, runtime, and sitemap rules.
+- `scripts/tag/` (implemented): a rules-first pass plus a Clef confirmation gate for review models. Neither writes a model record.
 - `schemas/` for model, organization, source, discovery, tag, and report.
 - The first 30 model records from the pull, not from memory.
 - `scripts/build.ts` and `scripts/check.ts`.
@@ -913,7 +938,7 @@ Acceptance: the repository is initialised, the skills are referenced, and the ow
 - Generated README blocks and `data/dist/`.
 - `CONTRIBUTING.md` with the evidence runbook and the tagging guide.
 
-Acceptance: `deno task fetch` writes a manifest and keeps every raw response; the index builds without any report; every task tag has a definition and an evidence source; `deno task check` passes; the tier is recomputed and equal to the stored tier.
+Acceptance: `deno task fetch` writes a manifest and keeps every raw response; `deno task tag` and `deno task tag:clef` write proposals with evidence; no Clef task is accepted below 0.8; a model in review keeps its other tags and has no guessed task; the index builds without any report; every task tag has a definition; `deno task check` passes; the tier is recomputed and equal to the stored tier.
 
 ### Phase 2 — site and tag index
 

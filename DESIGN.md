@@ -144,6 +144,22 @@ This order matters. A tag assigned before the data is complete becomes a bias in
 
 The tagging pass is human-gated. It may be assisted by an agent, but a person accepts the vocabulary and the evidence. Tag changes are journaled.
 
+### The tagging pass
+
+The first pass is rules-first:
+
+1. Source-native tags: the Hugging Face pipeline, licence, library, and base-model tags; the repository; the source.
+2. Specific title and text phrases, with token boundaries. A generic word such as “code” or “image” is not enough on its own.
+3. A Clef confirmation only for models the rules mark `needs_review`.
+
+Clef is a decision model, not a writer. It answers one independent yes/no question per task and returns a probability. The pass accepts a task at 0.8 or above. It caches every response under `data/raw/clef/`.
+
+Gist was evaluated and not used for task tags. Its 36 topics describe a subject such as technology or finance, not the job a model performs. It may be useful later for a `domain:` hint, but it cannot label a task.
+
+The first pass covered 664 Hugging Face models. The rules gave 603 a task tag. Clef accepted 17 of the 78 review models at the 0.8 threshold. 61 models remain in review. The Clef input cost about USD 0.08.
+
+A model in review is not guessed. It stays visible with its licence, runtime, family, and org tags, and it reads `unmeasured` for the task.
+
 ### Overlay reports
 
 An evaluation is downstream. The core index is useful without it.

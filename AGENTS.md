@@ -29,6 +29,7 @@ this process is documented in the upstream repo's [local tweaks pattern](https:/
 - Fetch before tag. The fetch pipeline records source-native metadata only. Do not assign `task:`, `runtime:`, or `context:` tags during a pull. Tagging is a separate, human-gated pass after the pull.
 - Evaluations are optional overlay reports, not core records. The index builds without them. Keep a report scoped to one use case and one date.
 - Classification is tag-based. Do not create rigid categories. Add a tag value only with a definition in `data/tags.json`.
+- The tagging pass is rules-first. Clef is a confirmation gate for models the rules mark `needs_review`; accept a task only at 0.8 or above, and cache every response. Gist's 36 topics describe subject matter, not the job a model performs, so do not use them as task tags.
 - The X list and the Hugging Face following list need credentials. Treat them as optional sources. A missing credential must never block the deterministic build.
 - The X API is metered. Cache every response under `data/raw/` and never refetch a same-day snapshot without an explicit refresh.
 - `agent-detect` is the source of truth for harness, provider, model, and provider-training rules. This repository complements it with training-data openness, lineage, and reuse terms; it does not fork those rules.
