@@ -1,0 +1,87 @@
+# Democratic AI
+
+AI learns from the commons: books, code, images, speech, and the work of everyone who came before. Democratic AI returns that value. It publishes its weights, documents or releases its training data, uses a licence that lets others build, and does not train on private prompts without consent.
+
+This repository tracks democratic AI models and discoveries. It helps you answer one question: **which AI is democratic enough for this context?**
+
+> **Status:** the first catalogue is in progress. The site, the JSON API, and the first verified records are being assembled. The journal records each step.
+
+## What this repository gives you
+
+- A catalogue of models, organised by reciprocity tier and by use context.
+- A record of datasets, runtimes, evaluations, and tools that keep AI accountable.
+- A journal of releases, licence changes, and discoveries.
+- A JSON API and an RSS feed for your own projects.
+
+## The reciprocity tiers
+
+A model can release its weights and still keep its training data and recipe secret. Weights alone are not reciprocity. The catalogue records what each project gives back, and what you may do with the gift.
+
+| Tier | What it means |
+| --- | --- |
+| **Commons** | Weights, training data, and training code are open. The licence permits reuse. |
+| **Reciprocal** | Weights and training code are open. The training data is documented or open. The licence permits reuse. |
+| **Shared** | Weights are available, but the training data stays closed or the licence restricts reuse. |
+| **Closed** | The weights are not available. |
+| **Unproven** | The evidence is not sufficient to make a determination. |
+
+The tiers describe what you can reuse. They are not a judgement on the worth of a project. A conditional licence, such as a non-commercial term or a user cap, makes a model **Shared** even when the weights are open. Each record shows the exact licence, the evidence, and the date of the last check.
+
+## Browse by context
+
+- **Runs on your device** — small models, quantised builds, and local runtimes for phones, laptops, and single-board computers.
+- **Speaks your language** — sovereign and multilingual models, with a focus on Indonesian and low-resource languages.
+- **Works with speech** — open text-to-speech and speech-to-text models for local apps.
+- **Writes code and drives agents** — tool-calling models that fit consumer hardware.
+- **Builds on the commons** — datasets, evaluations, and runtimes that make openness auditable.
+
+Each model record lists its domain, its licence, its lineage, and the hardware it needs. You can filter by tier, domain, language, licence class, and device.
+
+## Read the journal
+
+The journal records new releases, licence changes, benchmark results, and research that changes the picture. It is the changelog for the field, not for this repository. Each entry links to its sources.
+
+A monthly dispatch collects the important changes into one readable issue.
+
+## Use the data
+
+The catalogue will publish as JSON, with a stable schema and a versioned API.
+
+```text
+GET /api/v1/index.json
+GET /api/v1/models/<id>.json
+GET /api/v1/organizations/<id>.json
+GET /api/v1/categories.json
+GET /api/v1/journal.json
+GET /feed.xml
+```
+
+Every record links to its sources and the date of the last check. The data is free to use under the repository licence.
+
+## How we judge
+
+1. We start from the licence and the model card.
+2. We record a claim as verified only when a primary source states it.
+3. We record silence as unknown, never as open.
+4. We show conflicts between sources.
+5. We re-check a record when a release or licence changes, and at least every 90 days.
+
+The full method is in [DESIGN.md](./DESIGN.md).
+
+## Contribute a correction
+
+Open an issue with a source. A correction with evidence is always welcome. If a model is missing, send its model card, its licence, and any statement about its training data.
+
+<!-- LICENSE/ -->
+
+## License
+
+Unless stated otherwise all works are:
+
+- Copyright &copy; [Benjamin Lupton](https://balupton.com)
+
+and licensed under:
+
+- [Reciprocal Public License 1.5](http://spdx.org/licenses/RPL-1.5.html)
+
+<!-- /LICENSE -->
