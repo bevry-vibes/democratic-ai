@@ -26,7 +26,11 @@ const { label, explanation, href, tone = "", missing = false, website, links = [
     aria-label={`${label}. ${explanation}`}
   >{label}</a>
   <div class="pill-explain">
-    <p class:list={{ "pill-missing-text": missing }}>{explanation}</p>
+    <p
+      class:list={{ "pill-missing-text": missing }}
+      data-tooltip={missing ? "Not available for this model." : undefined}
+      tabindex={missing ? "0" : undefined}
+    >{explanation}</p>
     {website && (
       <a class="pill-website" href={website.href} target="_blank" rel="noreferrer">↗ {website.label}</a>
     )}

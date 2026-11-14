@@ -3144,13 +3144,14 @@ html {
 }
 
 .pill-missing {
-  border-style: dotted !important;
+  border-style: dashed !important;
   border-color: #b04a3a !important;
 }
 
 .pill-missing-text {
-  text-decoration: underline dotted #b04a3a;
+  text-decoration: underline dashed #b04a3a;
   text-underline-offset: 3px;
+  cursor: help;
 }
 
 .pill-website {
