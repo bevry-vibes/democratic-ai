@@ -4,15 +4,15 @@ AI learns from the commons: books, code, images, speech, and the work of everyon
 
 This repository tracks democratic AI models and discoveries. It helps you answer one question: **which AI is democratic enough for this context?**
 
-> **Status:** the first catalogue is live. The site and the JSON API are available. Records are added after a source check, and builds attach to their base model. The journal records each change.
+> **Status:** the first catalogue is live. The site and the JSON API are available. Records are added after a source check, and builds attach to their base model.
 
 ## What this repository gives you
 
 - A catalogue of models, organised by reciprocity tier and by tags.
 - Tag pages for jobs, modalities, runtimes, languages, and contexts.
 - Optional reports for specific jobs, with measured comparisons and a recommendation.
+- Side-by-side model comparisons on a shareable page.
 - A record of datasets, runtimes, evaluations, and tools that keep AI accountable.
-- A journal of releases, licence changes, and discoveries.
 - A JSON API and an RSS feed for your own projects.
 
 ## Start with the job
@@ -90,12 +90,6 @@ Tags let a model belong to several jobs at once.
 
 Each model record lists its tags, licence, lineage, and hardware needs. You can filter by tier, task, modality, runtime, language, licence class, and device. A model page also links to its models.dev entry and its agent-detect entry when one exists.
 
-## Read the journal
-
-The journal records new releases, licence changes, benchmark results, and research that changes the picture. It is the changelog for the field, not for this repository. Each entry links to its sources.
-
-A monthly dispatch collects the important changes into one readable issue.
-
 ## Use the data
 
 The catalogue publishes as JSON, with a stable schema and a versioned API.
@@ -103,12 +97,10 @@ The catalogue publishes as JSON, with a stable schema and a versioned API.
 ```text
 GET /api/v1/index.json
 GET /api/v1/models/<id>.json
-GET /api/v1/organizations/<id>.json
 GET /api/v1/tags.json
-GET /api/v1/reports.json
-GET /api/v1/reports/<id>.json
-GET /api/v1/journal.json
-GET /feed.xml
+GET /api/v1/syndication.json
+GET /api/v1/links.json
+GET /api/v1/meta.json
 ```
 
 Every record links to its sources and the date of the last check. The data is free to use under the repository licence.
