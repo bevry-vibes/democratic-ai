@@ -584,5 +584,53 @@
       "domain:code"
     ],
     "simplifying-ai": []
+  },
+  "build_markers": {
+    "status:build": [
+      "-gguf",
+      "-mlx",
+      "-coreml",
+      "-onnx",
+      "-nvfp4",
+      "-q4",
+      "-q8",
+      "-q6",
+      "-4bit",
+      "-8bit",
+      "-bf16",
+      "-int4",
+      "-int8",
+      "-ov",
+      "-quant",
+      "-dflash",
+      "-server"
+    ],
+    "status:probe": [
+      "-singprobe"
+    ]
+  },
+  "relation_markers": {
+    "relation:quantized": [
+      "-gguf",
+      "-nvfp4",
+      "-q4",
+      "-q8",
+      "-q6",
+      "-4bit",
+      "-8bit",
+      "-int4",
+      "-int8",
+      "-quant",
+      "-dflash"
+    ],
+    "relation:conversion": [
+      "-mlx",
+      "-coreml",
+      "-onnx",
+      "-ov"
+    ],
+    "relation:probe": [
+      "-singprobe"
+    ]
   }
 }

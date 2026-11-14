@@ -103,13 +103,19 @@ function parseArgs(argv: string[]): { pull: string | null; limit: number | null;
 }
 
 async function latestPull(): Promise<string> {
-  const names: string[] = []
+  const candidates: Array<{ name: string; size: number }> = []
   for await (const entry of Deno.readDir("data/pulls")) {
-    if (entry.isDirectory) names.push(entry.name)
+    if (!entry.isDirectory) continue
+    try {
+      const stat = await Deno.stat(`data/pulls/${entry.name}/items.jsonl`)
+      candidates.push({ name: entry.name, size: stat.size })
+    } catch {
+      // not a complete pull
+    }
   }
-  names.sort()
-  if (names.length === 0) throw new Error("no pulls found under data/pulls")
-  return names[names.length - 1]!
+  candidates.sort((a, b) => b.size - a.size)
+  if (candidates.length === 0) throw new Error("no complete pulls found under data/pulls")
+  return candidates[0]!.name
 }
 
 function slug(value: string): string {

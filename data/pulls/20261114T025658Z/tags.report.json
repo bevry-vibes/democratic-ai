@@ -1,11 +1,11 @@
 {
   "pull_id": "20261114T025658Z",
-  "generated_at": "2026-11-14T03:14:58.080Z",
+  "generated_at": "2026-11-14T04:09:01.223Z",
   "generated_on": "2026-11-14",
   "vocabulary_status": "proposed",
   "items": 3932,
   "tagged_items": 3745,
-  "needs_review": 78,
+  "needs_review": 26,
   "by_kind": {
     "article": {
       "items": 66,
@@ -15,7 +15,7 @@
     "model": {
       "items": 664,
       "tagged": 664,
-      "review": 78
+      "review": 26
     },
     "dataset": {
       "items": 50,
@@ -44,17 +44,20 @@
     "source:x": 869,
     "source:hf-model": 664,
     "context:commercial-safe": 352,
+    "status:build": 314,
     "domain:vision": 296,
     "domain:language": 289,
     "license:other": 273,
     "task:text-generation": 252,
     "runtime:python": 221,
     "license:apache-2.0": 212,
-    "domain:tooling": 187,
+    "domain:tooling": 188,
     "domain:speech": 183,
     "modality:image": 183,
+    "relation:quantized": 181,
     "domain:multimodal": 177,
     "context:agents": 165,
+    "relation:conversion": 158,
     "task:image-understanding": 137,
     "org:ant-ling": 135,
     "modality:text": 129,
@@ -91,6 +94,8 @@
     "context:non-commercial": 31,
     "org:edge0-ai": 31,
     "task:text-classification": 29,
+    "relation:probe": 29,
+    "status:probe": 29,
     "license:cc-by-nc-4.0": 28,
     "org:minimax": 28,
     "org:zai": 28,
@@ -189,38 +194,8 @@
   "review_samples": [
     {
       "kind": "model",
-      "title": "ConwayResearch/woof-textfiller-4B-4bit-v2.1",
-      "url": "https://huggingface.co/ConwayResearch/woof-textfiller-4B-4bit-v2.1",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "ConwayResearch/woof-textfiller-0.8B-4bit-v2.1",
-      "url": "https://huggingface.co/ConwayResearch/woof-textfiller-0.8B-4bit-v2.1",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "ConwayResearch/woof-selector-4B-4bit-v2.1",
-      "url": "https://huggingface.co/ConwayResearch/woof-selector-4B-4bit-v2.1",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
       "title": "ConwayResearch/husky-flash",
       "url": "https://huggingface.co/ConwayResearch/husky-flash",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "ConwayResearch/Underdog-Poodle-4B-DFlash",
-      "url": "https://huggingface.co/ConwayResearch/Underdog-Poodle-4B-DFlash",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "ConwayResearch/underdog-llama-server",
-      "url": "https://huggingface.co/ConwayResearch/underdog-llama-server",
       "reason": "model has no task tag"
     },
     {
@@ -249,86 +224,8 @@
     },
     {
       "kind": "model",
-      "title": "FluidInference/citenet-coreml",
-      "url": "https://huggingface.co/FluidInference/citenet-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/mario-student-coreml",
-      "url": "https://huggingface.co/FluidInference/mario-student-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/d3-mini-coreml",
-      "url": "https://huggingface.co/FluidInference/d3-mini-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/vela-2.0-0.3b-coreml",
-      "url": "https://huggingface.co/FluidInference/vela-2.0-0.3b-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/decision-2.0-kai-coreml",
-      "url": "https://huggingface.co/FluidInference/decision-2.0-kai-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/decision-2.0-eos-coreml",
-      "url": "https://huggingface.co/FluidInference/decision-2.0-eos-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/sauerkrautlm-doom-coreml",
-      "url": "https://huggingface.co/FluidInference/sauerkrautlm-doom-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/nanojev-coreml",
-      "url": "https://huggingface.co/FluidInference/nanojev-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
       "title": "FluidInference/fluidaudio-web",
       "url": "https://huggingface.co/FluidInference/fluidaudio-web",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/lfm2-5-350m-rlcd-coreml",
-      "url": "https://huggingface.co/FluidInference/lfm2-5-350m-rlcd-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/decision-1.0-lex-coreml",
-      "url": "https://huggingface.co/FluidInference/decision-1.0-lex-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/decision-1.0-kai-coreml",
-      "url": "https://huggingface.co/FluidInference/decision-1.0-kai-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/decision-1.0-lex-snake-coreml",
-      "url": "https://huggingface.co/FluidInference/decision-1.0-lex-snake-coreml",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "FluidInference/kev-0.6b-coreml",
-      "url": "https://huggingface.co/FluidInference/kev-0.6b-coreml",
       "reason": "model has no task tag"
     },
     {
@@ -341,12 +238,6 @@
       "kind": "model",
       "title": "inclusionAI/Duo-1.2-causal-base",
       "url": "https://huggingface.co/inclusionAI/Duo-1.2-causal-base",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "inclusionAI/Duo-1.0-distill-quant",
-      "url": "https://huggingface.co/inclusionAI/Duo-1.0-distill-quant",
       "reason": "model has no task tag"
     },
     {
@@ -365,6 +256,96 @@
       "kind": "model",
       "title": "inclusionAI/ZoomGain-9B",
       "url": "https://huggingface.co/inclusionAI/ZoomGain-9B",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/ZoomGain-4B",
+      "url": "https://huggingface.co/inclusionAI/ZoomGain-4B",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Ming-3.0-audio-tiny",
+      "url": "https://huggingface.co/inclusionAI/Ming-3.0-audio-tiny",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Ming-3.0-audio-flash",
+      "url": "https://huggingface.co/inclusionAI/Ming-3.0-audio-flash",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Realtime-Venus",
+      "url": "https://huggingface.co/inclusionAI/Realtime-Venus",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/AI-Transparency",
+      "url": "https://huggingface.co/inclusionAI/AI-Transparency",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Ming-flash-omni-2.0",
+      "url": "https://huggingface.co/inclusionAI/Ming-flash-omni-2.0",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Ming-UniVision-16B-A3B",
+      "url": "https://huggingface.co/inclusionAI/Ming-UniVision-16B-A3B",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Ming-UniAudio-16B-A3B-Edit",
+      "url": "https://huggingface.co/inclusionAI/Ming-UniAudio-16B-A3B-Edit",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Ming-UniAudio-16B-A3B",
+      "url": "https://huggingface.co/inclusionAI/Ming-UniAudio-16B-A3B",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "inclusionAI/Ming-flash-omni-Preview",
+      "url": "https://huggingface.co/inclusionAI/Ming-flash-omni-Preview",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "higurashi-ai/Haru-4B",
+      "url": "https://huggingface.co/higurashi-ai/Haru-4B",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "higurashi-ai/FastDialogueSidon",
+      "url": "https://huggingface.co/higurashi-ai/FastDialogueSidon",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "unsloth/sam3.1",
+      "url": "https://huggingface.co/unsloth/sam3.1",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "LiquidAI/LFM2.5-Audio-1.5B",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B",
+      "reason": "model has no task tag"
+    },
+    {
+      "kind": "model",
+      "title": "LiquidAI/LFM3-Audio-2B",
+      "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B",
       "reason": "model has no task tag"
     }
   ],

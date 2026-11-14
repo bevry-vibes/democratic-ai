@@ -173,7 +173,9 @@
         "gated": "Available after a click-through or approval.",
         "deprecated": "Superseded but still available.",
         "retired": "No longer available.",
-        "unverified": "The state is not confirmed."
+        "unverified": "The state is not confirmed.",
+        "build": "A packaged build or conversion of a base model, such as GGUF, MLX, CoreML, ONNX, or a quantized release.",
+        "probe": "An internal evaluation probe or experimental variant, not a product release."
       }
     },
     "org": {
@@ -190,6 +192,18 @@
         "x": "An X post.",
         "github-release": "A GitHub release.",
         "sitemap": "A sitemap entry."
+      }
+    },
+    "relation": {
+      "definition": "How a model relates to its base model.",
+      "values": {
+        "finetune": "A fine-tune of a base model.",
+        "quantized": "A quantized or reduced-precision build.",
+        "distilled": "A distilled model.",
+        "merge": "A merge of two or more models.",
+        "adapter": "An adapter or LoRA on a base model.",
+        "conversion": "A runtime conversion, such as MLX, CoreML, ONNX, or OpenVINO.",
+        "probe": "An internal evaluation probe."
       }
     }
   }

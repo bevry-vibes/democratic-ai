@@ -13,6 +13,8 @@ interface TagRuleFile {
   title_runtimes: Record<string, string[]>
   desert_ant: Record<string, string>
   sitemaps: Record<string, string[]>
+  build_markers: Record<string, string[]>
+  relation_markers: Record<string, string[]>
 }
 
 interface TagVocabulary {
@@ -77,13 +79,19 @@ function parseArgs(argv: string[]): {
 }
 
 async function latestPull(): Promise<string> {
-  const names: string[] = []
+  const candidates: Array<{ name: string; size: number }> = []
   for await (const entry of Deno.readDir("data/pulls")) {
-    if (entry.isDirectory) names.push(entry.name)
+    if (!entry.isDirectory) continue
+    try {
+      const stat = await Deno.stat(`data/pulls/${entry.name}/items.jsonl`)
+      candidates.push({ name: entry.name, size: stat.size })
+    } catch {
+      // not a complete pull
+    }
   }
-  names.sort()
-  if (names.length === 0) throw new Error("no pulls found under data/pulls")
-  return names[names.length - 1]!
+  candidates.sort((a, b) => b.size - a.size)
+  if (candidates.length === 0) throw new Error("no complete pulls found under data/pulls")
+  return candidates[0]!.name
 }
 
 function normalise(value: string): string {
@@ -237,6 +245,16 @@ function tagItem(item: PullItem, rules: TagRuleFile, orgMap: Map<string, string>
   if (item.kind === "model") {
     applyList(tags, title, rules.title_tasks, 0.7, 0.8, "title", "title")
 
+    for (const [tag, markers] of Object.entries(rules.build_markers)) {
+      const marker = markers.find((value) => title.includes(value))
+      if (marker) tags.add(tag, 0.95, "title", `build-marker:${marker}`)
+    }
+    for (const [tag, markers] of Object.entries(rules.relation_markers)) {
+      const marker = markers.find((value) => title.includes(value))
+      if (marker) tags.add(tag, 0.95, "title", `relation-marker:${marker}`)
+    }
+    if (title.includes("-server")) tags.add("domain:tooling", 0.8, "title", "title:server")
+
     const finalSegment = title.split("/").pop() ?? title
     if (author.toLowerCase().includes("desert-ant") || author.toLowerCase() === "desert-ant-labs") {
       const job = rules.desert_ant[finalSegment]
@@ -277,7 +295,8 @@ function tagItem(item: PullItem, rules: TagRuleFile, orgMap: Map<string, string>
   const hasDomain = proposed.some((tag) => tag.tag.startsWith("domain:"))
   let needsReview = false
   let reviewReason: string | null = null
-  if (item.kind === "model" && !hasTask) {
+  const isBuild = proposed.some((tag) => tag.tag === "status:build" || tag.tag === "status:probe")
+  if (item.kind === "model" && !hasTask && !isBuild) {
     needsReview = true
     reviewReason = "model has no task tag"
   } else if (item.kind === "dataset" && !hasDomain) {
