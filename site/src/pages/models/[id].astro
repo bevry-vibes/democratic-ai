@@ -50,7 +50,7 @@ const otherTags = model.tags.filter(
   (tag) => !TAG_NAMESPACE_ORDER.some((namespace) => tag.startsWith(`${namespace}:`)),
 )
 const accessTags = model.tags.filter((tag) => tag.startsWith("access:"))
-const structuredOutputDefinition = "Return typed or schema-constrained output."
+const structuredOutputDefinition = "Structured output is typed or schema-constrained output."
 
 interface PillLinkData {
   label: string
@@ -169,7 +169,7 @@ const runtimeInfo = (runtime: string): PillLinkData | null => {
 const accessRows: PillRowData[] = [
   {
     label: "access:huggingface",
-    explanation: "The weights and model card on Hugging Face.",
+    explanation: "Hugging Face is where the weights and model card are hosted.",
     href: filterHref({ access: "huggingface" }),
     tone: "tag-access",
     links: [accessInfoLinks.huggingface],
@@ -177,8 +177,8 @@ const accessRows: PillRowData[] = [
   {
     label: "access:models.dev",
     explanation: model.access.models_dev
-      ? "Hosted providers, pricing, and model metadata on models.dev."
-      : "Hosted providers, pricing, and model metadata. No models.dev entry is recorded for this model.",
+      ? "models.dev is a registry of hosted providers, pricing, and model metadata."
+      : "models.dev is a registry of hosted providers, pricing, and model metadata. No entry is recorded for this model.",
     href: filterHref({ access: "models.dev" }),
     tone: "tag-access",
     missing: !model.access.models_dev,
@@ -189,8 +189,8 @@ const accessRows: PillRowData[] = [
   {
     label: "access:agent-detect",
     explanation: model.access.agent_detect
-      ? "Harness and provider identification on agent-detect."
-      : "Harness and provider identification. No agent-detect entry is recorded for this model.",
+      ? "agent-detect identifies the harness and provider for a model."
+      : "agent-detect identifies the harness and provider for a model. No entry is recorded for this model.",
     href: filterHref({ access: "agent-detect" }),
     tone: "tag-access",
     missing: !model.access.agent_detect,
@@ -216,8 +216,8 @@ const capabilityRows: PillRowData[] = [
     label: "capability:structured-output",
     explanation:
       model.capabilities.structured_output === true
-        ? structuredOutputDefinition
-        : `${structuredOutputDefinition} Not recorded for this model.`,
+        ? `${structuredOutputDefinition} This model supports it.`
+        : `${structuredOutputDefinition} It is not recorded for this model.`,
     href: filterHref({ capability: "structured-output" }),
     tone: "tag-capability",
     missing: model.capabilities.structured_output !== true,
@@ -229,8 +229,8 @@ const capabilityRows: PillRowData[] = [
         : `context:${formatContextCount(model.capabilities.context_tokens)}`,
     explanation:
       model.capabilities.context_tokens == null
-        ? "The maximum number of tokens the model can consider at once. Not recorded for this model."
-        : `${formatContextCount(model.capabilities.context_tokens)} tokens. The maximum number of tokens the model can consider at once.`,
+        ? "Context window is the maximum number of tokens the model can consider at once. It is not recorded for this model."
+        : `Context window is the maximum number of tokens the model can consider at once. This model has ${formatContextCount(model.capabilities.context_tokens)} tokens.`,
     href: filterHref({ min_context: model.capabilities.context_tokens ?? 1 }),
     tone: "tag-capability",
     missing: model.capabilities.context_tokens == null,
@@ -239,8 +239,8 @@ const capabilityRows: PillRowData[] = [
     label: model.footprint.params_b == null ? "size:unknown" : `size:${model.footprint.params_b}B`,
     explanation:
       model.footprint.params_b == null
-        ? "The model's parameter count. Use it to estimate weights and memory. Not recorded for this model."
-        : `${formatParams(model.footprint.params_b)}. The model's parameter count. Use it to estimate weights and memory.`,
+        ? "Size is the model's parameter count, which helps estimate weights and memory. It is not recorded for this model."
+        : `Size is the model's parameter count, which helps estimate weights and memory. This model has ${formatParams(model.footprint.params_b)}.`,
     href: filterHref({ min_params: model.footprint.params_b ?? 1 }),
     tone: "tag-capability",
     missing: model.footprint.params_b == null,
@@ -304,8 +304,8 @@ const termRows: PillRowData[] = [
     label: `weights:${weightsValue}`,
     explanation:
       model.openness.weights === "unknown"
-        ? "The weight status is not recorded for this model. This is not the same as closed."
-        : "The weights are open and downloadable. Open-weight does not mean the training data or code are open.",
+        ? "Weights are the trained parameters that make the model work. Their status is not recorded for this model."
+        : "Weights are the trained parameters that make the model work. They are open and downloadable. Open weights do not mean the training data or training code are open.",
     href: filterHref({ weights: weightsValue }),
     tone: "tag-terms",
     missing: model.openness.weights === "unknown",
@@ -314,10 +314,10 @@ const termRows: PillRowData[] = [
     label: `training-data:${model.openness.training_data}`,
     explanation:
       model.openness.training_data === "unknown"
-        ? "The training data is not recorded for this model. Unchecked is not the same as closed."
+        ? "Training data is the data used to train the model. It is not recorded for this model."
         : model.openness.training_data === "open"
-          ? "The training data is open and published."
-          : "The training data is documented but not released.",
+          ? "Training data is the data used to train the model. It is open and published."
+          : "Training data is the data used to train the model. It is documented but not released.",
     href: filterHref({ training_data: model.openness.training_data }),
     tone: "tag-terms",
     missing: model.openness.training_data === "unknown",
@@ -326,17 +326,17 @@ const termRows: PillRowData[] = [
     label: `training-code:${model.openness.training_code}`,
     explanation:
       model.openness.training_code === "unknown"
-        ? "The training code is not recorded for this model. Unchecked is not the same as closed."
+        ? "Training code is the code used to train the model. It is not recorded for this model."
         : model.openness.training_code === "open"
-          ? "The training code is open and published."
-          : "The training code is documented but not released.",
+          ? "Training code is the code used to train the model. It is open and published."
+          : "Training code is the code used to train the model. It is documented but not released.",
     href: filterHref({ training_code: model.openness.training_code }),
     tone: "tag-terms",
     missing: model.openness.training_code === "unknown",
   },
   {
     label: `tier:${model.openness.tier}`,
-    explanation: tierDescription(model.openness.tier),
+    explanation: `Tier is a summary of what the release gives back. ${tierDescription(model.openness.tier)}`,
     href: filterHref({ tier: model.openness.tier }),
     tone: "tag-terms",
   },

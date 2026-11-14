@@ -3185,6 +3185,10 @@ html {
   border-color: var(--clay);
 }
 
-.pill-row-missing {
-  opacity: 0.9;
+.pill-row-missing .chip {
+  color: #8f2f22 !important;
+}
+
+.pill-explain .pill-missing-text {
+  color: #8f2f22;
 }

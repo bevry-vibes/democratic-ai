@@ -99,8 +99,8 @@
     "licensing": {
       "definition": "Whether the licence permits commercial use or restricts it.",
       "values": {
-        "commercial-safe": "The licence permits commercial use.",
-        "non-commercial": "The licence restricts use to non-commercial purposes."
+        "commercial-safe": "Licensing describes whether the licence permits commercial use. Commercial use is permitted.",
+        "non-commercial": "Licensing describes whether the licence permits commercial use. Non-commercial use only."
       }
     },
     "license": {
@@ -204,24 +204,24 @@
     "access": {
       "definition": "How the model is accessed: a harness, a hosted API, or a local runtime.",
       "values": {
-        "browser": "In a web browser, usually through WASM or WebGPU.",
-        "node": "In Node or Deno.",
-        "python": "In a Python process.",
-        "llama.cpp": "Through llama.cpp or a compatible server.",
-        "ollama": "Through Ollama.",
-        "mlx": "Through Apple MLX.",
-        "coreml": "Through Apple Core ML.",
-        "litert": "Through Google LiteRT.",
-        "onnx": "Through ONNX Runtime.",
-        "android": "On Android.",
-        "ios": "On iOS.",
-        "hosted": "Through a hosted API.",
-        "webgpu": "In a browser through WebGPU.",
-        "opencode": "Through OpenCode, the open-source coding agent.",
-        "cloudflare": "Through Cloudflare Workers AI.",
-        "openrouter": "Through the OpenRouter API.",
-        "vllm": "Through the vLLM inference server.",
-        "sglang": "Through the SGLang inference server."
+        "browser": "WebAssembly is a browser runtime. This model can run in a browser.",
+        "node": "Node.js is a JavaScript runtime. This model can run in Node.js.",
+        "python": "Python is a programming language runtime. This model can run in Python.",
+        "llama.cpp": "llama.cpp is a local inference runtime. This model can run with llama.cpp.",
+        "ollama": "Ollama is a local model runner. This model can run with Ollama.",
+        "mlx": "MLX is Apple's machine-learning framework. This model can run with MLX.",
+        "coreml": "Core ML is Apple's on-device machine-learning framework. This model can run with Core ML.",
+        "litert": "LiteRT is Google's on-device runtime. This model can run with LiteRT.",
+        "onnx": "ONNX Runtime is a cross-platform inference runtime. This model can run with ONNX Runtime.",
+        "android": "Android is a mobile operating system. This model can run on Android.",
+        "ios": "iOS is Apple's mobile operating system. This model can run on iOS.",
+        "hosted": "Hosted means the model is available through an API rather than run locally.",
+        "webgpu": "WebGPU is a browser API for GPU compute. This model can run through WebGPU.",
+        "opencode": "OpenCode is an open-source coding agent. This model is available through OpenCode.",
+        "cloudflare": "Cloudflare Workers AI is an edge runtime. This model is available through Cloudflare Workers AI.",
+        "openrouter": "OpenRouter is an API that routes requests to hosted models. This model is available through OpenRouter.",
+        "vllm": "vLLM is an inference server for large language models. This model can run with vLLM.",
+        "sglang": "SGLang is an inference server for large language models. This model can run with SGLang."
       }
     }
   }

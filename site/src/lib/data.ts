@@ -415,7 +415,7 @@ export function scorecardAxes(model: CompactModel): Array<{
 export function tierDescription(tier: string): string {
   if (tier === "commons") return "Weights, training data, and training code are open. The licence permits reuse."
   if (tier === "reciprocal") return "Weights and training code are open, and the training data is documented or open. The licence permits reuse."
-  if (tier === "shared") return "The weights are available, but the training data is not open and the licence may restrict reuse. Shared is the floor for an open-weight release with unchecked data."
+  if (tier === "shared") return "The weights are available, but the training data is not open and the licence may restrict reuse."
   if (tier === "closed") return "The weights are not available."
   return "The evidence about the weights is not sufficient to make a determination. Unproven is not the same as closed."
 }
