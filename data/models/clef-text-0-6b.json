@@ -96,6 +96,12 @@
       "status": "build"
     }
   ],
+  "usage": [
+    {
+      "language": "python",
+      "code": "import json, sys, torch\nfrom huggingface_hub import snapshot_download\nfrom safetensors.torch import load_file\nfrom transformers import AutoModelForCausalLM, AutoTokenizer\n\npath = snapshot_download(\"FluidInference/clef-text-0.6b\")\nsys.path.insert(0, path)\nfrom joint_schema_model import ClefModel, JointSchemaHead, collate_records, encode_record\n\ntokenizer = AutoTokenizer.from_pretrained(path)\nbackbone = AutoModelForCausalLM.from_pretrained(path, dtype=torch.float32)\nhead = JointSchemaHead(**json.loads(open(f\"{path}/joint_head_config.json\").read()))\nhead.load_state_dict(load_file(f\"{path}/joint_head.safetensors\"))\nmodel = ClefModel(backbone, head).eval()\n\nrecord = {\"state\": \"Our checkout is down and customers can't pay.\",\n          \"questions\": {\"team\": {\"type\": \"choice\", \"instructions\": \"Which team should handle this?\",\n                                 \"criteria\": {\"billing\": \"Payments\", \"engineering\": \"Bugs or outages\"}},\n                        \"urgency\": {\"type\": \"score\", \"criteria\": [\"Low\", \"Normal\", \"High\", \"Critical\"]}}}\nencoded = encode_record(tokenizer, record)\nwith torch.inference_mode():\n    logits = model(collate_records([encoded], tokenizer.pad_token_id, torch.device(\"cpu\")))[0]\nfor question, question_logits in zip(encoded.questions, logits):\n    print(question.question_id, dict(zip(question.option_ids, question_logits.softmax(-1).tolist())))"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

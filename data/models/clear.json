@@ -74,6 +74,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Clear\n\nlet clear = Clear()\nlet result = try await clear.enhance(path: \"in.wav\", to: \"out.wav\")\nprint(result.realtimeFactor, result.measuredLUFS ?? 0)"
+    },
+    {
+      "language": "swift",
+      "code": "let (result, wav) = try await clear.enhance(bytes: recording)"
+    },
+    {
+      "language": "swift",
+      "code": "let stereo = try await clear.enhance(channels: [left, right], sampleRate: 48_000,\n                                     options: .init(channelMode: .preserve))\nstereo.channels.count                       // 2\nstereo.measuredTruePeakDBFS                 // what the master actually peaks at\nstereo.phaseTimings.modelPredictSec         // where the time went"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

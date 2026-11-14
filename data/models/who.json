@@ -78,6 +78,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Who\n\nlet who = Who()                                        // downloads on first use\nlet result = try await who.diarize(contentsOf: url)\n\nresult.speakerCount        // 3\nfor turn in result.turns {\n    turn.speaker           // 0, 1, 2: numbered in order of first appearance\n    turn.start             // 12.4, seconds from the start\n    turn.end               // 15.9\n}"
+    },
+    {
+      "language": "swift",
+      "code": "let result = try await who.diarize(samples: samples, sampleRate: 48000)"
+    },
+    {
+      "language": "kotlin",
+      "code": "val who = Who(context)                       // downloads on first use\nval result = who.diarize(samples, 16_000.0)\n\nresult.speakerCount                          // 3\nfor (turn in result.turns) {\n    turn.speaker                             // 0, 1, 2: numbered in order of first appearance\n    turn.start                               // 12.4, seconds from the start\n    turn.end                                 // 15.9\n}\nwho.close()"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

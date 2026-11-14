@@ -78,6 +78,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Toxic\n\nlet toxic = Toxic()\nlet result = try await toxic.analyze(comment)\nif result.isToxic { holdForReview(result.content, result.targets) }\nresult.score(.hateful)     // 0...1\nresult.flagged             // the heads at or above their thresholds"
+    },
+    {
+      "language": "kotlin",
+      "code": "import ai.desertant.toxic.Toxic\nimport ai.desertant.toxic.Options\n\nToxic(context).use { toxic ->\n    val result = toxic.analyze(comment)\n    if (result.isToxic) holdForReview(result.content, result.targets)\n}"
+    },
+    {
+      "language": "ts",
+      "code": "import { Toxic } from \"@desert-ant-labs/toxic\";         // browser\n// import { Toxic } from \"@desert-ant-labs/toxic/native\"; // server-side Node\n\nconst toxic = await Toxic.load();\nconst { isToxic, scores, content, targets } = await toxic.analyze(comment);\ntoxic.dispose();"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

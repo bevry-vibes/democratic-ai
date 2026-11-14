@@ -76,6 +76,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Eye\n\nlet eye = Eye()\nlet photo = try await eye.analyze(contentsOf: photoURL)   // or UIImage, NSImage, CGImage, Data\n\nif photo.has(.screenshot) || photo.has(.receipt) { archive(photo) }\nif photo.has(.dog) && !photo.has(.blurry) { keep(photo) }\nif photo.has(.sensitive, .strict) { hide(photo) }\n\nphoto.tags()                      // [.photo, .beach, .people, .smiling, ...], most confident first\nphoto.confidence(.beach)          // 0.93\nphoto.kind                        // .photo, .selfie, .screenshot, .document, ...\nphoto.scores?.aesthetic           // 0.81: better than 81% of photos\nphoto.faces?.first?.has(.eyesClosed)\nphoto.bestCrop(aspect: 1)         // a square thumbnail, in 0...1 of the image\nphoto.rotation                    // 90: turned a quarter turn clockwise, so turn it back\n\nlet groups = Eye.duplicates(in: library, dates: captureTimes)   // [[Int]], best first\nlet keeper = Eye.best(of: burst)"
+    },
+    {
+      "language": "swift",
+      "code": "let pixels = try ImagePixels(width: w, height: h, rgba: bytes)\nlet photo = try await eye.analyze(pixels)"
+    },
+    {
+      "language": "kotlin",
+      "code": "import ai.desertant.eye.Eye\nimport ai.desertant.eye.Tags\n\nEye(context).use { eye ->\n    val photo = eye.analyze(bitmap)            // or analyze(bytes, width, height)\n    if (photo.has(Tags.DOG) && !photo.has(Tags.BLURRY)) keep(photo)\n    val groups = Eye.duplicates(library)\n}"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

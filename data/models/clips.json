@@ -78,6 +78,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Clips\n\nlet clips = Clips()\nlet moments = try await clips.clips(in: sentences)      // [Clip], best first\n\nfor clip in moments {\n    print(clip.text, clip.start, clip.end, clip.score)\n    print(clip.sentenceIDs)                             // which sentences the clip spans\n    print(clip.estimatedDurationSec, clip.percentile)\n}"
+    },
+    {
+      "language": "swift",
+      "code": "let ten = try await clips.clips(in: sentences, limit: 10)   // default is 10\nlet auto = try await clips.clips(in: sentences, limit: nil) // Clips sets the limit from the duration"
+    },
+    {
+      "language": "swift",
+      "code": "let cards = try await titles.cards(for: moments)   // index-aligned with moments"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

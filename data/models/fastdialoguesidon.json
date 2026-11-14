@@ -82,6 +82,16 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/higurashi-ai/FastDialogueSidon && cd FastDialogueSidon\nhf download higurashi-ai/FastDialogueSidon --local-dir weights/\ncd triton && pip install -e .\npython scripts/run.py --bundle ../weights --wav dialogue.wav --output-dir out/   # any length <= 120 s"
+    },
+    {
+      "language": "python",
+      "code": "from fds_triton.runtime import TritonPipeline, load_waveform\npipe = TritonPipeline(\"weights/\")\naudio = pipe.separate(load_waveform(\"dialogue.wav\"))   # [2, samples] @ 24 kHz"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

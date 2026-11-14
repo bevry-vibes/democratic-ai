@@ -78,6 +78,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Emo\n\nlet emo = Emo()\nlet suggestions = try await emo.suggestions(for: \"Pay my bills\")\n// [EmoSuggestion(emoji: \"💰\", confidence: ...), ...]\n\nlet toned = try await emo.suggestions(for: \"go for a run\", limit: 1, skinTone: .medium)\n// 🏃🏽"
+    },
+    {
+      "language": "kotlin",
+      "code": "import ai.desertant.emo.Emo\nimport ai.desertant.emo.EmojiSkinTone\n\nEmo(context).use { emo ->\n    val suggestions = emo.suggestions(\"Pay my bills\")               // List<EmoSuggestion>\n    val toned = emo.suggestions(\"go for a run\", limit = 1, skinTone = EmojiSkinTone.MEDIUM)\n}"
+    },
+    {
+      "language": "ts",
+      "code": "import { Emo } from \"@desert-ant-labs/emo\";           // browser\n// import { Emo } from \"@desert-ant-labs/emo/native\"; // server-side Node\n\nconst emo = await Emo.load();                                // downloads and caches on first use\nconst suggestions = await emo.suggestions(\"Pay my bills\");   // [{ emoji, confidence }, ...]\nemo.dispose();"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

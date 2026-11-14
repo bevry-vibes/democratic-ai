@@ -78,6 +78,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Moderator\n\nlet moderator = Moderator()\nlet result = try await moderator.analyze(contentsOf: photoURL)   // or UIImage, NSImage, CGImage, Data\nif result.isNSFW { blur() }\nprint(result.score)        // 0...1\nprint(result.regions)      // nipples, genitals, buttocks, nude, sexAct"
+    },
+    {
+      "language": "swift",
+      "code": "let pixels = try ImagePixels(width: w, height: h, rgba: bytes)\nlet result = try await moderator.analyze(pixels)"
+    },
+    {
+      "language": "kotlin",
+      "code": "import ai.desertant.moderator.Moderator\nimport ai.desertant.moderator.Options\n\nModerator(context).use { moderator ->\n    val result = moderator.analyze(bitmap)            // or analyze(bytes, width, height)\n    if (result.isNSFW) blur()\n}"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

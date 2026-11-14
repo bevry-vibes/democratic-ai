@@ -78,6 +78,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Gist\n\nlet gist = Gist()\nlet topics = try await gist.classify(\"How to start a podcast with just your iPhone\")\n// [Topic(slug: \"technology\", name: \"Technology & Software\", score: 0.93), ...]"
+    },
+    {
+      "language": "swift",
+      "code": "let all = try await gist.scores(of: text)        // [String: Double], 36 entries\n\nlet posts = titles.map { PostTopics(topics: ..., timestampMillis: ...) }\nlet channel = channelTopics(posts, options: RollupOptions(topN: 5))\n// [ChannelTopic(slug: \"technology\", share: 0.41, postCount: 12), ...]"
+    },
+    {
+      "language": "kotlin",
+      "code": "import ai.desertant.gist.Gist\n\nGist(context).use { gist ->\n    val topics = gist.classify(\"How to start a podcast with just your iPhone\")\n    // List<Topic>: slug, name, score\n    val all = gist.scores(text)                  // Map<String, Double>\n}"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

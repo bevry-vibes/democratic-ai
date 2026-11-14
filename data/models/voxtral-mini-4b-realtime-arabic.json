@@ -80,6 +80,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "bash",
+      "code": "pip install --upgrade vllm \"mistral-common[audio]\"\n\nvllm serve mistralai/Voxtral-Mini-4B-Realtime-Arabic"
+    },
+    {
+      "language": "bash",
+      "code": "pip install --upgrade \"transformers>=5.2.0\" accelerate\npip install --upgrade \"mistral-common[audio]\""
+    },
+    {
+      "language": "python",
+      "code": "import torch\nfrom transformers import VoxtralRealtimeForConditionalGeneration, AutoProcessor\nfrom mistral_common.tokens.tokenizers.audio import Audio\nfrom huggingface_hub import hf_hub_download\n\nrepo_id = \"mistralai/Voxtral-Mini-4B-Realtime-Arabic\"\n\nprocessor = AutoProcessor.from_pretrained(repo_id)\nmodel = VoxtralRealtimeForConditionalGeneration.from_pretrained(\n    repo_id, dtype=torch.bfloat16, device_map=\"auto\"\n)\n\naudio_file = hf_hub_download(\n    repo_id=repo_id,\n    filename=\"assets/bank-take-2.wav\",\n    repo_type=\"model\",\n)\naudio = Audio.from_file(audio_file, strict=False)\naudio.resample(processor.feature_extractor.sampling_rate)\n\ninputs = processor(audio.audio_array, return_tensors=\"pt\")\ninputs = inputs.to(model.device, dtype=model.dtype)\n\noutputs = model.generate(**inputs, do_sample=False)\nprint(processor.batch_decode(outputs, skip_special_tokens=True)[0])"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

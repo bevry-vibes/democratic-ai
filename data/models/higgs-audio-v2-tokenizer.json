@@ -86,6 +86,12 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "bash",
+      "code": "uv pip install \"transformers>=5.3.0\""
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

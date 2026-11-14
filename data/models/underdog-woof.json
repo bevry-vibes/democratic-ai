@@ -74,6 +74,16 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "bash",
+      "code": "pip install numpy\nhf download ConwayResearch/Underdog-Woof --local-dir underdog-woof\ncd underdog-woof\npython -m underdog_woof \"Your order ships on March 3rd. Call 415-555-0199 with questions.\" -o hello.wav\npython -m underdog_woof \"Your order ships on March 3rd. Call 415-555-0199 with questions.\" --voice mira -o mira.wav"
+    },
+    {
+      "language": "python",
+      "code": "from underdog_woof import Woof\n\ntts = Woof(voice=\"mira\")   # \"juno\" (default) or \"mira\"\naudio = tts(\"Hey! Thanks for calling. How can I help you today?\", seed=0)   # float32 mono, 24 kHz\ntts.save(\"hello.wav\", audio)"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

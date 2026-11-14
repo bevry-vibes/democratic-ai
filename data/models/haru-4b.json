@@ -75,6 +75,16 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "bash",
+      "code": "git clone https://github.com/higurashi-ai/Haru && cd Haru\npip install -e ./haru\npython -m haru.server --hf-repo higurashi-ai/Haru-4B"
+    },
+    {
+      "language": "python",
+      "code": "from haru import DuplexSession, HaruModel\nfrom haru.audio import load_audio, prepare_reference\n\nmodel = HaruModel.from_pretrained(\"higurashi-ai/Haru-4B\")\nvoice = prepare_reference(load_audio(\"voice.wav\"))\nsession = DuplexSession(model, system_prompt=card, reference=voice)\n\nframe = session.start()                  # the model's first 133 ms: frame.audio, frame.text\nwhile not frame.done:\n    frame = session.step(user_audio)     # 3200 samples at 24 kHz in, 3200 out"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

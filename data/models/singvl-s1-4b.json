@@ -81,6 +81,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "bash",
+      "code": "cd inference\npython -m pip install -r requirements.txt"
+    },
+    {
+      "language": "python",
+      "code": "from PIL import Image\n\nfrom model import SingVLS1\n\nmodel = SingVLS1(\"..\", device=\"cuda:0\")\n\n# Text\ntext, _ = model.predict(\n    state=\"The color is red. \",\n    questions={\n        \"color\": {\n            \"type\": \"choice\",\n            \"instructions\": \"Which color is named?\",\n            \"criteria\": {\"red\": \"Red\", \"blue\": \"Blue\"},\n        },\n        \"yesno\": {\"type\": \"noul\", \"instructions\": \"Is the named color red?\"},\n        \"redness\": {\n            \"type\": \"score\",\n            \"instructions\": \"How clearly does the text identify the color as red?\",\n            \"criteria\": [\"Not red\", \"Possibly red\", \"Clearly red\"],\n        },\n    },\n)\nprint(text[\"answers\"])\n\n# Images in blue-then-red order. Both state values work.\nquestions = {\n    \"which\": {\n        \"type\": \"choice\",\n        \"instructions\": \"Which image is red?\",\n        \"criteria\": {\"first\": \"The first image\", \"second\": \"The second image\"},\n    }\n}\nwith Image.open(\"examples/blue.png\") as blue, Image.open(\"examples/red.png\") as red:\n    for state in ({}, \"<image>\\n<image>\\n\"):\n        vision, _ = model.predict(state=state, questions=questions, images=[blue, red])\n        print(vision[\"answers\"])"
+    },
+    {
+      "language": "bash",
+      "code": "python serve.py --model .. --port 8173 --image-root ./examples"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

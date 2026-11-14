@@ -78,6 +78,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Ear\n\nlet ear = Ear()                                     // downloads on first use\nlet detection = try await ear.identify(contentsOf: url)\n\ndetection.language      // \"pt\"\ndetection.confidence    // 0.98\ndetection.isReliable    // true\ndetection.candidates    // [LanguagePrediction(language: \"pt\", probability: 0.98), …]"
+    },
+    {
+      "language": "swift",
+      "code": "let detection = try await ear.identify(samples: samples, sampleRate: 44100)"
+    },
+    {
+      "language": "kotlin",
+      "code": "val ear = Ear(context)                         // downloads on first use\nval detection = ear.identify(samples, 16_000.0)\n\ndetection.language      // \"pt\"\ndetection.confidence    // 0.98\ndetection.isReliable    // true\near.close()"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

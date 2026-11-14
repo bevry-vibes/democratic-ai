@@ -80,6 +80,12 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "python",
+      "code": "import numpy as np\nimport torch\nfrom transformers import AutoFeatureExtractor, AutoTokenizer\n\nfrom audio8_asr_infinite.modeling.modeling_audio8_asr_infinite import (\n    Audio8ASRInfiniteForConditionalGeneration,\n    resolve_qwen_language_token_id,\n    resolve_qwen_streaming_special_token_ids,\n)\nfrom audio8_asr_infinite.streaming_inference import simulated_streaming_greedy_decode_batch\n\ncheckpoint = \"Edge0/Audio8-ASR-Infinite\"\ntokenizer = AutoTokenizer.from_pretrained(checkpoint, trust_remote_code=True)\nfeature_extractor = AutoFeatureExtractor.from_pretrained(checkpoint, trust_remote_code=True)\nmodel = Audio8ASRInfiniteForConditionalGeneration.from_pretrained(\n    checkpoint, trust_remote_code=True, torch_dtype=torch.bfloat16\n).eval().cuda()\n\nclass AudioConfig:  # duck-typed: raw_audio_samples_per_token / streaming_n_left_pad_tokens / sampling_rate\n    raw_audio_samples_per_token = 1280   # 80 ms @ 16 kHz\n    streaming_n_left_pad_tokens = 18\n    sampling_rate = 16000\n\nwaveform = np.load(\"sample.npy\", allow_pickle=False).astype(np.float32)  # [-1, 1], 16 kHz mono\nresults = simulated_streaming_greedy_decode_batch(\n    model=model,\n    tokenizer=tokenizer,\n    feature_extractor=feature_extractor,\n    waveforms=[waveform],\n    language_token_ids=[resolve_qwen_language_token_id(tokenizer, \"zh\")],\n    special_ids=resolve_qwen_streaming_special_token_ids(tokenizer),\n    audio_config=AudioConfig(),\n    num_delay_tokens=[480 // 80],\n    right_pad_text_tokens=10,\n    dtype=torch.bfloat16,\n    device=next(model.parameters()).device,\n    max_new_tokens=512,\n)\nprint(results[0][\"final_text\"])"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

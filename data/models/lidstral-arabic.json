@@ -72,6 +72,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "bash",
+      "code": "pip install huggingface_hub\nhf auth login\nhf download mistralai/LIDstral-Arabic --local-dir LIDstral-Arabic"
+    },
+    {
+      "language": "",
+      "code": "cd LIDstral-Arabic\npip install -r requirements.txt"
+    },
+    {
+      "language": "",
+      "code": "python classify.py --text \"ياك نتا بخير؟ آش خبارك مع الخدمة؟ نتمنى تكون الأمور كلها مزيانة من جيهتك.\""
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

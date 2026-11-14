@@ -95,6 +95,12 @@
       "status": "build"
     }
   ],
+  "usage": [
+    {
+      "language": "bash",
+      "code": "hf download inclusionAI/Duo-1.0-causal-base --local-dir weights\nhf download inclusionAI/Duo-1.0-distill --local-dir weights"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

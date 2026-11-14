@@ -93,6 +93,16 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "python",
+      "code": "import soundfile as sf\nimport torch\nfrom transformers import AutoModel, AutoProcessor\n\nmodel_id = \"Edge0/Audio8-TTS-Realistic-Air\"\ndevice = \"cuda\" if torch.cuda.is_available() else \"cpu\"\ndtype = torch.bfloat16 if device == \"cuda\" else torch.float32\n\nprocessor = AutoProcessor.from_pretrained(model_id, trust_remote_code=True)\nmodel = AutoModel.from_pretrained(\n    model_id,\n    trust_remote_code=True,\n    dtype=dtype,\n).eval().to(device)\n\ninputs = processor(\n    text=[\"Welcome to Audio8 TTS. It is wonderful to hear from you.\"],\n    reference_audio=[\"reference.wav\"],\n    reference_text=[\"The exact transcript of the reference recording.\"],\n    return_tensors=\"pt\",\n)\ninputs = {name: value.to(device) for name, value in inputs.items()}\n\nwith torch.inference_mode():\n    output = model.generate(\n        **inputs,\n        max_new_tokens=1024,\n        temperature=0.8,\n        top_p=0.95,\n        top_k=50,\n        do_sample=True,\n        return_dict_in_generate=True,\n    )\n    waveforms, waveform_lengths = model.decode_audio(output.codes)\n\naudio = waveforms[0, : int(waveform_lengths[0])].float().cpu().numpy()\nsf.write(\"output.wav\", audio, model.config.codec_sample_rate)"
+    },
+    {
+      "language": "python",
+      "code": "inputs = processor(\n    text=[\"This utterance does not use a reference voice.\"],\n    return_tensors=\"pt\",\n)"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

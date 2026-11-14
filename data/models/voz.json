@@ -79,6 +79,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Voz\n\nlet voz = try await Voz()\nlet result = try await voz.transcribe(url)\n\nresult.text                     // the transcript\nresult.words.first?.start       // in seconds, 80ms resolution\nresult.realtimeFactor           // how many times faster than realtime"
+    },
+    {
+      "language": "swift",
+      "code": "let result = try await voz.transcribe(samples: samples)"
+    },
+    {
+      "language": "kotlin",
+      "code": "val voz = Voz(context)                       // downloads on first use\nval t = voz.transcribe(samples, 16_000.0)\n\nt.text                    // the transcript\nt.words.first().start     // 80 ms resolution\nvoz.close()"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

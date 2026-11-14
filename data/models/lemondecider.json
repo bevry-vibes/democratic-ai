@@ -84,6 +84,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "bash",
+      "code": "python -m pip install -r requirements.txt"
+    },
+    {
+      "language": "python",
+      "code": "import json\nimport sys\nfrom pathlib import Path\n\ncheckpoint = Path(\"./LemonDecider\").resolve()\nsys.path.insert(0, str(checkpoint / \"code\"))\nfrom serve_312k import LemonDeciderHFService\n\nservice = LemonDeciderHFService(checkpoint, \"cuda:0\", None)\nrequest = {\n    \"state\": \"The customer wants to return a damaged package.\",\n    \"questions\": {\n        \"action\": {\n            \"type\": \"choice\",\n            \"instructions\": \"Choose the next action.\",\n            \"criteria\": {\n                \"refund\": \"Offer a refund\",\n                \"tracking\": \"Check tracking\"\n            }\n        },\n        \"damaged\": {\n            \"type\": \"noul\",\n            \"instructions\": \"Is the package damaged?\"\n        }\n    }\n}\nprint(json.dumps(service.predict(request), indent=2))"
+    },
+    {
+      "language": "bash",
+      "code": "python code/verify_files.py\npython tests/test_chunking.py\nCUDA_VISIBLE_DEVICES=0 python code/infer.py --input examples/request.json\n# Alternatively, start the local HTTP service:\nCUDA_VISIBLE_DEVICES=0 bash code/serve.sh\n# In another terminal:\npython code/smoke_test.py"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

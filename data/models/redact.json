@@ -78,6 +78,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Redact\n\nlet redact = Redact()\nlet result = try await redact.redaction(of: \"Email Anna Kovács at anna@example.hu.\")\n\nprint(result.redactedText)\n// Email [GIVEN_NAME_1] [SURNAME_1] at [EMAIL_1].\n\nfor item in result.items {\n    print(item.label.displayName, item.original, item.placeholder, item.confidence)\n}\n\nlet reply = try await myLLM.rewrite(result.redactedText)\nlet restored = result.restore(reply)"
+    },
+    {
+      "language": "swift",
+      "code": "let options = Options(minimumConfidence: 0.7, labels: [.email, .phone, .creditCard])\nlet contactOnly = try await redact.redaction(of: text, options: options)"
+    },
+    {
+      "language": "kotlin",
+      "code": "import ai.desertant.redact.Redact\n\nRedact(context).use { redact ->\n    val result = redact.redaction(\"Email Anna Kovács at anna@example.hu.\")\n    println(result.redactedText)                 // Email [GIVEN_NAME_1] [SURNAME_1] at [EMAIL_1].\n    val restored = result.restore(llmReply)\n}"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

@@ -76,6 +76,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Shapes\n\nlet shapes = Shapes()\nswitch try await shapes.recognize(points: strokePoints) {\ncase let .rectangle(corners)?: ...                        // [Point], around the perimeter\ncase let .arrow(from, _, _, to, startHead, endHead)?: ... // a cubic shaft and its heads\ncase let .scribble(hull)?: ...                            // delete what the hull covers\ncase let shape?: draw(shape.outline())                    // a polyline for any shape\ncase nil: ...                                             // not a shape: keep the ink\n}"
+    },
+    {
+      "language": "swift",
+      "code": "let shape = try await shapes.recognize(points: strokePoints, options: Options(rotation: .upright))"
+    },
+    {
+      "language": "swift",
+      "code": "canvasView.enableShapeSnapping()"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

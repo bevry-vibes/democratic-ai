@@ -73,6 +73,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Tongue\n\nlet tongue = try Tongue()                      // loads the bundled 2MB model\nlet detection = tongue.detect(\"kann ich das haben\")\n\ndetection.language          // \"de\"\ndetection.reliability       // .confident\ndetection.candidates        // [Prediction(language: \"de\", probability: 0.999…), …]\ndetection.isTooCloseToCall  // false"
+    },
+    {
+      "language": "kotlin",
+      "code": "import ai.desertant.tongue.Tongue\n\n// Android: pass the Context. On a bare JVM pass null: Tongue.bundled(null).\nval tongue = Tongue.bundled(context)\nval detection = tongue.detect(\"kann ich das haben\")\ndetection.language                               // \"de\"\ndetection.isTooCloseToCall                       // false"
+    },
+    {
+      "language": "ts",
+      "code": "import { Tongue } from \"@desert-ant-labs/tongue\";\n\nconst tongue = await Tongue.load();                    // Node: reads the bundled model\nconst detection = tongue.detect(\"kann ich das haben\");\ndetection.language;                                    // \"de\"\ndetection.isTooCloseToCall;                            // false"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

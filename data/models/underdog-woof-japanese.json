@@ -74,6 +74,16 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "bash",
+      "code": "pip install numpy pyopenjtalk-plus\nhf download ConwayResearch/Underdog-Woof-Japanese --local-dir underdog-woof-ja\ncd underdog-woof-ja\npython -m underdog_woof_ja \"ご予約は午後3時15分、お一人様3,500円です。\" hello.wav\npython -m underdog_woof_ja \"ご予約は午後3時15分、お一人様3,500円です。\" mikasa.wav --voice mikasa"
+    },
+    {
+      "language": "python",
+      "code": "from underdog_woof_ja import Woof\n\ntts = Woof(voice=\"mikasa\")   # \"misa\" (default) or \"mikasa\"\naudio = tts(\"おはようございます！今日は一日中雨が降るそうなので、傘を持って行ってくださいね。\", seed=0)   # float32 mono, 24 kHz\ntts.save(\"hello.wav\", audio)"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

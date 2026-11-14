@@ -86,6 +86,16 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "python",
+      "code": "{\n    \"text\": \"Text Recognition:\",\n    \"formula\": \"Formula Recognition:\",\n    \"table\": \"Table Recognition:\"\n}"
+    },
+    {
+      "language": "python",
+      "code": "请按下列JSON格式输出图中信息:\n{\n    \"id_number\": \"\",\n    \"last_name\": \"\",\n    \"first_name\": \"\",\n    \"date_of_birth\": \"\",\n    \"address\": {\n        \"street\": \"\",\n        \"city\": \"\",\n        \"state\": \"\",\n        \"zip_code\": \"\"\n    },\n    \"dates\": {\n        \"issue_date\": \"\",\n        \"expiration_date\": \"\"\n    },\n    \"sex\": \"\"\n}"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

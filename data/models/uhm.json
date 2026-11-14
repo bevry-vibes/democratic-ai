@@ -78,6 +78,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Uhm\n\nlet uhm = Uhm()\nlet result = try await uhm.analyze(audioPath: \"interview.m4a\")\n\nfor filler in result.fillers {\n    print(filler.start, filler.end, filler.confidence)   // seconds, seconds, 0...1\n}\nresult.audioDuration\nresult.phaseTimings.inferenceSec                         // seconds spent running the model"
+    },
+    {
+      "language": "swift",
+      "code": "let options = Uhm.Options(bias: .precision, minDurationSec: 0.08)\nlet result = try await uhm.analyze(audioPath: \"interview.m4a\", options: options)\n\nresult.fillers.first?.type      // .uh, .um, .hmm, .and, .other"
+    },
+    {
+      "language": "swift",
+      "code": "let result = try await uhm.analyze(audioPath: path) { fraction in\n    print(\"\\(Int(fraction * 100))%\")\n}"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

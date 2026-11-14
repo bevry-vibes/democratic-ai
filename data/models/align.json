@@ -81,6 +81,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Align\n\nlet align = Align()\nguard try await align.isSupported(languageCode: \"en\") else { return words }\nlet fixed = try await align.refine(words, audio: samples, sampleRate: 16_000, languageCode: \"en\")"
+    },
+    {
+      "language": "swift",
+      "code": "import Align\n\nlet refiner = StreamingRefiner(locale: locale)\n\ntry await analyzer.start(inputSequence: inputs.recordingAudio(for: refiner))\n\nfor try await result in transcriber.results.refiningTimestamps(with: refiner) {\n    result.text     // corrected word-level audioTimeRange attributes\n    result.words    // [WordTiming]: text, start, end, refined\n}"
+    },
+    {
+      "language": "swift",
+      "code": "let input = try await refiner.analyzerInput(buffer)   // buffers the audio, returns Apple's input"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

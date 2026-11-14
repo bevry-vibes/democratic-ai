@@ -78,6 +78,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Title\n\nlet titles = try await Titles(directory: modelFolder)\nlet card = try await titles.describe(text)\n\ncard.title          // \"Filming a two-person podcast on iPhone\"\ncard.description    // one or two sentences\ncard.isEmpty        // true when the model returned neither"
+    },
+    {
+      "language": "swift",
+      "code": "let titles = try await Titles(directory: modelFolder, maxTokens: 96)"
+    },
+    {
+      "language": "swift",
+      "code": "let cards = try await titles.cards(for: moments)   // index-aligned with moments\nlet card = try await titles.card(for: moments[0])"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

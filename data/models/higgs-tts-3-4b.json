@@ -79,6 +79,20 @@
     "checked_at": "2026-11-14"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "bash",
+      "code": "docker pull lmsysorg/sglang-omni:dev\ndocker run -it --gpus all --shm-size 32g --ipc host --network host --privileged \\\n  lmsysorg/sglang-omni:dev /bin/zsh\n\ngit clone git@github.com:sgl-project/sglang-omni.git && cd sglang-omni\nuv venv .venv -p 3.12 && source .venv/bin/activate\nuv pip install -v -e ."
+    },
+    {
+      "language": "bash",
+      "code": "export HF_TOKEN=hf_xxxxxxxxxxxxxxxx\nhf download bosonai/higgs-tts-3-4b\n\nsgl-omni serve \\\n  --model-path bosonai/higgs-tts-3-4b \\\n  --port 8000"
+    },
+    {
+      "language": "bash",
+      "code": "curl -X POST http://localhost:8000/v1/audio/speech \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"input\": \"Hello, how are you?\"}' \\\n  --output output.wav"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

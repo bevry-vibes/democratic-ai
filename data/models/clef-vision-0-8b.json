@@ -102,6 +102,12 @@
       "status": "build"
     }
   ],
+  "usage": [
+    {
+      "language": "python",
+      "code": "import sys\n\nimport torch\nfrom huggingface_hub import snapshot_download\nfrom PIL import Image\n\npath = snapshot_download(\"FluidInference/clef-vision-0.8b\")\nsys.path.insert(0, path)\nfrom joint_schema_model import collate_records, encode_record, load_release_model\n\nmodel, processor = load_release_model(path, device=\"cuda\")\n\nrecord = {\n    \"state\": {\"task\": \"Check the camera frame.\"},\n    \"images\": [Image.open(\"frame.jpg\").convert(\"RGB\")],\n    # The student was trained at this image size; use the same on inference.\n    \"media_kwargs\": {\"size\": {\"shortest_edge\": 16384, \"longest_edge\": 200704}},\n    \"questions\": {\n        \"person\": {\"type\": \"noul\", \"instructions\": \"Is there a person in the image?\"},\n        \"scene\": {\n            \"type\": \"choice\",\n            \"instructions\": \"Where was this taken?\",\n            \"criteria\": {\"indoor\": \"Inside a building.\", \"outdoor\": \"Outside.\"},\n        },\n    },\n}\n\nencoded = encode_record(processor.tokenizer, record, processor=processor)\nbatch = collate_records([encoded], processor.tokenizer.pad_token_id, torch.device(\"cuda\"))\nwith torch.inference_mode():\n    logits = model(batch)[0]\n\nfor question, question_logits in zip(encoded.questions, logits):\n    probabilities = question_logits.float().softmax(-1).tolist()\n    print(question.question_id, dict(zip(question.option_ids, probabilities)))"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",

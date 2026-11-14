@@ -95,6 +95,21 @@ function stripCard(value: string): string {
     .trim()
 }
 
+async function cardUsage(id: string): Promise<Array<{ language: string; code: string }>> {
+  const path = `data/raw/hf/model-cards/${slug(id)}/${isoDate()}.md`
+  try {
+    const text = await Deno.readTextFile(path)
+    const section = text.match(/^##\s+Usage\b([\s\S]*?)(?=^##\s+)/im)
+    if (!section) return []
+    return [...section[1].matchAll(/```([^\n`]*)\n([\s\S]*?)```/g)]
+      .map((block) => ({ language: (block[1] ?? "").trim(), code: (block[2] ?? "").trim() }))
+      .filter((block) => block.code.length > 0 && block.code.length <= 4000)
+      .slice(0, 3)
+  } catch {
+    return []
+  }
+}
+
 async function cardExcerpt(id: string): Promise<string> {
   const path = `data/raw/hf/model-cards/${slug(id)}/${isoDate()}.md`
   try {
@@ -393,6 +408,7 @@ async function main(): Promise<void> {
     const tags = root.tags.map((tag) => tag.tag)
     const md = modelsDevByKey.get(norm(sourceId))
     const link = links.models[sourceId] ?? {}
+    const usage = link.providers?.length ? [] : await cardUsage(sourceId)
     const card = md?.description ? "" : await cardExcerpt(sourceId)
     const summary = md?.description ? md.description.slice(0, 400) : seedSummaries[sourceId] ?? card
     const enriched = new Set(tags)
@@ -506,6 +522,7 @@ async function main(): Promise<void> {
       },
       syndication: synd ?? { score: 0, points: 0, band: "self-only", sources: [] },
       builds: buildEntries,
+      ...(usage.length > 0 ? { usage } : {}),
       sources: [
         {
           kind: "hugging-face",
