@@ -172,7 +172,7 @@ A model page is created only when:
 
 A build attaches to the base model as a `builds` entry with its runtime, quantization, size, and link. A probe (`status:probe`) is not a product release and never gets a page.
 
-The first pull shows why this matters: 314 of 664 Hugging Face items are builds and 29 are probes. They are not 343 models. They are packaging around a smaller set of roots.
+The first pull shows why this matters: 315 of 664 Hugging Face items are builds and 29 are probes. They are not 344 models. They are packaging around a smaller set of roots.
 
 No card, no announcement, and no benchmark means no page. The catalogue is not a mirror of the Hugging Face firehose.
 

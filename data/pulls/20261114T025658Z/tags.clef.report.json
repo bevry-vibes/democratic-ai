@@ -1,17 +1,17 @@
 {
   "pull_id": "20261114T025658Z",
-  "generated_at": "2026-11-14T04:09:02.807Z",
+  "generated_at": "2026-11-14T04:11:13.053Z",
   "model": "clef-flash",
   "prompt_version": 1,
   "threshold": 0.8,
-  "review_models": 26,
-  "attempted": 26,
+  "review_models": 25,
+  "attempted": 25,
   "accepted": 12,
-  "still_review": 14,
+  "still_review": 13,
   "calls": 0,
-  "reused": 26,
-  "input_tokens": 104808,
-  "estimated_cost_usd": 0.025154,
+  "reused": 25,
+  "input_tokens": 100701,
+  "estimated_cost_usd": 0.024168,
   "failures": [],
   "models": {
     "total": 664,
@@ -27,7 +27,7 @@
     "model": {
       "items": 664,
       "tagged": 598,
-      "review": 14
+      "review": 13
     },
     "dataset": {
       "items": 50,
@@ -56,7 +56,7 @@
     "source:x": 869,
     "source:hf-model": 664,
     "context:commercial-safe": 352,
-    "status:build": 314,
+    "status:build": 315,
     "domain:vision": 302,
     "domain:language": 291,
     "license:other": 273,
@@ -66,7 +66,7 @@
     "modality:image": 189,
     "domain:tooling": 188,
     "domain:speech": 186,
-    "relation:quantized": 181,
+    "relation:quantized": 182,
     "domain:multimodal": 177,
     "context:agents": 165,
     "relation:conversion": 158,

@@ -770,21 +770,21 @@ First results on the 2026-11-14 pull:
 | Metric | Value |
 | --- | --- |
 | Hugging Face model items | 664 |
-| Builds (`status:build`) | 314 |
+| Builds (`status:build`) | 315 |
 | Probes (`status:probe`) | 29 |
 | Models with a task tag from the rules | 598 |
-| Models sent to Clef after build and probe exclusion | 26 |
+| Models sent to Clef after build and probe exclusion | 25 |
 | Tasks accepted by Clef at 0.8 | 12 models |
-| Real models still in review | 14 |
+| Real models still in review | 13 |
 | Clef input cost so far | about USD 0.08 |
 
 A model in review keeps its licence, runtime, family, and org tags. It has no task tag, so it reads `unmeasured` for a task. It is not guessed.
 
-The 14 remaining models are real releases, not builds: XiaomiMiMo MiMo-Audio (3), inclusionAI Duo (3), SingVL, Ming-3.0-audio-flash, Realtime-Venus, AI-Transparency, Ming-UniAudio (2), Higurashi FastDialogueSidon, and unsloth sam3.1.
+The 13 remaining models are real releases, not builds: XiaomiMiMo MiMo-Audio (3), inclusionAI Duo (3), Ming-3.0-audio-flash, Realtime-Venus, AI-Transparency, Ming-UniAudio (2), Higurashi FastDialogueSidon, and unsloth sam3.1.
 
 The link resolver (`scripts/links/`) joined 149 models on the first run: 136 have a models.dev entry and 79 have an agent-detect entry. It strips build suffixes, so a GGUF, MLX, or CoreML build inherits its base model's links. Every model page shows the links when they exist.
 
-The build/probe distinction answers the “why build these?” question. 343 of 664 items are packaging or probes. They are not separate models, and they do not get separate pages. They attach to their base model as build entries. The catalogue records roots and notable derivatives, not the Hugging Face firehose.
+The build/probe distinction answers the “why build these?” question. 344 of 664 items are packaging or probes. They are not separate models, and they do not get separate pages. They attach to their base model as build entries. The catalogue records roots and notable derivatives, not the Hugging Face firehose.
 
 ### 11. CI/CD
 

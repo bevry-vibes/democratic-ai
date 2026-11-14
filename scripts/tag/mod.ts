@@ -245,12 +245,13 @@ function tagItem(item: PullItem, rules: TagRuleFile, orgMap: Map<string, string>
   if (item.kind === "model") {
     applyList(tags, title, rules.title_tasks, 0.7, 0.8, "title", "title")
 
+    const markerTitle = title.replaceAll("_", "-")
     for (const [tag, markers] of Object.entries(rules.build_markers)) {
-      const marker = markers.find((value) => title.includes(value))
+      const marker = markers.find((value) => markerTitle.includes(value))
       if (marker) tags.add(tag, 0.95, "title", `build-marker:${marker}`)
     }
     for (const [tag, markers] of Object.entries(rules.relation_markers)) {
-      const marker = markers.find((value) => title.includes(value))
+      const marker = markers.find((value) => markerTitle.includes(value))
       if (marker) tags.add(tag, 0.95, "title", `relation-marker:${marker}`)
     }
     if (title.includes("-server")) tags.add("domain:tooling", 0.8, "title", "title:server")

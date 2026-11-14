@@ -1,11 +1,11 @@
 {
   "pull_id": "20261114T025658Z",
-  "generated_at": "2026-11-14T04:09:01.223Z",
+  "generated_at": "2026-11-14T04:11:11.447Z",
   "generated_on": "2026-11-14",
   "vocabulary_status": "proposed",
   "items": 3932,
   "tagged_items": 3745,
-  "needs_review": 26,
+  "needs_review": 25,
   "by_kind": {
     "article": {
       "items": 66,
@@ -15,7 +15,7 @@
     "model": {
       "items": 664,
       "tagged": 664,
-      "review": 26
+      "review": 25
     },
     "dataset": {
       "items": 50,
@@ -44,7 +44,7 @@
     "source:x": 869,
     "source:hf-model": 664,
     "context:commercial-safe": 352,
-    "status:build": 314,
+    "status:build": 315,
     "domain:vision": 296,
     "domain:language": 289,
     "license:other": 273,
@@ -54,7 +54,7 @@
     "domain:tooling": 188,
     "domain:speech": 183,
     "modality:image": 183,
-    "relation:quantized": 181,
+    "relation:quantized": 182,
     "domain:multimodal": 177,
     "context:agents": 165,
     "relation:conversion": 158,
@@ -244,12 +244,6 @@
       "kind": "model",
       "title": "inclusionAI/Duo-1.0-causal-base",
       "url": "https://huggingface.co/inclusionAI/Duo-1.0-causal-base",
-      "reason": "model has no task tag"
-    },
-    {
-      "kind": "model",
-      "title": "inclusionAI/SingVL_S1_4B_GGUF",
-      "url": "https://huggingface.co/inclusionAI/SingVL_S1_4B_GGUF",
       "reason": "model has no task tag"
     },
     {
