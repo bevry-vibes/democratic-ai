@@ -9,9 +9,30 @@ This repository tracks democratic AI models and discoveries. It helps you answer
 ## What this repository gives you
 
 - A catalogue of models, organised by reciprocity tier and by use context.
+- Use-case pages that start from a job and its constraints, not from a model name.
 - A record of datasets, runtimes, evaluations, and tools that keep AI accountable.
 - A journal of releases, licence changes, and discoveries.
 - A JSON API and an RSS feed for your own projects.
+
+## Start with the job
+
+The fastest way to use the catalogue is to start with what you need to do.
+
+- **Translate Indonesian and English** without losing names, terms, or formatting.
+- **Transcribe a recording** offline, with timestamps, on a laptop.
+- **Render speech on a device** for a local-first learning app.
+- **Tag content in the browser** in Indonesian and English, without a server call.
+- **Generate a report from notes** with a source link for every claim.
+- **Write code with an agent** that calls tools reliably.
+
+Each use case records the constraints that matter: language, direction, runtime, memory, licence, cost, latency, privacy, and offline operation. The result is a verdict, not a leaderboard:
+
+- **Recommended** — the evidence supports this model for the stated constraints.
+- **Viable** — it works, with trade-offs.
+- **Disqualified** — it does not fit, and the reason is recorded.
+- **Unproven** — the evidence is not there yet.
+
+The first release adds a **Find** view that filters by these constraints. Every result shows its reasons and its sources.
 
 ## The reciprocity tiers
 
@@ -51,6 +72,9 @@ The catalogue will publish as JSON, with a stable schema and a versioned API.
 GET /api/v1/index.json
 GET /api/v1/models/<id>.json
 GET /api/v1/organizations/<id>.json
+GET /api/v1/use-cases.json
+GET /api/v1/use-cases/<id>.json
+GET /api/v1/fits.json
 GET /api/v1/categories.json
 GET /api/v1/journal.json
 GET /feed.xml

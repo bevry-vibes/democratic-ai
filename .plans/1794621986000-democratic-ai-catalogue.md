@@ -19,6 +19,8 @@ The catalogue therefore records four dimensions separately:
 3. **Lineage** — the base model and the relation, so a re-licence is visible.
 4. **Conduct** — whether a provider trains on user data, using the `agent-detect` vocabulary.
 
+Fit is the second axis. A use case plus a set of constraints yields a verdict with reasons and evidence. The `translation-comparison-en-id` work is the model: direction, latency class, provider, quantization, prompt, test set, and the failure that matters. The catalogue generalises that method instead of inventing a new score.
+
 The site is an Astro static build on Cloudflare Workers at `democratic-ai.bevry.workers.dev`. It is editorial and warm, not a technical dashboard. The home page renders `README.md` directly, and the generated blocks in both are produced from `data/`, so the two cannot drift. CI runs the generator in check mode and fails on a difference.
 
 A weekly GitHub Actions job fetches releases and metadata, runs a **permitted** agent to propose assessments and a journal draft, and opens a pull request. A person reviews the evidence and merges. Deployment happens on merge. The job gates itself first with `agent-detect check-reciprocal`, so the repository's own maintenance obeys the policy it documents.
@@ -149,16 +151,44 @@ The table already demonstrates the main finding: **most “open” releases are 
 
 ### Existing evidence in the consumer repositories
 
-Two repositories already hold verified evidence. The first import must use them instead of starting from zero.
+Four repositories already hold verified evidence. The first import must use them instead of starting from zero.
 
 - **`agent-detect`** (`src/lib/rules.zig`) has per-model `openness`, `license`, `open_training`, `closed_training`, `sources`, and `variations`, plus per-provider training conduct. Its `NOASSERTION` convention means “checked, inconclusive”, which is the right model for this catalogue too. It covers many text models and the provider side.
 - **`tts-comparison`** (`FINDINGS.md`, `auditions/`, `engines/`) has verified speech results: Kokoro 82M (Apache-2.0), Piper (MIT/GPL family), Chatterbox (MIT), Magpie (NVIDIA Open Model License), Higgs Audio v3 (non-commercial), Breeze TTS 2, VibeVoice, Voxtral (CC BY-NC), and the Apple-Silicon feasibility notes. This is the seed for the `speech` domain and the first consumer query.
+- **`translation-comparison-en-id`** (`docs/model-survey.md`, `docs/recommendation.json`, `docs/recommendation-history.md`, `results/`) is the strongest prior art for use-case fit. It measures Indonesian↔English translation across specialised NMT models, local LLMs, and hosted providers. It records quality (chrF, BLEU, COMET, MetricX), direction, latency, cost, licence, deployability, masked-name survival, and availability. Its `recommendation.json` holds `primary`, `alternatives`, `disqualified`, and `caveats`; its history is a decision log. Its evaluation rules are the source of the doctrine in DESIGN.md.
+- **`pati-website`** and **`pati-reports`** are the live use cases. `pati-website` selected Qwen-MT, then a Qwen chat model, then DeepSeek for translation, and it uses on-device Desert Ant Gist for tagging. `pati-reports` generates Indonesian student reports from teacher notes with DeepSeek, and evaluates a Clef/Clairic cascade for association and marking. Both show the real constraints: Cloudflare Workers limits, browser WASM, a five-minute cron budget, provider rate limits, retirement risk, child-data privacy, and a human review step.
 
 The import shape is a one-way conversion, not a shared database:
 
 1. `agent-detect` model rules → `data/models/*.json` + `data/sources/*.json`.
 2. `tts-comparison` findings → speech model records with `contexts: ["on-device"]` and `domains: ["speech"]`.
-3. Conflicts stay visible with both sources. The importer never overwrites a newer assessment.
+3. `translation-comparison-en-id` results and recommendation → `data/evaluations/*.json` + `data/recommendations/translation-id-en.json`.
+4. `pati-*` plans and field reports → use-case constraints, caveats, and field evidence.
+5. Conflicts stay visible with both sources. The importer never overwrites a newer assessment.
+
+### What the Pati work teaches about selection
+
+The Pati plans show a repeatable loop:
+
+1. Name the job and the hard constraints.
+2. Measure the candidates on that job, not on a generic leaderboard.
+3. Record the decision, the alternatives, the disqualified models, and the caveats.
+4. Pin the choice in the product.
+5. Watch for retirement, price changes, and rate limits.
+6. Keep the human review step for high-stakes output.
+
+The concrete cases:
+
+| Use case | Hard constraints | What decided it | Evidence |
+| --- | --- | --- | --- |
+| Indonesian ↔ English translation | Cloudflare Workers, five-minute cron, name preservation, commercial-safe licence, trivial cost | Quality plus 10/10 masked-name survival plus a fit to the cron budget | `translation-comparison-en-id` results and `recommendation.json` |
+| On-device topic tagging | Browser, 101 languages, about 74 MB, free up to 100k monthly devices | On-device privacy and multilingual coverage, not raw size | Desert Ant Gist evaluation |
+| Student report generation | Indonesian output, cite teacher notes, never invent evidence, child-data privacy | Evidence grounding and a review step, not prose quality alone | `pati-reports` fixtures and field use |
+| Association and marking | Calibrated confidence, multi-label behaviour, Indonesian notes | F1 against the single prompt, token cost, and overconfidence | Clef/Clairic fixture run |
+| Speech transcription | Offline, accuracy on real meetings, laptop runtime | Word error rate plus speed plus runtime fit | `tts-comparison` and the audition notes |
+| Coding agent | Tool-call accuracy, local memory, licence | Tool-call reliability and on-device fit | `agent-detect` rule work |
+
+This table is the argument for the `use-cases`, `evaluations`, `recommendations`, and `fits` model in section 3. The catalogue does not invent a new selection method. It generalises the one the owner already uses.
 
 ### Fetching options
 
@@ -239,7 +269,147 @@ The README presents the tiers first, because they are the distinctive idea, then
 
 This keeps the README readable. The site exposes the full facet set as filters.
 
-### 3. Data model
+### 3. Use-case fit and selection
+
+This is the core of the product, not a side filter. The Pati work shows the shape: a use case, a set of hard constraints, a measured comparison, a recommendation with alternatives and caveats, and a decision log.
+
+#### Use-case record
+
+```json
+{
+  "$schema": "../../schemas/use-case.schema.json",
+  "schema_version": 1,
+  "id": "translation-id-en",
+  "name": "Indonesian ↔ English translation",
+  "summary": "Translate school content between Indonesian and English while preserving names, terms, and formatting.",
+  "task": "translation",
+  "directions": ["id->en", "en->id"],
+  "requirements": {
+    "languages": ["id", "en"],
+    "modalities": ["text"],
+    "runtime": ["cloudflare-workers", "local"],
+    "license_class": ["permissive", "reciprocal"],
+    "privacy": "no-training-on-content",
+    "latency": "batch",
+    "offline": false,
+    "structured_output": false
+  },
+  "success_criteria": [
+    "Masked names survive 10/10 in both directions",
+    "Quality stays at or above the previous primary",
+    "A 300-segment entry fits a five-minute cron budget"
+  ],
+  "evaluations": ["eval-translation-id-en-deepseek-v4-flash-v2"],
+  "recommendation": "rec-translation-id-en",
+  "sources": ["translation-comparison-en-id", "pati-website"],
+  "updated_at": "2026-11-14"
+}
+```
+
+#### Evaluation record
+
+One measured run, with the setup that makes it reproducible:
+
+```json
+{
+  "schema_version": 1,
+  "id": "eval-translation-id-en-deepseek-v4-flash-v2",
+  "use_case": "translation-id-en",
+  "model": "deepseek-v4-flash",
+  "direction": "id->en",
+  "setup": {
+    "provider": "DeepSeek official",
+    "runtime": "hosted",
+    "quantization": null,
+    "reasoning": "disabled",
+    "prompt": "engine-preserve",
+    "test_set": "translation-comparison testset-v2",
+    "segments": 78,
+    "temperature": 0
+  },
+  "metrics": {
+    "chrf": 77.10,
+    "seconds_per_segment": 0.8,
+    "cost_usd_per_million_input": 0.15,
+    "cost_usd_per_million_output": 0.60
+  },
+  "verdict": "recommended",
+  "caveats": [],
+  "source": "https://github.com/bevry-vibes/translation-comparison-en-id",
+  "measured_at": "2026-09-30"
+}
+```
+
+#### Recommendation record
+
+The current decision, not a score:
+
+```json
+{
+  "schema_version": 1,
+  "id": "rec-translation-id-en",
+  "use_case": "translation-id-en",
+  "summary": "DeepSeek V4 Flash is the primary: the best bracket-verified quality that fits the cron budget.",
+  "primary": {
+    "model": "deepseek-v4-flash",
+    "why": ["Best bracket-verified quality", "Fits the cron budget", "Trivial cost per entry"]
+  },
+  "alternatives": [
+    {
+      "model": "qwen3-235b-a22b-2507",
+      "role": "cost pick",
+      "why": "Cheapest safe model at 1.4–1.6 seconds per segment"
+    }
+  ],
+  "disqualified": [
+    {
+      "model": "qwen-mt-turbo",
+      "why": "Retires 2026-10-10, with non-raisable rate limits"
+    }
+  ],
+  "caveats": [
+    "DeepSeek API rate limits are unproven under production traffic"
+  ],
+  "evidence": ["eval-translation-id-en-deepseek-v4-flash-v2"],
+  "updated_at": "2026-11-14"
+}
+```
+
+#### Query semantics
+
+The “find” page and the JSON API use the same predicate set over the generated `fit` index:
+
+- task and direction;
+- language or language pair;
+- input and output modality;
+- runtime: browser, Cloudflare Workers, Node, Python, llama.cpp, Ollama, MLX, Core ML, Android, or iOS;
+- hardware: CPU, Apple Silicon, CUDA, mobile, or server;
+- memory budget;
+- offline or local-only operation;
+- licence class: commercial-safe, reciprocal, or non-commercial;
+- cost ceiling: free, free-tier, or paid;
+- latency class: interactive, batch, or a cron budget;
+- structured output, tool calling, and context length;
+- privacy: zero-training, local-only, or no child-data transfer.
+
+Each result is a model with a verdict and reasons. The page groups results by verdict — recommended, viable, disqualified, and unproven — instead of hiding the failures. A disqualified result is useful: it says why a popular model does not fit.
+
+#### Fit is not one score
+
+Do not compute a numeric score across quality, cost, licence, and latency. The weights belong to the consumer, not the catalogue. The catalogue provides the facts and a verdict for a stated use case; the consumer sets the priorities.
+
+#### Reuse of existing evidence
+
+`translation-comparison-en-id` already has the data for the first use case. The import is a mapping, not a re-run:
+
+- its `results/*.json` → evaluation records, with the run label, direction, test set, metrics, and per-segment samples;
+- its `docs/recommendation.json` → a recommendation record;
+- its `docs/recommendation-history.md` → journal entries;
+- its evaluation rules → the doctrine in DESIGN.md.
+
+Do not re-run a benchmark the source already ran. Add a new evaluation only when the model, prompt, provider, quantization, or test set changes.
+
+### 4. Data model
 
 The data model is a set of JSON records with a JSON Schema per entity kind. The model record is the most important.
 
@@ -256,6 +426,12 @@ The data model is a set of JSON records with a JSON Schema per entity kind. The 
   "domains": ["language"],
   "contexts": ["reproducible"],
   "modality": { "input": ["text"], "output": ["text"] },
+  "capabilities": {
+    "tasks": [
+      { "task": "reasoning", "strength": "capable", "evidence": ["hf-olmo-3-1-32b-think"] }
+    ],
+    "languages": ["en"]
+  },
   "license": {
     "id": "Apache-2.0",
     "class": "permissive",
@@ -276,7 +452,7 @@ The data model is a set of JSON records with a JSON Schema per entity kind. The 
       "license_inherited": false
     }
   ],
-  "size": { "params_b": 32 },
+  "footprint": { "params_b": 32 },
   "access": {
     "hugging_face": "allenai/Olmo-3.1-32B-Think",
     "github": "allenai/OLMo-core",
@@ -340,7 +516,7 @@ Schema rules:
 - `unknown` is a valid enum value where evidence is missing.
 - `NOASSERTION` is reserved for the `agent-detect` conduct fields, where it means “checked, inconclusive”.
 
-### 4. Repository layout
+### 5. Repository layout
 
 ```text
 README.md                     end-user overview and generated catalogue
@@ -354,13 +530,15 @@ data/
   organizations/<id>.json
   datasets/<id>.json
   tools/<id>.json
-  evaluations/<id>.json
+  use-cases/<id>.json         a job, its constraints, and its success criteria
+  evaluations/<id>.json       one measured model × use-case run
+  recommendations/<id>.json   the current decision for a use case
   discoveries/<id>.json
   sources/<id>.json
   taxonomy.json               domains, contexts, enums, tier method
   feeds.json                  verified feeds and APIs (discovery sources)
-  raw/                        committed billable snapshots (X first)
-  dist/                       generated rollups (committed, check-gated)
+  raw/                        committed snapshots (X, HF, and later billable sources)
+  dist/                       generated rollups, including fits.json
 journal/
   2026-11.md                  canonical, append-only
   index.json                  generated
@@ -393,7 +571,7 @@ site/
   journal.yml
 ```
 
-### 5. Build and sync
+### 6. Build and sync
 
 One command writes every generated artefact. One command checks that the working tree matches.
 
@@ -437,7 +615,7 @@ Trade-off:
 
 The site's detailed pages use richer components than a Markdown table can express. They read the same generated JSON, so they cannot disagree on facts.
 
-### 6. Site architecture and information architecture
+### 7. Site architecture and information architecture
 
 - **Framework:** Astro `7`, static output, Tailwind CSS `4` through the Vite plugin, no client framework.
 - **Deployment:** Wrangler static assets, Worker name `democratic-ai`, canonical host `democratic-ai.bevry.workers.dev`.
@@ -450,8 +628,10 @@ Routes:
 | Route | Purpose |
 | --- | --- |
 | `/` | The README rendered as an editorial page, plus category cards and the latest journal entries. |
+| `/find/` | Start from a task and a set of constraints; return verdicts grouped by fit. |
+| `/use-cases/` and `/use-cases/<id>/` | The job, its constraints, the recommendation, the evidence table, and the decision log. |
 | `/models/` | The full catalogue with filters. |
-| `/models/<id>/` | The fact sheet: tier, licence, openness, lineage, access, sources. |
+| `/models/<id>/` | The fact sheet: tier, licence, openness, lineage, access, capabilities, fit, and sources. |
 | `/organizations/` and `/organizations/<id>/` | The labs and foundations, with their entities and conduct. |
 | `/domains/<id>/` | One editorial domain. |
 | `/journal/` | The chronological record. |
@@ -459,9 +639,11 @@ Routes:
 | `/data/` | The API contract, schema links, and example responses. |
 | `/about/` | The method, the evidence doctrine, and how to contribute a correction. |
 
-The site is entirely static, so there is no search service. The `/models/` page filters the generated index in the browser with a small script. It also supports URL parameters such as `?tier=commons&context=on-device&domain=speech`, so a consumer can share a filtered view.
+The site is entirely static, so there is no search service. The `/find/` and `/models/` pages filter generated indexes in the browser with a small script. They also support URL parameters, so a result is shareable: `/find/?task=translation&language=id&runtime=cloudflare-workers&license=commercial-safe`.
 
-### 7. Design system
+The `/find/` page is the primary entry point for a consumer with a job. It never hides a disqualified model. It groups results by verdict — recommended, viable, disqualified, unproven — and shows the reason and the evidence for each. A consumer can see why a popular model does not fit, which is often more useful than a short list.
+
+### 8. Design system
 
 The visual direction is a field guide, not a dashboard.
 
@@ -493,7 +675,7 @@ Tier badges use a pastel tint of the accent with dark text, so the page stays wa
 **Layout:**
 
 - A 12-column grid with a 72 rem maximum width and generous margins.
-- A slim header with the wordmark and four links: Models, Journal, Data, About.
+- A slim header with the wordmark and five links: Find, Models, Journal, Data, About.
 - A model page leads with the name, the organization, and two badges: the tier and the licence class.
 - The reciprocity ledger is a four-row definition list: weights, data, recipe, access. Each row shows the value and a source link.
 - The lineage chain shows the base and the relation, with the licence change called out.
@@ -507,19 +689,23 @@ Tier badges use a pastel tint of the accent with dark text, so the page stays wa
 - `prefers-reduced-motion` disables transitions.
 - No cookie banner, no analytics, no tracking.
 
-### 8. JSON API contract
+### 9. JSON API contract
 
 The API is a set of static JSON files. The contract is versioned by path.
 
 | Path | Contents |
 | --- | --- |
 | `/api/v1/index.json` | A compact list of every entity: id, name, kind, tier, licence, domains, contexts, updated date. |
-| `/api/v1/models/<id>.json` | The full model record. |
+| `/api/v1/models/<id>.json` | The full model record, including capabilities and footprint. |
 | `/api/v1/organizations/<id>.json` | The full organization record. |
 | `/api/v1/datasets/<id>.json` | The full dataset record. |
 | `/api/v1/tools/<id>.json` | The full tool record. |
-| `/api/v1/evaluations/<id>.json` | The full evaluation record. |
-| `/api/v1/categories.json` | The taxonomy: tiers, domains, contexts, enums. |
+| `/api/v1/use-cases.json` | The use-case index: id, name, task, directions, required constraints, and recommendation. |
+| `/api/v1/use-cases/<id>.json` | The use case, its success criteria, its recommendation, and its evaluations. |
+| `/api/v1/evaluations/<id>.json` | The full evaluation record, including setup, metrics, verdict, and caveats. |
+| `/api/v1/recommendations/<id>.json` | The current recommendation: primary, alternatives, disqualified, caveats, and dates. |
+| `/api/v1/fits.json` | The compact fit index: model, use case, verdict, reasons, constraints, evidence, and date. |
+| `/api/v1/categories.json` | The taxonomy: tiers, domains, contexts, tasks, runtimes, enums. |
 | `/api/v1/journal.json` | The journal index. |
 | `/api/v1/journal/<yyyy-mm>.json` | One month of entries. |
 | `/api/v1/meta.json` | Schema version, generator version, generated date, counts. |
@@ -533,16 +719,21 @@ Rules:
 - `Access-Control-Allow-Origin: *` on `/api/*`.
 - `Cache-Control: public, max-age=300` on the API and the feeds.
 
-Example consumer query, expressed as a filter over the index:
+The static API returns the full `fits.json`; the consumer applies the predicates. A later version may add a Worker query endpoint if the index outgrows a single file. The predicate fields are the same as the query semantics in section 3, so the site and a programmatic consumer return the same result.
+
+Example consumer query, expressed as a filter over `fits.json`:
 
 ```text
-kind=model AND domains includes speech AND contexts includes on-device
-AND tier in [commons, reciprocal] AND license.class in [reciprocal, permissive]
+task=translation AND direction=id->en AND language=id
+AND runtime includes cloudflare-workers AND license.class in [permissive, reciprocal]
+AND verdict in [recommended, viable]
 ```
 
-`tts-comparison` can use exactly this query to replace its hand-maintained shortlist. `agent-detect` can use `license.id`, `openness.weights`, and `conduct` to refresh its model rules, with a human review before the rules change.
+`tts-comparison` can use the same shape for speech, and `translation-comparison-en-id` can compare its live results against the catalogue's recorded fit.
 
-### 9. Fetching pipeline
+`agent-detect` can use `license.id`, `openness.weights`, and `conduct` to refresh its model rules, with a human review before the rules change.
+
+### 10. Fetching pipeline
 
 ```text
 scripts/fetch/
@@ -601,7 +792,7 @@ Rate and safety rules:
 - Never store a full model card. Store the excerpt and the hash.
 - Never print a token. Read it from the documented environment variable and fail with a named error when it is absent.
 
-### 10. CI/CD
+### 11. CI/CD
 
 **`ci.yml`** runs on every pull request and on `main`:
 
@@ -644,7 +835,7 @@ Secrets:
 
 The workflow never runs the agent on a fork. It never pushes to `main`. It never deploys from an agent branch.
 
-### 11. Journal, changelog, and newsletter
+### 12. Journal, changelog, and newsletter
 
 The terms are defined in DESIGN.md. The implementation:
 
@@ -668,11 +859,19 @@ the weights are available, but the reuse terms are conditional.
 Sources: [Edge0 announcement](...) · [Hugging Face card](...)
 ```
 
-### 12. Consumer integrations
+### 13. Consumer integrations
 
 **`tts-comparison`**
 
-The first consumer query is speech, on-device, Apple Silicon, with a clean licence. The catalogue gives it a shortlist and the evidence for each candidate. The integration is a small script in `tts-comparison` that fetches `/api/v1/index.json`, filters, and prints a table. It does not import this repository's code.
+The first consumer query is speech, on-device, Apple Silicon, with a clean licence. The catalogue gives it a shortlist and the evidence for each candidate. The integration is a small script in `tts-comparison` that fetches `/api/v1/fits.json`, filters on `task=speech-synthesis`, `runtime=local`, `hardware=apple-silicon`, and a commercial-safe licence, then prints a table. It does not import this repository's code. `tts-comparison` is also a source: its findings seed the speech evaluations.
+
+**`translation-comparison-en-id`**
+
+It is both a source and a consumer. Its measured runs are imported as evaluation records; its `recommendation.json` seeds the first recommendation; its site stays the live benchmark. The catalogue links to the run and records the verdict, not a duplicate of every sample. When the catalogue's fit index changes, the comparison can check that its live results still support the recorded verdict.
+
+**`pati-website` and `pati-reports`**
+
+These are the first live products. `pati-website` pins the translation recommendation and checks the catalogue when the primary retires or a new candidate appears. `pati-reports` pins the report-generation model and records its generation profile. Neither fetches the catalogue at runtime; both pin a version and review it on a schedule. That keeps a live product stable while the catalogue moves.
 
 **`agent-detect`**
 
@@ -748,25 +947,28 @@ Acceptance: the repository is initialised, the skills are referenced, and the ow
 
 ### Phase 1 — data foundation
 
-- `schemas/` for model, organization, source, discovery, and taxonomy.
+- `schemas/` for model, organization, source, discovery, use-case, evaluation, recommendation, and taxonomy.
 - `scripts/build.ts` and `scripts/check.ts`.
 - `data/taxonomy.json` and `data/watchlist.json`.
-- The first 30 records: 20 text models, 6 speech models, 4 datasets or tools.
-- The `agent-detect` and `tts-comparison` importers.
-- Generated README blocks and `data/dist/`.
-- `CONTRIBUTING.md` with the evidence runbook.
+- The first 30 model records: 20 text models, 6 speech models, 4 datasets or tools.
+- The first 6 use cases: translation, transcription, on-device speech synthesis, on-device tagging, report generation, and coding agents.
+- The first evaluations and recommendations, imported from `translation-comparison-en-id`, `tts-comparison`, and the Pati field work.
+- The `agent-detect`, `tts-comparison`, and `translation-comparison-en-id` importers.
+- Generated README blocks, `data/dist/`, and `data/dist/fits.json`.
+- `CONTRIBUTING.md` with the evidence runbook and the use-case authoring guide.
 
-Acceptance: `deno task check` passes; the README tables match the records; every record has at least one source; the tier is recomputed and equal to the stored tier.
+Acceptance: `deno task check` passes; the README tables match the records; every record has at least one source; the tier is recomputed and equal to the stored tier; every recommended fit cites an evaluation; every disqualified fit states a reason.
 
 ### Phase 2 — site and API
 
 - Astro project, theme tokens, layouts, pages.
+- The `/find/` page and the `/use-cases/` pages, driven by `fits.json`.
 - Generated API files and feeds.
 - Cloudflare Worker and `deno task deploy`.
 - Accessibility and contrast checks.
 - A first deployment to `democratic-ai.bevry.workers.dev`.
 
-Acceptance: the home page renders the README; every model has a page; the JSON API matches the schema; Lighthouse accessibility is at least 95.
+Acceptance: the home page renders the README; every model and use case has a page; the find page returns verdicts grouped by fit and a shareable URL; the JSON API matches the schema; Lighthouse accessibility is at least 95.
 
 ### Phase 3 — fetch and sync
 
@@ -805,6 +1007,10 @@ Acceptance: a consumer answers a real selection question from the API; the expor
 | The X or HF lists become unavailable | Incomplete watchlist | Manual snapshot; the build never depends on them; the owner can refresh them |
 | Agent hallucination in the journal | False public claims | The agent cites source ids; the build rejects unknown ids; a person reviews every pull request |
 | Scope creep across every modality | A shallow catalogue | Phase 1 is text plus speech; add a domain when a consumer needs it |
+| A capability claim is treated as general | A translation score becomes a fake intelligence score | Use-case-specific fits; no global ranking; record the setup, direction, and test set |
+| A recommendation goes stale | A retired model remains the primary | `measured_at` and retirement checks; a fallback in every recommendation; the decision log |
+| A fit becomes advocacy | A recommendation without evidence | Every verdict has reasons, evidence, and a disqualified list; no anonymous scores |
+| The fit index grows too large | A slow page or a large bundle | Keep the index compact per use case; add a Worker query endpoint only when needed |
 | A custom licence is misclassified | Wrong tier | Manual class assignment with a note; the exact licence id stays visible |
 | The generated site and README drift | Two truths | One generator; CI check; the home page renders the README |
 | CI cost and rate limits | Noisy failures | Deterministic fetch; cache; one scheduled run per week; bounded agent prompts |
@@ -825,6 +1031,10 @@ The owner must decide these before Phase 1 ends. Each has a recommendation.
 8. **CI agent.** Which permitted model and key. *Recommendation: OpenCode with DeepSeek V4.1 Flash, gated by `agent-detect check-reciprocal`; change the pinned model only after a policy check.*
 9. **Newsletter delivery.** Site and RSS only, or email through Mailgun. *Recommendation: site and RSS first; email after the journal has a stable voice.*
 10. **Public corrections.** GitHub issues only, or a form. *Recommendation: GitHub issues with a template; add a form only if the audience is not technical.*
+11. **First use-case set.** Which jobs get a full recommendation in Phase 1. *Recommendation: Indonesian translation, speech transcription, on-device speech synthesis, on-device tagging, student report generation, and coding agents. Each has a real consumer and existing evidence.*
+12. **Fit vocabulary.** Use `recommended / viable / disqualified / unproven`, or compute a numeric score. *Recommendation: verdicts with reasons. No numeric score across quality, cost, licence, and latency; the weights belong to the consumer.*
+13. **Evaluation ownership.** Re-run every benchmark in this repository, or import and link to the specialist benchmark. *Recommendation: import and link. Run a new evaluation only when a model, prompt, provider, quantization, or test set changes, or when a consumer has no evidence.*
+14. **Capability evidence standard.** Accept vendor claims, or require a measured run or a field report. *Recommendation: a capability claim is `reported` until a measured run or a field report supports it. The site labels the difference.*
 
 ## Sources
 
@@ -842,3 +1052,10 @@ The owner must decide these before Phase 1 ends. Each has a recommendation.
 - Bevry Cloudflare skill: <https://github.com/bevry-vibes/skills/blob/main/cloudflare.md>.
 - `agent-detect` rules: <https://github.com/bevry-vibes/agent-detect/blob/main/src/lib/rules.zig>.
 - `tts-comparison` findings: <https://github.com/bevry-vibes/tts-comparison/blob/main/FINDINGS.md>.
+- `translation-comparison-en-id`: <https://github.com/bevry-vibes/translation-comparison-en-id>.
+- Translation model survey: <https://github.com/bevry-vibes/translation-comparison-en-id/blob/main/docs/model-survey.md>.
+- Translation recommendation: <https://github.com/bevry-vibes/translation-comparison-en-id/blob/main/docs/recommendation.json>.
+- Translation decision log: <https://github.com/bevry-vibes/translation-comparison-en-id/blob/main/docs/recommendation-history.md>.
+- `pati-website` plans: <https://github.com/bevry-vibes/pati-website/tree/main/.plans>.
+- `pati-reports` plan and design: <https://github.com/bevry-vibes/pati-reports>.
+- Desert Ant Gist: <https://desertant.com/models/gist/>.

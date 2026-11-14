@@ -134,21 +134,79 @@ Contexts are tags for a consumer's constraint. They do not change the tier.
 
 A discovery is a dated change in the field: a release, a paper, a licence change, a benchmark result, or a policy decision. A discovery links to the entities it affects. The journal is the chronological view; a discovery page is the topical view.
 
+## Use cases and fit
+
+The catalogue answers two questions. “What is this model?” and “Is it right for my job?” The second question needs a use case, a set of constraints, and evidence.
+
+Three layers stay separate:
+
+1. **Capability** — what a model can do, with evidence.
+2. **Fit** — how well it does a stated job under stated constraints.
+3. **Reciprocity** — what the release gives back.
+
+A model can be reciprocal and unfit. A model can be capable and extractive. The catalogue records both, and never merges them into one score.
+
+A use case records:
+
+- the job: translate, transcribe, synthesise speech, classify, extract, generate a report, retrieve, write code, or drive an agent;
+- the inputs and outputs: languages, direction, modality, and format;
+- the constraints: runtime, memory, licence, cost, latency, privacy, and offline operation;
+- the success criteria: the quality floor, the failure that matters, and the human review step;
+- the evidence: evaluations, field reports, and sources.
+
+A fit records:
+
+- the model and the use case;
+- the setup: provider, runtime, quantization, prompt, test set, and direction;
+- the measured result;
+- the verdict: `recommended`, `viable`, `disqualified`, or `unproven`;
+- the caveats and the date.
+
+Fit is not a global ranking. It is a judgement for a stated context, with evidence. The same model can be recommended for one use case and disqualified for another.
+
+Examples from the first consumers:
+
+- Indonesian to English translation must preserve names and glossary terms. A model with the best average quality can fail that test.
+- On-device speech synthesis must run on the target phone or laptop. A better cloud voice is not a fit if it needs a network.
+- A student report must cite the teacher's notes. A fluent model that invents evidence is disqualified regardless of style.
+- A coding agent must call tools correctly. A model with strong chat quality can fail the tool-call loop.
+
+## Evaluation doctrine
+
+These rules come from the translation comparison and the Pati work. They apply to every use case.
+
+1. **Measure directions separately.** `id→en` and `en→id` are different tasks. Do not average them into one score.
+2. **Keep latency classes separate.** A hosted round trip and a local inference are not comparable.
+3. **Treat the same weights at different providers as one model.** Record the provider and a parity band. Do not let serving differences look like model differences.
+4. **Quantization is a separate build.** A 2-bit or fp8 build can lose quality. Record the build and do not collapse it with full precision without evidence.
+5. **Record the reasoning mode.** Reasoning changes cost, latency, and output cleanliness. A run with hidden thinking tokens is not comparable to one without.
+6. **Do not rank inside the noise.** A difference below the measured noise floor is not a result.
+7. **Test the failure that matters.** For translation it is masked-name survival. For extraction it is schema validity. For speech it is pronunciation. For an agent it is tool-call accuracy.
+8. **Record the prompt and the test set.** A benchmark without them is not reproducible.
+9. **Record availability and retirement risk.** A model that is best today can disappear next month. A fallback is part of the recommendation.
+10. **Keep the human in the loop for high-stakes output.** A model suggests. A person confirms. The evidence must show which is which.
+
 ## Entity model
 
-The catalogue has six entity kinds:
+The catalogue has nine authored entity kinds and one generated join:
 
 - `model` — a set of weights and its release terms.
 - `organization` — the lab, foundation, or company behind one or more entities.
 - `dataset` — a training or evaluation dataset.
 - `tool` — a runtime, server, harness, or interface.
-- `evaluation` — a benchmark, leaderboard, or audit.
+- `evaluation` — one measured run of a model on a use case.
+- `use-case` — a job, its constraints, and its success criteria.
+- `recommendation` — the current decision for a use case: primary, alternatives, disqualified, and caveats.
 - `discovery` — a dated event or finding.
+- `source` — the evidence behind a claim.
+- `fit` — the generated join of models, use cases, evaluations, and verdicts. It is never hand-edited.
 
 A model record carries these groups:
 
 - identity: `id`, `name`, `aliases`, `organization`, `released`;
 - classification: `domains`, `contexts`, `modality`, `size`;
+- capabilities: `tasks`, `languages`, `tools`, `structured_output`, `context_tokens`, with evidence;
+- footprint: `params_b`, `quantized_sizes`, `memory_gb`, `runtimes`;
 - terms: `license`, `openness`, `conduct`, `lineage`;
 - access: `hugging_face`, `github`, `paper`, `homepage`, `demo`, `api`, `gated`;
 - evidence: `sources`, `verified_at`, `notes`.
@@ -165,6 +223,8 @@ A model record carries these groups:
 8. **Derivation is explicit.** A quantised, distilled, merged, or fine-tuned model names its base and the relation.
 9. **Concepts align with `agent-detect`.** Reuse its enums for openness, licence, and provider training. Do not invent a second vocabulary.
 10. **The source of truth is the record, not the website.** The site is a view. A consumer can use the JSON without the site.
+11. **Fit is contextual, not global.** A verdict names the use case, the constraints, the setup, and the date. There is no universal model ranking.
+12. **Capability evidence and openness evidence are separate.** A benchmark result never raises a tier, and a licence never proves a capability.
 
 ### Canonical format
 
@@ -234,6 +294,8 @@ Direction:
 - **Legible first.** A 65–70 character measure, 18–20 px body text, generous line height, and strong contrast.
 - **Quiet hierarchy.** Serif display headings, a humanist sans for body text, and a monospace face only for ids, JSON, and code.
 - **Facts with sources.** A reciprocity ledger, a lineage chain, and a source list are the core of a model page.
+- **Job first.** A “Find a model” page starts from the task and the constraints, not from the model brand. It returns verdicts and reasons, never a single score.
+- **Evidence over confidence.** A recommendation shows its test set, direction, runtime, provider, and date. A missing measurement is `unproven`, not a guess.
 - **No client framework.** Astro renders static HTML. Small scripts add filters and sorting. The site works without JavaScript.
 - **Accessible.** Semantic landmarks, a skip link, visible focus rings, WCAG AA contrast, and respect for reduced motion.
 - **Light first.** A warm dark theme is a later option, not a launch requirement.
@@ -270,8 +332,10 @@ These are three different things. Do not use the words interchangeably.
 The catalogue serves three consumer classes.
 
 1. **A project selecting a model for a constraint.** For example, `tts-comparison` needs free, offline, Apple-Silicon speech models with clean licences.
-2. **An agent that must state its own reciprocity.** For example, `agent-detect` needs the licence, openness, and provider-training facts for its model rules.
-3. **A person or a journalistic enquiry.** For example, “which labs train on the commons and release only weights?”
+2. **A live product selecting an engine for a job.** For example, `pati-website` needs Indonesian translation that preserves names inside a five-minute cron budget, and `translation-comparison-en-id` measures the candidates.
+3. **A staff tool selecting an inference model.** For example, `pati-reports` needs an Indonesian report generator that cites teacher notes and does not invent evidence.
+4. **An agent that must state its own reciprocity.** For example, `agent-detect` needs the licence, openness, and provider-training facts for its model rules.
+5. **A person or a journalistic enquiry.** For example, “which labs train on the commons and release only weights?”
 
 The machine contract is the versioned JSON API. The human contract is the site and the README. The two must agree, and CI enforces the agreement.
 
@@ -285,3 +349,5 @@ These entries record the design proposed in the current plan. Rename this sectio
 - **2026-11-14** — Facts have one source in `data/`. README generated blocks, the site, and the API are generated from it and checked in CI.
 - **2026-11-14** — The site is an Astro static build on Cloudflare Workers. It is editorial and warm, not a technical dashboard.
 - **2026-11-14** — Automation fetches and drafts; a person reviews and merges. A reciprocal agent gate runs before any agent work.
+- **2026-11-14** — Use-case fit is a first-class axis. Capability, fit, and reciprocity stay separate; a verdict names the use case, the constraints, the setup, and the date.
+- **2026-11-14** — Evaluation follows the lessons of `translation-comparison-en-id`: separate directions, separate latency classes, one model across providers within a parity band, quantization recorded, reasoning mode recorded, and noise floors respected.
