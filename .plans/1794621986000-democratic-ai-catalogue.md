@@ -188,7 +188,7 @@ The concrete cases:
 | Speech transcription | Offline, accuracy on real meetings, laptop runtime | Word error rate plus speed plus runtime fit | `tts-comparison` and the audition notes |
 | Coding agent | Tool-call accuracy, local memory, licence | Tool-call reliability and on-device fit | `agent-detect` rule work |
 
-This table is the argument for the `use-cases`, `evaluations`, `recommendations`, and `fits` model in section 3. The catalogue does not invent a new selection method. It generalises the one the owner already uses.
+This table is the argument for the tag vocabulary and the overlay-report model in sections 2 and 3. The catalogue does not invent a new selection method. It generalises the one the owner already uses.
 
 ### Fetching options
 
@@ -251,164 +251,119 @@ The recommendation is to keep five tiers. Five is enough to be actionable and fe
 
 A model moves between tiers only through a recorded evidence change. The journal entry states the old tier, the new tier, and the source.
 
-### 2. Categories
+### 2. Tags, not categories
 
-Four facets, as DESIGN.md records:
+The catalogue does not assign one category per model. It assigns namespaced tags. A model can be `task:speech-enhancement`, `modality:audio`, `runtime:coreml`, `language:multilingual`, `license:source-available`, and `status:available` at the same time.
 
-- **Tier** — computed: `commons`, `reciprocal`, `shared`, `closed`, `unproven`.
-- **Domain** — editorial: `language`, `code`, `vision`, `speech`, `multimodal`, `embeddings`, `datasets`, `tooling`, `evaluation`, `governance`.
-- **Context** — tags: `on-device`, `edge`, `multilingual`, `low-resource`, `sovereign`, `privacy`, `education`, `accessibility`, `science`, `agents`, `reproducible`.
-- **Use case** — the job: `translation`, `transcription`, `speech-synthesis`, `classification`, `report-generation`, `code`, `retrieval`, `agent-tools`.
+| Namespace | Examples | Source |
+| --- | --- | --- |
+| `domain:` | `domain:speech`, `domain:language`, `domain:vision` | Curated |
+| `task:` | `task:translation`, `task:transcription`, `task:speech-enhancement`, `task:topic-tagging`, `task:pii-redaction` | Curated |
+| `modality:` | `modality:text`, `modality:audio`, `modality:image`, `modality:video` | Source or curated |
+| `runtime:` | `runtime:browser`, `runtime:cloudflare-workers`, `runtime:llama.cpp`, `runtime:mlx`, `runtime:coreml`, `runtime:android`, `runtime:ios` | Source or curated |
+| `language:` | `language:en`, `language:id`, `language:multilingual` | Source or curated |
+| `context:` | `context:on-device`, `context:edge`, `context:offline`, `context:sovereign`, `context:privacy` | Curated |
+| `license:` | `license:apache-2.0`, `license:cc-by-nc-4.0` | Source |
+| `family:` | `family:qwen`, `family:llama`, `family:gemma` | Source or curated |
+| `status:` | `status:beta`, `status:gated`, `status:retired` | Source or curated |
+| `org:` | `org:qwen`, `org:desert-ant-labs` | Source |
+| `source:` | `source:hf-model`, `source:arxiv`, `source:x` | Fetch |
 
-The README presents the tiers first, because they are the distinctive idea, then five consumer-oriented browse sections:
+`data/tags.json` holds the vocabulary. Each tag has a definition and a status: `accepted`, `proposed`, or `retired`. A tag without a definition is a proposal, not a classification.
 
-1. **Runs on your device** — `on-device` or `edge`, any tier.
-2. **Speaks your language** — `multilingual`, `low-resource`, or `sovereign`.
-3. **Works with speech** — `speech`.
-4. **Writes code and drives agents** — `code` or `agents`.
-5. **Builds on the commons** — `datasets`, `tooling`, `evaluation`, `governance`.
+The Desert Ant pattern is the model. Desert Ant names each model for the job it does: Align for word timestamps, Clear for speech enhancement, Clips for clip selection, Gist for topic tagging, Redact for PII redaction. The site groups by medium and availability, not by a rigid taxonomy.
 
-This keeps the README readable. The site exposes the full facet set as filters.
+The catalogue follows that pattern with tags:
 
-### 3. Use-case fit and selection
+- `desert-ant-labs/align` → `task:word-timestamps`, `modality:audio`, `runtime:on-device`, `status:available`.
+- `desert-ant-labs/gist` → `task:topic-tagging`, `modality:text`, `language:multilingual`, `runtime:browser`, `license:source-available`.
 
-This is the core of the product, not a side filter. The Pati work shows the shape: a use case, a set of hard constraints, a measured comparison, a recommendation with alternatives and caveats, and a decision log.
+The model keeps its own name. The tags make it findable across jobs and constraints. A model can gain a tag without a rename, and a tag can be retired without touching the model.
 
-#### Use-case record
+#### When tags are assigned
+
+The fetch stage records source-native metadata and source-native tags only. It does not assign `task:` or `context:` tags. Tagging is a separate pass that runs after a pull, reads the raw data, and proposes tags with evidence.
+
+This order matters. A tag assigned before the data is complete becomes a bias in the next pull. A tag assigned after the pull can be reviewed against the full set.
+
+The tagging pass is human-gated. It may be assisted by an agent, but a person accepts the vocabulary and the evidence. Tag changes are journaled.
+
+### 3. Overlay reports and selection
+
+The core index answers “what exists, and what is it tagged with?” It does not answer “which model is best for my job?” That answer needs a report.
+
+A report is an optional overlay:
+
+- it references model ids;
+- it states the use case, constraints, setup, measurements, verdicts, caveats, and date;
+- it can live in this repository under `reports/`, or in a downstream project;
+- it is displayed when present, and linked when it is hosted elsewhere.
+
+The first report is `translation-id-en`, imported from `translation-comparison-en-id`. Its measured samples stay on the comparison site; the report records the verdicts and links to the evidence.
 
 ```json
 {
-  "$schema": "../../schemas/use-case.schema.json",
   "schema_version": 1,
   "id": "translation-id-en",
   "name": "Indonesian ↔ English translation",
-  "summary": "Translate school content between Indonesian and English while preserving names, terms, and formatting.",
-  "task": "translation",
-  "directions": ["id->en", "en->id"],
-  "requirements": {
+  "constraints": {
     "languages": ["id", "en"],
-    "modalities": ["text"],
+    "directions": ["id->en", "en->id"],
     "runtime": ["cloudflare-workers", "local"],
     "license_class": ["permissive", "reciprocal"],
-    "privacy": "no-training-on-content",
     "latency": "batch",
-    "offline": false,
-    "structured_output": false
+    "privacy": "no-training-on-content"
   },
-  "success_criteria": [
-    "Masked names survive 10/10 in both directions",
-    "Quality stays at or above the previous primary",
-    "A 300-segment entry fits a five-minute cron budget"
-  ],
-  "evaluations": ["eval-translation-id-en-deepseek-v4-flash-v2"],
-  "recommendation": "rec-translation-id-en",
-  "sources": ["translation-comparison-en-id", "pati-website"],
-  "updated_at": "2026-11-14"
-}
-```
-
-#### Evaluation record
-
-One measured run, with the setup that makes it reproducible:
-
-```json
-{
-  "schema_version": 1,
-  "id": "eval-translation-id-en-deepseek-v4-flash-v2",
-  "use_case": "translation-id-en",
-  "model": "deepseek-v4-flash",
-  "direction": "id->en",
-  "setup": {
-    "provider": "DeepSeek official",
-    "runtime": "hosted",
-    "quantization": null,
-    "reasoning": "disabled",
-    "prompt": "engine-preserve",
-    "test_set": "translation-comparison testset-v2",
-    "segments": 78,
-    "temperature": 0
-  },
-  "metrics": {
-    "chrf": 77.10,
-    "seconds_per_segment": 0.8,
-    "cost_usd_per_million_input": 0.15,
-    "cost_usd_per_million_output": 0.60
-  },
-  "verdict": "recommended",
-  "caveats": [],
-  "source": "https://github.com/bevry-vibes/translation-comparison-en-id",
-  "measured_at": "2026-09-30"
-}
-```
-
-#### Recommendation record
-
-The current decision, not a score:
-
-```json
-{
-  "schema_version": 1,
-  "id": "rec-translation-id-en",
-  "use_case": "translation-id-en",
-  "summary": "DeepSeek V4 Flash is the primary: the best bracket-verified quality that fits the cron budget.",
-  "primary": {
-    "model": "deepseek-v4-flash",
-    "why": ["Best bracket-verified quality", "Fits the cron budget", "Trivial cost per entry"]
-  },
-  "alternatives": [
+  "evaluations": [
     {
-      "model": "qwen3-235b-a22b-2507",
-      "role": "cost pick",
-      "why": "Cheapest safe model at 1.4–1.6 seconds per segment"
+      "model": "deepseek-v4-flash",
+      "direction": "id->en",
+      "setup": {
+        "provider": "DeepSeek official",
+        "quantization": null,
+        "reasoning": "disabled",
+        "prompt": "engine-preserve",
+        "test_set": "translation-comparison testset-v2",
+        "segments": 78
+      },
+      "metrics": {
+        "chrf": 77.10,
+        "seconds_per_segment": 0.8,
+        "cost_usd_per_million_input": 0.15,
+        "cost_usd_per_million_output": 0.60
+      },
+      "verdict": "recommended",
+      "caveats": []
     }
   ],
-  "disqualified": [
-    {
-      "model": "qwen-mt-turbo",
-      "why": "Retires 2026-10-10, with non-raisable rate limits"
-    }
-  ],
-  "caveats": [
-    "DeepSeek API rate limits are unproven under production traffic"
-  ],
-  "evidence": ["eval-translation-id-en-deepseek-v4-flash-v2"],
+  "recommendation": {
+    "primary": "deepseek-v4-flash",
+    "alternatives": ["qwen3-235b-a22b-2507"],
+    "disqualified": ["qwen-mt-turbo"],
+    "summary": "The best bracket-verified quality that fits the cron budget.",
+    "caveats": ["DeepSeek rate limits are unproven under production traffic"]
+  },
+  "sources": ["https://github.com/bevry-vibes/translation-comparison-en-id"],
   "updated_at": "2026-11-14"
 }
 ```
 
 #### Query semantics
 
-The “find” page and the JSON API use the same predicate set over the generated `fit` index:
+The base query filters tags and model facts: task, direction, language, modality, runtime, hardware, memory, licence, cost, latency, and privacy.
 
-- task and direction;
-- language or language pair;
-- input and output modality;
-- runtime: browser, Cloudflare Workers, Node, Python, llama.cpp, Ollama, MLX, Core ML, Android, or iOS;
-- hardware: CPU, Apple Silicon, CUDA, mobile, or server;
-- memory budget;
-- offline or local-only operation;
-- licence class: commercial-safe, reciprocal, or non-commercial;
-- cost ceiling: free, free-tier, or paid;
-- latency class: interactive, batch, or a cron budget;
-- structured output, tool calling, and context length;
-- privacy: zero-training, local-only, or no child-data transfer.
+If a matching report exists, the result shows its verdict: `recommended`, `viable`, `disqualified`, or `unproven`. If no report exists, the result shows the facts and `unmeasured`. The absence of a report is not a gap: it means no one has measured that use case yet.
 
-Each result is a model with a verdict and reasons. The page groups results by verdict — recommended, viable, disqualified, and unproven — instead of hiding the failures. A disqualified result is useful: it says why a popular model does not fit.
+The site groups by verdict when a report is present. It never hides a disqualified model: the reason is the useful part.
 
-#### Fit is not one score
+#### Reports are not core
 
-Do not compute a numeric score across quality, cost, licence, and latency. The weights belong to the consumer, not the catalogue. The catalogue provides the facts and a verdict for a stated use case; the consumer sets the priorities.
+- The index builds without reports.
+- CI does not require a report for a model.
+- A report can be versioned and published independently.
+- A downstream project can host its own report and link it from the index.
 
-#### Reuse of existing evidence
-
-`translation-comparison-en-id` already has the data for the first use case. The import is a mapping, not a re-run:
-
-- its `results/*.json` → evaluation records, with the run label, direction, test set, metrics, and per-segment samples;
-- its `docs/recommendation.json` → a recommendation record;
-- its `docs/recommendation-history.md` → journal entries;
-- its evaluation rules → the doctrine in DESIGN.md.
-
-Do not re-run a benchmark the source already ran. Add a new evaluation only when the model, prompt, provider, quantization, or test set changes.
+Do not re-run a benchmark the specialist repository already ran. Add a new measurement only when the model, prompt, provider, quantization, or test set changes.
 
 ### 4. Data model
 
@@ -424,8 +379,14 @@ The data model is a set of JSON records with a JSON Schema per entity kind. The 
   "aliases": ["allenai/Olmo-3.1-32B-Think"],
   "organization": "allenai",
   "released": "2025-12-10",
-  "domains": ["language"],
-  "contexts": ["reproducible"],
+  "tags": [
+    "domain:language",
+    "context:reproducible",
+    "task:reasoning",
+    "language:en",
+    "license:apache-2.0",
+    "status:available"
+  ],
   "modality": { "input": ["text"], "output": ["text"] },
   "capabilities": {
     "tasks": [
@@ -531,15 +492,16 @@ data/
   organizations/<id>.json
   datasets/<id>.json
   tools/<id>.json
-  use-cases/<id>.json         a job, its constraints, and its success criteria
-  evaluations/<id>.json       one measured model × use-case run
-  recommendations/<id>.json   the current decision for a use case
   discoveries/<id>.json
   sources/<id>.json
-  taxonomy.json               domains, contexts, enums, tier method
+  tags.json                   tag vocabulary and definitions
   feeds.json                  verified feeds and APIs (discovery sources)
-  raw/                        committed snapshots (X, HF, and later billable sources)
-  dist/                       generated rollups, including fits.json
+  fetch-targets.json          what the fetcher pulls
+  raw/                        source snapshots, never overwritten
+  pulls/<timestamp>/          manifest.json + items.jsonl (source-native only)
+  dist/                       generated rollups
+reports/                      optional overlay reports
+  translation-id-en.json      the first report (phase 3)
 journal/
   2026-11.md                  canonical, append-only
   index.json                  generated
@@ -548,8 +510,11 @@ schemas/
   organization.schema.json
   source.schema.json
   discovery.schema.json
+  tag.schema.json
+  report.schema.json
 scripts/
-  fetch/                      one module per source
+  fetch/                      one module per source (implemented)
+  tag.ts                      the tagging pass (phase 1)
   build.ts                    validate, compute tiers, generate
   check.ts                    build in check mode
   propose.ts                  diff snapshots into proposals
@@ -628,13 +593,13 @@ Routes:
 
 | Route | Purpose |
 | --- | --- |
-| `/` | The README rendered as an editorial page, plus category cards and the latest journal entries. |
-| `/find/` | Start from a task and a set of constraints; return verdicts grouped by fit. |
-| `/use-cases/` and `/use-cases/<id>/` | The job, its constraints, the recommendation, the evidence table, and the decision log. |
+| `/` | The README rendered as an editorial page, plus tag cards and the latest journal entries. |
+| `/find/` | Filter by tags and constraints; show verdicts when an overlay report exists. |
+| `/reports/` and `/reports/<id>/` | Optional overlay reports: the use case, evidence, recommendation, and caveats. |
 | `/models/` | The full catalogue with filters. |
-| `/models/<id>/` | The fact sheet: tier, licence, openness, lineage, access, capabilities, fit, and sources. |
+| `/models/<id>/` | The fact sheet: tier, licence, openness, lineage, access, capabilities, tags, reports, and sources. |
 | `/organizations/` and `/organizations/<id>/` | The labs and foundations, with their entities and conduct. |
-| `/domains/<id>/` | One editorial domain. |
+| `/tags/` and `/tags/<namespace>/<value>/` | Browse by tag. |
 | `/journal/` | The chronological record. |
 | `/journal/<yyyy-mm>/` | One month. |
 | `/data/` | The API contract, schema links, and example responses. |
@@ -642,7 +607,7 @@ Routes:
 
 The site is entirely static, so there is no search service. The `/find/` and `/models/` pages filter generated indexes in the browser with a small script. They also support URL parameters, so a result is shareable: `/find/?task=translation&language=id&runtime=cloudflare-workers&license=commercial-safe`.
 
-The `/find/` page is the primary entry point for a consumer with a job. It never hides a disqualified model. It groups results by verdict — recommended, viable, disqualified, unproven — and shows the reason and the evidence for each. A consumer can see why a popular model does not fit, which is often more useful than a short list.
+The `/find/` page filters tags. When a report covers the job, it groups results by verdict — recommended, viable, disqualified, unmeasured — and shows the reason and the evidence. When no report exists, it shows the facts and marks the job `unmeasured`. It never hides a disqualified model.
 
 ### 8. Design system
 
@@ -696,17 +661,14 @@ The API is a set of static JSON files. The contract is versioned by path.
 
 | Path | Contents |
 | --- | --- |
-| `/api/v1/index.json` | A compact list of every entity: id, name, kind, tier, licence, domains, contexts, updated date. |
-| `/api/v1/models/<id>.json` | The full model record, including capabilities and footprint. |
+| `/api/v1/index.json` | A compact list of every entity: id, name, kind, tier, tags, licence, updated date. |
+| `/api/v1/models/<id>.json` | The full model record, including capabilities, footprint, and tags. |
 | `/api/v1/organizations/<id>.json` | The full organization record. |
 | `/api/v1/datasets/<id>.json` | The full dataset record. |
 | `/api/v1/tools/<id>.json` | The full tool record. |
-| `/api/v1/use-cases.json` | The use-case index: id, name, task, directions, required constraints, and recommendation. |
-| `/api/v1/use-cases/<id>.json` | The use case, its success criteria, its recommendation, and its evaluations. |
-| `/api/v1/evaluations/<id>.json` | The full evaluation record, including setup, metrics, verdict, and caveats. |
-| `/api/v1/recommendations/<id>.json` | The current recommendation: primary, alternatives, disqualified, caveats, and dates. |
-| `/api/v1/fits.json` | The compact fit index: model, use case, verdict, reasons, constraints, evidence, and date. |
-| `/api/v1/categories.json` | The taxonomy: tiers, domains, contexts, tasks, runtimes, enums. |
+| `/api/v1/tags.json` | The tag vocabulary, definitions, statuses, and counts. |
+| `/api/v1/reports.json` | The optional overlay index: id, name, constraints, primary, and updated date. Empty until a report exists. |
+| `/api/v1/reports/<id>.json` | One full report: constraints, evaluations, recommendation, caveats, and sources. |
 | `/api/v1/journal.json` | The journal index. |
 | `/api/v1/journal/<yyyy-mm>.json` | One month of entries. |
 | `/api/v1/meta.json` | Schema version, generator version, generated date, counts. |
@@ -720,78 +682,66 @@ Rules:
 - `Access-Control-Allow-Origin: *` on `/api/*`.
 - `Cache-Control: public, max-age=300` on the API and the feeds.
 
-The static API returns the full `fits.json`; the consumer applies the predicates. A later version may add a Worker query endpoint if the index outgrows a single file. The predicate fields are the same as the query semantics in section 3, so the site and a programmatic consumer return the same result.
+The static API returns the full index; the consumer filters tags. Reports are optional. An empty `/api/v1/reports.json` is valid: it means no use case has been measured yet. The site and a programmatic consumer use the same tags.
 
-Example consumer query, expressed as a filter over `fits.json`:
+Example consumer query:
 
 ```text
-task=translation AND direction=id->en AND language=id
-AND runtime includes cloudflare-workers AND license.class in [permissive, reciprocal]
-AND verdict in [recommended, viable]
+tags include task:translation AND language:id
+AND runtime:cloudflare-workers AND license:apache-2.0
 ```
 
-`tts-comparison` can use the same shape for speech, and `translation-comparison-en-id` can compare its live results against the catalogue's recorded fit.
+If a report covers the task, the consumer joins its verdicts. If no report covers it, the model is `unmeasured` for that task. A report is not a required field on a model.
+
+`tts-comparison` can use the same shape for speech, and `translation-comparison-en-id` can compare its live results against the catalogue's recorded report.
 
 `agent-detect` can use `license.id`, `openness.weights`, and `conduct` to refresh its model rules, with a human review before the rules change.
 
-### 10. Fetching pipeline
+### 10. Fetching pipeline (implemented)
+
+The first pull is implemented in `scripts/fetch/`:
 
 ```text
 scripts/fetch/
-  hf-organizations.ts    # watchlist orgs → new models and datasets
-  hf-model.ts            # one model detail, with gated handling
-  github-releases.ts     # releases and licence files
-  arxiv.ts               # papers by category query
-  openrouter.ts          # availability and free variants
-  rss.ts                 # lab blogs
-  x-list.ts              # optional, token-gated
-  hf-following.ts        # optional, token-gated
-  mod.ts                 # orchestrator: cache, rate limit, snapshot
+  mod.ts                  # orchestrator: windows, cache-first, manifest
+  lib/                    # cache, dotenv, http, items, time, types, xml
+  sources/hf.ts           # blog RSS, models, datasets
+  sources/x.ts            # latest posts per list member
+  sources/arxiv.ts        # category RSS
+  sources/github.ts       # release Atom feeds
+  sources/sitemaps.ts     # aggregator sitemaps
 ```
 
-The watchlist lives in `data/watchlist.json`:
+`data/fetch-targets.json` holds the windows, repositories, arXiv categories, and sitemaps. `data/watchlist.json` holds the watched organisations and X members.
 
-```json
-{
-  "organizations": [
-    {
-      "id": "allenai",
-      "name": "Ai2",
-      "hugging_face": "allenai",
-      "github": "allenai",
-      "blog": "https://allenai.org/blog",
-      "x": "AI2"
-    }
-  ],
-  "x_lists": [
-    { "id": "2084302656580034676", "name": "Democratic AI" }
-  ],
-  "topics": [
-    "open-weight model",
-    "open training data",
-    "on-device model",
-    "ternary model",
-    "mixture of experts"
-  ]
-}
-```
+The pull writes:
 
-The fetch stage writes:
+- `data/raw/<source>/<target>/<date>.<kind>` — the raw response, never overwritten.
+- `data/pulls/<timestamp>/items.jsonl` — one source-native item per line.
+- `data/pulls/<timestamp>/manifest.json` — sources, counts, windows, and errors.
 
-- `.cache/<source>/<key>.json` — the raw response and headers.
-- `data/sources/<id>.json` — the normalised evidence record.
-- `data/dist/changes.json` — what is new or changed since the last run.
+The first pull on 2026-11-14 recorded 3,932 items:
 
-The propose stage turns `changes.json` into a reviewable list: new model, new licence, new dataset, new paper, or a changed field. It does not write prose. The assess stage, run by the agent, fills the component values and cites source ids. The build stage validates both.
+| Kind | Count |
+| --- | --- |
+| X posts | 869 from 47 accounts (392 inside the 14-day window) |
+| Hugging Face models | 664 |
+| Hugging Face datasets | 50 |
+| Hugging Face blog articles | 66 |
+| GitHub releases | 108 |
+| Sitemap pages | 2,175 |
+
+arXiv returned no entries because its RSS feed was empty on the weekend. The feed covers only the most recent entries, so it does not provide a full three-month window. This is recorded in the manifest, not hidden.
+
+Tagging is a separate pass. The pull assigns only source-native tags: `source:`, `license:`, `pipeline:`, `language:` from the source, and `repo:`. The `scripts/tag.ts` pass will read the pulls and propose `task:`, `runtime:`, and `context:` tags for review.
 
 Rate and safety rules:
 
-- One request at a time per host, with a 250 ms delay.
-- Respect `Retry-After`.
-- Cache for 24 hours unless the caller passes `--refresh`.
-- Never fetch a gated model's files.
-- Never store a full model card. Store the excerpt and the hash.
-- Never print a token. Read it from the documented environment variable and fail with a named error when it is absent.
+- Cache first: a same-day snapshot is reused. `--refresh` writes a new timestamped snapshot.
+- X: latest 20 posts per account. The 14-day window is marked by `in_window`; older fetched posts are kept.
+- One request at a time per host, with an 80–200 ms delay.
+- Never print or commit a token.
+- Never overwrite a raw snapshot.
 
 ### 11. CI/CD
 
@@ -812,10 +762,11 @@ Rate and safety rules:
 1. Download the `agent-detect` release binary.
 2. Run `agent-detect check-reciprocal --harness=opencode --provider=deepseek --model=deepseekv41flash`. Stop on a non-zero exit.
 3. `deno task fetch` with the documented secrets.
-4. `deno task propose`.
-5. Run the permitted agent with a bounded prompt. The agent writes proposed records and a journal draft. It must cite source ids.
-6. `deno task build`.
-7. Open a pull request with a summary of new and changed records. If nothing changed, open no pull request.
+4. `deno task tag` — draft task, runtime, and context tags from the new pull. Do not write accepted tags without review.
+5. `deno task propose`.
+6. Run the permitted agent with a bounded prompt. The agent writes proposed tags, records, and a journal draft. It must cite source ids.
+7. `deno task build`.
+8. Open a pull request with a summary of new and changed records. If nothing changed, open no pull request.
 
 **`journal.yml`** runs monthly:
 
@@ -864,7 +815,7 @@ Sources: [Edge0 announcement](...) · [Hugging Face card](...)
 
 **`tts-comparison`**
 
-The first consumer query is speech, on-device, Apple Silicon, with a clean licence. The catalogue gives it a shortlist and the evidence for each candidate. The integration is a small script in `tts-comparison` that fetches `/api/v1/fits.json`, filters on `task=speech-synthesis`, `runtime=local`, `hardware=apple-silicon`, and a commercial-safe licence, then prints a table. It does not import this repository's code. `tts-comparison` is also a source: its findings seed the speech evaluations.
+The first consumer query is speech, on-device, Apple Silicon, with a clean licence. The catalogue gives it a shortlist and the evidence for each candidate. The integration is a small script in `tts-comparison` that fetches `/api/v1/index.json`, filters on `task:speech-synthesis`, `runtime:local`, `hardware:apple-silicon`, and a commercial-safe licence, then prints a table. If a speech report exists, it joins the verdicts. It does not import this repository's code. `tts-comparison` is also a source: its findings seed the speech report.
 
 **`translation-comparison-en-id`**
 
@@ -946,39 +897,40 @@ A maintainer applies the export to `src/lib/rules.zig` after review. The export 
 
 Acceptance: the repository is initialised, the skills are referenced, and the owner can review the proposal.
 
-### Phase 1 — data foundation
+### Phase 1 — pull, normalise, tag
 
-- `schemas/` for model, organization, source, discovery, use-case, evaluation, recommendation, and taxonomy.
+- The fetch pipeline (implemented): raw snapshots, pull manifests, and source-native items.
+- `data/tags.json` with the namespace vocabulary and definitions.
+- `scripts/tag.ts` — a human-gated tagging pass that reads the pulls and proposes `task:`, `runtime:`, and `context:` tags with evidence.
+- `schemas/` for model, organization, source, discovery, tag, and report.
+- The first 30 model records from the pull, not from memory.
 - `scripts/build.ts` and `scripts/check.ts`.
-- `data/taxonomy.json` and `data/watchlist.json`.
-- The first 30 model records: 20 text models, 6 speech models, 4 datasets or tools.
-- The first 6 use cases: translation, transcription, on-device speech synthesis, on-device tagging, report generation, and coding agents.
-- The first evaluations and recommendations, imported from `translation-comparison-en-id`, `tts-comparison`, and the Pati field work.
-- The `agent-detect`, `tts-comparison`, and `translation-comparison-en-id` importers.
-- Generated README blocks, `data/dist/`, and `data/dist/fits.json`.
-- `CONTRIBUTING.md` with the evidence runbook and the use-case authoring guide.
+- The `agent-detect`, `tts-comparison`, and `translation-comparison-en-id` importers for facts, not for reports.
+- Generated README blocks and `data/dist/`.
+- `CONTRIBUTING.md` with the evidence runbook and the tagging guide.
 
-Acceptance: `deno task check` passes; the README tables match the records; every record has at least one source; the tier is recomputed and equal to the stored tier; every recommended fit cites an evaluation; every disqualified fit states a reason.
+Acceptance: `deno task fetch` writes a manifest and keeps every raw response; the index builds without any report; every task tag has a definition and an evidence source; `deno task check` passes; the tier is recomputed and equal to the stored tier.
 
-### Phase 2 — site and API
+### Phase 2 — site and tag index
 
 - Astro project, theme tokens, layouts, pages.
-- The `/find/` page and the `/use-cases/` pages, driven by `fits.json`.
+- The `/find/` page and the `/tags/` pages, driven by the tag index.
 - Generated API files and feeds.
 - Cloudflare Worker and `deno task deploy`.
 - Accessibility and contrast checks.
 - A first deployment to `democratic-ai.bevry.workers.dev`.
 
-Acceptance: the home page renders the README; every model and use case has a page; the find page returns verdicts grouped by fit and a shareable URL; the JSON API matches the schema; Lighthouse accessibility is at least 95.
+Acceptance: the home page renders the README; every model has a page; the find page filters tags and marks unmeasured jobs; the JSON API matches the schema; Lighthouse accessibility is at least 95.
 
-### Phase 3 — fetch and sync
+### Phase 3 — overlay reports
 
-- HF, GitHub, arXiv, OpenRouter, and RSS fetchers.
-- The snapshot cache and the change list.
-- Optional X and HF-following fetchers, gated on credentials.
-- A manual snapshot path for both private lists.
+- `reports/translation-id-en.json` imported from `translation-comparison-en-id`.
+- The speech report from `tts-comparison`.
+- The report-generation report from the Pati field work.
+- `/reports/` pages and `/api/v1/reports.json`.
+- The find page joins a report when one covers the selected task.
 
-Acceptance: a new Hugging Face release appears in `data/dist/changes.json` without an agent; the build stays deterministic; a missing credential produces a warning, not a failure.
+Acceptance: a report references model ids and source evidence; removing every report leaves the site and the index functional; a report verdict is never presented as a global model ranking.
 
 ### Phase 4 — journal and automation
 
@@ -1008,10 +960,12 @@ Acceptance: a consumer answers a real selection question from the API; the expor
 | The X or HF lists become unavailable | Incomplete watchlist | Manual snapshot; the build never depends on them; the owner can refresh them |
 | Agent hallucination in the journal | False public claims | The agent cites source ids; the build rejects unknown ids; a person reviews every pull request |
 | Scope creep across every modality | A shallow catalogue | Phase 1 is text plus speech; add a domain when a consumer needs it |
-| A capability claim is treated as general | A translation score becomes a fake intelligence score | Use-case-specific fits; no global ranking; record the setup, direction, and test set |
-| A recommendation goes stale | A retired model remains the primary | `measured_at` and retirement checks; a fallback in every recommendation; the decision log |
-| A fit becomes advocacy | A recommendation without evidence | Every verdict has reasons, evidence, and a disqualified list; no anonymous scores |
-| The fit index grows too large | A slow page or a large bundle | Keep the index compact per use case; add a Worker query endpoint only when needed |
+| A capability claim is treated as general | A translation score becomes a fake intelligence score | Report-specific verdicts; no global ranking; record the setup, direction, and test set |
+| A report goes stale | A retired model remains the primary | `measured_at` and retirement checks; a fallback in every report; the decision log |
+| A report becomes advocacy | A recommendation without evidence | Every verdict has reasons, evidence, and a disqualified list; no anonymous scores |
+| Tag sprawl | A tag per model, with no shared meaning | Namespaced vocabulary, definitions, statuses, and a human-gated tagging pass |
+| Early tags bias the pull | The dataset reflects the first hypothesis | Fetch before tag; the pull records source-native metadata only |
+| A report is mistaken for the core index | A missing report looks like a missing model | Reports are overlays; the index builds without them; the UI labels unmeasured jobs |
 | A custom licence is misclassified | Wrong tier | Manual class assignment with a note; the exact licence id stays visible |
 | The generated site and README drift | Two truths | One generator; CI check; the home page renders the README |
 | CI cost and rate limits | Noisy failures | Deterministic fetch; cache; one scheduled run per week; bounded agent prompts |
@@ -1022,7 +976,7 @@ Acceptance: a consumer answers a real selection question from the API; the expor
 
 The owner must decide these before Phase 1 ends. Each has a recommendation.
 
-1. **Private-list access — resolved on 2026-11-14.** The X app has credits and the 47 members are cached. The Hugging Face token reads the 13 followed organisations, which are cached. The remaining work is the sync script, not access. */Recommendation: build the cache-first sync in Phase 3.*
+1. **Private-list access — resolved on 2026-11-14.** The X app has credits and the 47 members are cached. The Hugging Face token reads the 13 followed organisations, which are cached. The cache-first fetch is implemented. *Recommendation: keep the weekly cadence and the 14-day X window.*
 2. **Tier names.** Keep `Commons / Reciprocal / Shared / Closed / Unproven`, or split `Shared` into `Weights-only` and `Conditional`. *Recommendation: keep five tiers; the component values carry the split.*
 3. **Modality scope for the first release.** Text plus speech, or every modality. *Recommendation: text plus speech, because both consumers need them now.*
 4. **Authoring format.** JSON or YAML. *Recommendation: JSON with a schema and a `deno task new` scaffolder.*
@@ -1032,10 +986,11 @@ The owner must decide these before Phase 1 ends. Each has a recommendation.
 8. **CI agent.** Which permitted model and key. *Recommendation: OpenCode with DeepSeek V4.1 Flash, gated by `agent-detect check-reciprocal`; change the pinned model only after a policy check.*
 9. **Newsletter delivery.** Site and RSS only, or email through Mailgun. *Recommendation: site and RSS first; email after the journal has a stable voice.*
 10. **Public corrections.** GitHub issues only, or a form. *Recommendation: GitHub issues with a template; add a form only if the audience is not technical.*
-11. **First use-case set.** Which jobs get a full recommendation in Phase 1. *Recommendation: Indonesian translation, speech transcription, on-device speech synthesis, on-device tagging, student report generation, and coding agents. Each has a real consumer and existing evidence.*
-12. **Fit vocabulary.** Use `recommended / viable / disqualified / unproven`, or compute a numeric score. *Recommendation: verdicts with reasons. No numeric score across quality, cost, licence, and latency; the weights belong to the consumer.*
-13. **Evaluation ownership.** Re-run every benchmark in this repository, or import and link to the specialist benchmark. *Recommendation: import and link. Run a new evaluation only when a model, prompt, provider, quantization, or test set changes, or when a consumer has no evidence.*
-14. **Capability evidence standard.** Accept vendor claims, or require a measured run or a field report. *Recommendation: a capability claim is `reported` until a measured run or a field report supports it. The site labels the difference.*
+11. **Tag vocabulary.** Approve the namespaces and the first definitions in `data/tags.json`. *Recommendation: accept `domain:`, `task:`, `modality:`, `runtime:`, `language:`, `context:`, `license:`, `family:`, `status:`, `org:`, and `source:`. Add values only with a definition.*
+12. **Tagging method.** Manual tagging, or an agent-assisted pass that proposes tags for review. *Recommendation: agent-assisted proposals, human acceptance. The pull is complete before tagging starts.*
+13. **Report ownership.** Keep reports in this repository under `reports/`, or host them downstream and link them. *Recommendation: the first translation report lives here; large specialist reports stay in their own repositories and are linked.*
+14. **Pull cadence.** Weekly, monthly, or on demand. *Recommendation: weekly for feeds and X, with the 14-day X window and the latest-20 limit; keep every historical pull.*
+15. **Capability evidence standard.** Accept vendor claims, or require a measured run or a field report. *Recommendation: a capability claim is `reported` until a measured run or a field report supports it. The site labels the difference.*
 
 ## Sources
 

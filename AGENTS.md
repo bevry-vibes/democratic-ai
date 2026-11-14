@@ -26,6 +26,10 @@ this process is documented in the upstream repo's [local tweaks pattern](https:/
 - `README.md` is for end users and data consumers. Do not put maintainer runbooks, build steps, schema details, or CI notes in it. Those belong in `DESIGN.md` or `CONTRIBUTING.md`.
 - `DESIGN.md` records the enduring discernments. Read it before changing the tier rules, the schema, the categories, or the site design.
 - The catalogue is evidence-first. Never guess a licence, a training-data claim, or a lineage. Use `unknown` when the evidence is missing, and record the source.
+- Fetch before tag. The fetch pipeline records source-native metadata only. Do not assign `task:`, `runtime:`, or `context:` tags during a pull. Tagging is a separate, human-gated pass after the pull.
+- Evaluations are optional overlay reports, not core records. The index builds without them. Keep a report scoped to one use case and one date.
+- Classification is tag-based. Do not create rigid categories. Add a tag value only with a definition in `data/tags.json`.
 - The X list and the Hugging Face following list need credentials. Treat them as optional sources. A missing credential must never block the deterministic build.
+- The X API is metered. Cache every response under `data/raw/` and never refetch a same-day snapshot without an explicit refresh.
 - `agent-detect` is the source of truth for harness, provider, model, and provider-training rules. This repository complements it with training-data openness, lineage, and reuse terms; it does not fork those rules.
 - `tts-comparison` is a consumer and a seed source for speech models. Do not re-research a model that its `FINDINGS.md` already verifies.

@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14",
+  "status": "proposed",
+  "notes": "Proposed vocabulary after the first pull. No model is tagged yet. A value becomes accepted after a review against the pull. Values can be added, renamed, or retired; a tag is never a rigid category.",
+  "namespaces": {
+    "domain": {
+      "definition": "The field a model or artefact belongs to.",
+      "values": {
+        "language": "General text and reasoning.",
+        "code": "Code generation, repair, and repository work.",
+        "vision": "Image and video understanding or generation.",
+        "speech": "Text-to-speech, speech-to-text, and audio.",
+        "multimodal": "Two or more modalities in one model.",
+        "embeddings": "Retrieval, clustering, and representation.",
+        "datasets": "Training or evaluation data.",
+        "tooling": "Runtimes, servers, harnesses, and interfaces.",
+        "evaluation": "Benchmarks, leaderboards, audits, and red teams.",
+        "governance": "Licences, policy, and standards."
+      }
+    },
+    "task": {
+      "definition": "The job the model performs. This is the Desert Ant pattern: name the model for its job, then tag it so it can be found across constraints.",
+      "values": {
+        "translation": "Translate text between languages.",
+        "transcription": "Convert speech to text.",
+        "speech-synthesis": "Convert text to speech.",
+        "speech-enhancement": "Denoise, dereverb, and normalise audio.",
+        "word-timestamps": "Align words to their position in audio.",
+        "diarization": "Identify who spoke when.",
+        "topic-tagging": "Suggest topics and tags for content.",
+        "text-classification": "Assign labels to text.",
+        "structured-extraction": "Extract typed data into a schema.",
+        "pii-redaction": "Find and remove personal data.",
+        "content-moderation": "Flag unsafe or unwanted content.",
+        "image-classification": "Assign labels to images.",
+        "face-matching": "Find people in photos.",
+        "clip-selection": "Choose short clips and highlights.",
+        "emoji-suggestion": "Suggest emoji for text.",
+        "title-generation": "Suggest a title and description.",
+        "language-identification": "Detect the language of text or audio.",
+        "filler-word-detection": "Find filler words in speech.",
+        "report-generation": "Generate a structured report from notes.",
+        "code": "Write, repair, or review code.",
+        "tool-calling": "Call tools and APIs reliably.",
+        "reasoning": "Work through multi-step problems.",
+        "retrieval": "Find relevant content.",
+        "embedding": "Produce a vector representation."
+      }
+    },
+    "modality": {
+      "definition": "The input or output medium.",
+      "values": {
+        "text": "Text.",
+        "audio": "Audio.",
+        "image": "Image.",
+        "video": "Video."
+      }
+    },
+    "runtime": {
+      "definition": "Where the model can run.",
+      "values": {
+        "browser": "In a web browser, usually through WASM or WebGPU.",
+        "cloudflare-workers": "In a Cloudflare Worker.",
+        "node": "In Node or Deno.",
+        "python": "In a Python process.",
+        "llama.cpp": "Through llama.cpp or a compatible server.",
+        "ollama": "Through Ollama.",
+        "mlx": "Through Apple MLX.",
+        "coreml": "Through Apple Core ML.",
+        "litert": "Through Google LiteRT.",
+        "onnx": "Through ONNX Runtime.",
+        "android": "On Android.",
+        "ios": "On iOS.",
+        "hosted": "Through a hosted API."
+      }
+    },
+    "language": {
+      "definition": "A language the model handles, or its language coverage.",
+      "values": {
+        "en": "English.",
+        "id": "Indonesian.",
+        "multilingual": "More than one language, without a full list.",
+        "low-resource": "A language or set of languages with limited data."
+      }
+    },
+    "context": {
+      "definition": "A constraint or deployment context.",
+      "values": {
+        "on-device": "Runs on consumer hardware, without a network.",
+        "edge": "Targets phones, wearables, or embedded devices.",
+        "offline": "Works without a network connection.",
+        "sovereign": "Designed for local or national control.",
+        "privacy": "Designed to keep data local.",
+        "reproducible": "The release supports reproduction.",
+        "education": "Used in education.",
+        "accessibility": "Used for accessibility.",
+        "science": "Used in scientific work.",
+        "agents": "Used in an agent or tool loop.",
+        "commercial-safe": "The licence permits commercial use.",
+        "non-commercial": "The licence limits use to non-commercial work."
+      }
+    },
+    "license": {
+      "definition": "The licence of the weights or the work.",
+      "values": {
+        "apache-2.0": "Apache-2.0.",
+        "mit": "MIT.",
+        "cc-by-4.0": "CC BY 4.0.",
+        "cc-by-sa-4.0": "CC BY-SA 4.0.",
+        "cc-by-nc-4.0": "CC BY-NC 4.0.",
+        "gemma": "The Gemma terms of use.",
+        "llama-community": "The Llama community licence.",
+        "rail": "A Responsible AI licence.",
+        "source-available": "Source-available, not OSI open source.",
+        "proprietary": "Proprietary.",
+        "unknown": "Not checked or not stated."
+      }
+    },
+    "family": {
+      "definition": "The model family or base lineage.",
+      "values": {
+        "qwen": "Qwen.",
+        "llama": "Llama.",
+        "gemma": "Gemma.",
+        "glm": "GLM.",
+        "deepseek": "DeepSeek.",
+        "kimi": "Kimi.",
+        "minimax": "MiniMax.",
+        "olmo": "OLMo.",
+        "pythia": "Pythia.",
+        "bloom": "BLOOM.",
+        "mistral": "Mistral.",
+        "smollm": "SmolLM.",
+        "lfm": "Liquid Foundation Model.",
+        "bonsai": "Bonsai.",
+        "whisper": "Whisper.",
+        "kokoro": "Kokoro.",
+        "piper": "Piper.",
+        "higgs": "Higgs Audio.",
+        "chatterbox": "Chatterbox."
+      }
+    },
+    "status": {
+      "definition": "The state of the model or artefact.",
+      "values": {
+        "available": "Available for use.",
+        "beta": "In beta.",
+        "gated": "Available after a click-through or approval.",
+        "deprecated": "Superseded but still available.",
+        "retired": "No longer available.",
+        "unverified": "The state is not confirmed."
+      }
+    },
+    "org": {
+      "definition": "The organisation or author. Values are source-native and added as they appear.",
+      "values": {}
+    },
+    "source": {
+      "definition": "Where the record came from.",
+      "values": {
+        "hf-model": "A Hugging Face model card or API record.",
+        "hf-dataset": "A Hugging Face dataset card or API record.",
+        "hf-blog": "The Hugging Face blog.",
+        "arxiv": "An arXiv paper.",
+        "x": "An X post.",
+        "github-release": "A GitHub release.",
+        "sitemap": "A sitemap entry."
+      }
+    }
+  }
+}

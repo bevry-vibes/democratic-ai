@@ -103,81 +103,68 @@ Provider conduct uses the `agent-detect` vocabulary so the two projects can exch
 
 `NOASSERTION` means the source was checked and the answer is inconclusive. An unset value means the question was not checked. This distinction is load-bearing: it stops an unchecked provider from looking like a safe one.
 
-## Categories and contexts
+## Tags and overlay reports
 
-Categories are editorial. They describe what a thing is for. The tier is computed. The two axes are independent, so a `Shared` model can sit in the on-device category and a `Commons` dataset can sit in the open-data category.
+The catalogue classifies with tags, not fixed categories. A model can carry several jobs, modalities, runtimes, and languages at once. Tags are additive, so a new dimension never forces a schema change or a re-categorisation of old records.
 
-### Domains
+### Tag namespaces
 
-| Domain | What it covers |
-| --- | --- |
-| `language` | General text and reasoning models. |
-| `code` | Code generation, repair, and repository agents. |
-| `vision` | Image and video understanding or generation. |
-| `speech` | Text-to-speech, speech-to-text, and audio models. |
-| `multimodal` | Models that cross two or more modalities. |
-| `embeddings` | Retrieval, clustering, and representation models. |
-| `datasets` | Training and evaluation data. |
-| `tooling` | Runtimes, servers, harnesses, and user interfaces. |
-| `evaluation` | Benchmarks, leaderboards, audits, and red-team results. |
-| `governance` | Licences, policy, and standards that change what is possible. |
+| Namespace | Examples | Source |
+| --- | --- | --- |
+| `domain:` | `domain:speech`, `domain:language`, `domain:vision` | Curated |
+| `task:` | `task:translation`, `task:transcription`, `task:speech-enhancement`, `task:topic-tagging`, `task:pii-redaction` | Curated |
+| `modality:` | `modality:text`, `modality:audio`, `modality:image`, `modality:video` | Source or curated |
+| `runtime:` | `runtime:browser`, `runtime:cloudflare-workers`, `runtime:llama.cpp`, `runtime:mlx`, `runtime:coreml`, `runtime:android`, `runtime:ios` | Source or curated |
+| `language:` | `language:en`, `language:id`, `language:multilingual` | Source or curated |
+| `context:` | `context:on-device`, `context:edge`, `context:offline`, `context:sovereign`, `context:privacy` | Curated |
+| `license:` | `license:apache-2.0`, `license:cc-by-nc-4.0` | Source |
+| `family:` | `family:qwen`, `family:llama`, `family:gemma` | Source or curated |
+| `status:` | `status:beta`, `status:gated`, `status:retired` | Source or curated |
+| `org:` | `org:qwen`, `org:desert-ant-labs` | Source |
+| `source:` | `source:hf-model`, `source:arxiv`, `source:x` | Fetch |
 
-### Contexts
+A tag is a string `namespace:value`. The vocabulary lives in `data/tags.json` and each tag has a definition. A tag without a definition is a proposal, not a classification.
 
-Contexts are tags for a consumer's constraint. They do not change the tier.
+### The Desert Ant pattern
 
-`on-device`, `edge`, `multilingual`, `low-resource`, `sovereign`, `privacy`, `education`, `accessibility`, `science`, `agents`, `reproducible`.
+Desert Ant names each model for the job it does: Align for word timestamps, Clear for speech enhancement, Clips for clip selection, Gist for topic tagging, Redact for PII redaction. The site groups by medium and availability, not by a rigid taxonomy.
 
-`on-device` means the model can run on consumer hardware without a network connection. `edge` means the model targets phones, wearables, or embedded devices. A model can be both.
+The catalogue follows that pattern with tags:
 
-### Use cases
+- `desert-ant-labs/align` → `task:word-timestamps`, `modality:audio`, `runtime:on-device`, `status:available`.
+- `desert-ant-labs/gist` → `task:topic-tagging`, `modality:text`, `language:multilingual`, `runtime:browser`, `license:source-available`.
 
-A use case is a job with constraints and success criteria. It is not a domain. A domain says what a model is; a use case says what a person needs to do, under which limits.
+The model keeps its own name. The tags make it findable across jobs and constraints. A model can gain a tag without a rename, and a tag can be retired without touching the model.
 
-The first six use cases are in `data/use-cases.json`: Indonesian↔English translation, offline speech transcription, on-device speech synthesis, on-device topic tagging, student report generation, and coding agents.
+### When tags are assigned
 
-A use case carries its own evidence and decision. It does not inherit a tier from the models it recommends. A reciprocal model can be a poor fit; a shared model can be the best fit.
+The fetch stage records only source-native metadata and source-native tags. It does not assign `task:` or `context:` tags. Tagging is a separate pass that runs after a pull, reads the raw data, and proposes tags with evidence.
+
+This order matters. A tag assigned before the data is complete becomes a bias in the next pull. A tag assigned after the pull can be reviewed against the full set.
+
+The tagging pass is human-gated. It may be assisted by an agent, but a person accepts the vocabulary and the evidence. Tag changes are journaled.
+
+### Overlay reports
+
+An evaluation is downstream. The core index is useful without it.
+
+A report is an optional overlay for a specific use case. It references model ids, adds measured results, and states a recommendation. It can live in this repository under `reports/`, or in a downstream repository that consumes the index. The catalogue displays a report when it is present and links to it when it is hosted elsewhere.
+
+A report records:
+
+- the use case and its hard constraints;
+- the models and the setups: provider, runtime, quantization, prompt, test set, direction;
+- the measured results and the noise floor;
+- the recommendation: primary, alternatives, disqualified, and caveats;
+- the date and the sources.
+
+The first report is `translation-id-en`, imported from `translation-comparison-en-id`. It does not change the core index. It adds a verdict layer on top of it.
+
+The absence of a report is not a gap in the index. It means no one has measured that use case yet.
 
 ### Discoveries
 
 A discovery is a dated change in the field: a release, a paper, a licence change, a benchmark result, or a policy decision. A discovery links to the entities it affects. The journal is the chronological view; a discovery page is the topical view.
-
-## Use cases and fit
-
-The catalogue answers two questions. “What is this model?” and “Is it right for my job?” The second question needs a use case, a set of constraints, and evidence.
-
-Three layers stay separate:
-
-1. **Capability** — what a model can do, with evidence.
-2. **Fit** — how well it does a stated job under stated constraints.
-3. **Reciprocity** — what the release gives back.
-
-A model can be reciprocal and unfit. A model can be capable and extractive. The catalogue records both, and never merges them into one score.
-
-A use case records:
-
-- the job: translate, transcribe, synthesise speech, classify, extract, generate a report, retrieve, write code, or drive an agent;
-- the inputs and outputs: languages, direction, modality, and format;
-- the constraints: runtime, memory, licence, cost, latency, privacy, and offline operation;
-- the success criteria: the quality floor, the failure that matters, and the human review step;
-- the evidence: evaluations, field reports, and sources.
-
-A fit records:
-
-- the model and the use case;
-- the setup: provider, runtime, quantization, prompt, test set, and direction;
-- the measured result;
-- the verdict: `recommended`, `viable`, `disqualified`, or `unproven`;
-- the caveats and the date.
-
-Fit is not a global ranking. It is a judgement for a stated context, with evidence. The same model can be recommended for one use case and disqualified for another.
-
-Examples from the first consumers:
-
-- Indonesian to English translation must preserve names and glossary terms. A model with the best average quality can fail that test.
-- On-device speech synthesis must run on the target phone or laptop. A better cloud voice is not a fit if it needs a network.
-- A student report must cite the teacher's notes. A fluent model that invents evidence is disqualified regardless of style.
-- A coding agent must call tools correctly. A model with strong chat quality can fail the tool-call loop.
 
 ## Evaluation doctrine
 
@@ -196,23 +183,20 @@ These rules come from the translation comparison and the Pati work. They apply t
 
 ## Entity model
 
-The catalogue has nine authored entity kinds and one generated join:
+The core catalogue has six authored entity kinds and one optional overlay:
 
 - `model` — a set of weights and its release terms.
 - `organization` — the lab, foundation, or company behind one or more entities.
 - `dataset` — a training or evaluation dataset.
 - `tool` — a runtime, server, harness, or interface.
-- `evaluation` — one measured run of a model on a use case.
-- `use-case` — a job, its constraints, and its success criteria.
-- `recommendation` — the current decision for a use case: primary, alternatives, disqualified, and caveats.
 - `discovery` — a dated event or finding.
 - `source` — the evidence behind a claim.
-- `fit` — the generated join of models, use cases, evaluations, and verdicts. It is never hand-edited.
+- `report` — an optional overlay for a use case: measured results, a recommendation, and caveats. It is not required for the index.
 
 A model record carries these groups:
 
 - identity: `id`, `name`, `aliases`, `organization`, `released`;
-- classification: `domains`, `contexts`, `modality`, `size`;
+- classification: `tags` (namespaced), `modality`;
 - capabilities: `tasks`, `languages`, `tools`, `structured_output`, `context_tokens`, with evidence;
 - footprint: `params_b`, `quantized_sizes`, `memory_gb`, `runtimes`;
 - terms: `license`, `openness`, `conduct`, `lineage`;
@@ -223,7 +207,7 @@ A model record carries these groups:
 
 1. **One entity per file.** The filename is the id. A record is easy to diff and easy to link.
 2. **Stable ids.** Ids are lowercase slugs. A rename adds an alias; it never changes an id.
-3. **Facets before prose.** If a consumer needs to filter on it, it is a field. Prose is for context.
+3. **Tags before categories.** If a consumer needs to filter on it, it is a tag. A new dimension is a new namespace, not a schema migration.
 4. **Unknown is a value.** `unknown` and `NOASSERTION` are explicit. An absent field means “not assessed”.
 5. **Evidence is a link, not a sentence.** Each claim points to a source record with a URL, a retrieval date, and a content hash.
 6. **Conflicts are data.** If a model card and a news article disagree, record both and mark the record `contested`.
@@ -231,8 +215,10 @@ A model record carries these groups:
 8. **Derivation is explicit.** A quantised, distilled, merged, or fine-tuned model names its base and the relation.
 9. **Concepts align with `agent-detect`.** Reuse its enums for openness, licence, and provider training. Do not invent a second vocabulary.
 10. **The source of truth is the record, not the website.** The site is a view. A consumer can use the JSON without the site.
-11. **Fit is contextual, not global.** A verdict names the use case, the constraints, the setup, and the date. There is no universal model ranking.
+11. **A report is contextual, not global.** It names the use case, the constraints, the setup, and the date. The index has no universal ranking.
 12. **Capability evidence and openness evidence are separate.** A benchmark result never raises a tier, and a licence never proves a capability.
+13. **Tags are additive.** No model has one true category. A model can carry several jobs, modalities, and runtimes.
+14. **Reports are overlays.** The index is complete without them. A missing report means the use case is unmeasured, not that the model is unfit.
 
 ### Canonical format
 
@@ -302,8 +288,8 @@ Direction:
 - **Legible first.** A 65–70 character measure, 18–20 px body text, generous line height, and strong contrast.
 - **Quiet hierarchy.** Serif display headings, a humanist sans for body text, and a monospace face only for ids, JSON, and code.
 - **Facts with sources.** A reciprocity ledger, a lineage chain, and a source list are the core of a model page.
-- **Job first.** A “Find a model” page starts from the task and the constraints, not from the model brand. It returns verdicts and reasons, never a single score.
-- **Evidence over confidence.** A recommendation shows its test set, direction, runtime, provider, and date. A missing measurement is `unproven`, not a guess.
+- **Tags first.** A “Find a model” page filters tags and constraints. It groups results by fit when an overlay report exists; otherwise it shows the facts without a verdict.
+- **Evidence over confidence.** A report shows its test set, direction, runtime, provider, and date. A missing measurement is `unproven`, not a guess.
 - **No client framework.** Astro renders static HTML. Small scripts add filters and sorting. The site works without JavaScript.
 - **Accessible.** Semantic landmarks, a skip link, visible focus rings, WCAG AA contrast, and respect for reduced motion.
 - **Light first.** A warm dark theme is a later option, not a launch requirement.
@@ -352,10 +338,12 @@ The machine contract is the versioned JSON API. The human contract is the site a
 These entries record the design proposed in the current plan. Rename this section to “Decisions log” when the owner accepts them.
 
 - **2026-11-14** — The defining test is reciprocity with the commons, not OSI compliance. Open weights are necessary but not sufficient; training-data openness is the distinguishing axis.
-- **2026-11-14** — Tiers are computed from component values. Categories are editorial. The two axes stay separate.
+- **2026-11-14** — Tiers are computed from component values. Classification is tag-based. The two are separate.
 - **2026-11-14** — Provider conduct is tracked separately from model openness, using the `agent-detect` vocabulary.
 - **2026-11-14** — Facts have one source in `data/`. README generated blocks, the site, and the API are generated from it and checked in CI.
 - **2026-11-14** — The site is an Astro static build on Cloudflare Workers. It is editorial and warm, not a technical dashboard.
 - **2026-11-14** — Automation fetches and drafts; a person reviews and merges. A reciprocal agent gate runs before any agent work.
-- **2026-11-14** — Use-case fit is a first-class axis. Capability, fit, and reciprocity stay separate; a verdict names the use case, the constraints, the setup, and the date.
+- **2026-11-14** — Tags are the classification mechanism. A use case is a tag, not a rigid category. A model can carry several jobs. The naming follows the Desert Ant pattern: name the model for the job it does.
+- **2026-11-14** — Fetch before tag. The pull records source-native metadata only. Task, runtime, and context tags are assigned in a separate pass after the pull.
+- **2026-11-14** — Evaluations are downstream overlays. The core index is complete without them. A report adds measured results and a recommendation for one use case.
 - **2026-11-14** — Evaluation follows the lessons of `translation-comparison-en-id`: separate directions, separate latency classes, one model across providers within a parity band, quantization recorded, reasoning mode recorded, and noise floors respected.
