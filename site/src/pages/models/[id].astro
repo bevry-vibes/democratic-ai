@@ -59,8 +59,15 @@ const formatDate = (value: string | null | undefined) =>
       })
     : null
 const providers = model.access.providers ?? []
-const hasCloudflare = providers.includes("cloudflare-workers-ai") || providers.includes("cloudflare")
-const hasOpenRouter = providers.includes("openrouter")
+const providerModels = model.access.provider_models ?? {}
+const openCodeProvider = providerModels.opencode?.length ? "opencode" : providerModels["opencode-go"]?.length ? "opencode-go" : null
+const openCodeModels = openCodeProvider ? providerModels[openCodeProvider] : []
+const isFreeProviderModel = (entry: { id: string; cost: { input?: number; output?: number } | null }) =>
+  entry.cost?.input === 0 && entry.cost?.output === 0
+const openCode = openCodeModels.find(isFreeProviderModel) ?? openCodeModels[0]
+const openCodeFree = openCode ? isFreeProviderModel(openCode) : false
+const cloudflareModel = providerModels["cloudflare-workers-ai"]?.[0]
+const openRouterModel = providerModels.openrouter?.[0]
 const memoryLow = model.footprint.params_b == null ? null : Math.ceil(model.footprint.params_b * 0.55)
 const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.footprint.params_b * 2)
 ---
@@ -189,35 +196,59 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
 
       <div class="panel" id="get-started">
         <h2>How to get started</h2>
-        <h3>Hosted</h3>
-        <div class="chips">
-          {model.access.models_dev && (
-            <a class="chip tag-source" href={model.access.models_dev} data-tooltip="The models.dev entry lists hosted providers and pricing.">
-              models.dev
-            </a>
-          )}
-          <a
-            class="chip tag-source"
-            href={`https://openrouter.ai/models?q=${encodeURIComponent(model.name)}`}
-            data-tooltip={hasOpenRouter ? "OpenRouter lists this model. Search the catalogue for the current provider entries." : "Search OpenRouter for this model. No OpenRouter entry is recorded in models.dev yet."}
-          >
-            OpenRouter: {hasOpenRouter ? "listed" : "search"}
-          </a>
-          <a
-            class="chip tag-source"
-            href="https://developers.cloudflare.com/workers-ai/models/"
-            data-tooltip={hasCloudflare ? "Cloudflare Workers AI lists this model. Check the model catalogue for the current binding." : "No Cloudflare Workers AI listing is recorded in models.dev. Check the catalogue for a current binding."}
-          >
-            Cloudflare: {hasCloudflare ? "listed" : "not listed"}
-          </a>
-        </div>
-        <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
-          {providers.length > 0
-            ? `${providers.length} hosted providers are listed on models.dev.`
-            : "No hosted provider is listed on models.dev for this model."}
-        </p>
 
-        <h3>Local</h3>
+        <h3>Recommended harness: OpenCode</h3>
+        {openCode ? (
+          <>
+            <div class="chips">
+              <span class="chip tag-status">opencode/{openCode.id}</span>
+              {openCodeFree && <span class="badge badge-free">free</span>}
+            </div>
+            <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
+              {openCodeFree
+                ? "Free on OpenCode for a limited time. Free-tier chat models require OpenCode."
+                : "Available through the OpenCode Console provider."}
+            </p>
+            <pre><code>/connect
+/models</code></pre>
+            <p class="muted" style="font-size:0.82rem">Or set it in <code>opencode.jsonc</code>:</p>
+            <pre><code>{`{ "model": "${openCodeProvider}/${openCode.id}" }`}</code></pre>
+            <a class="mono-small" href="https://opencode.ai/docs/console/models/" target="_blank" rel="noreferrer">
+              OpenCode model setup
+            </a>
+          </>
+        ) : (
+          <p class="muted" style="font-size:0.86rem">
+            No OpenCode Console entry is recorded for this model.
+            <a href="https://opencode.ai/docs/console/models/" target="_blank" rel="noreferrer">Check the OpenCode model list</a>.
+          </p>
+        )}
+
+        {cloudflareModel && (
+          <>
+            <h3>Cloudflare Workers AI</h3>
+            <div class="chips">
+              <span class="chip tag-source">{cloudflareModel.id}</span>
+            </div>
+            <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
+              Run it through the Workers AI binding, then call <code>{`env.AI.run("${cloudflareModel.id}", ...)`}</code>.
+              <a href="https://developers.cloudflare.com/workers-ai/models/" target="_blank" rel="noreferrer">Cloudflare model catalogue</a>.
+            </p>
+          </>
+        )}
+
+        {openRouterModel && (
+          <>
+            <h3>OpenRouter</h3>
+            <div class="chips">
+              <a class="chip tag-source" href={`https://openrouter.ai/${openRouterModel.id}`} target="_blank" rel="noreferrer">
+                {openRouterModel.id}
+              </a>
+            </div>
+          </>
+        )}
+
+        <h3>DIY / local</h3>
         <div class="chips">
           {model.capabilities.runtimes.length > 0 ? (
             model.capabilities.runtimes.map((runtime) => (
@@ -233,6 +264,17 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
           {model.footprint.params_b == null
             ? "Parameter count is unknown. Check the model card for memory requirements."
             : `Approximately ${memoryLow}–${memoryHigh} GB of weights before KV cache and runtime overhead.`}
+        </p>
+        <p class="muted" style="font-size:0.86rem">
+          {providers.length > 0
+            ? `${providers.length} hosted providers are listed on models.dev.`
+            : "No hosted provider is listed on models.dev for this model."}
+          {model.access.models_dev && (
+            <>
+              {" "}
+              <a href={model.access.models_dev} target="_blank" rel="noreferrer">models.dev providers</a>.
+            </>
+          )}
         </p>
         <a class="mono-small" href={`https://huggingface.co/${model.access.hugging_face}`} target="_blank" rel="noreferrer">
           Weights on Hugging Face

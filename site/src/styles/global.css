@@ -2640,3 +2640,9 @@ html {
     flex-direction: column;
   }
 }
+
+.badge-free {
+  background: #e4efe2;
+  border-color: #bcd1b6;
+  color: #3f5a3a;
+}

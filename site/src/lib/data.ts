@@ -65,6 +65,17 @@ export interface Scorecard {
   source: string
 }
 
+export interface ProviderModel {
+  id: string
+  name: string
+  cost: {
+    input?: number
+    output?: number
+    cache_read?: number
+    cache_write?: number
+  } | null
+}
+
 export interface CompactModel {
   id: string
   name: string
@@ -90,6 +101,7 @@ export interface CompactModel {
   models_dev: string | null
   agent_detect: string | null
   providers: string[]
+  provider_models: Record<string, ProviderModel[]>
   builds: number
 }
 
@@ -139,6 +151,7 @@ export interface ModelRecord extends Omit<CompactModel, "license" | "releases"> 
     models_dev: string | null
     agent_detect: string | null
     providers: string[]
+    provider_models: Record<string, ProviderModel[]>
     gated: boolean | string | null
   }
   syndication: {
