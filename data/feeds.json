@@ -12,7 +12,11 @@
       "checked_at": "2026-11-14",
       "auth": "none",
       "items": 907,
-      "use": ["releases", "discoveries", "tooling"],
+      "use": [
+        "releases",
+        "discoveries",
+        "tooling"
+      ],
       "notes": "The strongest single feed for open-model releases and methods. It includes lab posts, benchmark posts, and runtime releases."
     },
     {
@@ -23,7 +27,10 @@
       "status": "verified",
       "checked_at": "2026-11-14",
       "auth": "none",
-      "use": ["discoveries", "research"],
+      "use": [
+        "discoveries",
+        "research"
+      ],
       "notes": "Returns paper metadata with thumbnails and identifiers. Use it for the research side of the journal."
     },
     {
@@ -34,7 +41,10 @@
       "status": "verified",
       "checked_at": "2026-11-14",
       "auth": "none",
-      "use": ["discoveries", "research"],
+      "use": [
+        "discoveries",
+        "research"
+      ],
       "notes": "Returns the daily paper list with submitter and engagement metadata."
     },
     {
@@ -45,7 +55,9 @@
       "status": "verified",
       "checked_at": "2026-11-14",
       "auth": "none",
-      "use": ["research"],
+      "use": [
+        "research"
+      ],
       "notes": "Computation and language. Pair it with cs.LG, cs.AI, cs.CV, and eess.AS for the other modalities."
     },
     {
@@ -56,7 +68,9 @@
       "status": "verified",
       "checked_at": "2026-11-14",
       "auth": "none",
-      "use": ["research"],
+      "use": [
+        "research"
+      ],
       "notes": "Machine learning."
     },
     {
@@ -67,7 +81,10 @@
       "status": "verified",
       "checked_at": "2026-11-14",
       "auth": "none",
-      "use": ["releases", "tooling"],
+      "use": [
+        "releases",
+        "tooling"
+      ],
       "notes": "One feed per repository. Verified with llama.cpp and Transformers. Use it for runtimes and harnesses, not for model cards."
     },
     {
@@ -80,7 +97,10 @@
       "auth": "x-api-key",
       "limits": "Free tier about 100 requests per day",
       "license": "Internal use only; no redistribution. Attribution to artificialanalysis.ai is required.",
-      "use": ["capability-context", "pricing-context"],
+      "use": [
+        "capability-context",
+        "pricing-context"
+      ],
       "notes": "Use it for context only, never as openness evidence. Do not republish the raw rows. Store a link and a derived note."
     },
     {
@@ -91,7 +111,10 @@
       "status": "documented",
       "checked_at": "2026-11-14",
       "auth": "none",
-      "use": ["availability", "pricing-context"],
+      "use": [
+        "availability",
+        "pricing-context"
+      ],
       "notes": "Public model catalogue with pricing and free variants. It is a serving source, not an openness source."
     },
     {
@@ -102,7 +125,9 @@
       "status": "linked-unreachable",
       "checked_at": "2026-11-14",
       "auth": "none",
-      "use": ["discovery"],
+      "use": [
+        "discovery"
+      ],
       "notes": "The site links this beehiiv feed, but the host does not resolve from this network. Fall back to the sitemap."
     },
     {
@@ -114,7 +139,9 @@
       "checked_at": "2026-11-14",
       "auth": "none",
       "items": 521,
-      "use": ["discovery"],
+      "use": [
+        "discovery"
+      ],
       "notes": "Carries lastmod dates. It is a discovery source for the media account, not a model source."
     },
     {
@@ -125,7 +152,9 @@
       "status": "sitemap-only",
       "checked_at": "2026-11-14",
       "auth": "none",
-      "use": ["evaluation-context"],
+      "use": [
+        "evaluation-context"
+      ],
       "notes": "No feed. The robots file disallows /api/, so do not scrape or call the internal API. The sitemap is an index of model, provider, organisation, benchmark, and comparison pages."
     },
     {
@@ -137,7 +166,9 @@
       "checked_at": "2026-11-14",
       "auth": "none",
       "items": 4750,
-      "use": ["discovery"],
+      "use": [
+        "discovery"
+      ],
       "notes": "Contains lastmod dates for 146 entries. Use it to detect new model and comparison pages."
     },
     {
@@ -149,7 +180,9 @@
       "checked_at": "2026-11-14",
       "auth": "none",
       "items": 102,
-      "use": ["evaluation-context"],
+      "use": [
+        "evaluation-context"
+      ],
       "notes": "No feed and no public API. It is a leaderboard and evaluation surface."
     },
     {
@@ -161,7 +194,9 @@
       "checked_at": "2026-11-14",
       "auth": "none",
       "items": 27,
-      "use": ["discovery"],
+      "use": [
+        "discovery"
+      ],
       "notes": "No feed. The lastmod dates are from 2020, so prefer GitHub releases and Hugging Face for change detection."
     },
     {
@@ -173,8 +208,24 @@
       "checked_at": "2026-11-14",
       "auth": "none",
       "items": 52,
-      "use": ["discovery", "tooling"],
+      "use": [
+        "discovery",
+        "tooling"
+      ],
       "notes": "No feed. The lastmod dates are current, so the sitemap is a usable change surface."
+    },
+    {
+      "id": "arena",
+      "name": "Arena",
+      "kind": "web",
+      "url": "https://arena.ai/leaderboard",
+      "status": "blocked",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "use": [
+        "evaluation-context"
+      ],
+      "notes": "A worthwhile leaderboard aggregator, but Cloudflare blocks automated reads and the sitemap has leaderboard pages, not per-model pages. Link it as a general source; it adds no syndication points until a verifiable snapshot is available."
     }
   ]
 }

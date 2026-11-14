@@ -302,6 +302,15 @@ async function main(): Promise<void> {
         "very-strong": "9–10 points",
       },
     },
+    unavailable_sources: [
+      {
+        id: "arena",
+        url: "https://arena.ai/leaderboard",
+        kind: "evaluation",
+        weight: 2,
+        reason: "Cloudflare blocks automated reads. The sitemap has leaderboard pages, not per-model pages. Arena adds no points until a verifiable snapshot or API is available.",
+      },
+    ],
     counts: {
       models: scored,
       builds_and_probes_skipped: skipped,
