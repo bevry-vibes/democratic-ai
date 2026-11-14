@@ -2855,7 +2855,6 @@ html {
   max-height: min(72vh, 46rem);
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 0.5rem;
   scrollbar-gutter: stable;
 }
 
@@ -3008,8 +3007,11 @@ html {
 .home-model-scroll {
   border: 1px solid var(--rule-strong);
   border-radius: var(--radius);
-  padding: 0 0.9rem;
   background: color-mix(in srgb, var(--paper-2) 35%, transparent);
+}
+
+.home-model-scroll .list-row {
+  padding: 1rem 0.9rem;
 }
 
 .home-model-scroll .list {
