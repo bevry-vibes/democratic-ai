@@ -7,7 +7,9 @@
     "tag:check": "deno check scripts/tag/mod.ts scripts/tag/clef.ts",
     "tag:clef": "deno run -A scripts/tag/clef.ts",
     "links": "deno run -A scripts/links/mod.ts",
-    "links:check": "deno check scripts/links/mod.ts"
+    "links:check": "deno check scripts/links/mod.ts",
+    "syndication": "deno run -A scripts/syndication/mod.ts",
+    "syndication:check": "deno check scripts/syndication/mod.ts"
   },
   "imports": {
     "@std/xml": "jsr:@std/xml@^0.2.0"

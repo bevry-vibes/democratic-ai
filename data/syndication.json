@@ -1,0 +1,6296 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14T04:16:49.968Z",
+  "pull_id": "20261114T025658Z",
+  "method": {
+    "note": "A count of independent listings and evidence. It is not a quality score, a reciprocity tier, or a measure of weights openness.",
+    "weights": {
+      "models.dev": 3,
+      "agent-detect": 3,
+      "openrouter": 2,
+      "llm-stats": 2,
+      "artificial-analysis": 2,
+      "research": 1,
+      "hugging-face": 0
+    },
+    "bands": {
+      "self-only": "Hugging Face only",
+      "weak": "1–2 points",
+      "emerging": "3–4 points",
+      "moderate": "5–6 points",
+      "strong": "7–8 points",
+      "very-strong": "9–10 points"
+    }
+  },
+  "counts": {
+    "models": 318,
+    "builds_and_probes_skipped": 346,
+    "average_score": 1.44,
+    "bands": {
+      "self-only": 244,
+      "moderate": 8,
+      "emerging": 12,
+      "very-strong": 29,
+      "weak": 15,
+      "strong": 10
+    },
+    "sources": {
+      "hugging-face": 318,
+      "models.dev": 55,
+      "agent-detect": 33,
+      "openrouter": 35,
+      "llm-stats": 40,
+      "artificial-analysis": 37,
+      "research": 11
+    }
+  },
+  "models": {
+    "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp": {
+      "score": 10,
+      "points": 10,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/deepseek/deepseek-v4-flash-vision-exp",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/deepseekv4flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/deepseek/deepseek-v4-flash-vision-exp",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/deepseek-v4-flash-vision-exp",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/deepseek/deepseek-v4.1-flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/deepseekv41flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/deepseek-v4.1-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/deepseek/deepseek-v4.1-flash-1017",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/deepseekv41flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/deepseek-v4.1-flash-1017",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/inclusionai/ling-3.0-flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/ling30flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/inclusionai/ling-3.0-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/ling-3.0-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/ling-3-0-flash",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "MiniMaxAI/MiniMax-M2.5": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/minimax/MiniMax-M2.5",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/minimaxm25",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/minimax/minimax-m2.5",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/minimax-m2.5",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/minimax-m2-5",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "MiniMaxAI/MiniMax-M2.7": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/minimax/MiniMax-M2.7",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/minimaxm27",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/minimax/minimax-m2.7",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/minimax-m2.7",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/minimax-m2-7",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "MiniMaxAI/MiniMax-M3": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/minimax/MiniMax-M3",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/minimaxm3",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/minimax/minimax-m3",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/minimax-m3",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/minimax-m3",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "MiniMaxAI/MiniMax-M3.1-Flash": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/minimax/MiniMax-M3.1-Flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/minimaxm31flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/minimax/minimax-m3.1-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/minimax-m3.1-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "moonshotai/Kimi-K3": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/moonshotai/kimi-k3",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/kimik3",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/moonshotai/kimi-k3",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/kimi-k3",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/kimi-k3",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3.6-27B": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen3.6-27b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/qwen3627b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/qwen/qwen3.6-27b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/qwen3.6-27b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/qwen3-6-27b",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3.8-27B": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen3.8-27b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/qwen3827b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/qwen/qwen3.8-27b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/qwen3.8-27b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/qwen3-8-27b",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "thinkingmachines/Inkling-2-Small": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/thinkingmachines/inkling-2-small",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/inkling2small",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/thinkingmachines/inkling-2-small",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/inkling-2-small",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/inkling-2-small",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/DeepSeek-V4-Flash-Vision-Exp": {
+      "score": 10,
+      "points": 10,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/deepseek/deepseek-v4-flash-vision-exp",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/deepseekv4flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/deepseek/deepseek-v4-flash-vision-exp",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/deepseek-v4-flash-vision-exp",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-Vision-Exp",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/DeepSeek-V4.1-Flash-1017": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/deepseek/deepseek-v4.1-flash-1017",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/deepseekv41flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/deepseek-v4.1-flash-1017",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/DeepSeek-V4.1-Flash-1017",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/GLM-5.3": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/zhipuai/glm-5.3",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/glm53",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/z-ai/glm-5.3",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/glm-5.3",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/glm-5-3",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/GLM-5.3",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/GLM-5.3-Flash": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/zhipuai/glm-5.3-flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/glm53flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/z-ai/glm-5.3-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/glm-5.3-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/glm-5-3-flash",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/GLM-5.3-Flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/gpt-oss-120b": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/openai/gpt-oss-120b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/gptoss120b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/openai/gpt-oss-120b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/gpt-oss-120b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/gpt-oss-120b",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/gpt-oss-120b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/gpt-oss-20b": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/openai/gpt-oss-20b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/gptoss20b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/openai/gpt-oss-20b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/gpt-oss-20b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/gpt-oss-20b",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/gpt-oss-20b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/MiniMax-M3.1-Flash": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/minimax/MiniMax-M3.1-Flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/minimaxm31flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/minimax/minimax-m3.1-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/minimax-m3.1-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/MiniMax-M3.1-Flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2.5": {
+      "score": 10,
+      "points": 10,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/xiaomi/mimo-v2.5",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/mimov25",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/xiaomi/mimo-v2.5",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/mimo-v2.5",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2.5-Pro": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/xiaomi/mimo-v2.5-pro",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/mimov25pro",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/xiaomi/mimo-v2.5-pro",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/mimo-v2.5-pro",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "zai-org/GLM-5.2": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/zhipuai/glm-5.2",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/glm52",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/z-ai/glm-5.2",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/glm-5.2",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/glm-5-2",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/zai-org/GLM-5.2",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "zai-org/GLM-5.3": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/zhipuai/glm-5.3",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/glm53",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/z-ai/glm-5.3",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/glm-5.3",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/glm-5-3",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/zai-org/GLM-5.3",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "zai-org/GLM-5.3-Flash": {
+      "score": 10,
+      "points": 12,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/zhipuai/glm-5.3-flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/glm53flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/z-ai/glm-5.3-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/glm-5.3-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/glm-5-3-flash",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "moonshotai/Kimi-K3.1-Pro": {
+      "score": 9,
+      "points": 9,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/moonshotai/kimi-k3.1-pro",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/moonshotai/kimi-k3.1-pro",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/kimi-k3.1-pro",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3.6-35B-A3B": {
+      "score": 9,
+      "points": 9,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen3.6-35b-a3b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/qwen/qwen3.6-35b-a3b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/qwen3.6-35b-a3b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/qwen3-6-35b-a3b",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3.8-2.4T-A95B": {
+      "score": 9,
+      "points": 9,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen3.8-2.4t-a95b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/qwen/qwen3.8-2.4t-a95b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/qwen3.8-2.4t-a95b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Kimi-K3.1-Pro": {
+      "score": 9,
+      "points": 9,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/moonshotai/kimi-k3.1-pro",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/moonshotai/kimi-k3.1-pro",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/kimi-k3.1-pro",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Kimi-K3.1-Pro",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/granite-4.2-8B": {
+      "score": 9,
+      "points": 9,
+      "band": "very-strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/ibm/granite-4.2-8b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/ibm-granite/granite-4.2-8b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/granite-4.2-8b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/granite-4-2-8b",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/granite-4.2-8B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash-Fin": {
+      "score": 8,
+      "points": 8,
+      "band": "strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/inclusionai/ling-3.0-flash-fin",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/ling30flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/ling-3.0-flash-fin",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash-VL": {
+      "score": 8,
+      "points": 8,
+      "band": "strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/inclusionai/ling-3.0-flash-vl",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/ling30flashvl",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/inclusionai/ling-3.0-flash-vl",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "meituan-longcat/LongCat-2.5": {
+      "score": 8,
+      "points": 8,
+      "band": "strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/meituan/longcat-2.5",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/longcat25",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/longcat-2.5",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-2.5",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.1-flash": {
+      "score": 7,
+      "points": 7,
+      "band": "strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/inclusionai/ling-3.1-flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/inclusionai/ling-3.1-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/ling-3-1-flash",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.1-flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "MiniMaxAI/MiniMax-M2": {
+      "score": 7,
+      "points": 7,
+      "band": "strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/minimax/MiniMax-M2",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/minimax-m2",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/minimax-m2",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "MiniMaxAI/MiniMax-M2.1": {
+      "score": 7,
+      "points": 7,
+      "band": "strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/minimax/MiniMax-M2.1",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/minimax-m2.1",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/minimax-m2-1",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.1",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3.8-Flash-Next": {
+      "score": 7,
+      "points": 7,
+      "band": "strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen3.8-flash-next",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/qwen3.8-flash-next",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "reflection/Beam-1.0-501B-A23B": {
+      "score": 7,
+      "points": 7,
+      "band": "strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/reflection/beam-1.0-501b-a23b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/reflection/beam-1.0-501b-a23b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/beam-1.0-501b-a23b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Qwen3-Coder-Next": {
+      "score": 7,
+      "points": 7,
+      "band": "strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen3-coder-next",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/qwen/qwen3-coder-next",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/qwen3-coder-next",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Qwen3-Coder-Next",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Qwen3.8-Flash-Next": {
+      "score": 7,
+      "points": 7,
+      "band": "strong",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen3.8-flash-next",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/qwen3.8-flash-next",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash-Sante": {
+      "score": 6,
+      "points": 6,
+      "band": "moderate",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/inclusionai/ling-3.0-flash-sante",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/ling30flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Sante",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Muse-Spark-Open-816B-A42B": {
+      "score": 6,
+      "points": 6,
+      "band": "moderate",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/meta/muse-spark-open",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/musespark12",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Muse-Spark-Open-816B-A42B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2.6-Pro-RL": {
+      "score": 6,
+      "points": 6,
+      "band": "moderate",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/xiaomi/mimo-v2.6-pro",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/mimov26pro",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-2.6-1T": {
+      "score": 5,
+      "points": 5,
+      "band": "moderate",
+      "sources": [
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/ling261t",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/ling-2-6-1t",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-2.6-1T",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM3-1.7B": {
+      "score": 5,
+      "points": 5,
+      "band": "moderate",
+      "sources": [
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/lfm317b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/lfm3-1.7b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "MiniMaxAI/MiniMax-H3": {
+      "score": 5,
+      "points": 5,
+      "band": "moderate",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/minimax/MiniMax-H3",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/minimax-h3",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "stepfun-ai/Step-5-Preview": {
+      "score": 5,
+      "points": 5,
+      "band": "moderate",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/stepfun/step-5-preview",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/stepfun/step-5-preview",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/stepfun-ai/Step-5-Preview",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2-Flash": {
+      "score": 5,
+      "points": 5,
+      "band": "moderate",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/xiaomi/mimo-v2-flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/mimo-v2-flash",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-tiny": {
+      "score": 4,
+      "points": 4,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "openrouter",
+          "url": "https://openrouter.ai/inclusionai/ling-3.0-tiny",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/ling-3-0-tiny",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-tiny",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2-24B-A2B": {
+      "score": 3,
+      "points": 3,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/liquid/lfm2-24b-a2b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2-24B-A2B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "mistralai/Mistral-Large-4-1T-A52B": {
+      "score": 3,
+      "points": 3,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "agent-detect",
+          "url": "https://agent-detect.bevry.me/model/mistrallarge4",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ornith-ai/Ornith-1.5-35B-A3B": {
+      "score": 3,
+      "points": 3,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen-Image-2.1": {
+      "score": 3,
+      "points": 3,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen-image-2.1",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3.6-27B-FP8": {
+      "score": 3,
+      "points": 3,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen3.6-27b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-27B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3.6-35B-A3B-FP8": {
+      "score": 3,
+      "points": 3,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen3.6-35b-a3b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3.8-27B-FP8": {
+      "score": 3,
+      "points": 3,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen3.8-27b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B": {
+      "score": 3,
+      "points": 3,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/nvidia/nemotron-3.5-super-vl-120b-a12b",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Qwen-Image-2.1": {
+      "score": 3,
+      "points": 3,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/alibaba/qwen-image-2.1",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Qwen-Image-2.1",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2.6-Flash-RL": {
+      "score": 3,
+      "points": 3,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/xiaomi/mimo-v2.6-flash",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "zai-org/GLM-5.2-FP8": {
+      "score": 3,
+      "points": 3,
+      "band": "emerging",
+      "sources": [
+        {
+          "id": "models.dev",
+          "url": "https://models.dev/models/zhipuai/glm-5.2",
+          "weight": 3,
+          "kind": "registry",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/zai-org/GLM-5.2-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.1-flash-1019": {
+      "score": 2,
+      "points": 2,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/ling-3-1-flash-1019",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.1-flash-1019",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-flash-2.0": {
+      "score": 2,
+      "points": 2,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/ling-flash-2-0",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-flash-2.0",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ring-2.6-1T": {
+      "score": 2,
+      "points": 2,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "artificial-analysis",
+          "url": "https://artificialanalysis.ai/models/ring-2-6-1t",
+          "weight": 2,
+          "kind": "evaluation",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ring-2.6-1T",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM3-VL-2B": {
+      "score": 2,
+      "points": 2,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "llm-stats",
+          "url": "https://llm-stats.com/models/lfm3-vl-2b",
+          "weight": 2,
+          "kind": "aggregator",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM3-VL-2B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "higurashi-ai/FastDialogueSidon": {
+      "score": 1,
+      "points": 1,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "research",
+          "url": "https://arxiv.org/abs/2604.09344",
+          "weight": 1,
+          "kind": "research",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/higurashi-ai/FastDialogueSidon",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Duo-1.0-causal-base": {
+      "score": 1,
+      "points": 1,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "research",
+          "url": "https://arxiv.org/abs/2611.15131",
+          "weight": 1,
+          "kind": "research",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Duo-1.0-causal-base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Duo-1.0-distill": {
+      "score": 1,
+      "points": 1,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "research",
+          "url": "https://arxiv.org/abs/2611.15131",
+          "weight": 1,
+          "kind": "research",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Duo-1.0-distill",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Duo-1.2-causal-base": {
+      "score": 1,
+      "points": 1,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "research",
+          "url": "https://arxiv.org/abs/2611.15131",
+          "weight": 1,
+          "kind": "research",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Duo-1.2-causal-base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-flash-omni-2.0": {
+      "score": 1,
+      "points": 1,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "research",
+          "url": "https://arxiv.org/abs/2506.09344",
+          "weight": 1,
+          "kind": "research",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-flash-omni-2.0",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-flash-omni-Preview": {
+      "score": 1,
+      "points": 1,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "research",
+          "url": "https://arxiv.org/abs/2510.24821",
+          "weight": 1,
+          "kind": "research",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-flash-omni-Preview",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-UniVision-16B-A3B": {
+      "score": 1,
+      "points": 1,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "research",
+          "url": "https://arxiv.org/pdf/2510.06590",
+          "weight": 1,
+          "kind": "research",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-UniVision-16B-A3B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Realtime-Venus": {
+      "score": 1,
+      "points": 1,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "research",
+          "url": "https://arxiv.org/pdf/2609.13814",
+          "weight": 1,
+          "kind": "research",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Realtime-Venus",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/ZoomGain-4B": {
+      "score": 1,
+      "points": 1,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "research",
+          "url": "https://arxiv.org/html/2611.14076v1",
+          "weight": 1,
+          "kind": "research",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/ZoomGain-4B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/ZoomGain-9B": {
+      "score": 1,
+      "points": 1,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "research",
+          "url": "https://arxiv.org/html/2611.14076v1",
+          "weight": 1,
+          "kind": "research",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/ZoomGain-9B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "meituan-longcat/LongCat-Next": {
+      "score": 1,
+      "points": 1,
+      "band": "weak",
+      "sources": [
+        {
+          "id": "research",
+          "url": "https://arxiv.org/abs/2603.27538",
+          "weight": 1,
+          "kind": "research",
+          "self": false
+        },
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-Next",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "badtheorylabs/Tinfield-1": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/badtheorylabs/Tinfield-1",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "baidu/ERNIE-5.5-Flash-Base": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "baidu/Unlimited-OCR": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/baidu/Unlimited-OCR",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "baidu/Unlimited-OCR-2": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/baidu/Unlimited-OCR-2",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "bosonai/higgs-audio-v2-tokenizer": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/bosonai/higgs-audio-v2-tokenizer",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "bosonai/higgs-tts-3-4b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/bosonai/higgs-tts-3-4b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "bosonai/Orze-ASR-3Way": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/bosonai/Orze-ASR-3Way",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "bosonai/Qwen3-ASR-1.7B-hf-beam4": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/bosonai/Qwen3-ASR-1.7B-hf-beam4",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "bosonai/Qwen3-ASR-1.7B-hf-orze": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/bosonai/Qwen3-ASR-1.7B-hf-orze",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/dsv4-flash-0731-vision": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/dsv4-flash-0731-vision",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/husky-flash": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/husky-flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-27B-1.0": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-27B-1.0",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-27B-1.1": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-27B-1.1",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Bark-0.8B-1.0": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Bark-0.8B-1.0",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Bark-3.0": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Bark-3.0-Clean": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Clean",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Bark-3.0-Plus": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Plus",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Bark-3.0-Pro": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Pro",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Poodle-4B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Poodle-4B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Saluki-27B-1.0": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Saluki-27B-1.0",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Ternary-1.1": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Ternary-1.1",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Woof": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Woof",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Woof-2B-1.1": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Woof-2B-1.1",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Woof-4B-1.1": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Woof-4B-1.1",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/Underdog-Woof-Japanese": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/Underdog-Woof-Japanese",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ConwayResearch/woof-1.0-4B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ConwayResearch/woof-1.0-4B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/align": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/align",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/clear": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/clear",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/clips": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/clips",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/ear": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/ear",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/emo": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/emo",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/eye": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/eye",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/face": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/face",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/gist": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/gist",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/moderator": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/moderator",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/redact": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/redact",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/schemer": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/schemer",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/shapes": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/shapes",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/title": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/title",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/tongue": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/tongue",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/toxic": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/toxic",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/uhm": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/uhm",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/voz": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/voz",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "desert-ant-labs/who": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/desert-ant-labs/who",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Edge0/Audio8-ASR-Infinite": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Edge0/Audio8-ASR-Infinite",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Edge0/Audio8-TTS-Preview-0.1b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Edge0/Audio8-TTS-Preview-0.1b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Edge0/Audio8-TTS-Preview-0.6b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Edge0/Audio8-TTS-Preview-0.6b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Edge0/Audio8-TTS-Realistic-Air": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Edge0/Audio8-TTS-Realistic-Air",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Edge0/Edge0-120B-q3k": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Edge0/Edge0-120B-q3k",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Edge0/Edge0-145B-q3k": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Edge0/Edge0-145B-q3k",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Edge0/Edge0-35B-A3B-preview": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Edge0/Edge0-35B-A3B-preview",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Edge0/Edge0-8B-A1B-preview": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Edge0/Edge0-8B-A1B-preview",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "FluidInference/ace-step-webgpu-models": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/FluidInference/ace-step-webgpu-models",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "FluidInference/clef-text-0.6b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/FluidInference/clef-text-0.6b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "FluidInference/clef-vision-0.8b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/FluidInference/clef-vision-0.8b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "FluidInference/fluidaudio-web": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/FluidInference/fluidaudio-web",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "FluidInference/lfm3-audio-2b-coreai": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/FluidInference/lfm3-audio-2b-coreai",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "higurashi-ai/Haru-4B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/higurashi-ai/Haru-4B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/LBS-27B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/LBS-27B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/LemonDecider": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/LemonDecider",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-1T": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-1T",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-2.5-1T": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-2.5-1T",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-2.6-flash": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-2.6-flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash-dspark": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-dspark",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash-Fin-fp4": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin-fp4",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash-Fin-fp8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin-fp8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash-fp8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-fp8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash-Sante-fp8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Sante-fp8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash-UBTree": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-UBTree",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash-VL-fp4": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL-fp4",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-flash-VL-fp8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL-fp8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.0-tiny-UBTree": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.0-tiny-UBTree",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-3.1-flash-base": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-3.1-flash-base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ling-mini-2.0": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ling-mini-2.0",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/LLaDA-Image": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/LLaDA-Image",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/LLaDA-Image-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/LLaDA-Image-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/LLaDA-Image-Turbo": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/LLaDA-Image-Turbo",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/LLaDA-Image-Turbo-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/LLaDA-Image-Turbo-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/LLaDA-UI": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/LLaDA-UI",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/LLaDA2.2-flash": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/LLaDA2.2-flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/LLaDA2.2-mini": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/LLaDA2.2-mini",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-3.0-asr-tiny": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-3.0-asr-tiny",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-3.0-audio-flash": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-3.0-audio-flash",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-3.0-audio-tiny": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-3.0-audio-tiny",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-3.0-tts-0.5B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-3.0-tts-0.5B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-3.0-tts-tiny": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-Image-0.1-Design": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-Image-0.1-Design",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-Image-0.1-Design-Layer": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-Image-0.1-Design-Layer",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-UniAudio-16B-A3B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-UniAudio-16B-A3B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ming-UniAudio-16B-A3B-Edit": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ming-UniAudio-16B-A3B-Edit",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ring-1T": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ring-1T",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ring-2.5-1T": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ring-2.5-1T",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ring-flash-2.0": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ring-flash-2.0",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/Ring-mini-2.0": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/Ring-mini-2.0",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/SingVL_S1_4B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/SingVL_S1_4B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/UI-Venus-2-9B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/UI-Venus-2-9B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/ZwZ-2B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/ZwZ-2B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/ZwZ2-27B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/ZwZ2-27B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/ZwZ2-4B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/ZwZ2-4B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "inclusionAI/ZwZ2-9B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/inclusionAI/ZwZ2-9B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/d1-2B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/d1-2B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/d1-3B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/d1-3B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/d1-3B-w8a8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/d1-3B-w8a8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/d1-Omni-2B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/d1-Omni-2B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/d1-omni-600M": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/d1-omni-600M",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LeapBundles": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LeapBundles",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2-1.2B-Longevity": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2-1.2B-Longevity",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2-2.6B-Longevity": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2-2.6B-Longevity",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2-8B-A1B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2-8B-A1B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-1.2B-Base": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-1.2B-Instruct": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-1.2B-Thinking": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-2.6B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-24B-A2B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-24B-A2B-Base": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-Base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-24B-A2B-DSpark": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-DSpark",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-24B-A2B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-350M": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-350M",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-8B-A1B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-8B-A1B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-Audio-1.5B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-VL-3B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-3B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM2.5-VL-3B-DSpark": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-3B-DSpark",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM3-1.7B-Base": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-Base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM3-1.7B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM3-Audio-2B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM3-Omni-2B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/LFM3-VL-2B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/LFM3-VL-2B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "LiquidAI/Liquid-Codec": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/LiquidAI/Liquid-Codec",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "meituan-longcat/LongCat-2.5-W4A4": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/meituan-longcat/LongCat-2.5-W4A4",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "MiniMaxAI/MiniMax-H3-Image": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "MiniMaxAI/MiniMax-H3-Image-PE": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image-PE",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "MiniMaxAI/MiniMax-M3-MXFP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3-MXFP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "MiniMaxAI/MiniMax-Music3": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/MiniMaxAI/MiniMax-Music3",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "mistralai/LIDstral-Arabic": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/mistralai/LIDstral-Arabic",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "mistralai/Timestral-123M": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/mistralai/Timestral-123M",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "mistralai/Timestral-209M": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/mistralai/Timestral-209M",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "mistralai/Timestral-28M": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/mistralai/Timestral-28M",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "mistralai/Timestral-5M": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/mistralai/Timestral-5M",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "mistralai/Voxtral-Mini-4B-Realtime-Arabic": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-Arabic",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/drex-dlm": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/drex-dlm",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/drex-max-v1": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/drex-max-v1",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/drex-v1.5": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/drex-v1.5",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/drex-v2.0": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/drex-v2.0",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/kapitsa-27b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/kapitsa-27b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/kapitsa-35b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/kapitsa-35b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/kapitsa-4b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/kapitsa-4b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/kapitsa-9b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/kapitsa-9b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/kapitsa-bolt": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/kapitsa-bolt",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/kapitsa-clover": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/kapitsa-clover",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/kapitsa-dory": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/kapitsa-dory",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/kapitsa-flint": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/kapitsa-flint",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/kapitsa-lightning": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/kapitsa-lightning",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "nace-ai/kapitsa-super": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/nace-ai/kapitsa-super",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ornith-ai/Ornith-1.5-122B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ornith-ai/Ornith-1.5-122B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ornith-ai/Ornith-1.5-35B-A3B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ornith-ai/Ornith-1.5-35B-A3B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ornith-ai/Ornith-1.5-397B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ornith-ai/Ornith-1.5-397B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "ornith-ai/Ornith-1.5-9B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen-Drive-1.0-4B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen-Drive-1.0-4B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen-Image-2.1-PE-I2I": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen-Image-2.1-PE-T2I": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen-Image-2.1-Turbo": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3.8-2.4T-A95B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3.8-Flash-Next-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3Guard-Stream-0.6B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3Guard-Stream-0.6B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3Guard-Stream-4B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3Guard-Stream-4B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Qwen/Qwen3Guard-Stream-8B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Qwen/Qwen3Guard-Stream-8B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "reflection/Beam-1.0-501B-A23B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "SyzygyResearch/Mach-1-Additive-35B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/SyzygyResearch/Mach-1-Additive-35B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "SyzygyResearch/Mach-1-Additive-35B-Multimodal": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/SyzygyResearch/Mach-1-Additive-35B-Multimodal",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "SyzygyResearch/Mach-2-Additive-Medium": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/SyzygyResearch/Mach-2-Additive-Medium",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "SyzygyResearch/Mach-Boom": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/SyzygyResearch/Mach-Boom",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "thinkingmachines/Inkling-2-Small-MXFP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small-MXFP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/embeddinggemma-2": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/embeddinggemma-2",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/flux-3-image-klein": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/flux-3-image-klein",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/flux-3-image-klein-base": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/flux-3-image-klein-base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/flux-3-image-klein-base-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/flux-3-image-klein-base-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/flux-3-image-klein-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/flux-3-image-klein-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/FLUX.1-dev-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/FLUX.1-dev-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/FLUX.1-Krea-dev-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/FLUX.1-Krea-dev-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/FLUX.1-schnell-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/FLUX.1-schnell-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/FLUX.2-dev-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/FLUX.2-dev-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/FLUX.2-klein-4B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/FLUX.2-klein-4B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/GLM-5.3-Flash-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/HiDream-I1-Full-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/HiDream-I1-Full-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/HunyuanImage-2.1-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/HunyuanImage-2.1-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/ideogram-4-fp8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/ideogram-4-fp8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Krea-2-Turbo-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Krea-2-Turbo-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/LFM2.5-230M": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/LFM2.5-230M",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/LFM2.5-24B-A2B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/LFM2.5-24B-A2B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/LTX-2-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/LTX-2-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/LTX-2.3-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/LTX-2.3-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/LTX-2.5-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/LTX-2.5-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Lumina-Image-2.0-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Lumina-Image-2.0-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/MiniMax-H3-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/MiniMax-H3-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/MiniMax-H3-Image-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/MiniMax-H3-Image-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Mistral-Large-4-1T-A52B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Mistral-Large-4-1T-A52B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/MOSS-Image-Base-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/MOSS-Image-Base-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/MOSS-Image-SFT-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/MOSS-Image-SFT-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Qwen-Image-2.1-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Qwen-Image-2.1-Turbo-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Qwen-Image-2512-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Qwen-Image-2512-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Qwen-Image-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Qwen-Image-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Wan2.2-T2V-A14B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Wan2.2-T2V-A14B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Wan2.2-TI2V-5B-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Wan2.2-TI2V-5B-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "unsloth/Z-Image-Turbo-FP8": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/unsloth/Z-Image-Turbo-FP8",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/granite-4.2-8b-analyst-lora-peft": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/granite-4.2-8b-analyst-lora-peft",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/granite-4.2-8b-builder-lora-peft": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/granite-4.2-8b-builder-lora-peft",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/granite-4.2-8b-researcher-lora-peft": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/granite-4.2-8b-researcher-lora-peft",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/TwIL-8B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/TwIL-8B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/TwIL-LM2": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/TwIL-LM2",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/TwIL-LM3": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/TwIL-LM3",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/TwIL-LM3-Pro": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/TwIL-LM3-Pro",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/TwIL-LM3-Pro-LiteRT-LM": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/TwIL-LM3-Pro-LiteRT-LM",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/webAI-ColVec1-9b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/webAI-ColVec1-9b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/webAI-ColVec1.1-4b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/webAI-ColVec1.1-4b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "webAI-Official/webAI-ColVec1.1-8b": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/webAI-Official/webAI-ColVec1.1-8b",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Xenova/bert-base-NER": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Xenova/bert-base-NER",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Xenova/clip-vit-base-patch32": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Xenova/clip-vit-base-patch32",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Xenova/swin2SR-classical-sr-x2-64": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Xenova/swin2SR-classical-sr-x2-64",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Xenova/trocr-small-handwritten": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Xenova/trocr-small-handwritten",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "Xenova/vit-gpt2-image-captioning": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/Xenova/vit-gpt2-image-captioning",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-7B-Base": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-7B-Base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-7B-MTPs": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-7B-MTPs",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-7B-RL": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-7B-RL",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-7B-RL-0530": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-7B-RL-0530",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-7B-RL-Zero": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-7B-RL-Zero",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-7B-SFT": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-7B-SFT",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-Audio-7B-Base": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-Audio-7B-Base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-Audio-7B-Instruct": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-Audio-7B-Instruct",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-Audio-Tokenizer": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-Audio-Tokenizer",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2-Flash-Base": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash-Base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2.5-ASR": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-ASR",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2.5-Base": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2.5-Pro-Base": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-Base",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Distill-Qwen-9B",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2.6-Flash-MOPD": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-MOPD",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-V2.6-Pro-MOPD": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-MOPD",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-VL-7B-RL": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-VL-7B-RL",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-VL-7B-RL-2508": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-VL-7B-RL-2508",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-VL-7B-SFT": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-VL-7B-SFT",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "XiaomiMiMo/MiMo-VL-7B-SFT-2508": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/XiaomiMiMo/MiMo-VL-7B-SFT-2508",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    },
+    "zai-org/GLM-OCR": {
+      "score": 0,
+      "points": 0,
+      "band": "self-only",
+      "sources": [
+        {
+          "id": "hugging-face",
+          "url": "https://huggingface.co/zai-org/GLM-OCR",
+          "weight": 0,
+          "kind": "host",
+          "self": true
+        }
+      ],
+      "checked_at": "2026-11-14"
+    }
+  }
+}
