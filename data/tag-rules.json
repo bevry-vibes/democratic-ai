@@ -603,7 +603,20 @@
       "-ov",
       "-quant",
       "-dflash",
-      "-server"
+      "-server",
+      "-fp8",
+      "-fp4",
+      "-mxfp8",
+      "-w4a4",
+      "-w8a8",
+      "-q3k",
+      "-q4k",
+      "-q5k",
+      "-q6k",
+      "-litert-lm",
+      "-coreai",
+      "-lora",
+      "-peft"
     ],
     "status:probe": [
       "-singprobe"
@@ -621,16 +634,31 @@
       "-int4",
       "-int8",
       "-quant",
-      "-dflash"
+      "-dflash",
+      "-fp8",
+      "-fp4",
+      "-mxfp8",
+      "-w4a4",
+      "-w8a8",
+      "-q3k",
+      "-q4k",
+      "-q5k",
+      "-q6k"
     ],
     "relation:conversion": [
       "-mlx",
       "-coreml",
       "-onnx",
-      "-ov"
+      "-ov",
+      "-litert-lm",
+      "-coreai"
     ],
     "relation:probe": [
       "-singprobe"
+    ],
+    "relation:adapter": [
+      "-lora",
+      "-peft"
     ]
   },
   "model_overrides": {

@@ -68,7 +68,8 @@
         "text": "Text.",
         "audio": "Audio.",
         "image": "Image.",
-        "video": "Video."
+        "video": "Video.",
+        "pdf": "PDF documents."
       }
     },
     "runtime": {
