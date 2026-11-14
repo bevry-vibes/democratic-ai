@@ -1932,17 +1932,17 @@ aside > .scorecard-overall {
 }
 
 .score-performance {
-  --pill-bg: #f4dfe5;
-  --pill-border: #d9b4c0;
-  --pill-text: #6e2740;
-  --pill-count: #a13b6a;
+  --pill-bg: #f2dde2;
+  --pill-border: #d8aeb8;
+  --pill-text: #6a2138;
+  --pill-count: #8f2f4a;
 }
 
 .score-research {
-  --pill-bg: #dceceb;
-  --pill-border: #b3d3d1;
-  --pill-text: #245b59;
-  --pill-count: #2f7d7a;
+  --pill-bg: #dfe6f0;
+  --pill-border: #b8c8da;
+  --pill-text: #2d4763;
+  --pill-count: #3f5b7a;
 }
 
 .score-syndication {
@@ -1953,10 +1953,10 @@ aside > .scorecard-overall {
 }
 
 .score-overall {
-  --pill-bg: #f3e8ce;
-  --pill-border: #dcc69a;
-  --pill-text: #6f5514;
-  --pill-count: #a07a12;
+  --pill-bg: #e8e4dc;
+  --pill-border: #cbc3b6;
+  --pill-text: #3f3a33;
+  --pill-count: #4a443b;
 }
 
 .score-coverage {
