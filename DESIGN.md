@@ -53,7 +53,7 @@ These rules resolve the cases that confuse readers and models alike.
 3. **A permissive licence is not a requirement for reciprocity.** Apache-2.0 and MIT give value to the commons. A reciprocal licence is stronger, but permissiveness is not extraction.
 4. **A conditional licence limits the gift.** Non-commercial terms, user caps, and use restrictions mean the commons cannot reuse the work freely. The tier records the limit, not a judgement on the giver.
 5. **Gated is not closed.** Weights behind a click-through licence are available. Record `gated: true`. Record `closed` only when the weights are unavailable.
-6. **A derivative cannot be more open than its base.** Record the lineage. A restrictive licence on a permissive base is a real change in terms, and it must be visible.
+6. **A derivative cannot grant more reuse rights than its base.** Record the lineage. A restrictive licence on a permissive base is a real change in terms, and it must be visible.
 7. **Provider conduct is separate from model openness.** A model can be open-weight while a provider trains on your prompts, and a closed model can have a zero-training provider. Track both.
 8. **Silence is unknown.** A missing data statement is not evidence of open data. It is not evidence of closed data either. Record `unknown`.
 9. **Popularity is context, not quality.** Downloads and likes are signals of use. They do not verify openness.
@@ -67,7 +67,7 @@ The tier is the headline result. It is computed from three components: what the 
 
 | Component | Values | Meaning |
 | --- | --- | --- |
-| `weights` | `open`, `open-weight`, `closed`, `unknown` | `open` also publishes the training code and data. `open-weight` publishes the parameters only. |
+| `weights` | `open-weight`, `closed`, `unknown` | `open-weight` means the parameters are downloadable, including behind a gated licence. |
 | `training_data` | `open`, `documented`, `closed`, `unknown` | `open` publishes a usable dataset. `documented` describes the sources and pipeline without releasing the data. |
 | `training_code` | `open`, `partial`, `closed`, `unknown` | `partial` publishes inference or evaluation code only. |
 | `license.class` | `reciprocal`, `permissive`, `use-restricted`, `non-commercial`, `proprietary`, `unknown` | The legal terms, not the licence name. |
@@ -262,7 +262,9 @@ The catalogue serves three consumer classes.
 
 The machine contract is the versioned JSON API. The human contract is the site and the README. The two must agree, and CI enforces the agreement.
 
-## Decisions log
+## Proposed decisions log
+
+These entries record the design proposed in the current plan. Rename this section to “Decisions log” when the owner accepts them.
 
 - **2026-11-14** — The defining test is reciprocity with the commons, not OSI compliance. Open weights are necessary but not sufficient; training-data openness is the distinguishing axis.
 - **2026-11-14** — Tiers are computed from component values. Categories are editorial. The two axes stay separate.

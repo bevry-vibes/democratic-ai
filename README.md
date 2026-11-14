@@ -25,7 +25,7 @@ A model can release its weights and still keep its training data and recipe secr
 | **Closed** | The weights are not available. |
 | **Unproven** | The evidence is not sufficient to make a determination. |
 
-The tiers describe what you can reuse. They are not a judgement on the worth of a project. A conditional licence, such as a non-commercial term or a user cap, makes a model **Shared** even when the weights are open. Each record shows the exact licence, the evidence, and the date of the last check.
+The tiers describe what you can reuse. They are not a judgement on the worth of a project. When the weights are available, a conditional licence — such as a non-commercial term or a user cap — makes the model **Shared** even when the weights are open. Each record shows the exact licence, the evidence, and the date of the last check.
 
 ## Browse by context
 

@@ -158,7 +158,7 @@ A model moves between tiers only through a recorded evidence change. The journal
 
 ### 2. Categories
 
-Two axes, as DESIGN.md records:
+Three facets, as DESIGN.md records:
 
 - **Tier** — computed: `commons`, `reciprocal`, `shared`, `closed`, `unproven`.
 - **Domain** — editorial: `language`, `code`, `vision`, `speech`, `multimodal`, `embeddings`, `datasets`, `tooling`, `evaluation`, `governance`.
@@ -197,7 +197,7 @@ The data model is a set of JSON records with a JSON Schema per entity kind. The 
     "url": "https://huggingface.co/allenai/Olmo-3.1-32B-Think/blob/main/LICENSE"
   },
   "openness": {
-    "weights": "open",
+    "weights": "open-weight",
     "training_data": "open",
     "training_code": "open",
     "tier": "commons",
