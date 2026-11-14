@@ -160,6 +160,22 @@ The first pass covered 664 Hugging Face models. The rules gave 603 a task tag. C
 
 A model in review is not guessed. It stays visible with its licence, runtime, family, and org tags, and it reads `unmeasured` for the task.
 
+### Derivatives and builds
+
+A build is not a new model. A GGUF, MLX, CoreML, ONNX, fp8, or 2-bit release is a packaging of a base model. It inherits the base model's task and terms. It does not get a separate model page.
+
+A model page is created only when:
+
+- it is a root release;
+- it changes the capability or the licence enough to stand alone; or
+- it has its own card, announcement, or benchmark that a consumer needs.
+
+A build attaches to the base model as a `builds` entry with its runtime, quantization, size, and link. A probe (`status:probe`) is not a product release and never gets a page.
+
+The first pull shows why this matters: 314 of 664 Hugging Face items are builds and 29 are probes. They are not 343 models. They are packaging around a smaller set of roots.
+
+No card, no announcement, and no benchmark means no page. The catalogue is not a mirror of the Hugging Face firehose.
+
 ### Overlay reports
 
 An evaluation is downstream. The core index is useful without it.
@@ -235,6 +251,8 @@ A model record carries these groups:
 12. **Capability evidence and openness evidence are separate.** A benchmark result never raises a tier, and a licence never proves a capability.
 13. **Tags are additive.** No model has one true category. A model can carry several jobs, modalities, and runtimes.
 14. **Reports are overlays.** The index is complete without them. A missing report means the use case is unmeasured, not that the model is unfit.
+15. **A build is not a model.** A quantized, converted, or packaged release attaches to its base model. It does not get its own page.
+16. **No evidence, no page.** A card, an announcement, or a benchmark is the minimum. Silence is not an invitation to guess.
 
 ### Canonical format
 

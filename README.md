@@ -61,7 +61,7 @@ Tags let a model belong to several jobs at once.
 - **Writes code and drives agents** — tool-calling models that fit consumer hardware.
 - **Builds on the commons** — datasets, evaluations, and runtimes that make openness auditable.
 
-Each model record lists its tags, licence, lineage, and hardware needs. You can filter by tier, task, modality, runtime, language, licence class, and device.
+Each model record lists its tags, licence, lineage, and hardware needs. You can filter by tier, task, modality, runtime, language, licence class, and device. A model page also links to its models.dev entry and its agent-detect entry when one exists.
 
 ## Read the journal
 

@@ -435,6 +435,8 @@ The data model is a set of JSON records with a JSON Schema per entity kind. The 
 }
 ```
 
+External links: `scripts/links/` joins the models.dev API and the agent-detect index into `data/links.json`. The model record carries `access.models_dev` and `access.agent_detect` when an entry exists. A build inherits its base model's links; it does not get a separate page.
+
 A source record keeps the evidence addressable:
 
 ```json
@@ -499,6 +501,8 @@ data/
   discoveries/<id>.json
   sources/<id>.json
   tags.json                   tag vocabulary and definitions
+  tag-rules.json              rules for the tagging pass
+  links.json                  generated models.dev and agent-detect links
   feeds.json                  verified feeds and APIs (discovery sources)
   fetch-targets.json          what the fetcher pulls
   raw/                        source snapshots, never overwritten
@@ -518,7 +522,8 @@ schemas/
   report.schema.json
 scripts/
   fetch/                      one module per source (implemented)
-  tag.ts                      the tagging pass (phase 1)
+  tag/                        rules-first tagging plus the Clef gate (implemented)
+  links/                      models.dev and agent-detect link resolver (implemented)
   build.ts                    validate, compute tiers, generate
   check.ts                    build in check mode
   propose.ts                  diff snapshots into proposals
@@ -601,7 +606,7 @@ Routes:
 | `/find/` | Filter by tags and constraints; show verdicts when an overlay report exists. |
 | `/reports/` and `/reports/<id>/` | Optional overlay reports: the use case, evidence, recommendation, and caveats. |
 | `/models/` | The full catalogue with filters. |
-| `/models/<id>/` | The fact sheet: tier, licence, openness, lineage, access, capabilities, tags, reports, and sources. |
+| `/models/<id>/` | The fact sheet: tier, licence, openness, lineage, access, capabilities, tags, reports, sources, and links to models.dev and agent-detect when they exist. |
 | `/organizations/` and `/organizations/<id>/` | The labs and foundations, with their entities and conduct. |
 | `/tags/` and `/tags/<namespace>/<value>/` | Browse by tag. |
 | `/journal/` | The chronological record. |
@@ -666,7 +671,7 @@ The API is a set of static JSON files. The contract is versioned by path.
 | Path | Contents |
 | --- | --- |
 | `/api/v1/index.json` | A compact list of every entity: id, name, kind, tier, tags, licence, updated date. |
-| `/api/v1/models/<id>.json` | The full model record, including capabilities, footprint, and tags. |
+| `/api/v1/models/<id>.json` | The full model record, including capabilities, footprint, tags, and external model links. |
 | `/api/v1/organizations/<id>.json` | The full organization record. |
 | `/api/v1/datasets/<id>.json` | The full dataset record. |
 | `/api/v1/tools/<id>.json` | The full tool record. |
@@ -685,6 +690,8 @@ Rules:
 - The compact index is the recommended entry point for consumers that need a shortlist.
 - `Access-Control-Allow-Origin: *` on `/api/*`.
 - `Cache-Control: public, max-age=300` on the API and the feeds.
+
+Model records include `access.models_dev` and `access.agent_detect` when the link resolver finds an entry. The resolver reads the models.dev API and the agent-detect index, and writes `data/links.json`. A build inherits the base model links.
 
 The static API returns the full index; the consumer filters tags. Reports are optional. An empty `/api/v1/reports.json` is valid: it means no use case has been measured yet. The site and a programmatic consumer use the same tags.
 
@@ -762,14 +769,22 @@ First results on the 2026-11-14 pull:
 
 | Metric | Value |
 | --- | --- |
-| Models | 664 |
-| Models with a task tag from the rules | 603 |
-| Models sent to Clef | 78 |
-| Tasks accepted by Clef at 0.8 | 17 models |
-| Models still in review | 61 |
-| Clef input cost | about USD 0.08 |
+| Hugging Face model items | 664 |
+| Builds (`status:build`) | 314 |
+| Probes (`status:probe`) | 29 |
+| Models with a task tag from the rules | 598 |
+| Models sent to Clef after build and probe exclusion | 26 |
+| Tasks accepted by Clef at 0.8 | 12 models |
+| Real models still in review | 14 |
+| Clef input cost so far | about USD 0.08 |
 
 A model in review keeps its licence, runtime, family, and org tags. It has no task tag, so it reads `unmeasured` for a task. It is not guessed.
+
+The 14 remaining models are real releases, not builds: XiaomiMiMo MiMo-Audio (3), inclusionAI Duo (3), SingVL, Ming-3.0-audio-flash, Realtime-Venus, AI-Transparency, Ming-UniAudio (2), Higurashi FastDialogueSidon, and unsloth sam3.1.
+
+The link resolver (`scripts/links/`) joined 149 models on the first run: 136 have a models.dev entry and 79 have an agent-detect entry. It strips build suffixes, so a GGUF, MLX, or CoreML build inherits its base model's links. Every model page shows the links when they exist.
+
+The build/probe distinction answers the “why build these?” question. 343 of 664 items are packaging or probes. They are not separate models, and they do not get separate pages. They attach to their base model as build entries. The catalogue records roots and notable derivatives, not the Hugging Face firehose.
 
 ### 11. CI/CD
 
