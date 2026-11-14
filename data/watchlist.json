@@ -36,7 +36,8 @@
       "x_bio": "Your Private Personal AI. 100% on device\nAsk your friend for an invite to Underdog 🦴\nthe Dog host of the Dogpark Podcast",
       "x_followers": 10126,
       "notes": "Consumer on-device models; the Saluki 27B build is a 2-bit Qwen3.8 derivative.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "edge0-ai",
@@ -63,7 +64,8 @@
       "x_bio": "https://t.co/YJ88R0IWCp | On-device foundation models. High intelligence, low memory, low power",
       "x_followers": 871,
       "notes": "Streaming-MoE runtime and quantised model builds for consumer hardware.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": true
     },
     {
       "id": "desert-ant-labs",
@@ -92,7 +94,8 @@
       "x_bio": "European AI lab building opinionated on-device models and SDKs. Little brains in every product.",
       "x_followers": 4232,
       "notes": "Small on-device models with Swift, Kotlin, and JavaScript SDKs; source-available weights.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": true
     },
     {
       "id": "xiaomi-mimo",
@@ -118,7 +121,8 @@
       "x_bio": "",
       "x_followers": 3418,
       "notes": "Xiaomi MiMo model family for on-device and agent use.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "ornith-ai",
@@ -141,7 +145,8 @@
       "x_bio": "Once you have tasted flight, you will walk the earth with your eyes turned skywards.",
       "x_followers": 20323,
       "notes": "Ornith 1.5 model family; role inferred from the Hugging Face organisation and profile bio.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "pi",
@@ -166,7 +171,8 @@
       "x_bio": "There are many agent harnesses, but this one is yours",
       "x_followers": 61942,
       "notes": "Agent harness.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "moonshot-ai",
@@ -191,7 +197,8 @@
       "x_bio": "Built by Moonshot AI to empower everyone to be superhuman. \nPR: globalpr@moonshot.ai\nDC: https://t.co/wBsBTn6fmE",
       "x_followers": 393774,
       "notes": "Kimi model family; the developer and main accounts are merged into one entry.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": true
     },
     {
       "id": "bad-theory-labs",
@@ -216,7 +223,8 @@
       "x_bio": "making intelligence efficient enough to own.",
       "x_followers": 4298,
       "notes": "Efficient models; profile bio says \"making intelligence efficient enough to own\".",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "sahil-mahendrakar",
@@ -237,7 +245,8 @@
       "x_bio": "building something new with @suhaaspk\nprev. @aws, @columbia ('24)",
       "x_followers": 276,
       "notes": "Individual; profile says \"building something new\", previously AWS and Columbia.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "syzygy-research",
@@ -261,7 +270,8 @@
       "x_bio": "Scaling Intelligence Density",
       "x_followers": 1430,
       "notes": "Research lab; profile bio says \"Scaling Intelligence Density\".",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "zcode",
@@ -286,7 +296,8 @@
       "x_bio": "🎉 The Z Code community is here! We've created a Discord server for all ZCode users — https://t.co/oK1pV02Prf",
       "x_followers": 20783,
       "notes": "Agent harness from Z.ai; open-source client and runtime, Apache-2.0.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "opencode",
@@ -311,7 +322,8 @@
       "x_bio": "The open source coding agent",
       "x_followers": 232832,
       "notes": "Open-source coding agent.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "simplifying-ai",
@@ -332,7 +344,8 @@
       "x_bio": "Helping you master AI daily with step-by-step AI guides, latest news & practical tools • DM for Collabs",
       "x_followers": 40739,
       "notes": "AI news and guides; a discovery source, not a model source.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "meituan-longcat",
@@ -355,7 +368,8 @@
       "x_bio": "Official account of Meituan LongCat LLM 🐱\nJoin our Discord 👉 https://t.co/W14Lg4KfOg\nSubscribe our YouTube 👉 https://t.co/xexreQlwqZ",
       "x_followers": 15206,
       "notes": "LongCat model family from Meituan.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "fluid-voice",
@@ -381,7 +395,8 @@
       "x_bio": "AI Research lab focused on  on-device dictation and more.\nTry out FluidVoice at https://t.co/RRPbdflERx\n\n500K downloads. 12K GitHub stars.",
       "x_followers": 3992,
       "notes": "On-device dictation and speech models.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "ant-ling",
@@ -405,7 +420,8 @@
       "x_bio": "MoE model series with foundation (Ling), reasoning (Ring) and any-to-any (Ming) from Ant Group’s AGI initiative, @TheInclusionAI.  https://t.co/6LEkFlo2cq",
       "x_followers": 16204,
       "notes": "Ling, Ring, and Ming model families from Ant Group.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": true
     },
     {
       "id": "prism-ml",
@@ -430,7 +446,8 @@
       "x_bio": "Centering AI research on efficiency.\n\nhttps://t.co/88MQHGCeFD",
       "x_followers": 29783,
       "notes": "Efficient model research; the Bonsai ternary model family.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "nace-ai",
@@ -455,7 +472,8 @@
       "x_bio": "Small models that learn your business, run it, and are yours.",
       "x_followers": 2258,
       "notes": "Small models for private, on-device business use.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "kilo",
@@ -480,7 +498,8 @@
       "x_bio": "Kilo is the all-in-one agentic engineering platform. \n5M+ Kilo Coders. Open source since day one!",
       "x_followers": 29326,
       "notes": "Open-source agentic engineering platform, acquired by Anaconda.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "zixuan-li",
@@ -502,7 +521,8 @@
       "x_followers": 40522,
       "notes": "Individual; profile names Z.ai.",
       "verified_at": "2026-11-14",
-      "affiliation": "zai"
+      "affiliation": "zai",
+      "hf_followed": false
     },
     {
       "id": "stepfun",
@@ -527,7 +547,8 @@
       "x_bio": "Scale-up possibilities for everyone.\nAPI Platform: https://t.co/XlaiCy4DGm\nHuggingFace: https://t.co/isMgbv7XSm",
       "x_followers": 16758,
       "notes": "Step model family.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": true
     },
     {
       "id": "wan",
@@ -550,7 +571,8 @@
       "x_bio": "Video & Image Generation Model from @Ali_TongyiLab\nDiscord: https://t.co/RI6qTtAnFA",
       "x_followers": 32248,
       "notes": "Video and image generation models from Alibaba Tongyi Lab.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "llm-stats",
@@ -573,7 +595,8 @@
       "x_bio": "Independent AI evaluations lab.\n\nWe measure performance on real world tasks.",
       "x_followers": 1974,
       "notes": "Independent evaluations on real-world tasks.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "openmoss",
@@ -597,7 +620,8 @@
       "x_bio": "An open research lab building artificial general intelligence.\n\nJoin Discord ⚡️ https://t.co/FLvN5uXGlK",
       "x_followers": 1039,
       "notes": "Open research lab; MOSS model family.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "goose",
@@ -622,7 +646,8 @@
       "x_bio": "Your native open source AI agent. Desktop app, CLI, and API — for code, workflows, and everything in between.",
       "x_followers": 14195,
       "notes": "Open-source native AI agent from Block.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "cline",
@@ -647,7 +672,8 @@
       "x_bio": "The open source coding agent that takes over your editor, terminal, and browser to complete work autonomously.\n\nnpm i -g cline",
       "x_followers": 81619,
       "notes": "Open-source coding agent.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "minimax",
@@ -671,7 +697,8 @@
       "x_bio": "Code: @MiniMax_Code \nMiniMax Design: @Hailuo_AI\nAPI: https://t.co/fHRdSV73Hr\nM Plan: https://t.co/XfJWSyauda",
       "x_followers": 131577,
       "notes": "MiniMax model family.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": true
     },
     {
       "id": "reflection",
@@ -694,7 +721,8 @@
       "x_bio": "Make intelligence open and accessible to all",
       "x_followers": 27982,
       "notes": "Open-model lab; the Beam model family.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "qwen",
@@ -719,7 +747,8 @@
       "x_bio": "Open foundation models for AGI.",
       "x_followers": 316388,
       "notes": "Open foundation models from Alibaba.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": true
     },
     {
       "id": "higurashi",
@@ -742,7 +771,8 @@
       "x_bio": "Scaling Speech AI",
       "x_followers": 1158,
       "notes": "Speech AI model lab.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "artificial-analysis",
@@ -765,7 +795,8 @@
       "x_bio": "Independent analysis of AI",
       "x_followers": 178644,
       "notes": "Independent AI analysis and benchmarks.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "unsloth",
@@ -788,7 +819,8 @@
       "x_bio": "Run and train models locally with the Unsloth Desktop app. 🦥 https://t.co/2kXqhhvdCD",
       "x_followers": 105519,
       "notes": "Local training and inference tooling.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": true
     },
     {
       "id": "zai",
@@ -811,7 +843,8 @@
       "x_bio": "The AI Lab behind GLM models, dedicated to inspiring the development of AGI to benefit humanity.\nhttps://t.co/gOw7WpwkJt\nhttps://t.co/ot9sGVXU8x",
       "x_followers": 169399,
       "notes": "The GLM model family.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": true
     },
     {
       "id": "deepseek",
@@ -834,7 +867,8 @@
       "x_bio": "Unravel the mystery of AGI with curiosity. Answer the essential question with long-termism.",
       "x_followers": 1209048,
       "notes": "DeepSeek model family.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": true
     },
     {
       "id": "mistral",
@@ -857,7 +891,8 @@
       "x_bio": "Frontier AI in your hands. Get work done with @MistralVibe at https://t.co/JsGnCVMUFq.",
       "x_followers": 228970,
       "notes": "Mistral model family.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "arena",
@@ -880,7 +915,8 @@
       "x_bio": "Where AI meets the real world. We measure and advance the frontier of AI through community-driven evaluation. We’re hiring → https://t.co/XBZCrseaWF",
       "x_followers": 241453,
       "notes": "Community-driven model evaluation.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "liquid-ai",
@@ -905,7 +941,8 @@
       "x_bio": "Build efficient general-purpose AI at every scale.",
       "x_followers": 47721,
       "notes": "Efficient general-purpose models, including the LFM family.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "moonbit",
@@ -931,7 +968,8 @@
       "x_bio": "The Language and Toolchain for Agents at Scale\nReliable, readable, and fast\nDownload: https://t.co/e7mHbvYClv",
       "x_followers": 3624,
       "notes": "Language and toolchain for agents.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "bigcode",
@@ -956,7 +994,8 @@
       "x_bio": "Open and responsible research and development of large language models for code. #BigCodeProject run by @huggingface + @ServiceNowRSRCH",
       "x_followers": 9017,
       "notes": "Open code models and data, run by Hugging Face and ServiceNow Research.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "webai",
@@ -982,7 +1021,8 @@
       "x_bio": "Sovereign AI for enterprises. Build AI you own on infrastructure you control. Private, specialized models that run where your data lives.",
       "x_followers": 6789,
       "notes": "Sovereign AI infrastructure and models for enterprises.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": true
     },
     {
       "id": "truefoundry",
@@ -1005,7 +1045,8 @@
       "x_bio": "TrueFoundry is a unified platform with an enterprise-grade AI Gateway - combining LLM, MCP, and Agent Gateway to securely manage, route, and govern AI workloads",
       "x_followers": 1287,
       "notes": "Enterprise AI gateway and orchestration.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "baidu",
@@ -1028,7 +1069,8 @@
       "x_bio": "Baidu Inc. is a leading AI company with a strong Internet foundation. \nMedia Contact: intlcomm@baidu.com",
       "x_followers": 151387,
       "notes": "ERNIE model family.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "hugging-face",
@@ -1052,7 +1094,8 @@
       "x_bio": "The AI community building the future. https://t.co/TpiXQMQ9rZ",
       "x_followers": 844362,
       "notes": "Open model, dataset, and tooling platform.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "xenova",
@@ -1078,7 +1121,8 @@
       "x_followers": 21247,
       "notes": "Individual; builds Transformers.js and browser-side inference.",
       "verified_at": "2026-11-14",
-      "affiliation": "hugging-face"
+      "affiliation": "hugging-face",
+      "hf_followed": false
     },
     {
       "id": "fabio-angela",
@@ -1099,7 +1143,8 @@
       "x_bio": "L'arroganza umilia anche quando hai ragione, l'umiltà esalta anche quando hai torto.\n\nLongtime developer, so many ideas, so much passion, too much maybe!",
       "x_followers": 319,
       "notes": "Individual developer and community member.",
-      "verified_at": "2026-11-14"
+      "verified_at": "2026-11-14",
+      "hf_followed": false
     },
     {
       "id": "samuel-zeng",
@@ -1123,8 +1168,62 @@
       "x_followers": 5071,
       "notes": "Founder; profile links to Edge0.",
       "verified_at": "2026-11-14",
-      "affiliation": "edge0-ai"
+      "affiliation": "edge0-ai",
+      "hf_followed": false
+    },
+    {
+      "id": "boson-ai",
+      "name": "Boson AI",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [],
+      "x_url": null,
+      "website": "https://boson.ai/",
+      "hugging_face": "bosonai",
+      "github": null,
+      "domains": [
+        "language",
+        "speech"
+      ],
+      "contexts": [],
+      "x_bio": null,
+      "x_followers": null,
+      "notes": "Followed on Hugging Face; not on the X list. The Higgs Audio family comes from Boson AI.",
+      "hf_followed": true,
+      "verified_at": "2026-11-14"
+    },
+    {
+      "id": "thinking-machines-lab",
+      "name": "Thinking Machines Lab",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [],
+      "x_url": null,
+      "website": "https://thinkingmachines.ai/",
+      "hugging_face": "thinkingmachines",
+      "github": null,
+      "domains": [
+        "language",
+        "multimodal"
+      ],
+      "contexts": [],
+      "x_bio": null,
+      "x_followers": null,
+      "notes": "Followed on Hugging Face; not on the X list. The Inkling model family is in agent-detect.",
+      "hf_followed": true,
+      "verified_at": "2026-11-14"
     }
   ],
-  "notes": "Seeded from the owner's public X list on 2026-11-14. The two Kimi accounts are merged into one entity. Follower counts are context, not a quality signal."
+  "notes": "Seeded from the owner's public X list and Hugging Face following list on 2026-11-14. The two Kimi accounts are merged into one entity. Follower counts are context, not a quality signal.",
+  "hugging_face_following": {
+    "username": "balupton",
+    "url": "https://huggingface.co/balupton?following=true",
+    "fetched_at": "2026-11-14",
+    "org_count": 13,
+    "snapshot": "data/raw/hf/users/balupton/2026-11-14.following-orgs.json"
+  }
 }

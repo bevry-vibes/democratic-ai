@@ -44,8 +44,8 @@ The owner asked for:
 
 | Source | What happens without credentials | What is needed | Recommendation |
 | --- | --- | --- | --- |
-| X list `2084302656580034676` | `x.com` redirects to a login page. There is no public member list. | An X developer app attached to a Project, with pay-per-use credits. The list lookup and member endpoints accept app-only auth; the app only needs credits. | Start from a manual member snapshot that the owner supplies. Add an authenticated sync later. Never block the build on X. |
-| Hugging Face `balupton/following` | The HTML page returns 401. The public overview reports `numFollowing: 0` and `numFollowingOrgs: 13`. | An authenticated Hugging Face session or a `HF_TOKEN` with the right scope. | Treat the 13 followed organisations as the seed. Use a committed snapshot, refresh it with a token when one is documented. |
+| X list `2084302656580034676` | `x.com` redirects to a login page. There is no public member list. | An X developer app attached to a Project, with pay-per-use credits. The list lookup and member endpoints accept app-only auth. | Resolved on 2026-11-14: credits added, 47 members cached under `data/raw/x/`. |
+| Hugging Face `balupton/following` | The HTML page returns 401. The public overview reports `numFollowing: 0` and `numFollowingOrgs: 13`. | A fine-grained access token with gated-repo read. The documented `/api/users/{username}/following/orgs` endpoint works. | Resolved on 2026-11-14: the token returned 13 organisations, cached under `data/raw/hf/`. |
 
 #### Credential test (2026-11-14)
 
@@ -64,6 +64,22 @@ The second result is the useful one: the list lookup and member endpoints accept
 
 `GET /2/users/me` is not needed. The list id is known, so the fetcher can start at `GET /2/lists/<id>` and continue to `/members`. Until credits exist, the list is a manual seed.
 
+#### Hugging Face credential test (2026-11-14)
+
+The fine-grained token `democratic-ai` has `canReadGatedRepos: true` and collection read/write. It returned:
+
+| Request | Result |
+| --- | --- |
+| `GET /api/users/balupton/following/orgs` | 200 — 13 organisations |
+| `GET /api/users/balupton/following` | 200 — empty |
+| `GET /api/models/prism-ml/Ternary-Bonsai-2-27B-gguf` | 200 — gated metadata is readable |
+
+The 13 organisations are Edge0, webAI-Official, desert-ant-labs, inclusionAI, unsloth, bosonai, stepfun-ai, zai-org, thinkingmachines, Qwen, deepseek-ai, MiniMaxAI, and moonshotai.
+
+Two are not on the X list: Boson AI and Thinking Machines Lab. The watchlist now has 48 entities.
+
+The token needs only the gated-repo read permission. Collection read/write is optional; it is useful when a collection becomes a seed source. A browser session token is not needed and was not used: browser credential stores are outside the documented secret locations, and a session cookie grants far more access than this task needs.
+
 #### Named members
 
 - **Underdog AI** (`@UnderdogAI`, Conway Research) — consumer on-device models. The 27B Saluki build is a 2-bit derivative of Qwen3.8-27B. Its Hugging Face card says CC-BY-NC-4.0; several news articles report Apache-2.0. The base is Apache-2.0. This is a live example of a licence conflict that the catalogue must record.
@@ -76,11 +92,11 @@ The common pattern is important: **the most interesting democratic-AI work is of
 
 The list is named **Democratic AI** and its description is “AIs that are for the people, not empire”. It has 47 members.
 
-`data/watchlist.json` records 46 entities for the 47 handles, because the two Kimi accounts merge into one organisation. The seed has 34 organisations, 7 projects, and 5 people. By role: 27 model labs, 6 agent harnesses, 3 evaluators, 2 infrastructure providers, 3 tooling projects, and the rest are a platform, a data lab, a media account, and individuals.
+`data/watchlist.json` records 48 entities: 46 from the X list (47 handles, because the two Kimi accounts merge) and 2 from the Hugging Face following list. The seed has 36 organisations, 7 projects, and 5 people. By role: 29 model labs, 6 agent harnesses, 3 evaluators, 2 infrastructure providers, 2 tooling projects, and the rest are a platform, a data lab, a media account, and individuals.
 
 The context distribution is a useful signal: 11 entities are on-device, 7 are agent-related, 2 are edge, 2 are privacy-focused, and 1 is sovereign. The owner's list leans strongly toward on-device and consumer-owned AI, which supports the proposed first-release scope of text plus on-device speech.
 
-32 of the 46 entities have a verified Hugging Face identity. The rest are harnesses, evaluators, people, or labs without a public Hugging Face organisation.
+33 of the 46 X-derived entities have a verified Hugging Face identity; 35 of the 48 total do. 13 are followed on Hugging Face, including Boson AI and Thinking Machines Lab, which are not on the X list.
 
 The raw X responses are committed under `data/raw/x/lists/2084302656580034676/` so the list never costs a second read. The snapshot is the evidence; `data/watchlist.json` is the curated view.
 
@@ -799,7 +815,7 @@ Acceptance: a consumer answers a real selection question from the API; the expor
 
 The owner must decide these before Phase 1 ends. Each has a recommendation.
 
-1. **Private-list access.** Add pay-per-use credits to the new X app, and provide `HF_TOKEN`, or paste the 13 followed organisations and the X list members into `data/watchlist.json` for a manual seed. The X app is enrolled and the bearer token works for lists once credits exist. *Recommendation: manual seed now, token sync in Phase 3.*
+1. **Private-list access — resolved on 2026-11-14.** The X app has credits and the 47 members are cached. The Hugging Face token reads the 13 followed organisations, which are cached. The remaining work is the sync script, not access. */Recommendation: build the cache-first sync in Phase 3.*
 2. **Tier names.** Keep `Commons / Reciprocal / Shared / Closed / Unproven`, or split `Shared` into `Weights-only` and `Conditional`. *Recommendation: keep five tiers; the component values carry the split.*
 3. **Modality scope for the first release.** Text plus speech, or every modality. *Recommendation: text plus speech, because both consumers need them now.*
 4. **Authoring format.** JSON or YAML. *Recommendation: JSON with a schema and a `deno task new` scaffolder.*
