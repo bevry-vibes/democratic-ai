@@ -65,6 +65,7 @@ site/.astro/
 site/.wrangler/
 site/dist/
 site/node_modules/
+site/public/api/
 .wrangler/
 
 # Local secrets

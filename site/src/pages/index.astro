@@ -1,0 +1,108 @@
+---
+import fs from "node:fs"
+import path from "node:path"
+import { marked } from "marked"
+import Base from "../layouts/Base.astro"
+import ModelCard from "../components/ModelCard.astro"
+import { getIndex, getSyndication, tagLabel, tagPath, taskCounts, topModels } from "../lib/data"
+
+const index = getIndex()
+const syndication = getSyndication()
+const top = topModels(index, 12)
+const tasks = taskCounts(index).slice(0, 10)
+const listed = index.models.filter((model) => model.score > 0).length
+const strong = index.models.filter((model) => model.score >= 7).length
+
+const readme = fs
+  .readFileSync(path.resolve(process.cwd(), "..", "README.md"), "utf8")
+  .replace(/<!-- LICENSE\/ -->[\s\S]*<!-- \/LICENSE -->/, "")
+  .replace(/^# .*\n/, "")
+  .replaceAll("](./DESIGN.md)", "](/about/)")
+const readmeHtml = marked.parse(readme) as string
+---
+
+<Base
+  title="Democratic AI"
+  description="A catalogue of reciprocal AI models, tagged for the job you need, with independent listings and evidence."
+>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">The Democratic AI catalogue</p>
+        <h1>Intelligence that returns to the commons.</h1>
+        <p class="lede">
+          Every model learns from shared human work. This catalogue records what each release gives back:
+          weights, training data, recipe, and access. It also shows whether independent registries picked it up.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="/models/">Browse {index.models.length} models</a>
+          <a class="button secondary" href="/about/">Read the method</a>
+        </div>
+      </div>
+      <aside class="hero-aside">
+        <p class="eyebrow">The index now</p>
+        <div class="stat"><span>Root and notable models</span><strong>{index.models.length}</strong></div>
+        <div class="stat"><span>With independent listings</span><strong>{listed}</strong></div>
+        <div class="stat"><span>Strong or very strong</span><strong>{strong}</strong></div>
+        <div class="stat"><span>Builds and probes skipped</span><strong>{syndication.counts.builds_and_probes_skipped}</strong></div>
+        <p class="faint mt-2 mb-0" style="font-size:0.82rem">
+          Average syndication {syndication.counts.average_score}/10. The score counts independent pickup, not quality.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section rule-top">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Independent listings</p>
+          <h2>Models with a wider web of trust</h2>
+        </div>
+        <a href="/models/">All models →</a>
+      </div>
+      <p class="muted" style="max-width:44rem;margin-bottom:1.4rem">
+        A high score means models.dev, agent-detect, OpenRouter, LLM Stats, Artificial Analysis, or a research paper
+        have picked the model up. The model’s own Hugging Face page counts for zero.
+      </p>
+      <div class="card-grid">
+        {top.map((model) => <ModelCard model={model} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section rule-top">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Start with the job</p>
+          <h2>What do you need it to do?</h2>
+        </div>
+        <a href="/tags/">All tags →</a>
+      </div>
+      <p class="muted" style="max-width:44rem;margin-bottom:1.2rem">
+        Tags are additive. A model can translate, run on a phone, and speak Indonesian at the same time.
+      </p>
+      <div class="flex wrap-gap">
+        {tasks.map(({ task, count }) => (
+          <a class="chip task" href={tagPath(`task:${task}`)} style="font-size:0.9rem;padding:0.4rem 0.8rem">
+            {tagLabel(`task:${task}`)} <span class="faint">{count}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section rule-top">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">The catalogue in full</p>
+          <h2>How to read it</h2>
+        </div>
+        <a href="/data/">Use the data →</a>
+      </div>
+      <div class="prose" set:html={readmeHtml} />
+    </div>
+  </section>
+</Base>

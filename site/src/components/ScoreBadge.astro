@@ -1,0 +1,16 @@
+---
+import { bandClass, formatScore } from "../lib/data"
+
+interface Props {
+  score: number
+  band: string
+  detail?: boolean
+}
+
+const { score, band, detail = false } = Astro.props
+const label = band.replaceAll("-", " ")
+---
+
+<span class={`badge ${bandClass(band)}`} title={`Syndication: ${label}`}>
+  {formatScore(score)}{detail ? ` · ${label}` : ""}
+</span>

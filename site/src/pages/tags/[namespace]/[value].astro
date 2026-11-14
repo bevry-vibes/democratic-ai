@@ -1,0 +1,76 @@
+---
+import Base from "../../../layouts/Base.astro"
+import ScoreBadge from "../../../components/ScoreBadge.astro"
+import TagChips from "../../../components/TagChips.astro"
+import { allTagPairs, getIndex, getTags, modelHref, tagLabel } from "../../../lib/data"
+
+export function getStaticPaths() {
+  const vocabulary = getTags()
+  const tags = new Set<string>()
+  for (const [namespace, entry] of Object.entries(vocabulary.namespaces)) {
+    for (const value of Object.keys(entry.values)) tags.add(`${namespace}:${value}`)
+  }
+  for (const { tag } of allTagPairs(getIndex())) tags.add(tag)
+  return [...tags].map((tag) => {
+    const [namespace, ...rest] = tag.split(":")
+    const value = rest.join(":")
+    return {
+      params: { namespace, value },
+      props: { tag },
+    }
+  })
+}
+
+interface Props {
+  tag: string
+}
+
+const { tag } = Astro.props
+const index = getIndex()
+const vocabulary = getTags()
+const [namespace, ...rest] = tag.split(":")
+const value = rest.join(":")
+const models = index.models
+  .filter((model) => model.tags.includes(tag))
+  .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name))
+const definition = vocabulary.namespaces[namespace!]?.values?.[value]
+---
+
+<Base
+  title={`${tagLabel(tag)} — ${namespace}`}
+  description={`Models tagged ${tag}. ${definition ?? ""}`}
+>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow"><a href="/tags/">Tags</a> / {namespace}</p>
+      <h1>{tagLabel(tag)}</h1>
+      <p class="lede">{definition ?? "A tag in the catalogue."}</p>
+      <p class="mono-small muted">{tag} · {models.length} models</p>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding:1.8rem 0 3rem">
+    <div class="list">
+      {models.map((model) => (
+        <a class="list-row" href={modelHref(model.id)}>
+          <div>
+            <h3>{model.name}</h3>
+            <p class="mono-small">{model.organization}</p>
+          </div>
+          <div>
+            <p>{model.summary || "No summary yet."}</p>
+            <div class="chips"><TagChips tags={model.tags.filter((t) => t.startsWith("task:"))} limit={2} links={false} /></div>
+          </div>
+          <div class="chips">
+            {model.tags.includes("context:on-device") && <span class="chip context">on-device</span>}
+            <span class="chip license">{model.license}</span>
+          </div>
+          <div class="right">
+            <ScoreBadge score={model.score} band={model.band} />
+          </div>
+        </a>
+      ))}
+    </div>
+    {models.length === 0 && <div class="empty">No models carry this tag yet.</div>}
+  </section>
+</Base>

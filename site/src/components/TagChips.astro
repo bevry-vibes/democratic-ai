@@ -1,0 +1,26 @@
+---
+import { tagLabel, tagPath, tagStatus } from "../lib/data"
+
+interface Props {
+  tags: string[]
+  limit?: number
+  showNamespace?: boolean
+  links?: boolean
+  class?: string
+}
+
+const { tags, limit, showNamespace = false, links = true, class: className = "" } = Astro.props
+const visible = limit ? tags.slice(0, limit) : tags
+const label = (tag: string) => (showNamespace ? tag : tagLabel(tag))
+const kind = (tag: string) => `chip ${tagStatus(tag)}`
+---
+
+<div class={`flex wrap-gap ${className}`.trim()}>
+  {visible.map((tag) =>
+    links ? (
+      <a class={kind(tag)} href={tagPath(tag)}>{label(tag)}</a>
+    ) : (
+      <span class={kind(tag)}>{label(tag)}</span>
+    ),
+  )}
+</div>

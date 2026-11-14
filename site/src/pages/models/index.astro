@@ -1,0 +1,154 @@
+---
+import Base from "../../layouts/Base.astro"
+import ScoreBadge from "../../components/ScoreBadge.astro"
+import TagChips from "../../components/TagChips.astro"
+import { formatContext, getIndex, modelHref } from "../../lib/data"
+
+const index = getIndex()
+const models = [...index.models].sort((a, b) => b.score - a.score || a.name.localeCompare(b.name))
+const tasks = [...new Set(models.flatMap((model) => model.tasks))].sort()
+const contexts = [...new Set(models.flatMap((model) => model.tags.filter((tag) => tag.startsWith("context:"))))]
+  .map((tag) => tag.slice("context:".length))
+  .sort()
+const bands = ["very-strong", "strong", "moderate", "emerging", "weak", "self-only"]
+const licenses = [...new Set(models.map((model) => model.license))].sort()
+---
+
+<Base
+  title="Models"
+  description={`Browse ${models.length} democratic AI models by task, context, licence, and independent listing score.`}
+>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">The index</p>
+      <h1>Models</h1>
+      <p class="lede">
+        {models.length} root and notable models. Builds attach to their base model and do not appear as separate
+        entries.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-top:1.5rem">
+    <div class="filters">
+      <div class="field">
+        <label for="q">Search</label>
+        <input id="q" type="search" placeholder="Name, organisation, or summary" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="task">Task</label>
+        <select id="task">
+          <option value="">All tasks</option>
+          {tasks.map((task) => <option value={task}>{task.replaceAll("-", " ")}</option>)}
+        </select>
+      </div>
+      <div class="field">
+        <label for="context">Context</label>
+        <select id="context">
+          <option value="">All contexts</option>
+          {contexts.map((context) => <option value={context}>{context.replaceAll("-", " ")}</option>)}
+        </select>
+      </div>
+      <div class="field">
+        <label for="band">Syndication</label>
+        <select id="band">
+          <option value="">All bands</option>
+          {bands.map((band) => <option value={band}>{band.replaceAll("-", " ")}</option>)}
+        </select>
+      </div>
+    </div>
+
+    <div class="filter-meta">
+      <span id="count">Showing {models.length} models</span>
+      <span class="faint">Sorted by independent listings, then name</span>
+    </div>
+
+    <div class="list" id="model-list">
+      {models.map((model) => (
+        <a
+          class="list-row"
+          href={modelHref(model.id)}
+          data-name={`${model.name} ${model.organization} ${model.summary}`.toLowerCase()}
+          data-tasks={model.tasks.join(" ")}
+          data-contexts={model.tags.filter((tag) => tag.startsWith("context:")).map((tag) => tag.slice(8)).join(" ")}
+          data-band={model.band}
+          data-license={model.license}
+        >
+          <div>
+            <h3>{model.name}</h3>
+            <p class="mono-small">{model.organization}</p>
+          </div>
+          <div>
+            <p>{model.summary || "No summary yet."}</p>
+            <div class="chips">
+              <TagChips tags={model.tags.filter((tag) => tag.startsWith("task:"))} limit={2} links={false} />
+            </div>
+          </div>
+          <div class="chips">
+            {model.tags.includes("context:on-device") && <span class="chip context">on-device</span>}
+            {model.context_tokens && <span class="chip">{formatContext(model.context_tokens)}</span>}
+            {model.builds > 0 && <span class="chip">{model.builds} builds</span>}
+          </div>
+          <div class="right">
+            <ScoreBadge score={model.score} band={model.band} />
+            <span class="chip license">{model.license}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="empty hidden" id="empty">
+      No model matches those filters. Try a broader task or clear the search.
+    </div>
+
+    <noscript>
+      <p class="muted mt-2">The filters need JavaScript. Every model is listed below without it.</p>
+    </noscript>
+  </section>
+
+  <script>
+    const q = document.getElementById("q") as HTMLInputElement | null
+    const task = document.getElementById("task") as HTMLSelectElement | null
+    const context = document.getElementById("context") as HTMLSelectElement | null
+    const band = document.getElementById("band") as HTMLSelectElement | null
+    const count = document.getElementById("count")
+    const empty = document.getElementById("empty")
+    const rows = [...document.querySelectorAll<HTMLElement>("#model-list .list-row")]
+
+    const params = new URLSearchParams(location.search)
+    if (q && params.get("q")) q.value = params.get("q")!
+    if (task && params.get("task")) task.value = params.get("task")!
+    if (context && params.get("context")) context.value = params.get("context")!
+    if (band && params.get("band")) band.value = params.get("band")!
+
+    function apply() {
+      const search = q?.value.trim().toLowerCase() ?? ""
+      const taskValue = task?.value ?? ""
+      const contextValue = context?.value ?? ""
+      const bandValue = band?.value ?? ""
+      let visible = 0
+      for (const row of rows) {
+        const matches =
+          (!search || row.dataset.name?.includes(search)) &&
+          (!taskValue || row.dataset.tasks?.split(" ").includes(taskValue)) &&
+          (!contextValue || row.dataset.contexts?.split(" ").includes(contextValue)) &&
+          (!bandValue || row.dataset.band === bandValue)
+        row.classList.toggle("hidden", !matches)
+        if (matches) visible++
+      }
+      if (count) count.textContent = `Showing ${visible} of ${rows.length} models`
+      empty?.classList.toggle("hidden", visible > 0)
+
+      const next = new URLSearchParams()
+      if (search) next.set("q", search)
+      if (taskValue) next.set("task", taskValue)
+      if (contextValue) next.set("context", contextValue)
+      if (bandValue) next.set("band", bandValue)
+      const query = next.toString()
+      history.replaceState(null, "", query ? `?${query}` : location.pathname)
+    }
+
+    for (const control of [q, task, context, band]) control?.addEventListener("input", apply)
+    apply()
+  </script>
+</Base>

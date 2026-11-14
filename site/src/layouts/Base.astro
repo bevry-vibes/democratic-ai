@@ -1,0 +1,99 @@
+---
+import "../styles/global.css"
+
+interface Props {
+  title?: string
+  description?: string
+  current?: string
+}
+
+const {
+  title = "Democratic AI",
+  description = "A catalogue of reciprocal AI models, tagged for the job you need, with independent listings and evidence.",
+  current = Astro.url.pathname,
+} = Astro.props
+
+const canonical = new URL(Astro.url.pathname, Astro.site)
+const nav = [
+  { href: "/models/", label: "Models" },
+  { href: "/tags/", label: "Tags" },
+  { href: "/data/", label: "Data" },
+  { href: "/about/", label: "Method" },
+]
+const isCurrent = (href: string) => current === href || current.startsWith(href)
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title === "Democratic AI" ? title : `${title} — Democratic AI`}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="theme-color" content="#fbf7f0" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="wordmark" href="/">
+          <span class="mark" aria-hidden="true"></span>
+          Democratic AI
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          {nav.map((item) => (
+            <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>{item.label}</a>
+          ))}
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <a class="wordmark" href="/">
+              <span class="mark" aria-hidden="true"></span>
+              Democratic AI
+            </a>
+            <p class="mt-2 mb-0">
+              A catalogue of reciprocal AI. Weights are necessary, not sufficient. Training data is the test.
+            </p>
+          </div>
+          <div>
+            <h3>Browse</h3>
+            <ul>
+              <li><a href="/models/">All models</a></li>
+              <li><a href="/tags/task/translation/">Translation</a></li>
+              <li><a href="/tags/context/on-device/">On-device</a></li>
+              <li><a href="/tags/domain/speech/">Speech</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Elsewhere</h3>
+            <ul>
+              <li><a href="https://github.com/bevry-vibes/democratic-ai">GitHub</a></li>
+              <li><a href="https://x.com/i/lists/2084302656580034676">The X list</a></li>
+              <li><a href="https://huggingface.co/balupton?following=true">Hugging Face follows</a></li>
+              <li><a href="https://agent-detect.bevry.me">agent-detect</a></li>
+              <li><a href="https://models.dev">models.dev</a></li>
+              <li><a href="https://arena.ai/leaderboard">Arena</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-note">
+          Code, site, and data under RPL-1.5 unless stated otherwise. Syndication is independent listings, not quality.
+          <span class="mono-small">Last index: {new Date().toISOString().slice(0, 10)}</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
