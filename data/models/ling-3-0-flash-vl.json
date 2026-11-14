@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "ling-3-0-flash-vl",
+  "kind": "model",
+  "name": "Ling-3.0-flash-VL",
+  "aliases": [
+    "inclusionAI/Ling-3.0-flash-VL"
+  ],
+  "organization": "ant-ling",
+  "released": "2026-09-04",
+  "tags": [
+    "task:image-understanding",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "modality:text",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image",
+      "text"
+    ],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "inclusionAI/Ling-3.0-flash-VL",
+    "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-vl",
+    "agent_detect": "https://agent-detect.bevry.me/model/ling30flashvl",
+    "gated": null
+  },
+  "syndication": {
+    "score": 8,
+    "points": 8,
+    "band": "strong",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/inclusionai/ling-3.0-flash-vl",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "agent-detect",
+        "url": "https://agent-detect.bevry.me/model/ling30flashvl",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "openrouter",
+        "url": "https://openrouter.ai/inclusionai/ling-3.0-flash-vl",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "inclusionAI/Ling-3.0-flash-VL-int4",
+      "name": "Ling-3.0-flash-VL-int4",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL-int4",
+      "runtime": [],
+      "quantization": "INT4",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "1 builds are attached."
+}

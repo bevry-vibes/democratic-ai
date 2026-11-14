@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "id": "lfm3-1-7b",
+  "kind": "model",
+  "name": "LFM3-1.7B",
+  "aliases": [
+    "LiquidAI/LFM3-1.7B"
+  ],
+  "organization": "liquid-ai",
+  "released": "2026-10-23",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "runtime:python",
+    "license:other",
+    "family:lfm"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 1.7,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/LiquidAI/LFM3-1.7B"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "LiquidAI/LFM3-1.7B-Base",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "LiquidAI/LFM3-1.7B",
+    "models_dev": null,
+    "agent_detect": "https://agent-detect.bevry.me/model/lfm317b",
+    "gated": null
+  },
+  "syndication": {
+    "score": 5,
+    "points": 5,
+    "band": "moderate",
+    "sources": [
+      {
+        "id": "agent-detect",
+        "url": "https://agent-detect.bevry.me/model/lfm317b",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "llm-stats",
+        "url": "https://llm-stats.com/models/lfm3-1.7b",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "LiquidAI/LFM3-1.7B-NVFP4",
+      "name": "LFM3-1.7B-NVFP4",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-NVFP4",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "NVFP4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-1.7B-MLX-bf16",
+      "name": "LFM3-1.7B-MLX-bf16",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-bf16",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "BF16",
+      "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-1.7B-MLX-4bit",
+      "name": "LFM3-1.7B-MLX-4bit",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-4bit",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "4-bit",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-1.7B-ONNX",
+      "name": "LFM3-1.7B-ONNX",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-ONNX",
+      "runtime": [
+        "onnx"
+      ],
+      "quantization": "ONNX",
+      "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-1.7B-MLX-8bit",
+      "name": "LFM3-1.7B-MLX-8bit",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-8bit",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "8-bit",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-1.7B-GGUF",
+      "name": "LFM3-1.7B-GGUF",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "6 builds are attached."
+}

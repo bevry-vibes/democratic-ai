@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "fluidaudio-web",
+  "kind": "model",
+  "name": "fluidaudio-web",
+  "aliases": [
+    "FluidInference/fluidaudio-web"
+  ],
+  "organization": "fluid-voice",
+  "released": "2026-08-04",
+  "tags": [
+    "task:transcription",
+    "task:voice-activity-detection",
+    "domain:speech",
+    "modality:audio",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "transcription",
+      "voice-activity-detection"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/FluidInference/fluidaudio-web"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/FluidInference/fluidaudio-web"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "FluidInference/fluidaudio-web",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/FluidInference/fluidaudio-web",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/FluidInference/fluidaudio-web",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

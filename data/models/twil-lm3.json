@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "twil-lm3",
+  "kind": "model",
+  "name": "TwIL-LM3",
+  "aliases": [
+    "webAI-Official/TwIL-LM3"
+  ],
+  "organization": "webai",
+  "released": "2026-08-03",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "runtime:python",
+    "license:other",
+    "family:smollm"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/webAI-Official/TwIL-LM3"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/webAI-Official/TwIL-LM3"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "HuggingFaceTB/SmolLM3-3B",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "webAI-Official/TwIL-LM3",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/webAI-Official/TwIL-LM3",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/webAI-Official/TwIL-LM3",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

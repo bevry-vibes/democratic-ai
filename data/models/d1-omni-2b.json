@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "id": "d1-omni-2b",
+  "kind": "model",
+  "name": "d1-Omni-2B",
+  "aliases": [
+    "LiquidAI/d1-Omni-2B"
+  ],
+  "organization": "liquid-ai",
+  "released": "2026-10-24",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "domain:multimodal",
+    "domain:speech",
+    "runtime:python",
+    "license:other",
+    "family:lfm"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 2,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/LiquidAI/d1-Omni-2B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/LiquidAI/d1-Omni-2B"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "LiquidAI/LFM3-Omni-2B",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "LiquidAI/d1-Omni-2B",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/LiquidAI/d1-Omni-2B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "LiquidAI/d1-Omni-2B-ONNX",
+      "name": "d1-Omni-2B-ONNX",
+      "url": "https://huggingface.co/LiquidAI/d1-Omni-2B-ONNX",
+      "runtime": [
+        "onnx"
+      ],
+      "quantization": "ONNX",
+      "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/d1-Omni-2B-MLX-8bit",
+      "name": "d1-Omni-2B-MLX-8bit",
+      "url": "https://huggingface.co/LiquidAI/d1-Omni-2B-MLX-8bit",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "8-bit",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/d1-Omni-2B-GGUF",
+      "name": "d1-Omni-2B-GGUF",
+      "url": "https://huggingface.co/LiquidAI/d1-Omni-2B-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/LiquidAI/d1-Omni-2B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "3 builds are attached."
+}

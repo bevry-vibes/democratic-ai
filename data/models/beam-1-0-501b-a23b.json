@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "id": "beam-1-0-501b-a23b",
+  "kind": "model",
+  "name": "Beam-1.0-501B-A23B",
+  "aliases": [
+    "reflection/Beam-1.0-501B-A23B"
+  ],
+  "organization": "reflection",
+  "released": "2026-10-07",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "context:commercial-safe",
+    "license:apache-2.0"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": 501,
+    "runtimes": []
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/reflection/Beam-1.0-501B-A23B"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "reflection/Beam-1.0-501B-A23B",
+    "models_dev": "https://models.dev/models/reflection/beam-1.0-501b-a23b",
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 7,
+    "points": 7,
+    "band": "strong",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/reflection/beam-1.0-501b-a23b",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "openrouter",
+        "url": "https://openrouter.ai/reflection/beam-1.0-501b-a23b",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "llm-stats",
+        "url": "https://llm-stats.com/models/beam-1.0-501b-a23b",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "reflection/Beam-1.0-501B-A23B-NVFP4",
+      "name": "Beam-1.0-501B-A23B-NVFP4",
+      "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B-NVFP4",
+      "runtime": [],
+      "quantization": "NVFP4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "unsloth/Beam-1.0-501B-A23B-GGUF",
+      "name": "Beam-1.0-501B-A23B-GGUF",
+      "url": "https://huggingface.co/unsloth/Beam-1.0-501B-A23B-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "2 builds are attached."
+}

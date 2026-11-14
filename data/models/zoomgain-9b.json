@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "id": "zoomgain-9b",
+  "kind": "model",
+  "name": "ZoomGain-9B",
+  "aliases": [
+    "inclusionAI/ZoomGain-9B"
+  ],
+  "organization": "ant-ling",
+  "released": "2026-11-10",
+  "tags": [
+    "task:image-understanding",
+    "domain:vision",
+    "modality:image"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image"
+    ],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": 9,
+    "runtimes": []
+  },
+  "license": {
+    "id": "unknown",
+    "class": "unknown",
+    "url": "https://huggingface.co/inclusionAI/ZoomGain-9B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inclusionAI/ZoomGain-9B"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "inclusionAI/ZoomGain-9B",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 1,
+    "points": 1,
+    "band": "weak",
+    "sources": [
+      {
+        "id": "research",
+        "url": "https://arxiv.org/html/2611.14076v1",
+        "weight": 1,
+        "kind": "research",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inclusionAI/ZoomGain-9B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "inclusionAI/ZoomGain-9B-GGUF",
+      "name": "ZoomGain-9B-GGUF",
+      "url": "https://huggingface.co/inclusionAI/ZoomGain-9B-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inclusionAI/ZoomGain-9B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "1 builds are attached."
+}

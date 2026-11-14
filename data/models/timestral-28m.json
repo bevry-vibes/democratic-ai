@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "timestral-28m",
+  "kind": "model",
+  "name": "Timestral-28M",
+  "aliases": [
+    "mistralai/Timestral-28M"
+  ],
+  "organization": "mistral",
+  "released": "2026-10-14",
+  "tags": [
+    "task:time-series-forecasting",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "time-series-forecasting"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/mistralai/Timestral-28M"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/mistralai/Timestral-28M"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "mistralai/Timestral-28M",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/mistralai/Timestral-28M",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/mistralai/Timestral-28M",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

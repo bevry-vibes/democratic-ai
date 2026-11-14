@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "underdog-ternary-1-1",
+  "kind": "model",
+  "name": "Underdog-Ternary-1.1",
+  "aliases": [
+    "ConwayResearch/Underdog-Ternary-1.1"
+  ],
+  "organization": "underdog-ai",
+  "released": "2026-10-04",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "runtime:mlx",
+    "context:non-commercial",
+    "license:cc-by-nc-4.0"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "mlx"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "mlx"
+    ]
+  },
+  "license": {
+    "id": "cc-by-nc-4.0",
+    "class": "non-commercial",
+    "url": "https://huggingface.co/ConwayResearch/Underdog-Ternary-1.1"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/ConwayResearch/Underdog-Ternary-1.1"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "ConwayResearch/Underdog-Ternary-1.1",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/ConwayResearch/Underdog-Ternary-1.1",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/ConwayResearch/Underdog-Ternary-1.1",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

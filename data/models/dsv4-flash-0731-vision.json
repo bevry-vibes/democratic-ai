@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "dsv4-flash-0731-vision",
+  "kind": "model",
+  "name": "dsv4-flash-0731-vision",
+  "aliases": [
+    "ConwayResearch/dsv4-flash-0731-vision"
+  ],
+  "organization": "underdog-ai",
+  "released": "2026-08-06",
+  "tags": [
+    "task:image-understanding",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "modality:text",
+    "runtime:python",
+    "context:non-commercial",
+    "license:cc-by-nc-4.0",
+    "family:deepseek"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image",
+      "text"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "cc-by-nc-4.0",
+    "class": "non-commercial",
+    "url": "https://huggingface.co/ConwayResearch/dsv4-flash-0731-vision"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/ConwayResearch/dsv4-flash-0731-vision"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "ConwayResearch/dsv4-flash-0731-vision",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/ConwayResearch/dsv4-flash-0731-vision",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/ConwayResearch/dsv4-flash-0731-vision",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

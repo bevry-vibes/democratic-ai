@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "ming-3-0-tts-tiny",
+  "kind": "model",
+  "name": "Ming-3.0-tts-tiny",
+  "aliases": [
+    "inclusionAI/Ming-3.0-tts-tiny"
+  ],
+  "organization": "ant-ling",
+  "released": "2026-09-22",
+  "tags": [
+    "task:speech-synthesis",
+    "domain:speech",
+    "modality:audio",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "speech-synthesis"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "inclusionAI/Ming-3.0-tts-tiny",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inclusionAI/Ming-3.0-tts-tiny",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

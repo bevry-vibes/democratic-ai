@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "id": "clef-vision-0-8b",
+  "kind": "model",
+  "name": "clef-vision-0.8b",
+  "aliases": [
+    "FluidInference/clef-vision-0.8b"
+  ],
+  "organization": "fluid-voice",
+  "released": "2026-10-08",
+  "tags": [
+    "task:image-understanding",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "modality:text",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:apache-2.0",
+    "family:qwen"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image",
+      "text"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 0.8,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/FluidInference/clef-vision-0.8b"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/FluidInference/clef-vision-0.8b"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "Qwen/Qwen3.5-0.8B",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "FluidInference/clef-vision-0.8b",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/FluidInference/clef-vision-0.8b",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "FluidInference/clef-vision-0.8b-coreml",
+      "name": "clef-vision-0.8b-coreml",
+      "url": "https://huggingface.co/FluidInference/clef-vision-0.8b-coreml",
+      "runtime": [
+        "coreml"
+      ],
+      "quantization": "CoreML",
+      "relation": "conversion",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/FluidInference/clef-vision-0.8b",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "1 builds are attached."
+}

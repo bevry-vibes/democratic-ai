@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "clips",
+  "kind": "model",
+  "name": "clips",
+  "aliases": [
+    "desert-ant-labs/clips"
+  ],
+  "organization": "desert-ant-labs",
+  "released": "2026-07-24",
+  "tags": [
+    "task:clip-selection",
+    "task:retrieval",
+    "domain:language",
+    "runtime:litert",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "clip-selection",
+      "retrieval"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "litert"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "litert"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/desert-ant-labs/clips"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/desert-ant-labs/clips"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "desert-ant-labs/clips",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/desert-ant-labs/clips",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/desert-ant-labs/clips",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

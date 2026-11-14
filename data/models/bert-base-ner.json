@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "bert-base-ner",
+  "kind": "model",
+  "name": "bert-base-NER",
+  "aliases": [
+    "Xenova/bert-base-NER"
+  ],
+  "organization": "xenova",
+  "released": "2023-05-03",
+  "tags": [
+    "task:structured-extraction",
+    "domain:language",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "structured-extraction"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/Xenova/bert-base-NER"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/Xenova/bert-base-NER"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "dslim/bert-base-NER",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "Xenova/bert-base-NER",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/Xenova/bert-base-NER",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/Xenova/bert-base-NER",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

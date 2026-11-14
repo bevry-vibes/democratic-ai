@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "mimo-v2-6-pro-rl",
+  "kind": "model",
+  "name": "MiMo-V2.6-Pro-RL",
+  "aliases": [
+    "XiaomiMiMo/MiMo-V2.6-Pro-RL"
+  ],
+  "organization": "xiaomi-mimo",
+  "released": "2026-09-21",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+    "models_dev": "https://models.dev/models/xiaomi/mimo-v2.6-pro",
+    "agent_detect": "https://agent-detect.bevry.me/model/mimov26pro",
+    "gated": null
+  },
+  "syndication": {
+    "score": 6,
+    "points": 6,
+    "band": "moderate",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/xiaomi/mimo-v2.6-pro",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "agent-detect",
+        "url": "https://agent-detect.bevry.me/model/mimov26pro",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

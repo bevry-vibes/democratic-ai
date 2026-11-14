@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "id": "minimax-m2-1",
+  "kind": "model",
+  "name": "MiniMax-M2.1",
+  "aliases": [
+    "MiniMaxAI/MiniMax-M2.1"
+  ],
+  "organization": "minimax",
+  "released": "2025-12-20",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "runtime:python",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.1"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/MiniMaxAI/MiniMax-M2.1"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "MiniMaxAI/MiniMax-M2.1",
+    "models_dev": "https://models.dev/models/minimax/MiniMax-M2.1",
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 7,
+    "points": 7,
+    "band": "strong",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/minimax/MiniMax-M2.1",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "llm-stats",
+        "url": "https://llm-stats.com/models/minimax-m2.1",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "artificial-analysis",
+        "url": "https://artificialanalysis.ai/models/minimax-m2-1",
+        "weight": 2,
+        "kind": "evaluation",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.1",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.1",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

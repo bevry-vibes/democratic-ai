@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "audio8-tts-preview-0-6b",
+  "kind": "model",
+  "name": "Audio8-TTS-Preview-0.6b",
+  "aliases": [
+    "Edge0/Audio8-TTS-Preview-0.6b"
+  ],
+  "organization": "edge0-ai",
+  "released": "2026-07-28",
+  "tags": [
+    "task:speech-synthesis",
+    "domain:speech",
+    "modality:audio",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:apache-2.0"
+  ],
+  "capabilities": {
+    "tasks": [
+      "speech-synthesis"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 0.6,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/Edge0/Audio8-TTS-Preview-0.6b"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/Edge0/Audio8-TTS-Preview-0.6b"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "Edge0/Audio8-TTS-Preview-0.6b",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/Edge0/Audio8-TTS-Preview-0.6b",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/Edge0/Audio8-TTS-Preview-0.6b",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

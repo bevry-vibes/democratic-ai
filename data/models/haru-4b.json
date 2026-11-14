@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "id": "haru-4b",
+  "kind": "model",
+  "name": "Haru-4B",
+  "aliases": [
+    "higurashi-ai/Haru-4B"
+  ],
+  "organization": "higurashi",
+  "released": "2026-11-12",
+  "tags": [
+    "task:speech-synthesis",
+    "domain:speech",
+    "modality:audio",
+    "context:commercial-safe",
+    "license:apache-2.0"
+  ],
+  "capabilities": {
+    "tasks": [
+      "speech-synthesis"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": 4,
+    "runtimes": []
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/higurashi-ai/Haru-4B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/higurashi-ai/Haru-4B"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "higurashi-ai/Haru-4B",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/higurashi-ai/Haru-4B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/higurashi-ai/Haru-4B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

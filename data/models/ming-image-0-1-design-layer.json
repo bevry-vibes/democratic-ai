@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "ming-image-0-1-design-layer",
+  "kind": "model",
+  "name": "Ming-Image-0.1-Design-Layer",
+  "aliases": [
+    "inclusionAI/Ming-Image-0.1-Design-Layer"
+  ],
+  "organization": "ant-ling",
+  "released": "2026-09-17",
+  "tags": [
+    "task:image-generation",
+    "domain:vision",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/inclusionAI/Ming-Image-0.1-Design-Layer"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inclusionAI/Ming-Image-0.1-Design-Layer"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "inclusionAI/Ming-Image-0.1-Design-Layer",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inclusionAI/Ming-Image-0.1-Design-Layer",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inclusionAI/Ming-Image-0.1-Design-Layer",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

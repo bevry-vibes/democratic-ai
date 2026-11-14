@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "ming-univision-16b-a3b",
+  "kind": "model",
+  "name": "Ming-UniVision-16B-A3B",
+  "aliases": [
+    "inclusionAI/Ming-UniVision-16B-A3B"
+  ],
+  "organization": "ant-ling",
+  "released": "2025-09-30",
+  "tags": [
+    "task:image-generation",
+    "task:image-understanding",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:apache-2.0"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-generation",
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 16,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/inclusionAI/Ming-UniVision-16B-A3B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inclusionAI/Ming-UniVision-16B-A3B"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "inclusionAI/Ming-UniVision-16B-A3B",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 1,
+    "points": 1,
+    "band": "weak",
+    "sources": [
+      {
+        "id": "research",
+        "url": "https://arxiv.org/pdf/2510.06590",
+        "weight": 1,
+        "kind": "research",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inclusionAI/Ming-UniVision-16B-A3B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inclusionAI/Ming-UniVision-16B-A3B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

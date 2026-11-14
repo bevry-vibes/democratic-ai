@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "longcat-2-5-w4a4",
+  "kind": "model",
+  "name": "LongCat-2.5-W4A4",
+  "aliases": [
+    "meituan-longcat/LongCat-2.5-W4A4"
+  ],
+  "organization": "meituan-longcat",
+  "released": "2026-11-04",
+  "tags": [
+    "task:image-understanding",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "modality:text",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image",
+      "text"
+    ],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/meituan-longcat/LongCat-2.5-W4A4"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/meituan-longcat/LongCat-2.5-W4A4"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "meituan-longcat/LongCat-2.5-W4A4",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/meituan-longcat/LongCat-2.5-W4A4",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/meituan-longcat/LongCat-2.5-W4A4",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

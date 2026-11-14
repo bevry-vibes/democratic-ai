@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "id": "qwen3guard-stream-8b",
+  "kind": "model",
+  "name": "Qwen3Guard-Stream-8B",
+  "aliases": [
+    "Qwen/Qwen3Guard-Stream-8B"
+  ],
+  "organization": "qwen",
+  "released": "2025-09-23",
+  "tags": [
+    "task:embedding",
+    "domain:embeddings",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:apache-2.0",
+    "family:qwen"
+  ],
+  "capabilities": {
+    "tasks": [
+      "embedding"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 8,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/Qwen/Qwen3Guard-Stream-8B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/Qwen/Qwen3Guard-Stream-8B"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "Qwen/Qwen3-8B",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "Qwen/Qwen3Guard-Stream-8B",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/Qwen/Qwen3Guard-Stream-8B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/Qwen/Qwen3Guard-Stream-8B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

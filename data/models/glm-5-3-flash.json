@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "id": "glm-5-3-flash",
+  "kind": "model",
+  "name": "GLM-5.3-Flash",
+  "aliases": [
+    "zai-org/GLM-5.3-Flash"
+  ],
+  "organization": "zai",
+  "released": "2026-08-25",
+  "tags": [
+    "task:image-understanding",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "modality:text",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image",
+      "text"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/zai-org/GLM-5.3-Flash"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "zai-org/GLM-5.3-Flash",
+    "models_dev": "https://models.dev/models/zhipuai/glm-5.3-flash",
+    "agent_detect": "https://agent-detect.bevry.me/model/glm53flash",
+    "gated": null
+  },
+  "syndication": {
+    "score": 10,
+    "points": 12,
+    "band": "very-strong",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/zhipuai/glm-5.3-flash",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "agent-detect",
+        "url": "https://agent-detect.bevry.me/model/glm53flash",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "openrouter",
+        "url": "https://openrouter.ai/z-ai/glm-5.3-flash",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "llm-stats",
+        "url": "https://llm-stats.com/models/glm-5.3-flash",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "artificial-analysis",
+        "url": "https://artificialanalysis.ai/models/glm-5-3-flash",
+        "weight": 2,
+        "kind": "evaluation",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "unsloth/GLM-5.3-Flash-GGUF",
+      "name": "GLM-5.3-Flash-GGUF",
+      "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "unsloth/GLM-5.3-Flash",
+      "name": "GLM-5.3-Flash",
+      "url": "https://huggingface.co/unsloth/GLM-5.3-Flash",
+      "runtime": [
+        "python"
+      ],
+      "quantization": null,
+      "relation": null,
+      "status": "build"
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash-BF16",
+      "name": "GLM-5.3-Flash-BF16",
+      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash-BF16",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "BF16",
+      "relation": null,
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "3 builds are attached."
+}

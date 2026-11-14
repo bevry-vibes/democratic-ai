@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "mimo-v2-5-pro-base",
+  "kind": "model",
+  "name": "MiMo-V2.5-Pro-Base",
+  "aliases": [
+    "XiaomiMiMo/MiMo-V2.5-Pro-Base"
+  ],
+  "organization": "xiaomi-mimo",
+  "released": "2026-04-27",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-Base"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-Base"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "XiaomiMiMo/MiMo-V2.5-Pro-Base",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-Base",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-Base",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

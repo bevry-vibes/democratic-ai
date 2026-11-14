@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "ming-uniaudio-16b-a3b",
+  "kind": "model",
+  "name": "Ming-UniAudio-16B-A3B",
+  "aliases": [
+    "inclusionAI/Ming-UniAudio-16B-A3B"
+  ],
+  "organization": "ant-ling",
+  "released": "2025-09-29",
+  "tags": [
+    "task:audio-language",
+    "task:speech-synthesis",
+    "domain:multimodal",
+    "domain:speech",
+    "modality:audio",
+    "context:commercial-safe",
+    "license:apache-2.0"
+  ],
+  "capabilities": {
+    "tasks": [
+      "audio-language",
+      "speech-synthesis"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": 16,
+    "runtimes": []
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/inclusionAI/Ming-UniAudio-16B-A3B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inclusionAI/Ming-UniAudio-16B-A3B"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "inclusionAI/Ming-UniAudio-16B-A3B",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inclusionAI/Ming-UniAudio-16B-A3B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inclusionAI/Ming-UniAudio-16B-A3B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

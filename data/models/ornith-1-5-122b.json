@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "id": "ornith-1-5-122b",
+  "kind": "model",
+  "name": "Ornith-1.5-122B",
+  "aliases": [
+    "ornith-ai/Ornith-1.5-122B"
+  ],
+  "organization": "ornith-ai",
+  "released": "2026-10-16",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 122,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/ornith-ai/Ornith-1.5-122B"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "ornith-ai/Ornith-1.5-122B",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "ornith-ai/Ornith-1.5-122B-MLX",
+      "name": "Ornith-1.5-122B-MLX",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-MLX",
+      "runtime": [
+        "python",
+        "mlx"
+      ],
+      "quantization": "MLX",
+      "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "ornith-ai/Ornith-1.5-122B-MLX-8bit",
+      "name": "Ornith-1.5-122B-MLX-8bit",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-MLX-8bit",
+      "runtime": [
+        "python",
+        "mlx"
+      ],
+      "quantization": "8-bit",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "ornith-ai/Ornith-1.5-122B-MLX-4bit",
+      "name": "Ornith-1.5-122B-MLX-4bit",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-MLX-4bit",
+      "runtime": [
+        "python",
+        "mlx"
+      ],
+      "quantization": "4-bit",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "ornith-ai/Ornith-1.5-122B-GGUF",
+      "name": "Ornith-1.5-122B-GGUF",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-GGUF",
+      "runtime": [
+        "python",
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "ornith-ai/Ornith-1.5-122B-NVFP4",
+      "name": "Ornith-1.5-122B-NVFP4",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-NVFP4",
+      "runtime": [
+        "python"
+      ],
+      "quantization": "NVFP4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "unsloth/Ornith-1.5-122B-GGUF",
+      "name": "Ornith-1.5-122B-GGUF",
+      "url": "https://huggingface.co/unsloth/Ornith-1.5-122B-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "6 builds are attached."
+}

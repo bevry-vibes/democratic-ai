@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "woof-1-0-4b",
+  "kind": "model",
+  "name": "woof-1.0-4B",
+  "aliases": [
+    "ConwayResearch/woof-1.0-4B"
+  ],
+  "organization": "underdog-ai",
+  "released": "2026-09-04",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "runtime:mlx",
+    "context:non-commercial",
+    "license:cc-by-nc-4.0"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "mlx"
+    ]
+  },
+  "footprint": {
+    "params_b": 4,
+    "runtimes": [
+      "mlx"
+    ]
+  },
+  "license": {
+    "id": "cc-by-nc-4.0",
+    "class": "non-commercial",
+    "url": "https://huggingface.co/ConwayResearch/woof-1.0-4B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/ConwayResearch/woof-1.0-4B"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "ConwayResearch/woof-1.0-4B",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/ConwayResearch/woof-1.0-4B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/ConwayResearch/woof-1.0-4B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

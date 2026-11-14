@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "id": "duo-1-0-distill",
+  "kind": "model",
+  "name": "Duo-1.0-distill",
+  "aliases": [
+    "inclusionAI/Duo-1.0-distill"
+  ],
+  "organization": "ant-ling",
+  "released": "2026-11-12",
+  "tags": [
+    "task:real-time-interaction",
+    "task:world-model",
+    "domain:multimodal",
+    "modality:audio",
+    "modality:video",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "real-time-interaction",
+      "world-model"
+    ],
+    "languages": [],
+    "modality": [
+      "audio",
+      "video"
+    ],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/inclusionAI/Duo-1.0-distill"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inclusionAI/Duo-1.0-distill"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "inclusionAI/Duo-1.0-distill",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 1,
+    "points": 1,
+    "band": "weak",
+    "sources": [
+      {
+        "id": "research",
+        "url": "https://arxiv.org/abs/2611.15131",
+        "weight": 1,
+        "kind": "research",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inclusionAI/Duo-1.0-distill",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "inclusionAI/Duo-1.0-distill-quant",
+      "name": "Duo-1.0-distill-quant",
+      "url": "https://huggingface.co/inclusionAI/Duo-1.0-distill-quant",
+      "runtime": [],
+      "quantization": null,
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inclusionAI/Duo-1.0-distill",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "1 builds are attached."
+}

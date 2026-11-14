@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "id": "lfm2-5-1-2b-thinking",
+  "kind": "model",
+  "name": "LFM2.5-1.2B-Thinking",
+  "aliases": [
+    "LiquidAI/LFM2.5-1.2B-Thinking"
+  ],
+  "organization": "liquid-ai",
+  "released": "2026-01-20",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "runtime:python",
+    "license:other",
+    "family:lfm"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 1.2,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "LiquidAI/LFM2.5-1.2B-Base",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "LiquidAI/LFM2.5-1.2B-Thinking",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "LiquidAI/LFM2.5-1.2B-Thinking-GGUF",
+      "name": "LFM2.5-1.2B-Thinking-GGUF",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Thinking",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "1 builds are attached."
+}

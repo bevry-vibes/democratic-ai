@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "id": "minimax-m3-1-flash",
+  "kind": "model",
+  "name": "MiniMax-M3.1-Flash",
+  "aliases": [
+    "MiniMaxAI/MiniMax-M3.1-Flash"
+  ],
+  "organization": "minimax",
+  "released": "2026-10-17",
+  "tags": [
+    "task:image-understanding",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "modality:text",
+    "runtime:python",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image",
+      "text"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "MiniMaxAI/MiniMax-M3.1-Flash",
+    "models_dev": "https://models.dev/models/minimax/MiniMax-M3.1-Flash",
+    "agent_detect": "https://agent-detect.bevry.me/model/minimaxm31flash",
+    "gated": null
+  },
+  "syndication": {
+    "score": 10,
+    "points": 12,
+    "band": "very-strong",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/minimax/MiniMax-M3.1-Flash",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "agent-detect",
+        "url": "https://agent-detect.bevry.me/model/minimaxm31flash",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "openrouter",
+        "url": "https://openrouter.ai/minimax/minimax-m3.1-flash",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "llm-stats",
+        "url": "https://llm-stats.com/models/minimax-m3.1-flash",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "artificial-analysis",
+        "url": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
+        "weight": 2,
+        "kind": "evaluation",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "unsloth/MiniMax-M3.1-Flash-GGUF",
+      "name": "MiniMax-M3.1-Flash-GGUF",
+      "url": "https://huggingface.co/unsloth/MiniMax-M3.1-Flash-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "unsloth/MiniMax-M3.1-Flash",
+      "name": "MiniMax-M3.1-Flash",
+      "url": "https://huggingface.co/unsloth/MiniMax-M3.1-Flash",
+      "runtime": [
+        "python"
+      ],
+      "quantization": null,
+      "relation": null,
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "2 builds are attached."
+}

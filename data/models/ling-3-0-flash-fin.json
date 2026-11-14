@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "id": "ling-3-0-flash-fin",
+  "kind": "model",
+  "name": "Ling-3.0-flash-Fin",
+  "aliases": [
+    "inclusionAI/Ling-3.0-flash-Fin"
+  ],
+  "organization": "ant-ling",
+  "released": "2026-09-03",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "inclusionAI/Ling-3.0-flash",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "inclusionAI/Ling-3.0-flash-Fin",
+    "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-fin",
+    "agent_detect": "https://agent-detect.bevry.me/model/ling30flash",
+    "gated": null
+  },
+  "syndication": {
+    "score": 8,
+    "points": 8,
+    "band": "strong",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/inclusionai/ling-3.0-flash-fin",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "agent-detect",
+        "url": "https://agent-detect.bevry.me/model/ling30flash",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "llm-stats",
+        "url": "https://llm-stats.com/models/ling-3.0-flash-fin",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "inclusionAI/Ling-3.0-flash-Fin-int4",
+      "name": "Ling-3.0-flash-Fin-int4",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin-int4",
+      "runtime": [],
+      "quantization": "INT4",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "1 builds are attached."
+}

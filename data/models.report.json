@@ -1,0 +1,49 @@
+{
+  "pull_id": "20261114T025658Z",
+  "generated_at": "2026-11-14T04:21:49.228Z",
+  "roots": 272,
+  "builds_attached": 140,
+  "builds_unmatched": 222,
+  "builds_unmatched_samples": [
+    "ConwayResearch/woof-textfiller-4B-4bit-v2.1",
+    "ConwayResearch/woof-textfiller-0.8B-4bit-v2.1",
+    "ConwayResearch/woof-selector-4B-4bit-v2.1",
+    "ConwayResearch/woof-2B-mlx-4bit-v1.1",
+    "ConwayResearch/woof-2B-1.1-GGUF",
+    "ConwayResearch/pii-30M-mlx-4bit-v1.0",
+    "ConwayResearch/pii-30M-coreml-ane-v1.0",
+    "ConwayResearch/bark-0.6B-4bit-v2.0",
+    "ConwayResearch/underdog-llama-server",
+    "Edge0/Edge0-120B-NVFP4",
+    "Edge0/Edge0-145B-NVFP4",
+    "Edge0/audio8-TTS-0.1B-ONNX-INT8",
+    "XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
+    "ornith-ai/Ornith-1.5-35B-A3B-MLX-6bit",
+    "ornith-ai/Ornith-1.5-9B-MLX-6bit",
+    "badtheorylabs/Tinfield-1-Q4_K_XL-GGUF",
+    "badtheorylabs/Tinfield-1-Mini-GGUF",
+    "badtheorylabs/Tinfield-1-Compact-GGUF",
+    "FluidInference/paradee-8m-coreml",
+    "FluidInference/Nemotron-3.5-ASR-Streaming-Multilingual-0.6b-CoreML",
+    "FluidInference/kokoro-82m-coreml",
+    "FluidInference/cohere-transcribe-03-2026-coreml",
+    "FluidInference/citenet-coreml",
+    "FluidInference/campplus-coreml",
+    "FluidInference/pocket-tts-coreml",
+    "FluidInference/vela-3.0-coreml",
+    "FluidInference/nemotron-3.5-transcribe-lite-coreml",
+    "FluidInference/nemotron-labs-unified-asr-0.6b-coreml",
+    "FluidInference/bark-3.0-coreml",
+    "FluidInference/canary-1b-v2-coreml"
+  ],
+  "skipped": {
+    "builds": 362,
+    "probes": 29,
+    "documentation": 1
+  },
+  "notes": [
+    "Only root and notable models get a record. Builds attach to the matched root by normalized name.",
+    "The reciprocity tier is unproven unless a conditional licence caps it at shared. Training-data and training-code evidence is not assessed in this pass.",
+    "The syndication score comes from data/syndication.json. It is independent listings, not quality."
+  ]
+}

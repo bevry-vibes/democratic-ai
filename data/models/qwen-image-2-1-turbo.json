@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "id": "qwen-image-2-1-turbo",
+  "kind": "model",
+  "name": "Qwen-Image-2.1-Turbo",
+  "aliases": [
+    "Qwen/Qwen-Image-2.1-Turbo"
+  ],
+  "organization": "qwen",
+  "released": "2026-10-09",
+  "tags": [
+    "task:image-generation",
+    "domain:vision",
+    "modality:image",
+    "runtime:python",
+    "license:other",
+    "family:qwen"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-generation"
+    ],
+    "languages": [],
+    "modality": [
+      "image"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "Qwen/Qwen-Image-2.1",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "Qwen/Qwen-Image-2.1-Turbo",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "unsloth/Qwen-Image-2.1-Turbo-GGUF",
+      "name": "Qwen-Image-2.1-Turbo-GGUF",
+      "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "1 builds are attached."
+}

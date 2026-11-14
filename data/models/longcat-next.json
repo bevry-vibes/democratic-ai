@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "longcat-next",
+  "kind": "model",
+  "name": "LongCat-Next",
+  "aliases": [
+    "meituan-longcat/LongCat-Next"
+  ],
+  "organization": "meituan-longcat",
+  "released": "2026-03-25",
+  "tags": [
+    "task:image-understanding",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image"
+    ],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/meituan-longcat/LongCat-Next"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/meituan-longcat/LongCat-Next"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "meituan-longcat/LongCat-Next",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 1,
+    "points": 1,
+    "band": "weak",
+    "sources": [
+      {
+        "id": "research",
+        "url": "https://arxiv.org/abs/2603.27538",
+        "weight": 1,
+        "kind": "research",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/meituan-longcat/LongCat-Next",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/meituan-longcat/LongCat-Next",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

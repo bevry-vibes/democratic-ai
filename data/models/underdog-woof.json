@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "id": "underdog-woof",
+  "kind": "model",
+  "name": "Underdog-Woof",
+  "aliases": [
+    "ConwayResearch/Underdog-Woof"
+  ],
+  "organization": "underdog-ai",
+  "released": "2026-11-05",
+  "tags": [
+    "task:speech-synthesis",
+    "domain:speech",
+    "modality:audio",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "speech-synthesis"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/ConwayResearch/Underdog-Woof"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/ConwayResearch/Underdog-Woof"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "ConwayResearch/Underdog-Woof",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/ConwayResearch/Underdog-Woof",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/ConwayResearch/Underdog-Woof",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

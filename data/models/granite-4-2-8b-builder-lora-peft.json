@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "granite-4-2-8b-builder-lora-peft",
+  "kind": "model",
+  "name": "granite-4.2-8b-builder-lora-peft",
+  "aliases": [
+    "webAI-Official/granite-4.2-8b-builder-lora-peft"
+  ],
+  "organization": "webai",
+  "released": "2026-09-30",
+  "tags": [
+    "task:text-generation",
+    "domain:language"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": 8,
+    "runtimes": []
+  },
+  "license": {
+    "id": "unknown",
+    "class": "unknown",
+    "url": "https://huggingface.co/webAI-Official/granite-4.2-8b-builder-lora-peft"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/webAI-Official/granite-4.2-8b-builder-lora-peft"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "ibm-granite/granite-4.2-8b",
+      "relation": "adapter",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "webAI-Official/granite-4.2-8b-builder-lora-peft",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/webAI-Official/granite-4.2-8b-builder-lora-peft",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/webAI-Official/granite-4.2-8b-builder-lora-peft",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

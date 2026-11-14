@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "kapitsa-4b",
+  "kind": "model",
+  "name": "kapitsa-4b",
+  "aliases": [
+    "nace-ai/kapitsa-4b"
+  ],
+  "organization": "nace-ai",
+  "released": "2026-11-08",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "context:commercial-safe",
+    "license:apache-2.0",
+    "family:qwen"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": 4,
+    "runtimes": []
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/nace-ai/kapitsa-4b"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/nace-ai/kapitsa-4b"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "lmstudio-community/Qwen3.5-4B-MLX-4bit",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "nace-ai/kapitsa-4b",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/nace-ai/kapitsa-4b",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/nace-ai/kapitsa-4b",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

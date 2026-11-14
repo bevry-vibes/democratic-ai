@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "id": "drex-v2-0",
+  "kind": "model",
+  "name": "drex-v2.0",
+  "aliases": [
+    "nace-ai/drex-v2.0"
+  ],
+  "organization": "nace-ai",
+  "released": "2026-10-06",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "license:other",
+    "family:drex",
+    "family:qwen"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/nace-ai/drex-v2.0"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/nace-ai/drex-v2.0"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "Qwen/Qwen3.6-35B-A3B",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "nace-ai/drex-v2.0",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/nace-ai/drex-v2.0",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "nace-ai/drex-v2.0-Q8_0",
+      "name": "drex-v2.0-Q8_0",
+      "url": "https://huggingface.co/nace-ai/drex-v2.0-Q8_0",
+      "runtime": [],
+      "quantization": "Q8",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "nace-ai/drex-v2.0-Q4_K_M",
+      "name": "drex-v2.0-Q4_K_M",
+      "url": "https://huggingface.co/nace-ai/drex-v2.0-Q4_K_M",
+      "runtime": [],
+      "quantization": "Q4",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/nace-ai/drex-v2.0",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "2 builds are attached."
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "kapitsa-clover",
+  "kind": "model",
+  "name": "kapitsa-clover",
+  "aliases": [
+    "nace-ai/kapitsa-clover"
+  ],
+  "organization": "nace-ai",
+  "released": "2026-11-08",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "context:commercial-safe",
+    "license:apache-2.0"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/nace-ai/kapitsa-clover"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/nace-ai/kapitsa-clover"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "kapitsaprime/Clover-35B-A3B-Preview-MLX-4bit",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "nace-ai/kapitsa-clover",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/nace-ai/kapitsa-clover",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/nace-ai/kapitsa-clover",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

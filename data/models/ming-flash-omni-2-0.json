@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "id": "ming-flash-omni-2-0",
+  "kind": "model",
+  "name": "Ming-flash-omni-2.0",
+  "aliases": [
+    "inclusionAI/Ming-flash-omni-2.0"
+  ],
+  "organization": "ant-ling",
+  "released": "2026-02-10",
+  "tags": [
+    "task:image-generation",
+    "task:image-understanding",
+    "task:speech-synthesis",
+    "domain:multimodal",
+    "domain:speech",
+    "domain:vision",
+    "modality:audio",
+    "modality:image",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-generation",
+      "image-understanding",
+      "speech-synthesis"
+    ],
+    "languages": [],
+    "modality": [
+      "audio",
+      "image"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/inclusionAI/Ming-flash-omni-2.0"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inclusionAI/Ming-flash-omni-2.0"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "inclusionAI/Ming-flash-omni-2.0",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 1,
+    "points": 1,
+    "band": "weak",
+    "sources": [
+      {
+        "id": "research",
+        "url": "https://arxiv.org/abs/2506.09344",
+        "weight": 1,
+        "kind": "research",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inclusionAI/Ming-flash-omni-2.0",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inclusionAI/Ming-flash-omni-2.0",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "id": "ui-venus-2-9b",
+  "kind": "model",
+  "name": "UI-Venus-2-9B",
+  "aliases": [
+    "inclusionAI/UI-Venus-2-9B"
+  ],
+  "organization": "ant-ling",
+  "released": "2026-08-26",
+  "tags": [
+    "task:image-understanding",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "modality:text",
+    "runtime:python",
+    "family:qwen"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image",
+      "text"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 9,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "unknown",
+    "class": "unknown",
+    "url": "https://huggingface.co/inclusionAI/UI-Venus-2-9B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inclusionAI/UI-Venus-2-9B"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "Qwen/Qwen3.5-9B",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "inclusionAI/UI-Venus-2-9B",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inclusionAI/UI-Venus-2-9B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inclusionAI/UI-Venus-2-9B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "id": "lidstral-arabic",
+  "kind": "model",
+  "name": "LIDstral-Arabic",
+  "aliases": [
+    "mistralai/LIDstral-Arabic"
+  ],
+  "organization": "mistral",
+  "released": "2026-10-08",
+  "tags": [
+    "task:text-classification",
+    "domain:language",
+    "context:commercial-safe",
+    "license:apache-2.0"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-classification"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/mistralai/LIDstral-Arabic"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/mistralai/LIDstral-Arabic"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "mistralai/LIDstral-Arabic",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/mistralai/LIDstral-Arabic",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/mistralai/LIDstral-Arabic",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

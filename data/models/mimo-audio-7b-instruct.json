@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "mimo-audio-7b-instruct",
+  "kind": "model",
+  "name": "MiMo-Audio-7B-Instruct",
+  "aliases": [
+    "XiaomiMiMo/MiMo-Audio-7B-Instruct"
+  ],
+  "organization": "xiaomi-mimo",
+  "released": "2025-09-18",
+  "tags": [
+    "task:audio-language",
+    "domain:multimodal",
+    "domain:speech",
+    "modality:audio",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "audio-language"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": 7,
+    "runtimes": []
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/XiaomiMiMo/MiMo-Audio-7B-Instruct"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/XiaomiMiMo/MiMo-Audio-7B-Instruct"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "XiaomiMiMo/MiMo-Audio-7B-Instruct",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-Audio-7B-Instruct",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-Audio-7B-Instruct",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

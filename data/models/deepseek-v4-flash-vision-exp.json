@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "id": "deepseek-v4-flash-vision-exp",
+  "kind": "model",
+  "name": "DeepSeek-V4-Flash-Vision-Exp",
+  "aliases": [
+    "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp"
+  ],
+  "organization": "deepseek",
+  "released": "2026-08-31",
+  "tags": [
+    "task:image-understanding",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "modality:text",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image",
+      "text"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+    "models_dev": "https://models.dev/models/deepseek/deepseek-v4-flash-vision-exp",
+    "agent_detect": "https://agent-detect.bevry.me/model/deepseekv4flash",
+    "gated": null
+  },
+  "syndication": {
+    "score": 10,
+    "points": 10,
+    "band": "very-strong",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/deepseek/deepseek-v4-flash-vision-exp",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "agent-detect",
+        "url": "https://agent-detect.bevry.me/model/deepseekv4flash",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "openrouter",
+        "url": "https://openrouter.ai/deepseek/deepseek-v4-flash-vision-exp",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "llm-stats",
+        "url": "https://llm-stats.com/models/deepseek-v4-flash-vision-exp",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "unsloth/DeepSeek-V4-Flash-Vision-Exp-GGUF",
+      "name": "DeepSeek-V4-Flash-Vision-Exp-GGUF",
+      "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-Vision-Exp-GGUF",
+      "runtime": [
+        "python",
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "unsloth/DeepSeek-V4-Flash-Vision-Exp",
+      "name": "DeepSeek-V4-Flash-Vision-Exp",
+      "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-Vision-Exp",
+      "runtime": [
+        "python"
+      ],
+      "quantization": null,
+      "relation": null,
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "2 builds are attached."
+}

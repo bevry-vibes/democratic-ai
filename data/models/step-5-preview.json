@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": "step-5-preview",
+  "kind": "model",
+  "name": "Step-5-Preview",
+  "aliases": [
+    "stepfun-ai/Step-5-Preview"
+  ],
+  "organization": "stepfun",
+  "released": "2026-09-20",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "license:other",
+    "family:step"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/stepfun-ai/Step-5-Preview"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/stepfun-ai/Step-5-Preview"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "stepfun-ai/Step-5-Preview",
+    "models_dev": "https://models.dev/models/stepfun/step-5-preview",
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 5,
+    "points": 5,
+    "band": "moderate",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/stepfun/step-5-preview",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "openrouter",
+        "url": "https://openrouter.ai/stepfun/step-5-preview",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/stepfun-ai/Step-5-Preview",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "stepfun-ai/Step-5-Preview-BF16",
+      "name": "Step-5-Preview-BF16",
+      "url": "https://huggingface.co/stepfun-ai/Step-5-Preview-BF16",
+      "runtime": [],
+      "quantization": "BF16",
+      "relation": null,
+      "status": "build"
+    },
+    {
+      "id": "stepfun-ai/Step-5-Preview-NVFP4",
+      "name": "Step-5-Preview-NVFP4",
+      "url": "https://huggingface.co/stepfun-ai/Step-5-Preview-NVFP4",
+      "runtime": [],
+      "quantization": "NVFP4",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/stepfun-ai/Step-5-Preview",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "2 builds are attached."
+}

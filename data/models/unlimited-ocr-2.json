@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "id": "unlimited-ocr-2",
+  "kind": "model",
+  "name": "Unlimited-OCR-2",
+  "aliases": [
+    "baidu/Unlimited-OCR-2"
+  ],
+  "organization": "baidu",
+  "released": "2026-10-26",
+  "tags": [
+    "task:image-understanding",
+    "task:ocr",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "modality:text",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding",
+      "ocr"
+    ],
+    "languages": [],
+    "modality": [
+      "image",
+      "text"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/baidu/Unlimited-OCR-2"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/baidu/Unlimited-OCR-2"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "baidu/Unlimited-OCR-2",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/baidu/Unlimited-OCR-2",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/baidu/Unlimited-OCR-2",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

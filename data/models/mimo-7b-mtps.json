@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "id": "mimo-7b-mtps",
+  "kind": "model",
+  "name": "MiMo-7B-MTPs",
+  "aliases": [
+    "XiaomiMiMo/MiMo-7B-MTPs"
+  ],
+  "organization": "xiaomi-mimo",
+  "released": "2025-11-14",
+  "tags": [
+    "task:embedding",
+    "domain:embeddings",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "embedding"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 7,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/XiaomiMiMo/MiMo-7B-MTPs"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/XiaomiMiMo/MiMo-7B-MTPs"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "XiaomiMiMo/MiMo-7B-MTPs",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-7B-MTPs",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-7B-MTPs",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

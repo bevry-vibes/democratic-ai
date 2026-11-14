@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "id": "lfm2-5-24b-a2b-base",
+  "kind": "model",
+  "name": "LFM2.5-24B-A2B-Base",
+  "aliases": [
+    "LiquidAI/LFM2.5-24B-A2B-Base"
+  ],
+  "organization": "liquid-ai",
+  "released": "2026-10-09",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "runtime:python",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 24,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-Base"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-Base"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "LiquidAI/LFM2.5-24B-A2B-Base",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-Base",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-Base",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

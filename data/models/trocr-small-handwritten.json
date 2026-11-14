@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "id": "trocr-small-handwritten",
+  "kind": "model",
+  "name": "trocr-small-handwritten",
+  "aliases": [
+    "Xenova/trocr-small-handwritten"
+  ],
+  "organization": "xenova",
+  "released": "2023-10-30",
+  "tags": [
+    "task:image-understanding",
+    "domain:vision",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/Xenova/trocr-small-handwritten"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/Xenova/trocr-small-handwritten"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "microsoft/trocr-small-handwritten",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "Xenova/trocr-small-handwritten",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/Xenova/trocr-small-handwritten",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/Xenova/trocr-small-handwritten",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

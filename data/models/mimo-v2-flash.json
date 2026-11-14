@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "mimo-v2-flash",
+  "kind": "model",
+  "name": "MiMo-V2-Flash",
+  "aliases": [
+    "XiaomiMiMo/MiMo-V2-Flash"
+  ],
+  "organization": "xiaomi-mimo",
+  "released": "2025-12-16",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "runtime:python",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "XiaomiMiMo/MiMo-V2-Flash",
+    "models_dev": "https://models.dev/models/xiaomi/mimo-v2-flash",
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 5,
+    "points": 5,
+    "band": "moderate",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/xiaomi/mimo-v2-flash",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "llm-stats",
+        "url": "https://llm-stats.com/models/mimo-v2-flash",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

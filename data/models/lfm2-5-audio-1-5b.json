@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "lfm2-5-audio-1-5b",
+  "kind": "model",
+  "name": "LFM2.5-Audio-1.5B",
+  "aliases": [
+    "LiquidAI/LFM2.5-Audio-1.5B"
+  ],
+  "organization": "liquid-ai",
+  "released": "2025-12-18",
+  "tags": [
+    "task:speech-synthesis",
+    "task:transcription",
+    "domain:speech",
+    "modality:audio",
+    "license:other",
+    "family:lfm"
+  ],
+  "capabilities": {
+    "tasks": [
+      "speech-synthesis",
+      "transcription"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": 1.5,
+    "runtimes": []
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "LiquidAI/LFM2-1.2B",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "LiquidAI/LFM2.5-Audio-1.5B",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

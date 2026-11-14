@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "id": "schemer",
+  "kind": "model",
+  "name": "schemer",
+  "aliases": [
+    "desert-ant-labs/schemer"
+  ],
+  "organization": "desert-ant-labs",
+  "released": "2026-07-06",
+  "tags": [
+    "task:structured-extraction",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "structured-extraction"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/desert-ant-labs/schemer"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/desert-ant-labs/schemer"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "desert-ant-labs/schemer",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/desert-ant-labs/schemer",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/desert-ant-labs/schemer",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "id": "mach-1-additive-35b-multimodal",
+  "kind": "model",
+  "name": "Mach-1-Additive-35B-Multimodal",
+  "aliases": [
+    "SyzygyResearch/Mach-1-Additive-35B-Multimodal"
+  ],
+  "organization": "syzygy-research",
+  "released": "2026-08-05",
+  "tags": [
+    "task:image-understanding",
+    "domain:multimodal"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": 35,
+    "runtimes": []
+  },
+  "license": {
+    "id": "unknown",
+    "class": "unknown",
+    "url": "https://huggingface.co/SyzygyResearch/Mach-1-Additive-35B-Multimodal"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/SyzygyResearch/Mach-1-Additive-35B-Multimodal"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "SyzygyResearch/Mach-1-Additive-35B-Multimodal",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/SyzygyResearch/Mach-1-Additive-35B-Multimodal",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "SyzygyResearch/Mach-1-Additive-35B-Multimodal-GGUF",
+      "name": "Mach-1-Additive-35B-Multimodal-GGUF",
+      "url": "https://huggingface.co/SyzygyResearch/Mach-1-Additive-35B-Multimodal-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/SyzygyResearch/Mach-1-Additive-35B-Multimodal",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "1 builds are attached."
+}

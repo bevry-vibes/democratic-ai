@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "id": "ling-3-1-flash-1019",
+  "kind": "model",
+  "name": "Ling-3.1-flash-1019",
+  "aliases": [
+    "inclusionAI/Ling-3.1-flash-1019"
+  ],
+  "organization": "ant-ling",
+  "released": "2026-10-27",
+  "tags": [
+    "task:text-generation",
+    "domain:language",
+    "context:commercial-safe",
+    "license:mit"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-generation"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "mit",
+    "class": "permissive",
+    "url": "https://huggingface.co/inclusionAI/Ling-3.1-flash-1019"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "unproven",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inclusionAI/Ling-3.1-flash-1019"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "inclusionAI/Ling-3.1-flash-1019",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 2,
+    "points": 2,
+    "band": "weak",
+    "sources": [
+      {
+        "id": "artificial-analysis",
+        "url": "https://artificialanalysis.ai/models/ling-3-1-flash-1019",
+        "weight": 2,
+        "kind": "evaluation",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inclusionAI/Ling-3.1-flash-1019",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inclusionAI/Ling-3.1-flash-1019",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

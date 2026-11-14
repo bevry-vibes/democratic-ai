@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "id": "lfm3-audio-2b",
+  "kind": "model",
+  "name": "LFM3-Audio-2B",
+  "aliases": [
+    "LiquidAI/LFM3-Audio-2B"
+  ],
+  "organization": "liquid-ai",
+  "released": "2026-09-08",
+  "tags": [
+    "task:speech-synthesis",
+    "task:tool-calling",
+    "task:transcription",
+    "domain:language",
+    "domain:multimodal",
+    "domain:speech",
+    "modality:audio",
+    "runtime:python",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "speech-synthesis",
+      "tool-calling",
+      "transcription"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": 2,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/LiquidAI/LFM3-Audio-2B"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "LiquidAI/LFM3-Audio-2B",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "FluidInference/lfm3-audio-2b-coreml",
+      "name": "lfm3-audio-2b-coreml",
+      "url": "https://huggingface.co/FluidInference/lfm3-audio-2b-coreml",
+      "runtime": [
+        "ios",
+        "coreml"
+      ],
+      "quantization": "CoreML",
+      "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-Audio-2B-ONNX",
+      "name": "LFM3-Audio-2B-ONNX",
+      "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-ONNX",
+      "runtime": [
+        "onnx"
+      ],
+      "quantization": "ONNX",
+      "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-Audio-2B-MLX-bf16",
+      "name": "LFM3-Audio-2B-MLX-bf16",
+      "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-MLX-bf16",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "BF16",
+      "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-Audio-2B-MLX-8bit",
+      "name": "LFM3-Audio-2B-MLX-8bit",
+      "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-MLX-8bit",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "8-bit",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-Audio-2B-MLX-4bit",
+      "name": "LFM3-Audio-2B-MLX-4bit",
+      "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-MLX-4bit",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "4-bit",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "LiquidAI/LFM3-Audio-2B-GGUF",
+      "name": "LFM3-Audio-2B-GGUF",
+      "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "6 builds are attached."
+}

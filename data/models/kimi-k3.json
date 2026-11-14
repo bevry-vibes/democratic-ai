@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "id": "kimi-k3",
+  "kind": "model",
+  "name": "Kimi-K3",
+  "aliases": [
+    "moonshotai/Kimi-K3"
+  ],
+  "organization": "moonshot-ai",
+  "released": "2026-06-13",
+  "tags": [
+    "task:image-understanding",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "modality:text",
+    "runtime:python",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding"
+    ],
+    "languages": [],
+    "modality": [
+      "image",
+      "text"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/moonshotai/Kimi-K3"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/moonshotai/Kimi-K3"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "moonshotai/Kimi-K3",
+    "models_dev": "https://models.dev/models/moonshotai/kimi-k3",
+    "agent_detect": "https://agent-detect.bevry.me/model/kimik3",
+    "gated": null
+  },
+  "syndication": {
+    "score": 10,
+    "points": 12,
+    "band": "very-strong",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/moonshotai/kimi-k3",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "agent-detect",
+        "url": "https://agent-detect.bevry.me/model/kimik3",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "openrouter",
+        "url": "https://openrouter.ai/moonshotai/kimi-k3",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "llm-stats",
+        "url": "https://llm-stats.com/models/kimi-k3",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "artificial-analysis",
+        "url": "https://artificialanalysis.ai/models/kimi-k3",
+        "weight": 2,
+        "kind": "evaluation",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

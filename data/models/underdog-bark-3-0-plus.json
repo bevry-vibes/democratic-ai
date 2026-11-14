@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "id": "underdog-bark-3-0-plus",
+  "kind": "model",
+  "name": "Underdog-Bark-3.0-Plus",
+  "aliases": [
+    "ConwayResearch/Underdog-Bark-3.0-Plus"
+  ],
+  "organization": "underdog-ai",
+  "released": "2026-10-15",
+  "tags": [
+    "task:transcription",
+    "domain:speech",
+    "modality:audio",
+    "runtime:python",
+    "context:non-commercial",
+    "license:cc-by-nc-4.0",
+    "family:parakeet"
+  ],
+  "capabilities": {
+    "tasks": [
+      "transcription"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": [
+      "python"
+    ]
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "cc-by-nc-4.0",
+    "class": "non-commercial",
+    "url": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Plus"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Plus"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "nvidia/parakeet-tdt-0.6b-v3",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "ConwayResearch/Underdog-Bark-3.0-Plus",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Plus",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Plus",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": ""
+}

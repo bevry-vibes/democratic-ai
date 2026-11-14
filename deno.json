@@ -9,7 +9,9 @@
     "links": "deno run -A scripts/links/mod.ts",
     "links:check": "deno check scripts/links/mod.ts",
     "syndication": "deno run -A scripts/syndication/mod.ts",
-    "syndication:check": "deno check scripts/syndication/mod.ts"
+    "syndication:check": "deno check scripts/syndication/mod.ts",
+    "index": "deno run -A scripts/index/mod.ts",
+    "index:check": "deno check scripts/index/mod.ts"
   },
   "imports": {
     "@std/xml": "jsr:@std/xml@^0.2.0"

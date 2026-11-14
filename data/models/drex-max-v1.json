@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "id": "drex-max-v1",
+  "kind": "model",
+  "name": "drex-max-v1",
+  "aliases": [
+    "nace-ai/drex-max-v1"
+  ],
+  "organization": "nace-ai",
+  "released": "2026-10-13",
+  "tags": [
+    "task:text-classification",
+    "domain:language",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "text-classification"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": []
+  },
+  "footprint": {
+    "params_b": null,
+    "runtimes": []
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/nace-ai/drex-max-v1"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/nace-ai/drex-max-v1"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "nace-ai/drex-max-v1",
+    "models_dev": null,
+    "agent_detect": null,
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/nace-ai/drex-max-v1",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-14"
+  },
+  "builds": [
+    {
+      "id": "nace-ai/drex-max-v1-Q8_0",
+      "name": "drex-max-v1-Q8_0",
+      "url": "https://huggingface.co/nace-ai/drex-max-v1-Q8_0",
+      "runtime": [],
+      "quantization": "Q8",
+      "relation": "quantized",
+      "status": "build"
+    }
+  ],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/nace-ai/drex-max-v1",
+      "retrieved_at": "2026-11-14"
+    }
+  ],
+  "verified_at": "2026-11-14",
+  "updated_at": "2026-11-14",
+  "notes": "1 builds are attached."
+}
