@@ -2454,6 +2454,7 @@ html {
 .compare-actions {
   display: flex;
   justify-content: flex-end;
+  margin-top: 0.8rem;
 }
 
 .button.disabled,
@@ -3098,4 +3099,13 @@ html {
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.value-missing {
+  display: inline-block;
+  color: var(--ink-faint);
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  padding-top: 0.12rem;
 }

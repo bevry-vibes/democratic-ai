@@ -176,81 +176,137 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
       <div class="panel" id="capabilities">
         <h2>Capabilities</h2>
         <ul class="tag-explain">
-          <li>
-            <Pill
-              label={bool(model.capabilities.tool_calling)}
-              href="/models/?capability=tool-calling"
-              tone={capabilityClass(model.capabilities.tool_calling)}
-              tooltip={tagDefinition("task:tool-calling")}
-            />
-            <span>{tagDefinition("task:tool-calling")}</span>
-          </li>
-          <li>
-            <Pill
-              label={bool(model.capabilities.reasoning)}
-              href="/models/?capability=reasoning"
-              tone={capabilityClass(model.capabilities.reasoning)}
-              tooltip={tagDefinition("task:reasoning")}
-            />
-            <span>{tagDefinition("task:reasoning")}</span>
-          </li>
-          <li>
-            <Pill
-              label={bool(model.capabilities.structured_output)}
-              href="/models/?capability=structured-output"
-              tone={capabilityClass(model.capabilities.structured_output)}
-              tooltip={structuredOutputDefinition}
-            />
-            <span>{structuredOutputDefinition}</span>
-          </li>
-          <li>
-            <Pill
-              label={`context: ${formatContextCount(model.capabilities.context_tokens)}`}
-              href={model.capabilities.context_tokens ? `/models/?min_context=${model.capabilities.context_tokens}` : "/models/"}
-              tone="meta-context"
-              tooltip="The model's maximum context window."
-            />
-            <span>The maximum number of tokens the model can consider at once.</span>
-          </li>
-          <li>
-            <Pill
-              label={formatParams(model.footprint.params_b)}
-              href={model.footprint.params_b ? `/models/?min_params=${model.footprint.params_b}` : "/models/"}
-              tone="capability"
-              tooltip="The model's parameter count."
-            />
-            <span>The parameter count. Use it to estimate weights and memory.</span>
-          </li>
+          {model.capabilities.tool_calling == null ? (
+            <li>
+              <span class="value-missing">Not recorded</span>
+              <span>Tool-calling support is not recorded in this pull. This is not the same as unsupported.</span>
+            </li>
+          ) : (
+            <li>
+              <Pill
+                label={bool(model.capabilities.tool_calling)}
+                href="/models/?capability=tool-calling"
+                tone={capabilityClass(model.capabilities.tool_calling)}
+                tooltip={tagDefinition("task:tool-calling")}
+              />
+              <span>{tagDefinition("task:tool-calling")}</span>
+            </li>
+          )}
+          {model.capabilities.reasoning == null ? (
+            <li>
+              <span class="value-missing">Not recorded</span>
+              <span>Reasoning support is not recorded in this pull. This is not the same as unsupported.</span>
+            </li>
+          ) : (
+            <li>
+              <Pill
+                label={bool(model.capabilities.reasoning)}
+                href="/models/?capability=reasoning"
+                tone={capabilityClass(model.capabilities.reasoning)}
+                tooltip={tagDefinition("task:reasoning")}
+              />
+              <span>{tagDefinition("task:reasoning")}</span>
+            </li>
+          )}
+          {model.capabilities.structured_output == null ? (
+            <li>
+              <span class="value-missing">Not recorded</span>
+              <span>Structured-output support is not recorded in this pull. This is not the same as unsupported.</span>
+            </li>
+          ) : (
+            <li>
+              <Pill
+                label={bool(model.capabilities.structured_output)}
+                href="/models/?capability=structured-output"
+                tone={capabilityClass(model.capabilities.structured_output)}
+                tooltip={structuredOutputDefinition}
+              />
+              <span>{structuredOutputDefinition}</span>
+            </li>
+          )}
+          {model.capabilities.context_tokens == null ? (
+            <li>
+              <span class="value-missing">Not recorded</span>
+              <span>The context window is not recorded. Check the model card.</span>
+            </li>
+          ) : (
+            <li>
+              <Pill
+                label={`context: ${formatContextCount(model.capabilities.context_tokens)}`}
+                href={`/models/?min_context=${model.capabilities.context_tokens}`}
+                tone="meta-context"
+                tooltip="The model's maximum context window."
+              />
+              <span>The maximum number of tokens the model can consider at once.</span>
+            </li>
+          )}
+          {model.footprint.params_b == null ? (
+            <li>
+              <span class="value-missing">Not recorded</span>
+              <span>The parameter count is not recorded. Check the model card.</span>
+            </li>
+          ) : (
+            <li>
+              <Pill
+                label={formatParams(model.footprint.params_b)}
+                href={`/models/?min_params=${model.footprint.params_b}`}
+                tone="capability"
+                tooltip="The model's parameter count."
+              />
+              <span>The parameter count. Use it to estimate weights and memory.</span>
+            </li>
+          )}
         </ul>
       </div>
 
       <div class="panel" id="terms">
         <h2>Terms</h2>
         <ul class="tag-explain">
-          <li>
-            <Pill
-              label={model.openness.weights}
-              href="/#release-terms"
-              tooltip="Open-weight means the trained weights are downloadable. It does not mean the training data or code are open."
-            />
-            <span>Open-weight means the trained weights are downloadable. It does not mean the training data or code are open.</span>
-          </li>
-          <li>
-            <Pill
-              label={model.openness.training_data}
-              href="/#release-terms"
-              tooltip="Open means the data is published. Documented means it is described but not released. Unknown means unchecked, not closed."
-            />
-            <span>Open means the data is published. Documented means it is described but not released. Unknown means unchecked, not closed.</span>
-          </li>
-          <li>
-            <Pill
-              label={model.openness.training_code}
-              href="/#release-terms"
-              tooltip="Open means the training code is published. Documented means it is described but not released. Unknown means unchecked, not closed."
-            />
-            <span>Open means the training code is published. Documented means it is described but not released. Unknown means unchecked, not closed.</span>
-          </li>
+          {model.openness.weights === "unknown" ? (
+            <li>
+              <span class="value-missing">Not recorded</span>
+              <span>The weight status is not recorded. This is not the same as closed.</span>
+            </li>
+          ) : (
+            <li>
+              <Pill
+                label={model.openness.weights}
+                href="/#release-terms"
+                tooltip="Open-weight means the trained weights are downloadable. It does not mean the training data or code are open."
+              />
+              <span>Open-weight means the trained weights are downloadable. It does not mean the training data or code are open.</span>
+            </li>
+          )}
+          {model.openness.training_data === "unknown" ? (
+            <li>
+              <span class="value-missing">Not recorded</span>
+              <span>The training data has not been checked. Unknown is not the same as closed.</span>
+            </li>
+          ) : (
+            <li>
+              <Pill
+                label={model.openness.training_data}
+                href="/#release-terms"
+                tooltip="Open means the data is published. Documented means it is described but not released."
+              />
+              <span>Open means the data is published. Documented means it is described but not released.</span>
+            </li>
+          )}
+          {model.openness.training_code === "unknown" ? (
+            <li>
+              <span class="value-missing">Not recorded</span>
+              <span>The training code has not been checked. Unknown is not the same as closed.</span>
+            </li>
+          ) : (
+            <li>
+              <Pill
+                label={model.openness.training_code}
+                href="/#release-terms"
+                tooltip="Open means the training code is published. Documented means it is described but not released."
+              />
+              <span>Open means the training code is published. Documented means it is described but not released.</span>
+            </li>
+          )}
           <li>
             <Pill
               label={model.openness.tier}
