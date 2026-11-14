@@ -1,14 +1,13 @@
 ---
 import Base from "../layouts/Base.astro"
-import ModelCard from "../components/ModelCard.astro"
 import CountPill from "../components/CountPill.astro"
+import TagChips from "../components/TagChips.astro"
 import ComparePicker from "../components/ComparePicker.astro"
 import { getIndex, tagDefinition, tagLabel, tagPath, taskCounts, topModels } from "../lib/data"
 
 const index = getIndex()
 const top = topModels(index, 6)
 const tasks = taskCounts(index)
-const buildCount = index.models.reduce((total, model) => total + model.builds, 0)
 ---
 
 <Base
@@ -16,26 +15,16 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
   description="A catalogue of reciprocal AI models, tagged for the job you need, with a current scorecard and open JSON."
 >
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="eyebrow">The Democratic AI catalogue</p>
-        <h1>Find a model by job. Read what it gives back.</h1>
-        <p class="lede">
-          A catalogue of reciprocal AI. Start with a task, compare the current scorecard, and use the JSON without an
-          account.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="/models/">Browse {index.models.length} models</a>
-          <a class="button secondary" href="#agents">Use the JSON</a>
-        </div>
-      </div>
-      <aside class="hero-aside">
-        <p class="eyebrow">The index now</p>
-        <div class="stat"><span>Root models</span><strong>{index.models.length}</strong></div>
-        <div class="stat"><span>Task tags</span><strong>{tasks.length}</strong></div>
-        <div class="stat"><span>Attached builds</span><strong>{buildCount}</strong></div>
-        <div class="stat"><span>Last index</span><strong>{index.generated_at.slice(0, 10)}</strong></div>
-      </aside>
+    <div class="wrap">
+      <p class="eyebrow">The Democratic AI catalogue</p>
+      <h1>Find a model by job. Read what it gives back.</h1>
+      <p class="lede">
+        A catalogue of reciprocal AI. Start with a task, compare the current scorecard, and use the JSON without an
+        account.
+      </p>
+      <p class="hero-meta">
+        {index.models.length} models · {tasks.length} task tags · last index {index.generated_at.slice(0, 10)}
+      </p>
     </div>
   </section>
 
@@ -47,18 +36,39 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
           <h2>Strongest overall scores</h2>
         </div>
       </div>
-      <p class="muted" style="margin-bottom:1.4rem">
+      <p class="muted" style="margin-bottom:1.2rem">
         Six models with the strongest current overall score. <a href="/about/#scorecard">How the score is made</a>.
       </p>
-      <div class="card-grid">
-        {top.map((model) => <ModelCard model={model} />)}
+      <div class="home-model-list">
+        {top.map((model, index) => {
+          const overall = model.scorecard?.overall
+          return (
+            <div class="home-model-row">
+              <span class="home-model-rank">{String(index + 1).padStart(2, "0")}</span>
+              <div class="home-model-name">
+                <a class="row-title" href={`/models/${model.id}/`}><h3>{model.name}</h3></a>
+                <p class="mono-small">{model.organization}</p>
+              </div>
+              <div class="home-model-tasks">
+                <TagChips tags={model.tags.filter((tag) => tag.startsWith("task:"))} limit={2} />
+              </div>
+              <div class="home-model-score">
+                <CountPill
+                  label="overall"
+                  count={overall?.score == null ? "—" : Math.round(overall.score)}
+                  href={`/models/${model.id}/#scorecard-overall`}
+                  tone="score-overall"
+                  tooltip={overall?.score == null ? "No overall score is recorded." : `Weighted mean of ${overall.coverage} of 4 axes.`}
+                />
+                <span class="mono-small faint">{overall?.coverage ?? 0}/4 axes</span>
+              </div>
+            </div>
+          )
+        })}
       </div>
-      <div class="see-all-models">
-        <div>
-          <strong>There are {index.models.length} models in the catalogue.</strong>
-          <p class="muted">Browse the full list by task, context, licence, and score.</p>
-        </div>
-        <a class="button secondary" href="/models/">See all {index.models.length} models →</a>
+      <div class="home-more">
+        <span>{index.models.length} models in the catalogue.</span>
+        <a href="/models/">See all models →</a>
       </div>
     </div>
   </section>
@@ -85,7 +95,6 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
           <p class="eyebrow">Start with the job</p>
           <h2>What do you need it to do?</h2>
         </div>
-        <a href="/tags/">All tags →</a>
       </div>
       <div class="flex wrap-gap">
         {tasks.slice(0, 12).map(({ task, count }) => (
@@ -105,29 +114,15 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">How to use it</p>
-          <h2>Two ways in</h2>
+          <p class="eyebrow">For agents</p>
+          <h2>Use the JSON</h2>
         </div>
+        <a href="/data/">API and schema →</a>
       </div>
-      <div class="usecase-grid">
-        <div class="panel">
-          <h3>For humans</h3>
-          <ol class="usecase-list">
-            <li><a href="/tags/">Start with a job.</a> Pick the task first, then narrow by context, licence, or score.</li>
-            <li><a href="/models/">Compare models.</a> Sort by overall score, syndication, performance, openness, or citation.</li>
-            <li><a href="/about/">Read the method.</a> See how the tiers and scorecard are decided.</li>
-          </ol>
-        </div>
-        <div class="panel" id="agents">
-          <h3>For agents</h3>
-          <p>Read the JSON, not the HTML. No account is needed.</p>
-          <ul class="usecase-list">
-            <li><code>GET /api/v1/index.json</code> — compact model rows, tags, and scorecard.</li>
-            <li><code>GET /api/v1/models/&lt;id&gt;.json</code> — the full model record.</li>
-            <li><code>GET /api/v1/tags.json</code> — the tag vocabulary.</li>
-          </ul>
-          <a class="button secondary" href="/data/">API and schema</a>
-        </div>
+      <div class="agent-api">
+        <div><code>GET /api/v1/index.json</code><p>Compact model rows, tags, and scorecard.</p></div>
+        <div><code>GET /api/v1/models/&lt;id&gt;.json</code><p>The full model record.</p></div>
+        <div><code>GET /api/v1/tags.json</code><p>The tag vocabulary.</p></div>
       </div>
     </div>
   </section>
