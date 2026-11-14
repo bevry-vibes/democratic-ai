@@ -243,6 +243,8 @@ The site carries its own current scorecard. It does not repeat a frozen external
 
 The axes are independent. A model can be strong on one and weak on another. A missing score is not zero. A base-model match, a model-card figure, and an aggregator figure are labelled. The numbers are index scores, not percentages, and do not need to sum to 100.
 
+The homepage also carries an overall score. It is a weighted mean of the available axes: openness 30%, performance 40%, research 15%, and syndication 15%. Missing axes are excluded, not treated as zero. Coverage is shown beside the score. The overall score is a guide for the homepage, not a replacement for the four axes.
+
 Performance evidence is layered. An aggregator primary row wins. A model-card row fills a gap only when no aggregator primary row exists. A later update may inherit its base model's primary result when it has no comparable benchmark of its own; the record says so. A secondary or tertiary fallback is marked as a weaker comparison. Never mix a six-set card average into a seven-set leaderboard ranking.
 
 A release that is the same model under a new name, or a later update of the same lineage, folds into the canonical record. The alias gets a redirect and a release-history entry. It does not get a second model page. Builds still attach to the base model and do not get pages.
