@@ -234,21 +234,20 @@ The inclusionAI real models show why the score matters. Duo has an arXiv paper a
 
 The release tier is not a grade. Open-weight is a real return to the commons; open data and open code add to it. The catalogue records the difference without treating open-weight as a failure.
 
-The site also carries the July 2026 AI Market Scorecard. It grades three independent axes:
+The site carries its own current scorecard. It does not repeat a frozen external table. The scorecard keeps four independent axes:
 
-- **Openness/Morality** — commons contribution, liberation valence, and third-party harm.
-- **Code/Reasoning** — agentic coding and reasoning, grounded in SWE-bench, Terminal-Bench, and LiveCodeBench.
-- **Research/Citation** — whether the model can cite sources, and how often it fabricates them.
+- **Openness/Morality** — computed from current release terms: weights, training data, training code, and licence. Training-data ethics are not assessed.
+- **Performance/Intelligence** — the model's current measured performance on its task. Coding models use a primary agentic benchmark composite: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench. Speech models use average WER converted to an index. Other models use the best current primary benchmark.
+- **Research/Citation** — current research benchmarks where available. Citation accuracy is a separate question and is marked when it is not measured.
+- **Syndication** — current independent listings. It is a signal, not quality.
 
-The axes are independent. A model can be A+ on openness and F on citation. A missing score is not zero. A family match carries the score for the named model family, not an exact version, and the record says so.
+The axes are independent. A model can be strong on one and weak on another. A missing score is not zero. A base-model match, a model-card figure, and an aggregator figure are labelled. The numbers are index scores, not percentages, and do not need to sum to 100.
 
-Task lists rank by the axis that matches the task: Code/Reasoning for code, tool-calling, reasoning, and text generation; Research/Citation for retrieval.
+Performance evidence is layered. An aggregator primary row wins. A model-card row fills a gap only when no aggregator primary row exists. A later update may inherit its base model's primary result when it has no comparable benchmark of its own; the record says so. A secondary or tertiary fallback is marked as a weaker comparison. Never mix a six-set card average into a seven-set leaderboard ranking.
 
-Speech has its own measured axis. The catalogue uses average WER from the Open ASR Leaderboard's English short-form tab, and a model-card figure only when the leaderboard has no row. Lower is better. A card figure is marked as self-reported; a base-model row is marked as a base-model match. Do not compare a six-set card average to the seven-set leaderboard average, and do not rank benchmark-fitted development numbers with independent results. Missing is not zero.
+A release that is the same model under a new name, or a later update of the same lineage, folds into the canonical record. The alias gets a redirect and a release-history entry. It does not get a second model page. Builds still attach to the base model and do not get pages.
 
-Sorting is a view, not a score. A page can order by task performance, Openness/Morality, Code/Reasoning, Research/Citation, syndication, release date, or name, in either direction. Missing values stay last in both directions.
-
-## Evaluation doctrine
+## Evaluation doctrine## Evaluation doctrine
 
 These rules come from the translation comparison and the Pati work. They apply to every use case.
 

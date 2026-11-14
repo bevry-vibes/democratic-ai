@@ -59,19 +59,24 @@ The tiers describe what you can reuse. They are not a judgement on the worth of 
 
 ## Scorecard
 
-The catalogue also carries the July 2026 AI Market Scorecard for the models it covers. It grades three independent axes:
+The catalogue carries its own current scorecard. It is not a frozen table from an earlier essay. Every value is recomputed from the evidence the record holds today:
 
-- **Openness/Morality** — how the model was built and released, and what it gave back.
-- **Code/Reasoning** — agentic coding and reasoning.
-- **Research/Citation** — whether the model can cite sources, and how often it fabricates them.
+- **Openness/Morality** — what the release gives back: weights, training data, training code, and reuse terms.
+- **Performance/Intelligence** — how well the model does its job on a current primary benchmark. Coding models use agentic coding benchmarks. Speech models use average word error rate. Other models use the best current primary benchmark.
+- **Research/Citation** — current research benchmarks where they exist. Citation accuracy is a separate question, and the record says when it is not measured.
+- **Syndication** — independent listings, not quality.
 
-The axes are independent. A model can be strong on one and weak on another. A missing score is not zero. A family match is marked as a family match.
+The numbers are index scores, not percentages. They do not need to sum to 100. A missing score is not zero. A model-card figure, an aggregator figure, and a base-model match are labelled. A later update may inherit its base model's primary result when it has no comparable benchmark of its own, and the record says so.
 
-For speech models, the catalogue also carries **average word error rate (WER)** from the Open ASR Leaderboard, or a figure the model card reports where the leaderboard has no row. Lower is better. A self-reported figure is marked with a star. A base-model match is marked as a base-model match. Missing is not zero.
+The scorecard keeps the axes independent. A model can be open and a weak coder. A model can be a strong coder and a poor citizen. A model can cite well through a vendor interface while its open weights cannot cite at all.
 
-Tag pages sort by task performance, openness and morality, code and reasoning, research and citation, syndication, release date, or name. The button beside the sort control reverses the order. Missing scores always sort last.
+Tag pages sort by performance, openness, research, syndication, release date, or name. The button beside the sort control reverses the order. Missing scores always sort last.
 
-## Browse by tags
+When a release is the same model under a new name, or a later update of the same lineage, the older page folds into the canonical page. The old URL redirects, and the canonical page keeps the release history. The model is not listed twice.
+
+The full argument is in [the thesis](https://democratic-ai.bevry.workers.dev/thesis/) and the method is in [the method page](https://democratic-ai.bevry.workers.dev/about/).
+
+## Browse by tags## Browse by tags
 
 Tags let a model belong to several jobs at once.
 

@@ -504,8 +504,13 @@ data/
   tag-rules.json              rules for the tagging pass
   links.json                  generated models.dev and agent-detect links
   syndication.json            generated independent-listing scores
-  scorecard.json              the July 2026 AI Market Scorecard source
-  scorecard.report.json       which models matched which scorecard entry
+  scorecard.json              the current scorecard rubric and axis definitions
+  benchmarks.json             current performance and research benchmark overlay
+  benchmarks.report.json      which models were scored from which source
+  benchmarks.cards.json       model-card benchmark rows used to fill aggregator gaps
+  benchmarks.targets.json     extra aggregator pages to fetch for a gap
+  model-aliases.json          releases that fold into a canonical model page
+  scorecard.report.json       current openness, performance, research, and syndication counts
   asr.json                    Open ASR Leaderboard mappings and card-reported WER
   asr.report.json             which speech models were scored from which source
   feeds.json                  verified feeds and APIs (discovery sources)
@@ -534,6 +539,7 @@ scripts/
   summaries/                  fetch missing model cards (implemented)
   scorecard/                  apply task and openness scores (implemented)
   asr/                        cache the speech leaderboard and apply average WER (implemented)
+  benchmarks/                 cache LLM Stats and Artificial Analysis, compute performance (implemented)
   index/                      model records from the tagged pull (implemented)
   build.ts                    validate, compute tiers, generate
   check.ts                    build in check mode
@@ -866,7 +872,7 @@ The record is honest about what this pass knows. `openness.tier` is `unproven` u
 
 A build with no base in the pull stays in the report. It does not get a record. The next pull can attach it when the base appears.
 
-**Summaries and performance.** The first summary pass fetched 169 missing model cards and left 2 with no card. The index uses the models.dev description when present, then the model card excerpt. The July 2026 AI Market Scorecard matched 10 models: 5 exact and 5 family matches. Tag pages rank code, tool-calling, reasoning, and text-generation tasks by Code/Reasoning, and retrieval by Research/Citation. Speech pages rank by average WER from the Open ASR Leaderboard; where the leaderboard has no row, an explicit model-card figure is used and marked self-reported. A missing score is not zero; a family or base-model match is marked. The sort control also orders by openness, code, research, syndication, release date, or name, in either direction.
+**Summaries and performance.** The summary pass fetched the missing model cards and leaves only records whose card has no description. The index uses the models.dev description when present, then the model card excerpt. The current scorecard computes openness from release terms, takes Performance/Intelligence from current agentic benchmarks or average WER, takes Research/Citation from current research benchmarks, and keeps Syndication as a separate 0–10 axis. LLM Stats is the first aggregator; Artificial Analysis fills gaps; a model-card row is used only when no aggregator primary row exists. A later update may inherit a base model's primary result when it has no comparable benchmark, and the record says so. A release that is the same model under a new name folds into the canonical page with a redirect and release history. Tag pages rank by performance, openness, research, syndication, release date, or name, in either direction. Missing scores are not zero.
 
 ### 11. CI/CD
 
