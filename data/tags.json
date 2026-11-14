@@ -53,7 +53,13 @@
         "audio-classification": "Assign labels to audio.",
         "voice-activity-detection": "Detect speech activity in audio.",
         "time-series-forecasting": "Forecast a time series.",
-        "ocr": "Read text from images or documents."
+        "ocr": "Read text from images or documents.",
+        "audio-language": "Understand and respond to audio with a language model.",
+        "speech-editing": "Edit speech, such as replacing or correcting a segment.",
+        "speech-separation": "Separate speakers or sources in audio.",
+        "real-time-interaction": "Interact in real time, often full-duplex audio or video.",
+        "world-model": "Model an environment or interaction for simulation.",
+        "image-segmentation": "Segment objects or regions in an image."
       }
     },
     "modality": {
@@ -175,7 +181,8 @@
         "retired": "No longer available.",
         "unverified": "The state is not confirmed.",
         "build": "A packaged build or conversion of a base model, such as GGUF, MLX, CoreML, ONNX, or a quantized release.",
-        "probe": "An internal evaluation probe or experimental variant, not a product release."
+        "probe": "An internal evaluation probe or experimental variant, not a product release.",
+        "documentation": "Documentation or a report, not a model."
       }
     },
     "org": {

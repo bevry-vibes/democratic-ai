@@ -632,5 +632,88 @@
     "relation:probe": [
       "-singprobe"
     ]
+  },
+  "model_overrides": {
+    "XiaomiMiMo/MiMo-Audio-Tokenizer": [
+      "task:audio-language",
+      "domain:speech",
+      "domain:multimodal",
+      "modality:audio"
+    ],
+    "XiaomiMiMo/MiMo-Audio-7B-Instruct": [
+      "task:audio-language",
+      "domain:speech",
+      "domain:multimodal",
+      "modality:audio"
+    ],
+    "XiaomiMiMo/MiMo-Audio-7B-Base": [
+      "task:audio-language",
+      "domain:speech",
+      "domain:multimodal",
+      "modality:audio"
+    ],
+    "inclusionAI/Duo-1.0-distill": [
+      "task:world-model",
+      "task:real-time-interaction",
+      "domain:multimodal",
+      "modality:audio",
+      "modality:video"
+    ],
+    "inclusionAI/Duo-1.2-causal-base": [
+      "task:world-model",
+      "task:real-time-interaction",
+      "domain:multimodal",
+      "modality:audio",
+      "modality:video"
+    ],
+    "inclusionAI/Duo-1.0-causal-base": [
+      "task:world-model",
+      "task:real-time-interaction",
+      "domain:multimodal",
+      "modality:audio",
+      "modality:video"
+    ],
+    "inclusionAI/Ming-3.0-audio-flash": [
+      "task:audio-language",
+      "task:transcription",
+      "task:speech-synthesis",
+      "domain:speech",
+      "modality:audio"
+    ],
+    "inclusionAI/Realtime-Venus": [
+      "task:real-time-interaction",
+      "domain:multimodal",
+      "modality:audio",
+      "modality:video"
+    ],
+    "inclusionAI/AI-Transparency": [
+      "status:documentation",
+      "domain:governance"
+    ],
+    "inclusionAI/Ming-UniAudio-16B-A3B-Edit": [
+      "task:audio-language",
+      "task:speech-synthesis",
+      "task:speech-editing",
+      "domain:speech",
+      "modality:audio"
+    ],
+    "inclusionAI/Ming-UniAudio-16B-A3B": [
+      "task:audio-language",
+      "task:speech-synthesis",
+      "domain:speech",
+      "modality:audio"
+    ],
+    "higurashi-ai/FastDialogueSidon": [
+      "task:speech-separation",
+      "domain:speech",
+      "modality:audio"
+    ],
+    "unsloth/sam3.1": [
+      "status:build",
+      "relation:quantized",
+      "task:image-segmentation",
+      "domain:vision",
+      "modality:image"
+    ]
   }
 }

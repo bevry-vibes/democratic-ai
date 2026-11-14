@@ -15,6 +15,7 @@ interface TagRuleFile {
   sitemaps: Record<string, string[]>
   build_markers: Record<string, string[]>
   relation_markers: Record<string, string[]>
+  model_overrides: Record<string, string[]>
 }
 
 interface TagVocabulary {
@@ -39,7 +40,7 @@ interface PullItem {
 interface ProposedTag {
   tag: string
   confidence: number
-  method: "source-native" | "rule" | "title" | "fallback"
+  method: "source-native" | "rule" | "title" | "fallback" | "manual"
   evidence: string[]
 }
 
@@ -279,6 +280,13 @@ function tagItem(item: PullItem, rules: TagRuleFile, orgMap: Map<string, string>
     }
   }
 
+  if (item.kind === "model") {
+    const override = rules.model_overrides[item.source_id]
+    if (override) {
+      for (const tag of override) tags.add(tag, 0.95, "manual", `override:${item.source_id}`)
+    }
+  }
+
   const proposed = tags.toArray()
   const knownTags = new Set(
     Object.entries(vocabulary.namespaces).flatMap(([namespace, entry]) =>
@@ -297,7 +305,8 @@ function tagItem(item: PullItem, rules: TagRuleFile, orgMap: Map<string, string>
   let needsReview = false
   let reviewReason: string | null = null
   const isBuild = proposed.some((tag) => tag.tag === "status:build" || tag.tag === "status:probe")
-  if (item.kind === "model" && !hasTask && !isBuild) {
+  const isDocumentation = proposed.some((tag) => tag.tag === "status:documentation")
+  if (item.kind === "model" && !hasTask && !isBuild && !isDocumentation) {
     needsReview = true
     reviewReason = "model has no task tag"
   } else if (item.kind === "dataset" && !hasDomain) {
