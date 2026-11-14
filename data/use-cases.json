@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14",
+  "notes": "Seed use cases from the owner's live products. A use case is a job, its constraints, and its success criteria. Recommendations and evaluations land in Phase 1.",
+  "use_cases": [
+    {
+      "id": "translation-id-en",
+      "name": "Indonesian ↔ English translation",
+      "summary": "Translate school content between Indonesian and English while preserving names, glossary terms, and formatting.",
+      "task": "translation",
+      "directions": ["id->en", "en->id"],
+      "requirements": {
+        "languages": ["id", "en"],
+        "modalities": ["text"],
+        "runtime": ["cloudflare-workers", "node", "local"],
+        "hardware": ["cpu"],
+        "license_class": ["permissive", "reciprocal"],
+        "offline": false,
+        "privacy": "no-training-on-content",
+        "latency": "batch",
+        "structured_output": false,
+        "tool_calling": false,
+        "max_memory_gb": null,
+        "cost": "free-or-trivial"
+      },
+      "success_criteria": [
+        "Masked names survive 10/10 in both directions",
+        "Quality stays at or above the previous primary",
+        "A 300-segment entry fits a five-minute cron budget",
+        "The licence permits the deployment"
+      ],
+      "evidence": ["translation-comparison-en-id", "pati-website"],
+      "updated_at": "2026-11-14"
+    },
+    {
+      "id": "speech-transcription",
+      "name": "Offline speech transcription",
+      "summary": "Transcribe Indonesian and English recordings on a laptop, with timestamps, without sending audio to a provider.",
+      "task": "transcription",
+      "directions": ["audio->text"],
+      "requirements": {
+        "languages": ["id", "en"],
+        "modalities": ["audio", "text"],
+        "runtime": ["local", "mlx", "whisper.cpp"],
+        "hardware": ["cpu", "apple-silicon"],
+        "license_class": ["permissive", "reciprocal"],
+        "offline": true,
+        "privacy": "local-only",
+        "latency": "batch",
+        "structured_output": true,
+        "tool_calling": false,
+        "max_memory_gb": 16,
+        "cost": "free"
+      },
+      "success_criteria": [
+        "Word error rate is acceptable on real recordings",
+        "Timestamps align with the audio",
+        "The model runs offline in the memory budget",
+        "The licence permits the use"
+      ],
+      "evidence": ["tts-comparison", "pati-reports"],
+      "updated_at": "2026-11-14"
+    },
+    {
+      "id": "speech-synthesis",
+      "name": "On-device speech synthesis",
+      "summary": "Render natural word and sentence audio on an Apple-Silicon laptop for a local-first learning app.",
+      "task": "speech-synthesis",
+      "directions": ["text->audio"],
+      "requirements": {
+        "languages": ["en"],
+        "modalities": ["text", "audio"],
+        "runtime": ["local", "mlx", "coreml", "onnx"],
+        "hardware": ["apple-silicon", "cpu"],
+        "license_class": ["permissive", "reciprocal"],
+        "offline": true,
+        "privacy": "local-only",
+        "latency": "interactive",
+        "structured_output": false,
+        "tool_calling": false,
+        "max_memory_gb": 16,
+        "cost": "free"
+      },
+      "success_criteria": [
+        "A human listener prefers the voice for the app",
+        "Audio is at least 22 kHz and mp3-friendly",
+        "One-word clips sound natural",
+        "The engine runs offline without a GPU"
+      ],
+      "evidence": ["tts-comparison"],
+      "updated_at": "2026-11-14"
+    },
+    {
+      "id": "topic-tagging",
+      "name": "On-device topic tagging",
+      "summary": "Suggest and apply topic tags to Indonesian and English content inside an admin browser, without a server call.",
+      "task": "classification",
+      "directions": ["text->labels"],
+      "requirements": {
+        "languages": ["id", "en", "multilingual"],
+        "modalities": ["text"],
+        "runtime": ["browser"],
+        "hardware": ["cpu", "mobile"],
+        "license_class": ["permissive", "reciprocal", "use-restricted"],
+        "offline": true,
+        "privacy": "local-only",
+        "latency": "interactive",
+        "structured_output": true,
+        "tool_calling": false,
+        "max_memory_gb": 1,
+        "cost": "free-tier"
+      },
+      "success_criteria": [
+        "The model classifies Indonesian and English content",
+        "Suggestions are useful enough for an editor to accept",
+        "The model loads lazily in the browser",
+        "The licence and device cap fit the site"
+      ],
+      "evidence": ["pati-website", "desertant.com/models/gist"],
+      "updated_at": "2026-11-14"
+    },
+    {
+      "id": "report-generation",
+      "name": "Student report generation",
+      "summary": "Generate an Indonesian kindergarten report from teacher notes, with a source link for every step and no invented evidence.",
+      "task": "report-generation",
+      "directions": ["notes->report"],
+      "requirements": {
+        "languages": ["id"],
+        "modalities": ["text"],
+        "runtime": ["cloudflare-workers"],
+        "hardware": ["server"],
+        "license_class": ["permissive", "reciprocal"],
+        "offline": false,
+        "privacy": "no-training-on-child-data",
+        "latency": "interactive",
+        "structured_output": true,
+        "tool_calling": false,
+        "max_memory_gb": null,
+        "cost": "paid"
+      },
+      "success_criteria": [
+        "Every mark and note cites a teacher update",
+        "The model never invents evidence or attendance",
+        "A teacher can review and correct the result",
+        "Child note text is not used for training"
+      ],
+      "evidence": ["pati-reports"],
+      "updated_at": "2026-11-14"
+    },
+    {
+      "id": "coding-agent",
+      "name": "Coding agent",
+      "summary": "Use a model that calls tools reliably in a coding agent, within a local or hosted memory budget.",
+      "task": "code",
+      "directions": ["prompt->code"],
+      "requirements": {
+        "languages": ["en"],
+        "modalities": ["text"],
+        "runtime": ["local", "hosted"],
+        "hardware": ["apple-silicon", "cuda"],
+        "license_class": ["permissive", "reciprocal"],
+        "offline": false,
+        "privacy": "no-training-on-code",
+        "latency": "interactive",
+        "structured_output": true,
+        "tool_calling": true,
+        "max_memory_gb": 32,
+        "cost": "free-or-paid"
+      },
+      "success_criteria": [
+        "Tool calls are accurate and recover from errors",
+        "The model completes repository tasks, not only snippets",
+        "The context window fits the task",
+        "The licence permits the use"
+      ],
+      "evidence": ["agent-detect"],
+      "updated_at": "2026-11-14"
+    }
+  ]
+}
