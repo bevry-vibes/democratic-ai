@@ -1,7 +1,7 @@
 ---
 import type { CompactModel } from "../lib/data"
-import { formatContext, modelHref, tagDefinition, tagLabel, tagPath } from "../lib/data"
-import ScoreBadge from "./ScoreBadge.astro"
+import { formatContextCount, modelHref, tagDefinition, tagLabel, tagPath } from "../lib/data"
+import CountPill from "./CountPill.astro"
 
 interface Props {
   model: CompactModel
@@ -19,25 +19,46 @@ const onDevice = model.tags.includes("context:on-device")
       <p class="faint mono-small mb-0">{model.organization}</p>
     </div>
     <div class="card-score">
-      <span class="score-prefix">syndication:</span>
-      <ScoreBadge score={model.score} band={model.band} />
+      <CountPill
+        label="syndication"
+        count={`${model.score}/10`}
+        href={`${modelHref(model.id)}#scorecard`}
+        tone="plum"
+        tooltip="Independent listings, not quality. The model's own host has weight 0."
+      />
     </div>
   </div>
   {model.summary && <p class="summary">{model.summary}</p>}
   <div class="meta">
     {task && (
-      <a class="chip task" href={tagPath(`task:${task}`)} title={tagDefinition(`task:${task}`)}>
+      <a class="chip task" href={tagPath(`task:${task}`)} data-tooltip={tagDefinition(`task:${task}`)}>
         {tagLabel(`task:${task}`)}
       </a>
     )}
     {onDevice && (
-      <a class="chip context" href={tagPath("context:on-device")} title={tagDefinition("context:on-device")}>
+      <a class="chip context" href={tagPath("context:on-device")} data-tooltip={tagDefinition("context:on-device")}>
         on-device
       </a>
     )}
-    {model.context_tokens && <span class="chip">{formatContext(model.context_tokens)}</span>}
-    {model.builds > 0 && <span class="chip">{model.builds} {model.builds === 1 ? "build" : "builds"}</span>}
-    <a class="chip license" href={tagPath(`license:${model.license}`)} title={tagDefinition(`license:${model.license}`)}>
+    {model.context_tokens && (
+      <CountPill
+        label="context"
+        count={formatContextCount(model.context_tokens)}
+        href={`${modelHref(model.id)}#capabilities`}
+        tone="sky"
+        tooltip="The model's maximum context window."
+      />
+    )}
+    {model.builds > 0 && (
+      <CountPill
+        label="builds"
+        count={model.builds}
+        href={`${modelHref(model.id)}#builds`}
+        tone="plum"
+        tooltip="A build is packaging, not a new model. It inherits the base task and terms."
+      />
+    )}
+    <a class="chip license" href={tagPath(`license:${model.license}`)} data-tooltip={tagDefinition(`license:${model.license}`)}>
       {model.license}
     </a>
   </div>

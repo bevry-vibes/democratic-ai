@@ -21,9 +21,9 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
     </div>
   </section>
 
-  <section class="wrap detail-grid">
-    <div>
-      <div class="panel">
+  <section class="wrap method-layout">
+    <article class="method-body">
+      <section class="method-section" id="release-terms">
         <h2>Release terms, not a grade</h2>
         <p>
           The tier records how much of the release is open: weights, training data, recipe, and access. It is not a
@@ -42,15 +42,15 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
             </tbody>
           </table>
         </div>
-        <p class="muted" style="font-size:0.88rem;margin-top:0.8rem">
+        <p class="muted">
           Most records are <strong>unproven</strong> on training data today. That means the data statement is
           unchecked, not that the model is closed. Open-weight is a real contribution; open data and open code add
           to it. A conditional licence can cap a record at <strong>shared</strong> before the data question is
           resolved. The next pass will assess training data and code.
         </p>
-      </div>
+      </section>
 
-      <div class="panel">
+      <section class="method-section" id="scorecard">
         <h2>The scorecard</h2>
         <p>
           The catalogue carries its own current scorecard. It does not repeat a frozen table from an earlier essay.
@@ -67,11 +67,10 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
             </tbody>
           </table>
         </div>
-        <p class="muted" style="font-size:0.88rem;margin-top:0.8rem">
-          A model can be strong on openness and weak on citation. A model can be a strong coder and a poor
-          citizen. The scorecard keeps those judgements apart. <strong>Missing is not zero.</strong> A score without
-          a current source is not shown.
-          <a href="/thesis/">Read the argument</a>.
+        <p>
+          A model can be strong on openness and weak on citation. A model can be a strong coder and a poor citizen.
+          The scorecard keeps those judgements apart. <strong>Missing is not zero.</strong> A score without a current
+          source is not shown. <a href="/thesis/">Read the argument</a>.
         </p>
         <h3>How the numbers are made</h3>
         <ul>
@@ -80,22 +79,22 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
           <li><strong>Research/Citation</strong> uses current research benchmarks such as BrowseComp and DeepSearchQA. It does not claim citation accuracy.</li>
           <li><strong>Syndication</strong> counts independent listings. It is 0–10, not an index.</li>
         </ul>
-      </div>
+      </section>
 
-      <div class="panel">
+      <section class="method-section" id="builds">
         <h2>A build is not a model</h2>
         <p>
           A GGUF, MLX, CoreML, ONNX, FP8, or quantized release is packaging. It inherits the base model's task and
           terms. It does not get its own page.
         </p>
-        <p class="muted" style="font-size:0.9rem">
+        <p class="muted">
           This index has {index.models.length} root and notable models with {buildCount} attached builds.
           {syndication.counts.builds_and_probes_skipped} builds, probes, and documentation items were skipped as
           records.
         </p>
-      </div>
+      </section>
 
-      <div class="panel">
+      <section class="method-section" id="syndication">
         <h2>The syndication score</h2>
         <p>
           The score counts independent listings. It is not a quality score, a reciprocity tier, or a measure of
@@ -111,18 +110,18 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
             </tbody>
           </table>
         </div>
-        <p class="muted" style="font-size:0.88rem;margin-top:0.8rem">
+        <p class="muted">
           The model's own Hugging Face page has weight 0. A build inherits the base model's score. Every point links
           to the listing.
         </p>
         {syndication.unavailable_sources.map((source) => (
-          <p class="muted" style="font-size:0.88rem">
+          <p class="muted">
             <strong>{source.id}</strong> is a worthwhile source, but it is not scored yet: {source.reason}
           </p>
         ))}
-      </div>
+      </section>
 
-      <div class="panel">
+      <section class="method-section" id="evidence">
         <h2>Evidence rules</h2>
         <ol>
           <li>Never guess. A missing field is <code>unknown</code>.</li>
@@ -132,9 +131,9 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
           <li>Do not infer from silence. No data statement is not proof of closed data.</li>
           <li>Journal every tier change.</li>
         </ol>
-      </div>
+      </section>
 
-      <div class="panel">
+      <section class="method-section" id="index">
         <h2>How the index is built</h2>
         <ol>
           <li>A pull records source-native metadata from Hugging Face, X, GitHub, arXiv, and sitemaps.</li>
@@ -144,13 +143,23 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
           <li>Independent listings produce the syndication score.</li>
           <li>One record is written per root or notable model.</li>
         </ol>
-        <p class="muted" style="font-size:0.88rem">
-          Nothing is trained or hosted here. The repository records evidence and links.
-        </p>
-      </div>
-    </div>
+        <p class="muted">Nothing is trained or hosted here. The repository records evidence and links.</p>
+      </section>
+    </article>
 
-    <aside>
+    <aside class="method-aside">
+      <div class="panel">
+        <h2>On this page</h2>
+        <ul class="page-nav">
+          <li><a href="#release-terms">Release terms</a></li>
+          <li><a href="#scorecard">The scorecard</a></li>
+          <li><a href="#builds">A build is not a model</a></li>
+          <li><a href="#syndication">Syndication</a></li>
+          <li><a href="#evidence">Evidence rules</a></li>
+          <li><a href="#index">How the index is built</a></li>
+        </ul>
+      </div>
+
       <div class="panel">
         <h2>Now</h2>
         <dl class="definition">
@@ -166,17 +175,16 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
       <div class="panel">
         <h2>Read more</h2>
         <ul class="source-list">
+          <li><a href="/thesis/">The thesis</a></li>
           <li><a href="/data/">The JSON API</a></li>
           <li><a href="https://github.com/bevry-vibes/democratic-ai/blob/main/DESIGN.md">DESIGN.md</a></li>
-          <li><a href="https://github.com/bevry-vibes/democratic-ai/blob/main/.plans/1794621986000-democratic-ai-catalogue.md">The research plan</a></li>
           <li><a href="https://github.com/bevry-vibes/agent-detect">agent-detect</a></li>
-          <li><a href="https://models.dev">models.dev</a></li>
         </ul>
       </div>
 
       <div class="panel">
         <h2>Correct a record</h2>
-        <p class="muted" style="font-size:0.9rem">
+        <p class="muted">
           Open an issue with a source. A correction with evidence is always welcome.
         </p>
         <a class="button secondary" href="https://github.com/bevry-vibes/democratic-ai/issues">Open an issue</a>

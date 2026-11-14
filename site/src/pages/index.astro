@@ -5,7 +5,7 @@ import { marked } from "marked"
 import Base from "../layouts/Base.astro"
 import ModelCard from "../components/ModelCard.astro"
 import CountPill from "../components/CountPill.astro"
-import { getIndex, getSyndication, tagLabel, tagPath, taskCounts, topModels } from "../lib/data"
+import { getIndex, getSyndication, tagDefinition, tagLabel, tagPath, taskCounts, topModels } from "../lib/data"
 
 const index = getIndex()
 const syndication = getSyndication()
@@ -86,7 +86,13 @@ const readmeHtml = marked.parse(readme) as string
       </p>
       <div class="flex wrap-gap">
         {tasks.map(({ task, count }) => (
-          <CountPill label={tagLabel(`task:${task}`)} count={count} href={tagPath(`task:${task}`)} tone="sage" />
+          <CountPill
+            label={tagLabel(`task:${task}`)}
+            count={count}
+            href={tagPath(`task:${task}`)}
+            tone="sage"
+            tooltip={tagDefinition(`task:${task}`)}
+          />
         ))}
       </div>
     </div>

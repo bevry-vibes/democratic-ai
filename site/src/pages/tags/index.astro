@@ -63,6 +63,7 @@ const namespaces = [...grouped.entries()].sort(
                 count={count}
                 href={tagPath(tag)}
                 tone={namespace === "task" ? "sage" : namespace === "domain" ? "sky" : namespace === "context" ? "ochre" : "plum"}
+                tooltip={definition ?? vocabulary.namespaces[namespace]?.definition ?? "A tag in the catalogue."}
               />
             ))}
         </div>

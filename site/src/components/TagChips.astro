@@ -1,5 +1,5 @@
 ---
-import { tagDefinition, tagLabel, tagPath, tagStatus } from "../lib/data"
+import { sortTags, tagDefinition, tagLabel, tagPath, tagStatus } from "../lib/data"
 
 interface Props {
   tags: string[]
@@ -10,7 +10,8 @@ interface Props {
 }
 
 const { tags, limit, showNamespace = false, links = true, class: className = "" } = Astro.props
-const visible = limit ? tags.slice(0, limit) : tags
+const ordered = sortTags(tags)
+const visible = limit ? ordered.slice(0, limit) : ordered
 const label = (tag: string) => (showNamespace ? tag : tagLabel(tag))
 const kind = (tag: string) => `chip ${tagStatus(tag)}`
 ---
@@ -19,11 +20,13 @@ const kind = (tag: string) => `chip ${tagStatus(tag)}`
   {visible.map((tag) => {
     const explanation = tagDefinition(tag)
     return links ? (
-      <a class={kind(tag)} href={tagPath(tag)} title={explanation} aria-label={`${tag}: ${explanation}`}>
+      <a class={kind(tag)} href={tagPath(tag)} data-tooltip={explanation} aria-label={`${tag}: ${explanation}`}>
         {label(tag)}
       </a>
     ) : (
-      <span class={kind(tag)} title={explanation} aria-label={`${tag}: ${explanation}`}>{label(tag)}</span>
+      <span class={kind(tag)} data-tooltip={explanation} tabindex="0" aria-label={`${tag}: ${explanation}`}>
+        {label(tag)}
+      </span>
     )
   })}
   <slot />

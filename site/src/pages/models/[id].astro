@@ -1,9 +1,10 @@
 ---
 import Base from "../../layouts/Base.astro"
+import CountPill from "../../components/CountPill.astro"
 import TagChips from "../../components/TagChips.astro"
 import {
   bandClass,
-  formatContext,
+  formatContextCount,
   formatIndex,
   formatParams,
   getIndex,
@@ -30,6 +31,23 @@ const { model: compact } = Astro.props
 const model = getModel(compact.id) as ModelRecord
 const scorecard = model.scorecard
 const bool = (value: boolean | null | undefined) => (value === true ? "Yes" : value === false ? "No" : "Unknown")
+const TAG_GROUPS = [
+  "task",
+  "domain",
+  "modality",
+  "runtime",
+  "language",
+  "context",
+  "license",
+  "family",
+  "status",
+  "relation",
+]
+const tagGroups = TAG_GROUPS.map((namespace) => ({
+  namespace,
+  tags: model.tags.filter((tag) => tag.startsWith(`${namespace}:`)),
+})).filter((group) => group.tags.length > 0)
+const otherTags = model.tags.filter((tag) => !TAG_GROUPS.some((namespace) => tag.startsWith(`${namespace}:`)))
 const formatDate = (value: string | null | undefined) =>
   value
     ? new Date(value).toLocaleDateString("en-GB", {
@@ -47,31 +65,69 @@ const formatDate = (value: string | null | undefined) =>
       <p class="eyebrow"><a href="/models/">Models</a> / {model.organization}</p>
       <h1>{model.name}</h1>
       {model.summary && <p class="lede">{model.summary}</p>}
-      <div class="tag-cloud">
-        <TagChips tags={model.tags} showNamespace />
-        {model.builds.length > 0 && (
-          <span class="chip">{model.builds.length} {model.builds.length === 1 ? "build" : "builds"}</span>
+      <div class="tag-groups">
+        {tagGroups.map((group) => (
+          <div class="tag-group">
+            <TagChips tags={group.tags} showNamespace />
+          </div>
+        ))}
+        {otherTags.length > 0 && (
+          <div class="tag-group">
+            <TagChips tags={otherTags} showNamespace />
+          </div>
         )}
       </div>
-      <div class="badges">
-        <span class={`badge ${tierClass(model.openness.tier)}`} title={tierDescription(model.openness.tier)}>
+      <div class="release-meta">
+        {model.builds.length > 0 && (
+          <CountPill
+            label="builds"
+            count={model.builds.length}
+            href="#builds"
+            tone="plum"
+            tooltip="A build is packaging, not a new model. It inherits the base task and terms."
+          />
+        )}
+        <a
+          class={`badge ${tierClass(model.openness.tier)}`}
+          href="/about/#release-terms"
+          data-tooltip={tierDescription(model.openness.tier)}
+        >
           {model.openness.tier}
-        </span>
-        <span class="chip">{model.organization}</span>
-        {model.released && <span class="chip">{model.released}</span>}
+        </a>
+        <a
+          class="chip"
+          href={`/models/?q=${encodeURIComponent(model.organization)}`}
+          data-tooltip="The organisation or author. Opens the model index filtered to this organisation."
+        >
+          org:{model.organization}
+        </a>
+        {model.released && (
+          <a class="chip" href="/models/?sort=released" data-tooltip="Release date. Opens the model index sorted by release date.">
+            released:{model.released}
+          </a>
+        )}
       </div>
     </div>
   </section>
 
   <section class="wrap detail-grid">
     <div>
-      <div class="panel">
+      <div class="panel" id="capabilities">
         <h2>Capabilities</h2>
         <dl class="definition">
           <dt>Tool calling</dt><dd>{bool(model.capabilities.tool_calling)}</dd>
           <dt>Reasoning</dt><dd>{bool(model.capabilities.reasoning)}</dd>
           <dt>Structured output</dt><dd>{bool(model.capabilities.structured_output)}</dd>
-          <dt>Context</dt><dd>{formatContext(model.capabilities.context_tokens)}</dd>
+          <dt>Context</dt>
+          <dd>
+            <CountPill
+              label="context"
+              count={formatContextCount(model.capabilities.context_tokens)}
+              href="#capabilities"
+              tone="sky"
+              tooltip="The model's maximum context window."
+            />
+          </dd>
           <dt>Size</dt><dd>{formatParams(model.footprint.params_b)}</dd>
           <dt>Modality</dt>
           <dd>
@@ -104,7 +160,7 @@ const formatDate = (value: string | null | undefined) =>
         </dl>
       </div>
 
-      <div class="panel">
+      <div class="panel" id="builds">
         <h2>Builds</h2>
         {model.builds.length > 0 ? (
           <>
@@ -136,7 +192,7 @@ const formatDate = (value: string | null | undefined) =>
       </div>
 
       {model.releases.length > 0 && (
-        <div class="panel">
+        <div class="panel" id="releases">
           <h2>Releases</h2>
           <p class="muted" style="font-size:0.9rem">
             These earlier names and updates are the same model lineage. They fold into this page.
@@ -185,16 +241,22 @@ const formatDate = (value: string | null | undefined) =>
     <aside>
       {scorecard ? (
         <>
-          <div class="panel">
+          <div class="panel scorecard-panel scorecard-openness">
             <h2>Openness/Morality</h2>
             <div class="score-block"><strong>{formatIndex(scorecard.openness_morality.score)}</strong></div>
             <p class="muted" style="font-size:0.84rem">{scorecard.openness_morality.note}</p>
             <p class="mono-small muted">
-              Tier: <span title={tierDescription(scorecard.openness_morality.tier)}>{scorecard.openness_morality.tier}</span>
+              Tier:
+              <a
+                href="/about/#release-terms"
+                data-tooltip={tierDescription(scorecard.openness_morality.tier)}
+              >
+                {scorecard.openness_morality.tier}
+              </a>
             </p>
           </div>
 
-          <div class="panel">
+          <div class="panel scorecard-panel scorecard-performance">
             <h2>Performance/Intelligence</h2>
             <div class="score-block">
               <strong class={scorecard.performance.score == null ? "unmeasured" : ""}>{formatIndex(scorecard.performance.score)}</strong>
@@ -234,7 +296,7 @@ const formatDate = (value: string | null | undefined) =>
             )}
           </div>
 
-          <div class="panel">
+          <div class="panel scorecard-panel scorecard-research">
             <h2>Research/Citation</h2>
             <div class="score-block">
               <strong class={scorecard.research_citation.score == null ? "unmeasured" : ""}>{formatIndex(scorecard.research_citation.score)}</strong>
@@ -256,11 +318,17 @@ const formatDate = (value: string | null | undefined) =>
             )}
           </div>
 
-          <div class="panel">
+          <div class="panel scorecard-panel scorecard-syndication">
             <h2>Syndication</h2>
             <div class="score-block">
               <strong>{scorecard.syndication.score}</strong><span class="faint">/{scorecard.syndication.max}</span>
-              <span class={`badge ${bandClass(scorecard.syndication.band)}`}>{scorecard.syndication.band.replaceAll("-", " ")}</span>
+              <a
+                class={`badge ${bandClass(scorecard.syndication.band)}`}
+                href="/about/#syndication"
+                data-tooltip="The syndication band groups the independent-listing score. It is not a quality grade."
+              >
+                {scorecard.syndication.band.replaceAll("-", " ")}
+              </a>
             </div>
             <p class="muted" style="font-size:0.84rem">{scorecard.syndication.note}</p>
             <ul class="source-list">
@@ -294,34 +362,58 @@ const formatDate = (value: string | null | undefined) =>
         </dl>
       </div>
 
-      <div class="panel">
+      <div class="panel" id="terms">
         <h2>Terms</h2>
         <dl class="definition">
           <dt>Licence</dt>
           <dd>
-            <a class="chip license" href={tagPath(`license:${model.license.id}`)} title={tagDefinition(`license:${model.license.id}`)}>
+            <a
+              class="chip license"
+              href={tagPath(`license:${model.license.id}`)}
+              data-tooltip={tagDefinition(`license:${model.license.id}`)}
+            >
               {model.license.id}
             </a>
           </dd>
           <dt>Weights</dt>
-          <dd><span class="chip" title="open-weight means the trained weights are downloadable.">{model.openness.weights}</span></dd>
+          <dd>
+            <a
+              class="chip"
+              href="/about/#release-terms"
+              data-tooltip="open-weight means the trained weights are downloadable. It does not mean the training data or code are open."
+            >
+              {model.openness.weights}
+            </a>
+          </dd>
           <dt>Training data</dt>
           <dd>
-            <span class="chip" title="open means the data is published. documented means it is described but not released. unknown means unchecked, not closed.">
+            <a
+              class="chip"
+              href="/about/#release-terms"
+              data-tooltip="open means the data is published. documented means it is described but not released. unknown means unchecked, not closed."
+            >
               {model.openness.training_data}
-            </span>
+            </a>
           </dd>
           <dt>Training code</dt>
           <dd>
-            <span class="chip" title="open means the training code is published. documented means it is described but not released. unknown means unchecked, not closed.">
+            <a
+              class="chip"
+              href="/about/#release-terms"
+              data-tooltip="open means the training code is published. documented means it is described but not released. unknown means unchecked, not closed."
+            >
               {model.openness.training_code}
-            </span>
+            </a>
           </dd>
           <dt>Tier</dt>
           <dd>
-            <span class={`badge ${tierClass(model.openness.tier)}`} title={tierDescription(model.openness.tier)}>
+            <a
+              class={`badge ${tierClass(model.openness.tier)}`}
+              href="/about/#release-terms"
+              data-tooltip={tierDescription(model.openness.tier)}
+            >
               {model.openness.tier}
-            </span>
+            </a>
           </dd>
         </dl>
         <p class="muted" style="font-size:0.82rem;margin-top:0.8rem">

@@ -1,7 +1,8 @@
 ---
 import Base from "../../layouts/Base.astro"
+import CountPill from "../../components/CountPill.astro"
 import TagChips from "../../components/TagChips.astro"
-import { getIndex, modelHref, scorecardAxes } from "../../lib/data"
+import { formatContextCount, getIndex, modelHref, scorecardAxes } from "../../lib/data"
 
 const index = getIndex()
 const models = [...index.models].sort((a, b) => b.score - a.score || a.name.localeCompare(b.name))
@@ -13,6 +14,16 @@ const bands = ["very-strong", "strong", "moderate", "emerging", "weak", "self-on
 const defaultSort = "syndication"
 const axis = (model: (typeof models)[number], key: "openness" | "performance" | "research" | "syndication") =>
   scorecardAxes(model).find((entry) => entry.key === key)?.value ?? null
+const scorecardTone = (key: string) =>
+  key === "openness" ? "sage" : key === "performance" ? "ochre" : key === "research" ? "sky" : "plum"
+const scorecardTip = (key: string) =>
+  key === "openness"
+    ? "Openness/Morality: what the release gives back. Computed from current release terms."
+    : key === "performance"
+      ? "Performance/Intelligence: current measured performance on the model's task."
+      : key === "research"
+        ? "Research/Citation: current research benchmarks. Citation accuracy is separate."
+        : "Syndication: independent listings, not quality."
 ---
 
 <Base
@@ -103,14 +114,36 @@ const axis = (model: (typeof models)[number], key: "openness" | "performance" | 
             </div>
             <div class="list-description">
               <p>{model.summary || "No description on the model card."}</p>
-              <TagChips tags={model.tags} showNamespace />
+              <TagChips tags={model.tags} showNamespace>
+                {model.context_tokens && (
+                  <CountPill
+                    label="context"
+                    count={formatContextCount(model.context_tokens)}
+                    href={`${modelHref(model.id)}#capabilities`}
+                    tone="sky"
+                    tooltip="The model's maximum context window."
+                  />
+                )}
+                {model.builds > 0 && (
+                  <CountPill
+                    label="builds"
+                    count={model.builds}
+                    href={`${modelHref(model.id)}#builds`}
+                    tone="plum"
+                    tooltip="A build is packaging, not a new model. It inherits the base task and terms."
+                  />
+                )}
+              </TagChips>
             </div>
             <div class="scorecard-mini">
               {axes.map((entry) => (
-                <span class="axis">
-                  <span class="axis-label">{entry.label}</span>
-                  <span class="axis-value">{entry.display}</span>
-                </span>
+                <CountPill
+                  label={entry.label}
+                  count={entry.display}
+                  href="/about/#scorecard"
+                  tone={scorecardTone(entry.key)}
+                  tooltip={scorecardTip(entry.key)}
+                />
               ))}
             </div>
           </div>

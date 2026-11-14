@@ -1,15 +1,22 @@
 ---
 interface Props {
   label: string
-  count: number
+  count: string | number
   href: string
-  tone?: "sage" | "sky" | "ochre" | "plum"
+  tone?: "sage" | "sky" | "ochre" | "plum" | "neutral"
+  tooltip?: string
+  class?: string
 }
 
-const { label, count, href, tone = "sage" } = Astro.props
+const { label, count, href, tone = "sage", tooltip, class: className = "" } = Astro.props
 ---
 
-<a class={`count-pill ${tone}`} href={href}>
+<a
+  class={`count-pill ${tone} ${className}`.trim()}
+  href={href}
+  data-tooltip={tooltip}
+  aria-label={tooltip ? `${label}: ${count}. ${tooltip}` : `${label}: ${count}`}
+>
   <span class="count-pill-label">{label}</span>
   <span class="count-pill-count">{count}</span>
 </a>

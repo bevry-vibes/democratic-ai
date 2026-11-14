@@ -201,6 +201,32 @@ export function getReadme(): string {
   return fs.readFileSync(path.join(root, "README.md"), "utf8")
 }
 
+const NAMESPACE_ORDER = [
+  "task",
+  "domain",
+  "modality",
+  "runtime",
+  "language",
+  "context",
+  "license",
+  "family",
+  "status",
+  "relation",
+  "org",
+  "source",
+]
+
+export function sortTags(tags: string[]): string[] {
+  return [...tags].sort((a, b) => {
+    const [aNamespace, ...aRest] = a.split(":")
+    const [bNamespace, ...bRest] = b.split(":")
+    const aIndex = NAMESPACE_ORDER.indexOf(aNamespace!) === -1 ? NAMESPACE_ORDER.length : NAMESPACE_ORDER.indexOf(aNamespace!)
+    const bIndex = NAMESPACE_ORDER.indexOf(bNamespace!) === -1 ? NAMESPACE_ORDER.length : NAMESPACE_ORDER.indexOf(bNamespace!)
+    if (aIndex !== bIndex) return aIndex - bIndex
+    return aRest.join(":").localeCompare(bRest.join(":"))
+  })
+}
+
 export function tagLabel(tag: string): string {
   return tag.split(":").slice(1).join(":").replaceAll("-", " ")
 }
@@ -356,11 +382,16 @@ export function tagDefinition(tag: string): string {
   return entry?.values?.[value] ?? entry?.definition ?? "A tag in the catalogue."
 }
 
+export function formatContextCount(tokens: number | null): string {
+  if (tokens == null) return "unknown"
+  if (tokens >= 1_000_000) return `${(tokens / 1_000_000).toFixed(tokens % 1_000_000 === 0 ? 0 : 1)}M`
+  if (tokens >= 1_000) return `${Math.round(tokens / 1_000)}K`
+  return String(tokens)
+}
+
 export function formatContext(tokens: number | null): string {
   if (tokens == null) return "Unknown context"
-  if (tokens >= 1_000_000) return `${(tokens / 1_000_000).toFixed(tokens % 1_000_000 === 0 ? 0 : 1)}M context`
-  if (tokens >= 1_000) return `${Math.round(tokens / 1_000)}K context`
-  return `${tokens} context`
+  return `${formatContextCount(tokens)} context`
 }
 
 export function allTagPairs(index: ModelIndex): Array<{ tag: string; count: number }> {
