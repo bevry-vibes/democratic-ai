@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14",
+  "notes": "Verified feeds and APIs for discovery. A verified feed returned data on 2026-11-14. A documented API has public documentation but was not called. A sitemap-only source exposes no feed or API; use its sitemap for discovery. Respect each licence and robots.txt.",
+  "sources": [
+    {
+      "id": "hf-blog",
+      "name": "Hugging Face Blog",
+      "kind": "rss",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "status": "verified",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "items": 907,
+      "use": ["releases", "discoveries", "tooling"],
+      "notes": "The strongest single feed for open-model releases and methods. It includes lab posts, benchmark posts, and runtime releases."
+    },
+    {
+      "id": "hf-papers",
+      "name": "Hugging Face Papers",
+      "kind": "json-api",
+      "url": "https://huggingface.co/api/papers?limit=50",
+      "status": "verified",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "use": ["discoveries", "research"],
+      "notes": "Returns paper metadata with thumbnails and identifiers. Use it for the research side of the journal."
+    },
+    {
+      "id": "hf-daily-papers",
+      "name": "Hugging Face Daily Papers",
+      "kind": "json-api",
+      "url": "https://huggingface.co/api/daily_papers?limit=50",
+      "status": "verified",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "use": ["discoveries", "research"],
+      "notes": "Returns the daily paper list with submitter and engagement metadata."
+    },
+    {
+      "id": "arxiv-cs-cl",
+      "name": "arXiv cs.CL",
+      "kind": "rss",
+      "url": "https://arxiv.org/rss/cs.CL",
+      "status": "verified",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "use": ["research"],
+      "notes": "Computation and language. Pair it with cs.LG, cs.AI, cs.CV, and eess.AS for the other modalities."
+    },
+    {
+      "id": "arxiv-cs-lg",
+      "name": "arXiv cs.LG",
+      "kind": "rss",
+      "url": "https://arxiv.org/rss/cs.LG",
+      "status": "verified",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "use": ["research"],
+      "notes": "Machine learning."
+    },
+    {
+      "id": "github-releases",
+      "name": "GitHub Releases",
+      "kind": "atom",
+      "url": "https://github.com/<owner>/<repo>/releases.atom",
+      "status": "verified",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "use": ["releases", "tooling"],
+      "notes": "One feed per repository. Verified with llama.cpp and Transformers. Use it for runtimes and harnesses, not for model cards."
+    },
+    {
+      "id": "artificial-analysis",
+      "name": "Artificial Analysis Data API",
+      "kind": "json-api",
+      "url": "https://artificialanalysis.ai/api/v2/language/models/free",
+      "status": "documented",
+      "checked_at": "2026-11-14",
+      "auth": "x-api-key",
+      "limits": "Free tier about 100 requests per day",
+      "license": "Internal use only; no redistribution. Attribution to artificialanalysis.ai is required.",
+      "use": ["capability-context", "pricing-context"],
+      "notes": "Use it for context only, never as openness evidence. Do not republish the raw rows. Store a link and a derived note."
+    },
+    {
+      "id": "openrouter-models",
+      "name": "OpenRouter Models",
+      "kind": "json-api",
+      "url": "https://openrouter.ai/api/v1/models",
+      "status": "documented",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "use": ["availability", "pricing-context"],
+      "notes": "Public model catalogue with pricing and free variants. It is a serving source, not an openness source."
+    },
+    {
+      "id": "simplifying-ai-feed",
+      "name": "Simplifying AI RSS",
+      "kind": "rss",
+      "url": "https://rss.hiivinternal.com/feeds/Qfhj10wTlm.xml",
+      "status": "linked-unreachable",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "use": ["discovery"],
+      "notes": "The site links this beehiiv feed, but the host does not resolve from this network. Fall back to the sitemap."
+    },
+    {
+      "id": "simplifying-ai-sitemap",
+      "name": "Simplifying AI Sitemap",
+      "kind": "sitemap",
+      "url": "https://simplifyingai.co/sitemap.xml",
+      "status": "verified",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "items": 521,
+      "use": ["discovery"],
+      "notes": "Carries lastmod dates. It is a discovery source for the media account, not a model source."
+    },
+    {
+      "id": "llm-stats-sitemap",
+      "name": "LLM Stats Sitemap",
+      "kind": "sitemap",
+      "url": "https://llm-stats.com/sitemap.xml",
+      "status": "sitemap-only",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "use": ["evaluation-context"],
+      "notes": "No feed. The robots file disallows /api/, so do not scrape or call the internal API. The sitemap is an index of model, provider, organisation, benchmark, and comparison pages."
+    },
+    {
+      "id": "artificial-analysis-sitemap",
+      "name": "Artificial Analysis Sitemap",
+      "kind": "sitemap",
+      "url": "https://artificialanalysis.ai/sitemap.xml",
+      "status": "verified",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "items": 4750,
+      "use": ["discovery"],
+      "notes": "Contains lastmod dates for 146 entries. Use it to detect new model and comparison pages."
+    },
+    {
+      "id": "arena-sitemap",
+      "name": "Arena Sitemap",
+      "kind": "sitemap",
+      "url": "https://arena.ai/sitemap.xml",
+      "status": "sitemap-only",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "items": 102,
+      "use": ["evaluation-context"],
+      "notes": "No feed and no public API. It is a leaderboard and evaluation surface."
+    },
+    {
+      "id": "bigcode-sitemap",
+      "name": "BigCode Sitemap",
+      "kind": "sitemap",
+      "url": "https://www.bigcode-project.org/sitemap.xml",
+      "status": "sitemap-only",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "items": 27,
+      "use": ["discovery"],
+      "notes": "No feed. The lastmod dates are from 2020, so prefer GitHub releases and Hugging Face for change detection."
+    },
+    {
+      "id": "unsloth-sitemap",
+      "name": "Unsloth Sitemap",
+      "kind": "sitemap",
+      "url": "https://unsloth.ai/sitemap.xml",
+      "status": "verified",
+      "checked_at": "2026-11-14",
+      "auth": "none",
+      "items": 52,
+      "use": ["discovery", "tooling"],
+      "notes": "No feed. The lastmod dates are current, so the sitemap is a usable change surface."
+    }
+  ]
+}

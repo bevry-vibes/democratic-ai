@@ -84,6 +84,25 @@ The context distribution is a useful signal: 11 entities are on-device, 7 are ag
 
 The raw X responses are committed under `data/raw/x/lists/2084302656580034676/` so the list never costs a second read. The snapshot is the evidence; `data/watchlist.json` is the curated view.
 
+### Journal and aggregator sources
+
+The list includes four journal or aggregator accounts. Their sites were scanned for feeds and APIs. The results are in `data/feeds.json`.
+
+| Source | Feed or API | Result | Use |
+| --- | --- | --- | --- |
+| Hugging Face | `https://huggingface.co/blog/feed.xml` | RSS, 907 items | Primary discovery feed |
+| Hugging Face Papers | `/api/papers`, `/api/daily_papers` | JSON, no auth | Research discovery |
+| Simplifying AI | beehiiv RSS link | The host does not resolve; the sitemap has 521 URLs | Sitemap fallback |
+| LLM Stats | none | No feed; robots.txt disallows `/api/` | Sitemap only |
+| Artificial Analysis | Free Data API | Key required; internal use only, no redistribution | Capability context only |
+| Arena | none | No feed and no public API | Leaderboard links only |
+| BigCode | none | No feed; the sitemap is from 2020 | GitHub releases and Hugging Face |
+| Unsloth | none | No feed; the sitemap is current | Sitemap and GitHub releases |
+
+The useful conclusion is that **the open ecosystem already has better feeds than the aggregators**: the Hugging Face blog, the Hugging Face papers API, arXiv RSS, and GitHub release Atom feeds cover releases, research, and tooling with no key and no redistribution limit. The aggregators are useful as human context, not as a data pipeline.
+
+This changes the fetching priority. Phase 3 starts with Hugging Face, arXiv, and GitHub. The aggregator sitemaps are a later addition. Artificial Analysis is optional and must never become an openness source.
+
 ### The seed landscape
 
 These facts were checked against the Hugging Face API on 2026-11-14. They are seeds for the first import, not yet accepted records. The tier is the rule output for the evidence available today.
@@ -323,6 +342,8 @@ data/
   discoveries/<id>.json
   sources/<id>.json
   taxonomy.json               domains, contexts, enums, tier method
+  feeds.json                  verified feeds and APIs (discovery sources)
+  raw/                        committed billable snapshots (X first)
   dist/                       generated rollups (committed, check-gated)
 journal/
   2026-11.md                  canonical, append-only
