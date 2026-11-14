@@ -1,8 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro"
-import ScoreBadge from "../../components/ScoreBadge.astro"
 import TagChips from "../../components/TagChips.astro"
-import { formatContext, getIndex, modelHref } from "../../lib/data"
+import { getIndex, modelHref, scorecardAxes } from "../../lib/data"
 
 const index = getIndex()
 const models = [...index.models].sort((a, b) => b.score - a.score || a.name.localeCompare(b.name))
@@ -12,11 +11,13 @@ const contexts = [...new Set(models.flatMap((model) => model.tags.filter((tag) =
   .sort()
 const bands = ["very-strong", "strong", "moderate", "emerging", "weak", "self-only"]
 const defaultSort = "syndication"
+const axis = (model: (typeof models)[number], key: "openness" | "performance" | "research" | "syndication") =>
+  scorecardAxes(model).find((entry) => entry.key === key)?.value ?? null
 ---
 
 <Base
   title="Models"
-  description={`Browse ${models.length} democratic AI models by task, context, licence, and independent listing score.`}
+  description={`Browse ${models.length} democratic AI models by task, context, licence, and current scorecard.`}
 >
   <section class="page-head">
     <div class="wrap">
@@ -24,7 +25,7 @@ const defaultSort = "syndication"
       <h1>Models</h1>
       <p class="lede">
         {models.length} root and notable models. Builds attach to their base model and do not appear as separate
-        entries.
+        entries. The scorecard is independent of the release tier.
       </p>
     </div>
   </section>
@@ -61,8 +62,8 @@ const defaultSort = "syndication"
         <div class="sort-control">
           <select id="sort">
             <option value="syndication">Syndication</option>
+            <option value="performance">Performance/Intelligence</option>
             <option value="openness">Openness/Morality</option>
-            <option value="code">Code/Reasoning</option>
             <option value="research">Research/Citation</option>
             <option value="released">Release date</option>
             <option value="name">Name</option>
@@ -79,40 +80,42 @@ const defaultSort = "syndication"
       <span class="faint" id="sort-note">Sorted by independent listings, best first</span>
     </div>
 
-    <div class="list" id="model-list" style="--list-cols:minmax(12rem, 0.9fr) minmax(18rem, 2.2fr) auto">
-      {models.map((model) => (
-        <a
-          class="list-row"
-          href={modelHref(model.id)}
-          data-name={`${model.name} ${model.organization} ${model.summary}`.toLowerCase()}
-          data-tasks={model.tasks.join(" ")}
-          data-contexts={model.tags.filter((tag) => tag.startsWith("context:")).map((tag) => tag.slice(8)).join(" ")}
-          data-band={model.band}
-          data-license={model.license}
-          data-openness={model.performance?.openness_morality ?? -1}
-          data-code={model.performance?.code_reasoning ?? -1}
-          data-research={model.performance?.research_citation ?? -1}
-          data-score={model.score}
-          data-released={model.released ?? ""}
-        >
-          <div>
-            <h3>{model.name}</h3>
-            <p class="mono-small">{model.organization}</p>
+    <div class="list" id="model-list" style="--list-cols:minmax(12rem, 0.9fr) minmax(18rem, 2.2fr) minmax(10.5rem, auto)">
+      {models.map((model) => {
+        const axes = scorecardAxes(model)
+        return (
+          <div
+            class="list-row"
+            data-name={`${model.name} ${model.organization} ${model.summary}`.toLowerCase()}
+            data-tasks={model.tasks.join(" ")}
+            data-contexts={model.tags.filter((tag) => tag.startsWith("context:")).map((tag) => tag.slice(8)).join(" ")}
+            data-band={model.band}
+            data-license={model.license}
+            data-openness={axis(model, "openness") ?? -1}
+            data-performance={axis(model, "performance") ?? -1}
+            data-research={axis(model, "research") ?? -1}
+            data-score={axis(model, "syndication") ?? 0}
+            data-released={model.released ?? ""}
+          >
+            <div>
+              <a class="row-title" href={modelHref(model.id)}><h3>{model.name}</h3></a>
+              <p class="mono-small">{model.organization}</p>
+            </div>
+            <div class="list-description">
+              <p>{model.summary || "No description on the model card."}</p>
+              <TagChips tags={model.tags} showNamespace />
+            </div>
+            <div class="scorecard-mini">
+              {axes.map((entry) => (
+                <span class="axis">
+                  <span class="axis-label">{entry.label}</span>
+                  <span class="axis-value">{entry.display}</span>
+                </span>
+              ))}
+            </div>
           </div>
-          <div class="list-description">
-            <p>{model.summary || "No description on the model card."}</p>
-            <TagChips tags={model.tags.filter((tag) => tag.startsWith("task:"))} limit={2} links={false}>
-              {model.tags.includes("context:on-device") && <span class="chip context">on-device</span>}
-              {model.context_tokens && <span class="chip">{formatContext(model.context_tokens)}</span>}
-              {model.builds > 0 && <span class="chip">{model.builds} {model.builds === 1 ? "build" : "builds"}</span>}
-            </TagChips>
-          </div>
-          <div class="right">
-            <ScoreBadge score={model.score} band={model.band} />
-            <span class="chip license">{model.license}</span>
-          </div>
-        </a>
-      ))}
+        )
+      })}
     </div>
 
     <div class="empty hidden" id="empty">
@@ -206,7 +209,7 @@ const defaultSort = "syndication"
           return orderMode === "best" ? -diff : diff
         }
         const key =
-          mode === "openness" ? "openness" : mode === "code" ? "code" : mode === "research" ? "research" : "score"
+          mode === "openness" ? "openness" : mode === "performance" ? "performance" : mode === "research" ? "research" : "score"
         return compare(a, b, key) || (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "")
       })
       for (const row of sorted) list?.append(row)
@@ -214,8 +217,8 @@ const defaultSort = "syndication"
       if (note) {
         const labels: Record<string, string> = {
           syndication: "independent listings",
+          performance: "Performance/Intelligence",
           openness: "Openness/Morality",
-          code: "Code/Reasoning",
           research: "Research/Citation",
           released: "release date",
           name: "name",

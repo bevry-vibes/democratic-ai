@@ -1,6 +1,6 @@
 ---
 import type { CompactModel } from "../lib/data"
-import { formatContext, modelHref, tagLabel } from "../lib/data"
+import { formatContext, modelHref, tagDefinition, tagLabel, tagPath } from "../lib/data"
 import ScoreBadge from "./ScoreBadge.astro"
 
 interface Props {
@@ -12,20 +12,33 @@ const task = model.tasks[0] ?? null
 const onDevice = model.tags.includes("context:on-device")
 ---
 
-<a class="card model-card" href={modelHref(model.id)}>
+<div class="card model-card">
   <div class="model-card-top">
     <div>
-      <h3>{model.name}</h3>
+      <a class="row-title" href={modelHref(model.id)}><h3>{model.name}</h3></a>
       <p class="faint mono-small mb-0">{model.organization}</p>
     </div>
-    <ScoreBadge score={model.score} band={model.band} />
+    <div class="card-score">
+      <span class="score-prefix">syndication:</span>
+      <ScoreBadge score={model.score} band={model.band} />
+    </div>
   </div>
   {model.summary && <p class="summary">{model.summary}</p>}
   <div class="meta">
-    {task && <span class="chip task">{tagLabel(`task:${task}`)}</span>}
-    {onDevice && <span class="chip context">on-device</span>}
+    {task && (
+      <a class="chip task" href={tagPath(`task:${task}`)} title={tagDefinition(`task:${task}`)}>
+        {tagLabel(`task:${task}`)}
+      </a>
+    )}
+    {onDevice && (
+      <a class="chip context" href={tagPath("context:on-device")} title={tagDefinition("context:on-device")}>
+        on-device
+      </a>
+    )}
     {model.context_tokens && <span class="chip">{formatContext(model.context_tokens)}</span>}
     {model.builds > 0 && <span class="chip">{model.builds} {model.builds === 1 ? "build" : "builds"}</span>}
-    <span class="chip license">{model.license}</span>
+    <a class="chip license" href={tagPath(`license:${model.license}`)} title={tagDefinition(`license:${model.license}`)}>
+      {model.license}
+    </a>
   </div>
-</a>
+</div>

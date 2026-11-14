@@ -3,6 +3,51 @@ import path from "node:path"
 
 const root = path.resolve(process.cwd(), "..")
 
+export interface BenchmarkEvidence {
+  id: string
+  name: string
+  group: string
+  score: number
+  self_reported: boolean
+}
+
+export interface Scorecard {
+  openness_morality: {
+    score: number
+    tier: string
+    note: string
+  }
+  performance: {
+    score: number | null
+    basis: string | null
+    match: string | null
+    inherited_from: string | null
+    benchmarks: BenchmarkEvidence[]
+    own_benchmarks: BenchmarkEvidence[]
+    metric: string | null
+    source: string | null
+    as_of: string | null
+    note: string
+  }
+  research_citation: {
+    score: number | null
+    basis: string | null
+    benchmarks: BenchmarkEvidence[]
+    source: string | null
+    as_of: string | null
+    note: string
+  }
+  syndication: {
+    score: number
+    max: number
+    band: string
+    note: string
+  }
+  as_of: string
+  method: string
+  source: string
+}
+
 export interface CompactModel {
   id: string
   name: string
@@ -19,46 +64,13 @@ export interface CompactModel {
   reasoning: boolean | null
   context_tokens: number | null
   released: string | null
+  aliases: string[]
+  releases: number
   task_performance?: TaskPerformance | null
-  performance?: {
-    openness_morality: number
-    code_reasoning: number | null
-    research_citation: number
-    source: string
-    as_of: string
-    match: string
-    note: string
-    name: string
-  } | null
+  scorecard?: Scorecard | null
   models_dev: string | null
   agent_detect: string | null
   builds: number
-}
-
-export interface TaskPerformance {
-  task: string
-  metric: string
-  value: number
-  unit: string
-  direction: "lower" | "higher"
-  source: string
-  source_kind: "leaderboard" | "model-card"
-  as_of: string
-  match: string
-  via: string | null
-  note: string
-}
-
-export interface TaskPerformanceView {
-  label: string
-  value: number | null
-  unit: string
-  direction: "lower" | "higher"
-  source?: string
-  source_kind?: string
-  as_of?: string
-  match?: string
-  note?: string
 }
 
 export interface ModelIndex {
@@ -67,10 +79,18 @@ export interface ModelIndex {
   models: CompactModel[]
 }
 
-export interface ModelRecord extends Omit<CompactModel, "license"> {
+export interface ModelRecord extends Omit<CompactModel, "license" | "releases"> {
   schema_version: number
   kind: string
   aliases: string[]
+  releases: Array<{
+    id: string
+    name: string
+    hugging_face: string
+    released: string | null
+    relation: string
+    note: string
+  }>
   summary: string
   released: string | null
   capabilities: {
@@ -246,17 +266,19 @@ export function performanceForTask(model: CompactModel, task: string): TaskPerfo
       note: taskPerformance.note,
     }
   }
-  const performance = model.performance
-  if (performance && CODE_TASKS.includes(task)) {
-    return { label: "Code/Reasoning", value: performance.code_reasoning, unit: "/100", direction: "higher" }
+  const performance = model.scorecard?.performance
+  if (performance) {
+    return {
+      label: "Performance",
+      value: performance.score,
+      unit: "",
+      direction: "higher",
+      source: performance.source ?? undefined,
+      as_of: performance.as_of ?? undefined,
+      note: performance.note,
+    }
   }
-  if (performance && task === "retrieval") {
-    return { label: "Research/Citation", value: performance.research_citation, unit: "/100", direction: "higher" }
-  }
-  if (task === "transcription") {
-    return { label: "Average WER", value: null, unit: "%", direction: "lower" }
-  }
-  return { label: "Task score", value: null, unit: "", direction: "higher" }
+  return { label: "Performance", value: null, unit: "", direction: "higher" }
 }
 
 export function metricForTask(
@@ -265,11 +287,8 @@ export function metricForTask(
 ): { label: string; unit: string; direction: "lower" | "higher" } | null {
   const sample = models.find((model) => model.task_performance?.task === task)?.task_performance
   if (sample) return { label: sample.metric, unit: sample.unit, direction: sample.direction }
-  if (CODE_TASKS.includes(task) && models.some((model) => model.performance?.code_reasoning != null)) {
-    return { label: "Code/Reasoning", unit: "/100", direction: "higher" }
-  }
-  if (task === "retrieval" && models.some((model) => model.performance != null)) {
-    return { label: "Research/Citation", unit: "/100", direction: "higher" }
+  if (CODE_TASKS.includes(task) && models.some((model) => model.scorecard?.performance.score != null)) {
+    return { label: "Performance", unit: "", direction: "higher" }
   }
   return null
 }
@@ -277,8 +296,64 @@ export function metricForTask(
 export function formatPerformance(view: TaskPerformanceView): string {
   if (view.value == null) return "No score"
   if (view.unit === "%") return `${view.value}%`
-  if (view.unit === "/100") return `${view.value}/100`
+  if (view.unit === "/100") return String(view.value)
   return view.unit ? `${view.value} ${view.unit}` : String(view.value)
+}
+
+export function formatIndex(value: number | null | undefined): string {
+  if (value == null) return "—"
+  return Number.isInteger(value) ? String(value) : value.toFixed(1)
+}
+
+export function scorecardAxes(model: CompactModel): Array<{
+  key: "openness" | "performance" | "research" | "syndication"
+  label: string
+  value: number | null
+  display: string
+}> {
+  const scorecard = model.scorecard
+  return [
+    {
+      key: "openness",
+      label: "openness",
+      value: scorecard?.openness_morality.score ?? null,
+      display: formatIndex(scorecard?.openness_morality.score),
+    },
+    {
+      key: "performance",
+      label: "performance",
+      value: scorecard?.performance.score ?? null,
+      display: formatIndex(scorecard?.performance.score),
+    },
+    {
+      key: "research",
+      label: "research",
+      value: scorecard?.research_citation.score ?? null,
+      display: formatIndex(scorecard?.research_citation.score),
+    },
+    {
+      key: "syndication",
+      label: "syndication",
+      value: scorecard?.syndication.score ?? model.score,
+      display: `${scorecard?.syndication.score ?? model.score}/${scorecard?.syndication.max ?? 10}`,
+    },
+  ]
+}
+
+export function tierDescription(tier: string): string {
+  if (tier === "commons") return "Weights, training data, and training code are open. The licence permits reuse."
+  if (tier === "reciprocal") return "Weights and training code are open, and the training data is documented or open. The licence permits reuse."
+  if (tier === "shared") return "The weights are available, but the training data stays closed or the licence restricts reuse."
+  if (tier === "closed") return "The weights are not available."
+  return "The evidence is not sufficient to make a determination. Unproven is not the same as closed."
+}
+
+export function tagDefinition(tag: string): string {
+  const [namespace, ...rest] = tag.split(":")
+  const value = rest.join(":")
+  const vocabulary = getTags()
+  const entry = vocabulary.namespaces[namespace]
+  return entry?.values?.[value] ?? entry?.definition ?? "A tag in the catalogue."
 }
 
 export function formatContext(tokens: number | null): string {

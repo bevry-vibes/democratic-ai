@@ -1,16 +1,13 @@
 ---
 import Base from "../../../layouts/Base.astro"
-import ScoreBadge from "../../../components/ScoreBadge.astro"
 import TagChips from "../../../components/TagChips.astro"
 import {
   allTagPairs,
-  formatContext,
-  formatPerformance,
   getIndex,
   getTags,
   metricForTask,
   modelHref,
-  performanceForTask,
+  scorecardAxes,
   tagLabel,
 } from "../../../lib/data"
 
@@ -41,21 +38,15 @@ const definition = vocabulary.namespaces[namespace!]?.values?.[value]
 const task = namespace === "task" ? value : ""
 const tagged = index.models.filter((model) => model.tags.includes(tag))
 const metric = task ? metricForTask(tagged, task) : null
-const defaultSort = metric ? "performance" : "syndication"
-const hasSelfReported = tagged.some(
-  (model) => model.task_performance?.task === task && model.task_performance.source_kind === "model-card",
-)
+const hasTaskMetric = metric != null && metric.label !== "Performance"
+const defaultSort = tagged.some((model) => model.scorecard?.performance.score != null) ? "performance" : "syndication"
 
 const models = [...tagged].sort((a, b) => {
-  if (metric) {
-    const av = performanceForTask(a, task).value
-    const bv = performanceForTask(b, task).value
-    if (av == null && bv != null) return 1
-    if (bv == null && av != null) return -1
-    if (av != null && bv != null && av !== bv) {
-      return metric.direction === "lower" ? av - bv : bv - av
-    }
-  }
+  const av = a.scorecard?.performance.score ?? null
+  const bv = b.scorecard?.performance.score ?? null
+  if (av == null && bv != null) return 1
+  if (bv == null && av != null) return -1
+  if (av != null && bv != null && av !== bv) return bv - av
   return b.score - a.score || a.name.localeCompare(b.name)
 })
 
@@ -63,9 +54,8 @@ const contexts = [...new Set(models.flatMap((model) => model.tags.filter((t) => 
   .map((t) => t.slice("context:".length))
   .sort()
 const licenses = [...new Set(models.map((model) => model.license))].sort()
-const columns = metric
-  ? "minmax(12rem, 0.9fr) minmax(18rem, 2.1fr) minmax(11rem, 0.8fr) auto"
-  : "minmax(12rem, 0.9fr) minmax(18rem, 2.2fr) auto"
+const axis = (model: (typeof models)[number], key: "openness" | "performance" | "research" | "syndication") =>
+  scorecardAxes(model).find((entry) => entry.key === key)?.value ?? null
 ---
 
 <Base
@@ -79,7 +69,7 @@ const columns = metric
       <p class="lede">{definition ?? "A tag in the catalogue."}</p>
       <p class="mono-small muted">
         {tag} · {models.length} models
-        {metric ? ` · ranked by ${metric.label}` : ""}
+        {hasTaskMetric ? ` · ${metric!.label} is shown when available` : ""}
       </p>
     </div>
   </section>
@@ -108,13 +98,13 @@ const columns = metric
         <label for="sort">Sort</label>
         <div class="sort-control">
           <select id="sort">
-            {metric && <option value="performance">{metric.label}</option>}
+            <option value="performance">Performance/Intelligence</option>
             <option value="openness">Openness/Morality</option>
-            <option value="code">Code/Reasoning</option>
             <option value="research">Research/Citation</option>
             <option value="syndication">Syndication</option>
             <option value="released">Release date</option>
             <option value="name">Name</option>
+            {hasTaskMetric && <option value="task">{metric!.label}</option>}
           </select>
           <button id="order" class="order-toggle" type="button" aria-label="Reverse the sort order">
             Best first
@@ -126,72 +116,59 @@ const columns = metric
     <div class="filter-meta">
       <span id="count">Showing {models.length} of {models.length} models</span>
       <span class="faint" id="sort-note">
-        {metric
-          ? `Sorted by ${metric.label}, best first. Missing scores sort last.`
-          : "Sorted by independent listings, then name."}
-        {hasSelfReported ? " A star marks a self-reported figure." : ""}
+        Sorted by Performance/Intelligence, best first. Missing scores sort last.
       </span>
     </div>
 
     <div
       class="list"
       id="tag-list"
-      style={`--list-cols:${columns}`}
+      style="--list-cols:minmax(12rem, 0.9fr) minmax(18rem, 2.1fr) minmax(10.5rem, auto)"
       data-direction={metric?.direction ?? "higher"}
       data-default-sort={defaultSort}
     >
       {models.map((model) => {
-        const performance = metric ? performanceForTask(model, task) : null
+        const axes = scorecardAxes(model)
+        const taskValue = hasTaskMetric && model.task_performance?.task === task ? model.task_performance : null
         return (
-          <a
+          <div
             class="list-row"
-            href={modelHref(model.id)}
             data-name={`${model.name} ${model.organization} ${model.summary}`.toLowerCase()}
             data-contexts={model.tags.filter((t) => t.startsWith("context:")).map((t) => t.slice(8)).join(" ")}
             data-license={model.license}
-            data-performance={performance?.value ?? -1}
-            data-openness={model.performance?.openness_morality ?? -1}
-            data-code={model.performance?.code_reasoning ?? -1}
-            data-research={model.performance?.research_citation ?? -1}
-            data-score={model.score}
+            data-openness={axis(model, "openness") ?? -1}
+            data-performance={axis(model, "performance") ?? -1}
+            data-research={axis(model, "research") ?? -1}
+            data-score={axis(model, "syndication") ?? 0}
             data-released={model.released ?? ""}
+            data-task={taskValue?.value ?? -1}
+            data-task-direction={metric?.direction ?? "higher"}
           >
             <div>
-              <h3>{model.name}</h3>
+              <a class="row-title" href={modelHref(model.id)}><h3>{model.name}</h3></a>
               <p class="mono-small">{model.organization}</p>
             </div>
             <div class="list-description">
               <p>{model.summary || "No description on the model card."}</p>
-              <TagChips tags={model.tags.filter((t) => t.startsWith("task:"))} limit={2} links={false}>
-                {model.tags.includes("context:on-device") && <span class="chip context">on-device</span>}
-                {model.context_tokens && <span class="chip">{formatContext(model.context_tokens)}</span>}
-                {model.builds > 0 && (
-                  <span class="chip">{model.builds} {model.builds === 1 ? "build" : "builds"}</span>
-                )}
-              </TagChips>
+              <TagChips tags={model.tags} showNamespace />
             </div>
-            {metric && (
-              <div class="chips performance-cell">
-                {performance && performance.value == null ? (
-                  <span class="performance none">No {metric.label}</span>
-                ) : (
-                  performance && (
-                    <span class="performance" title={performance.note}>
-                      <strong>{formatPerformance(performance)}</strong>
-                      <span>{performance.label}</span>
-                      {performance.source_kind === "model-card" && (
-                        <span class="self-mark" title="Self-reported by the model card">*</span>
-                      )}
-                    </span>
-                  )
-                )}
-              </div>
-            )}
-            <div class="right">
-              <ScoreBadge score={model.score} band={model.band} />
-              <span class="chip license">{model.license}</span>
+            <div class="scorecard-mini">
+              {hasTaskMetric && (
+                <span class="axis task-axis">
+                  <span class="axis-label">{metric!.label}</span>
+                  <span class="axis-value">
+                    {taskValue ? `${taskValue.value}${taskValue.unit}` : "—"}
+                  </span>
+                </span>
+              )}
+              {axes.map((entry) => (
+                <span class="axis">
+                  <span class="axis-label">{entry.label}</span>
+                  <span class="axis-value">{entry.display}</span>
+                </span>
+              ))}
             </div>
-          </a>
+          </div>
         )
       })}
     </div>
@@ -215,16 +192,14 @@ const columns = metric
     if (q && params.get("q")) q.value = params.get("q")
     if (context && params.get("context")) context.value = params.get("context")
     if (license && params.get("license")) license.value = params.get("license")
-    if (sort) sort.value = params.get("sort") ?? defaultSort
-
-    const metricDirection = list?.dataset.direction ?? "higher"
+    if (sort && params.get("sort")) sort.value = params.get("sort")
 
     function setOrderLabel() {
       if (!order) return
       const mode = sort?.value ?? defaultSort
       if (mode === "name") order.textContent = orderMode === "best" ? "A–Z" : "Z–A"
       else if (mode === "released") order.textContent = orderMode === "best" ? "Newest" : "Oldest"
-      else if (mode === "performance") order.textContent = orderMode === "best" ? "Best first" : "Worst first"
+      else if (mode === "task") order.textContent = orderMode === "best" ? "Best first" : "Worst first"
       else order.textContent = orderMode === "best" ? "High first" : "Low first"
     }
 
@@ -262,18 +237,12 @@ const columns = metric
           const diff = av.localeCompare(bv)
           return orderMode === "best" ? -diff : diff
         }
-        const key =
-          mode === "performance"
-            ? "performance"
-            : mode === "openness"
-              ? "openness"
-              : mode === "code"
-                ? "code"
-                : mode === "research"
-                  ? "research"
-                  : "score"
-        const direction = mode === "performance" ? metricDirection : "higher"
-        return compare(a, b, key, direction) || (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "")
+        if (mode === "task") {
+          const direction = a.dataset.taskDirection ?? "higher"
+          return compare(a, b, "task", direction) || (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "")
+        }
+        const key = mode === "openness" ? "openness" : mode === "performance" ? "performance" : mode === "research" ? "research" : "score"
+        return compare(a, b, key, "higher") || (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "")
       })
       for (const row of sorted) list?.append(row)
     }
@@ -299,13 +268,13 @@ const columns = metric
       sortRows(mode)
 
       const labels = {
-        performance: "task performance",
+        performance: "Performance/Intelligence",
         openness: "Openness/Morality",
-        code: "Code/Reasoning",
         research: "Research/Citation",
         syndication: "independent listings",
         released: "release date",
         name: "name",
+        task: "task metric",
       }
       if (note) {
         const label = labels[mode] ?? mode
@@ -321,7 +290,7 @@ const columns = metric
               : orderMode === "best"
                 ? "best first"
                 : "worst first"
-        note.textContent = `Sorted by ${label}, ${direction}. Missing scores sort last.${note.textContent?.includes("star") ? " A star marks a self-reported figure." : ""}`
+        note.textContent = `Sorted by ${label}, ${direction}. Missing scores sort last.`
       }
 
       const next = new URLSearchParams()

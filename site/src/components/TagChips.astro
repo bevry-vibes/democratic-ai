@@ -1,5 +1,5 @@
 ---
-import { tagLabel, tagPath, tagStatus } from "../lib/data"
+import { tagDefinition, tagLabel, tagPath, tagStatus } from "../lib/data"
 
 interface Props {
   tags: string[]
@@ -16,12 +16,15 @@ const kind = (tag: string) => `chip ${tagStatus(tag)}`
 ---
 
 <div class={`flex wrap-gap ${className}`.trim()}>
-  {visible.map((tag) =>
-    links ? (
-      <a class={kind(tag)} href={tagPath(tag)}>{label(tag)}</a>
+  {visible.map((tag) => {
+    const explanation = tagDefinition(tag)
+    return links ? (
+      <a class={kind(tag)} href={tagPath(tag)} title={explanation} aria-label={`${tag}: ${explanation}`}>
+        {label(tag)}
+      </a>
     ) : (
-      <span class={kind(tag)}>{label(tag)}</span>
-    ),
-  )}
+      <span class={kind(tag)} title={explanation} aria-label={`${tag}: ${explanation}`}>{label(tag)}</span>
+    )
+  })}
   <slot />
 </div>

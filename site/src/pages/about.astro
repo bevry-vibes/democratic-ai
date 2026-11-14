@@ -53,24 +53,33 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
       <div class="panel">
         <h2>The scorecard</h2>
         <p>
-          The catalogue also carries the July 2026 AI Market Scorecard. It grades three independent axes, not one
-          ladder:
+          The catalogue carries its own current scorecard. It does not repeat a frozen table from an earlier essay.
+          Each axis is independent, and each value is recomputed from the evidence the record holds today.
         </p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Axis</th><th>What it measures</th></tr></thead>
             <tbody>
-              <tr><td><strong>Openness/Morality</strong></td><td>Commons contribution, liberation valence, and third-party harm. Open-weight earns partial marks; open-source with open data earns full marks.</td></tr>
-              <tr><td><strong>Code/Reasoning</strong></td><td>Agentic coding and reasoning, grounded in SWE-bench, Terminal-Bench, and LiveCodeBench.</td></tr>
-              <tr><td><strong>Research/Citation</strong></td><td>Whether the model can cite sources, and how often it fabricates them.</td></tr>
+              <tr><td><strong>Openness/Morality</strong></td><td>What the release gives back: open weights, open training data, open training code, and reuse terms. The score is computed from the record, not assigned by hand.</td></tr>
+              <tr><td><strong>Performance/Intelligence</strong></td><td>The model's current measured performance on its task. For coding models this is a primary agentic benchmark composite; for speech models it is average WER; for other models it is the best current primary benchmark. The number is an index, not a percentage.</td></tr>
+              <tr><td><strong>Research/Citation</strong></td><td>Current research benchmarks where they exist. Citation accuracy is a separate question, and the record says when it is not measured.</td></tr>
+              <tr><td><strong>Syndication</strong></td><td>Independent listings, not quality. The model's own host has weight 0. A build inherits its base model's score.</td></tr>
             </tbody>
           </table>
         </div>
         <p class="muted" style="font-size:0.88rem;margin-top:0.8rem">
-          A model can be A+ on openness and F on citation. The scorecard keeps those axes separate. Where a model
-          has a scorecard entry, its page shows the three scores and the source. Missing is not zero.
-          <a href="https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310" target="_blank" rel="noreferrer">Read the scorecard</a>.
+          A model can be strong on openness and weak on citation. A model can be a strong coder and a poor
+          citizen. The scorecard keeps those judgements apart. <strong>Missing is not zero.</strong> A score without
+          a current source is not shown.
+          <a href="/thesis/">Read the argument</a>.
         </p>
+        <h3>How the numbers are made</h3>
+        <ul>
+          <li><strong>Openness/Morality</strong> starts from the release terms: 50 for open weights, 25 for open training data, 15 for open training code, and up to 10 for a reuse-permitting licence. Unchecked data and code add nothing; they are not treated as closed.</li>
+          <li><strong>Performance/Intelligence</strong> uses the mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench. A model-card figure fills a gap only when the aggregator has no primary row. A later update may inherit its base model's primary result when it has no comparable benchmark of its own, and the record says so.</li>
+          <li><strong>Research/Citation</strong> uses current research benchmarks such as BrowseComp and DeepSearchQA. It does not claim citation accuracy.</li>
+          <li><strong>Syndication</strong> counts independent listings. It is 0–10, not an index.</li>
+        </ul>
       </div>
 
       <div class="panel">

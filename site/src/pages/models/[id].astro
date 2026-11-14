@@ -1,8 +1,19 @@
 ---
 import Base from "../../layouts/Base.astro"
-import ScoreBadge from "../../components/ScoreBadge.astro"
 import TagChips from "../../components/TagChips.astro"
-import { bandClass, getIndex, getModel, tierClass, formatContext, formatParams, type ModelRecord } from "../../lib/data"
+import {
+  bandClass,
+  formatContext,
+  formatIndex,
+  formatParams,
+  getIndex,
+  getModel,
+  tagDefinition,
+  tagPath,
+  tierClass,
+  tierDescription,
+  type ModelRecord,
+} from "../../lib/data"
 
 export function getStaticPaths() {
   return getIndex().models.map((model) => ({
@@ -17,16 +28,17 @@ interface Props {
 
 const { model: compact } = Astro.props
 const model = getModel(compact.id) as ModelRecord
+const scorecard = model.scorecard
 const bool = (value: boolean | null | undefined) => (value === true ? "Yes" : value === false ? "No" : "Unknown")
-const taskTags = model.tags.filter((tag) => tag.startsWith("task:"))
-const taskAsOf = model.task_performance
-  ? new Date(`${model.task_performance.as_of}T00:00:00Z`).toLocaleDateString("en-GB", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-      timeZone: "UTC",
-    })
-  : null
+const formatDate = (value: string | null | undefined) =>
+  value
+    ? new Date(value).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+        timeZone: "UTC",
+      })
+    : null
 ---
 
 <Base title={model.name} description={model.summary || `${model.name} in the Democratic AI catalogue.`}>
@@ -35,10 +47,16 @@ const taskAsOf = model.task_performance
       <p class="eyebrow"><a href="/models/">Models</a> / {model.organization}</p>
       <h1>{model.name}</h1>
       {model.summary && <p class="lede">{model.summary}</p>}
+      <div class="tag-cloud">
+        <TagChips tags={model.tags} showNamespace />
+        {model.builds.length > 0 && (
+          <span class="chip">{model.builds.length} {model.builds.length === 1 ? "build" : "builds"}</span>
+        )}
+      </div>
       <div class="badges">
-        <span class={`badge ${tierClass(model.openness.tier)}`}>{model.openness.tier}</span>
-        <ScoreBadge score={model.syndication.score} band={model.syndication.band} detail />
-        <span class="chip license">{model.license.id}</span>
+        <span class={`badge ${tierClass(model.openness.tier)}`} title={tierDescription(model.openness.tier)}>
+          {model.openness.tier}
+        </span>
         <span class="chip">{model.organization}</span>
         {model.released && <span class="chip">{model.released}</span>}
       </div>
@@ -48,22 +66,41 @@ const taskAsOf = model.task_performance
   <section class="wrap detail-grid">
     <div>
       <div class="panel">
-        <h2>What it does</h2>
-        <TagChips tags={taskTags}>
-          {model.tags.includes("context:on-device") && <span class="chip context">on-device</span>}
-          {model.builds.length > 0 && (
-            <span class="chip">{model.builds.length} {model.builds.length === 1 ? "build" : "builds"}</span>
-          )}
-        </TagChips>
-        {taskTags.length === 0 && <p class="muted">No task tag yet.</p>}
-        <dl class="definition mt-3">
+        <h2>Capabilities</h2>
+        <dl class="definition">
           <dt>Tool calling</dt><dd>{bool(model.capabilities.tool_calling)}</dd>
           <dt>Reasoning</dt><dd>{bool(model.capabilities.reasoning)}</dd>
           <dt>Structured output</dt><dd>{bool(model.capabilities.structured_output)}</dd>
           <dt>Context</dt><dd>{formatContext(model.capabilities.context_tokens)}</dd>
           <dt>Size</dt><dd>{formatParams(model.footprint.params_b)}</dd>
-          <dt>Modality</dt><dd>{model.capabilities.modality.length > 0 ? model.capabilities.modality.join(", ") : "Unknown"}</dd>
-          <dt>Runtimes</dt><dd>{model.capabilities.runtimes.length > 0 ? model.capabilities.runtimes.join(", ") : "Unknown"}</dd>
+          <dt>Modality</dt>
+          <dd>
+            {model.capabilities.modality.length > 0 ? (
+              <span class="flex wrap-gap">
+                {model.capabilities.modality.map((modality) => (
+                  <a class="chip" href={tagPath(`modality:${modality}`)} title={tagDefinition(`modality:${modality}`)}>
+                    {modality}
+                  </a>
+                ))}
+              </span>
+            ) : (
+              "Unknown"
+            )}
+          </dd>
+          <dt>Runtimes</dt>
+          <dd>
+            {model.capabilities.runtimes.length > 0 ? (
+              <span class="flex wrap-gap">
+                {model.capabilities.runtimes.map((runtime) => (
+                  <a class="chip" href={tagPath(`runtime:${runtime}`)} title={tagDefinition(`runtime:${runtime}`)}>
+                    {runtime}
+                  </a>
+                ))}
+              </span>
+            ) : (
+              "Unknown"
+            )}
+          </dd>
         </dl>
       </div>
 
@@ -98,13 +135,42 @@ const taskAsOf = model.task_performance
         )}
       </div>
 
+      {model.releases.length > 0 && (
+        <div class="panel">
+          <h2>Releases</h2>
+          <p class="muted" style="font-size:0.9rem">
+            These earlier names and updates are the same model lineage. They fold into this page.
+          </p>
+          <div class="table-wrap">
+            <table class="build-table">
+              <thead>
+                <tr><th>Date</th><th>Release</th><th>Relation</th><th>Note</th><th></th></tr>
+              </thead>
+              <tbody>
+                {model.releases.map((release) => (
+                  <tr>
+                    <td>{release.released ?? "—"}</td>
+                    <td>{release.name}</td>
+                    <td>{release.relation}</td>
+                    <td>{release.note}</td>
+                    <td><a href={`https://huggingface.co/${release.hugging_face}`} target="_blank" rel="noreferrer">Hugging Face</a></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
       <div class="panel">
         <h2>Lineage</h2>
         {model.lineage.length > 0 ? (
           <div class="lineage">
             {model.lineage.map((entry) => (
               <>
-                <span class="chip">{entry.relation}</span>
+                <a class="chip" href={tagPath(`relation:${entry.relation}`)} title={tagDefinition(`relation:${entry.relation}`)}>
+                  {entry.relation}
+                </a>
                 <span class="arrow">←</span>
                 <a href={`https://huggingface.co/${entry.base}`} target="_blank" rel="noreferrer">{entry.base}</a>
               </>
@@ -114,71 +180,105 @@ const taskAsOf = model.task_performance
           <p class="muted">No base model declared. This is a root release, or the card does not name a base.</p>
         )}
       </div>
-
-      <div class="panel">
-        <h2>Tags</h2>
-        <TagChips tags={model.tags} showNamespace />
-      </div>
     </div>
 
     <aside>
-      <div class="panel">
-        <h2>Syndication</h2>
-        <div class="score-block">
-          <strong>{model.syndication.score}</strong><span class="faint">/10</span>
-          <span class={`badge ${bandClass(model.syndication.band)}`}>{model.syndication.band.replaceAll("-", " ")}</span>
-        </div>
-        <p class="muted" style="font-size:0.84rem">
-          Independent listings, not quality. The model's own Hugging Face page has weight 0.
-        </p>
-        <ul class="source-list">
-          {model.syndication.sources.map((source) => (
-            <li>
-              <a href={source.url} target="_blank" rel="noreferrer">{source.id}</a>
-              <span class="weight">+{source.weight}{source.self ? " self" : ""}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {model.task_performance && (
-        <div class="panel">
-          <h2>Task performance</h2>
-          <div class="score-block">
-            <strong>{model.task_performance.value}{model.task_performance.unit}</strong>
-            <span class="faint">{model.task_performance.metric}</span>
+      {scorecard ? (
+        <>
+          <div class="panel">
+            <h2>Openness/Morality</h2>
+            <div class="score-block"><strong>{formatIndex(scorecard.openness_morality.score)}</strong></div>
+            <p class="muted" style="font-size:0.84rem">{scorecard.openness_morality.note}</p>
+            <p class="mono-small muted">
+              Tier: <span title={tierDescription(scorecard.openness_morality.tier)}>{scorecard.openness_morality.tier}</span>
+            </p>
           </div>
-          <p class="muted" style="font-size:0.84rem">
-            {model.task_performance.note}
-            {model.task_performance.match === "family" ? " This is a base-model match, not an exact version result." : ""}
-          </p>
-          <p class="mono-small muted">
-            {model.task_performance.source_kind === "model-card" ? "Self-reported on the model card" : "Measured on the Open ASR Leaderboard"} · {taskAsOf}
-          </p>
-          <a class="mono-small" href={model.task_performance.source} target="_blank" rel="noreferrer">Source</a>
+
+          <div class="panel">
+            <h2>Performance/Intelligence</h2>
+            <div class="score-block">
+              <strong class={scorecard.performance.score == null ? "unmeasured" : ""}>{formatIndex(scorecard.performance.score)}</strong>
+              {scorecard.performance.score == null && <span class="faint">Not measured</span>}
+            </div>
+            <p class="muted" style="font-size:0.84rem">{scorecard.performance.note}</p>
+            {scorecard.performance.benchmarks.length > 0 && (
+              <ul class="benchmark-list">
+                {scorecard.performance.benchmarks.map((benchmark) => (
+                  <li>
+                    <span>{benchmark.name}</span>
+                    <span class="mono-small">{formatIndex(benchmark.score)}{benchmark.self_reported ? " *" : ""}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {scorecard.performance.own_benchmarks.length > 0 && (
+              <details class="own-evidence">
+                <summary>Own evidence from this release</summary>
+                <ul class="benchmark-list">
+                  {scorecard.performance.own_benchmarks.map((benchmark) => (
+                    <li>
+                      <span>{benchmark.name}</span>
+                      <span class="mono-small">{formatIndex(benchmark.score)}{benchmark.self_reported ? " *" : ""}</span>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            )}
+            <p class="mono-small muted">
+              {scorecard.performance.basis ? `${scorecard.performance.basis} basis` : "No basis"}
+              {scorecard.performance.match === "base" ? " · base-model match" : ""}
+              {scorecard.performance.as_of ? ` · ${formatDate(scorecard.performance.as_of)}` : ""}
+            </p>
+            {scorecard.performance.source && (
+              <a class="mono-small" href={scorecard.performance.source} target="_blank" rel="noreferrer">Source</a>
+            )}
+          </div>
+
+          <div class="panel">
+            <h2>Research/Citation</h2>
+            <div class="score-block">
+              <strong class={scorecard.research_citation.score == null ? "unmeasured" : ""}>{formatIndex(scorecard.research_citation.score)}</strong>
+              {scorecard.research_citation.score == null && <span class="faint">Not measured</span>}
+            </div>
+            <p class="muted" style="font-size:0.84rem">{scorecard.research_citation.note}</p>
+            {scorecard.research_citation.benchmarks.length > 0 && (
+              <ul class="benchmark-list">
+                {scorecard.research_citation.benchmarks.map((benchmark) => (
+                  <li>
+                    <span>{benchmark.name}</span>
+                    <span class="mono-small">{formatIndex(benchmark.score)}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {scorecard.research_citation.source && (
+              <a class="mono-small" href={scorecard.research_citation.source} target="_blank" rel="noreferrer">Source</a>
+            )}
+          </div>
+
+          <div class="panel">
+            <h2>Syndication</h2>
+            <div class="score-block">
+              <strong>{scorecard.syndication.score}</strong><span class="faint">/{scorecard.syndication.max}</span>
+              <span class={`badge ${bandClass(scorecard.syndication.band)}`}>{scorecard.syndication.band.replaceAll("-", " ")}</span>
+            </div>
+            <p class="muted" style="font-size:0.84rem">{scorecard.syndication.note}</p>
+            <ul class="source-list">
+              {model.syndication.sources.map((source) => (
+                <li>
+                  <a href={source.url} target="_blank" rel="noreferrer">{source.id}</a>
+                  <span class="weight">+{source.weight}{source.self ? " self" : ""}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </>
+      ) : (
+        <div class="panel">
+          <h2>Scorecard</h2>
+          <p class="muted">No scorecard entry for this model yet. Missing is not zero.</p>
         </div>
       )}
-
-      <div class="panel">
-        <h2>Scorecard</h2>
-        {model.performance ? (
-          <>
-            <dl class="definition">
-              <dt>Openness/Morality</dt><dd>{model.performance.openness_morality}/100</dd>
-              <dt>Code/Reasoning</dt><dd>{model.performance.code_reasoning == null ? "Inconclusive" : `${model.performance.code_reasoning}/100`}</dd>
-              <dt>Research/Citation</dt><dd>{model.performance.research_citation}/100</dd>
-            </dl>
-            <p class="muted" style="font-size:0.82rem;margin-top:0.8rem">
-              {model.performance.note} {model.performance.match === "family" ? "This is a family match, not an exact version score." : ""}
-            </p>
-            <a class="mono-small" href={model.performance.source} target="_blank" rel="noreferrer">Scorecard source ({model.performance.as_of})</a>
-          </>
-        ) : (
-          <p class="muted" style="font-size:0.9rem">
-            No scorecard entry for this model yet. Missing is not zero.
-          </p>
-        )}
-      </div>
 
       <div class="panel">
         <h2>Access</h2>
@@ -197,11 +297,32 @@ const taskAsOf = model.task_performance
       <div class="panel">
         <h2>Terms</h2>
         <dl class="definition">
-          <dt>Licence</dt><dd>{model.license.id} <span class="faint">({model.license.class})</span></dd>
-          <dt>Weights</dt><dd>{model.openness.weights}</dd>
-          <dt>Training data</dt><dd>{model.openness.training_data}</dd>
-          <dt>Training code</dt><dd>{model.openness.training_code}</dd>
-          <dt>Tier</dt><dd><span class={`badge ${tierClass(model.openness.tier)}`}>{model.openness.tier}</span></dd>
+          <dt>Licence</dt>
+          <dd>
+            <a class="chip license" href={tagPath(`license:${model.license.id}`)} title={tagDefinition(`license:${model.license.id}`)}>
+              {model.license.id}
+            </a>
+          </dd>
+          <dt>Weights</dt>
+          <dd><span class="chip" title="open-weight means the trained weights are downloadable.">{model.openness.weights}</span></dd>
+          <dt>Training data</dt>
+          <dd>
+            <span class="chip" title="open means the data is published. documented means it is described but not released. unknown means unchecked, not closed.">
+              {model.openness.training_data}
+            </span>
+          </dd>
+          <dt>Training code</dt>
+          <dd>
+            <span class="chip" title="open means the training code is published. documented means it is described but not released. unknown means unchecked, not closed.">
+              {model.openness.training_code}
+            </span>
+          </dd>
+          <dt>Tier</dt>
+          <dd>
+            <span class={`badge ${tierClass(model.openness.tier)}`} title={tierDescription(model.openness.tier)}>
+              {model.openness.tier}
+            </span>
+          </dd>
         </dl>
         <p class="muted" style="font-size:0.82rem;margin-top:0.8rem">
           Training-data and training-code evidence is not assessed in this pass. `unknown` means unchecked, not closed.
