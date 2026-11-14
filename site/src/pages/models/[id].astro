@@ -4,10 +4,8 @@ import CountPill from "../../components/CountPill.astro"
 import ComparePicker from "../../components/ComparePicker.astro"
 import Pill from "../../components/Pill.astro"
 import PillRow from "../../components/PillRow.astro"
-import TagChips from "../../components/TagChips.astro"
 import {
   SCORECARD_AXIS_ORDER,
-  TAG_NAMESPACE_ORDER,
   bandClass,
   formatContextCount,
   formatIndex,
@@ -42,13 +40,6 @@ const overallComponents = scorecard
     )
   : []
 const bool = (value: boolean | null | undefined) => (value === true ? "Yes" : value === false ? "No" : "Unknown")
-const tagGroups = TAG_NAMESPACE_ORDER.map((namespace) => ({
-  namespace,
-  tags: model.tags.filter((tag) => tag.startsWith(`${namespace}:`)),
-})).filter((group) => group.tags.length > 0)
-const otherTags = model.tags.filter(
-  (tag) => !TAG_NAMESPACE_ORDER.some((namespace) => tag.startsWith(`${namespace}:`)),
-)
 const accessTags = model.tags.filter((tag) => tag.startsWith("access:"))
 const structuredOutputDefinition = "Structured output is typed or schema-constrained output."
 
@@ -381,48 +372,6 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
       <p class="eyebrow"><a href="/models/">Models</a> / {model.organization}</p>
       <h1>{model.name}</h1>
       {model.summary && <p class="lede">{model.summary}</p>}
-      <div class="tag-groups">
-        {tagGroups.map((group) => (
-          <div class="tag-group">
-            <TagChips tags={group.tags} showNamespace />
-          </div>
-        ))}
-        {otherTags.length > 0 && (
-          <div class="tag-group">
-            <TagChips tags={otherTags} showNamespace />
-          </div>
-        )}
-      </div>
-      <div class="release-meta">
-        {model.builds.length > 0 && (
-          <Pill
-            label={`builds:${model.builds.length}`}
-            href="#builds"
-            tone="tag-release"
-            tooltip="A build is packaging, not a new model. It inherits the base task and terms."
-          />
-        )}
-        <Pill
-          label={`tier:${model.openness.tier}`}
-          href={`/models/?tier=${model.openness.tier}`}
-          tone="tag-terms"
-          tooltip={tierDescription(model.openness.tier)}
-        />
-        <Pill
-          label={`org:${model.organization}`}
-          href={`/models/?q=${encodeURIComponent(model.organization)}`}
-          tone="tag-release"
-          tooltip={`${orgNames[model.organization] ?? model.organization} is the organisation behind this model.`}
-        />
-        {model.released && (
-          <Pill
-            label={`released:${model.released}`}
-            href="/models/?sort=released"
-            tone="tag-release"
-            tooltip={`Released on ${formatDate(model.released)}.`}
-          />
-        )}
-      </div>
     </div>
   </section>
 
