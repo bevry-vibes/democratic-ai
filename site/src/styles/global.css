@@ -2132,7 +2132,7 @@ aside > .scorecard-overall {
 
 .metric-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto 4.2rem;
+  grid-template-columns: minmax(0, 1fr) 4.2rem;
   align-items: center;
   gap: 0.45rem;
   padding: 0.32rem 0;
@@ -2149,7 +2149,7 @@ aside > .scorecard-overall {
 }
 
 .metric-row .chip {
-  justify-self: end;
+  justify-self: start;
 }
 
 .metric-points {

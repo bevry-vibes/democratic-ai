@@ -614,7 +614,7 @@ model: "${openRouterModel.id}"`}</code></pre>
         <h3>Use another provider</h3>
         {model.access.models_dev ? (
           <>
-            <p>Other hosted providers and pricing are listed on models.dev.</p>
+            <p style="margin-bottom:0.35rem">Other hosted providers and pricing are listed on models.dev.</p>
             <a class="mono-small" href={model.access.models_dev} target="_blank" rel="noreferrer">
               Go to the models.dev entry for this model
             </a>
@@ -706,13 +706,20 @@ model: "${openRouterModel.id}"`}</code></pre>
 
           <div class="panel scorecard-panel scorecard-openness" id="scorecard-openness">
             <h2>Openness/Morality</h2>
-            <div class="score-block"><strong>{formatIndex(scorecard.openness_morality.score)}</strong></div>
+            <div class="score-block">
+              <strong>{formatIndex(scorecard.openness_morality.score)}</strong>
+              <Pill
+                label={`tier:${scorecard.openness_morality.tier}`}
+                href={`/models/?tier=${scorecard.openness_morality.tier}`}
+                tone="tag-terms"
+                tooltip={`Tier is a summary of what the release gives back. ${tierDescription(scorecard.openness_morality.tier)}`}
+              />
+            </div>
             <ul class="metric-list">
               {scorecard.openness_morality.components.map((component) => {
                 const pill = termPillFor(component.label)
                 return (
                   <li class="metric-row">
-                    <span class="metric-label">{component.label}</span>
                     {pill ? (
                       <Pill
                         label={pill.label}
@@ -730,14 +737,6 @@ model: "${openRouterModel.id}"`}</code></pre>
               })}
             </ul>
             <p class="muted" style="font-size:0.84rem">{scorecard.openness_morality.note}</p>
-            <p class="mono-small muted">
-              <Pill
-                label={`tier:${scorecard.openness_morality.tier}`}
-                href={`/models/?tier=${scorecard.openness_morality.tier}`}
-                tone="tag-terms"
-                tooltip={`Tier is a summary of what the release gives back. ${tierDescription(scorecard.openness_morality.tier)}`}
-              />
-            </p>
           </div>
 
           <div class="panel scorecard-panel scorecard-performance" id="scorecard-performance">
