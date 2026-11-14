@@ -346,6 +346,8 @@ export function formatIndex(value: number | null | undefined): string {
   return Number.isInteger(value) ? String(value) : value.toFixed(1)
 }
 
+export const SCORECARD_AXIS_ORDER = ["syndication", "performance", "openness", "research"] as const
+
 export function scorecardAxes(model: CompactModel): Array<{
   key: "openness" | "performance" | "research" | "syndication"
   label: string
@@ -353,32 +355,33 @@ export function scorecardAxes(model: CompactModel): Array<{
   display: string
 }> {
   const scorecard = model.scorecard
-  return [
-    {
-      key: "openness",
+  const entries = {
+    openness: {
+      key: "openness" as const,
       label: "openness",
       value: scorecard?.openness_morality.score ?? null,
       display: scorecard?.openness_morality.score == null ? "—" : String(Math.round(scorecard.openness_morality.score)),
     },
-    {
-      key: "performance",
+    performance: {
+      key: "performance" as const,
       label: "performance",
       value: scorecard?.performance.score ?? null,
       display: scorecard?.performance.score == null ? "—" : String(Math.round(scorecard.performance.score)),
     },
-    {
-      key: "research",
-      label: "research",
+    research: {
+      key: "research" as const,
+      label: "citation",
       value: scorecard?.research_citation.score ?? null,
       display: scorecard?.research_citation.score == null ? "—" : String(Math.round(scorecard.research_citation.score)),
     },
-    {
-      key: "syndication",
+    syndication: {
+      key: "syndication" as const,
       label: "syndication",
       value: scorecard?.syndication.score ?? model.score,
       display: `${scorecard?.syndication.score ?? model.score}/${scorecard?.syndication.max ?? 10}`,
     },
-  ]
+  }
+  return SCORECARD_AXIS_ORDER.map((key) => entries[key])
 }
 
 export function tierDescription(tier: string): string {

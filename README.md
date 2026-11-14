@@ -70,7 +70,7 @@ The numbers are index scores, not percentages. They do not need to sum to 100. A
 
 The scorecard keeps the axes independent. A model can be open and a weak coder. A model can be a strong coder and a poor citizen. A model can cite well through a vendor interface while its open weights cannot cite at all.
 
-The homepage uses an overall score: a weighted mean of the available axes, with openness at 30%, performance at 40%, research at 15%, and syndication at 15%. Missing axes are excluded, not treated as zero. Each card shows its coverage, so a sparse score is not mistaken for a complete one.
+The homepage uses an overall score: a weighted mean of the available axes, with syndication at 15%, performance at 40%, openness at 30%, and research at 15%. Missing axes are excluded, not treated as zero. Each card shows its coverage, so a sparse score is not mistaken for a complete one.
 
 Tag pages sort by performance, openness, research, syndication, release date, or name. The button beside the sort control reverses the order. Missing scores always sort last.
 

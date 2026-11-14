@@ -2075,3 +2075,86 @@ aside > .scorecard-overall {
 .count-pill-count {
   color: #fff;
 }
+
+.overall-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 0.8rem;
+}
+
+.overall-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 3.6rem 4.6rem;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.32rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.overall-row:last-child {
+  border-bottom: 0;
+}
+
+.overall-head {
+  padding-top: 0;
+  border-bottom: 1px solid var(--rule-strong);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.overall-head span:nth-child(2),
+.overall-head span:nth-child(3) {
+  text-align: right;
+}
+
+.overall-pill {
+  justify-self: start;
+}
+
+.overall-weight,
+.overall-contribution {
+  text-align: right;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.metric-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.6rem 0 0.8rem;
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto 4.2rem;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.32rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.metric-row:last-child {
+  border-bottom: 0;
+}
+
+.metric-label {
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+}
+
+.metric-row .chip {
+  justify-self: end;
+}
+
+.metric-points {
+  text-align: right;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}

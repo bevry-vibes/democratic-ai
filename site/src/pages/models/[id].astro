@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro"
 import CountPill from "../../components/CountPill.astro"
 import TagChips from "../../components/TagChips.astro"
 import {
+  SCORECARD_AXIS_ORDER,
   TAG_NAMESPACE_ORDER,
   bandClass,
   formatContextCount,
@@ -31,6 +32,12 @@ interface Props {
 const { model: compact } = Astro.props
 const model = getModel(compact.id) as ModelRecord
 const scorecard = model.scorecard
+const overallComponents = scorecard
+  ? [...scorecard.overall.components].sort(
+      (a, b) => SCORECARD_AXIS_ORDER.indexOf(a.key as (typeof SCORECARD_AXIS_ORDER)[number]) -
+        SCORECARD_AXIS_ORDER.indexOf(b.key as (typeof SCORECARD_AXIS_ORDER)[number]),
+    )
+  : []
 const bool = (value: boolean | null | undefined) => (value === true ? "Yes" : value === false ? "No" : "Unknown")
 const capabilityClass = (value: boolean | null | undefined) =>
   value === true ? "capability-yes" : value === false ? "capability-no" : "capability-unknown"
@@ -261,21 +268,39 @@ const formatDate = (value: string | null | undefined) =>
               <span class="faint">{scorecard.overall.coverage} of 4 axes</span>
             </div>
             <p class="muted" style="font-size:0.84rem">{scorecard.overall.note}</p>
-            <ul class="benchmark-list">
-              {scorecard.overall.components.map((component) => (
-                <li>
-                  <span>
-                    {component.label}
-                    {component.included ? ` · ${formatIndex(component.score)}` : " · excluded"}
-                  </span>
-                  <span class="mono-small">
-                    {component.included ? `${component.effective_weight}% · ${formatIndex(component.contribution)}` : "—"}
-                  </span>
+            <ul class="overall-list">
+              <li class="overall-row overall-head">
+                <span>axis</span>
+                <span>weight</span>
+                <span>contribution</span>
+              </li>
+              {overallComponents.map((component) => (
+                <li class="overall-row">
+                  <CountPill
+                    class="overall-pill"
+                    label={component.key === "research" ? "citation" : component.key}
+                    count={
+                      !component.included
+                        ? "—"
+                        : component.key === "syndication"
+                          ? `${formatIndex((component.score ?? 0) / 10)}/10`
+                          : formatIndex(component.score)
+                    }
+                    href={`#scorecard-${component.key}`}
+                    tone={`score-${component.key}`}
+                    tooltip={
+                      component.included
+                        ? `${component.label}: ${component.effective_weight}% of the overall score, contributing ${formatIndex(component.contribution)}.`
+                        : `${component.label} has no current value, so it is excluded from the overall score. Missing is not zero.`
+                    }
+                  />
+                  <span class="overall-weight">{component.included ? `${component.effective_weight}%` : "—"}</span>
+                  <span class="overall-contribution">{component.included ? formatIndex(component.contribution) : "—"}</span>
                 </li>
               ))}
             </ul>
             <p class="mono-small muted">
-              Base weights: openness 30, performance 40, research 15, syndication 15. Missing axes are excluded and the
+              Base weights: syndication 15, performance 40, openness 30, research 15. Missing axes are excluded and the
               remaining weights are renormalised.
             </p>
           </div>
@@ -283,28 +308,26 @@ const formatDate = (value: string | null | undefined) =>
           <div class="panel scorecard-panel scorecard-openness" id="scorecard-openness">
             <h2>Openness/Morality</h2>
             <div class="score-block"><strong>{formatIndex(scorecard.openness_morality.score)}</strong></div>
-            <ul class="benchmark-list">
+            <ul class="metric-list">
               {scorecard.openness_morality.components.map((component) => (
-                <li>
-                  <span>
-                    {component.label} ·{" "}
-                    <a
-                      class={`chip ${component.label === "Licence" ? "tag-license" : ""}`.trim()}
-                      href={component.label === "Licence" ? tagPath(`license:${component.value}`) : "/about/#release-terms"}
-                      data-tooltip={
-                        component.label === "Licence"
-                          ? tagDefinition(`license:${component.value}`)
-                          : component.label === "Weights"
-                            ? "open-weight means the trained weights are downloadable. It does not mean the training data or code are open."
-                            : component.label === "Training data"
-                              ? "open means the data is published. documented means it is described but not released. unknown means unchecked, not closed."
-                              : "open means the training code is published. documented means it is described but not released. unknown means unchecked, not closed."
-                      }
-                    >
-                      {component.value}
-                    </a>
-                  </span>
-                  <span class="mono-small">{component.points}/{component.max}</span>
+                <li class="metric-row">
+                  <span class="metric-label">{component.label}</span>
+                  <a
+                    class={`chip ${component.label === "Licence" ? "tag-license" : ""}`.trim()}
+                    href={component.label === "Licence" ? tagPath(`license:${component.value}`) : "/about/#release-terms"}
+                    data-tooltip={
+                      component.label === "Licence"
+                        ? tagDefinition(`license:${component.value}`)
+                        : component.label === "Weights"
+                          ? "open-weight means the trained weights are downloadable. It does not mean the training data or code are open."
+                          : component.label === "Training data"
+                            ? "open means the data is published. documented means it is described but not released. unknown means unchecked, not closed."
+                            : "open means the training code is published. documented means it is described but not released. unknown means unchecked, not closed."
+                    }
+                  >
+                    {component.value}
+                  </a>
+                  <span class="metric-points">{component.points}/{component.max}</span>
                 </li>
               ))}
             </ul>
