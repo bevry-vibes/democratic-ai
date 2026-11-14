@@ -3139,10 +3139,6 @@ html {
   line-height: 1.5;
 }
 
-.tag-explain li {
-  align-items: start;
-}
-
 .pill-missing {
   border-style: dashed !important;
   border-color: #b04a3a !important;
