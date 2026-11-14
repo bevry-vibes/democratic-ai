@@ -1,0 +1,275 @@
+{
+  "model": "clef-flash",
+  "prompt_version": 1,
+  "requested_at": "2026-11-14T03:11:58.631Z",
+  "state": "Model: inclusionAI/Ming-UniAudio-16B-A3B\nOrganisation: ant-ling\nSource tags: source:hf-model, license:apache-2.0, context:commercial-safe, domain:multimodal, org:ant-ling\nModel card: Ming-UniAudio 📑 Technical Report ｜📖 Project Page ｜🤗 Hugging Face ｜ 🤖 ModelScope Introduction Ming-UniAudio is a novel framework that unifies speech understanding, generation, and editing. Its core is a unified continuous speech tokenizer that effectively unifies semantic and acoustic features within an end-to-end model. We developed a speech language model that strikes a balance between generation and understanding capabilities based on the unified continuous audio tokenizer. Leveraging this foundational model, which exhibits robust performance in both domains, we further trained a dedicated speech editing model built upon Ming-Lite-Omni. Crucially, Ming-UniAudio is the first to enable universal, free-form speech editing guided solely by natural language instructions, handling complex semantic and acoustic modifications without manual region specification. - 🔥 First unified continuous speech tokenizer for both understanding and generation tasks: MingTok-Audio - 🔥 First Speech LLM with unifed continuous tokenizer for both understanding and generation: Ming-UniAudio - 🔥 First universal free-form speech editing model for various semantic and acoustic editing task without timestamp condition: Ming-UniAudio-Edit - 🔥 First benchmark for free-form speech editing: Ming-Freeform-Audio-Edit-Benchmark 📌 Updates * [2025.09.30] 🔥 We release Ming-UniAudio with significant improvements across speech understanding, generation, and free-form editing tasks. Key Features Ming-UniAudio features key optimizations as follows, compared to other audio-assisted LLMs: - **Unified Continuou",
+  "questions": {
+    "translation": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"translation\"? Translate text between languages. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "transcription": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"transcription\"? Convert speech to text. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "speech-synthesis": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"speech-synthesis\"? Convert text to speech. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "speech-enhancement": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"speech-enhancement\"? Denoise, dereverb, and normalise audio. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "word-timestamps": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"word-timestamps\"? Align words to their position in audio. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "diarization": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"diarization\"? Identify who spoke when. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "topic-tagging": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"topic-tagging\"? Suggest topics and tags for content. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "text-classification": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"text-classification\"? Assign labels to text. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "structured-extraction": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"structured-extraction\"? Extract typed data into a schema. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "pii-redaction": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"pii-redaction\"? Find and remove personal data. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "content-moderation": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"content-moderation\"? Flag unsafe or unwanted content. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "image-classification": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"image-classification\"? Assign labels to images. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "face-matching": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"face-matching\"? Find people in photos. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "clip-selection": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"clip-selection\"? Choose short clips and highlights. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "emoji-suggestion": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"emoji-suggestion\"? Suggest emoji for text. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "title-generation": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"title-generation\"? Suggest a title and description. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "language-identification": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"language-identification\"? Detect the language of text or audio. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "filler-word-detection": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"filler-word-detection\"? Find filler words in speech. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "report-generation": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"report-generation\"? Generate a structured report from notes. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "code": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"code\"? Write, repair, or review code. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "tool-calling": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"tool-calling\"? Call tools and APIs reliably. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "reasoning": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"reasoning\"? Work through multi-step problems. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "retrieval": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"retrieval\"? Find relevant content. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "embedding": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"embedding\"? Produce a vector representation. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "text-generation": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"text-generation\"? Generate text, chat, or complete a prompt. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "image-generation": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"image-generation\"? Generate or edit images. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "video-generation": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"video-generation\"? Generate or edit video. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "image-understanding": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"image-understanding\"? Read and describe images or documents. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "audio-classification": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"audio-classification\"? Assign labels to audio. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "voice-activity-detection": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"voice-activity-detection\"? Detect speech activity in audio. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "time-series-forecasting": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"time-series-forecasting\"? Forecast a time series. Answer yes only when the model name, model card, or tags state this task."
+    },
+    "ocr": {
+      "type": "noul",
+      "instructions": "Does this model perform the task \"ocr\"? Read text from images or documents. Answer yes only when the model name, model card, or tags state this task."
+    }
+  },
+  "result": {
+    "model": "clef-flash",
+    "answers": {
+      "translation": {
+        "type": "noul",
+        "noul": 0.05
+      },
+      "transcription": {
+        "type": "noul",
+        "noul": 0.5213
+      },
+      "speech-synthesis": {
+        "type": "noul",
+        "noul": 0.7166
+      },
+      "speech-enhancement": {
+        "type": "noul",
+        "noul": 0.1102
+      },
+      "word-timestamps": {
+        "type": "noul",
+        "noul": 0.033
+      },
+      "diarization": {
+        "type": "noul",
+        "noul": 0.0222
+      },
+      "topic-tagging": {
+        "type": "noul",
+        "noul": 0.0256
+      },
+      "text-classification": {
+        "type": "noul",
+        "noul": 0.0246
+      },
+      "structured-extraction": {
+        "type": "noul",
+        "noul": 0.0124
+      },
+      "pii-redaction": {
+        "type": "noul",
+        "noul": 0.0106
+      },
+      "content-moderation": {
+        "type": "noul",
+        "noul": 0.0168
+      },
+      "image-classification": {
+        "type": "noul",
+        "noul": 0.0111
+      },
+      "face-matching": {
+        "type": "noul",
+        "noul": 0.0056
+      },
+      "clip-selection": {
+        "type": "noul",
+        "noul": 0.0342
+      },
+      "emoji-suggestion": {
+        "type": "noul",
+        "noul": 0.008
+      },
+      "title-generation": {
+        "type": "noul",
+        "noul": 0.0168
+      },
+      "language-identification": {
+        "type": "noul",
+        "noul": 0.0646
+      },
+      "filler-word-detection": {
+        "type": "noul",
+        "noul": 0.0986
+      },
+      "report-generation": {
+        "type": "noul",
+        "noul": 0.0327
+      },
+      "code": {
+        "type": "noul",
+        "noul": 0.0175
+      },
+      "tool-calling": {
+        "type": "noul",
+        "noul": 0.0196
+      },
+      "reasoning": {
+        "type": "noul",
+        "noul": 0.0395
+      },
+      "retrieval": {
+        "type": "noul",
+        "noul": 0.0172
+      },
+      "embedding": {
+        "type": "noul",
+        "noul": 0.044
+      },
+      "text-generation": {
+        "type": "noul",
+        "noul": 0.1031
+      },
+      "image-generation": {
+        "type": "noul",
+        "noul": 0.0079
+      },
+      "video-generation": {
+        "type": "noul",
+        "noul": 0.0125
+      },
+      "image-understanding": {
+        "type": "noul",
+        "noul": 0.0318
+      },
+      "audio-classification": {
+        "type": "noul",
+        "noul": 0.2075
+      },
+      "voice-activity-detection": {
+        "type": "noul",
+        "noul": 0.1569
+      },
+      "time-series-forecasting": {
+        "type": "noul",
+        "noul": 0.0108
+      },
+      "ocr": {
+        "type": "noul",
+        "noul": 0.0137
+      }
+    },
+    "usage": {
+      "input_tokens": 3998,
+      "output_tokens": 0
+    }
+  },
+  "success": true,
+  "errors": []
+}
