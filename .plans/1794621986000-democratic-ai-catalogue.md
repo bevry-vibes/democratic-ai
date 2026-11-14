@@ -504,6 +504,8 @@ data/
   tag-rules.json              rules for the tagging pass
   links.json                  generated models.dev and agent-detect links
   syndication.json            generated independent-listing scores
+  scorecard.json              the July 2026 AI Market Scorecard source
+  scorecard.report.json       which models matched which scorecard entry
   feeds.json                  verified feeds and APIs (discovery sources)
   fetch-targets.json          what the fetcher pulls
   raw/                        source snapshots, never overwritten
@@ -527,6 +529,8 @@ scripts/
   tag/                        rules-first tagging plus the Clef gate (implemented)
   links/                      models.dev and agent-detect link resolver (implemented)
   syndication/                independent-listing score (implemented)
+  summaries/                  fetch missing model cards (implemented)
+  scorecard/                  apply task and openness scores (implemented)
   index/                      model records from the tagged pull (implemented)
   build.ts                    validate, compute tiers, generate
   check.ts                    build in check mode
@@ -858,6 +862,8 @@ First run:
 The record is honest about what this pass knows. `openness.tier` is `unproven` unless a conditional licence caps it at `shared`. Training-data and training-code evidence is not assessed yet. The syndication score is independent listings, not quality. Model cards and descriptions are linked, not copied.
 
 A build with no base in the pull stays in the report. It does not get a record. The next pull can attach it when the base appears.
+
+**Summaries and performance.** The first summary pass fetched 169 missing model cards and left 2 with no card. The index uses the models.dev description when present, then the model card excerpt. The July 2026 AI Market Scorecard matched 10 models: 5 exact and 5 family matches. Tag pages rank code, tool-calling, reasoning, and text-generation tasks by Code/Reasoning, and retrieval by Research/Citation. A missing score is not zero; a family match is marked.
 
 ### 11. CI/CD
 

@@ -230,6 +230,20 @@ The first pass scored 240 root and notable models. It skipped 424 builds, probes
 
 The inclusionAI real models show why the score matters. Duo has an arXiv paper and scores 1. Ming-3.0-audio-flash, Realtime-Venus, and Ming-UniAudio have cards but little independent pickup; they score 0–1. They are real models, but they are not yet part of a wider web of trust.
 
+## Performance and the scorecard
+
+The release tier is not a grade. Open-weight is a real return to the commons; open data and open code add to it. The catalogue records the difference without treating open-weight as a failure.
+
+The site also carries the July 2026 AI Market Scorecard. It grades three independent axes:
+
+- **Openness/Morality** — commons contribution, liberation valence, and third-party harm.
+- **Code/Reasoning** — agentic coding and reasoning, grounded in SWE-bench, Terminal-Bench, and LiveCodeBench.
+- **Research/Citation** — whether the model can cite sources, and how often it fabricates them.
+
+The axes are independent. A model can be A+ on openness and F on citation. A missing score is not zero. A family match carries the score for the named model family, not an exact version, and the record says so.
+
+Task lists rank by the axis that matches the task: Code/Reasoning for code, tool-calling, reasoning, and text generation; Research/Citation for retrieval. Other tasks stay ordered by independent listings.
+
 ## Evaluation doctrine
 
 These rules come from the translation comparison and the Pati work. They apply to every use case.

@@ -33,6 +33,7 @@ this process is documented in the upstream repo's [local tweaks pattern](https:/
 - A build is not a model. A GGUF, MLX, CoreML, ONNX, or quantized release attaches to its base model as a build entry. Do not give it a separate model page.
 - No card, no announcement, and no benchmark means no page. Do not mirror the Hugging Face firehose.
 - Syndication is a count of independent listings, not quality. Never count the model's own host, and never score a build or probe separately; it inherits the base model's score.
+- The release tier is not a grade. Open-weight is a real return. The scorecard axes are independent; a missing score is not zero; mark family matches as family matches.
 - The X list and the Hugging Face following list need credentials. Treat them as optional sources. A missing credential must never block the deterministic build.
 - The X API is metered. Cache every response under `data/raw/` and never refetch a same-day snapshot without an explicit refresh.
 - `agent-detect` is the source of truth for harness, provider, model, and provider-training rules. This repository complements it with training-data openness, lineage, and reuse terms; it does not fork those rules.

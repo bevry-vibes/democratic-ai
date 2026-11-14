@@ -55,7 +55,17 @@ A model can release its weights and still keep its training data and recipe secr
 | **Closed** | The weights are not available. |
 | **Unproven** | The evidence is not sufficient to make a determination. |
 
-The tiers describe what you can reuse. They are not a judgement on the worth of a project. When the weights are available, a conditional licence — such as a non-commercial term or a user cap — makes the model **Shared** even when the weights are open. Each record shows the exact licence, the evidence, and the date of the last check.
+The tiers describe what you can reuse. They are not a judgement on the worth of a project. **Open-weight is a real contribution to the commons.** Open data and open code add to it. When the weights are available, a conditional licence — such as a non-commercial term or a user cap — makes the model **Shared** even when the weights are open. Each record shows the exact licence, the evidence, and the date of the last check.
+
+## Scorecard
+
+The catalogue also carries the July 2026 AI Market Scorecard for the models it covers. It grades three independent axes:
+
+- **Openness/Morality** — how the model was built and released, and what it gave back.
+- **Code/Reasoning** — agentic coding and reasoning.
+- **Research/Citation** — whether the model can cite sources, and how often it fabricates them.
+
+The axes are independent. A model can be strong on one and weak on another. A missing score is not zero. A family match is marked as a family match.
 
 ## Browse by tags
 
