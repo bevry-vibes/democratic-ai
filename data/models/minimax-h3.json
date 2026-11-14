@@ -62,6 +62,15 @@
     "providers": [
       "vercel"
     ],
+    "provider_models": {
+      "vercel": [
+        {
+          "id": "minimax/minimax-h3",
+          "name": "MiniMax H3",
+          "cost": null
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

@@ -73,6 +73,85 @@
       "openrouter",
       "vercel"
     ],
+    "provider_models": {
+      "novita-ai": [
+        {
+          "id": "inclusionai/ling-3.0-flash-vl",
+          "name": "Ling 3.0 Flash VL",
+          "cost": {
+            "input": 0.075,
+            "output": 0.22,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "inclusionai/ling-3.0-flash-vl",
+          "name": "Ling 3.0 Flash VL",
+          "cost": {
+            "input": 0.075,
+            "output": 0.22,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "llmgateway-providers": [
+        {
+          "id": "deepinfra/ling-3.0-flash-vl",
+          "name": "Ling 3.0 Flash VL (DeepInfra)",
+          "cost": {
+            "input": 0.06,
+            "output": 0.18,
+            "cache_read": 0.012
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "inclusionai/ling-3.0-flash-vl",
+          "name": "inclusionAI: Ling 3.0 Flash VL",
+          "cost": {
+            "input": 0.06,
+            "output": 0.18,
+            "cache_read": 0.012
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "ling-3.0-flash-vl",
+          "name": "Ling 3.0 Flash VL",
+          "cost": {
+            "input": 0.06,
+            "output": 0.18,
+            "cache_read": 0.012
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "inclusionai/ling-3.0-flash-vl",
+          "name": "Ling 3.0 Flash VL",
+          "cost": {
+            "input": 0.06,
+            "output": 0.18,
+            "cache_read": 0.012
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "inclusionai/ling-3.0-flash-vl",
+          "name": "Ling 3.0 Flash VL",
+          "cost": {
+            "input": 0.06,
+            "output": 0.18,
+            "cache_read": 0.012
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

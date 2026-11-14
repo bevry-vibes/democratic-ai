@@ -13,10 +13,18 @@ interface TaggedItem {
   tags: Array<{ tag: string }>
 }
 
+interface ModelsDevCost {
+  input?: number
+  output?: number
+  cache_read?: number
+  cache_write?: number
+}
+
 interface ModelsDevModel {
   id: string
   name?: string
   canonical_model_id?: string
+  cost?: ModelsDevCost
 }
 
 interface ModelsDevApi {
@@ -151,6 +159,10 @@ async function main(): Promise<void> {
 
   const modelsDev = new Map<string, { url: string; canonical: string; name: string }>()
   const providersByCanonical = new Map<string, Set<string>>()
+  const providerModelsByCanonical = new Map<
+    string,
+    Record<string, Array<{ id: string; name: string; cost: ModelsDevCost | null }>>
+  >()
   for (const [providerId, provider] of Object.entries(api)) {
     for (const [key, model] of Object.entries(provider.models ?? {})) {
       const canonical = model.canonical_model_id
@@ -159,6 +171,11 @@ async function main(): Promise<void> {
       const providerSet = providersByCanonical.get(canonical) ?? new Set<string>()
       providerSet.add(providerId)
       providersByCanonical.set(canonical, providerSet)
+      const providerModels = providerModelsByCanonical.get(canonical) ?? {}
+      const entries = providerModels[providerId] ?? []
+      entries.push({ id: key, name: model.name ?? key, cost: model.cost ?? null })
+      providerModels[providerId] = entries
+      providerModelsByCanonical.set(canonical, providerModels)
       for (const candidate of [canonical, key, model.name ?? ""]) {
         const name = norm(candidate)
         if (!name) continue
@@ -181,7 +198,15 @@ async function main(): Promise<void> {
     }
   }
 
-  const models: Record<string, { models_dev?: string; agent_detect?: string; providers?: string[] }> = {}
+  const models: Record<
+    string,
+    {
+      models_dev?: string
+      agent_detect?: string
+      providers?: string[]
+      provider_models?: Record<string, Array<{ id: string; name: string; cost: ModelsDevCost | null }>>
+    }
+  > = {}
   const unmatched: Array<{ id: string; name: string }> = []
   let withModelsDev = 0
   let withAgentDetect = 0
@@ -199,6 +224,7 @@ async function main(): Promise<void> {
       ...(md ? { models_dev: md.url } : {}),
       ...(ad ? { agent_detect: ad.url } : {}),
       ...(md ? { providers: [...(providersByCanonical.get(md.canonical) ?? [])].sort() } : {}),
+      ...(md ? { provider_models: providerModelsByCanonical.get(md.canonical) ?? {} } : {}),
     }
     if (md) withModelsDev++
     if (ad) withAgentDetect++

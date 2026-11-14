@@ -63,6 +63,30 @@
       "novita-ai",
       "vercel"
     ],
+    "provider_models": {
+      "novita-ai": [
+        {
+          "id": "inclusionai/ling-3.0-flash-sante",
+          "name": "Ling 3.0 Flash Sante",
+          "cost": {
+            "input": 0.075,
+            "output": 0.22,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "inclusionai/ling-3.0-flash-sante",
+          "name": "Ling 3.0 Flash Sante",
+          "cost": {
+            "input": 0.075,
+            "output": 0.22,
+            "cache_read": 0.015
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

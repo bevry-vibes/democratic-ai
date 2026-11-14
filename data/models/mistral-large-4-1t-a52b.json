@@ -63,6 +63,7 @@
     "models_dev": null,
     "agent_detect": "https://agent-detect.bevry.me/model/mistrallarge4",
     "providers": [],
+    "provider_models": {},
     "gated": null
   },
   "syndication": {

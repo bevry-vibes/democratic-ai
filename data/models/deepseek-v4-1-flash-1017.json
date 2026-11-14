@@ -140,6 +140,935 @@
       "vercel",
       "wandb"
     ],
+    "provider_models": {
+      "novita-ai": [
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "baseten": [
+        {
+          "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.007
+          }
+        },
+        {
+          "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017-Fast",
+          "name": "DeepSeek V4.1 Flash 1017 Fast",
+          "cost": {
+            "input": 0.6,
+            "output": 2.4,
+            "cache_read": 0.014
+          }
+        }
+      ],
+      "engy": [
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.03,
+            "output": 0.12,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "munito": [
+        {
+          "id": "deepseek-ai/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.27,
+            "output": 1,
+            "cache_read": 0.0054
+          }
+        }
+      ],
+      "scaleway": [
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.672,
+            "output": 2.016,
+            "reasoning": 2.016,
+            "cache_read": 0.134
+          }
+        }
+      ],
+      "cortecs": [
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.203,
+            "output": 0.609,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "merge-gateway": [
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
+          }
+        }
+      ],
+      "neuralwatt": [
+        {
+          "id": "deepseek-v4.1-flash",
+          "name": "DeepSeek V4.1 Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        },
+        {
+          "id": "deepseek-v4.1-flash-flex",
+          "name": "DeepSeek V4.1 Flash Flex",
+          "cost": {
+            "input": 0.0975,
+            "output": 0.39,
+            "cache_read": 0.00975
+          }
+        }
+      ],
+      "greenpt": [
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.402192,
+            "output": 1.61994,
+            "cache_read": 0.044688
+          }
+        }
+      ],
+      "nearai": [
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "fireworks-ai": [
+        {
+          "id": "accounts/fireworks/models/deepseek-v4p1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "accounts/fireworks/routers/deepseek-v4p1-flash-1017-ultrafast",
+          "name": "DeepSeek V4.1 Flash 1017 Ultra-fast",
+          "cost": {
+            "input": 2.4,
+            "output": 9.6,
+            "cache_read": 0.048
+          }
+        },
+        {
+          "id": "accounts/fireworks/routers/deepseek-v4p1-flash-1017-spot",
+          "name": "DeepSeek V4.1 Flash 1017 Spot",
+          "cost": {
+            "input": 0.21,
+            "output": 0.84,
+            "cache_read": 0.0042
+          }
+        },
+        {
+          "id": "accounts/fireworks/routers/deepseek-flash-latest",
+          "name": "DeepSeek Flash Latest",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "cloudflare-workers-ai": [
+        {
+          "id": "@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "nebius": [
+        {
+          "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "amd": [
+        {
+          "id": "DeepSeek-V4.1-Flash",
+          "name": "DeepSeek V4.1 Flash",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "byteplus": [
+        {
+          "id": "deepseek-v4-1-flash-261017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
+          }
+        },
+        {
+          "id": "deepseek-v4-1-flash-economy-261017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.12,
+            "output": 0.48,
+            "cache_read": 0.002
+          }
+        }
+      ],
+      "hyper": [
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.33,
+            "output": 1.31,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "modular": [
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.17,
+            "output": 1.2,
+            "cache_read": 0.02
+          }
+        }
+      ],
+      "morph": [
+        {
+          "id": "morph-dsv41flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.12,
+            "output": 0.8,
+            "cache_read": 0.008
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "deepseek-v4.1-flash",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "deepseek-v4.1-flash-free",
+          "name": "DeepSeek V4.1 Flash Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "ofox": [
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.2,
+            "output": 0.6,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "thinkingmachines": [
+        {
+          "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017:peft:262144",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.6,
+            "output": 3.6,
+            "cache_read": 0.12
+          }
+        }
+      ],
+      "melious": [
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3345,
+            "output": 1.338,
+            "cache_read": 0.03345
+          }
+        }
+      ],
+      "aiand": [
+        {
+          "id": "deepseek-ai/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 0.6,
+            "cache_read": 0.02
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.007
+          }
+        },
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017-fast",
+          "name": "DeepSeek V4.1 Flash 1017 Fast",
+          "cost": {
+            "input": 0.6,
+            "output": 2.4,
+            "cache_read": 0.014
+          }
+        }
+      ],
+      "deepseek": [
+        {
+          "id": "deepseek-v4-flash",
+          "name": "DeepSeek V4 Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "reasoning": 0.6,
+            "cache_read": 0.003
+          }
+        },
+        {
+          "id": "deepseek-v4-flash-vision-exp",
+          "name": "DeepSeek V4 Flash Vision Exp",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "reasoning": 0.6,
+            "cache_read": 0.003
+          }
+        },
+        {
+          "id": "deepseek-flash",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "reasoning": 0.6,
+            "cache_read": 0.003
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2
+          }
+        }
+      ],
+      "prime": [
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.04368,
+            "output": 0.7,
+            "cache_read": 0.0024,
+            "cache_write": 0.04368
+          }
+        }
+      ],
+      "wandb": [
+        {
+          "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "hopper": [
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.09,
+            "output": 0.85,
+            "cache_read": 0.007
+          }
+        },
+        {
+          "id": "deepseek-v4.1-flash-1017-abliterated",
+          "name": "DeepSeek V4.1 Flash 1017 Abliterated",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "digitalocean": [
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "mistral": [
+        {
+          "id": "deepseek-v4-1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.007
+          }
+        }
+      ],
+      "arcee": [
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "empiriolabs": [
+        {
+          "id": "deepseek-v4-1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.2,
+            "output": 0.8,
+            "cache_read": 0.02
+          }
+        }
+      ],
+      "llmgateway-providers": [
+        {
+          "id": "novita/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (NovitaAI)",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "runware/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (runware)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.01
+          }
+        },
+        {
+          "id": "flexai/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (flexai)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.004
+          }
+        },
+        {
+          "id": "entrim/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (entrim)",
+          "cost": {
+            "input": 0.2,
+            "output": 0.8,
+            "cache_read": 0.005
+          }
+        },
+        {
+          "id": "sciforium/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (sciforium)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
+          }
+        },
+        {
+          "id": "together-ai/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Together AI)",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "deepinfra/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (DeepInfra)",
+          "cost": {
+            "input": 0.2,
+            "output": 0.6,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "cloudflare/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Cloudflare)",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (DeepSeek)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
+          }
+        },
+        {
+          "id": "baidu/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Baidu)",
+          "cost": {
+            "input": 0.28,
+            "output": 1.13,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "alibaba/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Alibaba Cloud)",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "scx-ai-gp/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (scx-ai-gp)",
+          "cost": {
+            "input": 0.135,
+            "output": 0.54,
+            "cache_read": 0.003
+          }
+        },
+        {
+          "id": "inference.net/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Inference.net)",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.007
+          }
+        },
+        {
+          "id": "reka-ai/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (reka-ai)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
+          }
+        },
+        {
+          "id": "tencent/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Tencent Cloud)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
+          }
+        }
+      ],
+      "alibaba-token-plan": [
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017-fast",
+          "name": "DeepSeek: DeepSeek V4.1 Flash 1017 Fast",
+          "cost": {
+            "input": 0.6,
+            "output": 2.4,
+            "cache_read": 0.014
+          }
+        }
+      ],
+      "venice": [
+        {
+          "id": "deepseek-v4-1-flash-1017",
+          "name": "DeepSeek v4.1 Flash (1017)",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.0075
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.135,
+            "output": 0.54,
+            "cache_read": 0.003
+          }
+        }
+      ],
+      "requesty": [
+        {
+          "id": "deepseek-v4.1-flash-1017@eu",
+          "name": "DeepSeek V4.1 Flash 1017 (EU)",
+          "cost": {
+            "input": 0.5,
+            "output": 1.5,
+            "cache_read": 0.05
+          }
+        },
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.5,
+            "output": 1.5,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "ollama-cloud": [
+        {
+          "id": "deepseek-v4.1-flash:1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
+          }
+        }
+      ],
+      "opencode-go": [
+        {
+          "id": "deepseek-v4.1-flash",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
+          }
+        }
+      ],
+      "synthetic": [
+        {
+          "id": "hf:deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.6,
+            "output": 1.2,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "umans-ai": [
+        {
+          "id": "umans-deepseek-v4.1-flash",
+          "name": "DeepSeek V4.1 Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.028
+          }
+        },
+        {
+          "id": "umans-deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.028
+          }
+        }
+      ],
+      "frogbot": [
+        {
+          "id": "deepseek-v4-1-flash",
+          "name": "DeepSeek V4.1 Flash",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        }
+      ],
+      "alibaba-token-plan-cn": [
+        {
+          "id": "deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "umans-ai-coding-plan": [
+        {
+          "id": "umans-deepseek-v4.1-flash",
+          "name": "DeepSeek V4.1 Flash",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        {
+          "id": "umans-deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "edenai": [
+        {
+          "id": "scaleway/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Scaleway)",
+          "cost": {
+            "input": 0.66486,
+            "output": 1.994579,
+            "cache_read": 0.132972
+          }
+        },
+        {
+          "id": "qwen/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Alibaba)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
+          }
+        },
+        {
+          "id": "nebius/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Nebius)",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "flexai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (FlexAI)",
+          "cost": {
+            "input": 0.08,
+            "output": 0.605,
+            "cache_read": 0.0055
+          }
+        },
+        {
+          "id": "together_ai/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Together AI)",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "deepinfra/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Deep Infra)",
+          "cost": {
+            "input": 0.2,
+            "output": 0.6,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "cloudflare/@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Cloudflare)",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.006
+          }
+        },
+        {
+          "id": "arkanecloud/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Arkanecloud)",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.075
+          }
+        },
+        {
+          "id": "tensorx/deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (TensorX)",
+          "cost": {
+            "input": 0.5,
+            "output": 1.5,
+            "cache_read": 0.125
+          }
+        },
+        {
+          "id": "sference/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Sference)",
+          "cost": {
+            "input": 0.35,
+            "output": 1.32,
+            "cache_read": 0.03
+          }
+        },
+        {
+          "id": "tencent/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (Tencent)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.1,
+            "output": 0.6,
+            "cache_read": 0.0042
+          }
+        },
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017:thinking",
+          "name": "DeepSeek V4.1 Flash 1017 Thinking",
+          "cost": {
+            "input": 0.1,
+            "output": 0.6,
+            "cache_read": 0.0042
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "deepseek/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.038,
+            "output": 0.5,
+            "cache_read": 0.01
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

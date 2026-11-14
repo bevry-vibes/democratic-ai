@@ -70,6 +70,41 @@
       "opencode",
       "vercel"
     ],
+    "provider_models": {
+      "novita-ai": [
+        {
+          "id": "inclusionai/ling-3.0-flash-fin",
+          "name": "Ling 3.0 Flash Fin",
+          "cost": {
+            "input": 0.075,
+            "output": 0.22,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "ling-3.0-flash-fin-free",
+          "name": "Ling 3.0 Flash Fin Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "inclusionai/ling-3.0-flash-fin",
+          "name": "Ling 3.0 Flash Fin",
+          "cost": {
+            "input": 0.075,
+            "output": 0.22,
+            "cache_read": 0.015
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

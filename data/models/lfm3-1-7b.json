@@ -64,6 +64,7 @@
     "models_dev": null,
     "agent_detect": "https://agent-detect.bevry.me/model/lfm317b",
     "providers": [],
+    "provider_models": {},
     "gated": null
   },
   "syndication": {

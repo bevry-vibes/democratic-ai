@@ -66,6 +66,30 @@
       "opencode",
       "opencode-go"
     ],
+    "provider_models": {
+      "opencode": [
+        {
+          "id": "longcat-2.5-free",
+          "name": "LongCat 2.5 Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "opencode-go": [
+        {
+          "id": "longcat-2.5-free",
+          "name": "LongCat 2.5 Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

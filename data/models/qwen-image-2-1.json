@@ -65,6 +65,18 @@
     "providers": [
       "nan"
     ],
+    "provider_models": {
+      "nan": [
+        {
+          "id": "qwen-image-2.1",
+          "name": "Qwen-Image-2.1",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

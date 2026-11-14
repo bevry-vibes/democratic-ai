@@ -88,6 +88,248 @@
       "stepfun-step-plan",
       "vercel"
     ],
+    "provider_models": {
+      "novita-ai": [
+        {
+          "id": "stepfun/step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "stepfun-ai-step-plan": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": null
+        }
+      ],
+      "stepfun-ai": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "aimlapi": [
+        {
+          "id": "stepfun/step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1.058,
+            "output": 2.8566,
+            "cache_read": 0.0529
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "step-5-preview-free",
+          "name": "Step 5 Preview Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "stepfun-ai/Step-5-Preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "stepfun": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1.04613,
+            "output": 2.98895,
+            "cache_read": 0.10461
+          }
+        }
+      ],
+      "commandcode": [
+        {
+          "id": "stepfun/Step-5-Preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "stepfun/step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "aihubmix": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1.08,
+            "output": 3.0888,
+            "cache_read": 0.054
+          }
+        }
+      ],
+      "empiriolabs": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "stepfun-step-plan": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": null
+        }
+      ],
+      "llmgateway-providers": [
+        {
+          "id": "tencent/step-5-preview",
+          "name": "Step 5 Preview (Tencent Cloud)",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "stepfun/step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "requesty": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "opencode-go": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        },
+        {
+          "id": "step-5-preview-free",
+          "name": "Step 5 Preview Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "edenai": [
+        {
+          "id": "deepinfra/stepfun-ai/Step-5-Preview",
+          "name": "Step 5 Preview (Deep Infra)",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        },
+        {
+          "id": "tencent/step-5-preview",
+          "name": "Step 5 Preview (Tencent)",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "nvidia": [
+        {
+          "id": "stepfun-ai/step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "stepfun/step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "stepfun/step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

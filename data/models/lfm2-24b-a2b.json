@@ -62,6 +62,18 @@
     "providers": [
       "togetherai"
     ],
+    "provider_models": {
+      "togetherai": [
+        {
+          "id": "LiquidAI/LFM2-24B-A2B",
+          "name": "LFM2-24B-A2B",
+          "cost": {
+            "input": 0.03,
+            "output": 0.12
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

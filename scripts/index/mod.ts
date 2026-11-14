@@ -494,6 +494,7 @@ async function main(): Promise<void> {
         models_dev: link.models_dev ?? null,
         agent_detect: link.agent_detect ?? null,
         providers: link.providers ?? [],
+        provider_models: link.provider_models ?? {},
         gated: item.source_meta?.gated ?? null,
       },
       syndication: synd ?? { score: 0, points: 0, band: "self-only", sources: [] },
@@ -533,6 +534,7 @@ async function main(): Promise<void> {
       models_dev: link.models_dev ?? null,
       agent_detect: link.agent_detect ?? null,
       providers: link.providers ?? [],
+      provider_models: link.provider_models ?? {},
       builds: buildEntries.length,
     })
   }

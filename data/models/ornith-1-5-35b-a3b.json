@@ -70,6 +70,19 @@
     "providers": [
       "runinfra"
     ],
+    "provider_models": {
+      "runinfra": [
+        {
+          "id": "ornith-ai/Ornith-1.5-35B-A3B",
+          "name": "Ornith 1.5 35B A3B",
+          "cost": {
+            "input": 0.1,
+            "output": 0.4,
+            "cache_read": 0.01
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

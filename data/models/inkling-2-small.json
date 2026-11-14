@@ -75,6 +75,111 @@
       "prime",
       "vercel"
     ],
+    "provider_models": {
+      "opencode": [
+        {
+          "id": "inkling-2-small-free",
+          "name": "Inkling 2 Small Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "thinkingmachines/inkling-2-small",
+          "name": "Inkling 2 Small",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "prime": [
+        {
+          "id": "thinkingmachines/inkling-2-small",
+          "name": "Inkling 2 Small",
+          "cost": {
+            "input": 0.15,
+            "output": 0.5,
+            "cache_read": 0.03,
+            "cache_write": 0.15
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "thinkingmachines/inkling-2-small",
+          "name": "Thinking Machines: Inkling 2 Small",
+          "cost": {
+            "input": 0.15,
+            "output": 0.5,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "edenai": [
+        {
+          "id": "nebius/thinkingmachines/Inkling-2-Small",
+          "name": "Inkling 2 Small (Nebius)",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "together_ai/thinkingmachines/Inkling-2-Small",
+          "name": "Inkling 2 Small (Together AI)",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        },
+        {
+          "id": "deepinfra/thinkingmachines/Inkling-2-Small",
+          "name": "Inkling 2 Small (Deep Infra)",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        },
+        {
+          "id": "cloudflare/@cf/thinkingmachines/inkling-2-small",
+          "name": "Inkling 2 Small (Cloudflare)",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "thinkingmachines/inkling-2-small",
+          "name": "Inkling 2 Small",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        },
+        {
+          "id": "thinkingmachines/inkling-2-small:free",
+          "name": "Inkling 2 Small (free)",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

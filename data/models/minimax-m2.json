@@ -80,6 +80,161 @@
       "vercel",
       "zenmux"
     ],
+    "provider_models": {
+      "cortecs": [
+        {
+          "id": "minimax-m2",
+          "name": "MiniMax-M2",
+          "cost": {
+            "input": 0.349,
+            "output": 1.405
+          }
+        }
+      ],
+      "merge-gateway": [
+        {
+          "id": "minimax/minimax-m2",
+          "name": "MiniMax M2",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.03,
+            "cache_write": 0.375
+          }
+        }
+      ],
+      "zenmux": [
+        {
+          "id": "minimax/minimax-m2",
+          "name": "MiniMax M2",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.03,
+            "cache_write": 0.375
+          }
+        }
+      ],
+      "ofox": [
+        {
+          "id": "minimax/minimax-m2",
+          "name": "MiniMax-M2",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.03,
+            "cache_write": 0.375
+          }
+        }
+      ],
+      "qiniu-ai": [
+        {
+          "id": "minimax/minimax-m2",
+          "name": "Minimax/Minimax-M2",
+          "cost": {
+            "input": 0.30434783,
+            "output": 1.2173913
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "minimax/minimax-m2",
+          "name": "MiniMax M2",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.03,
+            "cache_write": 0.375
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "MiniMaxAI/MiniMax-M2",
+          "name": "MiniMax-M2",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2
+          }
+        }
+      ],
+      "amazon-bedrock": [
+        {
+          "id": "minimax.minimax-m2",
+          "name": "MiniMax-M2",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2
+          }
+        }
+      ],
+      "llmgateway-providers": [
+        {
+          "id": "minimax/minimax-m2",
+          "name": "MiniMax M2 (MiniMax)",
+          "cost": {
+            "input": 0.2,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "minimax/minimax-m2",
+          "name": "MiniMax: MiniMax M2 (retires Nov 18)",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.03,
+            "cache_write": 0.375
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "minimax-m2",
+          "name": "MiniMax-M2",
+          "cost": {
+            "input": 0.2,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "edenai": [
+        {
+          "id": "minimax/MiniMax-M2",
+          "name": "MiniMax-M2",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2
+          }
+        }
+      ],
+      "302ai": [
+        {
+          "id": "MiniMax-M2",
+          "name": "MiniMax-M2",
+          "cost": {
+            "input": 0.33,
+            "output": 1.32
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "minimax/minimax-m2",
+          "name": "MiniMax M2",
+          "cost": {
+            "input": 0.17,
+            "output": 1.53,
+            "cache_read": 0.085
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

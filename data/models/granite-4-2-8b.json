@@ -79,6 +79,85 @@
       "openrouter",
       "wandb"
     ],
+    "provider_models": {
+      "wandb": [
+        {
+          "id": "ibm-granite/granite-4.2-8b",
+          "name": "Granite 4.2 8B",
+          "cost": {
+            "input": 0.06,
+            "output": 0.15,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "llmgateway-providers": [
+        {
+          "id": "deepinfra/granite-4.2-8b",
+          "name": "Granite 4.2 8B (DeepInfra)",
+          "cost": {
+            "input": 0.06,
+            "output": 0.25,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "ibm-granite/granite-4.2-8b",
+          "name": "IBM: Granite 4.2 8B",
+          "cost": {
+            "input": 0.06,
+            "output": 0.15,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "granite-4.2-8b",
+          "name": "Granite 4.2 8B",
+          "cost": {
+            "input": 0.06,
+            "output": 0.25,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "edenai": [
+        {
+          "id": "deepinfra/ibm-granite/granite-4.2-8b",
+          "name": "Granite 4.2 8B (Deep Infra)",
+          "cost": {
+            "input": 0.06,
+            "output": 0.25,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "ibm-granite/granite-4.2-8b",
+          "name": "Granite 4.2 8B",
+          "cost": {
+            "input": 0.06,
+            "output": 0.15,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "ibm-granite/granite-4.2-8b",
+          "name": "Granite 4.2 8B",
+          "cost": {
+            "input": 0.06,
+            "output": 0.25,
+            "cache_read": 0.015
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

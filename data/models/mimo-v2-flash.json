@@ -71,6 +71,51 @@
       "opencode",
       "qiniu-ai"
     ],
+    "provider_models": {
+      "jiekou": [
+        {
+          "id": "xiaomimimo/mimo-v2-flash",
+          "name": "XiaomiMiMo/MiMo-V2-Flash",
+          "cost": {
+            "input": 0.1,
+            "output": 0.3,
+            "cache_read": 0.02
+          }
+        }
+      ],
+      "meganova": [
+        {
+          "id": "XiaomiMiMo/MiMo-V2-Flash",
+          "name": "MiMo V2 Flash",
+          "cost": {
+            "input": 0.1,
+            "output": 0.3
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "mimo-v2-flash-free",
+          "name": "MiMo V2 Flash Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "qiniu-ai": [
+        {
+          "id": "mimo-v2-flash",
+          "name": "Mimo-V2-Flash",
+          "cost": {
+            "input": 0.1,
+            "output": 0.3,
+            "cache_read": 0.01
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

@@ -75,6 +75,62 @@
       "tensorx",
       "vultr"
     ],
+    "provider_models": {
+      "amd": [
+        {
+          "id": "Qwen3.8-Flash-Next",
+          "name": "Qwen3.8 Flash Next",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "tensorx": [
+        {
+          "id": "qwen/qwen3.8-flash-next",
+          "name": "Qwen3.8 Flash Next",
+          "cost": {
+            "input": 0.2,
+            "output": 0.5,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "requesty": [
+        {
+          "id": "qwen3.8-flash-next",
+          "name": "Qwen3.8 Flash Next",
+          "cost": {
+            "input": 0.2,
+            "output": 0.5,
+            "cache_read": 0.05,
+            "cache_write": 0.2
+          }
+        },
+        {
+          "id": "qwen3.8-flash-next@eu",
+          "name": "Qwen3.8 Flash Next (EU)",
+          "cost": {
+            "input": 0.2,
+            "output": 0.5,
+            "cache_read": 0.05,
+            "cache_write": 0.2
+          }
+        }
+      ],
+      "vultr": [
+        {
+          "id": "qwen3.8-flash-next",
+          "name": "Qwen3.8 Flash Next",
+          "cost": {
+            "input": 0.1,
+            "output": 0.2
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

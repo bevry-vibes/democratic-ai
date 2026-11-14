@@ -100,6 +100,400 @@
       "vercel",
       "zenmux"
     ],
+    "provider_models": {
+      "minimax-coding-plan": [
+        {
+          "id": "MiniMax-M3.1-Flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "novita-ai": [
+        {
+          "id": "minimax/minimax-m3.1-flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "cortecs": [
+        {
+          "id": "minimax-m3.1-flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.153,
+            "output": 0.613,
+            "cache_read": 0.016
+          }
+        }
+      ],
+      "merge-gateway": [
+        {
+          "id": "minimax/minimax-m3.1-flash",
+          "name": "MiniMax M3.1 Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "fireworks-ai": [
+        {
+          "id": "accounts/fireworks/models/minimax-m3p1-flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "nebius": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3.1-Flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "modular": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3.1-Flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "sambanova": [
+        {
+          "id": "MiniMax-M3.1-Flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "minimax-m3.1-flash-free",
+          "name": "MiniMax M3.1 Flash Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "zenmux": [
+        {
+          "id": "minimax/minimax-m3.1-flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "minimax/minimax-m3.1-flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3.1-Flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6
+          }
+        }
+      ],
+      "cloudflare-ai-gateway": [
+        {
+          "id": "minimax/m3.1-flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015,
+            "cache_write": 0.15
+          }
+        }
+      ],
+      "digitalocean": [
+        {
+          "id": "minimax-m3.1-flash",
+          "name": "MiniMax M3.1-Flash (Public Preview)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "empiriolabs": [
+        {
+          "id": "minimax-m3-1-flash",
+          "name": "MiniMax M3.1 Flash",
+          "cost": {
+            "input": 0.1125,
+            "output": 0.45,
+            "cache_read": 0.01125
+          }
+        }
+      ],
+      "minimax-cn-coding-plan": [
+        {
+          "id": "MiniMax-M3.1-Flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "llmgateway-providers": [
+        {
+          "id": "novita/minimax-m3.1-flash",
+          "name": "MiniMax M3.1 Flash (NovitaAI)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        },
+        {
+          "id": "nebius/minimax-m3.1-flash",
+          "name": "MiniMax M3.1 Flash (Nebius AI)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        },
+        {
+          "id": "flexai/minimax-m3.1-flash",
+          "name": "MiniMax M3.1 Flash (flexai)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        },
+        {
+          "id": "together-ai/minimax-m3.1-flash",
+          "name": "MiniMax M3.1 Flash (Together AI)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        },
+        {
+          "id": "canopywave/minimax-m3.1-flash",
+          "name": "MiniMax M3.1 Flash (CanopyWave)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        },
+        {
+          "id": "minimax/minimax-m3.1-flash",
+          "name": "MiniMax M3.1 Flash (MiniMax)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        },
+        {
+          "id": "inference.net/minimax-m3.1-flash",
+          "name": "MiniMax M3.1 Flash (Inference.net)",
+          "cost": {
+            "input": 0.1,
+            "output": 0.5,
+            "cache_read": 0.005
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "minimax/minimax-m3.1-flash",
+          "name": "MiniMax: MiniMax M3.1 Flash",
+          "cost": {
+            "input": 0.075,
+            "output": 0.3,
+            "cache_read": 0.0075
+          }
+        }
+      ],
+      "venice": [
+        {
+          "id": "minimax-m3-1-flash",
+          "name": "MiniMax M3.1 Flash",
+          "cost": {
+            "input": 0.1875,
+            "output": 0.75,
+            "cache_read": 0.01875
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "minimax-m3.1-flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.1,
+            "output": 0.5,
+            "cache_read": 0.005
+          }
+        }
+      ],
+      "requesty": [
+        {
+          "id": "minimax-m3.1-flash@eu",
+          "name": "MiniMax-M3.1-Flash (EU)",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.07
+          }
+        },
+        {
+          "id": "minimax-m3.1-flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "ollama-cloud": [
+        {
+          "id": "minimax-m3.1-flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "minimax": [
+        {
+          "id": "MiniMax-M3.1-Flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "opencode-go": [
+        {
+          "id": "minimax-m3.1-flash-free",
+          "name": "MiniMax M3.1 Flash Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        },
+        {
+          "id": "minimax-m3.1-flash",
+          "name": "MiniMax M3.1 Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "edenai": [
+        {
+          "id": "minimax/MiniMax-M3.1-Flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.075,
+            "output": 0.3,
+            "cache_read": 0.0075
+          }
+        }
+      ],
+      "nvidia": [
+        {
+          "id": "minimaxai/minimax-m3.1-flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "minimax/minimax-m3.1-flash",
+          "name": "MiniMax M3.1 Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "minimax/minimax-m3.1-flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.075,
+            "output": 0.3,
+            "cache_read": 0.0075
+          }
+        }
+      ],
+      "minimax-cn": [
+        {
+          "id": "MiniMax-M3.1-Flash",
+          "name": "MiniMax-M3.1-Flash",
+          "cost": {
+            "input": 0.1494,
+            "output": 0.5976,
+            "cache_read": 0.0149
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

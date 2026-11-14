@@ -52,6 +52,7 @@
     "models_dev": null,
     "agent_detect": null,
     "providers": [],
+    "provider_models": {},
     "gated": null
   },
   "syndication": {

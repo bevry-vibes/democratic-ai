@@ -96,6 +96,351 @@
       "xiaomi-token-plan-sgp",
       "zenmux"
     ],
+    "provider_models": {
+      "novita-ai": [
+        {
+          "id": "xiaomimimo/mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.168,
+            "output": 0.336,
+            "cache_read": 0.0034
+          }
+        }
+      ],
+      "aimlapi": [
+        {
+          "id": "xiaomi/mimo-v2.5",
+          "name": "MiMo V2.5",
+          "cost": {
+            "input": 0.14812,
+            "output": 0.29624,
+            "cache_read": 0.002962
+          }
+        }
+      ],
+      "impossibl": [
+        {
+          "id": "xiaomi/mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.003
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "mimo-v2.5-free",
+          "name": "MiMo V2.5 Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "zenmux": [
+        {
+          "id": "xiaomi/mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.4,
+            "output": 2,
+            "cache_read": 0.08,
+            "tiers": [
+              {
+                "input": 0.8,
+                "output": 4,
+                "cache_read": 0.16,
+                "tier": {
+                  "type": "context",
+                  "size": 256000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 0.8,
+              "output": 4,
+              "cache_read": 0.16
+            }
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "XiaomiMiMo/MiMo-V2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        }
+      ],
+      "xiaomi-token-plan-ams": [
+        {
+          "id": "mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "cline-pass": [
+        {
+          "id": "cline-pass/mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "XiaomiMiMo/MiMo-V2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.4,
+            "output": 2
+          }
+        }
+      ],
+      "llmtr": [
+        {
+          "id": "mimo/mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28
+          }
+        }
+      ],
+      "xiaomi-token-plan-cn": [
+        {
+          "id": "mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "standardcompute": [
+        {
+          "id": "xiaomi/mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        }
+      ],
+      "aihubmix": [
+        {
+          "id": "coding-xiaomi-mimo-v2.5",
+          "name": "Coding Xiaomi MiMo-V2.5",
+          "cost": {
+            "input": 0.08,
+            "output": 0.16,
+            "cache_read": 0.0016
+          }
+        },
+        {
+          "id": "xiaomi-mimo-v2.5",
+          "name": "Xiaomi MiMo-V2.5",
+          "cost": {
+            "input": 0.44,
+            "output": 2.2,
+            "cache_read": 0.088,
+            "tiers": [
+              {
+                "input": 0.88,
+                "output": 4.4,
+                "cache_read": 0.176,
+                "tier": {
+                  "type": "context",
+                  "size": 256000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 0.88,
+              "output": 4.4,
+              "cache_read": 0.176
+            }
+          }
+        },
+        {
+          "id": "xiaomi-mimo-v2.5-free",
+          "name": "Xiaomi MiMo-V2.5 (free)",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        },
+        {
+          "id": "mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.155,
+            "output": 0.31,
+            "cache_read": 0.0031
+          }
+        }
+      ],
+      "xiaomi": [
+        {
+          "id": "mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "xiaomi/mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.4,
+            "output": 2,
+            "cache_read": 0.08,
+            "tiers": [
+              {
+                "input": 0.8,
+                "output": 4,
+                "cache_read": 0.16,
+                "tier": {
+                  "type": "context",
+                  "size": 256000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 0.8,
+              "output": 4,
+              "cache_read": 0.16
+            }
+          }
+        }
+      ],
+      "venice": [
+        {
+          "id": "xiaomi-mimo-v2-5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.4,
+            "output": 2,
+            "cache_read": 0.08
+          }
+        }
+      ],
+      "xiaomi-token-plan-sgp": [
+        {
+          "id": "mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "requesty": [
+        {
+          "id": "mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        }
+      ],
+      "opencode-go": [
+        {
+          "id": "mimo-v2.5",
+          "name": "MiMo V2.5",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        }
+      ],
+      "kenari": [
+        {
+          "id": "mimo-v2-5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.16571429,
+            "output": 0.33142857
+          }
+        },
+        {
+          "id": "mimo-v2-5:free",
+          "name": "MiMo-V2.5 (Free)",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "xiaomi/mimo-v2.5",
+          "name": "MiMo V2.5",
+          "cost": {
+            "input": 0.422,
+            "output": 2.11,
+            "cache_read": 0.0844,
+            "cache_write": 0
+          }
+        },
+        {
+          "id": "xiaomi/mimo-v2.5:thinking",
+          "name": "MiMo V2.5 Thinking",
+          "cost": {
+            "input": 0.422,
+            "output": 2.11,
+            "cache_read": 0.0844,
+            "cache_write": 0
+          }
+        }
+      ],
+      "inferx": [
+        {
+          "id": "mimo-v25",
+          "name": "mimo-v25",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "xiaomi/mimo-v2.5",
+          "name": "MiMo-V2.5",
+          "cost": {
+            "input": 0.4,
+            "output": 2,
+            "cache_read": 0.08
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

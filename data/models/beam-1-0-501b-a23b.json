@@ -75,6 +75,154 @@
       "vercel",
       "wandb"
     ],
+    "provider_models": {
+      "reflection": [
+        {
+          "id": "Beam-1.0-501B-A23B",
+          "name": "Beam 1.0 501B A23B",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "togetherai": [
+        {
+          "id": "reflection/Beam-1.0-501B-A23B",
+          "name": "Beam 1.0 501B A23B",
+          "cost": {
+            "input": 0.4,
+            "output": 1.2,
+            "cache_read": 0.04
+          }
+        }
+      ],
+      "nebius": [
+        {
+          "id": "reflection/beam",
+          "name": "Beam 1.0 501B A23B",
+          "cost": {
+            "input": 0.25,
+            "output": 1,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "beam-free",
+          "name": "Beam Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "reflection/beam-free",
+          "name": "Beam 1.0 (Free)",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        },
+        {
+          "id": "reflection/beam",
+          "name": "Beam 1.0",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "wandb": [
+        {
+          "id": "reflection/Beam-1.0-501B-A23B",
+          "name": "Beam 1.0 501B A23B",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.04
+          }
+        }
+      ],
+      "cloudflare-ai-gateway": [
+        {
+          "id": "reflection-ai/beam-1.0-501b-a23b",
+          "name": "Beam 1.0 501B A23B",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "reflection/beam-1.0-501b-a23b",
+          "name": "Reflection: Beam 1.0 501B A23B",
+          "cost": {
+            "input": 0.25,
+            "output": 1,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "ollama-cloud": [
+        {
+          "id": "beam",
+          "name": "Beam 1.0 501B A23B",
+          "cost": null
+        }
+      ],
+      "opencode-go": [
+        {
+          "id": "beam-free",
+          "name": "Beam Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "edenai": [
+        {
+          "id": "together_ai/reflection/Beam-1.0-501B-A23B",
+          "name": "Beam 1.0 501B A23B (Together AI)",
+          "cost": {
+            "input": 0.4,
+            "output": 1.2,
+            "cache_read": 0.04
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "reflection/beam-1.0",
+          "name": "Beam 1.0 501B A23B",
+          "cost": {
+            "input": 0.5,
+            "output": 1.5,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "reflection/beam-1.0-501b-a23b",
+          "name": "Beam 1.0 501B A23B",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.04
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {

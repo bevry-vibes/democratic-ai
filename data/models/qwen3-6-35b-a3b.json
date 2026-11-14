@@ -111,6 +111,488 @@
       "wandb",
       "zenifra"
     ],
+    "provider_models": {
+      "siliconflow": [
+        {
+          "id": "Qwen/Qwen3.6-35B-A3B",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.24,
+            "output": 1.8,
+            "cache_read": 0.15
+          }
+        }
+      ],
+      "evroc": [
+        {
+          "id": "Qwen/Qwen3.6-35B-A3B",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.345,
+            "output": 1.38
+          }
+        }
+      ],
+      "novita-ai": [
+        {
+          "id": "qwen/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.248,
+            "output": 1.485
+          }
+        }
+      ],
+      "qvac": [
+        {
+          "id": "qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "engy": [
+        {
+          "id": "qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.045,
+            "output": 0.3,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "scaleway": [
+        {
+          "id": "qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B A3B",
+          "cost": {
+            "input": 0.280375,
+            "output": 1.68225
+          }
+        }
+      ],
+      "cortecs": [
+        {
+          "id": "qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.279,
+            "output": 1.671
+          }
+        }
+      ],
+      "merge-gateway": [
+        {
+          "id": "qwen/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B A3B",
+          "cost": {
+            "input": 0.248,
+            "output": 1.485,
+            "cache_read": 0.0496
+          }
+        }
+      ],
+      "neuralwatt": [
+        {
+          "id": "qwen3.6-35b-fast",
+          "name": "Qwen3.6 35B Fast",
+          "cost": {
+            "input": 0.29,
+            "output": 1.15,
+            "cache_read": 0.029
+          }
+        },
+        {
+          "id": "qwen3.6-35b-flex",
+          "name": "Qwen3.6 35B Flex",
+          "cost": {
+            "input": 0.1885,
+            "output": 0.7475,
+            "cache_read": 0.01885
+          }
+        },
+        {
+          "id": "qwen3.6-35b",
+          "name": "Qwen3.6 35B",
+          "cost": {
+            "input": 0.29,
+            "output": 1.15,
+            "cache_read": 0.029
+          }
+        }
+      ],
+      "salad-cloud": [
+        {
+          "id": "qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.09,
+            "output": 0.6
+          }
+        }
+      ],
+      "greenpt": [
+        {
+          "id": "qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.342,
+            "output": 2.052
+          }
+        }
+      ],
+      "nearai": [
+        {
+          "id": "Qwen/Qwen3.6-35B-A3B-FP8",
+          "name": "Qwen 3.6 35B A3B FP8",
+          "cost": {
+            "input": 0.17,
+            "output": 1.1,
+            "cache_read": 0.056
+          }
+        }
+      ],
+      "boundless": [
+        {
+          "id": "qwen3.6",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.04,
+            "output": 0.35,
+            "cache_read": 0.02
+          }
+        }
+      ],
+      "hetzner": [
+        {
+          "id": "Qwen/Qwen3.6-35B-A3B-FP8",
+          "name": "Qwen3.6 35B A3B FP8",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "zenifra": [
+        {
+          "id": "alibaba/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.19,
+            "output": 0.48
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "Qwen/Qwen3.6-35B-A3B",
+          "name": "Qwen3.6 35B A3B",
+          "cost": {
+            "input": 0.1,
+            "output": 0.95,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "thinkingmachines": [
+        {
+          "id": "Qwen/Qwen3.6-35B-A3B",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.45,
+            "output": 1.335,
+            "cache_read": 0.09
+          }
+        },
+        {
+          "id": "Qwen/Qwen3.6-35B-A3B:peft:262144",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.45,
+            "output": 1.335,
+            "cache_read": 0.09
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "alibaba/qwen3.6-35b-a3b",
+          "name": "Qwen 3.6 35B A3B",
+          "cost": {
+            "input": 0.375,
+            "output": 2.25
+          }
+        }
+      ],
+      "siliconflow-cn": [
+        {
+          "id": "Qwen/Qwen3.6-35B-A3B",
+          "name": "Qwen/Qwen3.6-35B-A3B",
+          "cost": {
+            "input": 0.26900546,
+            "output": 1.61403276
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "Qwen/Qwen3.6-35B-A3B",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.15,
+            "output": 0.95
+          }
+        }
+      ],
+      "llmtr": [
+        {
+          "id": "qwen3-6-35b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 5,
+            "output": 10
+          }
+        }
+      ],
+      "aki-io": [
+        {
+          "id": "qwen3.6-35b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.168225,
+            "output": 0.56075
+          }
+        }
+      ],
+      "aihubmix": [
+        {
+          "id": "qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.254,
+            "output": 1.524
+          }
+        }
+      ],
+      "wandb": [
+        {
+          "id": "Qwen/Qwen3.6-35B-A3B",
+          "name": "Qwen3.6 35B A3B",
+          "cost": {
+            "input": 0.1,
+            "output": 0.89,
+            "cache_read": 0.035
+          }
+        }
+      ],
+      "orcarouter": [
+        {
+          "id": "qwen/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.248,
+            "output": 1.485
+          }
+        }
+      ],
+      "opper": [
+        {
+          "id": "qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.248,
+            "output": 1.485
+          }
+        }
+      ],
+      "nan": [
+        {
+          "id": "qwen3.6",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "empiriolabs": [
+        {
+          "id": "qwen3-6-35b-a3b",
+          "name": "Qwen3.6 35B A3B",
+          "cost": {
+            "input": 0.07,
+            "output": 0.42,
+            "cache_read": 0.035
+          }
+        }
+      ],
+      "llmgateway-providers": [
+        {
+          "id": "novita/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B A3B (NovitaAI)",
+          "cost": {
+            "input": 0.248,
+            "output": 1.485
+          }
+        },
+        {
+          "id": "alibaba/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B A3B (Alibaba Cloud)",
+          "cost": {
+            "input": 0.375,
+            "output": 2.25
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "qwen/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.1,
+            "output": 0.9,
+            "cache_read": 0.025
+          }
+        }
+      ],
+      "venice": [
+        {
+          "id": "qwen3-6-35b-a3b",
+          "name": "Qwen 3.6 35B A3B",
+          "cost": {
+            "input": 0.1,
+            "output": 1
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.248,
+            "output": 1.485
+          }
+        }
+      ],
+      "umans-ai": [
+        {
+          "id": "umans-flash",
+          "name": "Umans Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 1,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "ambient": [
+        {
+          "id": "qwen/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.15,
+            "output": 1,
+            "cache_read": 0.15,
+            "cache_write": 0
+          }
+        }
+      ],
+      "umans-ai-coding-plan": [
+        {
+          "id": "umans-qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B A3B",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        {
+          "id": "umans-flash",
+          "name": "Umans Flash",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "302ai": [
+        {
+          "id": "qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.28,
+            "output": 1.7
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "qwen/qwen3.6-35b-a3b:thinking",
+          "name": "Qwen3.6 35B A3B Thinking",
+          "cost": {
+            "input": 0.112,
+            "output": 0.8,
+            "cache_read": 0.056
+          }
+        },
+        {
+          "id": "qwen/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B A3B",
+          "cost": {
+            "input": 0.112,
+            "output": 0.8,
+            "cache_read": 0.056
+          }
+        },
+        {
+          "id": "TEE/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B A3B TEE",
+          "cost": {
+            "input": 0.2,
+            "output": 1.27,
+            "cache_read": 0.056
+          }
+        }
+      ],
+      "inferx": [
+        {
+          "id": "Qwen3.6-35B-A3B-FP8",
+          "name": "Qwen3.6 35B A3B FP8",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        },
+        {
+          "id": "Qwen3.6-35B-A3B-fp8-no-thinking",
+          "name": "Qwen3.6-35B-A3B-fp8-no-thinking",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "qwen/qwen3.6-35b-a3b",
+          "name": "Qwen3.6 35B-A3B",
+          "cost": {
+            "input": 0.1,
+            "output": 0.9,
+            "cache_read": 0.025
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {
