@@ -25,10 +25,9 @@ const onDevice = model.tags.includes("context:on-device")
     {task && <span class="chip task">{tagLabel(`task:${task}`)}</span>}
     {onDevice && <span class="chip context">on-device</span>}
     {model.context_tokens && <span class="chip">{formatContext(model.context_tokens)}</span>}
-    {model.builds > 0 && <span class="chip">{model.builds} builds</span>}
   </div>
   <div class="meta">
     <span class="chip license">{model.license}</span>
-    {model.builds > 0 && <span class="chip">{model.builds} builds</span>}
+    {model.builds > 0 && <span class="chip">{model.builds} {model.builds === 1 ? "build" : "builds"}</span>}
   </div>
 </a>

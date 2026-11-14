@@ -62,8 +62,8 @@ const readmeHtml = marked.parse(readme) as string
         <a href="/models/">All models →</a>
       </div>
       <p class="muted" style="max-width:44rem;margin-bottom:1.4rem">
-        A high score means models.dev, agent-detect, OpenRouter, LLM Stats, Artificial Analysis, or a research paper
-        have picked the model up. The model’s own Hugging Face page counts for zero.
+        A high score means at least one independent source lists the model: models.dev, agent-detect, OpenRouter, LLM
+        Stats, Artificial Analysis, or a research paper. The model’s own Hugging Face page counts for zero.
       </p>
       <div class="card-grid">
         {top.map((model) => <ModelCard model={model} />)}

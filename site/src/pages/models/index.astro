@@ -87,7 +87,7 @@ const licenses = [...new Set(models.map((model) => model.license))].sort()
           <div class="chips">
             {model.tags.includes("context:on-device") && <span class="chip context">on-device</span>}
             {model.context_tokens && <span class="chip">{formatContext(model.context_tokens)}</span>}
-            {model.builds > 0 && <span class="chip">{model.builds} builds</span>}
+            {model.builds > 0 && <span class="chip">{model.builds} {model.builds === 1 ? "build" : "builds"}</span>}
           </div>
           <div class="right">
             <ScoreBadge score={model.score} band={model.band} />
