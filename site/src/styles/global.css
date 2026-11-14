@@ -2248,3 +2248,37 @@ html {
 .combo-option input {
   margin-top: 0.15rem;
 }
+
+.sort-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.sort-option {
+  min-height: 2.2rem;
+  padding: 0 0.65rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  cursor: pointer;
+}
+
+.sort-option:hover {
+  border-color: var(--clay);
+  color: var(--clay-dark);
+}
+
+.sort-option[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.sort-options .order-toggle {
+  min-height: 2.2rem;
+  border-radius: 999px;
+}
