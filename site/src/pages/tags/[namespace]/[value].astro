@@ -43,19 +43,6 @@ const tagged = index.models.filter((model) => model.tags.includes(tag))
 const metric = task ? metricForTask(tagged, task) : null
 const hasTaskMetric = metric != null && metric.label !== "Performance"
 const defaultSort = tagged.some((model) => model.scorecard?.performance.score != null) ? "performance" : "syndication"
-const sortOptions = [
-  { value: "overall", label: "Overall" },
-  { value: "syndication", label: "Syndication" },
-  { value: "performance", label: "Performance" },
-  { value: "openness", label: "Openness" },
-  { value: "research", label: "Citation" },
-  { value: "released", label: "Release" },
-  { value: "name", label: "Name" },
-  ...(task && metric != null && metric.label !== "Performance"
-    ? [{ value: "task", label: metric.label }]
-    : []),
-]
-
 const models = [...tagged].sort((a, b) => {
   const av = a.scorecard?.performance.score ?? null
   const bv = b.scorecard?.performance.score ?? null
@@ -147,18 +134,18 @@ const scorecardTip = (key: string) =>
         </details>
       </div>
       <div class="field">
-        <label>Sort</label>
-        <div class="sort-options" role="group" aria-label="Sort">
-          {sortOptions.map((option) => (
-            <button
-              type="button"
-              class="sort-option"
-              data-sort={option.value}
-              aria-pressed={option.value === defaultSort ? "true" : "false"}
-            >
-              {option.label}
-            </button>
-          ))}
+        <label for="sort">Sort</label>
+        <div class="sort-control">
+          <select id="sort">
+            <option value="overall">Overall</option>
+            <option value="syndication">Syndication</option>
+            <option value="performance">Performance</option>
+            <option value="openness">Openness</option>
+            <option value="research">Citation</option>
+            <option value="released">Release date</option>
+            <option value="name">Name</option>
+            {hasTaskMetric && <option value="task">{metric!.label}</option>}
+          </select>
           <button id="order" class="order-toggle" type="button" aria-label="Reverse the sort order">
             Best first
           </button>
@@ -262,7 +249,7 @@ const scorecardTip = (key: string) =>
     const optionsSummary = document.getElementById("options-summary")
     const filterChecks = [...document.querySelectorAll("#filter-combo input[type=checkbox]")]
     const optionChecks = [...document.querySelectorAll("#options-combo input[type=checkbox]")]
-    const sortButtons = [...document.querySelectorAll(".sort-option")]
+    const sort = document.getElementById("sort")
     const order = document.getElementById("order")
     const count = document.getElementById("count")
     const note = document.getElementById("sort-note")
@@ -271,8 +258,8 @@ const scorecardTip = (key: string) =>
     const rows = [...document.querySelectorAll("#tag-list .list-row")]
     const params = new URLSearchParams(location.search)
     let orderMode = params.get("order") === "worst" ? "worst" : "best"
-    let sortMode = params.get("sort") ?? defaultSort
     if (q && params.get("q")) q.value = params.get("q")
+    if (sort && params.get("sort")) sort.value = params.get("sort")
 
     const selectedFilter = (params.get("filter") ?? "").split(",").filter(Boolean)
     const selectedOptions = (params.get("options") ?? "").split(",").filter(Boolean)
@@ -290,16 +277,9 @@ const scorecardTip = (key: string) =>
       if (optionsSummary) optionsSummary.textContent = optionCount ? `${optionCount} selected` : "Any tag"
     }
 
-    function setSort(mode) {
-      sortMode = mode
-      for (const button of sortButtons) {
-        button.setAttribute("aria-pressed", button.dataset.sort === mode ? "true" : "false")
-      }
-    }
-
     function setOrderLabel() {
       if (!order) return
-      const mode = sortMode
+      const mode = sort?.value ?? defaultSort
       if (mode === "name") order.textContent = orderMode === "best" ? "A–Z" : "Z–A"
       else if (mode === "released") order.textContent = orderMode === "best" ? "Newest" : "Oldest"
       else if (mode === "task") order.textContent = orderMode === "best" ? "Best first" : "Worst first"
@@ -377,7 +357,7 @@ const scorecardTip = (key: string) =>
       empty?.classList.toggle("hidden", visible > 0)
       updateSummaries()
 
-      const mode = sortMode
+      const mode = sort?.value ?? defaultSort
       setOrderLabel()
       sortRows(mode)
 
@@ -420,12 +400,7 @@ const scorecardTip = (key: string) =>
 
     q?.addEventListener("input", apply)
     for (const box of [...filterChecks, ...optionChecks]) box.addEventListener("change", apply)
-    for (const button of sortButtons) {
-      button.addEventListener("click", () => {
-        setSort(button.dataset.sort ?? defaultSort)
-        apply()
-      })
-    }
+    sort?.addEventListener("input", apply)
     order?.addEventListener("click", () => {
       orderMode = orderMode === "best" ? "worst" : "best"
       apply()
@@ -435,7 +410,6 @@ const scorecardTip = (key: string) =>
         if (combo && !combo.contains(event.target)) combo.removeAttribute("open")
       }
     })
-    setSort(sortMode)
     apply()
   </script>
 </Base>

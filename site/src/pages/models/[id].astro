@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro"
 import CountPill from "../../components/CountPill.astro"
+import ComparePicker from "../../components/ComparePicker.astro"
 import TagChips from "../../components/TagChips.astro"
 import {
   SCORECARD_AXIS_ORDER,
@@ -449,6 +450,14 @@ const formatDate = (value: string | null | undefined) =>
           <dt>Gated</dt>
           <dd>{model.access.gated === true || model.access.gated === "auto" || model.access.gated === "manual" ? "Yes" : model.access.gated === false ? "No" : "Unknown"}</dd>
         </dl>
+      </div>
+
+      <div class="panel">
+        <h2>Compare</h2>
+        <p class="muted" style="font-size:0.9rem">
+          Add other models to compare this release against. The comparison opens on its own page.
+        </p>
+        <ComparePicker currentId={model.id} />
       </div>
 
       <div class="panel" id="terms">

@@ -2,16 +2,14 @@
 import Base from "../../layouts/Base.astro"
 import CountPill from "../../components/CountPill.astro"
 import TagChips from "../../components/TagChips.astro"
-import { formatContextCount, getIndex, modelHref, scorecardAxes } from "../../lib/data"
+import { formatContextCount, getIndex, modelHref, scorecardAxes, sortTags } from "../../lib/data"
 
 const index = getIndex()
-const models = [...index.models].sort((a, b) => b.score - a.score || a.name.localeCompare(b.name))
-const tasks = [...new Set(models.flatMap((model) => model.tasks))].sort()
-const contexts = [...new Set(models.flatMap((model) => model.tags.filter((tag) => tag.startsWith("context:"))))]
-  .map((tag) => tag.slice("context:".length))
-  .sort()
-const bands = ["very-strong", "strong", "moderate", "emerging", "weak", "self-only"]
-const defaultSort = "syndication"
+const models = [...index.models].sort(
+  (a, b) => (b.scorecard?.overall.score ?? -1) - (a.scorecard?.overall.score ?? -1) || a.name.localeCompare(b.name),
+)
+const allTags = sortTags([...new Set(models.flatMap((model) => model.tags))])
+const defaultSort = "overall"
 const axis = (model: (typeof models)[number], key: "openness" | "performance" | "research" | "syndication") =>
   scorecardAxes(model).find((entry) => entry.key === key)?.value ?? null
 const scorecardTone = (key: string) => `score-${key}`
@@ -43,40 +41,38 @@ const scorecardTip = (key: string) =>
   </section>
 
   <section class="wrap" style="padding-top:1.5rem">
-    <div class="filters" style="--filter-cols:minmax(12rem,1.4fr) repeat(4,minmax(8rem,0.7fr)) minmax(15rem,1.2fr)">
+    <div class="filters" style="--filter-cols:minmax(12rem,1.2fr) repeat(2,minmax(8rem,0.7fr)) minmax(18rem,1.6fr)">
       <div class="field">
         <label for="q">Search</label>
         <input id="q" type="search" placeholder="Name, organisation, or summary" autocomplete="off" />
       </div>
       <div class="field">
-        <label for="task">Task</label>
-        <select id="task">
-          <option value="">All tasks</option>
-          {tasks.map((task) => <option value={task}>{task.replaceAll("-", " ")}</option>)}
-        </select>
+        <label>Filter <span class="field-hint">all required</span></label>
+        <details class="combo" id="filter-combo">
+          <summary><span id="filter-summary">All tags</span></summary>
+          <div class="combo-panel">
+            {allTags.map((available) => (
+              <label class="combo-option">
+                <input type="checkbox" name="filter" value={available} />
+                <span>{available}</span>
+              </label>
+            ))}
+          </div>
+        </details>
       </div>
       <div class="field">
-        <label for="capability">Capability</label>
-        <select id="capability">
-          <option value="">All capabilities</option>
-          <option value="tool-calling">Tool calling</option>
-          <option value="reasoning">Reasoning</option>
-          <option value="structured-output">Structured output</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="context">Context</label>
-        <select id="context">
-          <option value="">All contexts</option>
-          {contexts.map((context) => <option value={context}>{context.replaceAll("-", " ")}</option>)}
-        </select>
-      </div>
-      <div class="field">
-        <label for="band">Syndication</label>
-        <select id="band">
-          <option value="">All bands</option>
-          {bands.map((band) => <option value={band}>{band.replaceAll("-", " ")}</option>)}
-        </select>
+        <label>Options <span class="field-hint">any required</span></label>
+        <details class="combo" id="options-combo">
+          <summary><span id="options-summary">Any tag</span></summary>
+          <div class="combo-panel">
+            {allTags.map((available) => (
+              <label class="combo-option">
+                <input type="checkbox" name="options" value={available} />
+                <span>{available}</span>
+              </label>
+            ))}
+          </div>
+        </details>
       </div>
       <div class="field">
         <label for="sort">Sort</label>
@@ -109,7 +105,7 @@ const scorecardTip = (key: string) =>
           <div
             class="list-row"
             data-name={`${model.name} ${model.organization} ${model.summary}`.toLowerCase()}
-            data-tasks={model.tasks.join(" ")}
+            data-tags={model.tags.join(" ")}
             data-capability={[
               model.tool_calling ? "tool-calling" : "",
               model.reasoning ? "reasoning" : "",
@@ -182,10 +178,12 @@ const scorecardTip = (key: string) =>
 
   <script>
     const q = document.getElementById("q") as HTMLInputElement | null
-    const task = document.getElementById("task") as HTMLSelectElement | null
-    const capability = document.getElementById("capability") as HTMLSelectElement | null
-    const context = document.getElementById("context") as HTMLSelectElement | null
-    const band = document.getElementById("band") as HTMLSelectElement | null
+    const filterCombo = document.getElementById("filter-combo")
+    const optionsCombo = document.getElementById("options-combo")
+    const filterSummary = document.getElementById("filter-summary")
+    const optionsSummary = document.getElementById("options-summary")
+    const filterChecks = [...document.querySelectorAll<HTMLInputElement>("#filter-combo input[type=checkbox]")]
+    const optionChecks = [...document.querySelectorAll<HTMLInputElement>("#options-combo input[type=checkbox]")]
     const sort = document.getElementById("sort") as HTMLSelectElement | null
     const order = document.getElementById("order")
     const count = document.getElementById("count")
@@ -197,15 +195,24 @@ const scorecardTip = (key: string) =>
     const params = new URLSearchParams(location.search)
     let orderMode = params.get("order") === "worst" ? "worst" : "best"
     if (q && params.get("q")) q.value = params.get("q")!
-    if (task && params.get("task")) task.value = params.get("task")!
-    if (capability && params.get("capability")) capability.value = params.get("capability")!
-    if (context && params.get("context")) context.value = params.get("context")!
-    if (band && params.get("band")) band.value = params.get("band")!
     if (sort && params.get("sort")) sort.value = params.get("sort")!
+    for (const box of filterChecks) box.checked = (params.get("filter") ?? "").split(",").filter(Boolean).includes(box.value)
+    for (const box of optionChecks) box.checked = (params.get("options") ?? "").split(",").filter(Boolean).includes(box.value)
 
-    function setOrderLabel() {
+    function selected(boxes: HTMLInputElement[]): string[] {
+      return boxes.filter((box) => box.checked).map((box) => box.value)
+    }
+
+    function updateSummaries(): void {
+      const filterCount = selected(filterChecks).length
+      const optionCount = selected(optionChecks).length
+      if (filterSummary) filterSummary.textContent = filterCount ? `${filterCount} selected` : "All tags"
+      if (optionsSummary) optionsSummary.textContent = optionCount ? `${optionCount} selected` : "Any tag"
+    }
+
+    function setOrderLabel(): void {
       if (!order) return
-      const mode = sort?.value ?? "syndication"
+      const mode = sort?.value ?? "overall"
       if (mode === "name") order.textContent = orderMode === "best" ? "A–Z" : "Z–A"
       else if (mode === "released") order.textContent = orderMode === "best" ? "Newest" : "Oldest"
       else order.textContent = orderMode === "best" ? "High first" : "Low first"
@@ -229,24 +236,25 @@ const scorecardTip = (key: string) =>
       return orderMode === "best" ? best : -best
     }
 
-    function apply() {
+    function apply(): void {
       const search = q?.value.trim().toLowerCase() ?? ""
-      const taskValue = task?.value ?? ""
-      const capabilityValue = capability?.value ?? ""
-      const contextValue = context?.value ?? ""
-      const bandValue = band?.value ?? ""
+      const required = selected(filterChecks)
+      const optional = selected(optionChecks)
+      const capabilityValue = params.get("capability") ?? ""
+      const bandValue = params.get("band") ?? ""
       const tierValue = params.get("tier") ?? ""
       const minContext = Number(params.get("min_context") ?? 0)
       const minParams = Number(params.get("min_params") ?? 0)
       let visible = 0
       for (const row of rows) {
+        const tags = row.dataset.tags?.split(" ") ?? []
         const contextTokens = Number(row.dataset.contextTokens || 0)
         const paramsB = Number(row.dataset.params || 0)
         const matches =
           (!search || row.dataset.name?.includes(search)) &&
-          (!taskValue || row.dataset.tasks?.split(" ").includes(taskValue)) &&
+          (required.length === 0 || required.every((value) => tags.includes(value))) &&
+          (optional.length === 0 || optional.some((value) => tags.includes(value))) &&
           (!capabilityValue || row.dataset.capability?.split(" ").includes(capabilityValue)) &&
-          (!contextValue || row.dataset.contexts?.split(" ").includes(contextValue)) &&
           (!bandValue || row.dataset.band === bandValue) &&
           (!tierValue || row.dataset.tier === tierValue) &&
           (!minContext || contextTokens >= minContext) &&
@@ -256,8 +264,9 @@ const scorecardTip = (key: string) =>
       }
       if (count) count.textContent = `Showing ${visible} of ${rows.length} models`
       empty?.classList.toggle("hidden", visible > 0)
+      updateSummaries()
 
-      const mode = sort?.value ?? "syndication"
+      const mode = sort?.value ?? "overall"
       setOrderLabel()
       const sorted = [...rows].sort((a, b) => {
         if (mode === "name") {
@@ -315,23 +324,30 @@ const scorecardTip = (key: string) =>
 
       const next = new URLSearchParams()
       if (search) next.set("q", search)
-      if (taskValue) next.set("task", taskValue)
+      if (required.length > 0) next.set("filter", required.join(","))
+      if (optional.length > 0) next.set("options", optional.join(","))
       if (capabilityValue) next.set("capability", capabilityValue)
-      if (contextValue) next.set("context", contextValue)
       if (bandValue) next.set("band", bandValue)
       if (tierValue) next.set("tier", tierValue)
       if (minContext) next.set("min_context", String(minContext))
       if (minParams) next.set("min_params", String(minParams))
-      if (mode !== "syndication") next.set("sort", mode)
+      if (mode !== "overall") next.set("sort", mode)
       if (orderMode !== "best") next.set("order", orderMode)
       const query = next.toString()
       history.replaceState(null, "", query ? `?${query}` : location.pathname)
     }
 
-    for (const control of [q, task, capability, context, band, sort]) control?.addEventListener("input", apply)
+    q?.addEventListener("input", apply)
+    for (const box of [...filterChecks, ...optionChecks]) box.addEventListener("change", apply)
+    sort?.addEventListener("input", apply)
     order?.addEventListener("click", () => {
       orderMode = orderMode === "best" ? "worst" : "best"
       apply()
+    })
+    document.addEventListener("click", (event) => {
+      for (const combo of [filterCombo, optionsCombo]) {
+        if (combo && !combo.contains(event.target as Node)) combo.removeAttribute("open")
+      }
     })
     apply()
   </script>

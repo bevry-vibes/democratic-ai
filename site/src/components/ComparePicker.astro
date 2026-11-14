@@ -1,0 +1,88 @@
+---
+import { getIndex, modelHref } from "../lib/data"
+
+interface Props {
+  currentId?: string
+  limit?: number
+}
+
+const { currentId, limit = 4 } = Astro.props
+const models = getIndex().models
+const current = currentId ? models.find((model) => model.id === currentId) : undefined
+const candidates = models.filter((model) => model.id !== currentId)
+---
+
+<div class="compare-picker" data-compare-picker data-current={currentId ?? ""} data-limit={limit}>
+  <div class="compare-picker-head">
+    <p class="eyebrow">{current ? "Compare with" : "Compare models"}</p>
+    <span class="mono-small muted" data-compare-count>0 selected</span>
+  </div>
+  {current && (
+    <p class="compare-current">
+      <span class="chip">current</span>
+      <a href={modelHref(current.id)}>{current.name}</a>
+    </p>
+  )}
+  <label class="compare-search-label" for={`compare-search-${currentId ?? "home"}`}>Find a model</label>
+  <input
+    id={`compare-search-${currentId ?? "home"}`}
+    class="compare-search"
+    type="search"
+    placeholder="Filter by name or organisation"
+    autocomplete="off"
+  />
+  <div class="compare-list">
+    {candidates.map((model) => (
+      <label class="compare-option" data-name={`${model.name} ${model.organization}`.toLowerCase()}>
+        <input type="checkbox" value={model.id} />
+        <span>{model.name}</span>
+        <small>{model.organization}</small>
+      </label>
+    ))}
+  </div>
+  <div class="compare-actions">
+    <a class="button compare-go" href="/compare/" aria-disabled="true">Compare selected</a>
+  </div>
+</div>
+
+<script>
+  for (const picker of document.querySelectorAll<HTMLElement>("[data-compare-picker]")) {
+    const current = picker.dataset.current ?? ""
+    const limit = Number(picker.dataset.limit ?? 4)
+    const checks = [...picker.querySelectorAll<HTMLInputElement>(".compare-list input[type=checkbox]")]
+    const options = [...picker.querySelectorAll<HTMLElement>(".compare-option")]
+    const search = picker.querySelector<HTMLInputElement>(".compare-search")
+    const count = picker.querySelector<HTMLElement>("[data-compare-count]")
+    const go = picker.querySelector<HTMLAnchorElement>(".compare-go")
+
+    function selected(): string[] {
+      return checks.filter((box) => box.checked).map((box) => box.value)
+    }
+
+    function update(): void {
+      const chosen = selected()
+      const total = chosen.length + (current ? 1 : 0)
+      if (count) count.textContent = `${total} selected`
+      const full = total >= limit
+      for (const box of checks) {
+        if (!box.checked) box.disabled = full
+      }
+      if (go) {
+        const ids = current ? [current, ...chosen] : chosen
+        const ready = ids.length >= 2
+        go.setAttribute("aria-disabled", ready ? "false" : "true")
+        go.classList.toggle("disabled", !ready)
+        go.href = ready ? `/comparison/${ids.map((id) => encodeURIComponent(id)).join("/")}` : "/comparison/"
+      }
+    }
+
+    for (const box of checks) box.addEventListener("change", update)
+    search?.addEventListener("input", () => {
+      const query = search.value.trim().toLowerCase()
+      for (const option of options) {
+        option.classList.toggle("hidden", !query || Boolean(option.dataset.name?.includes(query)))
+      }
+    })
+    update()
+  }
+</script>

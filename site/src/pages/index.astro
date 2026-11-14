@@ -1,54 +1,40 @@
 ---
-import fs from "node:fs"
-import path from "node:path"
-import { marked } from "marked"
 import Base from "../layouts/Base.astro"
 import ModelCard from "../components/ModelCard.astro"
 import CountPill from "../components/CountPill.astro"
-import { getIndex, getSyndication, tagDefinition, tagLabel, tagPath, taskCounts, topModels } from "../lib/data"
+import ComparePicker from "../components/ComparePicker.astro"
+import { getIndex, tagDefinition, tagLabel, tagPath, taskCounts, topModels } from "../lib/data"
 
 const index = getIndex()
-const syndication = getSyndication()
-const top = topModels(index, 12)
-const tasks = taskCounts(index).slice(0, 10)
-const listed = index.models.filter((model) => model.score > 0).length
-const strong = index.models.filter((model) => model.score >= 7).length
-
-const readme = fs
-  .readFileSync(path.resolve(process.cwd(), "..", "README.md"), "utf8")
-  .replace(/<!-- LICENSE\/ -->[\s\S]*<!-- \/LICENSE -->/, "")
-  .replace(/^# .*\n/, "")
-  .replaceAll("](./DESIGN.md)", "](/about/)")
-const readmeHtml = marked.parse(readme) as string
+const top = topModels(index, 6)
+const tasks = taskCounts(index)
+const buildCount = index.models.reduce((total, model) => total + model.builds, 0)
 ---
 
 <Base
   title="Democratic AI"
-  description="A catalogue of reciprocal AI models, tagged for the job you need, with independent listings and evidence."
+  description="A catalogue of reciprocal AI models, tagged for the job you need, with a current scorecard and open JSON."
 >
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
         <p class="eyebrow">The Democratic AI catalogue</p>
-        <h1>Intelligence that returns to the commons.</h1>
+        <h1>Find a model by job. Read what it gives back.</h1>
         <p class="lede">
-          Every model learns from shared human work. This catalogue records what each release gives back:
-          weights, training data, recipe, and access. It also shows whether independent registries picked it up.
+          A catalogue of reciprocal AI. Start with a task, compare the current scorecard, and use the JSON without an
+          account.
         </p>
         <div class="hero-actions">
           <a class="button" href="/models/">Browse {index.models.length} models</a>
-          <a class="button secondary" href="/about/">Read the method</a>
+          <a class="button secondary" href="#agents">Use the JSON</a>
         </div>
       </div>
       <aside class="hero-aside">
         <p class="eyebrow">The index now</p>
-        <div class="stat"><span>Root and notable models</span><strong>{index.models.length}</strong></div>
-        <div class="stat"><span>With independent listings</span><strong>{listed}</strong></div>
-        <div class="stat"><span>Strong or very strong</span><strong>{strong}</strong></div>
-        <div class="stat"><span>Builds and probes skipped</span><strong>{syndication.counts.builds_and_probes_skipped}</strong></div>
-        <p class="faint mt-2 mb-0" style="font-size:0.82rem">
-          Average syndication {syndication.counts.average_score}/10. The score counts independent pickup, not quality.
-        </p>
+        <div class="stat"><span>Root models</span><strong>{index.models.length}</strong></div>
+        <div class="stat"><span>Task tags</span><strong>{tasks.length}</strong></div>
+        <div class="stat"><span>Attached builds</span><strong>{buildCount}</strong></div>
+        <div class="stat"><span>Last index</span><strong>{index.generated_at.slice(0, 10)}</strong></div>
       </aside>
     </div>
   </section>
@@ -57,19 +43,45 @@ const readmeHtml = marked.parse(readme) as string
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">The overall score</p>
-          <h2>Models with the strongest overall score</h2>
+          <p class="eyebrow">How to use it</p>
+          <h2>Two ways in</h2>
         </div>
-        <a href="/models/">All models →</a>
       </div>
-      <p class="muted" style="max-width:44rem;margin-bottom:1.4rem">
-        The overall score combines the current scorecard axes: openness, performance, research, and syndication. It is
-        a weighted mean of the axes that have a current value. Missing axes are excluded, not treated as zero, and
-        each card shows its coverage. It is a guide, not a single grade.
+      <div class="usecase-grid">
+        <div class="panel">
+          <h3>For humans</h3>
+          <ol class="usecase-list">
+            <li><a href="/tags/">Start with a job.</a> Pick the task first, then narrow by context, licence, or score.</li>
+            <li><a href="/models/">Compare models.</a> Sort by overall score, syndication, performance, openness, or citation.</li>
+            <li><a href="/about/">Read the method.</a> See how the tiers and scorecard are decided.</li>
+          </ol>
+        </div>
+        <div class="panel" id="agents">
+          <h3>For agents</h3>
+          <p>Read the JSON, not the HTML. No account is needed.</p>
+          <ul class="usecase-list">
+            <li><code>GET /api/v1/index.json</code> — compact model rows, tags, and scorecard.</li>
+            <li><code>GET /api/v1/models/&lt;id&gt;.json</code> — the full model record.</li>
+            <li><code>GET /api/v1/tags.json</code> — the tag vocabulary.</li>
+          </ul>
+          <a class="button secondary" href="/data/">API and schema</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rule-top" id="compare">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Compare</p>
+          <h2>Put models side by side</h2>
+        </div>
+      </div>
+      <p class="muted" style="margin-bottom:1.2rem">
+        Pick up to four models. The comparison is a separate page with the current scorecard, terms, tasks, and links.
       </p>
-      <div class="card-grid">
-        {top.map((model) => <ModelCard model={model} />)}
-      </div>
+      <ComparePicker />
     </div>
   </section>
 
@@ -82,11 +94,8 @@ const readmeHtml = marked.parse(readme) as string
         </div>
         <a href="/tags/">All tags →</a>
       </div>
-      <p class="muted" style="max-width:44rem;margin-bottom:1.2rem">
-        Tags are additive. A model can translate, run on a phone, and speak Indonesian at the same time.
-      </p>
       <div class="flex wrap-gap">
-        {tasks.map(({ task, count }) => (
+        {tasks.slice(0, 12).map(({ task, count }) => (
           <CountPill
             label={tagLabel(`task:${task}`)}
             count={count}
@@ -103,12 +112,17 @@ const readmeHtml = marked.parse(readme) as string
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">The catalogue in full</p>
-          <h2>How to read it</h2>
+          <p class="eyebrow">Quick start</p>
+          <h2>Strongest overall scores</h2>
         </div>
-        <a href="/data/">Use the data →</a>
+        <a href="/models/?sort=overall">All models →</a>
       </div>
-      <div class="prose" set:html={readmeHtml} />
+      <p class="muted" style="margin-bottom:1.4rem">
+        Top six by the current overall score. <a href="/about/#scorecard">How the score is made</a>.
+      </p>
+      <div class="card-grid">
+        {top.map((model) => <ModelCard model={model} />)}
+      </div>
     </div>
   </section>
 </Base>
