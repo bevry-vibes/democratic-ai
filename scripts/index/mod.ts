@@ -164,10 +164,13 @@ function licenseClass(id: string): string {
 
 function tierFor(license: string): { tier: string; weights: string; data: string; code: string } {
   const cls = licenseClass(license)
-  if (["use-restricted", "non-commercial", "proprietary"].includes(cls)) {
-    return { tier: "shared", weights: "open-weight", data: "unknown", code: "unknown" }
+  if (cls === "unknown") {
+    return { tier: "unproven", weights: "open-weight", data: "unknown", code: "unknown" }
   }
-  return { tier: "unproven", weights: "open-weight", data: "unknown", code: "unknown" }
+  if (cls === "proprietary") {
+    return { tier: "closed", weights: "closed", data: "unknown", code: "unknown" }
+  }
+  return { tier: "shared", weights: "open-weight", data: "unknown", code: "unknown" }
 }
 
 function paramsFrom(name: string): number | null {

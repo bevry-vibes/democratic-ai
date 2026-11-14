@@ -123,6 +123,44 @@
         "research": 15,
         "syndication": 15
       },
+      "components": [
+        {
+          "key": "openness",
+          "label": "Openness/Morality",
+          "score": 55,
+          "weight": 30,
+          "included": true,
+          "effective_weight": 30,
+          "contribution": 16.5
+        },
+        {
+          "key": "performance",
+          "label": "Performance/Intelligence",
+          "score": 76.2,
+          "weight": 40,
+          "included": true,
+          "effective_weight": 40,
+          "contribution": 30.5
+        },
+        {
+          "key": "research",
+          "label": "Research/Citation",
+          "score": 44,
+          "weight": 15,
+          "included": true,
+          "effective_weight": 15,
+          "contribution": 6.6
+        },
+        {
+          "key": "syndication",
+          "label": "Syndication",
+          "score": 70,
+          "weight": 15,
+          "included": true,
+          "effective_weight": 15,
+          "contribution": 10.5
+        }
+      ],
       "note": "Weighted mean of the available scorecard axes. Missing axes are excluded, not treated as zero. Coverage is shown so a sparse score is not mistaken for a complete one."
     },
     "openness_morality": {

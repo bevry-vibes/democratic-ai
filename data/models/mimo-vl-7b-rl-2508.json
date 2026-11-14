@@ -53,7 +53,7 @@
     "weights": "open-weight",
     "training_data": "unknown",
     "training_code": "unknown",
-    "tier": "unproven",
+    "tier": "shared",
     "tier_method": "reciprocity-v1",
     "evidence": [
       "https://huggingface.co/XiaomiMiMo/MiMo-VL-7B-RL-2508"
@@ -108,11 +108,49 @@
         "research": 15,
         "syndication": 15
       },
+      "components": [
+        {
+          "key": "openness",
+          "label": "Openness/Morality",
+          "score": 60,
+          "weight": 30,
+          "included": true,
+          "effective_weight": 66.7,
+          "contribution": 40
+        },
+        {
+          "key": "performance",
+          "label": "Performance/Intelligence",
+          "score": null,
+          "weight": 40,
+          "included": false,
+          "effective_weight": 0,
+          "contribution": null
+        },
+        {
+          "key": "research",
+          "label": "Research/Citation",
+          "score": null,
+          "weight": 15,
+          "included": false,
+          "effective_weight": 0,
+          "contribution": null
+        },
+        {
+          "key": "syndication",
+          "label": "Syndication",
+          "score": 0,
+          "weight": 15,
+          "included": true,
+          "effective_weight": 33.3,
+          "contribution": 0
+        }
+      ],
       "note": "Weighted mean of the available scorecard axes. Missing axes are excluded, not treated as zero. Coverage is shown so a sparse score is not mistaken for a complete one."
     },
     "openness_morality": {
       "score": 60,
-      "tier": "unproven",
+      "tier": "shared",
       "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed.",
       "components": [
         {

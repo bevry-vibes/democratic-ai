@@ -190,6 +190,23 @@ async function main(): Promise<void> {
       score: overallScore,
       coverage: available.length,
       weights: { openness: 30, performance: 40, research: 15, syndication: 15 },
+      components: axes.map((axis) => ({
+        key: axis.key,
+        label:
+          axis.key === "openness"
+            ? "Openness/Morality"
+            : axis.key === "performance"
+              ? "Performance/Intelligence"
+              : axis.key === "research"
+                ? "Research/Citation"
+                : "Syndication",
+        score: axis.score,
+        weight: axis.weight,
+        included: axis.score != null,
+        effective_weight: axis.score != null ? Math.round((axis.weight / weightTotal) * 1000) / 10 : 0,
+        contribution:
+          axis.score != null ? Math.round(((axis.score * axis.weight) / weightTotal) * 10) / 10 : null,
+      })),
       note:
         "Weighted mean of the available scorecard axes. Missing axes are excluded, not treated as zero. Coverage is shown so a sparse score is not mistaken for a complete one.",
     }
