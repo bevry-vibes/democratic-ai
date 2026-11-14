@@ -93,9 +93,14 @@
         "education": "Used in education.",
         "accessibility": "Used for accessibility.",
         "science": "Used in scientific work.",
-        "agents": "Used in an agent or tool loop.",
+        "agents": "Used in an agent or tool loop."
+      }
+    },
+    "licensing": {
+      "definition": "Whether the licence permits commercial use or restricts it.",
+      "values": {
         "commercial-safe": "The licence permits commercial use.",
-        "non-commercial": "The licence limits use to non-commercial work."
+        "non-commercial": "The licence restricts use to non-commercial purposes."
       }
     },
     "license": {
@@ -214,7 +219,9 @@
         "webgpu": "In a browser through WebGPU.",
         "opencode": "Through OpenCode, the open-source coding agent.",
         "cloudflare": "Through Cloudflare Workers AI.",
-        "openrouter": "Through the OpenRouter API."
+        "openrouter": "Through the OpenRouter API.",
+        "vllm": "Through the vLLM inference server.",
+        "sglang": "Through the SGLang inference server."
       }
     }
   }

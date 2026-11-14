@@ -14,6 +14,7 @@
     "task:transcription",
     "domain:speech",
     "modality:audio",
+    "access:vllm",
     "family:mistral"
   ],
   "capabilities": {
@@ -24,7 +25,9 @@
     "modality": [
       "audio"
     ],
-    "runtimes": [],
+    "runtimes": [
+      "vllm"
+    ],
     "tool_calling": null,
     "reasoning": null,
     "structured_output": null,
@@ -32,7 +35,9 @@
   },
   "footprint": {
     "params_b": 4,
-    "runtimes": []
+    "runtimes": [
+      "vllm"
+    ]
   },
   "license": {
     "id": "apache-2.0",

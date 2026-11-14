@@ -120,6 +120,8 @@
   },
   "libraries": {
     "transformers": "access:python",
+    "vllm": "access:vllm",
+    "sglang": "access:sglang",
     "mlx": "access:mlx",
     "coreml": "access:coreml",
     "gguf": "access:llama.cpp",

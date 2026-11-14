@@ -19,7 +19,7 @@
     "modality:audio",
     "modality:image",
     "access:python",
-    "context:commercial-safe",
+    "licensing:commercial-safe",
     "license:mit"
   ],
   "capabilities": {

@@ -23,7 +23,7 @@
     "access:cloudflare",
     "access:openrouter",
     "access:python",
-    "context:commercial-safe",
+    "licensing:commercial-safe",
     "license:apache-2.0",
     "family:qwen"
   ],

@@ -15,7 +15,7 @@
     "task:ocr",
     "domain:vision",
     "access:python",
-    "context:commercial-safe",
+    "licensing:commercial-safe",
     "license:mit"
   ],
   "capabilities": {

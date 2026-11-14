@@ -281,7 +281,7 @@ function buildOrgMap(watchlist: Watchlist): Map<string, string> {
 }
 
 function tagList(tags: string[]): string[] {
-  const order = ["task", "domain", "modality", "access", "language", "context", "license", "family", "status", "relation"]
+  const order = ["task", "domain", "modality", "access", "language", "context", "licensing", "license", "family", "status", "relation"]
   const unique = [...new Set(tags.filter((tag) => !tag.startsWith("source:") && !tag.startsWith("org:")))]
   return unique.sort((a, b) => {
     const ai = order.indexOf(a.split(":")[0]!)
@@ -433,7 +433,12 @@ async function main(): Promise<void> {
     const item = itemMap.get(`${root.item.source}|${root.item.source_id}`) ?? (root.item as unknown as PullItem)
     const sourceId = root.item.source_id
     const org = sourceId.split("/")[0] ?? ""
-    const tags = root.tags.map((tag) => tag.tag.startsWith("runtime:") ? `access:${tag.tag.slice("runtime:".length)}` : tag.tag)
+    const tags = root.tags.map((tag) => {
+      if (tag.tag.startsWith("runtime:")) return `access:${tag.tag.slice("runtime:".length)}`
+      if (tag.tag === "context:commercial-safe") return "licensing:commercial-safe"
+      if (tag.tag === "context:non-commercial") return "licensing:non-commercial"
+      return tag.tag
+    })
     const md = modelsDevByKey.get(norm(sourceId))
     const link = links.models[sourceId] ?? {}
     const usage = link.providers?.length ? [] : await cardUsage(sourceId)
@@ -444,7 +449,15 @@ async function main(): Promise<void> {
     for (const alias of folded) {
       const aliasRoot = rootByHf.get(alias.hugging_face)
       for (const tag of aliasRoot?.tags ?? []) {
-        enriched.add(tag.tag.startsWith("runtime:") ? `access:${tag.tag.slice("runtime:".length)}` : tag.tag)
+        enriched.add(
+          tag.tag.startsWith("runtime:")
+            ? `access:${tag.tag.slice("runtime:".length)}`
+            : tag.tag === "context:commercial-safe"
+              ? "licensing:commercial-safe"
+              : tag.tag === "context:non-commercial"
+                ? "licensing:non-commercial"
+                : tag.tag,
+        )
       }
     }
     if (md?.tool_call) enriched.add("task:tool-calling")
@@ -455,6 +468,9 @@ async function main(): Promise<void> {
     if (md?.family && Object.hasOwn(vocabulary.namespaces.family?.values ?? {}, md.family)) {
       enriched.add(`family:${md.family}`)
     }
+    const libraryName = String(item.source_meta?.library_name ?? "").toLowerCase()
+    if (libraryName === "vllm") enriched.add("access:vllm")
+    if (libraryName === "sglang") enriched.add("access:sglang")
     const providerIds = new Set(link.providers ?? [])
     if (providerIds.has("opencode") || providerIds.has("opencode-go")) enriched.add("access:opencode")
     if (providerIds.has("cloudflare-workers-ai")) enriched.add("access:cloudflare")

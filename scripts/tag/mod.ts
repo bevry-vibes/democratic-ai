@@ -202,10 +202,10 @@ function tagItem(item: PullItem, rules: TagRuleFile, orgMap: Map<string, string>
       const license = tag.slice("license:".length)
       tags.add(`license:${license}`, 0.95, "source-native", tag)
       if (["apache-2.0", "mit", "cc-by-4.0", "cc-by-sa-4.0"].includes(license)) {
-        tags.add("context:commercial-safe", 0.9, "source-native", tag)
+        tags.add("licensing:commercial-safe", 0.9, "source-native", tag)
       }
       if (license.includes("nc") || license.includes("noncommercial")) {
-        tags.add("context:non-commercial", 0.9, "source-native", tag)
+        tags.add("licensing:non-commercial", 0.9, "source-native", tag)
       }
     } else if (tag.startsWith("library:")) {
       const library = tag.slice("library:".length)

@@ -17,7 +17,7 @@
     "modality:image",
     "modality:text",
     "access:python",
-    "context:non-commercial",
+    "licensing:non-commercial",
     "license:cc-by-nc-4.0",
     "family:qwen"
   ],

@@ -15,7 +15,7 @@
     "task:voice-activity-detection",
     "domain:speech",
     "modality:audio",
-    "context:commercial-safe",
+    "licensing:commercial-safe",
     "license:mit"
   ],
   "capabilities": {

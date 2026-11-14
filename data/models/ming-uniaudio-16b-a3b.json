@@ -16,7 +16,7 @@
     "domain:multimodal",
     "domain:speech",
     "modality:audio",
-    "context:commercial-safe",
+    "licensing:commercial-safe",
     "license:apache-2.0"
   ],
   "capabilities": {

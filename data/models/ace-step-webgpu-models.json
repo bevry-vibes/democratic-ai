@@ -14,8 +14,8 @@
     "task:text-generation",
     "domain:language",
     "access:webgpu",
-    "context:commercial-safe",
     "context:on-device",
+    "licensing:commercial-safe",
     "license:mit",
     "family:step"
   ],

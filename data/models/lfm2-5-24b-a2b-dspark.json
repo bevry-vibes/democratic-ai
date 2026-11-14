@@ -13,6 +13,7 @@
   "tags": [
     "task:text-generation",
     "domain:language",
+    "access:sglang",
     "license:other",
     "family:lfm"
   ],
@@ -22,7 +23,9 @@
     ],
     "languages": [],
     "modality": [],
-    "runtimes": [],
+    "runtimes": [
+      "sglang"
+    ],
     "tool_calling": null,
     "reasoning": null,
     "structured_output": null,
@@ -30,7 +33,9 @@
   },
   "footprint": {
     "params_b": 24,
-    "runtimes": []
+    "runtimes": [
+      "sglang"
+    ]
   },
   "license": {
     "id": "other",

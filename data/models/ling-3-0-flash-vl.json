@@ -20,7 +20,7 @@
     "modality:text",
     "modality:video",
     "access:openrouter",
-    "context:commercial-safe",
+    "licensing:commercial-safe",
     "license:mit"
   ],
   "capabilities": {

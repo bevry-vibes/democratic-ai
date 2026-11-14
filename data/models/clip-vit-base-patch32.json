@@ -13,7 +13,7 @@
   "tags": [
     "task:image-classification",
     "domain:vision",
-    "context:commercial-safe",
+    "licensing:commercial-safe",
     "license:mit"
   ],
   "capabilities": {

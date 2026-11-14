@@ -16,6 +16,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
+    "access:sglang",
     "license:other",
     "family:lfm"
   ],
@@ -28,7 +29,9 @@
       "image",
       "text"
     ],
-    "runtimes": [],
+    "runtimes": [
+      "sglang"
+    ],
     "tool_calling": null,
     "reasoning": null,
     "structured_output": null,
@@ -36,7 +39,9 @@
   },
   "footprint": {
     "params_b": 3,
-    "runtimes": []
+    "runtimes": [
+      "sglang"
+    ]
   },
   "license": {
     "id": "other",

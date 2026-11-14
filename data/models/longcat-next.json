@@ -15,7 +15,7 @@
     "domain:multimodal",
     "domain:vision",
     "modality:image",
-    "context:commercial-safe",
+    "licensing:commercial-safe",
     "license:mit"
   ],
   "capabilities": {

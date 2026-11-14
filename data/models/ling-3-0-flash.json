@@ -18,7 +18,7 @@
     "modality:text",
     "access:opencode",
     "access:openrouter",
-    "context:commercial-safe",
+    "licensing:commercial-safe",
     "license:mit"
   ],
   "capabilities": {

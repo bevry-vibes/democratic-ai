@@ -14,7 +14,7 @@
     "task:translation",
     "domain:language",
     "access:python",
-    "context:non-commercial",
+    "licensing:non-commercial",
     "license:cc-by-nc-4.0"
   ],
   "capabilities": {

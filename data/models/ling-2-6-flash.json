@@ -15,7 +15,7 @@
     "task:tool-calling",
     "domain:language",
     "modality:text",
-    "context:commercial-safe",
+    "licensing:commercial-safe",
     "license:mit"
   ],
   "capabilities": {

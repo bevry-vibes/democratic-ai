@@ -13,7 +13,8 @@
   "tags": [
     "task:text-generation",
     "domain:language",
-    "context:commercial-safe",
+    "access:sglang",
+    "licensing:commercial-safe",
     "license:mit"
   ],
   "capabilities": {
@@ -22,7 +23,9 @@
     ],
     "languages": [],
     "modality": [],
-    "runtimes": [],
+    "runtimes": [
+      "sglang"
+    ],
     "tool_calling": null,
     "reasoning": null,
     "structured_output": null,
@@ -30,7 +33,9 @@
   },
   "footprint": {
     "params_b": null,
-    "runtimes": []
+    "runtimes": [
+      "sglang"
+    ]
   },
   "license": {
     "id": "mit",

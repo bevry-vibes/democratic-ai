@@ -18,7 +18,7 @@
     "modality:text",
     "access:llama.cpp",
     "access:openrouter",
-    "context:commercial-safe",
+    "licensing:commercial-safe",
     "license:apache-2.0"
   ],
   "capabilities": {

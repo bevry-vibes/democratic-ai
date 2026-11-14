@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T08:39:56.695Z",
+  "generated_at": "2026-11-14T08:47:37.110Z",
   "pull_id": "20261114T063448Z",
   "aliases": [
     {
@@ -49,7 +49,7 @@
         "access:opencode",
         "access:openrouter",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -1243,7 +1243,7 @@
         "access:opencode",
         "access:openrouter",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:glm"
       ],
@@ -4433,7 +4433,7 @@
         "access:opencode",
         "access:openrouter",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -5973,7 +5973,7 @@
         "access:opencode",
         "access:openrouter",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -7741,7 +7741,7 @@
         "modality:text",
         "access:opencode",
         "access:openrouter",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -8068,7 +8068,7 @@
         "access:opencode",
         "access:openrouter",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:mimo"
       ],
@@ -8621,7 +8621,7 @@
         "access:opencode",
         "access:openrouter",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:mimo"
       ],
@@ -12228,7 +12228,7 @@
         "modality:video",
         "access:openrouter",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -12768,7 +12768,7 @@
         "access:cloudflare",
         "access:openrouter",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -13651,7 +13651,7 @@
         "modality:text",
         "access:llama.cpp",
         "access:openrouter",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -14794,7 +14794,7 @@
         "modality:video",
         "access:openrouter",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -15985,7 +15985,7 @@
         "domain:language",
         "modality:text",
         "access:opencode",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -16250,7 +16250,7 @@
         "modality:text",
         "modality:video",
         "access:openrouter",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -16505,7 +16505,7 @@
         "modality:image",
         "modality:text",
         "access:opencode",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -16713,7 +16713,7 @@
         "modality:text",
         "access:opencode",
         "access:openrouter",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:beam"
       ],
@@ -18089,7 +18089,7 @@
         "domain:language",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -18246,7 +18246,7 @@
         "task:tool-calling",
         "domain:language",
         "modality:text",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -18427,7 +18427,7 @@
         "access:opencode",
         "access:openrouter",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -19103,7 +19103,7 @@
         "modality:text",
         "access:opencode",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:mimo"
       ],
@@ -19945,7 +19945,7 @@
         "task:tool-calling",
         "domain:language",
         "modality:text",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -20275,7 +20275,7 @@
         "domain:language",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -20438,7 +20438,7 @@
         "access:opencode",
         "access:openrouter",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -21118,7 +21118,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:ornith"
       ],
@@ -21481,7 +21481,7 @@
         "domain:language",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -21803,7 +21803,7 @@
         "task:tool-calling",
         "domain:language",
         "modality:text",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -21973,7 +21973,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -22591,7 +22591,7 @@
         "task:text-generation",
         "domain:language",
         "access:mlx",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -22745,7 +22745,7 @@
         "task:text-generation",
         "domain:language",
         "access:mlx",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -23050,7 +23050,7 @@
         "task:speech-separation",
         "domain:speech",
         "modality:audio",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -23205,7 +23205,7 @@
         "task:ocr",
         "domain:vision",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -23674,6 +23674,7 @@
         "domain:vision",
         "modality:image",
         "modality:text",
+        "access:sglang",
         "license:other",
         "family:lfm"
       ],
@@ -23830,7 +23831,7 @@
         "domain:language",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -23993,7 +23994,7 @@
         "task:tool-calling",
         "domain:language",
         "modality:text",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -24153,7 +24154,8 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:commercial-safe",
+        "access:sglang",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -24305,7 +24307,8 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:commercial-safe",
+        "access:sglang",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -24458,7 +24461,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -24612,7 +24615,7 @@
         "domain:vision",
         "modality:image",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -24766,7 +24769,7 @@
         "domain:vision",
         "modality:image",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -25075,7 +25078,7 @@
         "domain:multimodal",
         "domain:vision",
         "modality:image",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -25228,7 +25231,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -25381,7 +25384,7 @@
         "task:embedding",
         "domain:embeddings",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -25534,7 +25537,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -25687,7 +25690,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -25840,7 +25843,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -25993,7 +25996,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -26150,7 +26153,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:mimo"
       ],
@@ -26308,7 +26311,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:mimo"
       ],
@@ -26466,7 +26469,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:mimo"
       ],
@@ -26624,7 +26627,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:mimo"
       ],
@@ -26788,7 +26791,7 @@
         "modality:audio",
         "modality:image",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -26949,7 +26952,7 @@
         "modality:audio",
         "modality:image",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -27107,7 +27110,7 @@
         "domain:vision",
         "modality:image",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -27264,7 +27267,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -27420,7 +27423,7 @@
         "modality:audio",
         "modality:video",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -27573,7 +27576,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -28035,7 +28038,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0",
         "family:parakeet"
       ],
@@ -28208,7 +28211,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -28367,7 +28370,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -28979,7 +28982,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -29601,8 +29604,8 @@
         "task:text-generation",
         "domain:language",
         "access:webgpu",
-        "context:commercial-safe",
         "context:on-device",
+        "licensing:commercial-safe",
         "license:mit",
         "family:step"
       ],
@@ -29912,7 +29915,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -30219,7 +30222,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -30371,7 +30374,7 @@
       "tags": [
         "task:structured-extraction",
         "domain:language",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -30676,7 +30679,7 @@
         "task:text-classification",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -30834,7 +30837,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -30987,7 +30990,7 @@
       "tags": [
         "task:image-classification",
         "domain:vision",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -31922,7 +31925,7 @@
         "task:text-classification",
         "domain:language",
         "access:python",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -32536,7 +32539,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0",
         "family:deepseek"
       ],
@@ -33299,7 +33302,7 @@
         "task:voice-activity-detection",
         "domain:speech",
         "modality:audio",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -33606,7 +33609,7 @@
         "task:speech-synthesis",
         "domain:speech",
         "modality:audio",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -33911,7 +33914,7 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -34063,7 +34066,7 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -34216,7 +34219,7 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -34369,7 +34372,7 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -34522,7 +34525,7 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -34826,7 +34829,7 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -35129,7 +35132,7 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -35587,7 +35590,7 @@
         "domain:vision",
         "modality:image",
         "modality:text",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -35891,7 +35894,7 @@
         "task:embedding",
         "domain:embeddings",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -37278,6 +37281,7 @@
       "tags": [
         "task:text-generation",
         "domain:language",
+        "access:sglang",
         "license:other",
         "family:lfm"
       ],
@@ -38537,7 +38541,7 @@
       "tags": [
         "task:text-classification",
         "domain:language",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -38690,7 +38694,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -38843,7 +38847,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -38995,7 +38999,7 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -39300,7 +39304,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -39453,7 +39457,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -39605,7 +39609,7 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:mach"
       ],
@@ -39908,7 +39912,7 @@
       "tags": [
         "task:text-generation",
         "domain:language",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:mach",
         "family:qwen"
@@ -40063,7 +40067,7 @@
         "task:speech-synthesis",
         "domain:speech",
         "modality:audio",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -40216,7 +40220,7 @@
         "task:translation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -40369,7 +40373,7 @@
         "task:translation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -40524,7 +40528,7 @@
         "domain:multimodal",
         "domain:speech",
         "modality:audio",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -40679,7 +40683,7 @@
         "domain:multimodal",
         "domain:speech",
         "modality:audio",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -40834,7 +40838,7 @@
         "domain:multimodal",
         "domain:speech",
         "modality:audio",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -40988,7 +40992,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -41141,7 +41145,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -41294,7 +41298,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -41451,7 +41455,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:qwen"
       ],
@@ -41605,7 +41609,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -41758,7 +41762,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -41911,7 +41915,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:mimo"
       ],
@@ -42066,7 +42070,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -42224,7 +42228,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -42378,7 +42382,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -42532,7 +42536,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -42686,7 +42690,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -42839,7 +42843,7 @@
         "task:image-generation",
         "domain:vision",
         "modality:image",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -42991,7 +42995,7 @@
       "tags": [
         "task:image-generation",
         "domain:vision",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -43148,7 +43152,7 @@
         "domain:multimodal",
         "domain:speech",
         "modality:audio",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -43305,7 +43309,7 @@
         "task:speech-synthesis",
         "domain:speech",
         "modality:audio",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -44074,7 +44078,7 @@
         "task:translation",
         "domain:language",
         "access:python",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -44227,7 +44231,7 @@
         "task:translation",
         "domain:language",
         "access:python",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -44380,7 +44384,7 @@
         "task:translation",
         "domain:language",
         "access:python",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -44533,7 +44537,7 @@
         "task:translation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -44686,7 +44690,7 @@
         "task:translation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -44845,7 +44849,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit",
         "family:ornith"
       ],
@@ -45021,7 +45025,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -45174,7 +45178,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -45327,7 +45331,7 @@
         "task:transcription",
         "domain:speech",
         "modality:audio",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -45938,7 +45942,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -46106,7 +46110,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -46273,7 +46277,7 @@
         "task:embedding",
         "domain:embeddings",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -46427,7 +46431,7 @@
         "task:embedding",
         "domain:embeddings",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -46581,7 +46585,7 @@
         "task:embedding",
         "domain:embeddings",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0",
         "family:qwen"
       ],
@@ -46892,7 +46896,7 @@
         "domain:language",
         "modality:text",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -47045,7 +47049,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -47198,7 +47202,7 @@
         "task:text-generation",
         "domain:language",
         "access:python",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -47502,7 +47506,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -47962,7 +47966,7 @@
         "task:image-generation",
         "domain:vision",
         "modality:image",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -49324,7 +49328,7 @@
       "tags": [
         "task:image-understanding",
         "domain:vision",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:mit"
       ],
       "license": "mit",
@@ -50092,7 +50096,7 @@
         "modality:image",
         "modality:text",
         "access:mlx",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -50245,7 +50249,7 @@
         "task:text-generation",
         "domain:language",
         "access:mlx",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -50399,7 +50403,7 @@
         "domain:speech",
         "modality:audio",
         "access:mlx",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -50553,7 +50557,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0",
         "family:parakeet"
       ],
@@ -50721,7 +50725,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0",
         "family:parakeet"
       ],
@@ -50889,7 +50893,7 @@
         "domain:speech",
         "modality:audio",
         "access:python",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0",
         "family:parakeet"
       ],
@@ -51060,7 +51064,7 @@
         "modality:image",
         "modality:text",
         "access:python",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0",
         "family:qwen"
       ],
@@ -51214,7 +51218,7 @@
         "task:text-generation",
         "domain:language",
         "access:llama.cpp",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0",
         "family:qwen"
       ],
@@ -51368,7 +51372,7 @@
         "task:text-generation",
         "domain:language",
         "access:mlx",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -51673,7 +51677,7 @@
         "task:text-generation",
         "domain:language",
         "access:mlx",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -51826,7 +51830,7 @@
         "task:text-generation",
         "domain:language",
         "access:mlx",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
@@ -52130,7 +52134,7 @@
       "tags": [
         "task:image-understanding",
         "domain:vision",
-        "context:commercial-safe",
+        "licensing:commercial-safe",
         "license:apache-2.0"
       ],
       "license": "apache-2.0",
@@ -52283,6 +52287,7 @@
         "task:transcription",
         "domain:speech",
         "modality:audio",
+        "access:vllm",
         "family:mistral"
       ],
       "license": "apache-2.0",
@@ -53048,7 +53053,7 @@
         "task:text-generation",
         "domain:language",
         "access:mlx",
-        "context:non-commercial",
+        "licensing:non-commercial",
         "license:cc-by-nc-4.0"
       ],
       "license": "cc-by-nc-4.0",
