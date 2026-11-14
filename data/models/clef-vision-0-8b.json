@@ -8,7 +8,7 @@
   ],
   "organization": "fluid-voice",
   "released": "2026-10-08",
-  "summary": "",
+  "summary": "clef-vision-0.8b A 0.92B-parameter image decision model, distilled from Cloudflare's Clef-flash (Qwen3.5-9B) into a Qwen3.5-0.8B backbone with Clef's joint schema head.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",

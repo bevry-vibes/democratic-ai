@@ -8,7 +8,7 @@
   ],
   "organization": "qwen",
   "released": "2025-09-23",
-  "summary": "",
+  "summary": "Qwen3Guard-Stream-0.6B Qwen3Guard is a series of safety moderation models built upon Qwen3 and trained on a dataset of 1.19 million prompts and responses labeled for safety.",
   "tags": [
     "task:embedding",
     "domain:embeddings",

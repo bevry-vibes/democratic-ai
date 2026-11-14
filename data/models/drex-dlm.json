@@ -8,7 +8,7 @@
   ],
   "organization": "nace-ai",
   "released": "2026-10-01",
-  "summary": "",
+  "summary": "Drex DLM We introduce Drex DLM from Nace.AI, a decision model that answers typed questions about a given context.",
   "tags": [
     "task:text-classification",
     "domain:language",

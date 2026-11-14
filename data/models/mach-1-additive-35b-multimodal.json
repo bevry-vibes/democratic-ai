@@ -8,7 +8,7 @@
   ],
   "organization": "syzygy-research",
   "released": "2026-08-05",
-  "summary": "",
+  "summary": "> [!NOTE] > This repo is Mach-1-Additive-35B with one addition: `vision.safetensors`, the base model's bf16 vision tower.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal"

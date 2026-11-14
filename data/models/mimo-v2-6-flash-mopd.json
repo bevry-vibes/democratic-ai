@@ -8,7 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2026-09-27",
-  "summary": "",
+  "summary": "> - Diagnosing and Mitigating Tool-Call Repetition in MiMo-V2.6 (👉 Technical Blog) > An easy-to-overlook failure mode in which the model keeps issuing the same or highly similar tool calls, appearing busy while making no progress.",
   "tags": [
     "task:text-generation",
     "domain:language",

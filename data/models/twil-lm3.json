@@ -8,7 +8,7 @@
   ],
   "organization": "webai",
   "released": "2026-08-03",
-  "summary": "",
+  "summary": "TwIL-LM3 Do check out our new model TwIL-LM3-Pro, a much better version of the TwIL-LM3 at 3.66B parameters.",
   "tags": [
     "task:text-generation",
     "domain:language",

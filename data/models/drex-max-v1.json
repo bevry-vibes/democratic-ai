@@ -8,7 +8,7 @@
   ],
   "organization": "nace-ai",
   "released": "2026-10-13",
-  "summary": "",
+  "summary": "Drex Max, from Nace.AI, answers typed questions about a given context, in text, JSON and images.",
   "tags": [
     "task:text-classification",
     "domain:language",

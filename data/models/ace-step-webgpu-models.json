@@ -8,7 +8,7 @@
   ],
   "organization": "fluid-voice",
   "released": "2026-08-23",
-  "summary": "",
+  "summary": "ACE-Step 1.5 Turbo — WebGPU model packages Content-addressed model packages for the browser WebGPU port of ACE-Step 1.5 Turbo, consumed by FluidInference/fluidaudio-web's `/music` page (runtime vendored at `packages/acestep`).",
   "tags": [
     "task:text-generation",
     "domain:language",

@@ -8,7 +8,7 @@
   ],
   "organization": "webai",
   "released": "2026-09-29",
-  "summary": "",
+  "summary": "TwIL-LM2 A 2.5B reasoning model for formal logic tasks, built from `ibm-granite/granite-3.3-2b-instruct` through LoRA supervised fine-tuning, WiSE-FT weight interpolation (λ = 0.25) and entropy-weighted GRPO reinforcement learning (MGPO, step 1400).",
   "tags": [
     "task:text-generation",
     "domain:language",

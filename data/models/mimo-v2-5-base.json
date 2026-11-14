@@ -8,7 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2026-04-27",
-  "summary": "",
+  "summary": "Introduction MiMo-V2.5 is a native omnimodal model with strong agentic capabilities, supporting text, image, video, and audio understanding within a unified architecture.",
   "tags": [
     "task:text-generation",
     "domain:language",

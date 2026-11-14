@@ -8,7 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-10-15",
-  "summary": "",
+  "summary": "Underdog Bark 3.0 Bark 3.0 is state-of-the-art speech recognition for its size: a 0.6B English model in a 163 MB download that averages 4.94 % word error across the Open ASR Leaderboard's seven English sets.",
   "tags": [
     "task:transcription",
     "domain:speech",

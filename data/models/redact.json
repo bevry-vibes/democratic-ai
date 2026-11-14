@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-07-02",
-  "summary": "",
+  "summary": "Multilingual on-device PII detection and redaction.",
   "tags": [
     "task:pii-redaction",
     "task:structured-extraction",

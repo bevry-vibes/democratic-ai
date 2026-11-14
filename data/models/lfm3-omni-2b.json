@@ -8,7 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-10-21",
-  "summary": "",
+  "summary": "API Try Docs Blog LFM3-Omni-2B LFM3-Omni-2B is Liquid AI's first omni-modal model in the LFM3 family: a single end-to-end model that understands text, images, video and audio, and answers in text and speech.",
   "tags": [
     "task:text-generation",
     "domain:language",

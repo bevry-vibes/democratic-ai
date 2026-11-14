@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-10-25",
-  "summary": "",
+  "summary": "With 560B total parameters and 25B active parameters per token, the model provides a foundation for continued pretraining, domain adaptation, and post-training research.",
   "tags": [
     "task:text-generation",
     "domain:language",

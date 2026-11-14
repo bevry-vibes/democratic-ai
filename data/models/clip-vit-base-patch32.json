@@ -8,7 +8,7 @@
   ],
   "organization": "xenova",
   "released": "2023-05-19",
-  "summary": "",
+  "summary": "https://huggingface.co/openai/clip-vit-base-patch32 with ONNX weights to be compatible with Transformers.js.",
   "tags": [
     "task:image-classification",
     "domain:vision",

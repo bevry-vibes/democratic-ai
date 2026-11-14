@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-06-15",
-  "summary": "",
+  "summary": "On-device photo understanding: scenes, quality, faces, people, pets, crops and sharpness.",
   "tags": [
     "task:image-classification",
     "domain:vision",

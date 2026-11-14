@@ -8,7 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-09-12",
-  "summary": "",
+  "summary": "Underdog-Bark-0.8B-1.0 Bark is a small but mighty Underdog speech recognition model.",
   "tags": [
     "task:transcription",
     "domain:speech",

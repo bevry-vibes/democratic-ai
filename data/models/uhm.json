@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-05-12",
-  "summary": "",
+  "summary": "On-device filler-word detection: frame-precise \"uh\"/\"um\"/\"hmm\" spans.",
   "tags": [
     "task:audio-classification",
     "task:filler-word-detection",

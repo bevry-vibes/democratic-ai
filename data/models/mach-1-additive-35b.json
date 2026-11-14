@@ -8,7 +8,7 @@
   ],
   "organization": "syzygy-research",
   "released": "2026-08-02",
-  "summary": "",
+  "summary": ", use the plain image line underneath instead and delete this block.",
   "tags": [
     "task:text-generation",
     "domain:language",

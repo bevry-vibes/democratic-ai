@@ -1,0 +1,86 @@
+{
+  "updated_at": "2026-11-14T04:45:36.275Z",
+  "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+  "as_of": "2026-07-18",
+  "models": 240,
+  "matched": 10,
+  "exact": 5,
+  "family": 5,
+  "unmatched_scorecard_entries": [
+    "OLMo 3 32B",
+    "StarCoder2 15B",
+    "OLMo 2 13B/7B",
+    "Tulu 3",
+    "Pythia",
+    "Amber / CrystalCoder",
+    "Kagi Assistant",
+    "NVIDIA Nemotron 3 Super",
+    "DeepSeek V4 Pro-Max",
+    "GLM-5.1",
+    "Kimi K2.6",
+    "Tencent Hy3",
+    "GPT-oss 20B",
+    "Phi-4",
+    "Gemma 4 31B",
+    "Kimi K2.7 Code",
+    "Llama 4 Maverick",
+    "Perplexity Sonar",
+    "Mistral Medium 3.5",
+    "Claude Fable 5 / Opus 4.8",
+    "Grok 4.5"
+  ],
+  "matches": [
+    {
+      "model": "deepseek-v4-1-flash",
+      "scorecard": "DeepSeek V4 Flash",
+      "match": "exact"
+    },
+    {
+      "model": "deepseek-v4-1-flash-1017",
+      "scorecard": "DeepSeek V4 Flash",
+      "match": "family"
+    },
+    {
+      "model": "deepseek-v4-flash-vision-exp",
+      "scorecard": "DeepSeek V4 Flash",
+      "match": "family"
+    },
+    {
+      "model": "glm-5-2",
+      "scorecard": "GLM-5.2",
+      "match": "exact"
+    },
+    {
+      "model": "kimi-k3",
+      "scorecard": "Kimi K3",
+      "match": "exact"
+    },
+    {
+      "model": "minimax-m3",
+      "scorecard": "MiniMax M3",
+      "match": "exact"
+    },
+    {
+      "model": "minimax-m3-1-flash",
+      "scorecard": "MiniMax M3",
+      "match": "family"
+    },
+    {
+      "model": "qwen3-6-27b",
+      "scorecard": "Qwen 3.6-27B",
+      "match": "exact"
+    },
+    {
+      "model": "granite-4-2-8b",
+      "scorecard": "IBM Granite 4.0",
+      "match": "family"
+    },
+    {
+      "model": "kimi-k3-1-pro",
+      "scorecard": "Kimi K3",
+      "match": "family"
+    }
+  ],
+  "note": "Family matches carry the scorecard result for the named model family, not an exact version. Check the source before relying on a score.",
+  "generated_on": "2026-11-14"
+}

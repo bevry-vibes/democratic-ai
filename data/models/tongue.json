@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-07-25",
-  "summary": "",
+  "summary": "On-device language identification for short text across 84 languages.",
   "tags": [
     "task:language-identification",
     "task:text-classification",

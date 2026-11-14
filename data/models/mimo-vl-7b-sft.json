@@ -8,7 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2025-05-30",
-  "summary": "",
+  "summary": "Introduction In this report, we share our efforts to build a compact yet powerful VLM, MiMo-VL-7B.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",

@@ -8,7 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-10-19",
-  "summary": "",
+  "summary": "It accelerates generation by proposing tokens that the target model verifies.",
   "tags": [
     "task:text-generation",
     "domain:language",

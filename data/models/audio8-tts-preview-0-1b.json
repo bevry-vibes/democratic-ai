@@ -8,7 +8,7 @@
   ],
   "organization": "edge0-ai",
   "released": "2026-08-19",
-  "summary": "",
+  "summary": "Audio8 TTS Preview 0.1B The smallest zero-shot TTS worth running. 🎬Teaser video Audio8 TTS 0.1B supports speech generation and zero-shot voice cloning.",
   "tags": [
     "task:speech-synthesis",
     "domain:speech",

@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-07-25",
-  "summary": "",
+  "summary": "On-device hate-speech triage for European languages.",
   "tags": [
     "task:content-moderation",
     "task:text-classification",

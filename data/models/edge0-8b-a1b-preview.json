@@ -8,7 +8,7 @@
   ],
   "organization": "edge0-ai",
   "released": "2026-09-08",
-  "summary": "",
+  "summary": "Edge0-8b-a1b Preview An 8B-class sparse MoE that runs in phone-class memory. 1 GiB active memory · 25 tok/s · 4-bit Native engines on iOS · macOS · Android · Windows. Edge0-8b-a1b — an 8B MoE LLM that runs at viable speed in under 1 GiB of active memory, via the edge0 streaming inference framework.",
   "tags": [
     "task:text-generation",
     "domain:language",

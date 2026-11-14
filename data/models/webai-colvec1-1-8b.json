@@ -8,7 +8,7 @@
   ],
   "organization": "webai",
   "released": "2026-07-22",
-  "summary": "",
+  "summary": "webAI-Official/webAI-ColVec1.1-8b ⚡ Summary webAI-Official/webAI-ColVec1.1-8b is a ColBERT-style multimodal embedding model based on Qwen/Qwen3.5-9B.",
   "tags": [
     "task:retrieval",
     "domain:vision",

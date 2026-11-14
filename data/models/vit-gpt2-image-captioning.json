@@ -8,7 +8,7 @@
   ],
   "organization": "xenova",
   "released": "2023-05-02",
-  "summary": "",
+  "summary": "https://huggingface.co/nlpconnect/vit-gpt2-image-captioning with ONNX weights to be compatible with Transformers.js.",
   "tags": [
     "task:image-understanding",
     "domain:vision",

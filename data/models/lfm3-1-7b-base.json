@@ -8,7 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-10-26",
-  "summary": "",
+  "summary": "API Try Docs Blog LFM3-1.7B-Base LFM3-1.7B-Base is the pre-trained checkpoint behind LFM3-1.7B, a text model for local agents and specialized applications based on our new tri-hybrid architecture.",
   "tags": [
     "task:text-generation",
     "domain:language",

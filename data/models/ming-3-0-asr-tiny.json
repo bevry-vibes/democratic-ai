@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-10-14",
-  "summary": "",
+  "summary": "Ming-3.0-asr-tiny Context-aware speech recognition for Chinese, English, and dialects.",
   "tags": [
     "task:transcription",
     "domain:speech",

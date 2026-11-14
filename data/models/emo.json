@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-06-15",
-  "summary": "",
+  "summary": "| | | | --- | --- | | Platforms | iOS, macOS, tvOS, visionOS, Android, Linux, Windows, Browser, Node | | Languages | 22 | | Weights | v0.7.0 | | Demo | https://desertant.com/models/emo/ | Type a word or a sentence and get the emoji that fits.",
   "tags": [
     "task:emoji-suggestion",
     "task:text-classification",

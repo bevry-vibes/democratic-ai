@@ -8,7 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2025-04-29",
-  "summary": "",
+  "summary": "Introduction Currently, most successful RL works, including open-source research, rely on relatively large base models, e.g., 32B models, particularly for enhancing code reasoning capabilities.",
   "tags": [
     "task:text-generation",
     "domain:language",

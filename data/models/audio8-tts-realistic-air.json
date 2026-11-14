@@ -8,7 +8,7 @@
   ],
   "organization": "edge0-ai",
   "released": "2026-10-14",
-  "summary": "",
+  "summary": "Languages · Quick start · Serving · Evaluation --- Audio8-TTS-Realistic-Air builds on Audio8-TTS-Preview-0.6b, delivering substantially improved speech realism while retaining its compact 0.6B architecture and zero-shot voice cloning capabilities.",
   "tags": [
     "task:speech-synthesis",
     "domain:speech",

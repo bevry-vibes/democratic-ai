@@ -8,7 +8,7 @@
   ],
   "organization": "mistral",
   "released": "2026-10-14",
-  "summary": "",
+  "summary": "Timestral-5M Timestral is a family of time series foundation models for zero-shot forecasting, available in 5M, 28M, 123M, and 209M parameter versions.",
   "tags": [
     "task:time-series-forecasting",
     "license:other"

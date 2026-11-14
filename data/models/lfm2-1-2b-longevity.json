@@ -8,7 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-05-25",
-  "summary": "",
+  "summary": "Longevity LFMs are available in two sizes: - LFM2-1.2B-Longevity (this model) - LFM2-2.6B-Longevity This checkpoint, L-LFM2-1.2B, was produced by full-parameter supervised fine-tuning of LiquidAI/LFM2-1.2B on aging-related multi-omics and clinical data.",
   "tags": [
     "task:text-generation",
     "domain:language",

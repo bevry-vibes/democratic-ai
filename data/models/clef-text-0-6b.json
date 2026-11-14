@@ -8,7 +8,7 @@
   ],
   "organization": "fluid-voice",
   "released": "2026-10-10",
-  "summary": "",
+  "summary": "clef-text-0.6b A 0.70B-parameter text decision model distilled from Cloudflare's clef-flash (9B): Qwen3-0.6B (LoRA merged) + Clef's joint schema head.",
   "tags": [
     "task:text-classification",
     "domain:language",

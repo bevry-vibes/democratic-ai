@@ -8,7 +8,7 @@
   ],
   "organization": "webai",
   "released": "2026-10-14",
-  "summary": "",
+  "summary": "TwIL-8B An 8.8B reasoning model for math, code and instruction following, post-trained from `ibm-granite/granite-4.2-8b` with full-parameter supervised fine-tuning and GRPO/DAPO reinforcement learning.",
   "tags": [
     "task:text-generation",
     "domain:language",

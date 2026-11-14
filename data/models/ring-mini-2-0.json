@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2025-09-08",
-  "summary": "",
+  "summary": "Today, we officially release Ring-mini-2.0 — a high-performance inference-oriented MoE model deeply optimized based on the Ling 2.0 architecture.",
   "tags": [
     "task:text-generation",
     "domain:language",

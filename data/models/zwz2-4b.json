@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-10-15",
-  "summary": "",
+  "summary": "It learns to connect visual evidence across regions through comparison, aggregation, matching, and multi-step reasoning.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",

@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-06-23",
-  "summary": "",
+  "summary": "| | | | --- | --- | | Platforms | iOS, macOS, tvOS, visionOS, Android, Linux, Windows, Browser, Node | | Weights | v1.0.0 | | Demo | https://desertant.com/models/shapes/ | Shapes turns a hand-drawn stroke into a clean shape, connector, or arrow.",
   "tags": [
     "task:image-classification",
     "domain:vision",

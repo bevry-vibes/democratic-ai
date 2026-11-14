@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-08-13",
-  "summary": "",
+  "summary": "Align Accurate word timestamps for any transcript.",
   "tags": [
     "task:transcription",
     "task:word-timestamps",

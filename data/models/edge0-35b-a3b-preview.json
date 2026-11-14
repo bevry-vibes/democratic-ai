@@ -8,7 +8,7 @@
   ],
   "organization": "edge0-ai",
   "released": "2026-09-08",
-  "summary": "",
+  "summary": "Edge0-35b-a3b Preview A 35B-class sparse MoE that runs in phone-class memory. 3 GiB active memory · 15 tok/s · 4-bit Native engines on iOS · macOS · Android · Windows. Edge0-35b-a3b — a 35B MoE LLM that runs at viable speed in under 3 GiB of active memory, via the edge0 streaming inference framework.",
   "tags": [
     "task:text-generation",
     "domain:language",

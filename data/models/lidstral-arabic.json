@@ -8,7 +8,7 @@
   ],
   "organization": "mistral",
   "released": "2026-10-08",
-  "summary": "",
+  "summary": "LIDstral Arabic LIDstral Arabic is a fast language and dialect classifier for text written in Arabic script.",
   "tags": [
     "task:text-classification",
     "domain:language",

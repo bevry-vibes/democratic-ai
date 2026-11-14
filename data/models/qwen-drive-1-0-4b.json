@@ -8,7 +8,7 @@
   ],
   "organization": "qwen",
   "released": "2026-08-27",
-  "summary": "",
+  "summary": "Qwen-Drive-1.0-4B > [!Note] > This repository contains the weights and configurations of Qwen-Drive-1.0 in the Hugging > Face format.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",

@@ -8,7 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-10-24",
-  "summary": "",
+  "summary": "API Try Docs Blog d1-Omni-2B d1-Omni-2B is a decision model for text, pictures, and audio, built on LFM3-Omni-2B.",
   "tags": [
     "task:text-generation",
     "domain:language",

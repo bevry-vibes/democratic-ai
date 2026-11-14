@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-03-04",
-  "summary": "",
+  "summary": "It is trained using Region-to-Image Distillation (R2I) combined with reinforcement learning, enabling superior fine-grained visual understanding in a single forward pass — no inference-time zooming or tool calling required.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",

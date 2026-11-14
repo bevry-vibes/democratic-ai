@@ -8,7 +8,7 @@
   ],
   "organization": "nace-ai",
   "released": "2026-11-08",
-  "summary": "",
+  "summary": "Kapitsa 27B Qwen3.8 27B (4-bit, 20.2 GB) running locally on Apple Silicon through Kapitsa.",
   "tags": [
     "task:text-generation",
     "domain:language",

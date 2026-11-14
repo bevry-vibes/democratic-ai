@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-08-19",
-  "summary": "",
+  "summary": "On-device speech recognition: transcripts with word-level timestamps, 25 languages.",
   "tags": [
     "task:transcription",
     "domain:speech",

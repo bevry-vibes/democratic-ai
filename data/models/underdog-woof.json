@@ -8,7 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-11-05",
-  "summary": "",
+  "summary": "Underdog Woof - 1,022x smaller than Fish Audio Drama 3 (41.5 GB), with 25% fewer word errors - 1.42% word error rate on Gradium TTS Hard Cases (English, Mira) - 13.8x faster than real time on one CPU thread (Juno), with no GPU, server or API key - 40.6 MB for the whole model, both voices included, and 402 MB of memory at peak while it runs (Juno) Underdog Woof is a small English text-to-speech mod",
   "tags": [
     "task:speech-synthesis",
     "domain:speech",

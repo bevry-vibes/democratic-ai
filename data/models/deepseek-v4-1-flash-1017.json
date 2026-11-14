@@ -153,5 +153,15 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "2 builds are attached."
+  "notes": "2 builds are attached.",
+  "performance": {
+    "openness_morality": 76,
+    "code_reasoning": 83,
+    "research_citation": 50,
+    "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+    "as_of": "2026-07-18",
+    "match": "family",
+    "note": "Liberator; strong coder; citations via vendor only. The match may include the V4.1 family.",
+    "name": "DeepSeek V4 Flash"
+  }
 }

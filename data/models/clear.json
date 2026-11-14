@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-05-14",
-  "summary": "",
+  "summary": "On-device speech enhancement: denoise, dereverb, and loudness-normalize.",
   "tags": [
     "task:speech-enhancement",
     "domain:speech",

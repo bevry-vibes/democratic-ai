@@ -8,7 +8,7 @@
   ],
   "organization": "nace-ai",
   "released": "2026-11-08",
-  "summary": "",
+  "summary": "Kapitsa Dory Nemotron Dory 4B (NVFP4, 3.2 GB) running locally on Apple Silicon through Kapitsa.",
   "tags": [
     "task:text-generation",
     "domain:language",

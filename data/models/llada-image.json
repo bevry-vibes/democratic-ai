@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-08-28",
-  "summary": "",
+  "summary": "LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes Welcome to the official repository for LLaDA-Image, a unified model for high-quality image generation and editing.",
   "tags": [
     "task:image-generation",
     "domain:vision",

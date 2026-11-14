@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-09-17",
-  "summary": "",
+  "summary": "Quick Start Use the companion Ming-Image repository for installation and inference: This runs the released six-layer card-making example.",
   "tags": [
     "task:image-generation",
     "domain:vision",

@@ -8,7 +8,7 @@
   ],
   "organization": "edge0-ai",
   "released": "2026-07-28",
-  "summary": "",
+  "summary": "&nbsp;&nbsp;Audio8 TTS Preview 0.6B: SOTA-Class TTS at Compact Scale A 0.6B-parameter multilingual text-to-speech model with zero-shot voice cloning. Audio8 TTS Preview supports multilingual speech generation and zero-shot voice cloning.",
   "tags": [
     "task:speech-synthesis",
     "domain:speech",

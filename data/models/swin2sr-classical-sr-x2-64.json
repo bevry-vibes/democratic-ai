@@ -8,7 +8,7 @@
   ],
   "organization": "xenova",
   "released": "2023-11-07",
-  "summary": "",
+  "summary": "https://huggingface.co/caidas/swin2SR-classical-sr-x2-64 with ONNX weights to be compatible with Transformers.js.",
   "tags": [
     "task:image-generation",
     "domain:vision",

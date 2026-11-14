@@ -11,7 +11,10 @@
     "syndication": "deno run -A scripts/syndication/mod.ts",
     "syndication:check": "deno check scripts/syndication/mod.ts",
     "index": "deno run -A scripts/index/mod.ts",
-    "index:check": "deno check scripts/index/mod.ts"
+    "index:check": "deno check scripts/index/mod.ts",
+    "summaries": "deno run -A scripts/summaries/fetch-cards.ts",
+    "scorecard": "deno run -A scripts/scorecard/mod.ts",
+    "scorecard:check": "deno check scripts/scorecard/mod.ts"
   },
   "imports": {
     "@std/xml": "jsr:@std/xml@^0.2.0"

@@ -8,7 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-11-10",
-  "summary": "",
+  "summary": "Underdog Woof Japanese - 40.5 MB for the whole model, both voices included - 14.5x faster than real time on one CPU thread (Apple M5 Max), with no GPU, server or API key - 437 MB of memory at peak while it runs - Two voices: Misa (default) and Mikasa Underdog Woof Japanese is a small Japanese text-to-speech model.",
   "tags": [
     "task:speech-synthesis",
     "domain:speech",

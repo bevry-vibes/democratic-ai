@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-08-25",
-  "summary": "",
+  "summary": "On-device spoken language identification across 102 languages.",
   "tags": [
     "task:audio-classification",
     "task:language-identification",

@@ -8,7 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2025-08-07",
-  "summary": "",
+  "summary": "📈 Performance Improvements MiMo-VL-7B-RL-2508 demonstrates consistent improvements across both image and video benchmarks, achieving notable milestones of 70.6 on MMMU and 70.8 on VideoMME.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",

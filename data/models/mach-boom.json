@@ -8,7 +8,7 @@
   ],
   "organization": "syzygy-research",
   "released": "2026-11-10",
-  "summary": "",
+  "summary": "Mach Boom Mach Boom is Gradium's Phonon 31m English text-to-speech model at 3.5 bits per weight: an 18.2 MB file that speaks 8 to 10x faster than real time on one CPU core.",
   "tags": [
     "task:speech-synthesis",
     "domain:speech",

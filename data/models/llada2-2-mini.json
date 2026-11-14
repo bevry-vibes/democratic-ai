@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-09-05",
-  "summary": "",
+  "summary": "LLaDA2.2-mini LLaDA2.2-mini is the lightweight variant of the agentic diffusion language model in the LLaDA2 series.",
   "tags": [
     "task:text-generation",
     "domain:language",

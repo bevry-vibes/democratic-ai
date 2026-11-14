@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-10-05",
-  "summary": "",
+  "summary": "LemonDecider 4B Model ID: `lemondecider-4b-20261104-v3` Base model: `Qwen/Qwen3.5-4B` This v3 release makes typed decisions from a shared text state and named questions.",
   "tags": [
     "task:embedding",
     "domain:embeddings",

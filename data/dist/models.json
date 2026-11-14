@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T04:33:45.379Z",
+  "generated_at": "2026-11-14T04:44:28.814Z",
   "pull_id": "20261114T025658Z",
   "models": [
     {
@@ -38,7 +38,17 @@
       "context_tokens": 1048576,
       "models_dev": "https://models.dev/models/deepseek/deepseek-v4.1-flash",
       "agent_detect": "https://agent-detect.bevry.me/model/deepseekv41flash",
-      "builds": 0
+      "builds": 0,
+      "performance": {
+        "openness_morality": 76,
+        "code_reasoning": 83,
+        "research_citation": 50,
+        "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+        "as_of": "2026-07-18",
+        "match": "exact",
+        "note": "Liberator; strong coder; citations via vendor only. The match may include the V4.1 family.",
+        "name": "DeepSeek V4 Flash"
+      }
     },
     {
       "id": "deepseek-v4-1-flash-1017",
@@ -76,7 +86,17 @@
       "context_tokens": 1048576,
       "models_dev": "https://models.dev/models/deepseek/deepseek-v4.1-flash-1017",
       "agent_detect": "https://agent-detect.bevry.me/model/deepseekv41flash",
-      "builds": 2
+      "builds": 2,
+      "performance": {
+        "openness_morality": 76,
+        "code_reasoning": 83,
+        "research_citation": 50,
+        "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+        "as_of": "2026-07-18",
+        "match": "family",
+        "note": "Liberator; strong coder; citations via vendor only. The match may include the V4.1 family.",
+        "name": "DeepSeek V4 Flash"
+      }
     },
     {
       "id": "deepseek-v4-flash-vision-exp",
@@ -113,7 +133,17 @@
       "context_tokens": 1000000,
       "models_dev": "https://models.dev/models/deepseek/deepseek-v4-flash-vision-exp",
       "agent_detect": "https://agent-detect.bevry.me/model/deepseekv4flash",
-      "builds": 2
+      "builds": 2,
+      "performance": {
+        "openness_morality": 76,
+        "code_reasoning": 83,
+        "research_citation": 50,
+        "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+        "as_of": "2026-07-18",
+        "match": "family",
+        "note": "Liberator; strong coder; citations via vendor only. The match may include the V4.1 family.",
+        "name": "DeepSeek V4 Flash"
+      }
     },
     {
       "id": "glm-5-2",
@@ -149,7 +179,17 @@
       "context_tokens": 1000000,
       "models_dev": "https://models.dev/models/zhipuai/glm-5.2",
       "agent_detect": "https://agent-detect.bevry.me/model/glm52",
-      "builds": 1
+      "builds": 1,
+      "performance": {
+        "openness_morality": 78,
+        "code_reasoning": 88,
+        "research_citation": 55,
+        "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+        "as_of": "2026-07-18",
+        "match": "exact",
+        "note": "Liberator; top open coder; citations via vendor only.",
+        "name": "GLM-5.2"
+      }
     },
     {
       "id": "glm-5-3",
@@ -298,7 +338,17 @@
       "context_tokens": 1048576,
       "models_dev": "https://models.dev/models/moonshotai/kimi-k3",
       "agent_detect": "https://agent-detect.bevry.me/model/kimik3",
-      "builds": 0
+      "builds": 0,
+      "performance": {
+        "openness_morality": 63,
+        "code_reasoning": 77,
+        "research_citation": 55,
+        "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+        "as_of": "2026-07-18",
+        "match": "exact",
+        "note": "Vapourware liberator at the snapshot; strong coder unverified.",
+        "name": "Kimi K3"
+      }
     },
     {
       "id": "ling-3-0-flash",
@@ -512,7 +562,17 @@
       "context_tokens": 1000000,
       "models_dev": "https://models.dev/models/minimax/MiniMax-M3",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm3",
-      "builds": 2
+      "builds": 2,
+      "performance": {
+        "openness_morality": 68,
+        "code_reasoning": 85,
+        "research_citation": 45,
+        "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+        "as_of": "2026-07-18",
+        "match": "exact",
+        "note": "Liberator with marketing delay.",
+        "name": "MiniMax M3"
+      }
     },
     {
       "id": "minimax-m3-1-flash",
@@ -550,7 +610,17 @@
       "context_tokens": 1000000,
       "models_dev": "https://models.dev/models/minimax/MiniMax-M3.1-Flash",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm31flash",
-      "builds": 2
+      "builds": 2,
+      "performance": {
+        "openness_morality": 68,
+        "code_reasoning": 85,
+        "research_citation": 45,
+        "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+        "as_of": "2026-07-18",
+        "match": "family",
+        "note": "Liberator with marketing delay.",
+        "name": "MiniMax M3"
+      }
     },
     {
       "id": "qwen3-6-27b",
@@ -590,7 +660,17 @@
       "context_tokens": 262144,
       "models_dev": "https://models.dev/models/alibaba/qwen3.6-27b",
       "agent_detect": "https://agent-detect.bevry.me/model/qwen3627b",
-      "builds": 1
+      "builds": 1,
+      "performance": {
+        "openness_morality": 65,
+        "code_reasoning": 77,
+        "research_citation": 55,
+        "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+        "as_of": "2026-07-18",
+        "match": "exact",
+        "note": "Half liberator; strong small coder.",
+        "name": "Qwen 3.6-27B"
+      }
     },
     {
       "id": "qwen3-8-27b",
@@ -664,7 +744,17 @@
       "context_tokens": 131072,
       "models_dev": "https://models.dev/models/ibm/granite-4.2-8b",
       "agent_detect": null,
-      "builds": 0
+      "builds": 0,
+      "performance": {
+        "openness_morality": 93,
+        "code_reasoning": 55,
+        "research_citation": 35,
+        "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+        "as_of": "2026-07-18",
+        "match": "family",
+        "note": "Open science; mid coder; no native citations.",
+        "name": "IBM Granite 4.0"
+      }
     },
     {
       "id": "kimi-k3-1-pro",
@@ -702,7 +792,17 @@
       "context_tokens": 1048576,
       "models_dev": "https://models.dev/models/moonshotai/kimi-k3.1-pro",
       "agent_detect": null,
-      "builds": 1
+      "builds": 1,
+      "performance": {
+        "openness_morality": 63,
+        "code_reasoning": 77,
+        "research_citation": 55,
+        "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+        "as_of": "2026-07-18",
+        "match": "family",
+        "note": "Vapourware liberator at the snapshot; strong coder unverified.",
+        "name": "Kimi K3"
+      }
     },
     {
       "id": "qwen3-6-35b-a3b",
@@ -1094,7 +1194,7 @@
       "id": "mimo-v2-6-pro-rl",
       "name": "MiMo-V2.6-Pro-RL",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "Introduction MiMo-V2.6-Pro-RL is the flagship checkpoint of the MiMo-V2.6 series.",
       "tasks": [
         "text-generation"
       ],
@@ -1123,7 +1223,7 @@
       "id": "lfm3-1-7b",
       "name": "LFM3-1.7B",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "API Try Docs Blog LFM3-1.7B LFM3-1.7B is a text model for local agents and specialized applications, based on our new tri-hybrid architecture.",
       "tasks": [
         "text-generation"
       ],
@@ -1348,7 +1448,7 @@
       "id": "mimo-v2-6-flash-rl",
       "name": "MiMo-V2.6-Flash-RL",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "Introduction MiMo-V2.6-Flash-RL is the efficiency-balanced checkpoint of the MiMo-V2.6 series.",
       "tasks": [
         "text-generation"
       ],
@@ -1377,7 +1477,7 @@
       "id": "mistral-large-4-1t-a52b",
       "name": "Mistral-Large-4-1T-A52B",
       "organization": "mistral",
-      "summary": "",
+      "summary": "Mistral Large 4 - Le Chonk Mistral Large 4 is our largest and most capable model to date: a 1 trillion-parameter natively multimodal Mixture-of-Experts model with 49 billion active parameters per token (52 billion including embeddings and output layers), trained from scratch on 3,800 NVIDIA Grace Blackwell GPUs in Mistral's own datacenters in Europe.",
       "tasks": [
         "image-understanding"
       ],
@@ -1476,7 +1576,7 @@
       "id": "lfm3-vl-2b",
       "name": "LFM3-VL-2B",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "API Try Docs Blog LFM3-VL-2B LFM3-VL-2B is a vision-language model for on-device visual understanding.",
       "tasks": [
         "image-understanding"
       ],
@@ -1956,7 +2056,7 @@
       "id": "ace-step-webgpu-models",
       "name": "ace-step-webgpu-models",
       "organization": "fluid-voice",
-      "summary": "",
+      "summary": "ACE-Step 1.5 Turbo — WebGPU model packages Content-addressed model packages for the browser WebGPU port of ACE-Step 1.5 Turbo, consumed by FluidInference/fluidaudio-web's `/music` page (runtime vendored at `packages/acestep`).",
       "tasks": [
         "text-generation"
       ],
@@ -1987,7 +2087,7 @@
       "id": "align",
       "name": "align",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "Align Accurate word timestamps for any transcript.",
       "tasks": [
         "transcription",
         "word-timestamps"
@@ -2018,7 +2118,7 @@
       "id": "audio8-asr-infinite",
       "name": "Audio8-ASR-Infinite",
       "organization": "edge0-ai",
-      "summary": "",
+      "summary": "Audio8 ASR Infinite Audio8 ASR Infinite is a native streaming speech recognition model built to be as responsive as possible.",
       "tasks": [
         "transcription"
       ],
@@ -2048,7 +2148,7 @@
       "id": "audio8-tts-preview-0-1b",
       "name": "Audio8-TTS-Preview-0.1b",
       "organization": "edge0-ai",
-      "summary": "",
+      "summary": "Audio8 TTS Preview 0.1B The smallest zero-shot TTS worth running. 🎬Teaser video Audio8 TTS 0.1B supports speech generation and zero-shot voice cloning.",
       "tasks": [
         "speech-synthesis"
       ],
@@ -2077,7 +2177,7 @@
       "id": "audio8-tts-preview-0-6b",
       "name": "Audio8-TTS-Preview-0.6b",
       "organization": "edge0-ai",
-      "summary": "",
+      "summary": "&nbsp;&nbsp;Audio8 TTS Preview 0.6B: SOTA-Class TTS at Compact Scale A 0.6B-parameter multilingual text-to-speech model with zero-shot voice cloning. Audio8 TTS Preview supports multilingual speech generation and zero-shot voice cloning.",
       "tasks": [
         "speech-synthesis"
       ],
@@ -2107,7 +2207,7 @@
       "id": "audio8-tts-realistic-air",
       "name": "Audio8-TTS-Realistic-Air",
       "organization": "edge0-ai",
-      "summary": "",
+      "summary": "Languages · Quick start · Serving · Evaluation --- Audio8-TTS-Realistic-Air builds on Audio8-TTS-Preview-0.6b, delivering substantially improved speech realism while retaining its compact 0.6B architecture and zero-shot voice cloning capabilities.",
       "tasks": [
         "speech-synthesis"
       ],
@@ -2137,7 +2237,7 @@
       "id": "bert-base-ner",
       "name": "bert-base-NER",
       "organization": "xenova",
-      "summary": "",
+      "summary": "https://huggingface.co/dslim/bert-base-NER with ONNX weights to be compatible with Transformers.js.",
       "tasks": [
         "structured-extraction"
       ],
@@ -2165,7 +2265,7 @@
       "id": "clear",
       "name": "clear",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "On-device speech enhancement: denoise, dereverb, and loudness-normalize.",
       "tasks": [
         "speech-enhancement"
       ],
@@ -2193,7 +2293,7 @@
       "id": "clef-text-0-6b",
       "name": "clef-text-0.6b",
       "organization": "fluid-voice",
-      "summary": "",
+      "summary": "clef-text-0.6b A 0.70B-parameter text decision model distilled from Cloudflare's clef-flash (9B): Qwen3-0.6B (LoRA merged) + Clef's joint schema head.",
       "tasks": [
         "text-classification"
       ],
@@ -2223,7 +2323,7 @@
       "id": "clef-vision-0-8b",
       "name": "clef-vision-0.8b",
       "organization": "fluid-voice",
-      "summary": "",
+      "summary": "clef-vision-0.8b A 0.92B-parameter image decision model, distilled from Cloudflare's Clef-flash (Qwen3.5-9B) into a Qwen3.5-0.8B backbone with Clef's joint schema head.",
       "tasks": [
         "image-understanding"
       ],
@@ -2257,7 +2357,7 @@
       "id": "clip-vit-base-patch32",
       "name": "clip-vit-base-patch32",
       "organization": "xenova",
-      "summary": "",
+      "summary": "https://huggingface.co/openai/clip-vit-base-patch32 with ONNX weights to be compatible with Transformers.js.",
       "tasks": [
         "image-classification"
       ],
@@ -2285,7 +2385,7 @@
       "id": "clips",
       "name": "clips",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "Short clips and highlights from talking video and audio: podcasts, interviews, meetings.",
       "tasks": [
         "clip-selection",
         "retrieval"
@@ -2315,7 +2415,7 @@
       "id": "d1-2b",
       "name": "d1-2B",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "API Try Docs Blog d1-2B d1-2B is a decision model for text, pictures, and video, built on LFM3-VL-2B.",
       "tasks": [
         "image-understanding"
       ],
@@ -2348,7 +2448,7 @@
       "id": "d1-3b",
       "name": "d1-3B",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "You give it a state (text, JSON, images, or a mix) and a set of questions.",
       "tasks": [
         "image-understanding"
       ],
@@ -2381,7 +2481,7 @@
       "id": "d1-omni-2b",
       "name": "d1-Omni-2B",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "API Try Docs Blog d1-Omni-2B d1-Omni-2B is a decision model for text, pictures, and audio, built on LFM3-Omni-2B.",
       "tasks": [
         "text-generation"
       ],
@@ -2414,7 +2514,7 @@
       "id": "d1-omni-600m",
       "name": "d1-omni-600M",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "You give it a state (text or JSON, with images or a voice clip) and a set of named questions.",
       "tasks": [
         "image-understanding"
       ],
@@ -2447,7 +2547,7 @@
       "id": "drex-dlm",
       "name": "drex-dlm",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Drex DLM We introduce Drex DLM from Nace.AI, a decision model that answers typed questions about a given context.",
       "tasks": [
         "text-classification"
       ],
@@ -2476,7 +2576,7 @@
       "id": "drex-max-v1",
       "name": "drex-max-v1",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Drex Max, from Nace.AI, answers typed questions about a given context, in text, JSON and images.",
       "tasks": [
         "text-classification"
       ],
@@ -2503,7 +2603,7 @@
       "id": "drex-v1-5",
       "name": "drex-v1.5",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "It serves the TypeSafe-compatible `/v1/systemone` API through the bundled Kev code, the same request and response format as the hosted Drex API and the open Drex DLM.",
       "tasks": [
         "text-classification"
       ],
@@ -2532,7 +2632,7 @@
       "id": "drex-v2-0",
       "name": "drex-v2.0",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Drex v2.0 Nace's flagship decision model: 61.25 on the public Decision Index 0.3.1, 3.3 points ahead of Jev 1.13.0 and 3.2 ahead of Drex v1.5. We introduce Drex v2.0 from Nace.AI, a decision model that answers typed questions about a given context.",
       "tasks": [
         "text-generation"
       ],
@@ -2561,7 +2661,7 @@
       "id": "dsv4-flash-0731-vision",
       "name": "dsv4-flash-0731-vision",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "DSV4-Flash-0731 Vision Repository for the DSV4-Flash-0731 vision graft.",
       "tasks": [
         "image-understanding"
       ],
@@ -2595,7 +2695,7 @@
       "id": "ear",
       "name": "ear",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "On-device spoken language identification across 102 languages.",
       "tasks": [
         "audio-classification",
         "language-identification"
@@ -2625,7 +2725,7 @@
       "id": "edge0-35b-a3b-preview",
       "name": "Edge0-35B-A3B-preview",
       "organization": "edge0-ai",
-      "summary": "",
+      "summary": "Edge0-35b-a3b Preview A 35B-class sparse MoE that runs in phone-class memory. 3 GiB active memory · 15 tok/s · 4-bit Native engines on iOS · macOS · Android · Windows. Edge0-35b-a3b — a 35B MoE LLM that runs at viable speed in under 3 GiB of active memory, via the edge0 streaming inference framework.",
       "tasks": [
         "text-generation"
       ],
@@ -2655,7 +2755,7 @@
       "id": "edge0-8b-a1b-preview",
       "name": "Edge0-8B-A1B-preview",
       "organization": "edge0-ai",
-      "summary": "",
+      "summary": "Edge0-8b-a1b Preview An 8B-class sparse MoE that runs in phone-class memory. 1 GiB active memory · 25 tok/s · 4-bit Native engines on iOS · macOS · Android · Windows. Edge0-8b-a1b — an 8B MoE LLM that runs at viable speed in under 1 GiB of active memory, via the edge0 streaming inference framework.",
       "tasks": [
         "text-generation"
       ],
@@ -2684,7 +2784,7 @@
       "id": "emo",
       "name": "emo",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "| | | | --- | --- | | Platforms | iOS, macOS, tvOS, visionOS, Android, Linux, Windows, Browser, Node | | Languages | 22 | | Weights | v0.7.0 | | Demo | https://desertant.com/models/emo/ | Type a word or a sentence and get the emoji that fits.",
       "tasks": [
         "emoji-suggestion",
         "text-classification"
@@ -2714,7 +2814,7 @@
       "id": "ernie-5-5-flash-base",
       "name": "ERNIE-5.5-Flash-Base",
       "organization": "baidu",
-      "summary": "",
+      "summary": "ERNIE-5.5-Flash-Base Introduction ERNIE 5.5 Flash is an efficient sparse Mixture-of-Experts (MoE) language model with 280B total parameters and 14B activated per token, pre-trained from scratch on 33.5T tokens with a training context of up to 128K; fine-tuning and inference support a 1M-token context.",
       "tasks": [
         "text-generation"
       ],
@@ -2742,7 +2842,7 @@
       "id": "eye",
       "name": "eye",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "On-device photo understanding: scenes, quality, faces, people, pets, crops and sharpness.",
       "tasks": [
         "image-classification"
       ],
@@ -2824,7 +2924,7 @@
       "id": "gist",
       "name": "gist",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "Gist Generate topics and tags for posts and articles.",
       "tasks": [
         "text-classification",
         "topic-tagging"
@@ -2854,7 +2954,7 @@
       "id": "glm-ocr",
       "name": "GLM-OCR",
       "organization": "zai",
-      "summary": "",
+      "summary": "It introduces Multi-Token Prediction (MTP) loss and stable full-task reinforcement learning to improve training efficiency, recognition accuracy, and generalization.",
       "tasks": [
         "image-understanding",
         "ocr"
@@ -2914,7 +3014,7 @@
       "id": "higgs-audio-v2-tokenizer",
       "name": "higgs-audio-v2-tokenizer",
       "organization": "boson-ai",
-      "summary": "",
+      "summary": "> [!TIP] > For licensing inquiries (e.g., commercial use) or collaboration opportunities, please reach out to us at contact@boson.ai.",
       "tasks": [
         "embedding",
         "speech-synthesis"
@@ -2946,7 +3046,7 @@
       "id": "higgs-tts-3-4b",
       "name": "higgs-tts-3-4b",
       "organization": "boson-ai",
-      "summary": "",
+      "summary": "Higgs TTS 3 Higgs TTS 3 is built for voice chat: it speaks, not just reads.",
       "tasks": [
         "speech-synthesis"
       ],
@@ -3003,7 +3103,7 @@
       "id": "kapitsa-27b",
       "name": "kapitsa-27b",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Kapitsa 27B Qwen3.8 27B (4-bit, 20.2 GB) running locally on Apple Silicon through Kapitsa.",
       "tasks": [
         "text-generation"
       ],
@@ -3032,7 +3132,7 @@
       "id": "kapitsa-35b",
       "name": "kapitsa-35b",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Kapitsa 35B Qwen3.6 35B-A3B MoE (4-bit, 22.1 GB) running locally on Apple Silicon through Kapitsa.",
       "tasks": [
         "text-generation"
       ],
@@ -3061,7 +3161,7 @@
       "id": "kapitsa-4b",
       "name": "kapitsa-4b",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Kapitsa 4B Qwen3.5 4B (4-bit, 4.6 GB) running locally on Apple Silicon through Kapitsa.",
       "tasks": [
         "text-generation"
       ],
@@ -3090,7 +3190,7 @@
       "id": "kapitsa-9b",
       "name": "kapitsa-9b",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Kapitsa 9B Qwen3.5 9B (4-bit, 9.0 GB) running locally on Apple Silicon through Kapitsa.",
       "tasks": [
         "text-generation"
       ],
@@ -3119,7 +3219,7 @@
       "id": "kapitsa-bolt",
       "name": "kapitsa-bolt",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Kapitsa Bolt Nemotron 3.5 Bolt 74B-A9B (mixed 2/4/8-bit, 25.1 GB) running locally on Apple Silicon through Kapitsa.",
       "tasks": [
         "text-generation"
       ],
@@ -3146,7 +3246,7 @@
       "id": "kapitsa-clover",
       "name": "kapitsa-clover",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Kapitsa Clover Clover 35B-A3B (4-bit, 19.5 GB) running locally on Apple Silicon through Kapitsa.",
       "tasks": [
         "text-generation"
       ],
@@ -3174,7 +3274,7 @@
       "id": "kapitsa-dory",
       "name": "kapitsa-dory",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Kapitsa Dory Nemotron Dory 4B (NVFP4, 3.2 GB) running locally on Apple Silicon through Kapitsa.",
       "tasks": [
         "text-generation"
       ],
@@ -3201,7 +3301,7 @@
       "id": "kapitsa-flint",
       "name": "kapitsa-flint",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Kapitsa Flint Flint 40B-A2.5B (4-bit, 22.6 GB) running locally on Apple Silicon through Kapitsa.",
       "tasks": [
         "text-generation"
       ],
@@ -3229,7 +3329,7 @@
       "id": "kapitsa-lightning",
       "name": "kapitsa-lightning",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Kapitsa Lightning Nemotron 3.5 Lightning 30B-A3B (NVFP4, 22.9 GB) running locally on Apple Silicon through Kapitsa.",
       "tasks": [
         "text-generation"
       ],
@@ -3256,7 +3356,7 @@
       "id": "kapitsa-super",
       "name": "kapitsa-super",
       "organization": "nace-ai",
-      "summary": "",
+      "summary": "Kapitsa Super Nemotron 3.5 Super VL 120B-A12B (NVFP4, 76.4 GB) running locally on Apple Silicon through Kapitsa.",
       "tasks": [
         "text-generation"
       ],
@@ -3283,7 +3383,7 @@
       "id": "lbs-27b",
       "name": "LBS-27B",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "LBS-27B Learning to Look Beyond Screens: Transferable Visual Observation from GUI Grounding 💻 Project · 🤗 Collection Model Summary LBS-27B is an agentic vision-language model based on Qwen3.8-27b.",
       "tasks": [
         "image-understanding"
       ],
@@ -3342,7 +3442,7 @@
       "id": "lemondecider",
       "name": "LemonDecider",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "LemonDecider 4B Model ID: `lemondecider-4b-20261104-v3` Base model: `Qwen/Qwen3.5-4B` This v3 release makes typed decisions from a shared text state and named questions.",
       "tasks": [
         "embedding"
       ],
@@ -3372,7 +3472,7 @@
       "id": "lfm2-1-2b-longevity",
       "name": "LFM2-1.2B-Longevity",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "Longevity LFMs are available in two sizes: - LFM2-1.2B-Longevity (this model) - LFM2-2.6B-Longevity This checkpoint, L-LFM2-1.2B, was produced by full-parameter supervised fine-tuning of LiquidAI/LFM2-1.2B on aging-related multi-omics and clinical data.",
       "tasks": [
         "text-generation"
       ],
@@ -3400,7 +3500,7 @@
       "id": "lfm2-2-6b-longevity",
       "name": "LFM2-2.6B-Longevity",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "Longevity LFMs are available in two sizes: - LFM2-1.2B-Longevity - LFM2-2.6B-Longevity (this model) This checkpoint, L-LFM2-2.6B, was produced by full-parameter supervised fine-tuning of LiquidAI/LFM2-2.6B on aging-related multi-omics and clinical data.",
       "tasks": [
         "text-generation"
       ],
@@ -3429,7 +3529,7 @@
       "id": "lfm2-5-1-2b-base",
       "name": "LFM2.5-1.2B-Base",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "It builds on the LFM2 architecture with extended pre-training and reinforcement learning.",
       "tasks": [
         "text-generation"
       ],
@@ -3457,7 +3557,7 @@
       "id": "lfm2-5-1-2b-instruct",
       "name": "LFM2.5-1.2B-Instruct",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "It builds on the LFM2 architecture with extended pre-training and reinforcement learning.",
       "tasks": [
         "text-generation"
       ],
@@ -3486,7 +3586,7 @@
       "id": "lfm2-5-1-2b-thinking",
       "name": "LFM2.5-1.2B-Thinking",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "It builds on the LFM2 architecture with extended pre-training and reinforcement learning.",
       "tasks": [
         "text-generation"
       ],
@@ -3515,7 +3615,7 @@
       "id": "lfm2-5-2-6b",
       "name": "LFM2.5-2.6B",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "It builds on the LFM2 architecture with a 128K context window and agentic post-training.",
       "tasks": [
         "text-generation"
       ],
@@ -3578,7 +3678,7 @@
       "id": "lfm2-5-24b-a2b-base",
       "name": "LFM2.5-24B-A2B-Base",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "LFM2.5-24B-A2B is the largest model in the family: a 24B-parameter mixture of experts with only 2B active parameters.",
       "tasks": [
         "text-generation"
       ],
@@ -3606,7 +3706,7 @@
       "id": "lfm2-5-24b-a2b-dspark",
       "name": "LFM2.5-24B-A2B-DSpark",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "It accelerates generation by proposing tokens that the target model verifies.",
       "tasks": [
         "text-generation"
       ],
@@ -3634,7 +3734,7 @@
       "id": "lfm2-5-350m",
       "name": "LFM2.5-350M",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "It builds on the LFM2 architecture with extended pre-training and reinforcement learning.",
       "tasks": [
         "text-generation"
       ],
@@ -3663,7 +3763,7 @@
       "id": "lfm2-5-8b-a1b",
       "name": "LFM2.5-8B-A1B",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "It builds on the LFM2 architecture with extended pre-training and reinforcement learning.",
       "tasks": [
         "text-generation"
       ],
@@ -3723,7 +3823,7 @@
       "id": "lfm2-5-vl-3b",
       "name": "LFM2.5-VL-3B",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "It builds on LFM2-VL-3B with further mid- and post-training.",
       "tasks": [
         "image-understanding"
       ],
@@ -3756,7 +3856,7 @@
       "id": "lfm2-5-vl-3b-dspark",
       "name": "LFM2.5-VL-3B-DSpark",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "It allows `LiquidAI/LFM2.5-VL-3B` to decode substantially faster without changing its output, for a minimal increase in memory footprint.",
       "tasks": [
         "image-understanding"
       ],
@@ -3788,7 +3888,7 @@
       "id": "lfm2-8b-a1b",
       "name": "LFM2-8B-A1B",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "It sets a new standard in terms of quality, speed, and memory efficiency.",
       "tasks": [
         "text-generation"
       ],
@@ -3816,7 +3916,7 @@
       "id": "lfm3-1-7b-base",
       "name": "LFM3-1.7B-Base",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "API Try Docs Blog LFM3-1.7B-Base LFM3-1.7B-Base is the pre-trained checkpoint behind LFM3-1.7B, a text model for local agents and specialized applications based on our new tri-hybrid architecture.",
       "tasks": [
         "text-generation"
       ],
@@ -3881,7 +3981,7 @@
       "id": "lfm3-omni-2b",
       "name": "LFM3-Omni-2B",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "API Try Docs Blog LFM3-Omni-2B LFM3-Omni-2B is Liquid AI's first omni-modal model in the LFM3 family: a single end-to-end model that understands text, images, video and audio, and answers in text and speech.",
       "tasks": [
         "text-generation"
       ],
@@ -3912,7 +4012,7 @@
       "id": "lidstral-arabic",
       "name": "LIDstral-Arabic",
       "organization": "mistral",
-      "summary": "",
+      "summary": "LIDstral Arabic LIDstral Arabic is a fast language and dialect classifier for text written in Arabic script.",
       "tasks": [
         "text-classification"
       ],
@@ -3972,7 +4072,7 @@
       "id": "ling-2-5-1t",
       "name": "Ling-2.5-1T",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "Today, we launch Ling-2.5-1T and make it open source.",
       "tasks": [
         "text-generation"
       ],
@@ -4032,7 +4132,7 @@
       "id": "ling-3-0-flash-dspark",
       "name": "Ling-3.0-flash-dspark",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "DSpark extends DFlash with target-model auxiliary features and a confidence head that dynamically chooses the number of draft tokens.",
       "tasks": [
         "text-generation"
       ],
@@ -4061,7 +4161,7 @@
       "id": "ling-3-0-flash-ubtree",
       "name": "Ling-3.0-flash-UBTree",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "It combines a five-layer DFlash backbone with a learned bigram selector to propose multiple candidate continuations for target-model verification.",
       "tasks": [
         "text-generation"
       ],
@@ -4089,7 +4189,7 @@
       "id": "ling-3-0-tiny-ubtree",
       "name": "Ling-3.0-tiny-UBTree",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "It combines a five-layer DFlash backbone with a learned bigram selector to propose multiple candidate continuations for target-model verification.",
       "tasks": [
         "text-generation"
       ],
@@ -4117,7 +4217,7 @@
       "id": "ling-3-1-flash-base",
       "name": "Ling-3.1-flash-base",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "With 560B total parameters and 25B active parameters per token, the model provides a foundation for continued pretraining, domain adaptation, and post-training research.",
       "tasks": [
         "text-generation"
       ],
@@ -4145,7 +4245,7 @@
       "id": "ling-mini-2-0",
       "name": "Ling-mini-2.0",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "The first released version, Ling-mini-2.0, is compact yet powerful.",
       "tasks": [
         "text-generation"
       ],
@@ -4174,7 +4274,7 @@
       "id": "liquid-codec",
       "name": "Liquid-Codec",
       "organization": "liquid-ai",
-      "summary": "",
+      "summary": "API Try Docs Blog LiquidCodec LiquidCodec is a compact, streaming audio codec that compresses speech into discrete tokens and converts them back into audio.",
       "tasks": [
         "embedding"
       ],
@@ -4202,7 +4302,7 @@
       "id": "llada-image",
       "name": "LLaDA-Image",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes Welcome to the official repository for LLaDA-Image, a unified model for high-quality image generation and editing.",
       "tasks": [
         "image-generation"
       ],
@@ -4232,7 +4332,7 @@
       "id": "llada-image-turbo",
       "name": "LLaDA-Image-Turbo",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "LLaDA-Image: Building Strong Image Generators with Fully Open Training Recipes Welcome to the official repository for LLaDA-Image, a unified model for high-quality image generation and editing.",
       "tasks": [
         "image-generation"
       ],
@@ -4262,7 +4362,7 @@
       "id": "llada-ui",
       "name": "LLaDA-UI",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "LLaDA-UI Bringing Block-wise Diffusion to Vision-Language GUI Agents LLaDA-UI is an MoE-based, block-wise diffusion vision-language GUI agent.",
       "tasks": [
         "image-understanding"
       ],
@@ -4292,7 +4392,7 @@
       "id": "llada2-2-flash",
       "name": "LLaDA2.2-flash",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "LLaDA2.2-flash LLaDA2.2-flash is an agent-oriented diffusion language model in the LLaDA2 series.",
       "tasks": [
         "text-generation"
       ],
@@ -4321,7 +4421,7 @@
       "id": "llada2-2-mini",
       "name": "LLaDA2.2-mini",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "LLaDA2.2-mini LLaDA2.2-mini is the lightweight variant of the agentic diffusion language model in the LLaDA2 series.",
       "tasks": [
         "text-generation"
       ],
@@ -4350,7 +4450,7 @@
       "id": "mach-1-additive-35b",
       "name": "Mach-1-Additive-35B",
       "organization": "syzygy-research",
-      "summary": "",
+      "summary": ", use the plain image line underneath instead and delete this block.",
       "tasks": [
         "text-generation"
       ],
@@ -4379,7 +4479,7 @@
       "id": "mach-1-additive-35b-multimodal",
       "name": "Mach-1-Additive-35B-Multimodal",
       "organization": "syzygy-research",
-      "summary": "",
+      "summary": "> [!NOTE] > This repo is Mach-1-Additive-35B with one addition: `vision.safetensors`, the base model's bf16 vision tower.",
       "tasks": [
         "image-understanding"
       ],
@@ -4405,7 +4505,7 @@
       "id": "mach-2-additive-medium",
       "name": "Mach-2-Additive-Medium",
       "organization": "syzygy-research",
-      "summary": "",
+      "summary": "Mach-2 Additive Medium Mach-2 Additive Medium is Qwen3.8-Flash-Next at 1.70 bits per weight: 26.7 GB for the 125.7B text parameters, plus the model's n-gram embedding table at bf16 (102.4 GB).",
       "tasks": [
         "text-generation"
       ],
@@ -4435,7 +4535,7 @@
       "id": "mach-boom",
       "name": "Mach-Boom",
       "organization": "syzygy-research",
-      "summary": "",
+      "summary": "Mach Boom Mach Boom is Gradium's Phonon 31m English text-to-speech model at 3.5 bits per weight: an 18.2 MB file that speaks 8 to 10x faster than real time on one CPU core.",
       "tasks": [
         "speech-synthesis"
       ],
@@ -4464,7 +4564,7 @@
       "id": "mimo-7b-base",
       "name": "MiMo-7B-Base",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "Benchmark MiMo-7B-RL MiMo-7B-RL-0530 Mathematics MATH500 (Pass@1) 95.8 97.2 AIME 2024 (Pass@1) 68.2 80.1 AIME 2025 (Pass@1) 55.4 70.2 Code LiveCodeBench v5 (Pass@1) 57.8 60.9 LiveCodeBench v6 (Pass@1) 49.3 52.2 STEM GPQA-Diamond (Pass@1) 54.4 60.6 General Alignbench1.1 (Evaluated by GPT4.1) 6.9 7.4 --- I.",
       "tasks": [
         "text-generation"
       ],
@@ -4493,7 +4593,7 @@
       "id": "mimo-7b-mtps",
       "name": "MiMo-7B-MTPs",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "Pretrained MTPs of MiMo-7B This model repository contains the pretrained MTP weights of MiMo-7B (`model.mtp_layers.1` and `model.mtp_layers.2`) Currently, MiMo-7B model each has 1 MTP layer (`model.mtp_layers.0`).",
       "tasks": [
         "embedding"
       ],
@@ -4522,7 +4622,7 @@
       "id": "mimo-7b-rl",
       "name": "MiMo-7B-RL",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "Benchmark MiMo-7B-RL MiMo-7B-RL-0530 Mathematics MATH500 (Pass@1) 95.8 97.2 AIME 2024 (Pass@1) 68.2 80.1 AIME 2025 (Pass@1) 55.4 70.2 Code LiveCodeBench v5 (Pass@1) 57.8 60.9 LiveCodeBench v6 (Pass@1) 49.3 52.2 STEM GPQA-Diamond (Pass@1) 54.4 60.6 General Alignbench1.1 (Evaluated by GPT4.1) 6.9 7.4 --- I.",
       "tasks": [
         "text-generation"
       ],
@@ -4551,7 +4651,7 @@
       "id": "mimo-7b-rl-0530",
       "name": "MiMo-7B-RL-0530",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "Benchmark MiMo-7B-RL MiMo-7B-RL-0530 Mathematics MATH500 (Pass@1) 95.8 97.2 AIME 2024 (Pass@1) 68.2 80.1 AIME 2025 (Pass@1) 55.4 70.2 Code LiveCodeBench v5 (Pass@1) 57.8 60.9 LiveCodeBench v6 (Pass@1) 49.3 52.2 STEM GPQA-Diamond (Pass@1) 54.4 60.6 General Alignbench1.1 (Evaluated by GPT4.1) 6.9 7.4 --- I.",
       "tasks": [
         "text-generation"
       ],
@@ -4580,7 +4680,7 @@
       "id": "mimo-7b-rl-zero",
       "name": "MiMo-7B-RL-Zero",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "Introduction Currently, most successful RL works, including open-source research, rely on relatively large base models, e.g., 32B models, particularly for enhancing code reasoning capabilities.",
       "tasks": [
         "text-generation"
       ],
@@ -4609,7 +4709,7 @@
       "id": "mimo-7b-sft",
       "name": "MiMo-7B-SFT",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "Benchmark MiMo-7B-RL MiMo-7B-RL-0530 Mathematics MATH500 (Pass@1) 95.8 97.2 AIME 2024 (Pass@1) 68.2 80.1 AIME 2025 (Pass@1) 55.4 70.2 Code LiveCodeBench v5 (Pass@1) 57.8 60.9 LiveCodeBench v6 (Pass@1) 49.3 52.2 STEM GPQA-Diamond (Pass@1) 54.4 60.6 General Alignbench1.1 (Evaluated by GPT4.1) 6.9 7.4 --- I.",
       "tasks": [
         "text-generation"
       ],
@@ -4731,7 +4831,7 @@
       "id": "mimo-v2-5-asr",
       "name": "MiMo-V2.5-ASR",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "It is built to deliver accurate and robust transcription across Mandarin Chinese and English, multiple Chinese dialects, code-switched speech, song lyrics, knowledge-intensive content, noisy acoustic environments, and multi-speaker conversations.",
       "tasks": [
         "transcription"
       ],
@@ -4761,7 +4861,7 @@
       "id": "mimo-v2-5-base",
       "name": "MiMo-V2.5-Base",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "Introduction MiMo-V2.5 is a native omnimodal model with strong agentic capabilities, supporting text, image, video, and audio understanding within a unified architecture.",
       "tasks": [
         "text-generation"
       ],
@@ -4790,7 +4890,7 @@
       "id": "mimo-v2-5-pro-base",
       "name": "MiMo-V2.5-Pro-Base",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "It utilizes the hybrid attention architecture and 3-layers Multi-Token Prediction (MTP) introduced in MiMo-V2-Flash, with up to 1M tokens context length.",
       "tasks": [
         "text-generation"
       ],
@@ -4819,7 +4919,7 @@
       "id": "mimo-v2-6-distill-qwen-9b",
       "name": "MiMo-V2.6-Distill-Qwen-9B",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "MiMo-V2.6-Distill-Qwen-9B MiMo-V2.6-Distill-Qwen-9B is a 9B agentic model developed by Xiaomi MiMo through supervised fine-tuning of Qwen3.5-9B on MiMo-generated data.",
       "tasks": [
         "image-understanding"
       ],
@@ -4853,7 +4953,7 @@
       "id": "mimo-v2-6-flash-mopd",
       "name": "MiMo-V2.6-Flash-MOPD",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "> - Diagnosing and Mitigating Tool-Call Repetition in MiMo-V2.6 (👉 Technical Blog) > An easy-to-overlook failure mode in which the model keeps issuing the same or highly similar tool calls, appearing busy while making no progress.",
       "tasks": [
         "text-generation"
       ],
@@ -4882,7 +4982,7 @@
       "id": "mimo-v2-6-pro-mopd",
       "name": "MiMo-V2.6-Pro-MOPD",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "> - Diagnosing and Mitigating Tool-Call Repetition in MiMo-V2.6 (👉 Technical Blog) > An easy-to-overlook failure mode in which the model keeps issuing the same or highly similar tool calls, appearing busy while making no progress.",
       "tasks": [
         "text-generation"
       ],
@@ -4911,7 +5011,7 @@
       "id": "mimo-v2-flash-base",
       "name": "MiMo-V2-Flash-Base",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "&nbsp; 🗨️ Xiaomi MiMo Studio &nbsp; 🎨 Xiaomi MiMo API Platform MiMo-V2-Flash MiMo-V2-Flash is a Mixture-of-Experts (MoE) language model with 309B total parameters and 15B active parameters.",
       "tasks": [
         "text-generation"
       ],
@@ -4941,7 +5041,7 @@
       "id": "mimo-vl-7b-rl",
       "name": "MiMo-VL-7B-RL",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "Introduction In this report, we share our efforts to build a compact yet powerful VLM, MiMo-VL-7B.",
       "tasks": [
         "image-understanding"
       ],
@@ -4975,7 +5075,7 @@
       "id": "mimo-vl-7b-rl-2508",
       "name": "MiMo-VL-7B-RL-2508",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "📈 Performance Improvements MiMo-VL-7B-RL-2508 demonstrates consistent improvements across both image and video benchmarks, achieving notable milestones of 70.6 on MMMU and 70.8 on VideoMME.",
       "tasks": [
         "image-understanding"
       ],
@@ -5009,7 +5109,7 @@
       "id": "mimo-vl-7b-sft",
       "name": "MiMo-VL-7B-SFT",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "Introduction In this report, we share our efforts to build a compact yet powerful VLM, MiMo-VL-7B.",
       "tasks": [
         "image-understanding"
       ],
@@ -5043,7 +5143,7 @@
       "id": "mimo-vl-7b-sft-2508",
       "name": "MiMo-VL-7B-SFT-2508",
       "organization": "xiaomi-mimo",
-      "summary": "",
+      "summary": "📈 Performance Improvements MiMo-VL-7B-RL-2508 demonstrates consistent improvements across both image and video benchmarks, achieving notable milestones of 70.6 on MMMU and 70.8 on VideoMME.",
       "tasks": [
         "image-understanding"
       ],
@@ -5077,7 +5177,7 @@
       "id": "ming-3-0-asr-tiny",
       "name": "Ming-3.0-asr-tiny",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "Ming-3.0-asr-tiny Context-aware speech recognition for Chinese, English, and dialects.",
       "tasks": [
         "transcription"
       ],
@@ -5171,7 +5271,7 @@
       "id": "ming-3-0-tts-0-5b",
       "name": "Ming-3.0-tts-0.5B",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "Ming-3.0-tts-0.5B Dense 0.5B multilingual speech synthesis with paralinguistic and free-form control.",
       "tasks": [
         "speech-synthesis"
       ],
@@ -5201,7 +5301,7 @@
       "id": "ming-3-0-tts-tiny",
       "name": "Ming-3.0-tts-tiny",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "Ming-3.0-tts-tiny 7.9B-A1.3B multilingual MoE speech synthesis with paralinguistic and free-form control.",
       "tasks": [
         "speech-synthesis"
       ],
@@ -5231,7 +5331,7 @@
       "id": "ming-image-0-1-design",
       "name": "Ming-Image-0.1-Design",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "It generates complete visual compositions and supports RGBA output with transparent backgrounds.",
       "tasks": [
         "image-generation"
       ],
@@ -5260,7 +5360,7 @@
       "id": "ming-image-0-1-design-layer",
       "name": "Ming-Image-0.1-Design-Layer",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "Quick Start Use the companion Ming-Image repository for installation and inference: This runs the released six-layer card-making example.",
       "tasks": [
         "image-generation"
       ],
@@ -5354,7 +5454,7 @@
       "id": "minimax-h3-image",
       "name": "MiniMax-H3-Image",
       "organization": "minimax",
-      "summary": "",
+      "summary": "MiniMax-H3-Image Online API Use MiniMax-H3-Image directly via API.",
       "tasks": [
         "image-generation"
       ],
@@ -5383,7 +5483,7 @@
       "id": "minimax-h3-image-pe",
       "name": "MiniMax-H3-Image-PE",
       "organization": "minimax",
-      "summary": "",
+      "summary": "MiniMax-H3-Image-PE Online API Use MiniMax-H3-Image directly via API.",
       "tasks": [
         "text-generation"
       ],
@@ -5414,7 +5514,7 @@
       "id": "minimax-music3",
       "name": "MiniMax-Music3",
       "organization": "minimax",
-      "summary": "",
+      "summary": "MiniMax Music 3 MiniMax Music 3 is a high-performance music generation model for creating complete songs up to five minutes long.",
       "tasks": [
         "text-generation"
       ],
@@ -5444,7 +5544,7 @@
       "id": "moderator",
       "name": "moderator",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "On-device NSFW image detection, trained only on licensed and synthetic data.",
       "tasks": [
         "content-moderation",
         "image-classification"
@@ -5510,7 +5610,7 @@
       "id": "ornith-1-5-397b",
       "name": "Ornith-1.5-397B",
       "organization": "ornith-ai",
-      "summary": "",
+      "summary": "🐦 We are introducing Ornith-1.5, a major step toward building foundation models through end-to-end self-improvement.",
       "tasks": [
         "text-generation"
       ],
@@ -5539,7 +5639,7 @@
       "id": "ornith-1-5-9b",
       "name": "Ornith-1.5-9B",
       "organization": "ornith-ai",
-      "summary": "",
+      "summary": "🐦 We are introducing Ornith-1.5, a major step toward building foundation models through end-to-end self-improvement.",
       "tasks": [
         "text-generation"
       ],
@@ -5568,7 +5668,7 @@
       "id": "orze-asr-3way",
       "name": "Orze-ASR-3Way",
       "organization": "boson-ai",
-      "summary": "",
+      "summary": "Orze-ASR-3Way Orze-ASR-3Way is a three-checkpoint composite (ensemble) for English ASR.",
       "tasks": [
         "transcription"
       ],
@@ -5597,7 +5697,7 @@
       "id": "qwen-drive-1-0-4b",
       "name": "Qwen-Drive-1.0-4B",
       "organization": "qwen",
-      "summary": "",
+      "summary": "Qwen-Drive-1.0-4B > [!Note] > This repository contains the weights and configurations of Qwen-Drive-1.0 in the Hugging > Face format.",
       "tasks": [
         "image-understanding"
       ],
@@ -5631,7 +5731,7 @@
       "id": "qwen-image-2-1-pe-i2i",
       "name": "Qwen-Image-2.1-PE-I2I",
       "organization": "qwen",
-      "summary": "",
+      "summary": "With just 7B parameters in its visual generation component (32 Single-Stream DiT layers), Qwen-Image-2.1 balances generation quality, inference efficiency, and versatility.",
       "tasks": [
         "image-generation"
       ],
@@ -5658,7 +5758,7 @@
       "id": "qwen-image-2-1-pe-t2i",
       "name": "Qwen-Image-2.1-PE-T2I",
       "organization": "qwen",
-      "summary": "",
+      "summary": "With just 7B parameters in its visual generation component (32 Single-Stream DiT layers), Qwen-Image-2.1 balances generation quality, inference efficiency, and versatility.",
       "tasks": [
         "image-generation"
       ],
@@ -5686,7 +5786,7 @@
       "id": "qwen-image-2-1-turbo",
       "name": "Qwen-Image-2.1-Turbo",
       "organization": "qwen",
-      "summary": "",
+      "summary": "It uses the same 7B visual generation architecture and loads directly with `QwenImage21Pipeline` in Diffusers.",
       "tasks": [
         "image-generation"
       ],
@@ -5716,7 +5816,7 @@
       "id": "qwen3-asr-1-7b-hf-beam4",
       "name": "Qwen3-ASR-1.7B-hf-beam4",
       "organization": "boson-ai",
-      "summary": "",
+      "summary": "Qwen3-ASR 1.7B HF — beam-4 This is a decoding-calibrated derivative of `Qwen/Qwen3-ASR-1.7B-hf`.",
       "tasks": [
         "transcription"
       ],
@@ -5747,7 +5847,7 @@
       "id": "qwen3-asr-1-7b-hf-orze",
       "name": "Qwen3-ASR-1.7B-hf-orze",
       "organization": "boson-ai",
-      "summary": "",
+      "summary": "Qwen3-ASR-1.7B-hf Orze This is a self-contained, merged English ASR specialization of Qwen/Qwen3-ASR-1.7B-hf, selected by Orze experiments for the Open ASR Leaderboard.",
       "tasks": [
         "transcription"
       ],
@@ -5778,7 +5878,7 @@
       "id": "qwen3guard-stream-0-6b",
       "name": "Qwen3Guard-Stream-0.6B",
       "organization": "qwen",
-      "summary": "",
+      "summary": "Qwen3Guard-Stream-0.6B Qwen3Guard is a series of safety moderation models built upon Qwen3 and trained on a dataset of 1.19 million prompts and responses labeled for safety.",
       "tasks": [
         "embedding"
       ],
@@ -5808,7 +5908,7 @@
       "id": "qwen3guard-stream-4b",
       "name": "Qwen3Guard-Stream-4B",
       "organization": "qwen",
-      "summary": "",
+      "summary": "Qwen3Guard-Stream-4B Qwen3Guard is a series of safety moderation models built upon Qwen3 and trained on a dataset of 1.19 million prompts and responses labeled for safety.",
       "tasks": [
         "embedding"
       ],
@@ -5838,7 +5938,7 @@
       "id": "qwen3guard-stream-8b",
       "name": "Qwen3Guard-Stream-8B",
       "organization": "qwen",
-      "summary": "",
+      "summary": "Qwen3Guard-Stream-8B Qwen3Guard is a series of safety moderation models built upon Qwen3 and trained on a dataset of 1.19 million prompts and responses labeled for safety.",
       "tasks": [
         "embedding"
       ],
@@ -5868,7 +5968,7 @@
       "id": "redact",
       "name": "redact",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "Multilingual on-device PII detection and redaction.",
       "tasks": [
         "pii-redaction",
         "structured-extraction"
@@ -5930,7 +6030,7 @@
       "id": "ring-2-5-1t",
       "name": "Ring-2.5-1T",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "In a major step toward general-purpose AI agents, we're scaling hybrid linear attention across pre-training and RL.",
       "tasks": [
         "text-generation"
       ],
@@ -5959,7 +6059,7 @@
       "id": "ring-flash-2-0",
       "name": "Ring-flash-2.0",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "This is a high-performance thinking model, deeply optimized based on Ling-flash-2.0-base.",
       "tasks": [
         "text-generation"
       ],
@@ -5988,7 +6088,7 @@
       "id": "ring-mini-2-0",
       "name": "Ring-mini-2.0",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "Today, we officially release Ring-mini-2.0 — a high-performance inference-oriented MoE model deeply optimized based on the Ling 2.0 architecture.",
       "tasks": [
         "text-generation"
       ],
@@ -6017,7 +6117,7 @@
       "id": "schemer",
       "name": "schemer",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "On-device structured extraction into a caller-supplied JSON schema.",
       "tasks": [
         "structured-extraction"
       ],
@@ -6041,7 +6141,7 @@
       "id": "shapes",
       "name": "shapes",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "| | | | --- | --- | | Platforms | iOS, macOS, tvOS, visionOS, Android, Linux, Windows, Browser, Node | | Weights | v1.0.0 | | Demo | https://desertant.com/models/shapes/ | Shapes turns a hand-drawn stroke into a clean shape, connector, or arrow.",
       "tasks": [
         "image-classification"
       ],
@@ -6069,7 +6169,7 @@
       "id": "singvl-s1-4b",
       "name": "SingVL_S1_4B",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "Sing VL S1 Sing VL S1 is a multimodal decision model built on Qwen3.5.",
       "tasks": [
         "image-understanding"
       ],
@@ -6100,7 +6200,7 @@
       "id": "swin2sr-classical-sr-x2-64",
       "name": "swin2SR-classical-sr-x2-64",
       "organization": "xenova",
-      "summary": "",
+      "summary": "https://huggingface.co/caidas/swin2SR-classical-sr-x2-64 with ONNX weights to be compatible with Transformers.js.",
       "tasks": [
         "image-generation"
       ],
@@ -6129,7 +6229,7 @@
       "id": "timestral-123m",
       "name": "Timestral-123M",
       "organization": "mistral",
-      "summary": "",
+      "summary": "Timestral-123M Timestral is a family of time series foundation models for zero-shot forecasting, available in 5M, 28M, 123M, and 209M parameter versions.",
       "tasks": [
         "time-series-forecasting"
       ],
@@ -6153,7 +6253,7 @@
       "id": "timestral-209m",
       "name": "Timestral-209M",
       "organization": "mistral",
-      "summary": "",
+      "summary": "Timestral-209M Timestral is a family of time series foundation models for zero-shot forecasting, available in 5M, 28M, 123M, and 209M parameter versions.",
       "tasks": [
         "time-series-forecasting"
       ],
@@ -6177,7 +6277,7 @@
       "id": "timestral-28m",
       "name": "Timestral-28M",
       "organization": "mistral",
-      "summary": "",
+      "summary": "Timestral-28M Timestral is a family of time series foundation models for zero-shot forecasting, available in 5M, 28M, 123M, and 209M parameter versions.",
       "tasks": [
         "time-series-forecasting"
       ],
@@ -6201,7 +6301,7 @@
       "id": "timestral-5m",
       "name": "Timestral-5M",
       "organization": "mistral",
-      "summary": "",
+      "summary": "Timestral-5M Timestral is a family of time series foundation models for zero-shot forecasting, available in 5M, 28M, 123M, and 209M parameter versions.",
       "tasks": [
         "time-series-forecasting"
       ],
@@ -6225,7 +6325,7 @@
       "id": "tinfield-1",
       "name": "Tinfield-1",
       "organization": "bad-theory-labs",
-      "summary": "",
+      "summary": "Tinfield 1 Tinfield 1 is an agentic model for terminal work and long-horizon software engineering.",
       "tasks": [
         "image-understanding"
       ],
@@ -6258,7 +6358,7 @@
       "id": "title",
       "name": "title",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "Title Suggest a title and description for any text.",
       "tasks": [
         "text-generation",
         "title-generation"
@@ -6288,7 +6388,7 @@
       "id": "tongue",
       "name": "tongue",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "On-device language identification for short text across 84 languages.",
       "tasks": [
         "language-identification",
         "text-classification"
@@ -6317,7 +6417,7 @@
       "id": "toxic",
       "name": "toxic",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "On-device hate-speech triage for European languages.",
       "tasks": [
         "content-moderation",
         "text-classification"
@@ -6347,7 +6447,7 @@
       "id": "trocr-small-handwritten",
       "name": "trocr-small-handwritten",
       "organization": "xenova",
-      "summary": "",
+      "summary": "https://huggingface.co/microsoft/trocr-small-handwritten with ONNX weights to be compatible with Transformers.js.",
       "tasks": [
         "image-understanding"
       ],
@@ -6375,7 +6475,7 @@
       "id": "twil-8b",
       "name": "TwIL-8B",
       "organization": "webai",
-      "summary": "",
+      "summary": "TwIL-8B An 8.8B reasoning model for math, code and instruction following, post-trained from `ibm-granite/granite-4.2-8b` with full-parameter supervised fine-tuning and GRPO/DAPO reinforcement learning.",
       "tasks": [
         "text-generation"
       ],
@@ -6403,7 +6503,7 @@
       "id": "twil-lm2",
       "name": "TwIL-LM2",
       "organization": "webai",
-      "summary": "",
+      "summary": "TwIL-LM2 A 2.5B reasoning model for formal logic tasks, built from `ibm-granite/granite-3.3-2b-instruct` through LoRA supervised fine-tuning, WiSE-FT weight interpolation (λ = 0.25) and entropy-weighted GRPO reinforcement learning (MGPO, step 1400).",
       "tasks": [
         "text-generation"
       ],
@@ -6431,7 +6531,7 @@
       "id": "twil-lm3",
       "name": "TwIL-LM3",
       "organization": "webai",
-      "summary": "",
+      "summary": "TwIL-LM3 Do check out our new model TwIL-LM3-Pro, a much better version of the TwIL-LM3 at 3.66B parameters.",
       "tasks": [
         "text-generation"
       ],
@@ -6460,7 +6560,7 @@
       "id": "twil-lm3-pro",
       "name": "TwIL-LM3-Pro",
       "organization": "webai",
-      "summary": "",
+      "summary": "TwIL-LM3-Pro A 3.66B reasoning model for formal logic tasks, built from `ibm-granite/granite-4.2-3b` through LoRA supervised fine-tuning, checkpoint fusion, WiSE-FT weight interpolation, and entropy-weighted GRPO reinforcement learning.",
       "tasks": [
         "text-generation"
       ],
@@ -6488,7 +6588,7 @@
       "id": "uhm",
       "name": "uhm",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "On-device filler-word detection: frame-precise \"uh\"/\"um\"/\"hmm\" spans.",
       "tasks": [
         "audio-classification",
         "filler-word-detection"
@@ -6518,7 +6618,7 @@
       "id": "ui-venus-2-9b",
       "name": "UI-Venus-2-9B",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "UI-Venus-2-9B UI-Venus-2 is a general-purpose foundation GUI agent designed to operate across mobile applications, web platforms, and desktop operating systems through a unified closed-loop reasoning–action framework: the agent observes the current interface, reasons about the task state, executes an action, and incorporates environmental feedback into its next decision.",
       "tasks": [
         "image-understanding"
       ],
@@ -6550,7 +6650,7 @@
       "id": "underdog-27b-1-0",
       "name": "Underdog-27B-1.0",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog-27B-1.0 Underdog-27B by Conway is a 27-billion-parameter model for conversation, writing, coding, and everyday assistance.",
       "tasks": [
         "image-understanding"
       ],
@@ -6583,7 +6683,7 @@
       "id": "underdog-27b-1-1",
       "name": "Underdog-27B-1.1",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog-27B-1.1 Underdog-27B by Conway is a 27-billion-parameter assistant for conversation, writing, coding, and summarization.",
       "tasks": [
         "text-generation"
       ],
@@ -6612,7 +6712,7 @@
       "id": "underdog-bark-0-8b-1-0",
       "name": "Underdog-Bark-0.8B-1.0",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog-Bark-0.8B-1.0 Bark is a small but mighty Underdog speech recognition model.",
       "tasks": [
         "transcription"
       ],
@@ -6642,7 +6742,7 @@
       "id": "underdog-bark-3-0",
       "name": "Underdog-Bark-3.0",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog Bark 3.0 Bark 3.0 is state-of-the-art speech recognition for its size: a 0.6B English model in a 163 MB download that averages 4.94 % word error across the Open ASR Leaderboard's seven English sets.",
       "tasks": [
         "transcription"
       ],
@@ -6673,7 +6773,7 @@
       "id": "underdog-bark-3-0-clean",
       "name": "Underdog-Bark-3.0-Clean",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog Bark 3.0 Clean Underdog Bark 3.0 Clean is the clean version of Bark 3.0 Plus: a 0.6B English speech recognition model in a 180 MB download, with speech cleanup built in.",
       "tasks": [
         "transcription"
       ],
@@ -6704,7 +6804,7 @@
       "id": "underdog-bark-3-0-plus",
       "name": "Underdog-Bark-3.0-Plus",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog Bark 3.0 Plus Bark 3.0 Plus is state-of-the-art speech recognition under 1 GB: a 0.6B English model in a 180 MB download that averages 4.76 % word error across the Open ASR Leaderboard's seven English sets, more accurate than every other open model under 1 GB, and more accurate than NVIDIA's Parakeet TDT 0.6B v3 (4.94 %) and Qwen3-ASR-0.6B (5.16 %), which are 10 to 14 times its size.",
       "tasks": [
         "transcription"
       ],
@@ -6735,7 +6835,7 @@
       "id": "underdog-bark-3-0-pro",
       "name": "Underdog-Bark-3.0-Pro",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog Bark 3.0 Pro Bark 3.0 Pro is state-of-the-art open speech recognition: a 0.6B English model at full precision (bf16, 1.25 GB).",
       "tasks": [
         "transcription"
       ],
@@ -6766,7 +6866,7 @@
       "id": "underdog-poodle-4b",
       "name": "Underdog-Poodle-4B",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog Poodle 4B Underdog Poodle 4B is Qwen3.5-4B with post training for the agent work Underdog does: calling tools, deciding when not to call one, following instructions, and talking a user through a task.",
       "tasks": [
         "image-understanding"
       ],
@@ -6800,7 +6900,7 @@
       "id": "underdog-saluki-27b-1-0",
       "name": "Underdog-Saluki-27B-1.0",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog Saluki 27B 1.0 Qwen3.8-27B in under 8 GB, tuned to keep tool calling intact.",
       "tasks": [
         "text-generation"
       ],
@@ -6830,7 +6930,7 @@
       "id": "underdog-ternary-1-1",
       "name": "Underdog-Ternary-1.1",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog-Ternary-1.1 (DEPRICATED) DEPRICATED: This model, based on Ternary Bonsai 2 27B is no longer being served to underdog users as it is not performant per user feedback.",
       "tasks": [
         "text-generation"
       ],
@@ -6859,7 +6959,7 @@
       "id": "underdog-woof",
       "name": "Underdog-Woof",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog Woof - 1,022x smaller than Fish Audio Drama 3 (41.5 GB), with 25% fewer word errors - 1.42% word error rate on Gradium TTS Hard Cases (English, Mira) - 13.8x faster than real time on one CPU thread (Juno), with no GPU, server or API key - 40.6 MB for the whole model, both voices included, and 402 MB of memory at peak while it runs (Juno) Underdog Woof is a small English text-to-speech mod",
       "tasks": [
         "speech-synthesis"
       ],
@@ -6887,7 +6987,7 @@
       "id": "underdog-woof-2b-1-1",
       "name": "Underdog-Woof-2B-1.1",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog-Woof-2B-1.1 Woof is a small but mighty Underdog model.",
       "tasks": [
         "text-generation"
       ],
@@ -6916,7 +7016,7 @@
       "id": "underdog-woof-4b-1-1",
       "name": "Underdog-Woof-4B-1.1",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog-Woof-4B-1.1 Woof is a small but mighty Underdog model.",
       "tasks": [
         "text-generation"
       ],
@@ -6945,7 +7045,7 @@
       "id": "underdog-woof-japanese",
       "name": "Underdog-Woof-Japanese",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Underdog Woof Japanese - 40.5 MB for the whole model, both voices included - 14.5x faster than real time on one CPU thread (Apple M5 Max), with no GPU, server or API key - 437 MB of memory at peak while it runs - Two voices: Misa (default) and Mikasa Underdog Woof Japanese is a small Japanese text-to-speech model.",
       "tasks": [
         "speech-synthesis"
       ],
@@ -6973,7 +7073,7 @@
       "id": "unlimited-ocr",
       "name": "Unlimited-OCR",
       "organization": "baidu",
-      "summary": "",
+      "summary": "Unlimited OCR Works Welcome the Era of One-shot Long-horizon Parsing.",
       "tasks": [
         "image-understanding",
         "ocr"
@@ -7008,7 +7108,7 @@
       "id": "unlimited-ocr-2",
       "name": "Unlimited-OCR-2",
       "organization": "baidu",
-      "summary": "",
+      "summary": "Unlimited OCR Works 2 Pioneering the OCR-3.0 Era: From Long- to Unlimited-Horizon Parsing.",
       "tasks": [
         "image-understanding",
         "ocr"
@@ -7043,7 +7143,7 @@
       "id": "vit-gpt2-image-captioning",
       "name": "vit-gpt2-image-captioning",
       "organization": "xenova",
-      "summary": "",
+      "summary": "https://huggingface.co/nlpconnect/vit-gpt2-image-captioning with ONNX weights to be compatible with Transformers.js.",
       "tasks": [
         "image-understanding"
       ],
@@ -7071,7 +7171,7 @@
       "id": "voxtral-mini-4b-realtime-arabic",
       "name": "Voxtral-Mini-4B-Realtime-Arabic",
       "organization": "mistral",
-      "summary": "",
+      "summary": "Voxtral Mini 4B Realtime Arabic > [!Note] > See a space live demo directly in your browser here powered by this ONNX checkpoint.",
       "tasks": [
         "transcription"
       ],
@@ -7099,7 +7199,7 @@
       "id": "voz",
       "name": "voz",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "On-device speech recognition: transcripts with word-level timestamps, 25 languages.",
       "tasks": [
         "transcription"
       ],
@@ -7128,7 +7228,7 @@
       "id": "webai-colvec1-1-4b",
       "name": "webAI-ColVec1.1-4b",
       "organization": "webai",
-      "summary": "",
+      "summary": "webAI-Official/webAI-ColVec1.1-4b ⚡ Summary webAI-Official/webAI-ColVec1.1-4b is a ColBERT-style multimodal embedding model based on Qwen/Qwen3.5-4B.",
       "tasks": [
         "retrieval"
       ],
@@ -7157,7 +7257,7 @@
       "id": "webai-colvec1-1-8b",
       "name": "webAI-ColVec1.1-8b",
       "organization": "webai",
-      "summary": "",
+      "summary": "webAI-Official/webAI-ColVec1.1-8b ⚡ Summary webAI-Official/webAI-ColVec1.1-8b is a ColBERT-style multimodal embedding model based on Qwen/Qwen3.5-9B.",
       "tasks": [
         "retrieval"
       ],
@@ -7186,7 +7286,7 @@
       "id": "webai-colvec1-9b",
       "name": "webAI-ColVec1-9b",
       "organization": "webai",
-      "summary": "",
+      "summary": "A new version of this model is available here webAI-ColVec1.1-8b !!! ⚡ Summary webAI-Official/webAI-ColVec1-9b is a state-of-the-art ColBERT-style multimodal embedding model based on Qwen/Qwen3.5-9B.",
       "tasks": [
         "retrieval"
       ],
@@ -7215,7 +7315,7 @@
       "id": "who",
       "name": "who",
       "organization": "desert-ant-labs",
-      "summary": "",
+      "summary": "On-device speaker labeling: per-person turns with timestamps.",
       "tasks": [
         "diarization",
         "voice-activity-detection"
@@ -7245,7 +7345,7 @@
       "id": "woof-1-0-4b",
       "name": "woof-1.0-4B",
       "organization": "underdog-ai",
-      "summary": "",
+      "summary": "Woof 1.0 (4B) Woof is a small but mighty Underdog model.",
       "tasks": [
         "text-generation"
       ],
@@ -7274,7 +7374,7 @@
       "id": "zwz-2b",
       "name": "ZwZ-2B",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "It is trained using Region-to-Image Distillation (R2I) combined with reinforcement learning, enabling superior fine-grained visual understanding in a single forward pass — no inference-time zooming or tool calling required.",
       "tasks": [
         "image-understanding"
       ],
@@ -7308,7 +7408,7 @@
       "id": "zwz2-27b",
       "name": "ZwZ2-27B",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "It learns to connect visual evidence across regions through comparison, aggregation, matching, and multi-step reasoning.",
       "tasks": [
         "image-understanding"
       ],
@@ -7340,7 +7440,7 @@
       "id": "zwz2-4b",
       "name": "ZwZ2-4B",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "It learns to connect visual evidence across regions through comparison, aggregation, matching, and multi-step reasoning.",
       "tasks": [
         "image-understanding"
       ],
@@ -7372,7 +7472,7 @@
       "id": "zwz2-9b",
       "name": "ZwZ2-9B",
       "organization": "ant-ling",
-      "summary": "",
+      "summary": "It learns to connect visual evidence across regions through comparison, aggregation, matching, and multi-step reasoning.",
       "tasks": [
         "image-understanding"
       ],
@@ -7400,5 +7500,9 @@
       "agent_detect": null,
       "builds": 1
     }
-  ]
+  ],
+  "scorecard": {
+    "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+    "as_of": "2026-07-18"
+  }
 }

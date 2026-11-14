@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-10-26",
-  "summary": "",
+  "summary": "LBS-27B Learning to Look Beyond Screens: Transferable Visual Observation from GUI Grounding 💻 Project · 🤗 Collection Model Summary LBS-27B is an agentic vision-language model based on Qwen3.8-27b.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",

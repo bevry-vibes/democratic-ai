@@ -8,7 +8,7 @@
   ],
   "organization": "nace-ai",
   "released": "2026-11-08",
-  "summary": "",
+  "summary": "Kapitsa Lightning Nemotron 3.5 Lightning 30B-A3B (NVFP4, 22.9 GB) running locally on Apple Silicon through Kapitsa.",
   "tags": [
     "task:text-generation",
     "domain:language",

@@ -8,7 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-09-16",
-  "summary": "",
+  "summary": "API Try Docs Blog LiquidCodec LiquidCodec is a compact, streaming audio codec that compresses speech into discrete tokens and converts them back into audio.",
   "tags": [
     "task:embedding",
     "domain:embeddings",

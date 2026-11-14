@@ -8,7 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2025-11-14",
-  "summary": "",
+  "summary": "Pretrained MTPs of MiMo-7B This model repository contains the pretrained MTP weights of MiMo-7B (`model.mtp_layers.1` and `model.mtp_layers.2`) Currently, MiMo-7B model each has 1 MTP layer (`model.mtp_layers.0`).",
   "tags": [
     "task:embedding",
     "domain:embeddings",

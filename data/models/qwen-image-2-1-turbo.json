@@ -8,7 +8,7 @@
   ],
   "organization": "qwen",
   "released": "2026-10-09",
-  "summary": "",
+  "summary": "It uses the same 7B visual generation architecture and loads directly with `QwenImage21Pipeline` in Diffusers.",
   "tags": [
     "task:image-generation",
     "domain:vision",

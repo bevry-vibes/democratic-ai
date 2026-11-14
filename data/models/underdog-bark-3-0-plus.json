@@ -8,7 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-10-15",
-  "summary": "",
+  "summary": "Underdog Bark 3.0 Plus Bark 3.0 Plus is state-of-the-art speech recognition under 1 GB: a 0.6B English model in a 180 MB download that averages 4.76 % word error across the Open ASR Leaderboard's seven English sets, more accurate than every other open model under 1 GB, and more accurate than NVIDIA's Parakeet TDT 0.6B v3 (4.94 %) and Qwen3-ASR-0.6B (5.16 %), which are 10 to 14 times its size.",
   "tags": [
     "task:transcription",
     "domain:speech",

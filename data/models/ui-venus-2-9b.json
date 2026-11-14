@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-08-26",
-  "summary": "",
+  "summary": "UI-Venus-2-9B UI-Venus-2 is a general-purpose foundation GUI agent designed to operate across mobile applications, web platforms, and desktop operating systems through a unified closed-loop reasoning–action framework: the agent observes the current interface, reasons about the task state, executes an action, and incorporates environmental feedback into its next decision.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",

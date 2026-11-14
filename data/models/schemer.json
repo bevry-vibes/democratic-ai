@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-07-06",
-  "summary": "",
+  "summary": "On-device structured extraction into a caller-supplied JSON schema.",
   "tags": [
     "task:structured-extraction",
     "license:other"

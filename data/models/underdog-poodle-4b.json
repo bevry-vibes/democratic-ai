@@ -8,7 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-10-24",
-  "summary": "",
+  "summary": "Underdog Poodle 4B Underdog Poodle 4B is Qwen3.5-4B with post training for the agent work Underdog does: calling tools, deciding when not to call one, following instructions, and talking a user through a task.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",

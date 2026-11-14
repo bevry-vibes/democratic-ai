@@ -8,7 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-10-04",
-  "summary": "",
+  "summary": "Underdog-Ternary-1.1 (DEPRICATED) DEPRICATED: This model, based on Ternary Bonsai 2 27B is no longer being served to underdog users as it is not performant per user feedback.",
   "tags": [
     "task:text-generation",
     "domain:language",

@@ -8,7 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-10-08",
-  "summary": "",
+  "summary": "Underdog Saluki 27B 1.0 Qwen3.8-27B in under 8 GB, tuned to keep tool calling intact.",
   "tags": [
     "task:text-generation",
     "domain:language",

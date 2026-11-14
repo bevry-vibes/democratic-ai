@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-02-10",
-  "summary": "",
+  "summary": "In a major step toward general-purpose AI agents, we're scaling hybrid linear attention across pre-training and RL.",
   "tags": [
     "task:text-generation",
     "domain:language",

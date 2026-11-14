@@ -8,7 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2026-04-27",
-  "summary": "",
+  "summary": "It utilizes the hybrid attention architecture and 3-layers Multi-Token Prediction (MTP) introduced in MiMo-V2-Flash, with up to 1M tokens context length.",
   "tags": [
     "task:text-generation",
     "domain:language",

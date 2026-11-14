@@ -8,7 +8,7 @@
   ],
   "organization": "syzygy-research",
   "released": "2026-09-27",
-  "summary": "",
+  "summary": "Mach-2 Additive Medium Mach-2 Additive Medium is Qwen3.8-Flash-Next at 1.70 bits per weight: 26.7 GB for the 125.7B text parameters, plus the model's n-gram embedding table at bf16 (102.4 GB).",
   "tags": [
     "task:text-generation",
     "domain:language",

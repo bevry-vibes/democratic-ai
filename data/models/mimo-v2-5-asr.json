@@ -8,7 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2026-04-23",
-  "summary": "",
+  "summary": "It is built to deliver accurate and robust transcription across Mandarin Chinese and English, multiple Chinese dialects, code-switched speech, song lyrics, knowledge-intensive content, noisy acoustic environments, and multi-speaker conversations.",
   "tags": [
     "task:transcription",
     "domain:speech",

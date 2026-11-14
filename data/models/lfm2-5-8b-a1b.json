@@ -8,7 +8,7 @@
   ],
   "organization": "liquid-ai",
   "released": "2026-05-28",
-  "summary": "",
+  "summary": "It builds on the LFM2 architecture with extended pre-training and reinforcement learning.",
   "tags": [
     "task:text-generation",
     "domain:language",

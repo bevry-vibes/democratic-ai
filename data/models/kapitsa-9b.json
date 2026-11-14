@@ -8,7 +8,7 @@
   ],
   "organization": "nace-ai",
   "released": "2026-11-08",
-  "summary": "",
+  "summary": "Kapitsa 9B Qwen3.5 9B (4-bit, 9.0 GB) running locally on Apple Silicon through Kapitsa.",
   "tags": [
     "task:text-generation",
     "domain:language",

@@ -8,7 +8,7 @@
   ],
   "organization": "nace-ai",
   "released": "2026-09-28",
-  "summary": "",
+  "summary": "It serves the TypeSafe-compatible `/v1/systemone` API through the bundled Kev code, the same request and response format as the hosted Drex API and the open Drex DLM.",
   "tags": [
     "task:text-classification",
     "domain:language",

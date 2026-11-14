@@ -8,7 +8,7 @@
   ],
   "organization": "webai",
   "released": "2026-09-03",
-  "summary": "",
+  "summary": "TwIL-LM3-Pro A 3.66B reasoning model for formal logic tasks, built from `ibm-granite/granite-4.2-3b` through LoRA supervised fine-tuning, checkpoint fusion, WiSE-FT weight interpolation, and entropy-weighted GRPO reinforcement learning.",
   "tags": [
     "task:text-generation",
     "domain:language",

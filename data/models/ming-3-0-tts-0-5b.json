@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-09-22",
-  "summary": "",
+  "summary": "Ming-3.0-tts-0.5B Dense 0.5B multilingual speech synthesis with paralinguistic and free-form control.",
   "tags": [
     "task:speech-synthesis",
     "domain:speech",

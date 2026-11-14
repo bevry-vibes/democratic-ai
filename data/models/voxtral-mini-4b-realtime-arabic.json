@@ -8,7 +8,7 @@
   ],
   "organization": "mistral",
   "released": "2026-10-08",
-  "summary": "",
+  "summary": "Voxtral Mini 4B Realtime Arabic > [!Note] > See a space live demo directly in your browser here powered by this ONNX checkpoint.",
   "tags": [
     "task:transcription",
     "domain:speech",

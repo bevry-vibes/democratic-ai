@@ -145,5 +145,15 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "1 builds are attached."
+  "notes": "1 builds are attached.",
+  "performance": {
+    "openness_morality": 65,
+    "code_reasoning": 77,
+    "research_citation": 55,
+    "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
+    "as_of": "2026-07-18",
+    "match": "exact",
+    "note": "Half liberator; strong small coder.",
+    "name": "Qwen 3.6-27B"
+  }
 }

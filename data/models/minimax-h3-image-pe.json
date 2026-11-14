@@ -8,7 +8,7 @@
   ],
   "organization": "minimax",
   "released": "2026-11-08",
-  "summary": "",
+  "summary": "MiniMax-H3-Image-PE Online API Use MiniMax-H3-Image directly via API.",
   "tags": [
     "task:text-generation",
     "domain:language",

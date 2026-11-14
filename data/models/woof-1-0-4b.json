@@ -8,7 +8,7 @@
   ],
   "organization": "underdog-ai",
   "released": "2026-09-04",
-  "summary": "",
+  "summary": "Woof 1.0 (4B) Woof is a small but mighty Underdog model.",
   "tags": [
     "task:text-generation",
     "domain:language",

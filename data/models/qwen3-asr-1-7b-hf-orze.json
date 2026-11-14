@@ -8,7 +8,7 @@
   ],
   "organization": "boson-ai",
   "released": "2026-08-22",
-  "summary": "",
+  "summary": "Qwen3-ASR-1.7B-hf Orze This is a self-contained, merged English ASR specialization of Qwen/Qwen3-ASR-1.7B-hf, selected by Orze experiments for the Open ASR Leaderboard.",
   "tags": [
     "task:transcription",
     "domain:speech",

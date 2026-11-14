@@ -8,7 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2026-09-21",
-  "summary": "",
+  "summary": "Introduction MiMo-V2.6-Flash-RL is the efficiency-balanced checkpoint of the MiMo-V2.6 series.",
   "tags": [
     "task:text-generation",
     "domain:language",

@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-09-06",
-  "summary": "",
+  "summary": "LLaDA-UI Bringing Block-wise Diffusion to Vision-Language GUI Agents LLaDA-UI is an MoE-based, block-wise diffusion vision-language GUI agent.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",

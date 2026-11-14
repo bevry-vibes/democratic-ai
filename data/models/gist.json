@@ -8,7 +8,7 @@
   ],
   "organization": "desert-ant-labs",
   "released": "2026-07-17",
-  "summary": "",
+  "summary": "Gist Generate topics and tags for posts and articles.",
   "tags": [
     "task:text-classification",
     "task:topic-tagging",

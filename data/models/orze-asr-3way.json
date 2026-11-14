@@ -8,7 +8,7 @@
   ],
   "organization": "boson-ai",
   "released": "2026-08-23",
-  "summary": "",
+  "summary": "Orze-ASR-3Way Orze-ASR-3Way is a three-checkpoint composite (ensemble) for English ASR.",
   "tags": [
     "task:transcription",
     "domain:speech",

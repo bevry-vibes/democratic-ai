@@ -8,7 +8,7 @@
   ],
   "organization": "xenova",
   "released": "2023-05-03",
-  "summary": "",
+  "summary": "https://huggingface.co/dslim/bert-base-NER with ONNX weights to be compatible with Transformers.js.",
   "tags": [
     "task:structured-extraction",
     "domain:language",

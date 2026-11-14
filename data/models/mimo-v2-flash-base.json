@@ -8,7 +8,7 @@
   ],
   "organization": "xiaomi-mimo",
   "released": "2025-12-16",
-  "summary": "",
+  "summary": "&nbsp; 🗨️ Xiaomi MiMo Studio &nbsp; 🎨 Xiaomi MiMo API Platform MiMo-V2-Flash MiMo-V2-Flash is a Mixture-of-Experts (MoE) language model with 309B total parameters and 15B active parameters.",
   "tags": [
     "task:text-generation",
     "domain:language",

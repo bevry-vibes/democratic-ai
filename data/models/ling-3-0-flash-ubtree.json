@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-10-14",
-  "summary": "",
+  "summary": "It combines a five-layer DFlash backbone with a learned bigram selector to propose multiple candidate continuations for target-model verification.",
   "tags": [
     "task:text-generation",
     "domain:language",

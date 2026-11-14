@@ -8,7 +8,7 @@
   ],
   "organization": "zai",
   "released": "2026-01-30",
-  "summary": "",
+  "summary": "It introduces Multi-Token Prediction (MTP) loss and stable full-task reinforcement learning to improve training efficiency, recognition accuracy, and generalization.",
   "tags": [
     "task:image-understanding",
     "task:ocr",

@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-11-11",
-  "summary": "",
+  "summary": "Sing VL S1 Sing VL S1 is a multimodal decision model built on Qwen3.5.",
   "tags": [
     "task:image-understanding",
     "domain:multimodal",

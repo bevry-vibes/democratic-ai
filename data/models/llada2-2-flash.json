@@ -8,7 +8,7 @@
   ],
   "organization": "ant-ling",
   "released": "2026-07-16",
-  "summary": "",
+  "summary": "LLaDA2.2-flash LLaDA2.2-flash is an agent-oriented diffusion language model in the LLaDA2 series.",
   "tags": [
     "task:text-generation",
     "domain:language",
