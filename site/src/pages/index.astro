@@ -43,29 +43,22 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">How to use it</p>
-          <h2>Two ways in</h2>
+          <p class="eyebrow">Models</p>
+          <h2>Strongest overall scores</h2>
         </div>
       </div>
-      <div class="usecase-grid">
-        <div class="panel">
-          <h3>For humans</h3>
-          <ol class="usecase-list">
-            <li><a href="/tags/">Start with a job.</a> Pick the task first, then narrow by context, licence, or score.</li>
-            <li><a href="/models/">Compare models.</a> Sort by overall score, syndication, performance, openness, or citation.</li>
-            <li><a href="/about/">Read the method.</a> See how the tiers and scorecard are decided.</li>
-          </ol>
+      <p class="muted" style="margin-bottom:1.4rem">
+        Six models with the strongest current overall score. <a href="/about/#scorecard">How the score is made</a>.
+      </p>
+      <div class="card-grid">
+        {top.map((model) => <ModelCard model={model} />)}
+      </div>
+      <div class="see-all-models">
+        <div>
+          <strong>There are {index.models.length} models in the catalogue.</strong>
+          <p class="muted">Browse the full list by task, context, licence, and score.</p>
         </div>
-        <div class="panel" id="agents">
-          <h3>For agents</h3>
-          <p>Read the JSON, not the HTML. No account is needed.</p>
-          <ul class="usecase-list">
-            <li><code>GET /api/v1/index.json</code> — compact model rows, tags, and scorecard.</li>
-            <li><code>GET /api/v1/models/&lt;id&gt;.json</code> — the full model record.</li>
-            <li><code>GET /api/v1/tags.json</code> — the tag vocabulary.</li>
-          </ul>
-          <a class="button secondary" href="/data/">API and schema</a>
-        </div>
+        <a class="button secondary" href="/models/">See all {index.models.length} models →</a>
       </div>
     </div>
   </section>
@@ -112,16 +105,29 @@ const buildCount = index.models.reduce((total, model) => total + model.builds, 0
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Quick start</p>
-          <h2>Strongest overall scores</h2>
+          <p class="eyebrow">How to use it</p>
+          <h2>Two ways in</h2>
         </div>
-        <a href="/models/?sort=overall">All models →</a>
       </div>
-      <p class="muted" style="margin-bottom:1.4rem">
-        Top six by the current overall score. <a href="/about/#scorecard">How the score is made</a>.
-      </p>
-      <div class="card-grid">
-        {top.map((model) => <ModelCard model={model} />)}
+      <div class="usecase-grid">
+        <div class="panel">
+          <h3>For humans</h3>
+          <ol class="usecase-list">
+            <li><a href="/tags/">Start with a job.</a> Pick the task first, then narrow by context, licence, or score.</li>
+            <li><a href="/models/">Compare models.</a> Sort by overall score, syndication, performance, openness, or citation.</li>
+            <li><a href="/about/">Read the method.</a> See how the tiers and scorecard are decided.</li>
+          </ol>
+        </div>
+        <div class="panel" id="agents">
+          <h3>For agents</h3>
+          <p>Read the JSON, not the HTML. No account is needed.</p>
+          <ul class="usecase-list">
+            <li><code>GET /api/v1/index.json</code> — compact model rows, tags, and scorecard.</li>
+            <li><code>GET /api/v1/models/&lt;id&gt;.json</code> — the full model record.</li>
+            <li><code>GET /api/v1/tags.json</code> — the tag vocabulary.</li>
+          </ul>
+          <a class="button secondary" href="/data/">API and schema</a>
+        </div>
       </div>
     </div>
   </section>

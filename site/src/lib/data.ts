@@ -89,6 +89,7 @@ export interface CompactModel {
   scorecard?: Scorecard | null
   models_dev: string | null
   agent_detect: string | null
+  providers: string[]
   builds: number
 }
 
@@ -137,6 +138,7 @@ export interface ModelRecord extends Omit<CompactModel, "license" | "releases"> 
     hugging_face: string
     models_dev: string | null
     agent_detect: string | null
+    providers: string[]
     gated: boolean | string | null
   }
   syndication: {

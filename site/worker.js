@@ -27,6 +27,22 @@ function row(label, cells) {
   return `<tr><th scope="row">${escapeHtml(label)}</th>${cells.map((cell) => `<td>${cell}</td>`).join("")}</tr>`
 }
 
+function countPill(label, count, href, tone, tooltip) {
+  return `<a class="count-pill ${escapeHtml(tone)}" href="${escapeHtml(href)}" data-tooltip="${escapeHtml(tooltip)}" aria-label="${escapeHtml(`${label}: ${count}. ${tooltip}`)}"><span class="count-pill-label">${escapeHtml(label)}</span><span class="count-pill-count">${escapeHtml(count)}</span></a>`
+}
+
+function chip(label, href, className, tooltip) {
+  return `<a class="chip ${escapeHtml(className)}" href="${escapeHtml(href)}" data-tooltip="${escapeHtml(tooltip)}" aria-label="${escapeHtml(`${label}. ${tooltip}`)}">${escapeHtml(label)}</a>`
+}
+
+function tierDescription(tier) {
+  if (tier === "commons") return "Weights, training data, and training code are open. The licence permits reuse."
+  if (tier === "reciprocal") return "Weights and training code are open, and the training data is documented or open. The licence permits reuse."
+  if (tier === "shared") return "The weights are available, but the training data is not open and the licence may restrict reuse."
+  if (tier === "closed") return "The weights are not available."
+  return "The evidence about the weights is not sufficient to make a determination."
+}
+
 async function asset(request, env, path) {
   return env.ASSETS.fetch(new Request(new URL(path, request.url), request))
 }
@@ -57,6 +73,15 @@ async function renderComparison(request, env, ids) {
     records.push(await response.json())
   }
 
+  let vocabulary = { namespaces: {} }
+  const tagsResponse = await asset(request, env, "/api/v1/tags.json")
+  if (tagsResponse.ok) vocabulary = await tagsResponse.json()
+  const tagDefinition = (tag) => {
+    const [namespace, ...rest] = tag.split(":")
+    const value = rest.join(":")
+    return vocabulary.namespaces?.[namespace]?.values?.[value] ?? vocabulary.namespaces?.[namespace]?.definition ?? "A tag in the catalogue."
+  }
+
   const head = `<tr><th scope="col">Field</th>${records
     .map(
       (model) =>
@@ -69,66 +94,156 @@ async function renderComparison(request, env, ids) {
       "Overall",
       records.map((model) => {
         const overall = model.scorecard?.overall
-        return overall?.score == null
-          ? "—"
-          : `<strong>${score(overall.score)}</strong><small>${overall.coverage} of 4 axes</small>`
+        return countPill(
+          "overall",
+          overall?.score == null ? "—" : Math.round(overall.score),
+          `/models/${model.id}/#scorecard-overall`,
+          "score-overall",
+          overall?.score == null
+            ? "No overall score is recorded."
+            : `Weighted mean of ${overall.coverage} of 4 axes. Missing axes are excluded, not zero.`,
+        )
       }),
     ),
     row(
       "Syndication",
       records.map((model) => {
         const value = model.scorecard?.syndication
-        return value
-          ? `<strong>${value.score}/${value.max}</strong><small>${escapeHtml(value.band.replaceAll("-", " "))}</small>`
-          : "—"
+        return countPill(
+          "syndication",
+          value ? `${value.score}/${value.max}` : "—",
+          `/models/${model.id}/#scorecard-syndication`,
+          "score-syndication",
+          value ? `Independent listings. Band: ${value.band.replaceAll("-", " ")}. Not quality.` : "No syndication score is recorded.",
+        )
       }),
     ),
     row(
       "Performance",
       records.map((model) => {
         const value = model.scorecard?.performance
-        if (!value || value.score == null) return "—"
-        return `<strong>${score(value.score)}</strong><small>${escapeHtml(value.basis ?? "")}${value.match === "base" ? " · base match" : ""}</small>`
+        return countPill(
+          "performance",
+          value?.score == null ? "—" : Math.round(value.score),
+          `/models/${model.id}/#scorecard-performance`,
+          "score-performance",
+          value?.score == null
+            ? "No current performance benchmark is recorded."
+            : `Current task performance${value.basis ? ` on a ${value.basis} basis` : ""}${value.match === "base" ? "; base-model match" : ""}.`,
+        )
       }),
     ),
     row(
       "Openness",
       records.map((model) => {
         const value = model.scorecard?.openness_morality
-        return value ? `<strong>${score(value.score)}</strong><small>${escapeHtml(value.tier)}</small>` : "—"
+        return countPill(
+          "openness",
+          value ? Math.round(value.score) : "—",
+          `/models/${model.id}/#scorecard-openness`,
+          "score-openness",
+          value ? `Release terms only. Tier: ${value.tier}.` : "No openness score is recorded.",
+        )
       }),
     ),
     row(
       "Citation",
       records.map((model) => {
         const value = model.scorecard?.research_citation
-        return value?.score == null ? "—" : `<strong>${score(value.score)}</strong><small>citation not measured</small>`
+        return countPill(
+          "citation",
+          value?.score == null ? "—" : Math.round(value.score),
+          `/models/${model.id}/#scorecard-research`,
+          "score-research",
+          value?.score == null ? "No current citation or research benchmark is recorded." : "Current research benchmark. Citation accuracy is not measured.",
+        )
       }),
     ),
     row(
       "Tier",
-      records.map((model) => `<span class="badge badge-${escapeHtml(model.tier)}">${escapeHtml(model.tier)}</span>`),
+      records.map((model) => {
+        const tier = model.openness?.tier ?? model.tier ?? "unproven"
+        return chip(tier, `/models/?tier=${encodeURIComponent(tier)}`, `badge badge-${tier}`, tierDescription(tier))
+      }),
     ),
-    row("Licence", records.map((model) => escapeHtml(model.license?.id ?? "unknown"))),
+    row(
+      "Licence",
+      records.map((model) => {
+        const licence = model.license?.id ?? "unknown"
+        return chip(licence, `/tags/license/${encodeURIComponent(licence)}/`, "tag-license", tagDefinition(`license:${licence}`))
+      }),
+    ),
     row(
       "Tasks",
-      records.map((model) =>
-        (model.tags ?? [])
-          .filter((tag) => tag.startsWith("task:"))
-          .map((tag) => `<span class="chip tag-task">${escapeHtml(tag.slice(5))}</span>`)
-          .join(" ") || "—",
-      ),
+      records.map((model) => {
+        const tasks = (model.tags ?? []).filter((tag) => tag.startsWith("task:"))
+        return tasks.length > 0
+          ? tasks
+              .map((tag) => chip(tag, `/tags/task/${encodeURIComponent(tag.slice(5))}/`, "tag-task", tagDefinition(tag)))
+              .join(" ")
+          : "—"
+      }),
     ),
-    row("Context", records.map((model) => escapeHtml(context(model.capabilities?.context_tokens)))),
+    row(
+      "Context",
+      records.map((model) => {
+        const tokens = model.capabilities?.context_tokens
+        return chip(
+          `context: ${context(tokens)}`,
+          tokens ? `/models/?min_context=${tokens}` : "/models/",
+          "meta-context",
+          tokens ? "Filter the model index to models with at least this context window." : "No context window is recorded.",
+        )
+      }),
+    ),
     row(
       "Size",
-      records.map((model) => (model.footprint?.params_b == null ? "Unknown" : `${escapeHtml(model.footprint.params_b)}B`)),
+      records.map((model) => {
+        const params = model.footprint?.params_b
+        return chip(
+          params == null ? "Unknown size" : `${params}B`,
+          params == null ? "/models/" : `/models/?min_params=${params}`,
+          "capability",
+          params == null ? "No parameter count is recorded." : "Filter the model index to models of at least this parameter class.",
+        )
+      }),
     ),
-    row("Tool calling", records.map((model) => escapeHtml(yesNo(model.capabilities?.tool_calling)))),
-    row("Reasoning", records.map((model) => escapeHtml(yesNo(model.capabilities?.reasoning)))),
-    row("Structured output", records.map((model) => escapeHtml(yesNo(model.capabilities?.structured_output)))),
-    row("Builds", records.map((model) => String((model.builds ?? []).length))),
-    row("Released", records.map((model) => escapeHtml(model.released ?? "—"))),
+    row(
+      "Tool calling",
+      records.map((model) =>
+        chip(yesNo(model.capabilities?.tool_calling), "/models/?capability=tool-calling", `capability-${model.capabilities?.tool_calling === true ? "yes" : model.capabilities?.tool_calling === false ? "no" : "unknown"}`, "Filter the model index to models with this tool-calling value."),
+      ),
+    ),
+    row(
+      "Reasoning",
+      records.map((model) =>
+        chip(yesNo(model.capabilities?.reasoning), "/models/?capability=reasoning", `capability-${model.capabilities?.reasoning === true ? "yes" : model.capabilities?.reasoning === false ? "no" : "unknown"}`, "Filter the model index to models with this reasoning value."),
+      ),
+    ),
+    row(
+      "Structured output",
+      records.map((model) =>
+        chip(yesNo(model.capabilities?.structured_output), "/models/?capability=structured-output", `capability-${model.capabilities?.structured_output === true ? "yes" : model.capabilities?.structured_output === false ? "no" : "unknown"}`, "Filter the model index to models with this structured-output value."),
+      ),
+    ),
+    row(
+      "Builds",
+      records.map((model) =>
+        countPill(
+          "builds",
+          String((model.builds ?? []).length),
+          `/models/${model.id}/#builds`,
+          "meta-builds",
+          "A build is packaging, not a new model. It inherits the base task and terms.",
+        ),
+      ),
+    ),
+    row(
+      "Released",
+      records.map((model) =>
+        chip(model.released ?? "—", "/models/?sort=released", "meta-released", "Release date. Open the index sorted by release date."),
+      ),
+    ),
     row(
       "Links",
       records.map((model) => {

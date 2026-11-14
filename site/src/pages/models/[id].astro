@@ -58,6 +58,11 @@ const formatDate = (value: string | null | undefined) =>
         timeZone: "UTC",
       })
     : null
+const providers = model.access.providers ?? []
+const hasCloudflare = providers.includes("cloudflare-workers-ai") || providers.includes("cloudflare")
+const hasOpenRouter = providers.includes("openrouter")
+const memoryLow = model.footprint.params_b == null ? null : Math.ceil(model.footprint.params_b * 0.55)
+const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.footprint.params_b * 2)
 ---
 
 <Base title={model.name} description={model.summary || `${model.name} in the Democratic AI catalogue.`}>
@@ -180,6 +185,58 @@ const formatDate = (value: string | null | undefined) =>
             )}
           </dd>
         </dl>
+      </div>
+
+      <div class="panel" id="get-started">
+        <h2>How to get started</h2>
+        <h3>Hosted</h3>
+        <div class="chips">
+          {model.access.models_dev && (
+            <a class="chip tag-source" href={model.access.models_dev} data-tooltip="The models.dev entry lists hosted providers and pricing.">
+              models.dev
+            </a>
+          )}
+          <a
+            class="chip tag-source"
+            href={`https://openrouter.ai/models?q=${encodeURIComponent(model.name)}`}
+            data-tooltip={hasOpenRouter ? "OpenRouter lists this model. Search the catalogue for the current provider entries." : "Search OpenRouter for this model. No OpenRouter entry is recorded in models.dev yet."}
+          >
+            OpenRouter: {hasOpenRouter ? "listed" : "search"}
+          </a>
+          <a
+            class="chip tag-source"
+            href="https://developers.cloudflare.com/workers-ai/models/"
+            data-tooltip={hasCloudflare ? "Cloudflare Workers AI lists this model. Check the model catalogue for the current binding." : "No Cloudflare Workers AI listing is recorded in models.dev. Check the catalogue for a current binding."}
+          >
+            Cloudflare: {hasCloudflare ? "listed" : "not listed"}
+          </a>
+        </div>
+        <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
+          {providers.length > 0
+            ? `${providers.length} hosted providers are listed on models.dev.`
+            : "No hosted provider is listed on models.dev for this model."}
+        </p>
+
+        <h3>Local</h3>
+        <div class="chips">
+          {model.capabilities.runtimes.length > 0 ? (
+            model.capabilities.runtimes.map((runtime) => (
+              <a class="chip tag-runtime" href={tagPath(`runtime:${runtime}`)} data-tooltip={tagDefinition(`runtime:${runtime}`)}>
+                {runtime}
+              </a>
+            ))
+          ) : (
+            <span class="chip capability-unknown" data-tooltip="No local runtime is recorded for this model.">no runtime recorded</span>
+          )}
+        </div>
+        <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
+          {model.footprint.params_b == null
+            ? "Parameter count is unknown. Check the model card for memory requirements."
+            : `Approximately ${memoryLow}–${memoryHigh} GB of weights before KV cache and runtime overhead.`}
+        </p>
+        <a class="mono-small" href={`https://huggingface.co/${model.access.hugging_face}`} target="_blank" rel="noreferrer">
+          Weights on Hugging Face
+        </a>
       </div>
 
       <div class="panel" id="builds">

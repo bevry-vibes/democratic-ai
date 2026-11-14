@@ -9,7 +9,9 @@ interface Props {
 const { currentId, limit = 4 } = Astro.props
 const models = getIndex().models
 const current = currentId ? models.find((model) => model.id === currentId) : undefined
-const candidates = models.filter((model) => model.id !== currentId)
+const candidates = models
+  .filter((model) => model.id !== currentId)
+  .map((model) => ({ id: model.id, name: model.name, organization: model.organization }))
 ---
 
 <div class="compare-picker" data-compare-picker data-current={currentId ?? ""} data-limit={limit}>
@@ -18,57 +20,71 @@ const candidates = models.filter((model) => model.id !== currentId)
     <span class="mono-small muted" data-compare-count>0 selected</span>
   </div>
   {current && (
-    <p class="compare-current">
-      <span class="chip">current</span>
-      <a href={modelHref(current.id)}>{current.name}</a>
-    </p>
+    <div class="compare-selected">
+      <span class="compare-chip compare-chip-fixed">
+        <span class="compare-chip-label">current</span>
+        <a href={modelHref(current.id)}>{current.name}</a>
+      </span>
+    </div>
   )}
-  <label class="compare-search-label" for={`compare-search-${currentId ?? "home"}`}>Find a model</label>
-  <input
-    id={`compare-search-${currentId ?? "home"}`}
-    class="compare-search"
-    type="search"
-    placeholder="Filter by name or organisation"
-    autocomplete="off"
-  />
-  <div class="compare-list">
-    {candidates.map((model) => (
-      <label class="compare-option" data-name={`${model.name} ${model.organization}`.toLowerCase()}>
-        <input type="checkbox" value={model.id} />
-        <span>{model.name}</span>
-        <small>{model.organization}</small>
-      </label>
-    ))}
+  <div class="compare-search-wrap">
+    <input
+      class="compare-search"
+      type="search"
+      placeholder={current ? "Add a model to compare" : "Search models to compare"}
+      autocomplete="off"
+      aria-label="Search models to compare"
+    />
+    <div class="compare-suggestions hidden" data-compare-suggestions></div>
   </div>
+  <div class="compare-selected" data-compare-selected></div>
   <div class="compare-actions">
-    <a class="button compare-go" href="/compare/" aria-disabled="true">Compare selected</a>
+    <a class="button compare-go" href="/comparison/" aria-disabled="true">Compare selected</a>
   </div>
+  <script type="application/json" data-compare-models set:html={JSON.stringify(candidates)} />
 </div>
 
 <script>
   for (const picker of document.querySelectorAll<HTMLElement>("[data-compare-picker]")) {
     const current = picker.dataset.current ?? ""
     const limit = Number(picker.dataset.limit ?? 4)
-    const checks = [...picker.querySelectorAll<HTMLInputElement>(".compare-list input[type=checkbox]")]
-    const options = [...picker.querySelectorAll<HTMLElement>(".compare-option")]
     const search = picker.querySelector<HTMLInputElement>(".compare-search")
+    const suggestions = picker.querySelector<HTMLElement>("[data-compare-suggestions]")
+    const selectedBox = picker.querySelector<HTMLElement>("[data-compare-selected]")
     const count = picker.querySelector<HTMLElement>("[data-compare-count]")
     const go = picker.querySelector<HTMLAnchorElement>(".compare-go")
+    const data = picker.querySelector<HTMLScriptElement>("[data-compare-models]")
+    const models = data ? (JSON.parse(data.textContent ?? "[]") as Array<{ id: string; name: string; organization: string }>) : []
+    const selected: string[] = []
 
-    function selected(): string[] {
-      return checks.filter((box) => box.checked).map((box) => box.value)
+    function total(): number {
+      return selected.length + (current ? 1 : 0)
+    }
+
+    function modelFor(id: string) {
+      return models.find((model) => model.id === id)
     }
 
     function update(): void {
-      const chosen = selected()
-      const total = chosen.length + (current ? 1 : 0)
-      if (count) count.textContent = `${total} selected`
-      const full = total >= limit
-      for (const box of checks) {
-        if (!box.checked) box.disabled = full
+      if (count) count.textContent = `${total()} selected`
+      if (selectedBox) {
+        selectedBox.innerHTML = selected
+          .map((id) => {
+            const model = modelFor(id)
+            return `<span class="compare-chip"><a href="/models/${encodeURIComponent(id)}/">${escapeHtml(model?.name ?? id)}</a><button type="button" data-remove="${escapeHtml(id)}" aria-label="Remove ${escapeHtml(model?.name ?? id)}">×</button></span>`
+          })
+          .join("")
+        for (const button of selectedBox.querySelectorAll<HTMLButtonElement>("[data-remove]")) {
+          button.addEventListener("click", () => {
+            const index = selected.indexOf(button.dataset.remove ?? "")
+            if (index !== -1) selected.splice(index, 1)
+            update()
+            renderSuggestions()
+          })
+        }
       }
       if (go) {
-        const ids = current ? [current, ...chosen] : chosen
+        const ids = current ? [current, ...selected] : selected
         const ready = ids.length >= 2
         go.setAttribute("aria-disabled", ready ? "false" : "true")
         go.classList.toggle("disabled", !ready)
@@ -76,12 +92,54 @@ const candidates = models.filter((model) => model.id !== currentId)
       }
     }
 
-    for (const box of checks) box.addEventListener("change", update)
-    search?.addEventListener("input", () => {
+    function escapeHtml(value: string): string {
+      return value
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+    }
+
+    function renderSuggestions(): void {
+      if (!suggestions || !search) return
       const query = search.value.trim().toLowerCase()
-      for (const option of options) {
-        option.classList.toggle("hidden", !query || Boolean(option.dataset.name?.includes(query)))
+      const full = total() >= limit
+      const matches = models
+        .filter((model) => !selected.includes(model.id))
+        .filter((model) => !query || `${model.name} ${model.organization}`.toLowerCase().includes(query))
+        .slice(0, 8)
+      suggestions.classList.toggle("hidden", !search.matches(":focus") && !query)
+      if (full) {
+        suggestions.innerHTML = `<p class="compare-empty">Limit reached. Remove a model to add another.</p>`
+        return
       }
+      if (matches.length === 0) {
+        suggestions.innerHTML = `<p class="compare-empty">No matching model.</p>`
+        return
+      }
+      suggestions.innerHTML = matches
+        .map(
+          (model) =>
+            `<button type="button" class="compare-suggestion" data-add="${escapeHtml(model.id)}"><span>${escapeHtml(model.name)}</span><small>${escapeHtml(model.organization)}</small></button>`,
+        )
+        .join("")
+      for (const button of suggestions.querySelectorAll<HTMLButtonElement>("[data-add]")) {
+        button.addEventListener("click", () => {
+          const id = button.dataset.add ?? ""
+          if (!id || selected.includes(id) || total() >= limit) return
+          selected.push(id)
+          if (search) search.value = ""
+          update()
+          renderSuggestions()
+        })
+      }
+    }
+
+    search?.addEventListener("input", renderSuggestions)
+    search?.addEventListener("focus", renderSuggestions)
+    document.addEventListener("click", (event) => {
+      if (picker.contains(event.target as Node)) return
+      suggestions?.classList.add("hidden")
     })
     update()
   }
