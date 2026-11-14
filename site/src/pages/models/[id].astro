@@ -345,22 +345,27 @@ const termRows: PillRowData[] = [
 const contextRows = model.tags.filter((tag) => tag.startsWith("context:")).map(tagRow)
 const licensingRows = model.tags.filter((tag) => tag.startsWith("licensing:")).map(tagRow)
 const licenceRows = model.tags.filter((tag) => tag.startsWith("license:")).map(tagRow)
-const termsCardRows: PillRowData[] = [
-  ...contextRows,
-  ...licensingRows,
-  ...(licenceRows.length > 0
-    ? licenceRows
-    : [
-        {
-          label: "license:unknown",
-          explanation: "The licence is not recorded. The reuse terms are unknown for this model.",
-          href: filterHref({ license: "unknown" }),
-          tone: "tag-terms",
-          missing: true,
-        },
-      ]),
-  ...termRows,
-]
+const licencePill: PillRowData = licenceRows[0] ?? {
+  label: `license:${model.license.id}`,
+  explanation:
+    model.license.id === "unknown"
+      ? "The licence is not recorded. The reuse terms are unknown for this model."
+      : tagDefinition(`license:${model.license.id}`),
+  href: filterHref({ license: model.license.id }),
+  tone: "tag-terms",
+  missing: model.license.id === "unknown",
+}
+
+const termsCardRows: PillRowData[] = [...contextRows, ...licensingRows, licencePill, ...termRows]
+
+const termPillFor = (label: string): PillRowData | null => {
+  if (label === "Weights") return termRows[0] ?? null
+  if (label === "Training data") return termRows[1] ?? null
+  if (label === "Training code") return termRows[2] ?? null
+  if (label === "Licence") return licencePill
+  if (label === "Tier") return termRows[3] ?? null
+  return null
+}
 
 const hostedRuntimes = new Set(["opencode", "cloudflare", "openrouter", "hosted"])
 const localRuntimes = model.capabilities.runtimes.filter((runtime) => !hostedRuntimes.has(runtime))
@@ -703,37 +708,35 @@ model: "${openRouterModel.id}"`}</code></pre>
             <h2>Openness/Morality</h2>
             <div class="score-block"><strong>{formatIndex(scorecard.openness_morality.score)}</strong></div>
             <ul class="metric-list">
-              {scorecard.openness_morality.components.map((component) => (
-                <li class="metric-row">
-                  <span class="metric-label">{component.label}</span>
-                  <a
-                    class={`chip ${component.label === "Licence" ? "tag-license" : ""}`.trim()}
-                    href={component.label === "Licence" ? tagPath(`license:${component.value}`) : "/#release-terms"}
-                    data-tooltip={
-                      component.label === "Licence"
-                        ? tagDefinition(`license:${component.value}`)
-                        : component.label === "Weights"
-                          ? "open-weight means the trained weights are downloadable. It does not mean the training data or code are open."
-                          : component.label === "Training data"
-                            ? "open means the data is published. documented means it is described but not released. unknown means unchecked, not closed."
-                            : "open means the training code is published. documented means it is described but not released. unknown means unchecked, not closed."
-                    }
-                  >
-                    {component.value}
-                  </a>
-                  <span class="metric-points">{component.points}/{component.max}</span>
-                </li>
-              ))}
+              {scorecard.openness_morality.components.map((component) => {
+                const pill = termPillFor(component.label)
+                return (
+                  <li class="metric-row">
+                    <span class="metric-label">{component.label}</span>
+                    {pill ? (
+                      <Pill
+                        label={pill.label}
+                        href={pill.href}
+                        tone={pill.tone}
+                        tooltip={pill.explanation}
+                        class={pill.missing ? "pill-missing" : ""}
+                      />
+                    ) : (
+                      <span class="metric-value">{component.value}</span>
+                    )}
+                    <span class="metric-points">{component.points}/{component.max}</span>
+                  </li>
+                )
+              })}
             </ul>
             <p class="muted" style="font-size:0.84rem">{scorecard.openness_morality.note}</p>
             <p class="mono-small muted">
-              Tier:
-              <a
-                href="/#release-terms"
-                data-tooltip={tierDescription(scorecard.openness_morality.tier)}
-              >
-                {scorecard.openness_morality.tier}
-              </a>
+              <Pill
+                label={`tier:${scorecard.openness_morality.tier}`}
+                href={`/models/?tier=${scorecard.openness_morality.tier}`}
+                tone="tag-terms"
+                tooltip={`Tier is a summary of what the release gives back. ${tierDescription(scorecard.openness_morality.tier)}`}
+              />
             </p>
           </div>
 

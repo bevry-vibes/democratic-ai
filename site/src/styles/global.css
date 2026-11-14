@@ -3192,3 +3192,7 @@ html {
 .pill-explain .pill-missing-text {
   color: #8f2f22;
 }
+
+.chip.pill-missing {
+  color: #8f2f22 !important;
+}
