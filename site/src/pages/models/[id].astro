@@ -70,6 +70,8 @@ const openCode = openCodeModels.find(isFreeProviderModel) ?? openCodeModels[0]
 const openCodeFree = openCode ? isFreeProviderModel(openCode) : false
 const cloudflareModel = providerModels["cloudflare-workers-ai"]?.[0]
 const openRouterModel = providerModels.openrouter?.[0]
+const hostedRuntimes = new Set(["opencode", "cloudflare", "openrouter", "hosted"])
+const localRuntimes = model.capabilities.runtimes.filter((runtime) => !hostedRuntimes.has(runtime))
 const memoryLow = model.footprint.params_b == null ? null : Math.ceil(model.footprint.params_b * 0.55)
 const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.footprint.params_b * 2)
 ---
@@ -460,8 +462,8 @@ model: "${openRouterModel.id}"`}</code></pre>
           You can run the weights locally when your machine has enough memory and a supported runtime.
         </p>
         <div class="chips">
-          {model.capabilities.runtimes.length > 0 ? (
-            model.capabilities.runtimes.map((runtime) => (
+          {localRuntimes.length > 0 ? (
+            localRuntimes.map((runtime) => (
               <a class="chip tag-runtime" href={tagPath(`runtime:${runtime}`)} data-tooltip={tagDefinition(`runtime:${runtime}`)}>
                 {runtime}
               </a>

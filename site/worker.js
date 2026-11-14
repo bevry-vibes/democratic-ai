@@ -185,6 +185,17 @@ async function renderComparison(request, env, ids) {
       }),
     ),
     row(
+      "Runtime",
+      records.map((model) => {
+        const runtimes = (model.tags ?? []).filter((tag) => tag.startsWith("runtime:"))
+        return runtimes.length > 0
+          ? runtimes
+              .map((tag) => chip(tag, `/tags/runtime/${encodeURIComponent(tag.slice(8))}/`, "tag-runtime", tagDefinition(tag)))
+              .join(" ")
+          : "—"
+      }),
+    ),
+    row(
       "Context",
       records.map((model) => {
         const tokens = model.capabilities?.context_tokens
