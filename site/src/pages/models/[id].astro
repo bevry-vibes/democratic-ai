@@ -126,7 +126,7 @@ const accessInfoLinks: Record<string, PillLinkData> = {
   huggingface: { label: "Go to the Hugging Face entry for this model", href: `https://huggingface.co/${model.access.hugging_face}`, external: true },
   vllm: { label: "Go to the vLLM website", href: "https://docs.vllm.ai", external: true },
   sglang: { label: "Go to the SGLang website", href: "https://docs.sglang.ai", external: true },
-  opencode: { label: "Go to the OpenCode website", href: "https://opencode.ai", external: true },
+  opencode: { label: "Go to the OpenCode website", href: "https://opencode.ai/docs/console/models/", external: true },
   cloudflare: { label: "Go to the Cloudflare Workers AI website", href: "https://developers.cloudflare.com/workers-ai/", external: true },
   openrouter: { label: "Go to the OpenRouter website", href: "https://openrouter.ai", external: true },
   python: { label: "Go to the Python website", href: "https://www.python.org", external: true },
@@ -144,20 +144,8 @@ const accessInfoLinks: Record<string, PillLinkData> = {
 }
 
 const runtimeInfo = (runtime: string): PillLinkData | null => {
-  if (runtime === "opencode") {
-    return openCode
-      ? { label: "Go to the OpenCode entry for this model", href: `https://opencode.ai/console/models/${openCode.id}`, external: true }
-      : accessInfoLinks.opencode
-  }
-  if (runtime === "cloudflare") {
-    return cloudflareModel
-      ? {
-          label: "Go to the Cloudflare entry for this model",
-          href: `https://developers.cloudflare.com/workers-ai/models/${encodeURIComponent(cloudflareModel.id)}/`,
-          external: true,
-        }
-      : accessInfoLinks.cloudflare
-  }
+  if (runtime === "opencode") return accessInfoLinks.opencode
+  if (runtime === "cloudflare") return accessInfoLinks.cloudflare
   if (runtime === "openrouter") {
     return openRouterModel
       ? { label: "Go to the OpenRouter entry for this model", href: `https://openrouter.ai/${openRouterModel.id}`, external: true }
