@@ -17,6 +17,8 @@
     "domain:language",
     "modality:audio",
     "modality:text",
+    "runtime:opencode",
+    "runtime:openrouter",
     "runtime:python",
     "context:commercial-safe",
     "license:mit",
@@ -34,6 +36,8 @@
       "text"
     ],
     "runtimes": [
+      "opencode",
+      "openrouter",
       "python"
     ],
     "tool_calling": true,

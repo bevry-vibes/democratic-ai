@@ -73,10 +73,9 @@
       }
     },
     "runtime": {
-      "definition": "Where the model can run.",
+      "definition": "Where the model can run: a harness, a hosted API, or a local runtime.",
       "values": {
         "browser": "In a web browser, usually through WASM or WebGPU.",
-        "cloudflare-workers": "In a Cloudflare Worker.",
         "node": "In Node or Deno.",
         "python": "In a Python process.",
         "llama.cpp": "Through llama.cpp or a compatible server.",
@@ -88,7 +87,10 @@
         "android": "On Android.",
         "ios": "On iOS.",
         "hosted": "Through a hosted API.",
-        "webgpu": "In a browser through WebGPU."
+        "webgpu": "In a browser through WebGPU.",
+        "opencode": "Through OpenCode, the open-source coding agent.",
+        "cloudflare": "Through Cloudflare Workers AI.",
+        "openrouter": "Through the OpenRouter API."
       }
     },
     "language": {

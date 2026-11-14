@@ -16,6 +16,7 @@
     "task:tool-calling",
     "domain:language",
     "modality:text",
+    "runtime:opencode",
     "runtime:python",
     "license:other",
     "family:minimax"
@@ -31,6 +32,7 @@
       "text"
     ],
     "runtimes": [
+      "opencode",
       "python"
     ],
     "tool_calling": true,

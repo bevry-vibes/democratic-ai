@@ -18,6 +18,8 @@
     "domain:vision",
     "modality:image",
     "modality:text",
+    "runtime:opencode",
+    "runtime:openrouter",
     "runtime:python",
     "context:commercial-safe",
     "license:apache-2.0"
@@ -34,6 +36,8 @@
       "text"
     ],
     "runtimes": [
+      "opencode",
+      "openrouter",
       "python"
     ],
     "tool_calling": true,

@@ -16,6 +16,7 @@
     "task:tool-calling",
     "domain:language",
     "modality:text",
+    "runtime:opencode",
     "runtime:python",
     "context:commercial-safe",
     "license:mit",
@@ -32,6 +33,7 @@
       "text"
     ],
     "runtimes": [
+      "opencode",
       "python"
     ],
     "tool_calling": true,

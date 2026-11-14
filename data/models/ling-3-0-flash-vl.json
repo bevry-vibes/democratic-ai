@@ -19,6 +19,7 @@
     "modality:image",
     "modality:text",
     "modality:video",
+    "runtime:openrouter",
     "context:commercial-safe",
     "license:mit"
   ],
@@ -34,7 +35,9 @@
       "text",
       "video"
     ],
-    "runtimes": [],
+    "runtimes": [
+      "openrouter"
+    ],
     "tool_calling": true,
     "reasoning": true,
     "structured_output": true,

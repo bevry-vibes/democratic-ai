@@ -17,6 +17,7 @@
     "domain:language",
     "modality:text",
     "runtime:llama.cpp",
+    "runtime:openrouter",
     "context:commercial-safe",
     "license:apache-2.0"
   ],
@@ -31,7 +32,8 @@
       "text"
     ],
     "runtimes": [
-      "llama.cpp"
+      "llama.cpp",
+      "openrouter"
     ],
     "tool_calling": true,
     "reasoning": true,

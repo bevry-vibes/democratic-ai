@@ -16,6 +16,8 @@
     "task:tool-calling",
     "domain:language",
     "modality:text",
+    "runtime:opencode",
+    "runtime:openrouter",
     "context:commercial-safe",
     "license:apache-2.0",
     "family:beam"
@@ -30,7 +32,10 @@
     "modality": [
       "text"
     ],
-    "runtimes": [],
+    "runtimes": [
+      "opencode",
+      "openrouter"
+    ],
     "tool_calling": true,
     "reasoning": true,
     "structured_output": true,

@@ -17,6 +17,9 @@
     "domain:language",
     "modality:image",
     "modality:text",
+    "runtime:cloudflare",
+    "runtime:opencode",
+    "runtime:openrouter",
     "runtime:python",
     "license:other",
     "family:glm"
@@ -33,6 +36,9 @@
       "text"
     ],
     "runtimes": [
+      "cloudflare",
+      "opencode",
+      "openrouter",
       "python"
     ],
     "tool_calling": true,

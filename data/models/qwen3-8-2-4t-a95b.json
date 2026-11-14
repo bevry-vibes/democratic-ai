@@ -17,6 +17,7 @@
     "domain:language",
     "modality:image",
     "modality:text",
+    "runtime:openrouter",
     "runtime:python",
     "license:other",
     "family:qwen"
@@ -33,6 +34,7 @@
       "text"
     ],
     "runtimes": [
+      "openrouter",
       "python"
     ],
     "tool_calling": true,

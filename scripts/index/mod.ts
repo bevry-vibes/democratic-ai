@@ -75,6 +75,8 @@ interface ModelsDevApi {
   [provider: string]: { models?: Record<string, ModelsDevModel> }
 }
 
+const HOSTED_RUNTIMES = new Set(["opencode", "cloudflare", "openrouter", "hosted"])
+
 const BUILD_MARKERS = [
   "-gguf", "-mlx", "-coreml", "-onnx", "-nvfp4", "-q8_0", "-q4_k_m", "-q4", "-q8", "-q6",
   "-4bit", "-8bit", "-bf16", "-int4", "-int8", "-ov", "-quant", "-dflash", "-singprobe", "-server",
@@ -390,6 +392,7 @@ async function main(): Promise<void> {
     const org = sourceId.split("/")[0] ?? ""
     const tags = root.tags.map((tag) => tag.tag)
     const md = modelsDevByKey.get(norm(sourceId))
+    const link = links.models[sourceId] ?? {}
     const card = md?.description ? "" : await cardExcerpt(sourceId)
     const summary = md?.description ? md.description.slice(0, 400) : seedSummaries[sourceId] ?? card
     const enriched = new Set(tags)
@@ -406,6 +409,10 @@ async function main(): Promise<void> {
     if (md?.family && Object.hasOwn(vocabulary.namespaces.family?.values ?? {}, md.family)) {
       enriched.add(`family:${md.family}`)
     }
+    const providerIds = new Set(link.providers ?? [])
+    if (providerIds.has("opencode") || providerIds.has("opencode-go")) enriched.add("runtime:opencode")
+    if (providerIds.has("cloudflare-workers-ai")) enriched.add("runtime:cloudflare")
+    if (providerIds.has("openrouter")) enriched.add("runtime:openrouter")
     const modelTags = tagList([...enriched])
     const licenseTag = tags.find((tag) => tag.startsWith("license:"))
     const licenseId = licenseTag ? licenseTag.slice("license:".length) : "unknown"
@@ -414,13 +421,13 @@ async function main(): Promise<void> {
     const languages = modelTags.filter((tag) => tag.startsWith("language:")).map((tag) => tag.slice(9))
     const modalities = modelTags.filter((tag) => tag.startsWith("modality:")).map((tag) => tag.slice(9))
     const runtimes = modelTags.filter((tag) => tag.startsWith("runtime:")).map((tag) => tag.slice(8))
+    const localRuntimes = runtimes.filter((runtime) => !HOSTED_RUNTIMES.has(runtime))
     const orgId = orgMap.get(org.toLowerCase()) ?? slug(org)
     const base = baseName(sourceId)
     let id = slug(base)
     if (usedIds.has(id)) id = `${slug(org)}-${slug(base)}`
     usedIds.add(id)
 
-    const link = links.models[sourceId] ?? {}
     const synd = syndication.models[sourceId]
     const buildEntries = (buildsByRoot.get(sourceId) ?? []).map((build) => {
       const buildTags = build.tags.map((tag) => tag.tag)
@@ -473,7 +480,7 @@ async function main(): Promise<void> {
       },
       footprint: {
         params_b: paramsFrom(base),
-        runtimes,
+        runtimes: localRuntimes,
       },
       license: {
         id: licenseId,

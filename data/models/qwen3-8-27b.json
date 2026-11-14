@@ -20,6 +20,8 @@
     "modality:pdf",
     "modality:text",
     "modality:video",
+    "runtime:cloudflare",
+    "runtime:openrouter",
     "runtime:python",
     "context:commercial-safe",
     "license:apache-2.0",
@@ -39,6 +41,8 @@
       "video"
     ],
     "runtimes": [
+      "cloudflare",
+      "openrouter",
       "python"
     ],
     "tool_calling": true,

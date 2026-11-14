@@ -20,6 +20,7 @@
     "modality:pdf",
     "modality:text",
     "modality:video",
+    "runtime:openrouter",
     "runtime:python",
     "context:commercial-safe",
     "license:apache-2.0",
@@ -39,6 +40,7 @@
       "video"
     ],
     "runtimes": [
+      "openrouter",
       "python"
     ],
     "tool_calling": true,
