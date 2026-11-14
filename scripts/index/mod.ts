@@ -104,6 +104,11 @@ async function cardExcerpt(id: string): Promise<string> {
     const useful = sentences.find(
       (sentence) =>
         sentence.length >= 50 &&
+        !/^model card for/i.test(sentence) &&
+        !/^citation/i.test(sentence) &&
+        !/^tl;?dr/i.test(sentence) &&
+        !/table of contents/i.test(sentence) &&
+        !/^\d+\.$/.test(sentence) &&
         !/github|paper|project page|hugging face|modelscope|technical report|discord/i.test(sentence),
     )
     return (useful ?? sentences.find((sentence) => sentence.length >= 30) ?? text).slice(0, 400)
@@ -282,6 +287,12 @@ async function main(): Promise<void> {
   const watchlist = JSON.parse(await Deno.readTextFile("data/watchlist.json")) as Watchlist
   const aliasFile = JSON.parse(await Deno.readTextFile("data/model-aliases.json")) as ModelAliases
   const aliases = aliasFile.aliases
+  let seedSummaries: Record<string, string> = {}
+  try {
+    seedSummaries = (JSON.parse(await Deno.readTextFile("data/seed-summaries.json")) as { summaries?: Record<string, string> }).summaries ?? {}
+  } catch {
+    // optional
+  }
   const aliasHf = new Set(aliases.map((alias) => alias.hugging_face))
   const vocabulary = JSON.parse(await Deno.readTextFile("data/tags.json")) as {
     namespaces: Record<string, { values: Record<string, string> }>
@@ -380,6 +391,7 @@ async function main(): Promise<void> {
     const tags = root.tags.map((tag) => tag.tag)
     const md = modelsDevByKey.get(norm(sourceId))
     const card = md?.description ? "" : await cardExcerpt(sourceId)
+    const summary = md?.description ? md.description.slice(0, 400) : seedSummaries[sourceId] ?? card
     const enriched = new Set(tags)
     const folded = aliases.filter((alias) => alias.canonical_hugging_face === sourceId)
     for (const alias of folded) {
@@ -447,7 +459,7 @@ async function main(): Promise<void> {
       }),
       organization: orgId,
       released: root.item.published_at ? root.item.published_at.slice(0, 10) : null,
-      summary: md?.description ? md.description.slice(0, 400) : card,
+      summary,
       tags: modelTags,
       capabilities: {
         tasks,
@@ -501,7 +513,7 @@ async function main(): Promise<void> {
       id,
       name: base,
       organization: orgId,
-      summary: md?.description ? md.description.slice(0, 400) : card,
+      summary,
       tasks,
       domains: modelTags.filter((tag) => tag.startsWith("domain:")).map((tag) => tag.slice(7)),
       tags: modelTags,
@@ -511,7 +523,9 @@ async function main(): Promise<void> {
       band: synd?.band ?? "self-only",
       tool_calling: md?.tool_call ?? null,
       reasoning: md?.reasoning ?? null,
+      structured_output: md?.structured_output ?? null,
       context_tokens: md?.limit?.context ?? null,
+      params_b: paramsFrom(base),
       released: root.item.published_at ? root.item.published_at.slice(0, 10) : null,
       aliases: [sourceId, ...folded.map((alias) => alias.hugging_face)],
       releases: folded.length,

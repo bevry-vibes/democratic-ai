@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-14T04:22:26.638Z",
-  "pull_id": "20261114T025658Z",
+  "updated_at": "2026-11-14T06:35:30.446Z",
+  "pull_id": "20261114T063448Z",
   "sources": {
     "models_dev": {
       "url": "https://models.dev/api.json",
@@ -20,7 +20,7 @@
     "models": 171,
     "with_models_dev": 156,
     "with_agent_detect": 95,
-    "unmatched": 493
+    "unmatched": 501
   },
   "models": {
     "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp": {

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14",
+  "note": "Curated one-line descriptions for seeded roots whose cards do not yield a clean opening sentence.",
+  "summaries": {
+    "google/madlad400-3b-mt": "MADLAD-400-3B-MT is a multilingual machine translation model based on T5, trained on 1 trillion tokens across more than 450 languages.",
+    "google/madlad400-10b-mt": "MADLAD-400-10B-MT is a multilingual machine translation model based on T5, trained on 250 billion tokens across more than 400 languages."
+  }
+}

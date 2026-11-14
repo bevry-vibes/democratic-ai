@@ -221,10 +221,77 @@ export async function pullHfOrgs(ctx: PullContext): Promise<SourceResult> {
 
     await sleep(80)
   }
+  let seeds: string[] = []
+  try {
+    const seedFile = JSON.parse(await Deno.readTextFile("data/seed-models.json")) as { models?: string[] }
+    seeds = seedFile.models ?? []
+  } catch {
+    // seeds are optional
+  }
+  const seenIds = new Set(ctx.items.filter((item) => item.source === "hf-models").map((item) => item.source_id))
+  let seedCount = 0
+  for (const id of seeds) {
+    if (seenIds.has(id)) continue
+    const rawPath = `data/raw/hf/seeds/${ctx.stamp}.${slug(id)}.json`
+    try {
+      let body = await readIfExists(rawPath)
+      if (body == null) {
+        const response = await fetchText(`https://huggingface.co/api/models/${id}`, {
+          headers: authHeaders(ctx),
+          accept: "application/json",
+        })
+        if (response.status !== 200) {
+          failures++
+          continue
+        }
+        body = response.body
+        await writeText(rawPath, body)
+      }
+      rawPaths.push(rawPath)
+      const model = JSON.parse(body) as HfModel
+      const tags = model.tags ?? []
+      ctx.items.push(
+        makeItem({
+          source: "hf-models",
+          source_id: model.id,
+          kind: "model",
+          title: model.id,
+          url: `https://huggingface.co/${model.id}`,
+          published_at: model.createdAt ?? model.lastModified ?? null,
+          summary: [model.pipeline_tag, model.library_name].filter(Boolean).join(" · "),
+          source_tags: [
+            "hf:model",
+            ...(model.pipeline_tag ? [`pipeline:${model.pipeline_tag}`] : []),
+            ...(model.library_name ? [`library:${model.library_name}`] : []),
+            ...tags,
+          ],
+          source_meta: {
+            author: model.id.split("/")[0] ?? "",
+            downloads: model.downloads ?? null,
+            likes: model.likes ?? null,
+            gated: model.gated ?? null,
+            private: model.private ?? null,
+            createdAt: model.createdAt ?? null,
+            lastModified: model.lastModified ?? null,
+            pipeline_tag: model.pipeline_tag ?? null,
+            library_name: model.library_name ?? null,
+            tags,
+          },
+          raw: rawPath,
+          fetched_at: ctx.fetchedAt,
+        }),
+      )
+      seedCount++
+    } catch {
+      failures++
+    }
+    await sleep(80)
+  }
+
   return result("hf-orgs", started, {
     status: failures > 0 ? "partial" : "ok",
-    items: count,
+    items: count + seedCount,
     raw: rawPaths,
-    detail: `${orgs.length} authors, ${failures} request failures`,
+    detail: `${orgs.length} authors, ${seeds.length} seed models, ${failures} request failures`,
   })
 }

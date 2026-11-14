@@ -521,6 +521,14 @@
       "schemer",
       "extract",
       "json-schema"
+    ],
+    "task:translation": [
+      "translation",
+      "translator",
+      "bilingual",
+      "machine translation",
+      "seamless-m4t",
+      "speech translation"
     ]
   },
   "title_runtimes": {

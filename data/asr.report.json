@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T06:16:20.454Z",
+  "updated_at": "2026-11-14T06:37:25.740Z",
   "generated_on": "2026-11-14",
   "leaderboard": {
     "name": "Open ASR Leaderboard",
@@ -8,7 +8,7 @@
     "as_of": "2026-11-13",
     "source": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard"
   },
-  "models": 237,
+  "models": 245,
   "matched": 8,
   "leaderboard_rows": 2,
   "self_reported": 6,

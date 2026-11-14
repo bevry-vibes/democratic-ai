@@ -198,7 +198,7 @@ async function main(): Promise<void> {
             : axis.key === "performance"
               ? "Performance/Intelligence"
               : axis.key === "research"
-                ? "Research/Citation"
+                ? "Citation/Research"
                 : "Syndication",
         score: axis.score,
         weight: axis.weight,
@@ -250,7 +250,7 @@ async function main(): Promise<void> {
         note: "Independent listings, not quality. The model's own host has weight 0.",
       },
       as_of: isoDate(),
-      method: "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Research/Citation uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
+      method: "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
       source: "internal://democratic-ai/scorecard-v2",
     }
 
