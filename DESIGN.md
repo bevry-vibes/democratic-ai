@@ -382,7 +382,7 @@ Direction:
 
 The visual identity is defined in the site's theme tokens, not in this document. This section records the intent; the tokens carry the values.
 
-The first deployment is live at <https://democratic-ai.bevry.workers.dev>. It is an assets-only Worker: the home page renders the README, the model pages render the records, and the API is static.
+The first deployment is live at <https://democratic-ai.bevry.me>. It is an assets-only Worker: the home page renders the README, the model pages render the records, and the API is static.
 
 ## Maintenance
 

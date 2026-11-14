@@ -76,7 +76,7 @@ Tag pages sort by performance, openness, research, syndication, release date, or
 
 When a release is the same model under a new name, or a later update of the same lineage, the older page folds into the canonical page. The old URL redirects, and the canonical page keeps the release history. The model is not listed twice.
 
-The full argument is in [the thesis](https://democratic-ai.bevry.workers.dev/#thesis) and the method is in [the method section](https://democratic-ai.bevry.workers.dev/#method).
+The full argument is in [the thesis](https://democratic-ai.bevry.me/#thesis) and the method is in [the method section](https://democratic-ai.bevry.me/#method).
 
 ## Browse by tags
 

@@ -291,6 +291,11 @@ async function renderComparison(request, env, ids) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url)
+    const canonicalHost = "democratic-ai.bevry.me"
+    const redirectHosts = new Set(["democratic-ai.bevry.workers.dev", "democraticai.bevry.me"])
+    if (redirectHosts.has(url.hostname)) {
+      return Response.redirect(`https://${canonicalHost}${url.pathname}${url.search}`, 301)
+    }
     const legacy = {
       "/tags": "/#tags",
       "/tags/": "/#tags",

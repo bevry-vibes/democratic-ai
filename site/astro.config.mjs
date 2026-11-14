@@ -7,7 +7,7 @@ const redirects = Object.fromEntries(
 )
 
 export default defineConfig({
-  site: "https://democratic-ai.bevry.workers.dev",
+  site: "https://democratic-ai.bevry.me",
   output: "static",
   build: { format: "directory" },
   redirects,
