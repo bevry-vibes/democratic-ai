@@ -86,6 +86,21 @@ const scorecardTip = (key: string) =>
   </section>
 
   <section class="wrap" style="padding:1.6rem 0 3rem">
+    {models.length === 0 ? (
+      <div class="empty" style="text-align:left">
+        <p class="eyebrow">Coverage gap</p>
+        <h2 style="margin-bottom:0.5rem">Nothing is tagged {tag} yet.</h2>
+        <p>
+          The tag is defined in the vocabulary, but no root model in the current pull carries it. This is a coverage
+          gap, not a filter result. The catalogue does not add a model just to fill the tag.
+        </p>
+        <div class="flex wrap-gap">
+          <a class="button" href="/models/">Browse all models</a>
+          <a class="button secondary" href="/tags/">Browse all tags</a>
+        </div>
+      </div>
+    ) : (
+      <>
     <div class="filters" style="--filter-cols:minmax(12rem,1.4fr) repeat(2,minmax(9rem,0.7fr)) minmax(15rem,1.2fr)">
       <div class="field">
         <label for="q">Search</label>
@@ -210,6 +225,8 @@ const scorecardTip = (key: string) =>
     </div>
 
     <div class="empty hidden" id="empty">No model matches those filters.</div>
+      </>
+    )}
   </section>
 
   <script define:vars={{ defaultSort }}>

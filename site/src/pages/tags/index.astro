@@ -44,17 +44,20 @@ const namespaces = [...grouped.entries()].sort(
   </section>
 
   <section class="wrap" style="padding:2rem 0 3rem">
-    {namespaces.map(([namespace, values]) => (
+    {namespaces.map(([namespace, values]) => {
+      const shown = values.filter((entry) => entry.count > 0)
+      if (shown.length === 0) return null
+      return (
       <div class="panel">
         <div class="flex justify-between items-center wrap-gap">
           <h2 style="margin-bottom:0">{namespace}</h2>
-          <span class="faint mono-small">{values.length} values</span>
+          <span class="faint mono-small">{shown.length} values</span>
         </div>
         <p class="muted" style="font-size:0.9rem;margin-top:0.4rem">
           {vocabulary.namespaces[namespace]?.definition ?? "A tag namespace."}
         </p>
         <div class="flex wrap-gap">
-          {values
+          {shown
             .sort((a, b) => b.count - a.count || a.value.localeCompare(b.value))
             .map(({ tag, value, count, definition }) => (
               <CountPill
@@ -67,6 +70,7 @@ const namespaces = [...grouped.entries()].sort(
             ))}
         </div>
       </div>
-    ))}
+      )
+    })}
   </section>
 </Base>
