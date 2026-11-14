@@ -18,6 +18,8 @@ export interface CompactModel {
   tool_calling: boolean | null
   reasoning: boolean | null
   context_tokens: number | null
+  released: string | null
+  task_performance?: TaskPerformance | null
   performance?: {
     openness_morality: number
     code_reasoning: number | null
@@ -31,6 +33,32 @@ export interface CompactModel {
   models_dev: string | null
   agent_detect: string | null
   builds: number
+}
+
+export interface TaskPerformance {
+  task: string
+  metric: string
+  value: number
+  unit: string
+  direction: "lower" | "higher"
+  source: string
+  source_kind: "leaderboard" | "model-card"
+  as_of: string
+  match: string
+  via: string | null
+  note: string
+}
+
+export interface TaskPerformanceView {
+  label: string
+  value: number | null
+  unit: string
+  direction: "lower" | "higher"
+  source?: string
+  source_kind?: string
+  as_of?: string
+  match?: string
+  note?: string
 }
 
 export interface ModelIndex {
@@ -201,16 +229,56 @@ export function formatParams(params: number | null): string {
   return `${params}B parameters`
 }
 
-export function performanceForTask(model: CompactModel, task: string): { label: string; value: number | null } {
+const CODE_TASKS = ["code", "tool-calling", "reasoning", "text-generation"]
+
+export function performanceForTask(model: CompactModel, task: string): TaskPerformanceView {
+  const taskPerformance = model.task_performance
+  if (taskPerformance && taskPerformance.task === task) {
+    return {
+      label: taskPerformance.metric,
+      value: taskPerformance.value,
+      unit: taskPerformance.unit,
+      direction: taskPerformance.direction,
+      source: taskPerformance.source,
+      source_kind: taskPerformance.source_kind,
+      as_of: taskPerformance.as_of,
+      match: taskPerformance.match,
+      note: taskPerformance.note,
+    }
+  }
   const performance = model.performance
-  if (!performance) return { label: "Task score", value: null }
-  if (["code", "tool-calling", "reasoning", "text-generation"].includes(task)) {
-    return { label: "Code/Reasoning", value: performance.code_reasoning }
+  if (performance && CODE_TASKS.includes(task)) {
+    return { label: "Code/Reasoning", value: performance.code_reasoning, unit: "/100", direction: "higher" }
   }
-  if (task === "retrieval") {
-    return { label: "Research/Citation", value: performance.research_citation }
+  if (performance && task === "retrieval") {
+    return { label: "Research/Citation", value: performance.research_citation, unit: "/100", direction: "higher" }
   }
-  return { label: "Task score", value: null }
+  if (task === "transcription") {
+    return { label: "Average WER", value: null, unit: "%", direction: "lower" }
+  }
+  return { label: "Task score", value: null, unit: "", direction: "higher" }
+}
+
+export function metricForTask(
+  models: CompactModel[],
+  task: string,
+): { label: string; unit: string; direction: "lower" | "higher" } | null {
+  const sample = models.find((model) => model.task_performance?.task === task)?.task_performance
+  if (sample) return { label: sample.metric, unit: sample.unit, direction: sample.direction }
+  if (CODE_TASKS.includes(task) && models.some((model) => model.performance?.code_reasoning != null)) {
+    return { label: "Code/Reasoning", unit: "/100", direction: "higher" }
+  }
+  if (task === "retrieval" && models.some((model) => model.performance != null)) {
+    return { label: "Research/Citation", unit: "/100", direction: "higher" }
+  }
+  return null
+}
+
+export function formatPerformance(view: TaskPerformanceView): string {
+  if (view.value == null) return "No score"
+  if (view.unit === "%") return `${view.value}%`
+  if (view.unit === "/100") return `${view.value}/100`
+  return view.unit ? `${view.value} ${view.unit}` : String(view.value)
 }
 
 export function formatContext(tokens: number | null): string {

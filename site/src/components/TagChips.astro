@@ -23,4 +23,5 @@ const kind = (tag: string) => `chip ${tagStatus(tag)}`
       <span class={kind(tag)}>{label(tag)}</span>
     ),
   )}
+  <slot />
 </div>

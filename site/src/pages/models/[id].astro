@@ -19,6 +19,14 @@ const { model: compact } = Astro.props
 const model = getModel(compact.id) as ModelRecord
 const bool = (value: boolean | null | undefined) => (value === true ? "Yes" : value === false ? "No" : "Unknown")
 const taskTags = model.tags.filter((tag) => tag.startsWith("task:"))
+const taskAsOf = model.task_performance
+  ? new Date(`${model.task_performance.as_of}T00:00:00Z`).toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    })
+  : null
 ---
 
 <Base title={model.name} description={model.summary || `${model.name} in the Democratic AI catalogue.`}>
@@ -33,7 +41,6 @@ const taskTags = model.tags.filter((tag) => tag.startsWith("task:"))
         <span class="chip license">{model.license.id}</span>
         <span class="chip">{model.organization}</span>
         {model.released && <span class="chip">{model.released}</span>}
-        {model.builds.length > 0 && <span class="chip">{model.builds.length} {model.builds.length === 1 ? "build" : "builds"}</span>}
       </div>
     </div>
   </section>
@@ -42,7 +49,13 @@ const taskTags = model.tags.filter((tag) => tag.startsWith("task:"))
     <div>
       <div class="panel">
         <h2>What it does</h2>
-        {taskTags.length > 0 ? <TagChips tags={taskTags} /> : <p class="muted">No task tag yet.</p>}
+        <TagChips tags={taskTags}>
+          {model.tags.includes("context:on-device") && <span class="chip context">on-device</span>}
+          {model.builds.length > 0 && (
+            <span class="chip">{model.builds.length} {model.builds.length === 1 ? "build" : "builds"}</span>
+          )}
+        </TagChips>
+        {taskTags.length === 0 && <p class="muted">No task tag yet.</p>}
         <dl class="definition mt-3">
           <dt>Tool calling</dt><dd>{bool(model.capabilities.tool_calling)}</dd>
           <dt>Reasoning</dt><dd>{bool(model.capabilities.reasoning)}</dd>
@@ -127,6 +140,24 @@ const taskTags = model.tags.filter((tag) => tag.startsWith("task:"))
           ))}
         </ul>
       </div>
+
+      {model.task_performance && (
+        <div class="panel">
+          <h2>Task performance</h2>
+          <div class="score-block">
+            <strong>{model.task_performance.value}{model.task_performance.unit}</strong>
+            <span class="faint">{model.task_performance.metric}</span>
+          </div>
+          <p class="muted" style="font-size:0.84rem">
+            {model.task_performance.note}
+            {model.task_performance.match === "family" ? " This is a base-model match, not an exact version result." : ""}
+          </p>
+          <p class="mono-small muted">
+            {model.task_performance.source_kind === "model-card" ? "Self-reported on the model card" : "Measured on the Open ASR Leaderboard"} · {taskAsOf}
+          </p>
+          <a class="mono-small" href={model.task_performance.source} target="_blank" rel="noreferrer">Source</a>
+        </div>
+      )}
 
       <div class="panel">
         <h2>Scorecard</h2>

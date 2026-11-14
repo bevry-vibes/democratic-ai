@@ -11,7 +11,7 @@ const contexts = [...new Set(models.flatMap((model) => model.tags.filter((tag) =
   .map((tag) => tag.slice("context:".length))
   .sort()
 const bands = ["very-strong", "strong", "moderate", "emerging", "weak", "self-only"]
-const licenses = [...new Set(models.map((model) => model.license))].sort()
+const defaultSort = "syndication"
 ---
 
 <Base
@@ -30,7 +30,7 @@ const licenses = [...new Set(models.map((model) => model.license))].sort()
   </section>
 
   <section class="wrap" style="padding-top:1.5rem">
-    <div class="filters">
+    <div class="filters" style="--filter-cols:minmax(12rem,1.4fr) repeat(3,minmax(8rem,0.7fr)) minmax(15rem,1.2fr)">
       <div class="field">
         <label for="q">Search</label>
         <input id="q" type="search" placeholder="Name, organisation, or summary" autocomplete="off" />
@@ -56,14 +56,30 @@ const licenses = [...new Set(models.map((model) => model.license))].sort()
           {bands.map((band) => <option value={band}>{band.replaceAll("-", " ")}</option>)}
         </select>
       </div>
+      <div class="field">
+        <label for="sort">Sort</label>
+        <div class="sort-control">
+          <select id="sort">
+            <option value="syndication">Syndication</option>
+            <option value="openness">Openness/Morality</option>
+            <option value="code">Code/Reasoning</option>
+            <option value="research">Research/Citation</option>
+            <option value="released">Release date</option>
+            <option value="name">Name</option>
+          </select>
+          <button id="order" class="order-toggle" type="button" aria-label="Reverse the sort order">
+            High first
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="filter-meta">
       <span id="count">Showing {models.length} models</span>
-      <span class="faint">Sorted by independent listings, then name</span>
+      <span class="faint" id="sort-note">Sorted by independent listings, best first</span>
     </div>
 
-    <div class="list" id="model-list">
+    <div class="list" id="model-list" style="--list-cols:minmax(12rem, 0.9fr) minmax(18rem, 2.2fr) auto">
       {models.map((model) => (
         <a
           class="list-row"
@@ -73,21 +89,23 @@ const licenses = [...new Set(models.map((model) => model.license))].sort()
           data-contexts={model.tags.filter((tag) => tag.startsWith("context:")).map((tag) => tag.slice(8)).join(" ")}
           data-band={model.band}
           data-license={model.license}
+          data-openness={model.performance?.openness_morality ?? -1}
+          data-code={model.performance?.code_reasoning ?? -1}
+          data-research={model.performance?.research_citation ?? -1}
+          data-score={model.score}
+          data-released={model.released ?? ""}
         >
           <div>
             <h3>{model.name}</h3>
             <p class="mono-small">{model.organization}</p>
           </div>
-          <div>
+          <div class="list-description">
             <p>{model.summary || "No description on the model card."}</p>
-            <div class="chips">
-              <TagChips tags={model.tags.filter((tag) => tag.startsWith("task:"))} limit={2} links={false} />
-            </div>
-          </div>
-          <div class="chips">
-            {model.tags.includes("context:on-device") && <span class="chip context">on-device</span>}
-            {model.context_tokens && <span class="chip">{formatContext(model.context_tokens)}</span>}
-            {model.builds > 0 && <span class="chip">{model.builds} {model.builds === 1 ? "build" : "builds"}</span>}
+            <TagChips tags={model.tags.filter((tag) => tag.startsWith("task:"))} limit={2} links={false}>
+              {model.tags.includes("context:on-device") && <span class="chip context">on-device</span>}
+              {model.context_tokens && <span class="chip">{formatContext(model.context_tokens)}</span>}
+              {model.builds > 0 && <span class="chip">{model.builds} {model.builds === 1 ? "build" : "builds"}</span>}
+            </TagChips>
           </div>
           <div class="right">
             <ScoreBadge score={model.score} band={model.band} />
@@ -102,7 +120,7 @@ const licenses = [...new Set(models.map((model) => model.license))].sort()
     </div>
 
     <noscript>
-      <p class="muted mt-2">The filters need JavaScript. Every model is listed below without it.</p>
+      <p class="muted mt-2">The filters and sorting need JavaScript. Every model is listed below without it.</p>
     </noscript>
   </section>
 
@@ -111,15 +129,47 @@ const licenses = [...new Set(models.map((model) => model.license))].sort()
     const task = document.getElementById("task") as HTMLSelectElement | null
     const context = document.getElementById("context") as HTMLSelectElement | null
     const band = document.getElementById("band") as HTMLSelectElement | null
+    const sort = document.getElementById("sort") as HTMLSelectElement | null
+    const order = document.getElementById("order")
     const count = document.getElementById("count")
+    const note = document.getElementById("sort-note")
     const empty = document.getElementById("empty")
+    const list = document.getElementById("model-list")
     const rows = [...document.querySelectorAll<HTMLElement>("#model-list .list-row")]
 
     const params = new URLSearchParams(location.search)
+    let orderMode = params.get("order") === "worst" ? "worst" : "best"
     if (q && params.get("q")) q.value = params.get("q")!
     if (task && params.get("task")) task.value = params.get("task")!
     if (context && params.get("context")) context.value = params.get("context")!
     if (band && params.get("band")) band.value = params.get("band")!
+    if (sort && params.get("sort")) sort.value = params.get("sort")!
+
+    function setOrderLabel() {
+      if (!order) return
+      const mode = sort?.value ?? "syndication"
+      if (mode === "name") order.textContent = orderMode === "best" ? "A–Z" : "Z–A"
+      else if (mode === "released") order.textContent = orderMode === "best" ? "Newest" : "Oldest"
+      else order.textContent = orderMode === "best" ? "High first" : "Low first"
+    }
+
+    function number(row: HTMLElement, key: string): number | null {
+      const raw = row.dataset[key]
+      if (!raw) return null
+      const value = Number(raw)
+      return Number.isFinite(value) && value >= 0 ? value : null
+    }
+
+    function compare(a: HTMLElement, b: HTMLElement, key: string): number {
+      const av = number(a, key)
+      const bv = number(b, key)
+      if (av == null && bv == null) return 0
+      if (av == null) return 1
+      if (bv == null) return -1
+      if (av === bv) return 0
+      const best = -1 * (av - bv)
+      return orderMode === "best" ? best : -best
+    }
 
     function apply() {
       const search = q?.value.trim().toLowerCase() ?? ""
@@ -139,16 +189,69 @@ const licenses = [...new Set(models.map((model) => model.license))].sort()
       if (count) count.textContent = `Showing ${visible} of ${rows.length} models`
       empty?.classList.toggle("hidden", visible > 0)
 
+      const mode = sort?.value ?? "syndication"
+      setOrderLabel()
+      const sorted = [...rows].sort((a, b) => {
+        if (mode === "name") {
+          const diff = (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "")
+          return orderMode === "best" ? diff : -diff
+        }
+        if (mode === "released") {
+          const av = a.dataset.released ?? ""
+          const bv = b.dataset.released ?? ""
+          if (!av && !bv) return 0
+          if (!av) return 1
+          if (!bv) return -1
+          const diff = av.localeCompare(bv)
+          return orderMode === "best" ? -diff : diff
+        }
+        const key =
+          mode === "openness" ? "openness" : mode === "code" ? "code" : mode === "research" ? "research" : "score"
+        return compare(a, b, key) || (a.dataset.name ?? "").localeCompare(b.dataset.name ?? "")
+      })
+      for (const row of sorted) list?.append(row)
+
+      if (note) {
+        const labels: Record<string, string> = {
+          syndication: "independent listings",
+          openness: "Openness/Morality",
+          code: "Code/Reasoning",
+          research: "Research/Citation",
+          released: "release date",
+          name: "name",
+        }
+        const label = labels[mode] ?? mode
+        const direction =
+          mode === "name"
+            ? orderMode === "best"
+              ? "A–Z"
+              : "Z–A"
+            : mode === "released"
+              ? orderMode === "best"
+                ? "newest first"
+                : "oldest first"
+              : orderMode === "best"
+                ? "high first"
+                : "low first"
+        note.textContent = `Sorted by ${label}, ${direction}. Missing scores sort last.`
+      }
+
       const next = new URLSearchParams()
       if (search) next.set("q", search)
       if (taskValue) next.set("task", taskValue)
       if (contextValue) next.set("context", contextValue)
       if (bandValue) next.set("band", bandValue)
+      if (mode !== "syndication") next.set("sort", mode)
+      if (orderMode !== "best") next.set("order", orderMode)
       const query = next.toString()
       history.replaceState(null, "", query ? `?${query}` : location.pathname)
     }
 
-    for (const control of [q, task, context, band]) control?.addEventListener("input", apply)
+    for (const control of [q, task, context, band, sort]) control?.addEventListener("input", apply)
+    order?.addEventListener("click", () => {
+      orderMode = orderMode === "best" ? "worst" : "best"
+      apply()
+    })
     apply()
   </script>
 </Base>
