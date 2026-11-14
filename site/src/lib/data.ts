@@ -169,6 +169,7 @@ export interface ModelRecord extends Omit<CompactModel, "license" | "releases"> 
     relation: string | null
     status: string
   }>
+  usage?: Array<{ language: string; code: string }>
   sources: Array<{ kind: string; url: string; retrieved_at: string }>
   verified_at: string
   updated_at: string

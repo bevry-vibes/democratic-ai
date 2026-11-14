@@ -1,0 +1,19 @@
+---
+interface Props {
+  label: string
+  href?: string
+  tone?: string
+  tooltip?: string
+  class?: string
+}
+
+const { label, href, tone = "", tooltip, class: className = "" } = Astro.props
+const classes = `chip ${tone} ${className}`.trim()
+const aria = tooltip ? `${label}. ${tooltip}` : label
+---
+
+{href ? (
+  <a class={classes} href={href} data-tooltip={tooltip} aria-label={aria}>{label}</a>
+) : (
+  <span class={classes} data-tooltip={tooltip} tabindex="0" aria-label={aria}>{label}</span>
+)}

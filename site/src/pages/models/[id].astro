@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro"
 import CountPill from "../../components/CountPill.astro"
 import ComparePicker from "../../components/ComparePicker.astro"
+import Pill from "../../components/Pill.astro"
 import TagChips from "../../components/TagChips.astro"
 import {
   SCORECARD_AXIS_ORDER,
@@ -50,7 +51,26 @@ const tagGroups = TAG_NAMESPACE_ORDER.map((namespace) => ({
 const otherTags = model.tags.filter(
   (tag) => !TAG_NAMESPACE_ORDER.some((namespace) => tag.startsWith(`${namespace}:`)),
 )
-const explainedTags = [...tagGroups.flatMap((group) => group.tags), ...otherTags]
+const tagCardLabels: Record<string, string> = {
+  task: "Tasks",
+  domain: "Domain",
+  modality: "Modality",
+  runtime: "Runtime",
+  language: "Languages",
+  context: "Context",
+  license: "Licence",
+  family: "Family",
+  status: "Status",
+  relation: "Relation",
+  org: "Organisation",
+  source: "Source",
+}
+const tagCards = TAG_NAMESPACE_ORDER.map((namespace) => ({
+  namespace,
+  label: tagCardLabels[namespace] ?? namespace,
+  tags: model.tags.filter((tag) => tag.startsWith(`${namespace}:`)),
+})).filter((card) => card.tags.length > 0)
+const structuredOutputDefinition = "Return typed or schema-constrained output."
 const formatDate = (value: string | null | undefined) =>
   value
     ? new Date(value).toLocaleDateString("en-GB", {
@@ -72,6 +92,14 @@ const cloudflareModel = providerModels["cloudflare-workers-ai"]?.[0]
 const openRouterModel = providerModels.openrouter?.[0]
 const hostedRuntimes = new Set(["opencode", "cloudflare", "openrouter", "hosted"])
 const localRuntimes = model.capabilities.runtimes.filter((runtime) => !hostedRuntimes.has(runtime))
+const usage = model.usage ?? []
+const hasOpenCode = Boolean(openCode)
+const hasCloudflare = Boolean(cloudflareModel)
+const hasOpenRouter = Boolean(openRouterModel)
+const openCodeStep = 1
+const cloudflareStep = hasOpenCode ? 2 : 1
+const openRouterStep = (hasOpenCode ? 1 : 0) + (hasCloudflare ? 1 : 0) + 1
+const diyStep = (hasOpenCode ? 1 : 0) + (hasCloudflare ? 1 : 0) + (hasOpenRouter ? 1 : 0) + 1
 const memoryLow = model.footprint.params_b == null ? null : Math.ceil(model.footprint.params_b * 0.55)
 const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.footprint.params_b * 2)
 ---
@@ -111,17 +139,19 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
         >
           {model.openness.tier}
         </a>
-        <a
-          class="chip tag-org"
+        <Pill
+          label={`org:${model.organization}`}
           href={`/models/?q=${encodeURIComponent(model.organization)}`}
-          data-tooltip="The organisation or author. Opens the model index filtered to this organisation."
-        >
-          org:{model.organization}
-        </a>
+          tone="tag-org"
+          tooltip="The organisation or author. Opens the model index filtered to this organisation."
+        />
         {model.released && (
-          <a class="chip meta-released" href="/models/?sort=released" data-tooltip="Release date. Opens the model index sorted by release date.">
-            released:{model.released}
-          </a>
+          <Pill
+            label={`released:${model.released}`}
+            href="/models/?sort=released"
+            tone="meta-released"
+            tooltip="Release date. Opens the model index sorted by release date."
+          />
         )}
       </div>
     </div>
@@ -129,87 +159,147 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
 
   <section class="wrap detail-grid">
     <div>
+      {tagCards.map((card) => (
+        <div class="panel">
+          <h2>{card.label}</h2>
+          <ul class="tag-explain">
+            {card.tags.map((tag) => (
+              <li>
+                <Pill label={tag} href={tagPath(tag)} tone={tagStatus(tag)} tooltip={tagDefinition(tag)} />
+                <span>{tagDefinition(tag)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
       <div class="panel" id="capabilities">
         <h2>Capabilities</h2>
-        <dl class="definition">
-          <dt>Tool calling</dt>
-          <dd>
-            <a class={`chip ${capabilityClass(model.capabilities.tool_calling)}`} href={`/models/?capability=tool-calling`} data-tooltip="Filter the model index to models that can call tools and APIs.">
-              {bool(model.capabilities.tool_calling)}
-            </a>
-          </dd>
-          <dt>Reasoning</dt>
-          <dd>
-            <a class={`chip ${capabilityClass(model.capabilities.reasoning)}`} href={`/models/?capability=reasoning`} data-tooltip="Filter the model index to models that support multi-step reasoning.">
-              {bool(model.capabilities.reasoning)}
-            </a>
-          </dd>
-          <dt>Structured output</dt>
-          <dd>
-            <a class={`chip ${capabilityClass(model.capabilities.structured_output)}`} href={`/models/?capability=structured-output`} data-tooltip="Filter the model index to models that can return typed or schema-constrained output.">
-              {bool(model.capabilities.structured_output)}
-            </a>
-          </dd>
-          <dt>Context</dt>
-          <dd>
-            <a
-              class="chip meta-context"
+        <ul class="tag-explain">
+          <li>
+            <Pill
+              label={bool(model.capabilities.tool_calling)}
+              href="/models/?capability=tool-calling"
+              tone={capabilityClass(model.capabilities.tool_calling)}
+              tooltip={tagDefinition("task:tool-calling")}
+            />
+            <span>{tagDefinition("task:tool-calling")}</span>
+          </li>
+          <li>
+            <Pill
+              label={bool(model.capabilities.reasoning)}
+              href="/models/?capability=reasoning"
+              tone={capabilityClass(model.capabilities.reasoning)}
+              tooltip={tagDefinition("task:reasoning")}
+            />
+            <span>{tagDefinition("task:reasoning")}</span>
+          </li>
+          <li>
+            <Pill
+              label={bool(model.capabilities.structured_output)}
+              href="/models/?capability=structured-output"
+              tone={capabilityClass(model.capabilities.structured_output)}
+              tooltip={structuredOutputDefinition}
+            />
+            <span>{structuredOutputDefinition}</span>
+          </li>
+          <li>
+            <Pill
+              label={`context: ${formatContextCount(model.capabilities.context_tokens)}`}
               href={model.capabilities.context_tokens ? `/models/?min_context=${model.capabilities.context_tokens}` : "/models/"}
-              data-tooltip="Filter the model index to models with at least this context window."
-            >
-              context: {formatContextCount(model.capabilities.context_tokens)}
-            </a>
-          </dd>
-          <dt>Size</dt>
-          <dd>
-            <a class="chip capability" href={model.footprint.params_b ? `/models/?min_params=${model.footprint.params_b}` : "/models/"}
-              data-tooltip="Filter the model index to models of at least this parameter class.">
-              {formatParams(model.footprint.params_b)}
-            </a>
-          </dd>
-          <dt>Modality</dt>
-          <dd>
-            {model.capabilities.modality.length > 0 ? (
-              <span class="flex wrap-gap">
-                {model.capabilities.modality.map((modality) => (
-                  <a class="chip" href={tagPath(`modality:${modality}`)} title={tagDefinition(`modality:${modality}`)}>
-                    {modality}
-                  </a>
-                ))}
-              </span>
-            ) : (
-              "Unknown"
-            )}
-          </dd>
-          <dt>Runtimes</dt>
-          <dd>
-            {model.capabilities.runtimes.length > 0 ? (
-              <span class="flex wrap-gap">
-                {model.capabilities.runtimes.map((runtime) => (
-                  <a class="chip" href={tagPath(`runtime:${runtime}`)} title={tagDefinition(`runtime:${runtime}`)}>
-                    {runtime}
-                  </a>
-                ))}
-              </span>
-            ) : (
-              "Unknown"
-            )}
-          </dd>
-        </dl>
+              tone="meta-context"
+              tooltip="The model's maximum context window."
+            />
+            <span>The maximum number of tokens the model can consider at once.</span>
+          </li>
+          <li>
+            <Pill
+              label={formatParams(model.footprint.params_b)}
+              href={model.footprint.params_b ? `/models/?min_params=${model.footprint.params_b}` : "/models/"}
+              tone="capability"
+              tooltip="The model's parameter count."
+            />
+            <span>The parameter count. Use it to estimate weights and memory.</span>
+          </li>
+        </ul>
       </div>
 
-      <div class="panel" id="tags-explained">
-        <h2>Tags</h2>
-        <p class="muted" style="font-size:0.9rem">
-          Every tag on this model, explained. Tags are additive, and each one opens its filtered list.
-        </p>
+      <div class="panel" id="terms">
+        <h2>Terms</h2>
         <ul class="tag-explain">
-          {explainedTags.map((tag) => (
-            <li>
-              <a class={`chip ${tagStatus(tag)}`} href={tagPath(tag)} data-tooltip={tagDefinition(tag)}>{tag}</a>
-              <span>{tagDefinition(tag)}</span>
-            </li>
-          ))}
+          <li>
+            <Pill
+              label={model.openness.weights}
+              href="/#release-terms"
+              tooltip="Open-weight means the trained weights are downloadable. It does not mean the training data or code are open."
+            />
+            <span>Open-weight means the trained weights are downloadable. It does not mean the training data or code are open.</span>
+          </li>
+          <li>
+            <Pill
+              label={model.openness.training_data}
+              href="/#release-terms"
+              tooltip="Open means the data is published. Documented means it is described but not released. Unknown means unchecked, not closed."
+            />
+            <span>Open means the data is published. Documented means it is described but not released. Unknown means unchecked, not closed.</span>
+          </li>
+          <li>
+            <Pill
+              label={model.openness.training_code}
+              href="/#release-terms"
+              tooltip="Open means the training code is published. Documented means it is described but not released. Unknown means unchecked, not closed."
+            />
+            <span>Open means the training code is published. Documented means it is described but not released. Unknown means unchecked, not closed.</span>
+          </li>
+          <li>
+            <Pill
+              label={model.openness.tier}
+              href="/#release-terms"
+              tone={`badge ${tierClass(model.openness.tier)}`}
+              tooltip={tierDescription(model.openness.tier)}
+            />
+            <span>{tierDescription(model.openness.tier)}</span>
+          </li>
+        </ul>
+        <p class="muted" style="font-size:0.82rem;margin-top:0.8rem">
+          Training-data and training-code evidence is not assessed in this pass. `unknown` means unchecked, not closed.
+        </p>
+      </div>
+
+      <div class="panel" id="access">
+        <h2>Access</h2>
+        <ul class="tag-explain">
+          <li>
+            <Pill
+              label={model.access.hugging_face}
+              href={`https://huggingface.co/${model.access.hugging_face}`}
+              tooltip="The weights and model card on Hugging Face."
+            />
+            <span>The weights and model card on Hugging Face.</span>
+          </li>
+          <li>
+            {model.access.models_dev ? (
+              <Pill label="models.dev" href={model.access.models_dev} tooltip="Hosted providers, pricing, and model metadata." />
+            ) : (
+              <Pill label="No entry" tooltip="No models.dev entry is recorded for this model." />
+            )}
+            <span>Hosted providers, pricing, and model metadata.</span>
+          </li>
+          <li>
+            {model.access.agent_detect ? (
+              <Pill label="agent-detect" href={model.access.agent_detect} tooltip="Harness and provider identification." />
+            ) : (
+              <Pill label="No entry" tooltip="No agent-detect entry is recorded for this model." />
+            )}
+            <span>Harness and provider identification.</span>
+          </li>
+          <li>
+            <Pill
+              label={model.access.gated === true || model.access.gated === "auto" || model.access.gated === "manual" ? "Gated" : model.access.gated === false ? "Open access" : "Gated: unknown"}
+              tooltip="Whether access requires approval or acceptance of terms."
+            />
+            <span>Whether access requires approval or acceptance of terms.</span>
+          </li>
         </ul>
       </div>
 
@@ -277,9 +367,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
           <div class="lineage">
             {model.lineage.map((entry) => (
               <>
-                <a class="chip" href={tagPath(`relation:${entry.relation}`)} title={tagDefinition(`relation:${entry.relation}`)}>
-                  {entry.relation}
-                </a>
+                <span class="lineage-relation">{entry.relation} of</span>
                 <span class="arrow">←</span>
                 <a href={`https://huggingface.co/${entry.base}`} target="_blank" rel="noreferrer">{entry.base}</a>
               </>
@@ -290,92 +378,19 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
         )}
       </div>
 
-      <div class="panel" id="access">
-        <h2>Access</h2>
-        <dl class="definition">
-          <dt>Hugging Face</dt>
-          <dd><a href={`https://huggingface.co/${model.access.hugging_face}`} target="_blank" rel="noreferrer">{model.access.hugging_face}</a></dd>
-          <dt>models.dev</dt>
-          <dd>{model.access.models_dev ? <a href={model.access.models_dev} target="_blank" rel="noreferrer">Open entry</a> : "No entry"}</dd>
-          <dt>agent-detect</dt>
-          <dd>{model.access.agent_detect ? <a href={model.access.agent_detect} target="_blank" rel="noreferrer">Open entry</a> : "No entry"}</dd>
-          <dt>Gated</dt>
-          <dd>{model.access.gated === true || model.access.gated === "auto" || model.access.gated === "manual" ? "Yes" : model.access.gated === false ? "No" : "Unknown"}</dd>
-        </dl>
-      </div>
-
-      <div class="panel" id="terms">
-        <h2>Terms</h2>
-        <dl class="definition">
-          <dt>Licence</dt>
-          <dd>
-            <a
-              class="chip tag-license"
-              href={tagPath(`license:${model.license.id}`)}
-              data-tooltip={tagDefinition(`license:${model.license.id}`)}
-            >
-              {model.license.id}
-            </a>
-          </dd>
-          <dt>Weights</dt>
-          <dd>
-            <a
-              class="chip"
-              href="/#release-terms"
-              data-tooltip="open-weight means the trained weights are downloadable. It does not mean the training data or code are open."
-            >
-              {model.openness.weights}
-            </a>
-          </dd>
-          <dt>Training data</dt>
-          <dd>
-            <a
-              class="chip"
-              href="/#release-terms"
-              data-tooltip="open means the data is published. documented means it is described but not released. unknown means unchecked, not closed."
-            >
-              {model.openness.training_data}
-            </a>
-          </dd>
-          <dt>Training code</dt>
-          <dd>
-            <a
-              class="chip"
-              href="/#release-terms"
-              data-tooltip="open means the training code is published. documented means it is described but not released. unknown means unchecked, not closed."
-            >
-              {model.openness.training_code}
-            </a>
-          </dd>
-          <dt>Tier</dt>
-          <dd>
-            <a
-              class={`badge ${tierClass(model.openness.tier)}`}
-              href="/#release-terms"
-              data-tooltip={tierDescription(model.openness.tier)}
-            >
-              {model.openness.tier}
-            </a>
-          </dd>
-        </dl>
-        <p class="muted" style="font-size:0.82rem;margin-top:0.8rem">
-          Training-data and training-code evidence is not assessed in this pass. `unknown` means unchecked, not closed.
-        </p>
-      </div>
-
       <div class="panel" id="get-started">
         <h2>Getting started</h2>
 
-        <h3>1. Use OpenCode (recommended)</h3>
-        <p>
-          <a href="https://opencode.ai" target="_blank" rel="noreferrer">OpenCode</a> is an open-source coding agent
-          for the terminal, desktop, and web. It is the simplest way to run this model, and free models stay free
-          through the OpenCode Console provider.
-        </p>
-        {openCode ? (
+        {openCode && (
           <>
+            <h3>{openCodeStep}. Use OpenCode (recommended)</h3>
+            <p>
+              <a href="https://opencode.ai" target="_blank" rel="noreferrer">OpenCode</a> is an open-source coding
+              agent for the terminal, desktop, and web. It is the simplest way to run this model, and free models stay
+              free through the OpenCode Console provider.
+            </p>
             <div class="chips">
-              <span class="chip tag-status">opencode/{openCode.id}</span>
+              <Pill label={`opencode/${openCode.id}`} tone="tag-status" tooltip="The OpenCode Console model ID." />
               {openCodeFree && <span class="badge badge-free">free</span>}
             </div>
             <ol class="steps">
@@ -398,20 +413,14 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
               OpenCode provider setup
             </a>
           </>
-        ) : (
-          <p class="muted" style="font-size:0.9rem">
-            No OpenCode Console entry is recorded for this model.
-            <a href="https://opencode.ai" target="_blank" rel="noreferrer">Get OpenCode</a> or
-            <a href="https://opencode.ai/docs/console/models/" target="_blank" rel="noreferrer">check the model list</a>.
-          </p>
         )}
 
         {cloudflareModel && (
           <>
-            <h3>2. Run on Cloudflare Workers AI</h3>
+            <h3>{cloudflareStep}. Run on Cloudflare Workers AI</h3>
             <p>Cloudflare hosts this model. You need a Cloudflare account and a Worker.</p>
             <div class="chips">
-              <span class="chip tag-source">{cloudflareModel.id}</span>
+              <Pill label={cloudflareModel.id} tone="tag-source" tooltip="The Cloudflare Workers AI model ID." />
             </div>
             <ol class="steps">
               <li>
@@ -435,12 +444,15 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
 
         {openRouterModel && (
           <>
-            <h3>{cloudflareModel ? "3" : "2"}. Use OpenRouter</h3>
+            <h3>{openRouterStep}. Use OpenRouter</h3>
             <p>OpenRouter gives you one API key and one endpoint for many hosted models.</p>
             <div class="chips">
-              <a class="chip tag-source" href={`https://openrouter.ai/${openRouterModel.id}`} target="_blank" rel="noreferrer">
-                {openRouterModel.id}
-              </a>
+              <Pill
+                label={openRouterModel.id}
+                href={`https://openrouter.ai/${openRouterModel.id}`}
+                tone="tag-source"
+                tooltip="The OpenRouter model ID."
+              />
             </div>
             <ol class="steps">
               <li>
@@ -457,37 +469,51 @@ model: "${openRouterModel.id}"`}</code></pre>
           </>
         )}
 
-        <h3>{2 + (cloudflareModel ? 1 : 0) + (openRouterModel ? 1 : 0)}. Run it yourself</h3>
+        <h3>{diyStep}. Run it yourself</h3>
         <p>
-          You can run the weights locally when your machine has enough memory and a supported runtime.
+          {usage.length > 0
+            ? "The Hugging Face model card gives the current install and run commands."
+            : "You can run the weights locally when your machine has enough memory and a supported runtime."}
         </p>
-        <div class="chips">
-          {localRuntimes.length > 0 ? (
-            localRuntimes.map((runtime) => (
-              <a class="chip tag-runtime" href={tagPath(`runtime:${runtime}`)} data-tooltip={tagDefinition(`runtime:${runtime}`)}>
-                {runtime}
-              </a>
-            ))
-          ) : (
-            <span class="chip capability-unknown" data-tooltip="No local runtime is recorded for this model.">no runtime recorded</span>
-          )}
-        </div>
+        {localRuntimes.length > 0 && (
+          <div class="chips">
+            {localRuntimes.map((runtime) => (
+              <Pill label={runtime} href={tagPath(`runtime:${runtime}`)} tone="tag-runtime" tooltip={tagDefinition(`runtime:${runtime}`)} />
+            ))}
+          </div>
+        )}
+        {localRuntimes.length === 0 && usage.length === 0 && (
+          <div class="chips">
+            <Pill label="no runtime recorded" tone="capability-unknown" tooltip="No local runtime is recorded for this model." />
+          </div>
+        )}
+        {usage.length > 0 && (
+          <>
+            {usage.map((block) => (
+              <pre><code>{block.code}</code></pre>
+            ))}
+            <p class="muted" style="font-size:0.86rem">
+              From the <a href={`https://huggingface.co/${model.access.hugging_face}`} target="_blank" rel="noreferrer">Hugging Face model card</a>.
+              Follow it for the current full instructions.
+            </p>
+          </>
+        )}
         <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
           {model.footprint.params_b == null
             ? "Parameter count is unknown. Check the model card for memory requirements."
             : `Plan for roughly ${memoryLow}–${memoryHigh} GB of weights before KV cache and runtime overhead.`}
         </p>
-        <p class="muted" style="font-size:0.86rem">
-          {providers.length > 0
-            ? `${providers.length} hosted providers are listed on models.dev.`
-            : "No hosted provider is listed on models.dev for this model."}
-          {model.access.models_dev && (
-            <>
-              {" "}
-              <a href={model.access.models_dev} target="_blank" rel="noreferrer">See the providers on models.dev</a>.
-            </>
-          )}
-        </p>
+        {providers.length > 0 && (
+          <p class="muted" style="font-size:0.86rem">
+            {`${providers.length} hosted providers are listed on models.dev.`}
+            {model.access.models_dev && (
+              <>
+                {" "}
+                <a href={model.access.models_dev} target="_blank" rel="noreferrer">See the providers on models.dev</a>.
+              </>
+            )}
+          </p>
+        )}
         <a class="mono-small" href={`https://huggingface.co/${model.access.hugging_face}`} target="_blank" rel="noreferrer">
           Get the weights on Hugging Face
         </a>
