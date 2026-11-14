@@ -2298,3 +2298,9 @@ html {
 .method-body > .panel > ol {
   max-width: none;
 }
+
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 8rem;
+  }
+}
