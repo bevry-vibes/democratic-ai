@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T04:44:28.814Z",
+  "generated_at": "2026-11-14T05:19:49.208Z",
   "pull_id": "20261114T025658Z",
   "models": [
     {
@@ -36,6 +36,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1048576,
+      "released": "2026-09-10",
       "models_dev": "https://models.dev/models/deepseek/deepseek-v4.1-flash",
       "agent_detect": "https://agent-detect.bevry.me/model/deepseekv41flash",
       "builds": 0,
@@ -84,6 +85,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1048576,
+      "released": "2026-10-17",
       "models_dev": "https://models.dev/models/deepseek/deepseek-v4.1-flash-1017",
       "agent_detect": "https://agent-detect.bevry.me/model/deepseekv41flash",
       "builds": 2,
@@ -131,6 +133,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1000000,
+      "released": "2026-08-31",
       "models_dev": "https://models.dev/models/deepseek/deepseek-v4-flash-vision-exp",
       "agent_detect": "https://agent-detect.bevry.me/model/deepseekv4flash",
       "builds": 2,
@@ -177,6 +180,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1000000,
+      "released": "2026-06-16",
       "models_dev": "https://models.dev/models/zhipuai/glm-5.2",
       "agent_detect": "https://agent-detect.bevry.me/model/glm52",
       "builds": 1,
@@ -222,6 +226,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1000000,
+      "released": "2026-08-25",
       "models_dev": "https://models.dev/models/zhipuai/glm-5.3",
       "agent_detect": "https://agent-detect.bevry.me/model/glm53",
       "builds": 3
@@ -261,6 +266,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1000000,
+      "released": "2026-08-25",
       "models_dev": "https://models.dev/models/zhipuai/glm-5.3-flash",
       "agent_detect": "https://agent-detect.bevry.me/model/glm53flash",
       "builds": 4
@@ -298,6 +304,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1048576,
+      "released": "2026-11-04",
       "models_dev": "https://models.dev/models/thinkingmachines/inkling-2-small",
       "agent_detect": "https://agent-detect.bevry.me/model/inkling2small",
       "builds": 2
@@ -336,6 +343,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1048576,
+      "released": "2026-06-13",
       "models_dev": "https://models.dev/models/moonshotai/kimi-k3",
       "agent_detect": "https://agent-detect.bevry.me/model/kimik3",
       "builds": 0,
@@ -379,6 +387,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262144,
+      "released": "2026-08-02",
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flash",
       "builds": 1
@@ -417,6 +426,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1048576,
+      "released": "2026-04-27",
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2.5",
       "agent_detect": "https://agent-detect.bevry.me/model/mimov25",
       "builds": 1
@@ -453,6 +463,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1048576,
+      "released": "2026-04-27",
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2.5-pro",
       "agent_detect": "https://agent-detect.bevry.me/model/mimov25pro",
       "builds": 1
@@ -487,6 +498,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 204800,
+      "released": "2026-02-12",
       "models_dev": "https://models.dev/models/minimax/MiniMax-M2.5",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm25",
       "builds": 0
@@ -521,6 +533,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 204800,
+      "released": "2026-04-09",
       "models_dev": "https://models.dev/models/minimax/MiniMax-M2.7",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm27",
       "builds": 0
@@ -560,6 +573,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1000000,
+      "released": "2026-06-02",
       "models_dev": "https://models.dev/models/minimax/MiniMax-M3",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm3",
       "builds": 2,
@@ -608,6 +622,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1000000,
+      "released": "2026-10-17",
       "models_dev": "https://models.dev/models/minimax/MiniMax-M3.1-Flash",
       "agent_detect": "https://agent-detect.bevry.me/model/minimaxm31flash",
       "builds": 2,
@@ -658,6 +673,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262144,
+      "released": "2026-04-21",
       "models_dev": "https://models.dev/models/alibaba/qwen3.6-27b",
       "agent_detect": "https://agent-detect.bevry.me/model/qwen3627b",
       "builds": 1,
@@ -708,6 +724,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262144,
+      "released": "2026-08-05",
       "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
       "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b",
       "builds": 8
@@ -742,6 +759,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 131072,
+      "released": "2026-09-30",
       "models_dev": "https://models.dev/models/ibm/granite-4.2-8b",
       "agent_detect": null,
       "builds": 0,
@@ -790,6 +808,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1048576,
+      "released": "2026-11-02",
       "models_dev": "https://models.dev/models/moonshotai/kimi-k3.1-pro",
       "agent_detect": null,
       "builds": 1,
@@ -839,6 +858,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262144,
+      "released": "2026-04-15",
       "models_dev": "https://models.dev/models/alibaba/qwen3.6-35b-a3b",
       "agent_detect": null,
       "builds": 3
@@ -874,6 +894,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262144,
+      "released": "2026-08-08",
       "models_dev": "https://models.dev/models/alibaba/qwen3.8-2.4t-a95b",
       "agent_detect": null,
       "builds": 1
@@ -907,6 +928,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 256000,
+      "released": "2026-09-03",
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-fin",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flash",
       "builds": 3
@@ -944,6 +966,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 131072,
+      "released": "2026-09-04",
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-vl",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flashvl",
       "builds": 3
@@ -980,6 +1003,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1000000,
+      "released": "2026-11-04",
       "models_dev": "https://models.dev/models/meituan/longcat-2.5",
       "agent_detect": "https://agent-detect.bevry.me/model/longcat25",
       "builds": 1
@@ -1014,6 +1038,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1048576,
+      "released": "2026-10-07",
       "models_dev": "https://models.dev/models/reflection/beam-1.0-501b-a23b",
       "agent_detect": null,
       "builds": 3
@@ -1047,6 +1072,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262144,
+      "released": "2026-10-13",
       "models_dev": "https://models.dev/models/inclusionai/ling-3.1-flash",
       "agent_detect": null,
       "builds": 0
@@ -1081,6 +1107,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 204800,
+      "released": "2025-10-22",
       "models_dev": "https://models.dev/models/minimax/MiniMax-M2",
       "agent_detect": null,
       "builds": 0
@@ -1115,6 +1142,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 204800,
+      "released": "2025-12-20",
       "models_dev": "https://models.dev/models/minimax/MiniMax-M2.1",
       "agent_detect": null,
       "builds": 0
@@ -1153,6 +1181,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262144,
+      "released": "2026-08-24",
       "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next",
       "agent_detect": null,
       "builds": 6
@@ -1186,6 +1215,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 256000,
+      "released": "2026-10-19",
       "models_dev": "https://models.dev/models/inclusionai/ling-3.0-flash-sante",
       "agent_detect": "https://agent-detect.bevry.me/model/ling30flash",
       "builds": 1
@@ -1215,6 +1245,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-21",
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2.6-pro",
       "agent_detect": "https://agent-detect.bevry.me/model/mimov26pro",
       "builds": 0
@@ -1244,6 +1275,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-23",
       "models_dev": null,
       "agent_detect": "https://agent-detect.bevry.me/model/lfm317b",
       "builds": 7
@@ -1276,6 +1308,7 @@
       "tool_calling": true,
       "reasoning": false,
       "context_tokens": 262144,
+      "released": "2026-04-29",
       "models_dev": null,
       "agent_detect": "https://agent-detect.bevry.me/model/ling261t",
       "builds": 0
@@ -1311,6 +1344,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262144,
+      "released": "2025-12-16",
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2-flash",
       "agent_detect": null,
       "builds": 0
@@ -1342,6 +1376,7 @@
       "tool_calling": false,
       "reasoning": false,
       "context_tokens": 0,
+      "released": "2026-07-28",
       "models_dev": "https://models.dev/models/minimax/MiniMax-H3",
       "agent_detect": null,
       "builds": 2
@@ -1378,6 +1413,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1000000,
+      "released": "2026-09-20",
       "models_dev": "https://models.dev/models/stepfun/step-5-preview",
       "agent_detect": null,
       "builds": 2
@@ -1411,6 +1447,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262144,
+      "released": "2026-08-10",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -1440,6 +1477,7 @@
       "tool_calling": false,
       "reasoning": false,
       "context_tokens": 32768,
+      "released": "2026-02-24",
       "models_dev": "https://models.dev/models/liquid/lfm2-24b-a2b",
       "agent_detect": null,
       "builds": 1
@@ -1469,6 +1507,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-21",
       "models_dev": "https://models.dev/models/xiaomi/mimo-v2.6-flash",
       "agent_detect": null,
       "builds": 0
@@ -1501,6 +1540,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-30",
       "models_dev": null,
       "agent_detect": "https://agent-detect.bevry.me/model/mistrallarge4",
       "builds": 4
@@ -1537,6 +1577,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262144,
+      "released": "2026-08-18",
       "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-35b-a3b",
       "agent_detect": null,
       "builds": 7
@@ -1568,6 +1609,7 @@
       "tool_calling": false,
       "reasoning": false,
       "context_tokens": 8192,
+      "released": "2026-09-14",
       "models_dev": "https://models.dev/models/alibaba/qwen-image-2.1",
       "agent_detect": null,
       "builds": 3
@@ -1601,6 +1643,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-19",
       "models_dev": null,
       "agent_detect": null,
       "builds": 7
@@ -1634,6 +1677,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 1000000,
+      "released": "2026-10-27",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -1666,6 +1710,7 @@
       "tool_calling": true,
       "reasoning": false,
       "context_tokens": 131000,
+      "released": "2025-09-17",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -1700,6 +1745,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262000,
+      "released": "2026-05-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -1731,6 +1777,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-12",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -1762,6 +1809,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-12",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -1793,6 +1841,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-12",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -1822,6 +1871,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-26",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -1853,6 +1903,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-03-25",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -1892,6 +1943,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-02-10",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -1929,6 +1981,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-10-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -1963,6 +2016,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-30",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -1994,6 +2048,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-16",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2021,6 +2076,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-10",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -2048,6 +2104,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-10",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -2079,6 +2136,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-23",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2110,6 +2168,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-13",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2140,6 +2199,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-21",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2169,6 +2229,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-19",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2199,6 +2260,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-28",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2229,6 +2291,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2257,6 +2320,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2023-05-03",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2285,6 +2349,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-05-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2315,6 +2380,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-10",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -2349,6 +2415,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -2377,6 +2444,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2023-05-19",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2407,6 +2475,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-24",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2440,6 +2509,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-24",
       "models_dev": null,
       "agent_detect": null,
       "builds": 4
@@ -2473,6 +2543,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-05",
       "models_dev": null,
       "agent_detect": null,
       "builds": 4
@@ -2506,6 +2577,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-24",
       "models_dev": null,
       "agent_detect": null,
       "builds": 3
@@ -2539,6 +2611,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-05",
       "models_dev": null,
       "agent_detect": null,
       "builds": 3
@@ -2568,6 +2641,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-01",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -2595,6 +2669,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-13",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -2624,6 +2699,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-28",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -2653,6 +2729,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-06",
       "models_dev": null,
       "agent_detect": null,
       "builds": 2
@@ -2687,6 +2764,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-06",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2717,6 +2795,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-25",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2747,6 +2826,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2776,6 +2856,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2806,6 +2887,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-06-15",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2834,6 +2916,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-21",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -2862,6 +2945,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-06-15",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2885,6 +2969,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-05",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2916,6 +3001,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-04",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2946,6 +3032,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-17",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -2977,6 +3064,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-01-30",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3006,6 +3094,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-12",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3038,6 +3127,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-06-23",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3067,6 +3157,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-06-04",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3095,6 +3186,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-21",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3124,6 +3216,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3153,6 +3246,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3182,6 +3276,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3211,6 +3306,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3238,6 +3334,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3266,6 +3363,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3293,6 +3391,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3321,6 +3420,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3348,6 +3448,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3375,6 +3476,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3407,6 +3509,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-26",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3434,6 +3537,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-07-03",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3464,6 +3568,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-05",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3492,6 +3597,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-05-25",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3521,6 +3627,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-05-25",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3549,6 +3656,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-01-05",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3578,6 +3686,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-01-06",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -3607,6 +3716,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-01-20",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -3636,6 +3746,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-28",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -3670,6 +3781,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 128000,
+      "released": "2026-10-12",
       "models_dev": null,
       "agent_detect": null,
       "builds": 8
@@ -3698,6 +3810,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-09",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3726,6 +3839,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-19",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -3755,6 +3869,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-03-31",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -3784,6 +3899,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-05-28",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -3815,9 +3931,23 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-12-18",
       "models_dev": null,
       "agent_detect": null,
-      "builds": 0
+      "builds": 0,
+      "task_performance": {
+        "task": "transcription",
+        "metric": "Average WER",
+        "value": 7.53,
+        "unit": "%",
+        "direction": "lower",
+        "source": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B",
+        "source_kind": "model-card",
+        "as_of": "2026-11-14",
+        "match": "exact",
+        "via": null,
+        "note": "Self-reported on the model card as the WER average on the ESB / Open ASR benchmark suite."
+      }
     },
     {
       "id": "lfm2-5-vl-3b",
@@ -3848,6 +3978,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-11",
       "models_dev": null,
       "agent_detect": null,
       "builds": 2
@@ -3880,6 +4011,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-18",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -3908,6 +4040,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-10-07",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3936,6 +4069,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-26",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -3973,9 +4107,23 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-08",
       "models_dev": null,
       "agent_detect": null,
-      "builds": 7
+      "builds": 7,
+      "task_performance": {
+        "task": "transcription",
+        "metric": "Average WER",
+        "value": 6.23,
+        "unit": "%",
+        "direction": "lower",
+        "source": "https://huggingface.co/LiquidAI/LFM3-Audio-2B",
+        "source_kind": "model-card",
+        "as_of": "2026-11-14",
+        "match": "exact",
+        "via": null,
+        "note": "Self-reported on the model card as the English ASR WER on the ESB / Open ASR benchmark suite."
+      }
     },
     {
       "id": "lfm3-omni-2b",
@@ -4004,6 +4152,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-21",
       "models_dev": null,
       "agent_detect": null,
       "builds": 5
@@ -4032,6 +4181,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4064,6 +4214,7 @@
       "tool_calling": true,
       "reasoning": false,
       "context_tokens": 128000,
+      "released": "2025-10-02",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4093,6 +4244,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-02-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4124,6 +4276,7 @@
       "tool_calling": true,
       "reasoning": false,
       "context_tokens": 262144,
+      "released": "2026-04-28",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4153,6 +4306,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-09",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4181,6 +4335,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4209,6 +4364,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-21",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4237,6 +4393,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-25",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4266,6 +4423,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4294,6 +4452,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-16",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4324,6 +4483,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-28",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -4354,6 +4514,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-28",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -4384,6 +4545,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-06",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4413,6 +4575,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-16",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4442,6 +4605,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-05",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4471,6 +4635,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-02",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -4497,6 +4662,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-05",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -4527,6 +4693,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-27",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -4556,6 +4723,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-10",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4585,6 +4753,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-04-29",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4614,6 +4783,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-11-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4643,6 +4813,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-04-29",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4672,6 +4843,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-05-30",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4701,6 +4873,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-04-29",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4730,6 +4903,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-04-29",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4761,6 +4935,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-18",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4792,6 +4967,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-18",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4823,6 +4999,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-18",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4853,6 +5030,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-04-23",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4882,6 +5060,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-04-27",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4911,6 +5090,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-04-27",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4945,6 +5125,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-21",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -4974,6 +5155,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-27",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5003,6 +5185,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-27",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5033,6 +5216,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-12-16",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5067,6 +5251,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-05-30",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -5101,6 +5286,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-08-07",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5135,6 +5321,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-05-30",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -5169,6 +5356,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-08-07",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5199,6 +5387,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5233,6 +5422,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-03",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5263,6 +5453,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-03",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5293,6 +5484,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-22",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5323,6 +5515,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-22",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5352,6 +5545,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-17",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5380,6 +5574,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-17",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5413,6 +5608,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-29",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5446,6 +5642,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-30",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5475,6 +5672,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-03",
       "models_dev": null,
       "agent_detect": null,
       "builds": 2
@@ -5506,6 +5704,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5536,6 +5735,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-07",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5566,6 +5766,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-03",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5602,6 +5803,7 @@
       "tool_calling": true,
       "reasoning": true,
       "context_tokens": 262144,
+      "released": "2026-10-16",
       "models_dev": null,
       "agent_detect": null,
       "builds": 7
@@ -5631,6 +5833,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-18",
       "models_dev": null,
       "agent_detect": null,
       "builds": 4
@@ -5660,6 +5863,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-18",
       "models_dev": null,
       "agent_detect": null,
       "builds": 6
@@ -5689,6 +5893,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-23",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5723,6 +5928,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-27",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5750,6 +5956,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-20",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5778,6 +5985,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-20",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5808,6 +6016,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-09",
       "models_dev": null,
       "agent_detect": null,
       "builds": 2
@@ -5839,9 +6048,23 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-22",
       "models_dev": null,
       "agent_detect": null,
-      "builds": 0
+      "builds": 0,
+      "task_performance": {
+        "task": "transcription",
+        "metric": "Average WER",
+        "value": 6.15,
+        "unit": "%",
+        "direction": "lower",
+        "source": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard",
+        "source_kind": "leaderboard",
+        "as_of": "2026-11-13",
+        "match": "family",
+        "via": "Qwen/Qwen3-ASR-1.7B-hf",
+        "note": "The score is the base Qwen3-ASR-1.7B-hf row, not this beam-search experiment."
+      }
     },
     {
       "id": "qwen3-asr-1-7b-hf-orze",
@@ -5870,9 +6093,23 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-22",
       "models_dev": null,
       "agent_detect": null,
-      "builds": 0
+      "builds": 0,
+      "task_performance": {
+        "task": "transcription",
+        "metric": "Average WER",
+        "value": 6.15,
+        "unit": "%",
+        "direction": "lower",
+        "source": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard",
+        "source_kind": "leaderboard",
+        "as_of": "2026-11-13",
+        "match": "family",
+        "via": "Qwen/Qwen3-ASR-1.7B-hf",
+        "note": "The score is the base Qwen3-ASR-1.7B-hf row, not this Orze merge."
+      }
     },
     {
       "id": "qwen3guard-stream-0-6b",
@@ -5900,6 +6137,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-23",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5930,6 +6168,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-23",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5960,6 +6199,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-23",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -5990,6 +6230,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-02",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6022,6 +6263,7 @@
       "tool_calling": false,
       "reasoning": true,
       "context_tokens": 128000,
+      "released": "2025-10-10",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6051,6 +6293,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-02-10",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6080,6 +6323,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-19",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6109,6 +6353,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2025-09-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6133,6 +6378,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-06",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6161,6 +6407,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-06-23",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6192,6 +6439,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-11",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6221,6 +6469,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2023-11-07",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6245,6 +6494,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6269,6 +6519,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6293,6 +6544,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6317,6 +6569,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6350,6 +6603,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-21",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -6380,6 +6634,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-09",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6409,6 +6664,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-25",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6439,6 +6695,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-25",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6467,6 +6724,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2023-10-30",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6495,6 +6753,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-14",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6523,6 +6782,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-29",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6552,6 +6812,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-03",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6580,6 +6841,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-03",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -6610,6 +6872,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-05-12",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6642,6 +6905,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-26",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6675,6 +6939,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-30",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6704,6 +6969,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-04",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6734,6 +7000,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-12",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6765,9 +7032,23 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-15",
       "models_dev": null,
       "agent_detect": null,
-      "builds": 0
+      "builds": 0,
+      "task_performance": {
+        "task": "transcription",
+        "metric": "Average WER",
+        "value": 4.94,
+        "unit": "%",
+        "direction": "lower",
+        "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0",
+        "source_kind": "model-card",
+        "as_of": "2026-10-09",
+        "match": "exact",
+        "via": null,
+        "note": "Self-reported. The card cites the leaderboard's published row as of 9 October 2026."
+      }
     },
     {
       "id": "underdog-bark-3-0-clean",
@@ -6796,9 +7077,23 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-15",
       "models_dev": null,
       "agent_detect": null,
-      "builds": 0
+      "builds": 0,
+      "task_performance": {
+        "task": "transcription",
+        "metric": "Average WER",
+        "value": 5.83,
+        "unit": "%",
+        "direction": "lower",
+        "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Clean",
+        "source_kind": "model-card",
+        "as_of": "2026-11-14",
+        "match": "exact",
+        "via": null,
+        "note": "Self-reported seven-set average. Cleanup removes disfluencies on purpose, so verbatim references count those removals as errors."
+      }
     },
     {
       "id": "underdog-bark-3-0-plus",
@@ -6827,9 +7122,23 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-15",
       "models_dev": null,
       "agent_detect": null,
-      "builds": 0
+      "builds": 0,
+      "task_performance": {
+        "task": "transcription",
+        "metric": "Average WER",
+        "value": 4.76,
+        "unit": "%",
+        "direction": "lower",
+        "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Plus",
+        "source_kind": "model-card",
+        "as_of": "2026-10-09",
+        "match": "exact",
+        "via": null,
+        "note": "Self-reported. The card cites the leaderboard's published comparison as of 9 October 2026."
+      }
     },
     {
       "id": "underdog-bark-3-0-pro",
@@ -6858,9 +7167,23 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-15",
       "models_dev": null,
       "agent_detect": null,
-      "builds": 0
+      "builds": 0,
+      "task_performance": {
+        "task": "transcription",
+        "metric": "Average WER",
+        "value": 4.29,
+        "unit": "%",
+        "direction": "lower",
+        "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Pro",
+        "source_kind": "model-card",
+        "as_of": "2026-10-09",
+        "match": "exact",
+        "via": null,
+        "note": "Self-reported. The card cites the leaderboard's published comparison as of 9 October 2026."
+      }
     },
     {
       "id": "underdog-poodle-4b",
@@ -6892,6 +7215,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-24",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -6922,6 +7246,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6951,6 +7276,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-04",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -6979,6 +7305,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-05",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7008,6 +7335,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-12",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7037,6 +7365,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-12",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7065,6 +7394,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-11-10",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7100,6 +7430,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-06-19",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -7135,6 +7466,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-26",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7163,6 +7495,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2023-05-02",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7191,6 +7524,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-08",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7220,6 +7554,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-08-19",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7249,6 +7584,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-22",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7278,6 +7614,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-22",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7307,6 +7644,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-04-05",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7337,6 +7675,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-07-03",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7366,6 +7705,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-09-04",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7400,6 +7740,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-03-04",
       "models_dev": null,
       "agent_detect": null,
       "builds": 0
@@ -7432,6 +7773,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-16",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -7464,6 +7806,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-15",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -7496,6 +7839,7 @@
       "tool_calling": null,
       "reasoning": null,
       "context_tokens": null,
+      "released": "2026-10-16",
       "models_dev": null,
       "agent_detect": null,
       "builds": 1
@@ -7504,5 +7848,12 @@
   "scorecard": {
     "source": "https://discourse.bevry.me/t/ais-graded-on-openness-morality-code-reasoning-and-research-citation/1310",
     "as_of": "2026-07-18"
+  },
+  "asr": {
+    "name": "Open ASR Leaderboard",
+    "tab": "English short-form",
+    "version": "1.16.0",
+    "as_of": "2026-11-13",
+    "source": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard"
   }
 }

@@ -14,7 +14,11 @@
     "index:check": "deno check scripts/index/mod.ts",
     "summaries": "deno run -A scripts/summaries/fetch-cards.ts",
     "scorecard": "deno run -A scripts/scorecard/mod.ts",
-    "scorecard:check": "deno check scripts/scorecard/mod.ts"
+    "scorecard:check": "deno check scripts/scorecard/mod.ts",
+    "asr:fetch": "deno run -A scripts/asr/fetch.ts",
+    "asr": "deno run -A scripts/asr/mod.ts",
+    "asr:check": "deno check scripts/asr/fetch.ts scripts/asr/mod.ts",
+    "overlays": "deno task scorecard && deno task asr"
   },
   "imports": {
     "@std/xml": "jsr:@std/xml@^0.2.0"

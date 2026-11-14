@@ -470,6 +470,7 @@ async function main(): Promise<void> {
       tool_calling: md?.tool_call ?? null,
       reasoning: md?.reasoning ?? null,
       context_tokens: md?.limit?.context ?? null,
+      released: root.item.published_at ? root.item.published_at.slice(0, 10) : null,
       models_dev: link.models_dev ?? null,
       agent_detect: link.agent_detect ?? null,
       builds: buildEntries.length,

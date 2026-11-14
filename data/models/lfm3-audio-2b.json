@@ -170,5 +170,18 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": "7 builds are attached."
+  "notes": "7 builds are attached.",
+  "task_performance": {
+    "task": "transcription",
+    "metric": "Average WER",
+    "value": 6.23,
+    "unit": "%",
+    "direction": "lower",
+    "source": "https://huggingface.co/LiquidAI/LFM3-Audio-2B",
+    "source_kind": "model-card",
+    "as_of": "2026-11-14",
+    "match": "exact",
+    "via": null,
+    "note": "Self-reported on the model card as the English ASR WER on the ESB / Open ASR benchmark suite."
+  }
 }

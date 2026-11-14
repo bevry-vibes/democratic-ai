@@ -93,5 +93,18 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "",
+  "task_performance": {
+    "task": "transcription",
+    "metric": "Average WER",
+    "value": 6.15,
+    "unit": "%",
+    "direction": "lower",
+    "source": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard",
+    "source_kind": "leaderboard",
+    "as_of": "2026-11-13",
+    "match": "family",
+    "via": "Qwen/Qwen3-ASR-1.7B-hf",
+    "note": "The score is the base Qwen3-ASR-1.7B-hf row, not this beam-search experiment."
+  }
 }

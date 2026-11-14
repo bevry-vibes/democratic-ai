@@ -93,5 +93,18 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "",
+  "task_performance": {
+    "task": "transcription",
+    "metric": "Average WER",
+    "value": 5.83,
+    "unit": "%",
+    "direction": "lower",
+    "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Clean",
+    "source_kind": "model-card",
+    "as_of": "2026-11-14",
+    "match": "exact",
+    "via": null,
+    "note": "Self-reported seven-set average. Cleanup removes disfluencies on purpose, so verbatim references count those removals as errors."
+  }
 }

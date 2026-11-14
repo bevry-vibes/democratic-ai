@@ -1,0 +1,69 @@
+{
+  "updated_at": "2026-11-14T05:19:49.322Z",
+  "generated_on": "2026-11-14",
+  "leaderboard": {
+    "name": "Open ASR Leaderboard",
+    "tab": "English short-form",
+    "version": "1.16.0",
+    "as_of": "2026-11-13",
+    "source": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard"
+  },
+  "models": 240,
+  "matched": 8,
+  "leaderboard_rows": 2,
+  "self_reported": 6,
+  "exact": 6,
+  "family": 2,
+  "applied": [
+    {
+      "id": "underdog-bark-3-0-pro",
+      "value": 4.29,
+      "match": "exact",
+      "source_kind": "model-card"
+    },
+    {
+      "id": "underdog-bark-3-0-plus",
+      "value": 4.76,
+      "match": "exact",
+      "source_kind": "model-card"
+    },
+    {
+      "id": "underdog-bark-3-0",
+      "value": 4.94,
+      "match": "exact",
+      "source_kind": "model-card"
+    },
+    {
+      "id": "underdog-bark-3-0-clean",
+      "value": 5.83,
+      "match": "exact",
+      "source_kind": "model-card"
+    },
+    {
+      "id": "qwen3-asr-1-7b-hf-beam4",
+      "value": 6.15,
+      "match": "family",
+      "source_kind": "leaderboard"
+    },
+    {
+      "id": "qwen3-asr-1-7b-hf-orze",
+      "value": 6.15,
+      "match": "family",
+      "source_kind": "leaderboard"
+    },
+    {
+      "id": "lfm3-audio-2b",
+      "value": 6.23,
+      "match": "exact",
+      "source_kind": "model-card"
+    },
+    {
+      "id": "lfm2-5-audio-1-5b",
+      "value": 7.53,
+      "match": "exact",
+      "source_kind": "model-card"
+    }
+  ],
+  "missing": [],
+  "note": "A leaderboard row is a measured result. A model-card row is self-reported and marked as such. A family match carries the base model's row, not an exact version result. Never treat a missing score as zero."
+}

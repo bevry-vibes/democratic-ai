@@ -89,5 +89,18 @@
   ],
   "verified_at": "2026-11-14",
   "updated_at": "2026-11-14",
-  "notes": ""
+  "notes": "",
+  "task_performance": {
+    "task": "transcription",
+    "metric": "Average WER",
+    "value": 7.53,
+    "unit": "%",
+    "direction": "lower",
+    "source": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B",
+    "source_kind": "model-card",
+    "as_of": "2026-11-14",
+    "match": "exact",
+    "via": null,
+    "note": "Self-reported on the model card as the WER average on the ESB / Open ASR benchmark suite."
+  }
 }

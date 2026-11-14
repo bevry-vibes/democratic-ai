@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-14",
+  "leaderboard": {
+    "name": "Open ASR Leaderboard",
+    "tab": "English short-form",
+    "version": "1.16.0",
+    "as_of": "2026-11-13",
+    "url": "https://huggingface.co/spaces/hf-audio/open_asr_leaderboard",
+    "cache": "data/raw/asr/open-asr-leaderboard/2026-11-14/config.json",
+    "metric": "Average WER",
+    "unit": "%",
+    "direction": "lower",
+    "note": "Average word error rate on the leaderboard's English short-form sets. Lower is better."
+  },
+  "models": [
+    {
+      "id": "qwen3-asr-1-7b-hf-beam4",
+      "entry": "Qwen/Qwen3-ASR-1.7B-hf",
+      "match": "family",
+      "via": "Qwen/Qwen3-ASR-1.7B-hf",
+      "note": "The score is the base Qwen3-ASR-1.7B-hf row, not this beam-search experiment."
+    },
+    {
+      "id": "qwen3-asr-1-7b-hf-orze",
+      "entry": "Qwen/Qwen3-ASR-1.7B-hf",
+      "match": "family",
+      "via": "Qwen/Qwen3-ASR-1.7B-hf",
+      "note": "The score is the base Qwen3-ASR-1.7B-hf row, not this Orze merge."
+    },
+    {
+      "id": "lfm2-5-audio-1-5b",
+      "value": 7.53,
+      "match": "exact",
+      "source_kind": "model-card",
+      "source": "https://huggingface.co/LiquidAI/LFM2.5-Audio-1.5B",
+      "as_of": "2026-11-14",
+      "note": "Self-reported on the model card as the WER average on the ESB / Open ASR benchmark suite."
+    },
+    {
+      "id": "lfm3-audio-2b",
+      "value": 6.23,
+      "match": "exact",
+      "source_kind": "model-card",
+      "source": "https://huggingface.co/LiquidAI/LFM3-Audio-2B",
+      "as_of": "2026-11-14",
+      "note": "Self-reported on the model card as the English ASR WER on the ESB / Open ASR benchmark suite."
+    },
+    {
+      "id": "underdog-bark-3-0",
+      "value": 4.94,
+      "match": "exact",
+      "source_kind": "model-card",
+      "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0",
+      "as_of": "2026-10-09",
+      "note": "Self-reported. The card cites the leaderboard's published row as of 9 October 2026."
+    },
+    {
+      "id": "underdog-bark-3-0-plus",
+      "value": 4.76,
+      "match": "exact",
+      "source_kind": "model-card",
+      "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Plus",
+      "as_of": "2026-10-09",
+      "note": "Self-reported. The card cites the leaderboard's published comparison as of 9 October 2026."
+    },
+    {
+      "id": "underdog-bark-3-0-pro",
+      "value": 4.29,
+      "match": "exact",
+      "source_kind": "model-card",
+      "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Pro",
+      "as_of": "2026-10-09",
+      "note": "Self-reported. The card cites the leaderboard's published comparison as of 9 October 2026."
+    },
+    {
+      "id": "underdog-bark-3-0-clean",
+      "value": 5.83,
+      "match": "exact",
+      "source_kind": "model-card",
+      "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Clean",
+      "as_of": "2026-11-14",
+      "note": "Self-reported seven-set average. Cleanup removes disfluencies on purpose, so verbatim references count those removals as errors."
+    }
+  ]
+}
