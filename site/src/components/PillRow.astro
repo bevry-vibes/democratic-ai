@@ -1,0 +1,59 @@
+---
+interface PillLink {
+  label: string
+  href: string
+  external?: boolean
+}
+
+interface Props {
+  label: string
+  definition: string
+  value?: string
+  tone?: string
+  missing?: boolean
+  missingLabel?: string
+  links?: PillLink[]
+}
+
+const {
+  label,
+  definition,
+  value,
+  tone = "",
+  missing = false,
+  missingLabel = "Not recorded",
+  links = [],
+} = Astro.props
+
+const aria = missing ? `${label}. Not provided.` : `${label}. ${definition}`
+---
+
+<li class:list={["pill-row", { "pill-row-missing": missing }]}>
+  <span
+    class:list={["chip", tone, { "pill-missing": missing }]}
+    data-tooltip={missing ? "Not provided." : definition}
+    tabindex="0"
+    aria-label={aria}
+  >{label}</span>
+  <div class="pill-explain">
+    {missing ? (
+      <p class="pill-missing-note" data-tooltip="Not provided.">{missingLabel}</p>
+    ) : value ? (
+      <p class="pill-value">{value}</p>
+    ) : null}
+    <p>{definition}</p>
+    {links.length > 0 && (
+      <ul class="pill-links">
+        {links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noreferrer" : undefined}
+            >↗ {link.label}</a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</li>

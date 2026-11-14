@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro"
 import CountPill from "../../components/CountPill.astro"
 import ComparePicker from "../../components/ComparePicker.astro"
 import Pill from "../../components/Pill.astro"
+import PillRow from "../../components/PillRow.astro"
 import TagChips from "../../components/TagChips.astro"
 import {
   SCORECARD_AXIS_ORDER,
@@ -73,25 +74,168 @@ const tagCardsBeforeAccess = tagCards.filter((card) => TAG_NAMESPACE_ORDER.index
 const tagCardsAfterAccess = tagCards.filter((card) => TAG_NAMESPACE_ORDER.indexOf(card.namespace) > runtimeOrder)
 const runtimeTags = model.tags.filter((tag) => tag.startsWith("runtime:"))
 const structuredOutputDefinition = "Return typed or schema-constrained output."
-const runtimeLabels: Record<string, string> = {
-  opencode: "OpenCode",
-  cloudflare: "Cloudflare Workers AI",
-  openrouter: "OpenRouter",
-  python: "Python",
-  mlx: "MLX",
-  "llama.cpp": "llama.cpp",
-  litert: "LiteRT",
-  webgpu: "WebGPU",
-  hosted: "Hosted API",
-  browser: "Browser",
-  node: "Node",
-  onnx: "ONNX Runtime",
-  ollama: "Ollama",
-  android: "Android",
-  ios: "iOS",
-  coreml: "Core ML",
+
+interface PillLinkData {
+  label: string
+  href: string
+  external?: boolean
 }
-const runtimeLabel = (runtime: string) => runtimeLabels[runtime] ?? runtime
+
+interface PillRowData {
+  label: string
+  definition: string
+  value?: string
+  tone?: string
+  missing?: boolean
+  missingLabel?: string
+  links?: PillLinkData[]
+}
+
+const tagRow = (tag: string): PillRowData => ({
+  label: tag,
+  definition: tagDefinition(tag),
+  tone: tagStatus(tag),
+  links: [{ label: "View models", href: tagPath(tag) }],
+})
+
+const accessRows: PillRowData[] = [
+  {
+    label: "access:huggingface",
+    definition: "The weights and model card on Hugging Face.",
+    tone: "tag-access",
+    links: [{ label: "Open model card", href: `https://huggingface.co/${model.access.hugging_face}`, external: true }],
+  },
+  {
+    label: "access:models.dev",
+    definition: "Hosted providers, pricing, and model metadata.",
+    tone: "tag-access",
+    missing: !model.access.models_dev,
+    missingLabel: "No entry recorded",
+    links: model.access.models_dev ? [{ label: "Open models.dev entry", href: model.access.models_dev, external: true }] : [],
+  },
+  {
+    label: "access:agent-detect",
+    definition: "Harness and provider identification.",
+    tone: "tag-access",
+    missing: !model.access.agent_detect,
+    missingLabel: "No entry recorded",
+    links: model.access.agent_detect ? [{ label: "Open agent-detect entry", href: model.access.agent_detect, external: true }] : [],
+  },
+  ...runtimeTags.map((tag) => {
+    const runtime = tag.slice(8)
+    const links: PillLinkData[] = []
+    if (runtime === "opencode") links.push({ label: "OpenCode", href: "https://opencode.ai", external: true })
+    if (runtime === "cloudflare") links.push({ label: "Cloudflare Workers AI", href: "https://developers.cloudflare.com/workers-ai/", external: true })
+    if (runtime === "openrouter") links.push({ label: "OpenRouter", href: "https://openrouter.ai", external: true })
+    links.push({ label: "View models", href: tagPath(tag) })
+    return { label: `access:${runtime}`, definition: tagDefinition(tag), tone: "tag-access", links }
+  }),
+]
+if (model.access.gated === true || model.access.gated === "auto" || model.access.gated === "manual") {
+  accessRows.push({ label: "access:gated", definition: "Access requires approval or acceptance of terms.", tone: "tag-access" })
+} else if (model.access.gated === false) {
+  accessRows.push({ label: "access:open", definition: "No approval is required to access the weights.", tone: "tag-access" })
+}
+
+const capabilityRows: PillRowData[] = [
+  {
+    label: "capability:structured-output",
+    definition: structuredOutputDefinition,
+    tone: "tag-capability",
+    value: model.capabilities.structured_output === true ? "Provided" : undefined,
+    missing: model.capabilities.structured_output !== true,
+    missingLabel: model.capabilities.structured_output === false ? "Not provided" : "Not recorded",
+    links: [{ label: "Filter models", href: "/models/?capability=structured-output" }],
+  },
+  {
+    label: "capability:context-window",
+    definition: "The maximum number of tokens the model can consider at once.",
+    tone: "tag-capability",
+    value: model.capabilities.context_tokens == null ? undefined : `${formatContextCount(model.capabilities.context_tokens)} tokens`,
+    missing: model.capabilities.context_tokens == null,
+    missingLabel: "Not recorded",
+    links: [{ label: "Filter models", href: model.capabilities.context_tokens ? `/models/?min_context=${model.capabilities.context_tokens}` : "/models/" }],
+  },
+  {
+    label: "capability:size",
+    definition: "The model's parameter count. Use it to estimate weights and memory.",
+    tone: "tag-capability",
+    value: model.footprint.params_b == null ? undefined : formatParams(model.footprint.params_b),
+    missing: model.footprint.params_b == null,
+    missingLabel: "Not recorded",
+    links: [{ label: "Filter models", href: model.footprint.params_b ? `/models/?min_params=${model.footprint.params_b}` : "/models/" }],
+  },
+]
+
+const releaseRows: PillRowData[] = [
+  {
+    label: `org:${model.organization}`,
+    definition: "The organisation or author.",
+    tone: "tag-release",
+    links: [{ label: "Filter by organisation", href: `/models/?q=${encodeURIComponent(model.organization)}` }],
+  },
+  {
+    label: model.released ? `released:${model.released}` : "released:unknown",
+    definition: "The release date.",
+    tone: "tag-release",
+    missing: !model.released,
+    missingLabel: "Not recorded",
+    links: [{ label: "Sort by release date", href: "/models/?sort=released" }],
+  },
+  {
+    label: `builds:${model.builds.length}`,
+    definition: "A build is packaging, not a new model. It inherits the base task and terms.",
+    tone: "tag-release",
+    links: [{ label: "See the builds", href: "#builds" }],
+  },
+]
+
+const termRows: PillRowData[] = [
+  {
+    label: "terms:weights",
+    definition: "Open-weight means the trained weights are downloadable. It does not mean the training data or code are open.",
+    tone: "tag-terms",
+    value: model.openness.weights,
+    missing: model.openness.weights === "unknown",
+    missingLabel: "Not recorded",
+    links: [{ label: "Release terms", href: "/#release-terms" }],
+  },
+  {
+    label: "terms:training-data",
+    definition: "Open means the data is published. Documented means it is described but not released. Unknown means unchecked, not closed.",
+    tone: "tag-terms",
+    value: model.openness.training_data,
+    missing: model.openness.training_data === "unknown",
+    missingLabel: "Not recorded",
+    links: [{ label: "Release terms", href: "/#release-terms" }],
+  },
+  {
+    label: "terms:training-code",
+    definition: "Open means the training code is published. Documented means it is described but not released. Unknown means unchecked, not closed.",
+    tone: "tag-terms",
+    value: model.openness.training_code,
+    missing: model.openness.training_code === "unknown",
+    missingLabel: "Not recorded",
+    links: [{ label: "Release terms", href: "/#release-terms" }],
+  },
+  {
+    label: "terms:tier",
+    definition: tierDescription(model.openness.tier),
+    tone: "tag-terms",
+    value: model.openness.tier,
+    links: [{ label: "Release terms", href: "/#release-terms" }],
+  },
+]
+if (!model.tags.some((tag) => tag.startsWith("license:"))) {
+  termRows.unshift({
+    label: "license:unknown",
+    definition: "The licence is not recorded. The reuse terms are unknown.",
+    tone: "tag-terms",
+    missing: true,
+    missingLabel: "Not recorded",
+    links: [{ label: "Release terms", href: "/#release-terms" }],
+  })
+}
 const formatDate = (value: string | null | undefined) =>
   value
     ? new Date(value).toLocaleDateString("en-GB", {
@@ -184,12 +328,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
         <div class="panel">
           <h2>{card.label}</h2>
           <ul class="tag-explain">
-            {card.tags.map((tag) => (
-              <li>
-                <Pill label={tag} href={tagPath(tag)} tone={tagStatus(tag)} tooltip={tagDefinition(tag)} />
-                <span>{tagDefinition(tag)}</span>
-              </li>
-            ))}
+            {card.tags.map((tag) => <PillRow {...tagRow(tag)} />)}
           </ul>
         </div>
       ))}
@@ -197,68 +336,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
       <div class="panel" id="access">
         <h2>Access</h2>
         <ul class="tag-explain">
-          <li>
-            <Pill
-              label="Hugging Face"
-              href={`https://huggingface.co/${model.access.hugging_face}`}
-              tooltip="The weights and model card on Hugging Face."
-            />
-            <span>
-              The weights and model card at{" "}
-              <a href={`https://huggingface.co/${model.access.hugging_face}`} target="_blank" rel="noreferrer">
-                {model.access.hugging_face}
-              </a>.
-            </span>
-          </li>
-          <li>
-            {model.access.models_dev ? (
-              <Pill label="models.dev" href={model.access.models_dev} tooltip="Hosted providers, pricing, and model metadata." />
-            ) : (
-              <Pill label="models.dev" tooltip="No models.dev entry is recorded for this model." />
-            )}
-            <span>
-              {model.access.models_dev
-                ? "Hosted providers, pricing, and model metadata."
-                : "No models.dev entry is recorded for this model."}
-            </span>
-          </li>
-          <li>
-            {model.access.agent_detect ? (
-              <Pill label="agent-detect" href={model.access.agent_detect} tooltip="Harness and provider identification." />
-            ) : (
-              <Pill label="agent-detect" tooltip="No agent-detect entry is recorded for this model." />
-            )}
-            <span>
-              {model.access.agent_detect
-                ? "Harness and provider identification."
-                : "No agent-detect entry is recorded for this model."}
-            </span>
-          </li>
-          {runtimeTags.map((tag) => {
-            const runtime = tag.slice(8)
-            return (
-              <li>
-                <Pill
-                  label={runtimeLabel(runtime)}
-                  href={tagPath(tag)}
-                  tone={tagStatus(tag)}
-                  tooltip={tagDefinition(tag)}
-                />
-                <span>{tagDefinition(tag)}</span>
-              </li>
-            )
-          })}
-          {model.access.gated === true || model.access.gated === "auto" || model.access.gated === "manual" ? (
-            <li>
-              <Pill label="Gated" tooltip="Access requires approval or acceptance of terms." />
-              <span>Access requires approval or acceptance of terms.</span>
-            </li>
-          ) : model.access.gated === false ? (
-            <li>
-              <Pill label="Open access" tooltip="No approval is required to access the weights." />
-              <span>No approval is required to access the weights.</span>
-            </li>
-          ) : null}
+          {accessRows.map((row) => <PillRow {...row} />)}
         </ul>
       </div>
 
@@ -266,12 +344,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
         <div class="panel">
           <h2>{card.label}</h2>
           <ul class="tag-explain">
-            {card.tags.map((tag) => (
-              <li>
-                <Pill label={tag} href={tagPath(tag)} tone={tagStatus(tag)} tooltip={tagDefinition(tag)} />
-                <span>{tagDefinition(tag)}</span>
-              </li>
-            ))}
+            {card.tags.map((tag) => <PillRow {...tagRow(tag)} />)}
           </ul>
         </div>
       ))}
@@ -279,143 +352,21 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
       <div class="panel" id="capabilities">
         <h2>Capabilities</h2>
         <ul class="tag-explain">
-          <li>
-            <Pill label="Tool calling" href="/models/?capability=tool-calling" tooltip={tagDefinition("task:tool-calling")} />
-            <span>
-              {model.capabilities.tool_calling == null
-                ? "Not recorded in this pull. This is not the same as unsupported."
-                : `${bool(model.capabilities.tool_calling)}. ${tagDefinition("task:tool-calling")}`}
-            </span>
-          </li>
-          <li>
-            <Pill label="Reasoning" href="/models/?capability=reasoning" tooltip={tagDefinition("task:reasoning")} />
-            <span>
-              {model.capabilities.reasoning == null
-                ? "Not recorded in this pull. This is not the same as unsupported."
-                : `${bool(model.capabilities.reasoning)}. ${tagDefinition("task:reasoning")}`}
-            </span>
-          </li>
-          <li>
-            <Pill label="Structured output" href="/models/?capability=structured-output" tooltip={structuredOutputDefinition} />
-            <span>
-              {model.capabilities.structured_output == null
-                ? "Not recorded in this pull. This is not the same as unsupported."
-                : `${bool(model.capabilities.structured_output)}. ${structuredOutputDefinition}`}
-            </span>
-          </li>
-          <li>
-            <Pill
-              label="Context window"
-              href={model.capabilities.context_tokens ? `/models/?min_context=${model.capabilities.context_tokens}` : "/models/"}
-              tooltip="The model's maximum context window."
-            />
-            <span>
-              {model.capabilities.context_tokens == null
-                ? "Not recorded. Check the model card."
-                : `${formatContextCount(model.capabilities.context_tokens)} tokens. The maximum the model can consider at once.`}
-            </span>
-          </li>
-          <li>
-            <Pill
-              label="Size"
-              href={model.footprint.params_b ? `/models/?min_params=${model.footprint.params_b}` : "/models/"}
-              tooltip="The model's parameter count."
-            />
-            <span>
-              {model.footprint.params_b == null
-                ? "Not recorded. Check the model card."
-                : `${formatParams(model.footprint.params_b)}. Use it to estimate weights and memory.`}
-            </span>
-          </li>
+          {capabilityRows.map((row) => <PillRow {...row} />)}
         </ul>
       </div>
 
       <div class="panel" id="release">
         <h2>Release</h2>
         <ul class="tag-explain">
-          <li>
-            <Pill
-              label="Organisation"
-              href={`/models/?q=${encodeURIComponent(model.organization)}`}
-              tone="tag-org"
-              tooltip="The organisation or author."
-            />
-            <span>{model.organization}. The organisation or author.</span>
-          </li>
-          <li>
-            <Pill
-              label="Released"
-              href="/models/?sort=released"
-              tone="meta-released"
-              tooltip="Release date. Opens the model index sorted by release date."
-            />
-            <span>{model.released ? `${model.released}. The release date.` : "Not recorded. Check the model card."}</span>
-          </li>
-          <li>
-            <Pill
-              label="Builds"
-              href="#builds"
-              tone="meta-builds"
-              tooltip="A build is packaging, not a new model. It inherits the base task and terms."
-            />
-            <span>
-              {model.builds.length}. A build is packaging, not a new model. It inherits the base task and terms.
-            </span>
-          </li>
+          {releaseRows.map((row) => <PillRow {...row} />)}
         </ul>
       </div>
 
       <div class="panel" id="terms">
         <h2>Terms</h2>
         <ul class="tag-explain">
-          <li>
-            <Pill
-              label="Weights"
-              href="/#release-terms"
-              tooltip="Open-weight means the trained weights are downloadable. It does not mean the training data or code are open."
-            />
-            <span>
-              {model.openness.weights === "unknown"
-                ? "Not recorded. This is not the same as closed."
-                : `${model.openness.weights}. Open-weight means the trained weights are downloadable; the training data and code may not be.`}
-            </span>
-          </li>
-          <li>
-            <Pill
-              label="Training data"
-              href="/#release-terms"
-              tooltip="Open means the data is published. Documented means it is described but not released. Unknown means unchecked, not closed."
-            />
-            <span>
-              {model.openness.training_data === "unknown"
-                ? "Not recorded. Unchecked is not the same as closed."
-                : `${model.openness.training_data}. ${
-                    model.openness.training_data === "open"
-                      ? "The training data is published."
-                      : "The training data is described but not released."
-                  }`}
-            </span>
-          </li>
-          <li>
-            <Pill
-              label="Training code"
-              href="/#release-terms"
-              tooltip="Open means the training code is published. Documented means it is described but not released. Unknown means unchecked, not closed."
-            />
-            <span>
-              {model.openness.training_code === "unknown"
-                ? "Not recorded. Unchecked is not the same as closed."
-                : `${model.openness.training_code}. ${
-                    model.openness.training_code === "open"
-                      ? "The training code is published."
-                      : "The training code is described but not released."
-                  }`}
-            </span>
-          </li>
-          <li>
-            <Pill label="Tier" href="/#release-terms" tooltip={tierDescription(model.openness.tier)} />
-            <span>{model.openness.tier}. {tierDescription(model.openness.tier)}</span>
-          </li>
+          {termRows.map((row) => <PillRow {...row} />)}
         </ul>
         <p class="muted" style="font-size:0.82rem;margin-top:0.8rem">
           Training-data and training-code evidence is not assessed in this pass. `unknown` means unchecked, not closed.
