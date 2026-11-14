@@ -1,121 +1,196 @@
 ---
 import Base from "../layouts/Base.astro"
-import CountPill from "../components/CountPill.astro"
-import TagChips from "../components/TagChips.astro"
-import ComparePicker from "../components/ComparePicker.astro"
-import { getIndex, tagDefinition, tagLabel, tagPath, taskCounts, topModels } from "../lib/data"
+import ModelList from "../components/ModelList.astro"
+import TagIndex from "../components/TagIndex.astro"
+import ThesisContent from "../components/ThesisContent.astro"
+import MethodContent from "../components/MethodContent.astro"
+import { getIndex, taskCounts } from "../lib/data"
 
 const index = getIndex()
-const top = topModels(index, 6)
+const models = [...index.models].sort(
+  (a, b) => (b.scorecard?.overall.score ?? -1) - (a.scorecard?.overall.score ?? -1) || a.name.localeCompare(b.name),
+)
 const tasks = taskCounts(index)
+const namespaceCount = new Set(index.models.flatMap((model) => model.tags.map((tag) => tag.split(":")[0]))).size
 ---
 
 <Base
   title="Democratic AI"
-  description="A catalogue of reciprocal AI models, tagged for the job you need, with a current scorecard and open JSON."
+  description="A catalogue of reciprocal AI models, judged by what they give back: open weights, open data, open code, and reuse terms."
 >
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">The Democratic AI catalogue</p>
-      <h1>Find a model by job. Read what it gives back.</h1>
-      <p class="lede">
-        A catalogue of reciprocal AI. Start with a task, compare the current scorecard, and use the JSON without an
-        account.
-      </p>
-      <p class="hero-meta">
-        {index.models.length} models · {tasks.length} task tags · last index {index.generated_at.slice(0, 10)}
-      </p>
+  <section class="hero home-hero">
+    <div class="wrap home-hero-grid">
+      <div>
+        <p class="eyebrow">The Democratic AI catalogue</p>
+        <h1>AI that takes from the commons should give back.</h1>
+        <p class="lede">
+          Democratic AI is a working catalogue of models judged by what they return, not only by what they can do.
+          Open weights are a real return. Open data and open code make the gift reproducible. Read the scorecard,
+          then choose a model for the job.
+        </p>
+        <p class="hero-meta">
+          {index.models.length} models · {tasks.length} task tags · {namespaceCount} tag namespaces · last index{" "}
+          {index.generated_at.slice(0, 10)}
+        </p>
+      </div>
+      <nav class="hero-jump" aria-label="On this page">
+        <p class="eyebrow">On this page</p>
+        <a href="#models">Models</a>
+        <a href="#tags">Tags</a>
+        <a href="#runtime">Runtime</a>
+        <a href="#thesis">Thesis</a>
+        <a href="#method">Method</a>
+        <a href="#api">API</a>
+      </nav>
     </div>
   </section>
 
-  <section class="section rule-top">
+  <section class="section rule-top" id="models">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Models</p>
-          <h2>Strongest overall scores</h2>
+          <p class="eyebrow">The catalogue</p>
+          <h2>Models</h2>
         </div>
+        <a href="/models/">Open the full index →</a>
       </div>
-      <p class="muted" style="margin-bottom:1.2rem">
-        Six models with the strongest current overall score. <a href="/about/#scorecard">How the score is made</a>.
+      <p class="muted" style="margin-bottom:1rem">
+        All {index.models.length} models, strongest current overall score first. Scroll the list to load the rest.
       </p>
-      <div class="home-model-list">
-        {top.map((model, index) => {
-          const overall = model.scorecard?.overall
-          return (
-            <div class="home-model-row">
-              <span class="home-model-rank">{String(index + 1).padStart(2, "0")}</span>
-              <div class="home-model-name">
-                <a class="row-title" href={`/models/${model.id}/`}><h3>{model.name}</h3></a>
-                <p class="mono-small">{model.organization}</p>
-              </div>
-              <div class="home-model-tasks">
-                <TagChips tags={model.tags.filter((tag) => tag.startsWith("task:"))} limit={2} />
-              </div>
-              <div class="home-model-score">
-                <CountPill
-                  label="overall"
-                  count={overall?.score == null ? "—" : Math.round(overall.score)}
-                  href={`/models/${model.id}/#scorecard-overall`}
-                  tone="score-overall"
-                  tooltip={overall?.score == null ? "No overall score is recorded." : `Weighted mean of ${overall.coverage} of 4 axes.`}
-                />
-                <span class="mono-small faint">{overall?.coverage ?? 0}/4 axes</span>
-              </div>
-            </div>
-          )
-        })}
+      <div class="home-model-scroll" data-home-models>
+        <ModelList models={models} listId="home-model-list" lazyFrom={14} />
       </div>
       <div class="home-more">
-        <span>{index.models.length} models in the catalogue.</span>
+        <span>{index.models.length} models in the catalogue, sorted by overall score.</span>
         <a href="/models/">See all models →</a>
       </div>
     </div>
   </section>
 
-  <section class="section rule-top" id="compare">
+  <section class="section rule-top" id="tags">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Compare</p>
-          <h2>Put models side by side</h2>
+          <p class="eyebrow">Classification</p>
+          <h2>Tags</h2>
         </div>
+        <span class="mono-small faint">{namespaceCount} namespaces</span>
       </div>
-      <p class="muted" style="margin-bottom:1.2rem">
-        Pick up to four models. The comparison is a separate page with the current scorecard, terms, tasks, and links.
+      <p class="lede" style="margin-bottom:1.4rem">
+        Tags are additive. A model can carry several tasks, modalities, runtimes, and languages. There is no single
+        category per model. Open any tag to see the models that carry it.
       </p>
-      <ComparePicker />
+      <TagIndex />
     </div>
   </section>
 
-  <section class="section rule-top">
+  <section class="section rule-top" id="runtime">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Start with the job</p>
-          <h2>What do you need it to do?</h2>
+          <p class="eyebrow">Runtime</p>
+          <h2>Where to run it</h2>
         </div>
       </div>
-      <div class="flex wrap-gap">
-        {tasks.slice(0, 12).map(({ task, count }) => (
-          <CountPill
-            label={tagLabel(`task:${task}`)}
-            count={count}
-            href={tagPath(`task:${task}`)}
-            tone="sage"
-            tooltip={tagDefinition(`task:${task}`)}
-          />
-        ))}
+      <p class="lede" style="margin-bottom:1.4rem">
+        Start with a hosted harness. OpenCode is the recommended path. Cloudflare Workers AI and OpenRouter are also
+        direct options. Each model page shows the exact model ID and steps for the providers that carry it.
+      </p>
+      <div class="runtime-grid">
+        <div class="panel runtime-card">
+          <p class="eyebrow">Recommended harness</p>
+          <h3>OpenCode</h3>
+          <p>
+            An open-source coding agent. It can run the models in this catalogue, including free entries, with one
+            provider connection.
+          </p>
+          <pre><code>/connect
+/models</code></pre>
+          <p class="muted runtime-note">
+            Run <code>/connect</code> in the TUI, choose a provider, and paste the API key. Run <code>/models</code>
+            to pick the model. Free models are marked on each model page.
+          </p>
+          <a class="button secondary" href="https://opencode.ai" target="_blank" rel="noreferrer">OpenCode →</a>
+        </div>
+        <div class="panel runtime-card">
+          <p class="eyebrow">Edge runtime</p>
+          <h3>Cloudflare Workers AI</h3>
+          <p>
+            Run the model from a Worker with the Workers AI binding. No separate host, key, or container is needed.
+          </p>
+          <pre><code>{`const reply = await env.AI.run(
+  "@cf/provider/model",
+  { messages }
+)`}</code></pre>
+          <p class="muted runtime-note">
+            The exact <code>@cf/…</code> model ID is shown on the model page when Cloudflare lists it.
+          </p>
+          <a class="button secondary" href="https://developers.cloudflare.com/workers-ai/" target="_blank" rel="noreferrer">
+            Workers AI docs →
+          </a>
+        </div>
+        <div class="panel runtime-card">
+          <p class="eyebrow">One API, many models</p>
+          <h3>OpenRouter</h3>
+          <p>
+            A single API key and endpoint for many hosted models. Useful when you want to switch models without
+            changing your client.
+          </p>
+          <pre><code>{`BASE_URL=https://openrouter.ai/api/v1`}</code></pre>
+          <p class="muted runtime-note">
+            Send an OpenAI-compatible request to <code>/chat/completions</code>. The exact OpenRouter model ID is
+            shown on the model page when OpenRouter lists it.
+          </p>
+          <a class="button secondary" href="https://openrouter.ai" target="_blank" rel="noreferrer">OpenRouter →</a>
+        </div>
       </div>
+      <p class="muted runtime-note">
+        Need to run it yourself? The model page lists local runtimes, an approximate memory range, weights on Hugging
+        Face, and the full models.dev provider list.
+      </p>
     </div>
   </section>
 
-  <section class="section rule-top">
+  <section class="section rule-top" id="thesis">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">The argument</p>
+          <h2>The commons is the input. Reciprocity is the test.</h2>
+        </div>
+      </div>
+      <p class="lede">
+        Every capable model is built from human work: books, code, images, speech, conversation, and the record of
+        everyone who came before. The question is not whether a model learned from the commons. It did. The question
+        is what it gives back.
+      </p>
+      <p class="mono-small muted" style="margin-bottom:1.8rem">A living reference · updated 14 November 2026</p>
+      <ThesisContent />
+    </div>
+  </section>
+
+  <section class="section rule-top" id="method">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Method</p>
+          <h2>What counts, and how we check it.</h2>
+        </div>
+      </div>
+      <p class="lede">
+        Democratic AI is reciprocal AI. Every model learns from the commons. This catalogue records what a release
+        gives back, and whether independent registries picked it up.
+      </p>
+      <MethodContent />
+    </div>
+  </section>
+
+  <section class="section rule-top" id="api">
     <div class="wrap">
       <div class="section-head">
         <div>
           <p class="eyebrow">For agents</p>
-          <h2>Use the JSON</h2>
+          <h2>Use the API</h2>
         </div>
         <a href="/data/">API and schema →</a>
       </div>
@@ -126,4 +201,38 @@ const tasks = taskCounts(index)
       </div>
     </div>
   </section>
+
+  <script>
+    const scroller = document.querySelector<HTMLElement>("[data-home-models]")
+    const rows = [...document.querySelectorAll<HTMLElement>("#home-model-list .lazy-row")]
+    const CHUNK = 18
+    let cursor = 0
+
+    function markLast(): void {
+      const visible = [...document.querySelectorAll<HTMLElement>("#home-model-list .list-row:not(.lazy-row)")]
+      for (const row of visible) row.classList.remove("last-visible")
+      visible.at(-1)?.classList.add("last-visible")
+    }
+
+    function reveal(): void {
+      if (cursor >= rows.length) return
+      for (const row of rows.slice(cursor, cursor + CHUNK)) row.classList.remove("lazy-row")
+      cursor += CHUNK
+      markLast()
+    }
+
+    function fill(): void {
+      if (!scroller) return
+      while (cursor < rows.length && scroller.scrollHeight <= scroller.clientHeight + 4) reveal()
+      markLast()
+    }
+
+    function maybeReveal(): void {
+      if (!scroller) return
+      if (scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 240) reveal()
+    }
+
+    scroller?.addEventListener("scroll", maybeReveal, { passive: true })
+    fill()
+  </script>
 </Base>

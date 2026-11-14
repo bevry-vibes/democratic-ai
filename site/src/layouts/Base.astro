@@ -16,10 +16,10 @@ const {
 const canonical = new URL(Astro.url.pathname, Astro.site)
 const nav = [
   { href: "/models/", label: "Models" },
-  { href: "/tags/", label: "Tags" },
-  { href: "/thesis/", label: "Thesis" },
-  { href: "/about/", label: "Method" },
-  { href: "/data/", label: "Data" },
+  { href: "/#tags", label: "Tags" },
+  { href: "/#thesis", label: "Thesis" },
+  { href: "/#method", label: "Method" },
+  { href: "/data/", label: "API" },
 ]
 const isCurrent = (href: string) => current === href || current.startsWith(href)
 ---

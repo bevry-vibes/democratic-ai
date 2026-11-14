@@ -1,28 +1,13 @@
 ---
 import Base from "../../layouts/Base.astro"
-import CountPill from "../../components/CountPill.astro"
-import TagChips from "../../components/TagChips.astro"
-import { formatContextCount, getIndex, modelHref, scorecardAxes, sortTags } from "../../lib/data"
+import ModelList from "../../components/ModelList.astro"
+import { getIndex, sortTags } from "../../lib/data"
 
 const index = getIndex()
 const models = [...index.models].sort(
   (a, b) => (b.scorecard?.overall.score ?? -1) - (a.scorecard?.overall.score ?? -1) || a.name.localeCompare(b.name),
 )
 const allTags = sortTags([...new Set(models.flatMap((model) => model.tags))])
-const defaultSort = "overall"
-const axis = (model: (typeof models)[number], key: "openness" | "performance" | "research" | "syndication") =>
-  scorecardAxes(model).find((entry) => entry.key === key)?.value ?? null
-const scorecardTone = (key: string) => `score-${key}`
-const scorecardTip = (key: string) =>
-  key === "overall"
-    ? "Overall score: weighted mean of the available axes. Missing axes are excluded, not zero."
-    : key === "openness"
-    ? "Openness/Morality: what the release gives back. Computed from current release terms."
-    : key === "performance"
-      ? "Performance/Intelligence: current measured performance on the model's task."
-      : key === "research"
-        ? "Citation/Research: current research benchmarks. Citation accuracy is separate."
-        : "Syndication: independent listings, not quality."
 ---
 
 <Base
@@ -98,74 +83,7 @@ const scorecardTip = (key: string) =>
       <span class="faint" id="sort-note">Sorted by independent listings, best first</span>
     </div>
 
-    <div class="list" id="model-list" style="--list-cols:minmax(12rem, 0.9fr) minmax(18rem, 2.2fr) minmax(10.5rem, auto)">
-      {models.map((model) => {
-        const axes = scorecardAxes(model)
-        return (
-          <div
-            class="list-row"
-            data-name={`${model.name} ${model.organization} ${model.summary}`.toLowerCase()}
-            data-tags={model.tags.join(" ")}
-            data-capability={[
-              model.tool_calling ? "tool-calling" : "",
-              model.reasoning ? "reasoning" : "",
-              model.structured_output ? "structured-output" : "",
-            ].filter(Boolean).join(" ")}
-            data-contexts={model.tags.filter((tag) => tag.startsWith("context:")).map((tag) => tag.slice(8)).join(" ")}
-            data-context-tokens={model.context_tokens ?? ""}
-            data-params={model.params_b ?? ""}
-            data-tier={model.tier}
-            data-band={model.band}
-            data-license={model.license}
-            data-overall={model.scorecard?.overall.score ?? -1}
-            data-openness={axis(model, "openness") ?? -1}
-            data-performance={axis(model, "performance") ?? -1}
-            data-research={axis(model, "research") ?? -1}
-            data-score={axis(model, "syndication") ?? 0}
-            data-released={model.released ?? ""}
-          >
-            <div>
-              <a class="row-title" href={modelHref(model.id)}><h3>{model.name}</h3></a>
-              <p class="mono-small">{model.organization}</p>
-            </div>
-            <div class="list-description">
-              <p>{model.summary || "No description on the model card."}</p>
-              <TagChips tags={model.tags} showNamespace>
-                {model.context_tokens && (
-                  <a
-                    class="chip meta-context"
-                    href={`${modelHref(model.id)}#capabilities`}
-                    data-tooltip="The model's maximum context window."
-                  >
-                    context: {formatContextCount(model.context_tokens)}
-                  </a>
-                )}
-                {model.builds > 0 && (
-                  <CountPill
-                    label="builds"
-                    count={model.builds}
-                    href={`${modelHref(model.id)}#builds`}
-                    tone="meta-builds"
-                    tooltip="A build is packaging, not a new model. It inherits the base task and terms."
-                  />
-                )}
-              </TagChips>
-            </div>
-            <div class="scorecard-mini">
-              {axes.map((entry) => (
-                <CountPill
-                  label={entry.label}
-                  count={entry.display}
-                  href={`${modelHref(model.id)}#scorecard-${entry.key}`}
-                  tone={scorecardTone(entry.key)}
-                  tooltip={scorecardTip(entry.key)}
-                />
-              ))}
-            </div>
-          </div>
-        )
-      })}
-    </div>
+    <ModelList models={models} />
 
     <div class="empty hidden" id="empty">
       No model matches those filters. Try a broader task or clear the search.

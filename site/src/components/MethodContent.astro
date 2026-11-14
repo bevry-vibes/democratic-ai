@@ -1,0 +1,182 @@
+---
+import { getIndex, getSyndication, getTags } from "../lib/data"
+
+const index = getIndex()
+const syndication = getSyndication()
+const tags = getTags()
+const sourceRows = Object.entries(syndication.method.weights)
+const buildCount = index.models.reduce((total, model) => total + model.builds, 0)
+---
+
+<div class="method-layout">
+  <article class="method-body">
+    <section class="method-section" id="release-terms">
+      <h2>Release terms, not a grade</h2>
+      <p>
+        The tier records how much of the release is open: weights, training data, recipe, and access. It is not a
+        quality score or a moral grade. <strong>Open-weight is a real return to the commons.</strong> Open data and
+        open code add to it. The catalogue records the difference without treating open-weight as a failure.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Tier</th><th>What it means</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge badge-commons">commons</span></td><td>Weights, training data, and training code are open, with a reusable licence.</td></tr>
+            <tr><td><span class="badge badge-reciprocal">reciprocal</span></td><td>Weights and recipe are open, data is open or documented, with a reusable licence.</td></tr>
+            <tr><td><span class="badge badge-shared">shared</span></td><td>Weights are available, but the training data is not open and the licence may restrict reuse.</td></tr>
+            <tr><td><span class="badge badge-closed">closed</span></td><td>The weights are not available.</td></tr>
+            <tr><td><span class="badge badge-unproven">unproven</span></td><td>The evidence about the weights is not sufficient to make a determination.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">
+        Most records are <strong>shared</strong>: the weights are open, the training data is unchecked, and the
+        licence may add conditions. <strong>Unproven</strong> is reserved for records where the weights themselves
+        are not evidenced. Open-weight is a real contribution; open data and open code add to it. The next pass
+        will assess training data and code.
+      </p>
+    </section>
+
+    <section class="method-section" id="scorecard">
+      <h2>The scorecard</h2>
+      <p>
+        The catalogue carries its own current scorecard. It does not repeat a frozen table from an earlier essay.
+        Each axis is independent, and each value is recomputed from the evidence the record holds today.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Axis</th><th>What it measures</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Overall score</strong></td><td>A weighted mean of the available axes: syndication, performance, openness, and research/citation. Missing axes are excluded, not zero. Coverage is shown beside the score.</td></tr>
+            <tr><td><strong>Syndication</strong></td><td>Independent listings, not quality. The model's own host has weight 0. A build inherits its base model's score.</td></tr>
+            <tr><td><strong>Performance/Intelligence</strong></td><td>The model's current measured performance on its task. For coding models this is a primary agentic benchmark composite; for speech models it is average WER; for other models it is the best current primary benchmark. The number is an index, not a percentage.</td></tr>
+            <tr><td><strong>Openness/Morality</strong></td><td>What the release gives back: open weights, open training data, open training code, and reuse terms. The score is computed from the record, not assigned by hand.</td></tr>
+            <tr><td><strong>Citation/Research</strong></td><td>Current research benchmarks where they exist. Citation accuracy is a separate question, and the record says when it is not measured.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        A model can be strong on openness and weak on citation. A model can be a strong coder and a poor citizen.
+        The scorecard keeps those judgements apart. <strong>Missing is not zero.</strong> A score without a current
+        source is not shown. <a href="#thesis">Read the argument</a>.
+      </p>
+      <h3>How the numbers are made</h3>
+      <ul>
+        <li><strong>Overall score</strong> is a weighted mean of the available axes: syndication 15, performance 40, openness 30, research 15. Missing axes are excluded and the remaining weights are renormalised. Coverage is shown.</li>
+        <li><strong>Syndication</strong> counts independent listings. It is 0–10, not an index.</li>
+        <li><strong>Performance/Intelligence</strong> uses the mean of the available primary benchmarks: SWE-bench Verified, SWE-bench Pro, Terminal-Bench 2.x, and LiveCodeBench. A model-card figure fills a gap only when the aggregator has no primary row. A later update may inherit its base model's primary result when it has no comparable benchmark of its own, and the record says so.</li>
+        <li><strong>Openness/Morality</strong> starts from the release terms: 50 for open weights, 25 for open training data, 15 for open training code, and up to 10 for a reuse-permitting licence. Unchecked data and code add nothing; they are not treated as closed.</li>
+        <li><strong>Citation/Research</strong> uses current research benchmarks such as BrowseComp and DeepSearchQA. It does not claim citation accuracy.</li>
+      </ul>
+    </section>
+
+    <section class="method-section" id="builds">
+      <h2>A build is not a model</h2>
+      <p>
+        A GGUF, MLX, CoreML, ONNX, FP8, or quantized release is packaging. It inherits the base model's task and
+        terms. It does not get its own page.
+      </p>
+      <p class="muted">
+        This index has {index.models.length} root and notable models with {buildCount} attached builds.
+        {syndication.counts.builds_and_probes_skipped} builds, probes, and documentation items were skipped as
+        records.
+      </p>
+    </section>
+
+    <section class="method-section" id="syndication">
+      <h2>The syndication score</h2>
+      <p>
+        The score counts independent listings. It is not a quality score, a reciprocity tier, or a measure of
+        openness. A closed model can score 10. A reciprocal model can score 0.
+      </p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Source</th><th>Kind</th><th>Weight</th></tr></thead>
+          <tbody>
+            {sourceRows.map(([id, weight]) => (
+              <tr><td>{id}</td><td>{id === "models.dev" || id === "agent-detect" ? "registry" : id === "research" ? "research" : id === "hugging-face" ? "host (self)" : "aggregator or evaluation"}</td><td>{weight}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">
+        The model's own Hugging Face page has weight 0. A build inherits the base model's score. Every point links
+        to the listing.
+      </p>
+      {syndication.unavailable_sources.map((source) => (
+        <p class="muted">
+          <strong>{source.id}</strong> is a worthwhile source, but it is not scored yet: {source.reason}
+        </p>
+      ))}
+    </section>
+
+    <section class="method-section" id="evidence">
+      <h2>Evidence rules</h2>
+      <ol>
+        <li>Never guess. A missing field is <code>unknown</code>.</li>
+        <li>The licence file beats the model card. The model card beats a news article.</li>
+        <li>Record conflicts. Do not average them.</li>
+        <li>Record the date of every check.</li>
+        <li>Do not infer from silence. No data statement is not proof of closed data.</li>
+        <li>Journal every tier change.</li>
+      </ol>
+    </section>
+
+    <section class="method-section" id="index">
+      <h2>How the index is built</h2>
+      <ol>
+        <li>A pull records source-native metadata from Hugging Face, X, GitHub, arXiv, and sitemaps.</li>
+        <li>A rules pass assigns source-native and specific title or text tags.</li>
+        <li>Clef, a Cloudflare decision model, confirms only the models left in review. It answers yes/no per task, at 0.8 or above.</li>
+        <li>Builds and probes are separated from roots. A build attaches to its base.</li>
+        <li>Independent listings produce the syndication score.</li>
+        <li>One record is written per root or notable model.</li>
+      </ol>
+      <p class="muted">Nothing is trained or hosted here. The repository records evidence and links.</p>
+    </section>
+  </article>
+
+  <aside class="method-aside">
+    <div class="panel">
+      <h2>In this method</h2>
+      <ul class="page-nav">
+        <li><a href="#release-terms">Release terms</a></li>
+        <li><a href="#scorecard">The scorecard</a></li>
+        <li><a href="#builds">A build is not a model</a></li>
+        <li><a href="#syndication">Syndication</a></li>
+        <li><a href="#evidence">Evidence rules</a></li>
+        <li><a href="#index">How the index is built</a></li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2>Now</h2>
+      <dl class="definition">
+        <dt>Root models</dt><dd>{index.models.length}</dd>
+        <dt>Builds attached</dt><dd>{buildCount}</dd>
+        <dt>Independent listings</dt><dd>{index.models.filter((model) => model.score > 0).length}</dd>
+        <dt>Very strong</dt><dd>{index.models.filter((model) => model.band === "very-strong").length}</dd>
+        <dt>Average score</dt><dd>{syndication.counts.average_score}/10</dd>
+        <dt>Tag namespaces</dt><dd>{Object.keys(tags.namespaces).length}</dd>
+      </dl>
+    </div>
+
+    <div class="panel">
+      <h2>Read more</h2>
+      <ul class="source-list">
+        <li><a href="#thesis">The thesis</a></li>
+        <li><a href="/data/">The JSON API</a></li>
+        <li><a href="https://github.com/bevry-vibes/democratic-ai/blob/main/DESIGN.md">DESIGN.md</a></li>
+        <li><a href="https://github.com/bevry-vibes/agent-detect">agent-detect</a></li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h2>Correct a record</h2>
+      <p class="muted">
+        Open an issue with a source. A correction with evidence is always welcome.
+      </p>
+      <a class="button secondary" href="https://github.com/bevry-vibes/democratic-ai/issues">Open an issue</a>
+    </div>
+  </aside>
+</div>

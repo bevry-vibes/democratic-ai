@@ -55,7 +55,7 @@ async function renderComparison(request, env, ids) {
   if (ids.length < 2) {
     shell = shell.replace(
       "<!-- COMPARISON_CONTENT -->",
-      `<div class="empty" style="text-align:left"><h2>Pick at least two models</h2><p>Use the comparison picker on the homepage or on any model page.</p><p><a class="button" href="/#compare">Choose models</a></p></div>`,
+      `<div class="empty" style="text-align:left"><h2>Pick at least two models</h2><p>Open a model page and use the Compare card to add models.</p><p><a class="button" href="/models/">Choose models</a></p></div>`,
     )
     return new Response(shell, { headers: { "content-type": "text/html; charset=utf-8" } })
   }
@@ -66,7 +66,7 @@ async function renderComparison(request, env, ids) {
     if (!response.ok) {
       shell = shell.replace(
         "<!-- COMPARISON_CONTENT -->",
-        `<div class="empty" style="text-align:left"><h2>Model not found</h2><p>${escapeHtml(id)} is not in the catalogue.</p><p><a class="button" href="/#compare">Choose models</a></p></div>`,
+        `<div class="empty" style="text-align:left"><h2>Model not found</h2><p>${escapeHtml(id)} is not in the catalogue.</p><p><a class="button" href="/models/">Choose models</a></p></div>`,
       )
       return new Response(shell, { headers: { "content-type": "text/html; charset=utf-8" } })
     }
@@ -275,6 +275,15 @@ async function renderComparison(request, env, ids) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url)
+    const legacy = {
+      "/tags": "/#tags",
+      "/tags/": "/#tags",
+      "/thesis": "/#thesis",
+      "/thesis/": "/#thesis",
+      "/about": "/#method",
+      "/about/": "/#method",
+    }
+    if (legacy[url.pathname]) return Response.redirect(new URL(legacy[url.pathname], url), 301)
     if (!url.pathname.startsWith("/comparison/")) return env.ASSETS.fetch(request)
 
     const ids = decodeURIComponent(url.pathname.slice("/comparison/".length))

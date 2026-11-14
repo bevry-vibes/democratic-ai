@@ -274,58 +274,101 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
       <div class="panel" id="get-started">
         <h2>Getting started</h2>
 
-        <h3>Recommended harness: OpenCode</h3>
+        <h3>1. Use OpenCode (recommended)</h3>
+        <p>
+          <a href="https://opencode.ai" target="_blank" rel="noreferrer">OpenCode</a> is an open-source coding agent
+          for the terminal, desktop, and web. It is the simplest way to run this model, and free models stay free
+          through the OpenCode Console provider.
+        </p>
         {openCode ? (
           <>
             <div class="chips">
               <span class="chip tag-status">opencode/{openCode.id}</span>
               {openCodeFree && <span class="badge badge-free">free</span>}
             </div>
-            <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
-              {openCodeFree
-                ? "Free on OpenCode for a limited time. Free-tier chat models require OpenCode."
-                : "Available through the OpenCode Console provider."}
-            </p>
+            <ol class="steps">
+              <li>
+                <a href="https://opencode.ai" target="_blank" rel="noreferrer">Install OpenCode</a> and open the TUI.
+              </li>
+              <li>
+                Run <code>/connect</code>, choose the OpenCode provider, and paste your API key.
+                {openCodeFree && " This model is free for a limited time on this provider."}
+              </li>
+              <li>Run <code>/models</code> and choose <code>{openCode.id}</code>.</li>
+            </ol>
             <pre><code>/connect
 /models</code></pre>
-            <p class="muted" style="font-size:0.82rem">Or set it in <code>opencode.jsonc</code>:</p>
+            <p class="muted" style="font-size:0.86rem">
+              Or set the model directly in <code>opencode.jsonc</code>:
+            </p>
             <pre><code>{`{ "model": "${openCodeProvider}/${openCode.id}" }`}</code></pre>
             <a class="mono-small" href="https://opencode.ai/docs/console/models/" target="_blank" rel="noreferrer">
-              OpenCode model setup
+              OpenCode provider setup
             </a>
           </>
         ) : (
-          <p class="muted" style="font-size:0.86rem">
+          <p class="muted" style="font-size:0.9rem">
             No OpenCode Console entry is recorded for this model.
-            <a href="https://opencode.ai/docs/console/models/" target="_blank" rel="noreferrer">Check the OpenCode model list</a>.
+            <a href="https://opencode.ai" target="_blank" rel="noreferrer">Get OpenCode</a> or
+            <a href="https://opencode.ai/docs/console/models/" target="_blank" rel="noreferrer">check the model list</a>.
           </p>
         )}
 
         {cloudflareModel && (
           <>
-            <h3>Cloudflare Workers AI</h3>
+            <h3>2. Run on Cloudflare Workers AI</h3>
+            <p>Cloudflare hosts this model. You need a Cloudflare account and a Worker.</p>
             <div class="chips">
               <span class="chip tag-source">{cloudflareModel.id}</span>
             </div>
-            <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
-              Run it through the Workers AI binding, then call <code>{`env.AI.run("${cloudflareModel.id}", ...)`}</code>.
-              <a href="https://developers.cloudflare.com/workers-ai/models/" target="_blank" rel="noreferrer">Cloudflare model catalogue</a>.
+            <ol class="steps">
+              <li>
+                <a href="https://developers.cloudflare.com/workers-ai/get-started/workers-wrangler/" target="_blank" rel="noreferrer">
+                  Create a Worker with the Workers AI binding
+                </a>.
+              </li>
+              <li>Call the model from the Worker with the exact ID above.</li>
+            </ol>
+            <pre><code>{`const reply = await env.AI.run(
+  "${cloudflareModel.id}",
+  { messages }
+)`}</code></pre>
+            <p class="muted" style="font-size:0.86rem">
+              <a href="https://developers.cloudflare.com/workers-ai/models/" target="_blank" rel="noreferrer">
+                Browse all Cloudflare models
+              </a>
             </p>
           </>
         )}
 
         {openRouterModel && (
           <>
-            <h3>OpenRouter</h3>
+            <h3>{cloudflareModel ? "3" : "2"}. Use OpenRouter</h3>
+            <p>OpenRouter gives you one API key and one endpoint for many hosted models.</p>
             <div class="chips">
               <a class="chip tag-source" href={`https://openrouter.ai/${openRouterModel.id}`} target="_blank" rel="noreferrer">
                 {openRouterModel.id}
               </a>
             </div>
+            <ol class="steps">
+              <li>
+                <a href="https://openrouter.ai" target="_blank" rel="noreferrer">Create an OpenRouter account</a>
+                and make an API key.
+              </li>
+              <li>Send an OpenAI-compatible request with the model ID above.</li>
+            </ol>
+            <pre><code>{`POST https://openrouter.ai/api/v1/chat/completions
+model: "${openRouterModel.id}"`}</code></pre>
+            <p class="muted" style="font-size:0.86rem">
+              <a href="https://openrouter.ai/docs/quickstart" target="_blank" rel="noreferrer">OpenRouter quickstart</a>
+            </p>
           </>
         )}
 
-        <h3>DIY / local</h3>
+        <h3>{2 + (cloudflareModel ? 1 : 0) + (openRouterModel ? 1 : 0)}. Run it yourself</h3>
+        <p>
+          You can run the weights locally when your machine has enough memory and a supported runtime.
+        </p>
         <div class="chips">
           {model.capabilities.runtimes.length > 0 ? (
             model.capabilities.runtimes.map((runtime) => (
@@ -340,7 +383,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
         <p class="muted" style="font-size:0.86rem;margin-top:0.7rem">
           {model.footprint.params_b == null
             ? "Parameter count is unknown. Check the model card for memory requirements."
-            : `Approximately ${memoryLow}–${memoryHigh} GB of weights before KV cache and runtime overhead.`}
+            : `Plan for roughly ${memoryLow}–${memoryHigh} GB of weights before KV cache and runtime overhead.`}
         </p>
         <p class="muted" style="font-size:0.86rem">
           {providers.length > 0
@@ -349,12 +392,12 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
           {model.access.models_dev && (
             <>
               {" "}
-              <a href={model.access.models_dev} target="_blank" rel="noreferrer">models.dev providers</a>.
+              <a href={model.access.models_dev} target="_blank" rel="noreferrer">See the providers on models.dev</a>.
             </>
           )}
         </p>
         <a class="mono-small" href={`https://huggingface.co/${model.access.hugging_face}`} target="_blank" rel="noreferrer">
-          Weights on Hugging Face
+          Get the weights on Hugging Face
         </a>
       </div>
 
@@ -416,7 +459,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
                   <span class="metric-label">{component.label}</span>
                   <a
                     class={`chip ${component.label === "Licence" ? "tag-license" : ""}`.trim()}
-                    href={component.label === "Licence" ? tagPath(`license:${component.value}`) : "/about/#release-terms"}
+                    href={component.label === "Licence" ? tagPath(`license:${component.value}`) : "/#release-terms"}
                     data-tooltip={
                       component.label === "Licence"
                         ? tagDefinition(`license:${component.value}`)
@@ -437,7 +480,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
             <p class="mono-small muted">
               Tier:
               <a
-                href="/about/#release-terms"
+                href="/#release-terms"
                 data-tooltip={tierDescription(scorecard.openness_morality.tier)}
               >
                 {scorecard.openness_morality.tier}
@@ -569,7 +612,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
           <dd>
             <a
               class="chip"
-              href="/about/#release-terms"
+              href="/#release-terms"
               data-tooltip="open-weight means the trained weights are downloadable. It does not mean the training data or code are open."
             >
               {model.openness.weights}
@@ -579,7 +622,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
           <dd>
             <a
               class="chip"
-              href="/about/#release-terms"
+              href="/#release-terms"
               data-tooltip="open means the data is published. documented means it is described but not released. unknown means unchecked, not closed."
             >
               {model.openness.training_data}
@@ -589,7 +632,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
           <dd>
             <a
               class="chip"
-              href="/about/#release-terms"
+              href="/#release-terms"
               data-tooltip="open means the training code is published. documented means it is described but not released. unknown means unchecked, not closed."
             >
               {model.openness.training_code}
@@ -599,7 +642,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
           <dd>
             <a
               class={`badge ${tierClass(model.openness.tier)}`}
-              href="/about/#release-terms"
+              href="/#release-terms"
               data-tooltip={tierDescription(model.openness.tier)}
             >
               {model.openness.tier}
