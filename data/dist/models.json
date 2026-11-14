@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-11-14T04:23:36.287Z",
+  "generated_at": "2026-11-14T04:28:09.442Z",
   "pull_id": "20261114T025658Z",
   "models": [
     {
       "id": "deepseek-v4-1-flash",
       "name": "DeepSeek-V4.1-Flash",
       "organization": "deepseek",
+      "summary": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -43,6 +44,7 @@
       "id": "deepseek-v4-1-flash-1017",
       "name": "DeepSeek-V4.1-Flash-1017",
       "organization": "deepseek",
+      "summary": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -80,6 +82,7 @@
       "id": "deepseek-v4-flash-vision-exp",
       "name": "DeepSeek-V4-Flash-Vision-Exp",
       "organization": "deepseek",
+      "summary": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -116,6 +119,7 @@
       "id": "glm-5-2",
       "name": "GLM-5.2",
       "organization": "zai",
+      "summary": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -151,6 +155,7 @@
       "id": "glm-5-3",
       "name": "GLM-5.3",
       "organization": "zai",
+      "summary": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -185,6 +190,7 @@
       "id": "glm-5-3-flash",
       "name": "GLM-5.3-Flash",
       "organization": "zai",
+      "summary": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -223,6 +229,7 @@
       "id": "inkling-2-small",
       "name": "Inkling-2-Small",
       "organization": "thinking-machines-lab",
+      "summary": "Multimodal reasoning model for visual analysis, planning, and tool use",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -259,6 +266,7 @@
       "id": "kimi-k3",
       "name": "Kimi-K3",
       "organization": "moonshot-ai",
+      "summary": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -296,6 +304,7 @@
       "id": "ling-3-0-flash",
       "name": "Ling-3.0-flash",
       "organization": "ant-ling",
+      "summary": "Hybrid-linear MoE reasoning model with 124B total and 5.1B active parameters for efficient agents",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -328,6 +337,7 @@
       "id": "mimo-v2-5",
       "name": "MiMo-V2.5",
       "organization": "xiaomi-mimo",
+      "summary": "Open MiMo model for multimodal coding agents and long-context automation",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -365,6 +375,7 @@
       "id": "mimo-v2-5-pro",
       "name": "MiMo-V2.5-Pro",
       "organization": "xiaomi-mimo",
+      "summary": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -400,6 +411,7 @@
       "id": "minimax-m2-5",
       "name": "MiniMax-M2.5",
       "organization": "minimax",
+      "summary": "MiniMax model for chat, coding, office work, and agentic tasks",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -433,6 +445,7 @@
       "id": "minimax-m2-7",
       "name": "MiniMax-M2.7",
       "organization": "minimax",
+      "summary": "MiniMax model for chat, coding, office work, and agentic tasks",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -466,6 +479,7 @@
       "id": "minimax-m3",
       "name": "MiniMax-M3",
       "organization": "minimax",
+      "summary": "MiniMax multimodal model for long-context coding, perception, and agent planning",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -504,6 +518,7 @@
       "id": "minimax-m3-1-flash",
       "name": "MiniMax-M3.1-Flash",
       "organization": "minimax",
+      "summary": "Frontier multimodal coding model with 1M context window and tunable thinking depth",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -541,6 +556,7 @@
       "id": "qwen3-6-27b",
       "name": "Qwen3.6-27B",
       "organization": "qwen",
+      "summary": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -580,6 +596,7 @@
       "id": "qwen3-8-27b",
       "name": "Qwen3.8-27B",
       "organization": "qwen",
+      "summary": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -619,6 +636,7 @@
       "id": "granite-4-2-8b",
       "name": "granite-4.2-8B",
       "organization": "webai",
+      "summary": "Granite 4.2 8B is an instruct model capable of enhanced tool calling, instruction following, and chat capabilities.",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -652,6 +670,7 @@
       "id": "kimi-k3-1-pro",
       "name": "Kimi-K3.1-Pro",
       "organization": "moonshot-ai",
+      "summary": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -689,6 +708,7 @@
       "id": "qwen3-6-35b-a3b",
       "name": "Qwen3.6-35B-A3B",
       "organization": "qwen",
+      "summary": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -727,6 +747,7 @@
       "id": "qwen3-8-2-4t-a95b",
       "name": "Qwen3.8-2.4T-A95B",
       "organization": "qwen",
+      "summary": "Open-weight sparse MoE (2.4T total, 95B active), the open-weight twin of Qwen3.8 Max for coding, research, complex reasoning, and agentic workflows",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -761,6 +782,7 @@
       "id": "ling-3-0-flash-fin",
       "name": "Ling-3.0-flash-Fin",
       "organization": "ant-ling",
+      "summary": "Finance-enhanced model for financial research, multi-step investment workflows, and long-horizon planning and execution",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -793,6 +815,7 @@
       "id": "ling-3-0-flash-vl",
       "name": "Ling-3.0-flash-VL",
       "organization": "ant-ling",
+      "summary": "Native multimodal hybrid MoE model for image and video understanding, reasoning, and visual agents",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -829,6 +852,7 @@
       "id": "longcat-2-5",
       "name": "LongCat-2.5",
       "organization": "meituan-longcat",
+      "summary": "Meituan's multimodal reasoning model for long-horizon coding and agent tasks, with visual understanding and a 1M-token context window",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -864,6 +888,7 @@
       "id": "beam-1-0-501b-a23b",
       "name": "Beam-1.0-501B-A23B",
       "organization": "reflection",
+      "summary": "Sparse mixture-of-experts reasoning model with 23B active parameters for coding and agentic workflows",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -897,6 +922,7 @@
       "id": "ling-3-1-flash",
       "name": "Ling-3.1-flash",
       "organization": "ant-ling",
+      "summary": "Efficient model for low-latency assistance, extraction, and routine automation",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -929,6 +955,7 @@
       "id": "minimax-m2",
       "name": "MiniMax-M2",
       "organization": "minimax",
+      "summary": "MiniMax model for chat, coding, office work, and agentic tasks",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -962,6 +989,7 @@
       "id": "minimax-m2-1",
       "name": "MiniMax-M2.1",
       "organization": "minimax",
+      "summary": "MiniMax model for chat, coding, office work, and agentic tasks",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -995,6 +1023,7 @@
       "id": "qwen3-8-flash-next",
       "name": "Qwen3.8-Flash-Next",
       "organization": "qwen",
+      "summary": "Open-weight experimental preview of the Qwen4 architecture: hybrid-attention MoE (125B total, 6B active) with vision encoder for coding, agent tasks, and image and video understanding",
       "tasks": [
         "image-understanding",
         "reasoning",
@@ -1032,6 +1061,7 @@
       "id": "ling-3-0-flash-sante",
       "name": "Ling-3.0-flash-Sante",
       "organization": "ant-ling",
+      "summary": "Health and medicine specialization of Ling 3.0 Flash for medical reasoning and evidence-based retrieval",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -1064,6 +1094,7 @@
       "id": "mimo-v2-6-pro-rl",
       "name": "MiMo-V2.6-Pro-RL",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -1092,6 +1123,7 @@
       "id": "lfm3-1-7b",
       "name": "LFM3-1.7B",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -1120,6 +1152,7 @@
       "id": "ling-2-6-1t",
       "name": "Ling-2.6-1T",
       "organization": "ant-ling",
+      "summary": "Inclusion AI ling-2.6-1t",
       "tasks": [
         "text-generation",
         "tool-calling"
@@ -1151,6 +1184,7 @@
       "id": "mimo-v2-flash",
       "name": "MiMo-V2-Flash",
       "organization": "xiaomi-mimo",
+      "summary": "MiMo flash model for fast multimodal assistance and agent workflows",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -1185,6 +1219,7 @@
       "id": "minimax-h3",
       "name": "MiniMax-H3",
       "organization": "minimax",
+      "summary": "MiniMax general-purpose video model with multimodal references and synchronized stereo audio. Open H3-Base checkpoints; Context-IR and 2K regeneration are not included in the initial weights release.",
       "tasks": [
         "video-generation"
       ],
@@ -1215,6 +1250,7 @@
       "id": "step-5-preview",
       "name": "Step-5-Preview",
       "organization": "stepfun",
+      "summary": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -1250,6 +1286,7 @@
       "id": "ling-3-0-tiny",
       "name": "Ling-3.0-tiny",
       "organization": "ant-ling",
+      "summary": "Ling 3.0 Tiny is a mixture-of-experts model from InclusionAI, with 1.3B active parameters out of 7.9B total. It is designed for responsive agents, instruction following, and multi-turn conversations, with switchable...",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -1282,6 +1319,7 @@
       "id": "lfm2-24b-a2b",
       "name": "LFM2-24B-A2B",
       "organization": "liquid-ai",
+      "summary": "Efficient open Liquid MoE instruct model for on-device chat and tool calling",
       "tasks": [
         "text-generation"
       ],
@@ -1310,6 +1348,7 @@
       "id": "mimo-v2-6-flash-rl",
       "name": "MiMo-V2.6-Flash-RL",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -1338,6 +1377,7 @@
       "id": "mistral-large-4-1t-a52b",
       "name": "Mistral-Large-4-1T-A52B",
       "organization": "mistral",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -1369,6 +1409,7 @@
       "id": "ornith-1-5-35b-a3b",
       "name": "Ornith-1.5-35B-A3B",
       "organization": "ornith-ai",
+      "summary": "Mixture-of-experts coding-reasoning model for agentic software tasks, tool use, and image understanding",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -1404,6 +1445,7 @@
       "id": "qwen-image-2-1",
       "name": "Qwen-Image-2.1",
       "organization": "qwen",
+      "summary": "Unified text-to-image generation and image editing model with native RGBA transparency and reference-image editing",
       "tasks": [
         "image-generation"
       ],
@@ -1434,6 +1476,7 @@
       "id": "lfm3-vl-2b",
       "name": "LFM3-VL-2B",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -1466,6 +1509,7 @@
       "id": "ling-3-1-flash-1019",
       "name": "Ling-3.1-flash-1019",
       "organization": "ant-ling",
+      "summary": "Efficient model for low-latency assistance, extraction, and routine automation",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -1498,6 +1542,7 @@
       "id": "ling-flash-2-0",
       "name": "Ling-flash-2.0",
       "organization": "ant-ling",
+      "summary": "Efficient model for low-latency assistance, extraction, and routine automation",
       "tasks": [
         "text-generation",
         "tool-calling"
@@ -1529,6 +1574,7 @@
       "id": "ring-2-6-1t",
       "name": "Ring-2.6-1T",
       "organization": "ant-ling",
+      "summary": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -1562,6 +1608,7 @@
       "id": "duo-1-0-causal-base",
       "name": "Duo-1.0-causal-base",
       "organization": "ant-ling",
+      "summary": "Duo-1.0-causal-base A Reciprocal World Model for Full-Duplex Interaction Model Overview Duo is a full-duplex multimodal world model for real-time audio-visual interaction.",
       "tasks": [
         "real-time-interaction",
         "world-model"
@@ -1592,6 +1639,7 @@
       "id": "duo-1-0-distill",
       "name": "Duo-1.0-distill",
       "organization": "ant-ling",
+      "summary": "Duo-1.0-distill A Reciprocal World Model for Full-Duplex Interaction Model Overview Duo is a full-duplex multimodal world model for real-time audio-visual interaction.",
       "tasks": [
         "real-time-interaction",
         "world-model"
@@ -1622,6 +1670,7 @@
       "id": "duo-1-2-causal-base",
       "name": "Duo-1.2-causal-base",
       "organization": "ant-ling",
+      "summary": "Duo-1.2-causal-base A Reciprocal World Model for Full-Duplex Interaction Model Overview Duo is a full-duplex multimodal world model for real-time audio-visual interaction.",
       "tasks": [
         "real-time-interaction",
         "world-model"
@@ -1652,6 +1701,7 @@
       "id": "fastdialoguesidon",
       "name": "FastDialogueSidon",
       "organization": "higurashi",
+      "summary": "FastDialogueSidon Weights for FastDialogueSidon, a fast one-step model for full-duplex two-speaker dialogue separation and joint restoration: up to 120 s of 16 kHz mono dialogue in, two separated 24 kHz speaker tracks out.",
       "tasks": [
         "speech-separation"
       ],
@@ -1680,6 +1730,7 @@
       "id": "longcat-next",
       "name": "LongCat-Next",
       "organization": "meituan-longcat",
+      "summary": "LongCat-Next Tech Report &nbsp;📄 Model Introduction We develop LongCat-Next, a native multimodal model that processes text, vision, and audio under a single autoregressive objective with minimal inductive bias beyond the language paradigm.",
       "tasks": [
         "image-understanding"
       ],
@@ -1710,6 +1761,7 @@
       "id": "ming-flash-omni-2-0",
       "name": "Ming-flash-omni-2.0",
       "organization": "ant-ling",
+      "summary": "Representing a generational advancement over its predecessor, it establishes new State-of-the-Art (SOTA) benchmarks among open-source omni-MLLMs.",
       "tasks": [
         "image-generation",
         "image-understanding",
@@ -1748,6 +1800,7 @@
       "id": "ming-flash-omni-preview",
       "name": "Ming-flash-omni-Preview",
       "organization": "ant-ling",
+      "summary": "Compared to its predecessor, the upgraded version exhibits substantial improvements across multimodal understanding and generation.",
       "tasks": [
         "image-generation",
         "transcription"
@@ -1784,6 +1837,7 @@
       "id": "ming-univision-16b-a3b",
       "name": "Ming-UniVision-16B-A3B",
       "organization": "ant-ling",
+      "summary": "- ⚡ 3.5× Faster Convergence in Joint Vision-Language Training: The coherent representational space between understanding and generation—enabled by MingTok—reduces optimization conflicts across tasks, leading to dramatically faster convergence during end-to-end multimodal pretraining.",
       "tasks": [
         "image-generation",
         "image-understanding"
@@ -1817,6 +1871,7 @@
       "id": "realtime-venus",
       "name": "Realtime-Venus",
       "organization": "ant-ling",
+      "summary": "Realtime-Venus A full-duplex interaction system with asynchronous delegation English | 简体中文 Realtime-Venus supports proactive audio-visual interaction, asynchronous delegation, and interruption-aware full-duplex dialogue.",
       "tasks": [
         "real-time-interaction"
       ],
@@ -1847,6 +1902,7 @@
       "id": "zoomgain-4b",
       "name": "ZoomGain-4B",
       "organization": "ant-ling",
+      "summary": "We use this global-to-zoom perception gap to construct supervision for vision-language models.",
       "tasks": [
         "image-understanding"
       ],
@@ -1873,6 +1929,7 @@
       "id": "zoomgain-9b",
       "name": "ZoomGain-9B",
       "organization": "ant-ling",
+      "summary": "We use this global-to-zoom perception gap to construct supervision for vision-language models.",
       "tasks": [
         "image-understanding"
       ],
@@ -1899,6 +1956,7 @@
       "id": "ace-step-webgpu-models",
       "name": "ace-step-webgpu-models",
       "organization": "fluid-voice",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -1929,6 +1987,7 @@
       "id": "align",
       "name": "align",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "transcription",
         "word-timestamps"
@@ -1959,6 +2018,7 @@
       "id": "audio8-asr-infinite",
       "name": "Audio8-ASR-Infinite",
       "organization": "edge0-ai",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -1988,6 +2048,7 @@
       "id": "audio8-tts-preview-0-1b",
       "name": "Audio8-TTS-Preview-0.1b",
       "organization": "edge0-ai",
+      "summary": "",
       "tasks": [
         "speech-synthesis"
       ],
@@ -2016,6 +2077,7 @@
       "id": "audio8-tts-preview-0-6b",
       "name": "Audio8-TTS-Preview-0.6b",
       "organization": "edge0-ai",
+      "summary": "",
       "tasks": [
         "speech-synthesis"
       ],
@@ -2045,6 +2107,7 @@
       "id": "audio8-tts-realistic-air",
       "name": "Audio8-TTS-Realistic-Air",
       "organization": "edge0-ai",
+      "summary": "",
       "tasks": [
         "speech-synthesis"
       ],
@@ -2074,6 +2137,7 @@
       "id": "bert-base-ner",
       "name": "bert-base-NER",
       "organization": "xenova",
+      "summary": "",
       "tasks": [
         "structured-extraction"
       ],
@@ -2101,6 +2165,7 @@
       "id": "clear",
       "name": "clear",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "speech-enhancement"
       ],
@@ -2128,6 +2193,7 @@
       "id": "clef-text-0-6b",
       "name": "clef-text-0.6b",
       "organization": "fluid-voice",
+      "summary": "",
       "tasks": [
         "text-classification"
       ],
@@ -2157,6 +2223,7 @@
       "id": "clef-vision-0-8b",
       "name": "clef-vision-0.8b",
       "organization": "fluid-voice",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -2190,6 +2257,7 @@
       "id": "clip-vit-base-patch32",
       "name": "clip-vit-base-patch32",
       "organization": "xenova",
+      "summary": "",
       "tasks": [
         "image-classification"
       ],
@@ -2217,6 +2285,7 @@
       "id": "clips",
       "name": "clips",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "clip-selection",
         "retrieval"
@@ -2246,6 +2315,7 @@
       "id": "d1-2b",
       "name": "d1-2B",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -2278,6 +2348,7 @@
       "id": "d1-3b",
       "name": "d1-3B",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -2310,6 +2381,7 @@
       "id": "d1-omni-2b",
       "name": "d1-Omni-2B",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -2342,6 +2414,7 @@
       "id": "d1-omni-600m",
       "name": "d1-omni-600M",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -2374,6 +2447,7 @@
       "id": "drex-dlm",
       "name": "drex-dlm",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-classification"
       ],
@@ -2402,6 +2476,7 @@
       "id": "drex-max-v1",
       "name": "drex-max-v1",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-classification"
       ],
@@ -2428,6 +2503,7 @@
       "id": "drex-v1-5",
       "name": "drex-v1.5",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-classification"
       ],
@@ -2456,6 +2532,7 @@
       "id": "drex-v2-0",
       "name": "drex-v2.0",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -2484,6 +2561,7 @@
       "id": "dsv4-flash-0731-vision",
       "name": "dsv4-flash-0731-vision",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -2517,6 +2595,7 @@
       "id": "ear",
       "name": "ear",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "audio-classification",
         "language-identification"
@@ -2546,6 +2625,7 @@
       "id": "edge0-35b-a3b-preview",
       "name": "Edge0-35B-A3B-preview",
       "organization": "edge0-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -2575,6 +2655,7 @@
       "id": "edge0-8b-a1b-preview",
       "name": "Edge0-8B-A1B-preview",
       "organization": "edge0-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -2603,6 +2684,7 @@
       "id": "emo",
       "name": "emo",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "emoji-suggestion",
         "text-classification"
@@ -2632,6 +2714,7 @@
       "id": "ernie-5-5-flash-base",
       "name": "ERNIE-5.5-Flash-Base",
       "organization": "baidu",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -2659,6 +2742,7 @@
       "id": "eye",
       "name": "eye",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "image-classification"
       ],
@@ -2686,6 +2770,7 @@
       "id": "face",
       "name": "face",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "face-matching"
       ],
@@ -2708,6 +2793,7 @@
       "id": "fluidaudio-web",
       "name": "fluidaudio-web",
       "organization": "fluid-voice",
+      "summary": "FluidAudio Web — raw model weights Model weights for fluidaudio-web: fully in-browser inference (WebGPU + WebAssembly) for FluidAudio's speech models.",
       "tasks": [
         "transcription",
         "voice-activity-detection"
@@ -2738,6 +2824,7 @@
       "id": "gist",
       "name": "gist",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "text-classification",
         "topic-tagging"
@@ -2767,6 +2854,7 @@
       "id": "glm-ocr",
       "name": "GLM-OCR",
       "organization": "zai",
+      "summary": "",
       "tasks": [
         "image-understanding",
         "ocr"
@@ -2797,6 +2885,7 @@
       "id": "haru-4b",
       "name": "Haru-4B",
       "organization": "higurashi",
+      "summary": "Haru-4B Code · Technical blog · Technical blog (Japanese) Haru-4B is a low-latency and multilingual full-duplex continuous spoken dialogue foundation model: it listens and speaks at the same time, the way people do on a phone call.",
       "tasks": [
         "speech-synthesis"
       ],
@@ -2825,6 +2914,7 @@
       "id": "higgs-audio-v2-tokenizer",
       "name": "higgs-audio-v2-tokenizer",
       "organization": "boson-ai",
+      "summary": "",
       "tasks": [
         "embedding",
         "speech-synthesis"
@@ -2856,6 +2946,7 @@
       "id": "higgs-tts-3-4b",
       "name": "higgs-tts-3-4b",
       "organization": "boson-ai",
+      "summary": "",
       "tasks": [
         "speech-synthesis"
       ],
@@ -2884,6 +2975,7 @@
       "id": "husky-flash",
       "name": "husky-flash",
       "organization": "underdog-ai",
+      "summary": "Husky Flash: Woof 1.0 4B for Husky, with the Flash draft Woof is the Pareto-frontier model that runs Underdog on your Mac and iPhone, even without wifi.",
       "tasks": [
         "text-generation"
       ],
@@ -2911,6 +3003,7 @@
       "id": "kapitsa-27b",
       "name": "kapitsa-27b",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -2939,6 +3032,7 @@
       "id": "kapitsa-35b",
       "name": "kapitsa-35b",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -2967,6 +3061,7 @@
       "id": "kapitsa-4b",
       "name": "kapitsa-4b",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -2995,6 +3090,7 @@
       "id": "kapitsa-9b",
       "name": "kapitsa-9b",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3023,6 +3119,7 @@
       "id": "kapitsa-bolt",
       "name": "kapitsa-bolt",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3049,6 +3146,7 @@
       "id": "kapitsa-clover",
       "name": "kapitsa-clover",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3076,6 +3174,7 @@
       "id": "kapitsa-dory",
       "name": "kapitsa-dory",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3102,6 +3201,7 @@
       "id": "kapitsa-flint",
       "name": "kapitsa-flint",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3129,6 +3229,7 @@
       "id": "kapitsa-lightning",
       "name": "kapitsa-lightning",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3155,6 +3256,7 @@
       "id": "kapitsa-super",
       "name": "kapitsa-super",
       "organization": "nace-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3181,6 +3283,7 @@
       "id": "lbs-27b",
       "name": "LBS-27B",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -3212,6 +3315,7 @@
       "id": "leapbundles",
       "name": "LeapBundles",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3238,6 +3342,7 @@
       "id": "lemondecider",
       "name": "LemonDecider",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "embedding"
       ],
@@ -3267,6 +3372,7 @@
       "id": "lfm2-1-2b-longevity",
       "name": "LFM2-1.2B-Longevity",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3294,6 +3400,7 @@
       "id": "lfm2-2-6b-longevity",
       "name": "LFM2-2.6B-Longevity",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3322,6 +3429,7 @@
       "id": "lfm2-5-1-2b-base",
       "name": "LFM2.5-1.2B-Base",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3349,6 +3457,7 @@
       "id": "lfm2-5-1-2b-instruct",
       "name": "LFM2.5-1.2B-Instruct",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3377,6 +3486,7 @@
       "id": "lfm2-5-1-2b-thinking",
       "name": "LFM2.5-1.2B-Thinking",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3405,6 +3515,7 @@
       "id": "lfm2-5-2-6b",
       "name": "LFM2.5-2.6B",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3433,6 +3544,7 @@
       "id": "lfm2-5-24b-a2b",
       "name": "LFM2.5-24B-A2B",
       "organization": "liquid-ai",
+      "summary": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -3466,6 +3578,7 @@
       "id": "lfm2-5-24b-a2b-base",
       "name": "LFM2.5-24B-A2B-Base",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3493,6 +3606,7 @@
       "id": "lfm2-5-24b-a2b-dspark",
       "name": "LFM2.5-24B-A2B-DSpark",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3520,6 +3634,7 @@
       "id": "lfm2-5-350m",
       "name": "LFM2.5-350M",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3548,6 +3663,7 @@
       "id": "lfm2-5-8b-a1b",
       "name": "LFM2.5-8B-A1B",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3576,6 +3692,7 @@
       "id": "lfm2-5-audio-1-5b",
       "name": "LFM2.5-Audio-1.5B",
       "organization": "liquid-ai",
+      "summary": "Key improvements include a custom, LFM based audio detokenizer, `llama.cpp` compatible GGUFs for CPU inference, and better ASR and TTS performance.",
       "tasks": [
         "speech-synthesis",
         "transcription"
@@ -3606,6 +3723,7 @@
       "id": "lfm2-5-vl-3b",
       "name": "LFM2.5-VL-3B",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -3638,6 +3756,7 @@
       "id": "lfm2-5-vl-3b-dspark",
       "name": "LFM2.5-VL-3B-DSpark",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -3669,6 +3788,7 @@
       "id": "lfm2-8b-a1b",
       "name": "LFM2-8B-A1B",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3696,6 +3816,7 @@
       "id": "lfm3-1-7b-base",
       "name": "LFM3-1.7B-Base",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3723,6 +3844,7 @@
       "id": "lfm3-audio-2b",
       "name": "LFM3-Audio-2B",
       "organization": "liquid-ai",
+      "summary": "API Try Docs Blog LFM3-Audio-2B LFM3-Audio-2B is a compact, fully featured audio model that runs locally on laptops and edge devices.",
       "tasks": [
         "speech-synthesis",
         "tool-calling",
@@ -3759,6 +3881,7 @@
       "id": "lfm3-omni-2b",
       "name": "LFM3-Omni-2B",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3789,6 +3912,7 @@
       "id": "lidstral-arabic",
       "name": "LIDstral-Arabic",
       "organization": "mistral",
+      "summary": "",
       "tasks": [
         "text-classification"
       ],
@@ -3816,6 +3940,7 @@
       "id": "ling-1t",
       "name": "Ling-1T",
       "organization": "ant-ling",
+      "summary": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "tasks": [
         "text-generation",
         "tool-calling"
@@ -3847,6 +3972,7 @@
       "id": "ling-2-5-1t",
       "name": "Ling-2.5-1T",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3875,6 +4001,7 @@
       "id": "ling-2-6-flash",
       "name": "Ling-2.6-flash",
       "organization": "ant-ling",
+      "summary": "Inclusion AI ling-2.6-flash",
       "tasks": [
         "text-generation",
         "tool-calling"
@@ -3905,6 +4032,7 @@
       "id": "ling-3-0-flash-dspark",
       "name": "Ling-3.0-flash-dspark",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3933,6 +4061,7 @@
       "id": "ling-3-0-flash-ubtree",
       "name": "Ling-3.0-flash-UBTree",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3960,6 +4089,7 @@
       "id": "ling-3-0-tiny-ubtree",
       "name": "Ling-3.0-tiny-UBTree",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -3987,6 +4117,7 @@
       "id": "ling-3-1-flash-base",
       "name": "Ling-3.1-flash-base",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4014,6 +4145,7 @@
       "id": "ling-mini-2-0",
       "name": "Ling-mini-2.0",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4042,6 +4174,7 @@
       "id": "liquid-codec",
       "name": "Liquid-Codec",
       "organization": "liquid-ai",
+      "summary": "",
       "tasks": [
         "embedding"
       ],
@@ -4069,6 +4202,7 @@
       "id": "llada-image",
       "name": "LLaDA-Image",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-generation"
       ],
@@ -4098,6 +4232,7 @@
       "id": "llada-image-turbo",
       "name": "LLaDA-Image-Turbo",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-generation"
       ],
@@ -4127,6 +4262,7 @@
       "id": "llada-ui",
       "name": "LLaDA-UI",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -4156,6 +4292,7 @@
       "id": "llada2-2-flash",
       "name": "LLaDA2.2-flash",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4184,6 +4321,7 @@
       "id": "llada2-2-mini",
       "name": "LLaDA2.2-mini",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4212,6 +4350,7 @@
       "id": "mach-1-additive-35b",
       "name": "Mach-1-Additive-35B",
       "organization": "syzygy-research",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4240,6 +4379,7 @@
       "id": "mach-1-additive-35b-multimodal",
       "name": "Mach-1-Additive-35B-Multimodal",
       "organization": "syzygy-research",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -4265,6 +4405,7 @@
       "id": "mach-2-additive-medium",
       "name": "Mach-2-Additive-Medium",
       "organization": "syzygy-research",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4294,6 +4435,7 @@
       "id": "mach-boom",
       "name": "Mach-Boom",
       "organization": "syzygy-research",
+      "summary": "",
       "tasks": [
         "speech-synthesis"
       ],
@@ -4322,6 +4464,7 @@
       "id": "mimo-7b-base",
       "name": "MiMo-7B-Base",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4350,6 +4493,7 @@
       "id": "mimo-7b-mtps",
       "name": "MiMo-7B-MTPs",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "embedding"
       ],
@@ -4378,6 +4522,7 @@
       "id": "mimo-7b-rl",
       "name": "MiMo-7B-RL",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4406,6 +4551,7 @@
       "id": "mimo-7b-rl-0530",
       "name": "MiMo-7B-RL-0530",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4434,6 +4580,7 @@
       "id": "mimo-7b-rl-zero",
       "name": "MiMo-7B-RL-Zero",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4462,6 +4609,7 @@
       "id": "mimo-7b-sft",
       "name": "MiMo-7B-SFT",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4490,6 +4638,7 @@
       "id": "mimo-audio-7b-base",
       "name": "MiMo-Audio-7B-Base",
       "organization": "xiaomi-mimo",
+      "summary": "In contrast, humans are able to generalize to new audio tasks with only a few examples or simple instructions.",
       "tasks": [
         "audio-language"
       ],
@@ -4520,6 +4669,7 @@
       "id": "mimo-audio-7b-instruct",
       "name": "MiMo-Audio-7B-Instruct",
       "organization": "xiaomi-mimo",
+      "summary": "In contrast, humans are able to generalize to new audio tasks with only a few examples or simple instructions.",
       "tasks": [
         "audio-language"
       ],
@@ -4550,6 +4700,7 @@
       "id": "mimo-audio-tokenizer",
       "name": "MiMo-Audio-Tokenizer",
       "organization": "xiaomi-mimo",
+      "summary": "In contrast, humans are able to generalize to new audio tasks with only a few examples or simple instructions.",
       "tasks": [
         "audio-language"
       ],
@@ -4580,6 +4731,7 @@
       "id": "mimo-v2-5-asr",
       "name": "MiMo-V2.5-ASR",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -4609,6 +4761,7 @@
       "id": "mimo-v2-5-base",
       "name": "MiMo-V2.5-Base",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4637,6 +4790,7 @@
       "id": "mimo-v2-5-pro-base",
       "name": "MiMo-V2.5-Pro-Base",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4665,6 +4819,7 @@
       "id": "mimo-v2-6-distill-qwen-9b",
       "name": "MiMo-V2.6-Distill-Qwen-9B",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -4698,6 +4853,7 @@
       "id": "mimo-v2-6-flash-mopd",
       "name": "MiMo-V2.6-Flash-MOPD",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4726,6 +4882,7 @@
       "id": "mimo-v2-6-pro-mopd",
       "name": "MiMo-V2.6-Pro-MOPD",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4754,6 +4911,7 @@
       "id": "mimo-v2-flash-base",
       "name": "MiMo-V2-Flash-Base",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -4783,6 +4941,7 @@
       "id": "mimo-vl-7b-rl",
       "name": "MiMo-VL-7B-RL",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -4816,6 +4975,7 @@
       "id": "mimo-vl-7b-rl-2508",
       "name": "MiMo-VL-7B-RL-2508",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -4849,6 +5009,7 @@
       "id": "mimo-vl-7b-sft",
       "name": "MiMo-VL-7B-SFT",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -4882,6 +5043,7 @@
       "id": "mimo-vl-7b-sft-2508",
       "name": "MiMo-VL-7B-SFT-2508",
       "organization": "xiaomi-mimo",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -4915,6 +5077,7 @@
       "id": "ming-3-0-asr-tiny",
       "name": "Ming-3.0-asr-tiny",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -4944,6 +5107,7 @@
       "id": "ming-3-0-audio-flash",
       "name": "Ming-3.0-audio-flash",
       "organization": "ant-ling",
+      "summary": "Ming-3.0-audio-flash is a native audio-language model from inclusionAI.",
       "tasks": [
         "audio-language",
         "speech-synthesis",
@@ -4977,6 +5141,7 @@
       "id": "ming-3-0-audio-tiny",
       "name": "Ming-3.0-audio-tiny",
       "organization": "ant-ling",
+      "summary": "Ming-3.0-audio-tiny is a compact native audio-language model from inclusionAI.",
       "tasks": [
         "transcription"
       ],
@@ -5006,6 +5171,7 @@
       "id": "ming-3-0-tts-0-5b",
       "name": "Ming-3.0-tts-0.5B",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "speech-synthesis"
       ],
@@ -5035,6 +5201,7 @@
       "id": "ming-3-0-tts-tiny",
       "name": "Ming-3.0-tts-tiny",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "speech-synthesis"
       ],
@@ -5064,6 +5231,7 @@
       "id": "ming-image-0-1-design",
       "name": "Ming-Image-0.1-Design",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-generation"
       ],
@@ -5092,6 +5260,7 @@
       "id": "ming-image-0-1-design-layer",
       "name": "Ming-Image-0.1-Design-Layer",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-generation"
       ],
@@ -5119,6 +5288,7 @@
       "id": "ming-uniaudio-16b-a3b",
       "name": "Ming-UniAudio-16B-A3B",
       "organization": "ant-ling",
+      "summary": "Its core is a unified continuous speech tokenizer that effectively unifies semantic and acoustic features within an end-to-end model.",
       "tasks": [
         "audio-language",
         "speech-synthesis"
@@ -5151,6 +5321,7 @@
       "id": "ming-uniaudio-16b-a3b-edit",
       "name": "Ming-UniAudio-16B-A3B-Edit",
       "organization": "ant-ling",
+      "summary": "Its core is a unified continuous speech tokenizer that effectively unifies semantic and acoustic features within an end-to-end model.",
       "tasks": [
         "audio-language",
         "speech-editing",
@@ -5183,6 +5354,7 @@
       "id": "minimax-h3-image",
       "name": "MiniMax-H3-Image",
       "organization": "minimax",
+      "summary": "",
       "tasks": [
         "image-generation"
       ],
@@ -5211,6 +5383,7 @@
       "id": "minimax-h3-image-pe",
       "name": "MiniMax-H3-Image-PE",
       "organization": "minimax",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -5241,6 +5414,7 @@
       "id": "minimax-music3",
       "name": "MiniMax-Music3",
       "organization": "minimax",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -5270,6 +5444,7 @@
       "id": "moderator",
       "name": "moderator",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "content-moderation",
         "image-classification"
@@ -5299,6 +5474,7 @@
       "id": "ornith-1-5-122b",
       "name": "Ornith-1.5-122B",
       "organization": "ornith-ai",
+      "summary": "Ornith 1.5 122B is an MIT-licensed open-weight model for coding, reasoning, tool use and image understanding. It accepts text and images across a shared 262,144-token context, with up to 32,768 output tokens. Reasoning is enabled by default; JSON object output and streaming are supported.",
       "tasks": [
         "reasoning",
         "text-generation",
@@ -5334,6 +5510,7 @@
       "id": "ornith-1-5-397b",
       "name": "Ornith-1.5-397B",
       "organization": "ornith-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -5362,6 +5539,7 @@
       "id": "ornith-1-5-9b",
       "name": "Ornith-1.5-9B",
       "organization": "ornith-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -5390,6 +5568,7 @@
       "id": "orze-asr-3way",
       "name": "Orze-ASR-3Way",
       "organization": "boson-ai",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -5418,6 +5597,7 @@
       "id": "qwen-drive-1-0-4b",
       "name": "Qwen-Drive-1.0-4B",
       "organization": "qwen",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -5451,6 +5631,7 @@
       "id": "qwen-image-2-1-pe-i2i",
       "name": "Qwen-Image-2.1-PE-I2I",
       "organization": "qwen",
+      "summary": "",
       "tasks": [
         "image-generation"
       ],
@@ -5477,6 +5658,7 @@
       "id": "qwen-image-2-1-pe-t2i",
       "name": "Qwen-Image-2.1-PE-T2I",
       "organization": "qwen",
+      "summary": "",
       "tasks": [
         "image-generation"
       ],
@@ -5504,6 +5686,7 @@
       "id": "qwen-image-2-1-turbo",
       "name": "Qwen-Image-2.1-Turbo",
       "organization": "qwen",
+      "summary": "",
       "tasks": [
         "image-generation"
       ],
@@ -5533,6 +5716,7 @@
       "id": "qwen3-asr-1-7b-hf-beam4",
       "name": "Qwen3-ASR-1.7B-hf-beam4",
       "organization": "boson-ai",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -5563,6 +5747,7 @@
       "id": "qwen3-asr-1-7b-hf-orze",
       "name": "Qwen3-ASR-1.7B-hf-orze",
       "organization": "boson-ai",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -5593,6 +5778,7 @@
       "id": "qwen3guard-stream-0-6b",
       "name": "Qwen3Guard-Stream-0.6B",
       "organization": "qwen",
+      "summary": "",
       "tasks": [
         "embedding"
       ],
@@ -5622,6 +5808,7 @@
       "id": "qwen3guard-stream-4b",
       "name": "Qwen3Guard-Stream-4B",
       "organization": "qwen",
+      "summary": "",
       "tasks": [
         "embedding"
       ],
@@ -5651,6 +5838,7 @@
       "id": "qwen3guard-stream-8b",
       "name": "Qwen3Guard-Stream-8B",
       "organization": "qwen",
+      "summary": "",
       "tasks": [
         "embedding"
       ],
@@ -5680,6 +5868,7 @@
       "id": "redact",
       "name": "redact",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "pii-redaction",
         "structured-extraction"
@@ -5709,6 +5898,7 @@
       "id": "ring-1t",
       "name": "Ring-1T",
       "organization": "ant-ling",
+      "summary": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "tasks": [
         "reasoning",
         "text-generation"
@@ -5740,6 +5930,7 @@
       "id": "ring-2-5-1t",
       "name": "Ring-2.5-1T",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -5768,6 +5959,7 @@
       "id": "ring-flash-2-0",
       "name": "Ring-flash-2.0",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -5796,6 +5988,7 @@
       "id": "ring-mini-2-0",
       "name": "Ring-mini-2.0",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -5824,6 +6017,7 @@
       "id": "schemer",
       "name": "schemer",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "structured-extraction"
       ],
@@ -5847,6 +6041,7 @@
       "id": "shapes",
       "name": "shapes",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "image-classification"
       ],
@@ -5874,6 +6069,7 @@
       "id": "singvl-s1-4b",
       "name": "SingVL_S1_4B",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -5904,6 +6100,7 @@
       "id": "swin2sr-classical-sr-x2-64",
       "name": "swin2SR-classical-sr-x2-64",
       "organization": "xenova",
+      "summary": "",
       "tasks": [
         "image-generation"
       ],
@@ -5932,6 +6129,7 @@
       "id": "timestral-123m",
       "name": "Timestral-123M",
       "organization": "mistral",
+      "summary": "",
       "tasks": [
         "time-series-forecasting"
       ],
@@ -5955,6 +6153,7 @@
       "id": "timestral-209m",
       "name": "Timestral-209M",
       "organization": "mistral",
+      "summary": "",
       "tasks": [
         "time-series-forecasting"
       ],
@@ -5978,6 +6177,7 @@
       "id": "timestral-28m",
       "name": "Timestral-28M",
       "organization": "mistral",
+      "summary": "",
       "tasks": [
         "time-series-forecasting"
       ],
@@ -6001,6 +6201,7 @@
       "id": "timestral-5m",
       "name": "Timestral-5M",
       "organization": "mistral",
+      "summary": "",
       "tasks": [
         "time-series-forecasting"
       ],
@@ -6024,6 +6225,7 @@
       "id": "tinfield-1",
       "name": "Tinfield-1",
       "organization": "bad-theory-labs",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -6056,6 +6258,7 @@
       "id": "title",
       "name": "title",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "text-generation",
         "title-generation"
@@ -6085,6 +6288,7 @@
       "id": "tongue",
       "name": "tongue",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "language-identification",
         "text-classification"
@@ -6113,6 +6317,7 @@
       "id": "toxic",
       "name": "toxic",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "content-moderation",
         "text-classification"
@@ -6142,6 +6347,7 @@
       "id": "trocr-small-handwritten",
       "name": "trocr-small-handwritten",
       "organization": "xenova",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -6169,6 +6375,7 @@
       "id": "twil-8b",
       "name": "TwIL-8B",
       "organization": "webai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -6196,6 +6403,7 @@
       "id": "twil-lm2",
       "name": "TwIL-LM2",
       "organization": "webai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -6223,6 +6431,7 @@
       "id": "twil-lm3",
       "name": "TwIL-LM3",
       "organization": "webai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -6251,6 +6460,7 @@
       "id": "twil-lm3-pro",
       "name": "TwIL-LM3-Pro",
       "organization": "webai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -6278,6 +6488,7 @@
       "id": "uhm",
       "name": "uhm",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "audio-classification",
         "filler-word-detection"
@@ -6307,6 +6518,7 @@
       "id": "ui-venus-2-9b",
       "name": "UI-Venus-2-9B",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -6338,6 +6550,7 @@
       "id": "underdog-27b-1-0",
       "name": "Underdog-27B-1.0",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -6370,6 +6583,7 @@
       "id": "underdog-27b-1-1",
       "name": "Underdog-27B-1.1",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -6398,6 +6612,7 @@
       "id": "underdog-bark-0-8b-1-0",
       "name": "Underdog-Bark-0.8B-1.0",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -6427,6 +6642,7 @@
       "id": "underdog-bark-3-0",
       "name": "Underdog-Bark-3.0",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -6457,6 +6673,7 @@
       "id": "underdog-bark-3-0-clean",
       "name": "Underdog-Bark-3.0-Clean",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -6487,6 +6704,7 @@
       "id": "underdog-bark-3-0-plus",
       "name": "Underdog-Bark-3.0-Plus",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -6517,6 +6735,7 @@
       "id": "underdog-bark-3-0-pro",
       "name": "Underdog-Bark-3.0-Pro",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -6547,6 +6766,7 @@
       "id": "underdog-poodle-4b",
       "name": "Underdog-Poodle-4B",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -6580,6 +6800,7 @@
       "id": "underdog-saluki-27b-1-0",
       "name": "Underdog-Saluki-27B-1.0",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -6609,6 +6830,7 @@
       "id": "underdog-ternary-1-1",
       "name": "Underdog-Ternary-1.1",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -6637,6 +6859,7 @@
       "id": "underdog-woof",
       "name": "Underdog-Woof",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "speech-synthesis"
       ],
@@ -6664,6 +6887,7 @@
       "id": "underdog-woof-2b-1-1",
       "name": "Underdog-Woof-2B-1.1",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -6692,6 +6916,7 @@
       "id": "underdog-woof-4b-1-1",
       "name": "Underdog-Woof-4B-1.1",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -6720,6 +6945,7 @@
       "id": "underdog-woof-japanese",
       "name": "Underdog-Woof-Japanese",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "speech-synthesis"
       ],
@@ -6747,6 +6973,7 @@
       "id": "unlimited-ocr",
       "name": "Unlimited-OCR",
       "organization": "baidu",
+      "summary": "",
       "tasks": [
         "image-understanding",
         "ocr"
@@ -6781,6 +7008,7 @@
       "id": "unlimited-ocr-2",
       "name": "Unlimited-OCR-2",
       "organization": "baidu",
+      "summary": "",
       "tasks": [
         "image-understanding",
         "ocr"
@@ -6815,6 +7043,7 @@
       "id": "vit-gpt2-image-captioning",
       "name": "vit-gpt2-image-captioning",
       "organization": "xenova",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -6842,6 +7071,7 @@
       "id": "voxtral-mini-4b-realtime-arabic",
       "name": "Voxtral-Mini-4B-Realtime-Arabic",
       "organization": "mistral",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -6869,6 +7099,7 @@
       "id": "voz",
       "name": "voz",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "transcription"
       ],
@@ -6897,6 +7128,7 @@
       "id": "webai-colvec1-1-4b",
       "name": "webAI-ColVec1.1-4b",
       "organization": "webai",
+      "summary": "",
       "tasks": [
         "retrieval"
       ],
@@ -6925,6 +7157,7 @@
       "id": "webai-colvec1-1-8b",
       "name": "webAI-ColVec1.1-8b",
       "organization": "webai",
+      "summary": "",
       "tasks": [
         "retrieval"
       ],
@@ -6953,6 +7186,7 @@
       "id": "webai-colvec1-9b",
       "name": "webAI-ColVec1-9b",
       "organization": "webai",
+      "summary": "",
       "tasks": [
         "retrieval"
       ],
@@ -6981,6 +7215,7 @@
       "id": "who",
       "name": "who",
       "organization": "desert-ant-labs",
+      "summary": "",
       "tasks": [
         "diarization",
         "voice-activity-detection"
@@ -7010,6 +7245,7 @@
       "id": "woof-1-0-4b",
       "name": "woof-1.0-4B",
       "organization": "underdog-ai",
+      "summary": "",
       "tasks": [
         "text-generation"
       ],
@@ -7038,6 +7274,7 @@
       "id": "zwz-2b",
       "name": "ZwZ-2B",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -7071,6 +7308,7 @@
       "id": "zwz2-27b",
       "name": "ZwZ2-27B",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -7102,6 +7340,7 @@
       "id": "zwz2-4b",
       "name": "ZwZ2-4B",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],
@@ -7133,6 +7372,7 @@
       "id": "zwz2-9b",
       "name": "ZwZ2-9B",
       "organization": "ant-ling",
+      "summary": "",
       "tasks": [
         "image-understanding"
       ],

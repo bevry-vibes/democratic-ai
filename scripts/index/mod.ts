@@ -459,6 +459,7 @@ async function main(): Promise<void> {
       id,
       name: base,
       organization: orgId,
+      summary: md?.description ? md.description.slice(0, 400) : card,
       tasks,
       domains: modelTags.filter((tag) => tag.startsWith("domain:")).map((tag) => tag.slice(7)),
       tags: modelTags,
