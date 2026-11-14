@@ -596,6 +596,10 @@ The site's detailed pages use richer components than a Markdown table can expres
 
 ### 7. Site architecture and information architecture
 
+**Status:** deployed on 2026-11-14 at <https://democratic-ai.bevry.workers.dev>. The first build has 399 static pages and 564 assets. It is an assets-only Worker: no server runtime, no database, no tracking.
+
+
+
 - **Framework:** Astro `7`, static output, Tailwind CSS `4` through the Vite plugin, no client framework.
 - **Deployment:** Wrangler static assets, Worker name `democratic-ai`, canonical host `democratic-ai.bevry.workers.dev`.
 - **Data:** generated JSON imported at build time. No runtime fetch, no database, no session.
@@ -617,6 +621,8 @@ Routes:
 | `/journal/<yyyy-mm>/` | One month. |
 | `/data/` | The API contract, schema links, and example responses. |
 | `/about/` | The method, the evidence doctrine, and how to contribute a correction. |
+
+The implemented site uses `/` for the README plus top models and task chips, `/models/` for the filterable list, `/models/<id>/` for the fact sheet, `/tags/` and `/tags/<namespace>/<value>/` for the tag index, `/about/` for the method, `/data/` for the API contract, and `/find/` as a redirect to `/models/`. The API is generated into `/api/v1/` at build time.
 
 The site is entirely static, so there is no search service. The `/find/` and `/models/` pages filter generated indexes in the browser with a small script. They also support URL parameters, so a result is shareable: `/find/?task=translation&language=id&runtime=cloudflare-workers&license=commercial-safe`.
 
@@ -1024,7 +1030,7 @@ Acceptance: the repository is initialised, the skills are referenced, and the ow
 
 Acceptance: `deno task fetch` writes a manifest and keeps every raw response; `deno task tag` and `deno task tag:clef` write proposals with evidence; no Clef task is accepted below 0.8; a model in review keeps its other tags and has no guessed task; `deno task syndication` gives every score a source URL and skips builds/probes; `deno task index` writes roots only and attaches builds; the index builds without any report; every task tag has a definition; `deno task check` passes; the tier is recomputed and equal to the stored tier.
 
-### Phase 2 — site and tag index
+### Phase 2 — site and tag index (implemented)
 
 - Astro project, theme tokens, layouts, pages.
 - The `/find/` page and the `/tags/` pages, driven by the tag index.

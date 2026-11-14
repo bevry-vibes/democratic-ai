@@ -4,7 +4,7 @@ AI learns from the commons: books, code, images, speech, and the work of everyon
 
 This repository tracks democratic AI models and discoveries. It helps you answer one question: **which AI is democratic enough for this context?**
 
-> **Status:** the first catalogue is in progress. The site, the JSON API, and the first verified records are being assembled. The journal records each step.
+> **Status:** the first catalogue is live. The site and the JSON API are available. Records are added after a source check, and builds attach to their base model. The journal records each change.
 
 ## What this repository gives you
 
@@ -35,7 +35,7 @@ When someone has measured a job, an optional report adds a verdict. The report i
 - **Disqualified** — it does not fit, and the reason is recorded.
 - **Unmeasured** — no report covers this job yet. The facts are still here.
 
-The first release adds a **Find** view that filters tags and constraints. It shows a verdict only when a report exists.
+The **Models** view filters tags and constraints. It shows a verdict only when a report exists.
 
 ## Syndication
 
@@ -77,7 +77,7 @@ A monthly dispatch collects the important changes into one readable issue.
 
 ## Use the data
 
-The catalogue will publish as JSON, with a stable schema and a versioned API.
+The catalogue publishes as JSON, with a stable schema and a versioned API.
 
 ```text
 GET /api/v1/index.json
