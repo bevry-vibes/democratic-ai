@@ -29,6 +29,7 @@
   },
   "footprint": {
     "params_b": null,
+    "weights_gb": 19,
     "runtimes": []
   },
   "license": {

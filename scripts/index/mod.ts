@@ -1,4 +1,5 @@
-import { readIfExists, writeReplace } from "../fetch/lib/cache.ts"
+import { readIfExists, writeReplace, writeText } from "../fetch/lib/cache.ts"
+import { fetchText } from "../fetch/lib/http.ts"
 import { isoDate } from "../fetch/lib/time.ts"
 
 interface PullItem {
@@ -93,6 +94,30 @@ function stripCard(value: string): string {
     .replace(/^#{1,6}\s+/gm, "")
     .replace(/\s+/g, " ")
     .trim()
+}
+
+interface HfModelInfo {
+  usedStorage?: number
+  siblings?: Array<{ size?: number }>
+}
+
+async function hfSizeGb(id: string): Promise<number | null> {
+  const path = `data/raw/hf/sizes/${slug(id)}/${isoDate()}.json`
+  try {
+    let text = await readIfExists(path)
+    if (text == null) {
+      const response = await fetchText(`https://huggingface.co/api/models/${id}?blobs=true`, { accept: "application/json" })
+      if (response.status !== 200) return null
+      text = response.body
+      await writeText(path, text)
+    }
+    const info = JSON.parse(text) as HfModelInfo
+    const siblings = (info.siblings ?? []).reduce((total, file) => total + (file.size ?? 0), 0)
+    const bytes = siblings > 0 ? siblings : info.usedStorage ?? 0
+    return bytes > 0 ? Math.round(bytes / 1e9) : null
+  } catch {
+    return null
+  }
 }
 
 async function cardLicense(id: string): Promise<string | null> {
@@ -490,6 +515,8 @@ async function main(): Promise<void> {
     if (usedIds.has(id)) id = `${slug(org)}-${slug(base)}`
     usedIds.add(id)
 
+    const paramsB = paramsFrom(base)
+    const weightsGb = paramsB == null ? await hfSizeGb(sourceId) : null
     const synd = syndication.models[sourceId]
     const buildEntries = (buildsByRoot.get(sourceId) ?? []).map((build) => {
       const buildTags = build.tags.map((tag) => tag.tag)
@@ -541,7 +568,8 @@ async function main(): Promise<void> {
         context_tokens: md?.limit?.context ?? null,
       },
       footprint: {
-        params_b: paramsFrom(base),
+        params_b: paramsB,
+        ...(weightsGb != null ? { weights_gb: weightsGb } : {}),
         runtimes: localRuntimes,
       },
       license: {
@@ -600,7 +628,8 @@ async function main(): Promise<void> {
       reasoning: md?.reasoning ?? null,
       structured_output: md?.structured_output ?? null,
       context_tokens: md?.limit?.context ?? null,
-      params_b: paramsFrom(base),
+      params_b: paramsB,
+      ...(weightsGb != null ? { weights_gb: weightsGb } : {}),
       released: root.item.published_at ? root.item.published_at.slice(0, 10) : null,
       aliases: [sourceId, ...folded.map((alias) => alias.hugging_face)],
       releases: folded.length,

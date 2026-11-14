@@ -35,6 +35,7 @@
   },
   "footprint": {
     "params_b": null,
+    "weights_gb": 3,
     "runtimes": [
       "python"
     ]

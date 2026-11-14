@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T08:47:37.110Z",
+  "generated_at": "2026-11-14T09:20:23.275Z",
   "pull_id": "20261114T063448Z",
   "aliases": [
     {
@@ -64,6 +64,7 @@
       "structured_output": true,
       "context_tokens": 1048576,
       "params_b": null,
+      "weights_gb": 510,
       "released": "2026-10-17",
       "aliases": [
         "deepseek-ai/DeepSeek-V4.1-Flash-1017",
@@ -1259,6 +1260,7 @@
       "structured_output": true,
       "context_tokens": 1000000,
       "params_b": null,
+      "weights_gb": 1507,
       "released": "2026-06-16",
       "aliases": [
         "zai-org/GLM-5.2"
@@ -2848,6 +2850,7 @@
       "structured_output": true,
       "context_tokens": 1000000,
       "params_b": null,
+      "weights_gb": 756,
       "released": "2026-08-25",
       "aliases": [
         "zai-org/GLM-5.3"
@@ -4448,6 +4451,7 @@
       "structured_output": true,
       "context_tokens": 1000000,
       "params_b": null,
+      "weights_gb": 328,
       "released": "2026-08-25",
       "aliases": [
         "zai-org/GLM-5.3-Flash"
@@ -5988,6 +5992,7 @@
       "structured_output": true,
       "context_tokens": 1048576,
       "params_b": null,
+      "weights_gb": 394,
       "released": "2026-11-04",
       "aliases": [
         "thinkingmachines/Inkling-2-Small"
@@ -6279,6 +6284,7 @@
       "structured_output": true,
       "context_tokens": 1048576,
       "params_b": null,
+      "weights_gb": 1561,
       "released": "2026-06-13",
       "aliases": [
         "moonshotai/Kimi-K3"
@@ -7756,6 +7762,7 @@
       "structured_output": false,
       "context_tokens": 262144,
       "params_b": null,
+      "weights_gb": 255,
       "released": "2026-08-02",
       "aliases": [
         "inclusionAI/Ling-3.0-flash"
@@ -8084,6 +8091,7 @@
       "structured_output": true,
       "context_tokens": 1048576,
       "params_b": null,
+      "weights_gb": 316,
       "released": "2026-04-27",
       "aliases": [
         "XiaomiMiMo/MiMo-V2.5"
@@ -8637,6 +8645,7 @@
       "structured_output": true,
       "context_tokens": 1048576,
       "params_b": null,
+      "weights_gb": 1033,
       "released": "2026-04-27",
       "aliases": [
         "XiaomiMiMo/MiMo-V2.5-Pro"
@@ -9151,6 +9160,7 @@
       "structured_output": true,
       "context_tokens": 204800,
       "params_b": null,
+      "weights_gb": 230,
       "released": "2026-02-12",
       "aliases": [
         "MiniMaxAI/MiniMax-M2.5"
@@ -9801,6 +9811,7 @@
       "structured_output": true,
       "context_tokens": 204800,
       "params_b": null,
+      "weights_gb": 230,
       "released": "2026-04-09",
       "aliases": [
         "MiniMaxAI/MiniMax-M2.7"
@@ -10486,6 +10497,7 @@
       "structured_output": true,
       "context_tokens": 1000000,
       "params_b": null,
+      "weights_gb": 854,
       "released": "2026-06-02",
       "aliases": [
         "MiniMaxAI/MiniMax-M3"
@@ -11556,6 +11568,7 @@
       "structured_output": true,
       "context_tokens": 1000000,
       "params_b": null,
+      "weights_gb": 252,
       "released": "2026-10-17",
       "aliases": [
         "MiniMaxAI/MiniMax-M3.1-Flash"
@@ -13945,6 +13958,7 @@
       "structured_output": true,
       "context_tokens": 1048576,
       "params_b": null,
+      "weights_gb": 1561,
       "released": "2026-11-02",
       "aliases": [
         "moonshotai/Kimi-K3.1-Pro"
@@ -16000,6 +16014,7 @@
       "structured_output": true,
       "context_tokens": 256000,
       "params_b": null,
+      "weights_gb": 255,
       "released": "2026-09-03",
       "aliases": [
         "inclusionAI/Ling-3.0-flash-Fin"
@@ -16265,6 +16280,7 @@
       "structured_output": true,
       "context_tokens": 131072,
       "params_b": null,
+      "weights_gb": 250,
       "released": "2026-09-04",
       "aliases": [
         "inclusionAI/Ling-3.0-flash-VL"
@@ -16520,6 +16536,7 @@
       "structured_output": true,
       "context_tokens": 1000000,
       "params_b": null,
+      "weights_gb": 3562,
       "released": "2026-11-04",
       "aliases": [
         "meituan-longcat/LongCat-2.5"
@@ -17092,6 +17109,7 @@
       "structured_output": true,
       "context_tokens": 204800,
       "params_b": null,
+      "weights_gb": 230,
       "released": "2025-10-22",
       "aliases": [
         "MiniMaxAI/MiniMax-M2"
@@ -17443,6 +17461,7 @@
       "structured_output": true,
       "context_tokens": 204800,
       "params_b": null,
+      "weights_gb": 230,
       "released": "2025-12-20",
       "aliases": [
         "MiniMaxAI/MiniMax-M2.1"
@@ -17873,6 +17892,7 @@
       "structured_output": true,
       "context_tokens": 262144,
       "params_b": null,
+      "weights_gb": 360,
       "released": "2026-08-24",
       "aliases": [
         "Qwen/Qwen3.8-Flash-Next"
@@ -18104,6 +18124,7 @@
       "structured_output": false,
       "context_tokens": 262144,
       "params_b": null,
+      "weights_gb": 1042,
       "released": "2026-04-29",
       "aliases": [
         "inclusionAI/Ling-2.6-1T"
@@ -18261,6 +18282,7 @@
       "structured_output": false,
       "context_tokens": 256000,
       "params_b": null,
+      "weights_gb": 255,
       "released": "2026-10-19",
       "aliases": [
         "inclusionAI/Ling-3.0-flash-Sante"
@@ -18442,6 +18464,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 573,
       "released": "2026-09-21",
       "aliases": [
         "XiaomiMiMo/MiMo-V2.6-Pro-RL"
@@ -19119,6 +19142,7 @@
       "structured_output": true,
       "context_tokens": 262144,
       "params_b": null,
+      "weights_gb": 313,
       "released": "2025-12-16",
       "aliases": [
         "XiaomiMiMo/MiMo-V2-Flash"
@@ -19353,6 +19377,7 @@
       "structured_output": null,
       "context_tokens": 0,
       "params_b": null,
+      "weights_gb": 498,
       "released": "2026-07-28",
       "aliases": [
         "MiniMaxAI/MiniMax-H3"
@@ -19525,6 +19550,7 @@
       "structured_output": true,
       "context_tokens": 1000000,
       "params_b": null,
+      "weights_gb": 650,
       "released": "2026-09-20",
       "aliases": [
         "stepfun-ai/Step-5-Preview"
@@ -19960,6 +19986,7 @@
       "structured_output": true,
       "context_tokens": 262144,
       "params_b": null,
+      "weights_gb": 16,
       "released": "2026-08-10",
       "aliases": [
         "inclusionAI/Ling-3.0-tiny"
@@ -20290,6 +20317,7 @@
       "structured_output": true,
       "context_tokens": 131000,
       "params_b": null,
+      "weights_gb": 206,
       "released": "2025-09-17",
       "aliases": [
         "inclusionAI/Ling-flash-2.0"
@@ -20453,6 +20481,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 178,
       "released": "2026-09-21",
       "aliases": [
         "XiaomiMiMo/MiMo-V2.6-Flash-RL"
@@ -21325,6 +21354,7 @@
       "structured_output": null,
       "context_tokens": 8192,
       "params_b": null,
+      "weights_gb": 33,
       "released": "2026-09-14",
       "aliases": [
         "Qwen/Qwen-Image-2.1"
@@ -21496,6 +21526,7 @@
       "structured_output": false,
       "context_tokens": 262000,
       "params_b": null,
+      "weights_gb": 1042,
       "released": "2026-05-14",
       "aliases": [
         "inclusionAI/Ring-2.6-1T"
@@ -21818,6 +21849,7 @@
       "structured_output": false,
       "context_tokens": 1000000,
       "params_b": null,
+      "weights_gb": 574,
       "released": "2026-10-27",
       "aliases": [
         "inclusionAI/Ling-3.1-flash-1019",
@@ -21988,6 +22020,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 3,
       "released": "2026-10-14",
       "aliases": [
         "Edge0/Audio8-TTS-Realistic-Air"
@@ -22143,6 +22176,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 153,
       "released": "2026-11-12",
       "aliases": [
         "inclusionAI/Duo-1.0-causal-base"
@@ -22298,6 +22332,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 3,
       "released": "2026-11-12",
       "aliases": [
         "inclusionAI/Duo-1.0-distill"
@@ -22453,6 +22488,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 153,
       "released": "2026-11-12",
       "aliases": [
         "inclusionAI/Duo-1.2-causal-base"
@@ -22912,6 +22948,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 288,
       "released": "2026-10-21",
       "aliases": [
         "baidu/ERNIE-5.5-Flash-Base"
@@ -23065,6 +23102,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 2,
       "released": "2026-10-26",
       "aliases": [
         "higurashi-ai/FastDialogueSidon"
@@ -23220,6 +23258,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 3,
       "released": "2026-01-30",
       "aliases": [
         "zai-org/GLM-OCR"
@@ -23376,6 +23415,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2025-06-23",
       "aliases": [
         "bosonai/higgs-audio-v2-tokenizer"
@@ -23846,6 +23886,7 @@
       "structured_output": null,
       "context_tokens": 128000,
       "params_b": null,
+      "weights_gb": 1999,
       "released": "2025-10-02",
       "aliases": [
         "inclusionAI/Ling-1T"
@@ -24009,6 +24050,7 @@
       "structured_output": false,
       "context_tokens": 262144,
       "params_b": null,
+      "weights_gb": 215,
       "released": "2026-04-28",
       "aliases": [
         "inclusionAI/Ling-2.6-flash"
@@ -24170,6 +24212,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2026-10-14",
       "aliases": [
         "inclusionAI/Ling-3.0-flash-UBTree"
@@ -24323,6 +24366,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-10-21",
       "aliases": [
         "inclusionAI/Ling-3.0-tiny-UBTree"
@@ -24476,6 +24520,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 33,
       "released": "2025-09-08",
       "aliases": [
         "inclusionAI/Ling-mini-2.0"
@@ -24630,6 +24675,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 49,
       "released": "2026-08-28",
       "aliases": [
         "inclusionAI/LLaDA-Image"
@@ -24784,6 +24830,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 49,
       "released": "2026-08-28",
       "aliases": [
         "inclusionAI/LLaDA-Image-Turbo"
@@ -24938,6 +24985,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 34,
       "released": "2026-09-06",
       "aliases": [
         "inclusionAI/LLaDA-UI"
@@ -25093,6 +25141,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 208,
       "released": "2026-03-25",
       "aliases": [
         "meituan-longcat/LongCat-Next"
@@ -26806,6 +26855,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 238,
       "released": "2026-02-10",
       "aliases": [
         "inclusionAI/Ming-flash-omni-2.0"
@@ -26967,6 +27017,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 240,
       "released": "2025-10-14",
       "aliases": [
         "inclusionAI/Ming-flash-omni-Preview"
@@ -27438,6 +27489,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 640,
       "released": "2026-09-16",
       "aliases": [
         "inclusionAI/Realtime-Venus"
@@ -27591,6 +27643,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 206,
       "released": "2025-09-19",
       "aliases": [
         "inclusionAI/Ring-flash-2.0"
@@ -28054,6 +28107,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-10-15",
       "aliases": [
         "ConwayResearch/Underdog-Bark-3.0-Clean"
@@ -28226,6 +28280,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 13,
       "released": "2026-06-19",
       "aliases": [
         "baidu/Unlimited-OCR"
@@ -28385,6 +28440,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 7,
       "released": "2026-10-26",
       "aliases": [
         "baidu/Unlimited-OCR-2"
@@ -29621,6 +29677,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 10,
       "released": "2026-08-23",
       "aliases": [
         "FluidInference/ace-step-webgpu-models"
@@ -29776,6 +29833,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-08-13",
       "aliases": [
         "desert-ant-labs/align"
@@ -29930,6 +29988,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 8,
       "released": "2026-09-21",
       "aliases": [
         "Edge0/Audio8-ASR-Infinite"
@@ -30389,6 +30448,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2023-05-03",
       "aliases": [
         "Xenova/bert-base-NER"
@@ -30541,6 +30601,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-05-14",
       "aliases": [
         "desert-ant-labs/clear"
@@ -31005,6 +31066,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 4,
       "released": "2023-05-19",
       "aliases": [
         "Xenova/clip-vit-base-patch32"
@@ -31159,6 +31221,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2026-07-24",
       "aliases": [
         "desert-ant-labs/clips"
@@ -31787,6 +31850,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 2,
       "released": "2026-10-05",
       "aliases": [
         "LiquidAI/d1-omni-600M"
@@ -31940,6 +32004,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 16,
       "released": "2026-10-01",
       "aliases": [
         "nace-ai/drex-dlm"
@@ -32091,6 +32156,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 52,
       "released": "2026-10-13",
       "aliases": [
         "nace-ai/drex-max-v1"
@@ -32244,6 +32310,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 18,
       "released": "2026-09-28",
       "aliases": [
         "nace-ai/drex-v1.5"
@@ -32397,6 +32464,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 70,
       "released": "2026-10-06",
       "aliases": [
         "nace-ai/drex-v2.0"
@@ -32555,6 +32623,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 617,
       "released": "2026-08-06",
       "aliases": [
         "ConwayResearch/dsv4-flash-0731-vision"
@@ -32709,6 +32778,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-08-25",
       "aliases": [
         "desert-ant-labs/ear"
@@ -32863,6 +32933,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-06-15",
       "aliases": [
         "desert-ant-labs/emo"
@@ -33015,6 +33086,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-06-15",
       "aliases": [
         "desert-ant-labs/eye"
@@ -33162,6 +33234,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-11-05",
       "aliases": [
         "desert-ant-labs/face"
@@ -33317,6 +33390,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 8,
       "released": "2026-08-04",
       "aliases": [
         "FluidInference/fluidaudio-web"
@@ -33471,6 +33545,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-07-17",
       "aliases": [
         "desert-ant-labs/gist"
@@ -33929,6 +34004,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 3,
       "released": "2026-09-21",
       "aliases": [
         "ConwayResearch/husky-flash"
@@ -34692,6 +34768,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-11-08",
       "aliases": [
         "nace-ai/kapitsa-bolt"
@@ -34844,6 +34921,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-11-08",
       "aliases": [
         "nace-ai/kapitsa-clover"
@@ -34995,6 +35073,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-11-08",
       "aliases": [
         "nace-ai/kapitsa-dory"
@@ -35147,6 +35226,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-11-08",
       "aliases": [
         "nace-ai/kapitsa-flint"
@@ -35298,6 +35378,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-11-08",
       "aliases": [
         "nace-ai/kapitsa-lightning"
@@ -35449,6 +35530,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-11-08",
       "aliases": [
         "nace-ai/kapitsa-super"
@@ -35756,6 +35838,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 22,
       "released": "2025-07-03",
       "aliases": [
         "LiquidAI/LeapBundles"
@@ -35910,6 +35993,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 9,
       "released": "2026-10-05",
       "aliases": [
         "inclusionAI/LemonDecider"
@@ -37450,6 +37534,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2026-03-31",
       "aliases": [
         "LiquidAI/LFM2.5-350M"
@@ -38556,6 +38641,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2026-10-08",
       "aliases": [
         "mistralai/LIDstral-Arabic"
@@ -38709,6 +38795,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 2024,
       "released": "2026-02-14",
       "aliases": [
         "inclusionAI/Ling-2.5-1T"
@@ -38862,6 +38949,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 3,
       "released": "2026-08-09",
       "aliases": [
         "inclusionAI/Ling-3.0-flash-dspark"
@@ -39014,6 +39102,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1144,
       "released": "2026-10-25",
       "aliases": [
         "inclusionAI/Ling-3.1-flash-base"
@@ -39166,6 +39255,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-09-16",
       "aliases": [
         "LiquidAI/Liquid-Codec"
@@ -39319,6 +39409,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 206,
       "released": "2026-07-16",
       "aliases": [
         "inclusionAI/LLaDA2.2-flash"
@@ -39472,6 +39563,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 33,
       "released": "2026-09-05",
       "aliases": [
         "inclusionAI/LLaDA2.2-mini"
@@ -39929,6 +40021,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 132,
       "released": "2026-09-27",
       "aliases": [
         "SyzygyResearch/Mach-2-Additive-Medium"
@@ -40082,6 +40175,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-11-10",
       "aliases": [
         "SyzygyResearch/Mach-Boom"
@@ -40853,6 +40947,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 4,
       "released": "2025-09-18",
       "aliases": [
         "XiaomiMiMo/MiMo-Audio-Tokenizer"
@@ -41007,6 +41102,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 32,
       "released": "2026-04-23",
       "aliases": [
         "XiaomiMiMo/MiMo-V2.5-ASR"
@@ -41160,6 +41256,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 316,
       "released": "2026-04-27",
       "aliases": [
         "XiaomiMiMo/MiMo-V2.5-Base"
@@ -41313,6 +41410,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1033,
       "released": "2026-04-27",
       "aliases": [
         "XiaomiMiMo/MiMo-V2.5-Pro-Base"
@@ -41624,6 +41722,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 178,
       "released": "2026-09-27",
       "aliases": [
         "XiaomiMiMo/MiMo-V2.6-Flash-MOPD"
@@ -41777,6 +41876,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 573,
       "released": "2026-09-27",
       "aliases": [
         "XiaomiMiMo/MiMo-V2.6-Pro-MOPD"
@@ -41931,6 +42031,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 313,
       "released": "2025-12-16",
       "aliases": [
         "XiaomiMiMo/MiMo-V2-Flash-Base"
@@ -42085,6 +42186,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 18,
       "released": "2026-10-14",
       "aliases": [
         "inclusionAI/Ming-3.0-asr-tiny"
@@ -42243,6 +42345,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 259,
       "released": "2026-09-03",
       "aliases": [
         "inclusionAI/Ming-3.0-audio-flash"
@@ -42397,6 +42500,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 21,
       "released": "2026-09-03",
       "aliases": [
         "inclusionAI/Ming-3.0-audio-tiny"
@@ -42705,6 +42809,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 18,
       "released": "2026-09-22",
       "aliases": [
         "inclusionAI/Ming-3.0-tts-tiny"
@@ -42858,6 +42963,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 53,
       "released": "2026-09-17",
       "aliases": [
         "inclusionAI/Ming-Image-0.1-Design"
@@ -43010,6 +43116,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 65,
       "released": "2026-09-17",
       "aliases": [
         "inclusionAI/Ming-Image-0.1-Design-Layer"
@@ -43477,6 +43584,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 204,
       "released": "2026-11-03",
       "aliases": [
         "MiniMaxAI/MiniMax-H3-Image"
@@ -43632,6 +43740,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 18,
       "released": "2026-11-08",
       "aliases": [
         "MiniMaxAI/MiniMax-H3-Image-PE"
@@ -43786,6 +43895,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 57,
       "released": "2026-08-07",
       "aliases": [
         "MiniMaxAI/MiniMax-Music3"
@@ -43940,6 +44050,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-07-03",
       "aliases": [
         "desert-ant-labs/moderator"
@@ -44399,6 +44510,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 2,
       "released": "2022-07-08",
       "aliases": [
         "facebook/nllb-200-distilled-600M"
@@ -44552,6 +44664,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2022-03-02",
       "aliases": [
         "Helsinki-NLP/opus-mt-en-id"
@@ -44705,6 +44818,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2022-03-02",
       "aliases": [
         "Helsinki-NLP/opus-mt-id-en"
@@ -45346,6 +45460,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-08-23",
       "aliases": [
         "bosonai/Orze-ASR-3Way"
@@ -45497,6 +45612,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 19,
       "released": "2026-09-20",
       "aliases": [
         "Qwen/Qwen-Image-2.1-PE-I2I"
@@ -45649,6 +45765,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 19,
       "released": "2026-09-20",
       "aliases": [
         "Qwen/Qwen-Image-2.1-PE-T2I"
@@ -45803,6 +45920,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 32,
       "released": "2026-10-09",
       "aliases": [
         "Qwen/Qwen-Image-2.1-Turbo"
@@ -46755,6 +46873,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-07-02",
       "aliases": [
         "desert-ant-labs/redact"
@@ -46911,6 +47030,7 @@
       "structured_output": null,
       "context_tokens": 128000,
       "params_b": null,
+      "weights_gb": 1999,
       "released": "2025-10-10",
       "aliases": [
         "inclusionAI/Ring-1T"
@@ -47064,6 +47184,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1015,
       "released": "2026-02-10",
       "aliases": [
         "inclusionAI/Ring-2.5-1T"
@@ -47217,6 +47338,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 33,
       "released": "2025-09-08",
       "aliases": [
         "inclusionAI/Ring-mini-2.0"
@@ -47365,6 +47487,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-07-06",
       "aliases": [
         "desert-ant-labs/schemer"
@@ -47521,6 +47644,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 30,
       "released": "2023-11-29",
       "aliases": [
         "facebook/seamless-m4t-v2-large"
@@ -47673,6 +47797,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-06-23",
       "aliases": [
         "desert-ant-labs/shapes"
@@ -47981,6 +48106,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2023-11-07",
       "aliases": [
         "Xenova/swin2SR-classical-sr-x2-64"
@@ -48129,6 +48255,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-10-14",
       "aliases": [
         "mistralai/Timestral-123M"
@@ -48277,6 +48404,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2026-10-14",
       "aliases": [
         "mistralai/Timestral-209M"
@@ -48425,6 +48553,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-10-14",
       "aliases": [
         "mistralai/Timestral-28M"
@@ -48573,6 +48702,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-10-14",
       "aliases": [
         "mistralai/Timestral-5M"
@@ -48730,6 +48860,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 360,
       "released": "2026-09-21",
       "aliases": [
         "badtheorylabs/Tinfield-1"
@@ -48884,6 +49015,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-08-09",
       "aliases": [
         "desert-ant-labs/title"
@@ -49037,6 +49169,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-07-25",
       "aliases": [
         "desert-ant-labs/tongue"
@@ -49191,6 +49324,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-07-25",
       "aliases": [
         "desert-ant-labs/toxic"
@@ -49343,6 +49477,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2023-10-30",
       "aliases": [
         "Xenova/trocr-small-handwritten"
@@ -49495,6 +49630,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 18,
       "released": "2026-09-29",
       "aliases": [
         "webAI-Official/TwIL-LM2"
@@ -49648,6 +49784,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 22,
       "released": "2026-08-03",
       "aliases": [
         "webAI-Official/TwIL-LM3"
@@ -49800,6 +49937,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 29,
       "released": "2026-09-03",
       "aliases": [
         "webAI-Official/TwIL-LM3-Pro"
@@ -49954,6 +50092,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-05-12",
       "aliases": [
         "desert-ant-labs/uhm"
@@ -50573,6 +50712,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2026-10-15",
       "aliases": [
         "ConwayResearch/Underdog-Bark-3.0"
@@ -50741,6 +50881,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 1,
       "released": "2026-10-15",
       "aliases": [
         "ConwayResearch/Underdog-Bark-3.0-Plus"
@@ -50909,6 +51050,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 2,
       "released": "2026-10-15",
       "aliases": [
         "ConwayResearch/Underdog-Bark-3.0-Pro"
@@ -51387,6 +51529,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 16,
       "released": "2026-10-04",
       "aliases": [
         "ConwayResearch/Underdog-Ternary-1.1"
@@ -51539,6 +51682,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-11-05",
       "aliases": [
         "ConwayResearch/Underdog-Woof"
@@ -51997,6 +52141,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-11-10",
       "aliases": [
         "ConwayResearch/Underdog-Woof-Japanese"
@@ -52149,6 +52294,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 3,
       "released": "2023-05-02",
       "aliases": [
         "Xenova/vit-gpt2-image-captioning"
@@ -52455,6 +52601,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 3,
       "released": "2026-08-19",
       "aliases": [
         "desert-ant-labs/voz"
@@ -52915,6 +53062,7 @@
       "structured_output": null,
       "context_tokens": null,
       "params_b": null,
+      "weights_gb": 0,
       "released": "2026-07-03",
       "aliases": [
         "desert-ant-labs/who"
