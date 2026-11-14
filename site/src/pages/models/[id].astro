@@ -538,16 +538,7 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
               agent for the terminal, desktop, and web. It is the simplest way to run this model, and free models stay
               free through the OpenCode Console provider.
             </p>
-            <div class="chips">
-              <Pill
-                label="access:opencode"
-                href="/models/?filter=access:opencode"
-                tone="tag-access"
-                tooltip="Through OpenCode, the open-source coding agent."
-              />
-              {openCodeFree && <span class="badge badge-free">free</span>}
-            </div>
-            <p class="muted" style="font-size:0.86rem">Model: <code>{openCode.id}</code></p>
+            <p class="muted" style="font-size:0.86rem">Model: <code>{openCode.id}</code>{openCodeFree && " · free"}</p>
             <ol class="steps">
               <li>
                 <a href="https://opencode.ai" target="_blank" rel="noreferrer">Install OpenCode</a> and open the TUI.
@@ -574,14 +565,6 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
           <>
             <h3>Run on Cloudflare Workers AI</h3>
             <p>Cloudflare hosts this model. You need a Cloudflare account and a Worker.</p>
-            <div class="chips">
-              <Pill
-                label="access:cloudflare"
-                href="/models/?filter=access:cloudflare"
-                tone="tag-access"
-                tooltip="Through Cloudflare Workers AI."
-              />
-            </div>
             <p class="muted" style="font-size:0.86rem">Model: <code>{cloudflareModel.id}</code></p>
             <ol class="steps">
               <li>
@@ -607,14 +590,6 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
           <>
             <h3>Use OpenRouter</h3>
             <p>OpenRouter gives you one API key and one endpoint for many hosted models.</p>
-            <div class="chips">
-              <Pill
-                label="access:openrouter"
-                href="/models/?filter=access:openrouter"
-                tone="tag-access"
-                tooltip="Through the OpenRouter API."
-              />
-            </div>
             <p class="muted" style="font-size:0.86rem">Model: <code>{openRouterModel.id}</code></p>
             <ol class="steps">
               <li>
@@ -644,18 +619,7 @@ model: "${openRouterModel.id}"`}</code></pre>
         )}
 
         <h3>Run it locally</h3>
-        {localRuntimes.length > 0 ? (
-          <div class="chips">
-            {localRuntimes.map((runtime) => (
-              <Pill
-                label={`access:${runtime}`}
-                href={tagPath(`access:${runtime}`)}
-                tone="tag-access"
-                tooltip={tagDefinition(`access:${runtime}`)}
-              />
-            ))}
-          </div>
-        ) : (
+        {localRuntimes.length === 0 && (
           <p class="muted">No local runtime is recorded for this model.</p>
         )}
         {usage.length > 0 && (

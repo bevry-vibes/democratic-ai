@@ -3041,7 +3041,7 @@ html {
   gap: 0.5rem;
 }
 
-.tag-explain li {
+.tag-explain > li {
   display: grid;
   grid-template-columns: minmax(10rem, 0.42fr) minmax(0, 1fr);
   gap: 0.75rem;
@@ -3050,17 +3050,17 @@ html {
   border-bottom: 1px solid var(--rule);
 }
 
-.tag-explain li:last-child {
+.tag-explain > li:last-child {
   padding-bottom: 0;
   border-bottom: 0;
 }
 
-.tag-explain .chip {
+.tag-explain > li > .chip {
   justify-self: start;
 }
 
 @media (max-width: 640px) {
-  .tag-explain li {
+  .tag-explain > li {
     grid-template-columns: 1fr;
     gap: 0.2rem;
   }
