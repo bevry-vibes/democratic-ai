@@ -49,38 +49,6 @@ const tagGroups = TAG_NAMESPACE_ORDER.map((namespace) => ({
 const otherTags = model.tags.filter(
   (tag) => !TAG_NAMESPACE_ORDER.some((namespace) => tag.startsWith(`${namespace}:`)),
 )
-const tagCardLabels: Record<string, string> = {
-  task: "Tasks",
-  domain: "Domain",
-  modality: "Modality",
-  access: "Access",
-  language: "Languages",
-  context: "Context",
-  licensing: "Licensing",
-  license: "Licence",
-  family: "Family",
-  status: "Status",
-  relation: "Relation",
-  org: "Organisation",
-  source: "Source",
-}
-const tagCards = TAG_NAMESPACE_ORDER.map((namespace) => ({
-  namespace,
-  label: tagCardLabels[namespace] ?? namespace,
-  tags: model.tags.filter((tag) => tag.startsWith(`${namespace}:`)),
-})).filter((card) => card.tags.length > 0)
-const accessOrder = TAG_NAMESPACE_ORDER.indexOf("access")
-const contextOrder = TAG_NAMESPACE_ORDER.indexOf("context")
-const tagCardsBeforeAccess = tagCards.filter((card) => TAG_NAMESPACE_ORDER.indexOf(card.namespace) < accessOrder)
-const tagCardsAfterAccessBeforeTerms = tagCards.filter(
-  (card) => TAG_NAMESPACE_ORDER.indexOf(card.namespace) > accessOrder && TAG_NAMESPACE_ORDER.indexOf(card.namespace) < contextOrder,
-)
-const tagCardsAfterTerms = tagCards.filter(
-  (card) =>
-    TAG_NAMESPACE_ORDER.indexOf(card.namespace) > contextOrder &&
-    card.namespace !== "license" &&
-    card.namespace !== "licensing",
-)
 const accessTags = model.tags.filter((tag) => tag.startsWith("access:"))
 const structuredOutputDefinition = "Return typed or schema-constrained output."
 
@@ -255,6 +223,17 @@ const formatDate = (value: string | null | undefined) =>
       })
     : null
 
+const capabilityCardRows: PillRowData[] = [
+  ...model.tags.filter((tag) => tag.startsWith("task:")).map(tagRow),
+  ...model.tags.filter((tag) => tag.startsWith("domain:")).map(tagRow),
+  ...model.tags.filter((tag) => tag.startsWith("modality:")).map(tagRow),
+  ...model.tags.filter((tag) => tag.startsWith("language:")).map(tagRow),
+  ...model.tags.filter((tag) => tag.startsWith("family:")).map(tagRow),
+  ...model.tags.filter((tag) => tag.startsWith("status:")).map(tagRow),
+  ...model.tags.filter((tag) => tag.startsWith("relation:")).map(tagRow),
+  ...capabilityRows,
+]
+
 const releaseRows: PillRowData[] = [
   {
     label: `org:${model.organization}`,
@@ -426,14 +405,12 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
 
   <section class="wrap detail-grid">
     <div>
-      {tagCardsBeforeAccess.map((card) => (
-        <div class="panel">
-          <h2>{card.label}</h2>
-          <ul class="tag-explain">
-            {card.tags.map((tag) => <PillRow {...tagRow(tag)} />)}
-          </ul>
-        </div>
-      ))}
+      <div class="panel" id="capabilities">
+        <h2>Capabilities</h2>
+        <ul class="tag-explain">
+          {capabilityCardRows.map((row) => <PillRow {...row} />)}
+        </ul>
+      </div>
 
       <div class="panel" id="access">
         <h2>Access</h2>
@@ -441,15 +418,6 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
           {accessRows.map((row) => <PillRow {...row} />)}
         </ul>
       </div>
-
-      {tagCardsAfterAccessBeforeTerms.map((card) => (
-        <div class="panel">
-          <h2>{card.label}</h2>
-          <ul class="tag-explain">
-            {card.tags.map((tag) => <PillRow {...tagRow(tag)} />)}
-          </ul>
-        </div>
-      ))}
 
       <div class="panel" id="terms">
         <h2>Terms</h2>
@@ -461,27 +429,54 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
         </p>
       </div>
 
-      {tagCardsAfterTerms.map((card) => (
-        <div class="panel">
-          <h2>{card.label}</h2>
-          <ul class="tag-explain">
-            {card.tags.map((tag) => <PillRow {...tagRow(tag)} />)}
-          </ul>
-        </div>
-      ))}
-
-      <div class="panel" id="capabilities">
-        <h2>Capabilities</h2>
-        <ul class="tag-explain">
-          {capabilityRows.map((row) => <PillRow {...row} />)}
-        </ul>
-      </div>
-
       <div class="panel" id="release">
         <h2>Release</h2>
         <ul class="tag-explain">
           {releaseRows.map((row) => <PillRow {...row} />)}
         </ul>
+        {model.releases.length > 0 && (
+          <div id="releases" style="margin-top:1.2rem">
+            <h3>Release history</h3>
+            <p class="muted" style="font-size:0.9rem">
+              These earlier names and updates are the same model lineage. They fold into this page.
+            </p>
+            <div class="table-wrap">
+              <table class="build-table">
+                <thead>
+                  <tr><th>Date</th><th>Release</th><th>Relation</th><th>Note</th><th></th></tr>
+                </thead>
+                <tbody>
+                  {model.releases.map((release) => (
+                    <tr>
+                      <td>{release.released ?? "—"}</td>
+                      <td>{release.name}</td>
+                      <td>{release.relation}</td>
+                      <td>{release.note}</td>
+                      <td><a href={`https://huggingface.co/${release.hugging_face}`} target="_blank" rel="noreferrer">Hugging Face</a></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div class="panel" id="lineage">
+        <h2>Lineage</h2>
+        {model.lineage.length > 0 ? (
+          <div class="lineage">
+            {model.lineage.map((entry) => (
+              <>
+                <span class="lineage-relation">{entry.relation} of</span>
+                <span class="arrow">←</span>
+                <a href={`https://huggingface.co/${entry.base}`} target="_blank" rel="noreferrer">{entry.base}</a>
+              </>
+            ))}
+          </div>
+        ) : (
+          <p class="muted">No base model declared. This is a root release, or the card does not name a base.</p>
+        )}
       </div>
 
       <div class="panel" id="builds">
@@ -512,50 +507,6 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
           </>
         ) : (
           <p class="muted">No builds in this pull. A build is a packaging, not a separate model.</p>
-        )}
-      </div>
-
-      {model.releases.length > 0 && (
-        <div class="panel" id="releases">
-          <h2>Releases</h2>
-          <p class="muted" style="font-size:0.9rem">
-            These earlier names and updates are the same model lineage. They fold into this page.
-          </p>
-          <div class="table-wrap">
-            <table class="build-table">
-              <thead>
-                <tr><th>Date</th><th>Release</th><th>Relation</th><th>Note</th><th></th></tr>
-              </thead>
-              <tbody>
-                {model.releases.map((release) => (
-                  <tr>
-                    <td>{release.released ?? "—"}</td>
-                    <td>{release.name}</td>
-                    <td>{release.relation}</td>
-                    <td>{release.note}</td>
-                    <td><a href={`https://huggingface.co/${release.hugging_face}`} target="_blank" rel="noreferrer">Hugging Face</a></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
-      <div class="panel">
-        <h2>Lineage</h2>
-        {model.lineage.length > 0 ? (
-          <div class="lineage">
-            {model.lineage.map((entry) => (
-              <>
-                <span class="lineage-relation">{entry.relation} of</span>
-                <span class="arrow">←</span>
-                <a href={`https://huggingface.co/${entry.base}`} target="_blank" rel="noreferrer">{entry.base}</a>
-              </>
-            ))}
-          </div>
-        ) : (
-          <p class="muted">No base model declared. This is a root release, or the card does not name a base.</p>
         )}
       </div>
 
