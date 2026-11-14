@@ -194,8 +194,85 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
         </dl>
       </div>
 
+      <div class="panel" id="builds">
+        <h2>Builds</h2>
+        {model.builds.length > 0 ? (
+          <>
+            <p class="muted" style="font-size:0.9rem">
+              A build is packaging, not a new model. It inherits the base task and terms.
+            </p>
+            <div class="table-wrap">
+              <table class="build-table">
+                <thead>
+                  <tr><th>Build</th><th>Runtime</th><th>Quantization</th><th>Relation</th><th></th></tr>
+                </thead>
+                <tbody>
+                  {model.builds.map((build) => (
+                    <tr>
+                      <td>{build.name}</td>
+                      <td>{build.runtime.length > 0 ? build.runtime.join(", ") : "—"}</td>
+                      <td>{build.quantization ?? "—"}</td>
+                      <td>{build.relation ?? "build"}</td>
+                      <td><a href={build.url} target="_blank" rel="noreferrer">Hugging Face</a></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
+        ) : (
+          <p class="muted">No builds in this pull. A build is a packaging, not a separate model.</p>
+        )}
+      </div>
+
+      {model.releases.length > 0 && (
+        <div class="panel" id="releases">
+          <h2>Releases</h2>
+          <p class="muted" style="font-size:0.9rem">
+            These earlier names and updates are the same model lineage. They fold into this page.
+          </p>
+          <div class="table-wrap">
+            <table class="build-table">
+              <thead>
+                <tr><th>Date</th><th>Release</th><th>Relation</th><th>Note</th><th></th></tr>
+              </thead>
+              <tbody>
+                {model.releases.map((release) => (
+                  <tr>
+                    <td>{release.released ?? "—"}</td>
+                    <td>{release.name}</td>
+                    <td>{release.relation}</td>
+                    <td>{release.note}</td>
+                    <td><a href={`https://huggingface.co/${release.hugging_face}`} target="_blank" rel="noreferrer">Hugging Face</a></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      <div class="panel">
+        <h2>Lineage</h2>
+        {model.lineage.length > 0 ? (
+          <div class="lineage">
+            {model.lineage.map((entry) => (
+              <>
+                <a class="chip" href={tagPath(`relation:${entry.relation}`)} title={tagDefinition(`relation:${entry.relation}`)}>
+                  {entry.relation}
+                </a>
+                <span class="arrow">←</span>
+                <a href={`https://huggingface.co/${entry.base}`} target="_blank" rel="noreferrer">{entry.base}</a>
+              </>
+            ))}
+          </div>
+        ) : (
+          <p class="muted">No base model declared. This is a root release, or the card does not name a base.</p>
+        )}
+      </div>
+
       <div class="panel" id="get-started">
-        <h2>How to get started</h2>
+        <h2>Getting started</h2>
 
         <h3>Recommended harness: OpenCode</h3>
         {openCode ? (
@@ -281,82 +358,6 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
         </a>
       </div>
 
-      <div class="panel" id="builds">
-        <h2>Builds</h2>
-        {model.builds.length > 0 ? (
-          <>
-            <p class="muted" style="font-size:0.9rem">
-              A build is packaging, not a new model. It inherits the base task and terms.
-            </p>
-            <div class="table-wrap">
-              <table class="build-table">
-                <thead>
-                  <tr><th>Build</th><th>Runtime</th><th>Quantization</th><th>Relation</th><th></th></tr>
-                </thead>
-                <tbody>
-                  {model.builds.map((build) => (
-                    <tr>
-                      <td>{build.name}</td>
-                      <td>{build.runtime.length > 0 ? build.runtime.join(", ") : "—"}</td>
-                      <td>{build.quantization ?? "—"}</td>
-                      <td>{build.relation ?? "build"}</td>
-                      <td><a href={build.url} target="_blank" rel="noreferrer">Hugging Face</a></td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </>
-        ) : (
-          <p class="muted">No builds in this pull. A build is a packaging, not a separate model.</p>
-        )}
-      </div>
-
-      {model.releases.length > 0 && (
-        <div class="panel" id="releases">
-          <h2>Releases</h2>
-          <p class="muted" style="font-size:0.9rem">
-            These earlier names and updates are the same model lineage. They fold into this page.
-          </p>
-          <div class="table-wrap">
-            <table class="build-table">
-              <thead>
-                <tr><th>Date</th><th>Release</th><th>Relation</th><th>Note</th><th></th></tr>
-              </thead>
-              <tbody>
-                {model.releases.map((release) => (
-                  <tr>
-                    <td>{release.released ?? "—"}</td>
-                    <td>{release.name}</td>
-                    <td>{release.relation}</td>
-                    <td>{release.note}</td>
-                    <td><a href={`https://huggingface.co/${release.hugging_face}`} target="_blank" rel="noreferrer">Hugging Face</a></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      )}
-
-      <div class="panel">
-        <h2>Lineage</h2>
-        {model.lineage.length > 0 ? (
-          <div class="lineage">
-            {model.lineage.map((entry) => (
-              <>
-                <a class="chip" href={tagPath(`relation:${entry.relation}`)} title={tagDefinition(`relation:${entry.relation}`)}>
-                  {entry.relation}
-                </a>
-                <span class="arrow">←</span>
-                <a href={`https://huggingface.co/${entry.base}`} target="_blank" rel="noreferrer">{entry.base}</a>
-              </>
-            ))}
-          </div>
-        ) : (
-          <p class="muted">No base model declared. This is a root release, or the card does not name a base.</p>
-        )}
-      </div>
     </div>
 
     <aside id="scorecard">
@@ -551,14 +552,6 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
         </dl>
       </div>
 
-      <div class="panel">
-        <h2>Compare</h2>
-        <p class="muted" style="font-size:0.9rem">
-          Add other models to compare this release against. The comparison opens on its own page.
-        </p>
-        <ComparePicker currentId={model.id} />
-      </div>
-
       <div class="panel" id="terms">
         <h2>Terms</h2>
         <dl class="definition">
@@ -619,12 +612,11 @@ const memoryHigh = model.footprint.params_b == null ? null : Math.ceil(model.foo
       </div>
 
       <div class="panel">
-        <h2>Sources</h2>
-        <ul class="source-list">
-          {model.sources.map((source) => (
-            <li><a href={source.url} target="_blank" rel="noreferrer">{source.kind}</a><span class="weight">{source.retrieved_at}</span></li>
-          ))}
-        </ul>
+        <h2>Compare</h2>
+        <p class="muted" style="font-size:0.9rem">
+          Add other models to compare this release against. The comparison opens on its own page.
+        </p>
+        <ComparePicker currentId={model.id} />
       </div>
     </aside>
   </section>
