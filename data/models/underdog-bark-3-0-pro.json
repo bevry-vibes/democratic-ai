@@ -109,10 +109,47 @@
     "note": "Self-reported. The card cites the leaderboard's published comparison as of 9 October 2026."
   },
   "scorecard": {
+    "overall": {
+      "score": 64.4,
+      "coverage": 3,
+      "weights": {
+        "openness": 30,
+        "performance": 40,
+        "research": 15,
+        "syndication": 15
+      },
+      "note": "Weighted mean of the available scorecard axes. Missing axes are excluded, not treated as zero. Coverage is shown so a sparse score is not mistaken for a complete one."
+    },
     "openness_morality": {
       "score": 55,
       "tier": "shared",
-      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed."
+      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed.",
+      "components": [
+        {
+          "label": "Weights",
+          "value": "open-weight",
+          "points": 50,
+          "max": 50
+        },
+        {
+          "label": "Training data",
+          "value": "unknown",
+          "points": 0,
+          "max": 25
+        },
+        {
+          "label": "Training code",
+          "value": "unknown",
+          "points": 0,
+          "max": 15
+        },
+        {
+          "label": "Licence",
+          "value": "cc-by-nc-4.0",
+          "points": 5,
+          "max": 10
+        }
+      ]
     },
     "performance": {
       "score": 95.7,
@@ -132,7 +169,8 @@
       "benchmarks": [],
       "source": null,
       "as_of": null,
-      "note": "Not measured. No current research benchmark is recorded."
+      "note": "Not measured. No current research benchmark is recorded.",
+      "citation": "not measured"
     },
     "syndication": {
       "score": 0,

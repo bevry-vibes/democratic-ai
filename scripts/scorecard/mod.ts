@@ -92,7 +92,13 @@ interface ModelIndex {
   models: CompactModel[]
 }
 
-function opennessScore(record: ModelRecord, rubric: ScorecardFile["rubric"]["openness_morality"]): number {
+function opennessScore(
+  record: ModelRecord,
+  rubric: ScorecardFile["rubric"]["openness_morality"],
+): {
+  score: number
+  components: Array<{ label: string; value: string; points: number; max: number }>
+} {
   const weights = record.openness.weights === "open-weight" ? rubric.weights_open : 0
   const data =
     record.openness.training_data === "open"
@@ -112,7 +118,15 @@ function opennessScore(record: ModelRecord, rubric: ScorecardFile["rubric"]["ope
       : record.license.class === "use-restricted" || record.license.class === "non-commercial"
         ? rubric.license_conditional
         : 0
-  return weights + data + code + license
+  return {
+    score: weights + data + code + license,
+    components: [
+      { label: "Weights", value: record.openness.weights, points: weights, max: rubric.weights_open },
+      { label: "Training data", value: record.openness.training_data, points: data, max: rubric.training_data_open },
+      { label: "Training code", value: record.openness.training_code, points: code, max: rubric.training_code_open },
+      { label: "Licence", value: record.license.id, points: license, max: rubric.license_permissive },
+    ],
+  }
 }
 
 function performanceFromTask(task: TaskPerformance | null | undefined): number | null {
@@ -134,7 +148,13 @@ async function main(): Promise<void> {
   let opennessCount = 0
   let performanceCount = 0
   let researchCount = 0
-  const applied: Array<{ id: string; openness: number; performance: number | null; research: number | null }> = []
+  const applied: Array<{
+    id: string
+    openness: number
+    performance: number | null
+    research: number | null
+    overall: number | null
+  }> = []
 
   for (const compact of index.models) {
     const record = await readJSON<ModelRecord>(`data/models/${compact.id}.json`)
@@ -142,7 +162,8 @@ async function main(): Promise<void> {
     const taskScore = performanceFromTask(record.task_performance)
     const performance = taskScore ?? benchmark?.performance ?? null
     const research = benchmark?.research ?? null
-    const openness = opennessScore(record, rubric)
+    const opennessResult = opennessScore(record, rubric)
+    const openness = opennessResult.score
 
     const performanceNote =
       taskScore != null && record.task_performance
@@ -153,11 +174,33 @@ async function main(): Promise<void> {
     const performanceSource = taskScore != null ? record.task_performance?.source : benchmark?.source ?? null
     const performanceAsOf = taskScore != null ? record.task_performance?.as_of : benchmark?.as_of ?? null
 
+    const axes = [
+      { key: "openness", score: openness, weight: 30 },
+      { key: "performance", score: performance, weight: 40 },
+      { key: "research", score: research, weight: 15 },
+      { key: "syndication", score: record.syndication.score * 10, weight: 15 },
+    ]
+    const available = axes.filter((axis) => axis.score != null)
+    const weightTotal = available.reduce((sum, axis) => sum + axis.weight, 0)
+    const overallScore =
+      weightTotal > 0
+        ? Math.round((available.reduce((sum, axis) => sum + axis.score! * axis.weight, 0) / weightTotal) * 10) / 10
+        : null
+    const overall = {
+      score: overallScore,
+      coverage: available.length,
+      weights: { openness: 30, performance: 40, research: 15, syndication: 15 },
+      note:
+        "Weighted mean of the available scorecard axes. Missing axes are excluded, not treated as zero. Coverage is shown so a sparse score is not mistaken for a complete one.",
+    }
+
     const scorecard = {
+      overall,
       openness_morality: {
         score: openness,
         tier: record.openness.tier,
         note: rubric.note,
+        components: opennessResult.components,
       },
       performance: {
         score: performance,
@@ -181,6 +224,7 @@ async function main(): Promise<void> {
           research != null
             ? "Mean of current research benchmarks. Citation accuracy is not measured."
             : "Not measured. No current research benchmark is recorded.",
+        citation: research != null ? "not measured" : "not measured",
       },
       syndication: {
         score: record.syndication.score,
@@ -201,7 +245,7 @@ async function main(): Promise<void> {
     opennessCount++
     if (performance != null) performanceCount++
     if (research != null) researchCount++
-    applied.push({ id: record.id, openness, performance, research })
+    applied.push({ id: record.id, openness, performance, research, overall: overallScore })
   }
 
   await writeReplace(
@@ -231,6 +275,11 @@ async function main(): Promise<void> {
     openness_scored: opennessCount,
     performance_scored: performanceCount,
     research_scored: researchCount,
+    average_overall:
+      Math.round(
+        (applied.reduce((sum, entry) => sum + (entry.overall ?? 0), 0) / Math.max(1, applied.filter((entry) => entry.overall != null).length)) * 10,
+      ) / 10,
+    overall_scored: applied.filter((entry) => entry.overall != null).length,
     note: "Current values only. The scorecard computes openness from release terms and takes performance and research from current task benchmarks. Missing axes stay missing; they are not zero.",
     applied,
   }
