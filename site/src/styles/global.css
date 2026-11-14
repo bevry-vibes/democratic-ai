@@ -2040,3 +2040,38 @@ aside > .scorecard-overall {
   border-color: #d4bdcc;
   color: #6b3f5a;
 }
+
+/* Count segments are darker than labels so white numerals stay readable. */
+.tag-task { --pill-count: #46563a; }
+.tag-domain { --pill-count: #3a5565; }
+.tag-modality { --pill-count: #765610; }
+.tag-runtime { --pill-count: #773a27; }
+.tag-language { --pill-count: #305b55; }
+.tag-context { --pill-count: #553d4c; }
+.tag-license { --pill-count: #74394a; }
+.tag-family { --pill-count: #504b45; }
+.tag-status { --pill-count: #50542b; }
+.tag-relation { --pill-count: #593e2c; }
+.tag-org { --pill-count: #3f454d; }
+.tag-source { --pill-count: #304660; }
+.tag-other { --pill-count: #625c53; }
+
+.score-openness { --pill-count: #34468a; }
+.score-performance { --pill-count: #752037; }
+.score-research { --pill-count: #2a425d; }
+.score-syndication { --pill-count: #563573; }
+.score-overall { --pill-count: #34302b; }
+.score-coverage { --pill-count: #505863; }
+
+.meta-builds { --pill-count: #2c5a70; }
+.meta-context { --pill-count: #236473; }
+.meta-released { --pill-count: #5e594b; }
+
+.capability,
+.capability-unknown { --pill-count: #5b554d; }
+.capability-yes { --pill-count: #4c6a42; }
+.capability-no { --pill-count: #8a3e30; }
+
+.count-pill-count {
+  color: #fff;
+}
