@@ -172,7 +172,7 @@ A model page is created only when:
 
 A build attaches to the base model as a `builds` entry with its runtime, quantization, size, and link. A probe (`status:probe`) is not a product release and never gets a page.
 
-The first pull shows why this matters: 315 of 664 Hugging Face items are builds and 29 are probes. They are not 344 models. They are packaging around a smaller set of roots.
+The first pull shows why this matters: 316 of 664 Hugging Face items are builds and 29 are probes. They are not 345 models. They are packaging around a smaller set of roots.
 
 No card, no announcement, and no benchmark means no page. The catalogue is not a mirror of the Hugging Face firehose.
 
@@ -197,6 +197,36 @@ The absence of a report is not a gap in the index. It means no one has measured 
 ### Discoveries
 
 A discovery is a dated change in the field: a release, a paper, a licence change, a benchmark result, or a policy decision. A discovery links to the entities it affects. The journal is the chronological view; a discovery page is the topical view.
+
+## Syndication and the web of trust
+
+Reciprocity is what a release gives back. Syndication is whether independent parties picked it up. They are different.
+
+The catalogue records a syndication score from independent sources:
+
+| Source | Kind | Weight |
+| --- | --- | --- |
+| models.dev | registry | 3 |
+| agent-detect | registry | 3 |
+| OpenRouter | aggregator | 2 |
+| LLM Stats | evaluation | 2 |
+| Artificial Analysis | evaluation | 2 |
+| a research paper or code release | research | 1 |
+| the model's own Hugging Face page | host | 0 |
+
+The score is the sum, capped at 10. Bands: `self-only`, `weak`, `emerging`, `moderate`, `strong`, `very-strong`.
+
+Rules:
+
+- The model's own host never counts as independent.
+- A build or probe inherits the base model's score. It is not scored separately.
+- The score is not a quality score, a reciprocity tier, or a measure of openness.
+- Every point links to the listing. A score without sources is not recorded.
+- A missing source is not a negative claim. It means the source did not list the model.
+
+The first pass scored 318 root and notable models. It skipped 346 builds, probes, and documentation items. The average score is 1.44. 29 models are `very-strong`, 10 are `strong`, and 244 are `self-only`.
+
+The inclusionAI real models show why the score matters. Duo has an arXiv paper and scores 1. Ming-3.0-audio-flash, Realtime-Venus, and Ming-UniAudio have cards but little independent pickup; they score 0–1. They are real models, but they are not yet part of a wider web of trust.
 
 ## Evaluation doctrine
 
@@ -233,6 +263,7 @@ A model record carries these groups:
 - footprint: `params_b`, `quantized_sizes`, `memory_gb`, `runtimes`;
 - terms: `license`, `openness`, `conduct`, `lineage`;
 - access: `hugging_face`, `github`, `paper`, `homepage`, `demo`, `api`, `gated`;
+- syndication: `score`, `band`, `sources` — independent listings, never the model's own host;
 - evidence: `sources`, `verified_at`, `notes`.
 
 ### Data principles

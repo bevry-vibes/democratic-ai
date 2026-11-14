@@ -62,3 +62,11 @@ The pull assigns only source-native tags. Task, runtime, and context tags are as
 | `tags.clef.report.json` | Clef calls, accepted tasks, remaining review models, token use, and cost. |
 
 Clef is a confirmation gate, not a primary labeller. Only models the rules mark `needs_review` reach it, and only answers at or above 0.8 are accepted. Every response is cached.
+
+## Links and syndication
+
+`data/links.json` resolves models.dev and agent-detect entries. It is derived from the models.dev API and the agent-detect index; the upstream responses are cached under `.cache/links/`, not mirrored here.
+
+`data/syndication.json` scores independent listings. It uses models.dev, agent-detect, OpenRouter, LLM Stats, and Artificial Analysis, plus a research paper or code release. The model's own Hugging Face page has weight 0. Builds, probes, and documentation are skipped; a build inherits the base model's score.
+
+The OpenRouter response is cached under `.cache/syndication/`. The LLM Stats and Artificial Analysis model pages come from the sitemap snapshots already stored from the pull.

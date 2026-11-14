@@ -435,7 +435,7 @@ The data model is a set of JSON records with a JSON Schema per entity kind. The 
 }
 ```
 
-External links: `scripts/links/` joins the models.dev API and the agent-detect index into `data/links.json`. The model record carries `access.models_dev` and `access.agent_detect` when an entry exists. A build inherits its base model's links; it does not get a separate page.
+External links: `scripts/links/` joins the models.dev API and the agent-detect index into `data/links.json`. The model record carries `access.models_dev` and `access.agent_detect` when an entry exists. A build inherits its base model's links; it does not get a separate page. The model record also carries `syndication` from `data/syndication.json`: score, band, and source URLs. It is not a quality score.
 
 A source record keeps the evidence addressable:
 
@@ -503,6 +503,7 @@ data/
   tags.json                   tag vocabulary and definitions
   tag-rules.json              rules for the tagging pass
   links.json                  generated models.dev and agent-detect links
+  syndication.json            generated independent-listing scores
   feeds.json                  verified feeds and APIs (discovery sources)
   fetch-targets.json          what the fetcher pulls
   raw/                        source snapshots, never overwritten
@@ -524,6 +525,7 @@ scripts/
   fetch/                      one module per source (implemented)
   tag/                        rules-first tagging plus the Clef gate (implemented)
   links/                      models.dev and agent-detect link resolver (implemented)
+  syndication/                independent-listing score (implemented)
   build.ts                    validate, compute tiers, generate
   check.ts                    build in check mode
   propose.ts                  diff snapshots into proposals
@@ -606,7 +608,7 @@ Routes:
 | `/find/` | Filter by tags and constraints; show verdicts when an overlay report exists. |
 | `/reports/` and `/reports/<id>/` | Optional overlay reports: the use case, evidence, recommendation, and caveats. |
 | `/models/` | The full catalogue with filters. |
-| `/models/<id>/` | The fact sheet: tier, licence, openness, lineage, access, capabilities, tags, reports, sources, and links to models.dev and agent-detect when they exist. |
+| `/models/<id>/` | The fact sheet: tier, licence, openness, lineage, access, capabilities, tags, reports, syndication score with source chips, and links to models.dev and agent-detect when they exist. |
 | `/organizations/` and `/organizations/<id>/` | The labs and foundations, with their entities and conduct. |
 | `/tags/` and `/tags/<namespace>/<value>/` | Browse by tag. |
 | `/journal/` | The chronological record. |
@@ -671,11 +673,12 @@ The API is a set of static JSON files. The contract is versioned by path.
 | Path | Contents |
 | --- | --- |
 | `/api/v1/index.json` | A compact list of every entity: id, name, kind, tier, tags, licence, updated date. |
-| `/api/v1/models/<id>.json` | The full model record, including capabilities, footprint, tags, and external model links. |
+| `/api/v1/models/<id>.json` | The full model record, including capabilities, footprint, tags, syndication, and external model links. |
 | `/api/v1/organizations/<id>.json` | The full organization record. |
 | `/api/v1/datasets/<id>.json` | The full dataset record. |
 | `/api/v1/tools/<id>.json` | The full tool record. |
 | `/api/v1/tags.json` | The tag vocabulary, definitions, statuses, and counts. |
+| `/api/v1/syndication.json` | The independent-listing score, band, and source URLs for each root or notable model. |
 | `/api/v1/reports.json` | The optional overlay index: id, name, constraints, primary, and updated date. Empty until a report exists. |
 | `/api/v1/reports/<id>.json` | One full report: constraints, evaluations, recommendation, caveats, and sources. |
 | `/api/v1/journal.json` | The journal index. |
@@ -770,12 +773,14 @@ First results on the 2026-11-14 pull:
 | Metric | Value |
 | --- | --- |
 | Hugging Face model items | 664 |
-| Builds (`status:build`) | 315 |
+| Builds (`status:build`) | 316 |
 | Probes (`status:probe`) | 29 |
-| Models with a task tag from the rules | 598 |
-| Models sent to Clef after build and probe exclusion | 25 |
+| Documentation repositories (`status:documentation`) | 1 |
+| Models with a task tag | 610 |
+| Models sent to Clef after build and probe exclusion | 12 |
 | Tasks accepted by Clef at 0.8 | 12 models |
-| Real models still in review | 13 |
+| Models still in review | 0 |
+| Manual review overrides | 13 |
 | Clef input cost so far | about USD 0.08 |
 
 A model in review keeps its licence, runtime, family, and org tags. It has no task tag, so it reads `unmeasured` for a task. It is not guessed.
@@ -785,6 +790,40 @@ The 13 remaining models are real releases, not builds: XiaomiMiMo MiMo-Audio (3)
 The link resolver (`scripts/links/`) joined 149 models on the first run: 136 have a models.dev entry and 79 have an agent-detect entry. It strips build suffixes, so a GGUF, MLX, or CoreML build inherits its base model's links. Every model page shows the links when they exist.
 
 The build/probe distinction answers the “why build these?” question. 344 of 664 items are packaging or probes. They are not separate models, and they do not get separate pages. They attach to their base model as build entries. The catalogue records roots and notable derivatives, not the Hugging Face firehose.
+
+### Syndication score (implemented)
+
+`scripts/syndication/` scores each root or notable model from independent listings:
+
+| Source | Kind | Weight |
+| --- | --- | --- |
+| models.dev | registry | 3 |
+| agent-detect | registry | 3 |
+| OpenRouter | aggregator | 2 |
+| LLM Stats | evaluation | 2 |
+| Artificial Analysis | evaluation | 2 |
+| a research paper or code release | research | 1 |
+| the model's own Hugging Face page | host | 0 |
+
+The score is the sum, capped at 10. Bands: `self-only`, `weak`, `emerging`, `moderate`, `strong`, `very-strong`. Every point carries a source URL. The model's own host never counts as independent. Builds, probes, and documentation are skipped; a build inherits the base model's score.
+
+First results on the 2026-11-14 pull:
+
+| Metric | Value |
+| --- | --- |
+| Root and notable models scored | 318 |
+| Builds, probes, and documentation skipped | 346 |
+| Average score | 1.44 |
+| Very strong | 29 |
+| Strong | 10 |
+| Moderate | 8 |
+| Emerging | 12 |
+| Weak | 15 |
+| Self-only | 244 |
+
+The inclusionAI real models show the value of the score: Duo scores 1 from its arXiv paper; Realtime-Venus and FastDialogueSidon score 1 from their papers; Ming-3.0-audio-flash, Ming-UniAudio, and XiaomiMiMo MiMo-Audio score 0. They are real models, but independent registries and aggregators have not picked them up yet.
+
+The score is syndication, not quality, reciprocity, or openness. A closed model can score 10. A reciprocal model can score 0.
 
 ### 11. CI/CD
 
@@ -946,6 +985,7 @@ Acceptance: the repository is initialised, the skills are referenced, and the ow
 - `data/tags.json` with the namespace vocabulary and definitions.
 - `data/tag-rules.json` with the pipeline, library, family, keyword, title, runtime, and sitemap rules.
 - `scripts/tag/` (implemented): a rules-first pass plus a Clef confirmation gate for review models. Neither writes a model record.
+- `scripts/syndication/` (implemented): an independent-listing score with source URLs. It skips builds, probes, and documentation.
 - `schemas/` for model, organization, source, discovery, tag, and report.
 - The first 30 model records from the pull, not from memory.
 - `scripts/build.ts` and `scripts/check.ts`.
@@ -953,7 +993,7 @@ Acceptance: the repository is initialised, the skills are referenced, and the ow
 - Generated README blocks and `data/dist/`.
 - `CONTRIBUTING.md` with the evidence runbook and the tagging guide.
 
-Acceptance: `deno task fetch` writes a manifest and keeps every raw response; `deno task tag` and `deno task tag:clef` write proposals with evidence; no Clef task is accepted below 0.8; a model in review keeps its other tags and has no guessed task; the index builds without any report; every task tag has a definition; `deno task check` passes; the tier is recomputed and equal to the stored tier.
+Acceptance: `deno task fetch` writes a manifest and keeps every raw response; `deno task tag` and `deno task tag:clef` write proposals with evidence; no Clef task is accepted below 0.8; a model in review keeps its other tags and has no guessed task; `deno task syndication` gives every score a source URL and skips builds/probes; the index builds without any report; every task tag has a definition; `deno task check` passes; the tier is recomputed and equal to the stored tier.
 
 ### Phase 2 — site and tag index
 

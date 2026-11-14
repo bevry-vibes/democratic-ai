@@ -37,7 +37,13 @@ When someone has measured a job, an optional report adds a verdict. The report i
 
 The first release adds a **Find** view that filters tags and constraints. It shows a verdict only when a report exists.
 
-## The reciprocity tiers
+## Syndication
+
+A model page also shows a **syndication score**. It counts the independent registries and aggregators that list the model: models.dev, agent-detect, OpenRouter, LLM Stats, and Artificial Analysis, plus a research paper or code release.
+
+The model's own Hugging Face page does not count. The score is not a quality score. It shows whether the model has been picked up beyond its own claims.
+
+A build or probe inherits the base model's score. It is not scored as a separate model.
 
 A model can release its weights and still keep its training data and recipe secret. Weights alone are not reciprocity. The catalogue records what each project gives back, and what you may do with the gift.
 
