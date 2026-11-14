@@ -82,6 +82,8 @@ The context distribution is a useful signal: 11 entities are on-device, 7 are ag
 
 32 of the 46 entities have a verified Hugging Face identity. The rest are harnesses, evaluators, people, or labs without a public Hugging Face organisation.
 
+The raw X responses are committed under `data/raw/x/lists/2084302656580034676/` so the list never costs a second read. The snapshot is the evidence; `data/watchlist.json` is the curated view.
+
 ### The seed landscape
 
 These facts were checked against the Hugging Face API on 2026-11-14. They are seeds for the first import, not yet accepted records. The tier is the rule output for the evidence available today.
@@ -141,7 +143,8 @@ The import shape is a one-way conversion, not a shared database:
 
 Fetch rules:
 
-- Cache every response under `.cache/` with an ETag or `fetched_at`. The build never fetches.
+- Cache every response with an ETag or `fetched_at`. The build never fetches.
+- A billable response is cached under `data/raw/<source>/` and committed before a parser reads it. The X API is the first billable source. A repeated X read costs money, so a refresh needs an explicit request. The snapshot is immutable; a refresh adds a new dated file.
 - Snapshot only what the record needs: the licence, the base model, the dataset claim, the release date, and a short excerpt. Store a SHA-256 of the fetched body.
 - Treat a gated 401 as `gated`, not `closed`.
 - Treat a missing dataset declaration as `unknown`, not `closed`.

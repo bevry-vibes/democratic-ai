@@ -190,6 +190,19 @@ The cost is hand-editing. A `deno task new` scaffolder and a schema-aware editor
 9. **Re-check on events and on age.** A release, a licence change, or a new paper triggers a review. Every record is reviewed at least every 90 days.
 10. **Journal every tier change.** A move between tiers is a public event. Record the old value, the new value, and the evidence.
 
+### Fetching economics
+
+- Every billable response is cached under `data/raw/<source>/` before it is used.
+- A snapshot is immutable. A refresh adds a new dated file. It never overwrites an older snapshot.
+- The cache is committed when it contains no secret. The catalogue must rebuild offline.
+- A derived record cites the snapshot file. The snapshot is the evidence.
+- CI never fetches a billable source. A missing cache is an error, not a silent fetch.
+- The X API is the first billable source. Every read costs credits, so a refresh needs an explicit request and a documented token.
+- Free sources use the same cache shape. The rule is uniform, so a source can become billable without a design change.
+- The cache filename carries the endpoint and the capture date. A reader can see what was fetched and when without opening the file.
+
+This rule exists because a catalogue that can be rebuilt only by paying again is not a commons artefact. The snapshot is part of the public record.
+
 ## Single source of truth
 
 The repository has one source for facts and one source for narrative.
