@@ -98,20 +98,20 @@
       "score": 40,
       "coverage": 2,
       "weights": {
-        "openness": 30,
+        "syndication": 15,
         "performance": 40,
-        "research": 15,
-        "syndication": 15
+        "openness": 30,
+        "research": 15
       },
       "components": [
         {
-          "key": "openness",
-          "label": "Openness/Morality",
-          "score": 55,
-          "weight": 30,
+          "key": "syndication",
+          "label": "Syndication",
+          "score": 10,
+          "weight": 15,
           "included": true,
-          "effective_weight": 66.7,
-          "contribution": 36.7
+          "effective_weight": 33.3,
+          "contribution": 3.3
         },
         {
           "key": "performance",
@@ -123,6 +123,15 @@
           "contribution": null
         },
         {
+          "key": "openness",
+          "label": "Openness/Morality",
+          "score": 55,
+          "weight": 30,
+          "included": true,
+          "effective_weight": 66.7,
+          "contribution": 36.7
+        },
+        {
           "key": "research",
           "label": "Research/Citation",
           "score": null,
@@ -130,15 +139,6 @@
           "included": false,
           "effective_weight": 0,
           "contribution": null
-        },
-        {
-          "key": "syndication",
-          "label": "Syndication",
-          "score": 10,
-          "weight": 15,
-          "included": true,
-          "effective_weight": 33.3,
-          "contribution": 3.3
         }
       ],
       "note": "Weighted mean of the available scorecard axes. Missing axes are excluded, not treated as zero. Coverage is shown so a sparse score is not mistaken for a complete one."

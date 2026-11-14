@@ -175,10 +175,10 @@ async function main(): Promise<void> {
     const performanceAsOf = taskScore != null ? record.task_performance?.as_of : benchmark?.as_of ?? null
 
     const axes = [
-      { key: "openness", score: openness, weight: 30 },
-      { key: "performance", score: performance, weight: 40 },
-      { key: "research", score: research, weight: 15 },
       { key: "syndication", score: record.syndication.score * 10, weight: 15 },
+      { key: "performance", score: performance, weight: 40 },
+      { key: "openness", score: openness, weight: 30 },
+      { key: "research", score: research, weight: 15 },
     ]
     const available = axes.filter((axis) => axis.score != null)
     const weightTotal = available.reduce((sum, axis) => sum + axis.weight, 0)
@@ -189,7 +189,7 @@ async function main(): Promise<void> {
     const overall = {
       score: overallScore,
       coverage: available.length,
-      weights: { openness: 30, performance: 40, research: 15, syndication: 15 },
+      weights: { syndication: 15, performance: 40, openness: 30, research: 15 },
       components: axes.map((axis) => ({
         key: axis.key,
         label:
