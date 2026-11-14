@@ -44,10 +44,22 @@ The owner asked for:
 
 | Source | What happens without credentials | What is needed | Recommendation |
 | --- | --- | --- | --- |
-| X list `2084302656580034676` | `x.com` redirects to a login page. There is no public member list. | An X API v2 credential with list and user scopes. List-member endpoints are not on the free tier. | Start from a manual member snapshot that the owner supplies. Add an authenticated sync later. Never block the build on X. |
+| X list `2084302656580034676` | `x.com` redirects to a login page. There is no public member list. | An X developer app attached to a Project, with pay-per-use access, plus user-context auth (OAuth 1.0a or an OAuth 2.0 user token). The list endpoints are excluded from the legacy free access. | Start from a manual member snapshot that the owner supplies. Add an authenticated sync later. Never block the build on X. |
 | Hugging Face `balupton/following` | The HTML page returns 401. The public overview reports `numFollowing: 0` and `numFollowingOrgs: 13`. | An authenticated Hugging Face session or a `HF_TOKEN` with the right scope. | Treat the 13 followed organisations as the seed. Use a committed snapshot, refresh it with a token when one is documented. |
 
-The named members are enough to start:
+#### Credential test (2026-11-14)
+
+The owner supplied credentials in `.dev.vars`. The tests reached the X API, but every list read failed at the account level.
+
+| Attempt | Result |
+| --- | --- |
+| `GET /2/lists/:id/members` with the bearer token | 403 `client-not-enrolled` — the app is not attached to a Project. |
+| `GET /2/users/me` with OAuth 1.0a user context | The same 403. |
+| `GET /1.1/lists/list.json` with OAuth 1.0a | 403 code 453 — the access level covers only a subset of v1.1. |
+
+The fix is in the X developer portal: attach the app to a Project and enable pay-per-use access. Owned reads, including `GET /2/users/:id/owned_lists` and the list membership endpoints, cost USD 0.001 per resource. A list of 100 members therefore costs about USD 0.10. Until that is done, the list is a manual seed.
+
+#### Named members
 
 - **Underdog AI** (`@UnderdogAI`, Conway Research) — consumer on-device models. The 27B Saluki build is a 2-bit derivative of Qwen3.8-27B. Its Hugging Face card says CC-BY-NC-4.0; several news articles report Apache-2.0. The base is Apache-2.0. This is a live example of a licence conflict that the catalogue must record.
 - **Edge0 AI** (`@Edge0_AI`) — on-device streaming MoE inference and quantised model builds. The 145B build names Qwen3.8-Flash-Next as its base and carries a custom `edge0-community-model-1.0` licence. The inference framework is Apache-2.0.
@@ -748,7 +760,7 @@ Acceptance: a consumer answers a real selection question from the API; the expor
 
 The owner must decide these before Phase 1 ends. Each has a recommendation.
 
-1. **Private-list access.** Provide `HF_TOKEN` and `X_BEARER_TOKEN`, or paste the 13 followed organisations and the X list members into `data/watchlist.json` for a manual seed. *Recommendation: manual seed now, token sync in Phase 3.*
+1. **Private-list access.** Provide `HF_TOKEN`, or paste the 13 followed organisations and the X list members into `data/watchlist.json` for a manual seed. The X credentials exist but the app needs a Project and pay-per-use access before list reads work. *Recommendation: manual seed now, token sync in Phase 3.*
 2. **Tier names.** Keep `Commons / Reciprocal / Shared / Closed / Unproven`, or split `Shared` into `Weights-only` and `Conditional`. *Recommendation: keep five tiers; the component values carry the split.*
 3. **Modality scope for the first release.** Text plus speech, or every modality. *Recommendation: text plus speech, because both consumers need them now.*
 4. **Authoring format.** JSON or YAML. *Recommendation: JSON with a schema and a `deno task new` scaffolder.*
