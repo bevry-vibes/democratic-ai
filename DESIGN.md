@@ -172,7 +172,7 @@ A model page is created only when:
 
 A build attaches to the base model as a `builds` entry with its runtime, quantization, size, and link. A probe (`status:probe`) is not a product release and never gets a page.
 
-The first pull shows why this matters: 316 of 664 Hugging Face items are builds and 29 are probes. They are not 345 models. They are packaging around a smaller set of roots.
+The first pull shows why this matters: 394 of 664 Hugging Face items are builds and 29 are probes. They are not 423 models. They are packaging around a smaller set of roots.
 
 No card, no announcement, and no benchmark means no page. The catalogue is not a mirror of the Hugging Face firehose.
 
@@ -213,6 +213,7 @@ The catalogue records a syndication score from independent sources:
 | Artificial Analysis | evaluation | 2 |
 | a research paper or code release | research | 1 |
 | the model's own Hugging Face page | host | 0 |
+| Arena | evaluation | 2, currently blocked |
 
 The score is the sum, capped at 10. Bands: `self-only`, `weak`, `emerging`, `moderate`, `strong`, `very-strong`.
 
@@ -223,8 +224,9 @@ Rules:
 - The score is not a quality score, a reciprocity tier, or a measure of openness.
 - Every point links to the listing. A score without sources is not recorded.
 - A missing source is not a negative claim. It means the source did not list the model.
+- Arena is a valuable leaderboard, but its pages are behind a bot challenge and its sitemap has no per-model pages. It adds no points until a verifiable snapshot or API is available. The site links to its leaderboard as a general source.
 
-The first pass scored 318 root and notable models. It skipped 346 builds, probes, and documentation items. The average score is 1.44. 29 models are `very-strong`, 10 are `strong`, and 244 are `self-only`.
+The first pass scored 240 root and notable models. It skipped 424 builds, probes, and documentation items. The average score is 1.42. 21 models are `very-strong`, 8 are `strong`, and 183 are `self-only`.
 
 The inclusionAI real models show why the score matters. Duo has an arXiv paper and scores 1. Ming-3.0-audio-flash, Realtime-Venus, and Ming-UniAudio have cards but little independent pickup; they score 0–1. They are real models, but they are not yet part of a wider web of trust.
 

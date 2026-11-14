@@ -70,3 +70,7 @@ Clef is a confirmation gate, not a primary labeller. Only models the rules mark 
 `data/syndication.json` scores independent listings. It uses models.dev, agent-detect, OpenRouter, LLM Stats, and Artificial Analysis, plus a research paper or code release. The model's own Hugging Face page has weight 0. Builds, probes, and documentation are skipped; a build inherits the base model's score.
 
 The OpenRouter response is cached under `.cache/syndication/`. The LLM Stats and Artificial Analysis model pages come from the sitemap snapshots already stored from the pull.
+
+Arena is a worthwhile leaderboard, but its pages are behind a bot challenge and its sitemap has no per-model pages. It is listed in `data/feeds.json` as blocked. It adds no points until a verifiable snapshot or API is available.
+
+`scripts/index/` writes `data/models/<id>.json` for root and notable models only, plus `data/dist/models.json` and `data/models.report.json`. Builds attach to their base model and do not get their own record.

@@ -508,7 +508,8 @@ data/
   fetch-targets.json          what the fetcher pulls
   raw/                        source snapshots, never overwritten
   pulls/<timestamp>/          manifest.json + items.jsonl (source-native only)
-  dist/                       generated rollups
+  models/<id>.json            one record per root or notable model
+  dist/                       generated rollups, including models.json
 reports/                      optional overlay reports
   translation-id-en.json      the first report (phase 3)
 journal/
@@ -526,6 +527,7 @@ scripts/
   tag/                        rules-first tagging plus the Clef gate (implemented)
   links/                      models.dev and agent-detect link resolver (implemented)
   syndication/                independent-listing score (implemented)
+  index/                      model records from the tagged pull (implemented)
   build.ts                    validate, compute tiers, generate
   check.ts                    build in check mode
   propose.ts                  diff snapshots into proposals
@@ -773,7 +775,7 @@ First results on the 2026-11-14 pull:
 | Metric | Value |
 | --- | --- |
 | Hugging Face model items | 664 |
-| Builds (`status:build`) | 316 |
+| Builds (`status:build`) | 394 |
 | Probes (`status:probe`) | 29 |
 | Documentation repositories (`status:documentation`) | 1 |
 | Models with a task tag | 610 |
@@ -789,7 +791,7 @@ The 13 remaining models are real releases, not builds: XiaomiMiMo MiMo-Audio (3)
 
 The link resolver (`scripts/links/`) joined 149 models on the first run: 136 have a models.dev entry and 79 have an agent-detect entry. It strips build suffixes, so a GGUF, MLX, or CoreML build inherits its base model's links. Every model page shows the links when they exist.
 
-The build/probe distinction answers the “why build these?” question. 344 of 664 items are packaging or probes. They are not separate models, and they do not get separate pages. They attach to their base model as build entries. The catalogue records roots and notable derivatives, not the Hugging Face firehose.
+The build/probe distinction answers the “why build these?” question. 424 of 664 items are packaging, probes, or documentation. They are not separate models, and they do not get separate pages. They attach to their base model as build entries. The catalogue records roots and notable derivatives, not the Hugging Face firehose.
 
 ### Syndication score (implemented)
 
@@ -804,6 +806,7 @@ The build/probe distinction answers the “why build these?” question. 344 of 
 | Artificial Analysis | evaluation | 2 |
 | a research paper or code release | research | 1 |
 | the model's own Hugging Face page | host | 0 |
+| Arena | evaluation | 2, currently blocked |
 
 The score is the sum, capped at 10. Bands: `self-only`, `weak`, `emerging`, `moderate`, `strong`, `very-strong`. Every point carries a source URL. The model's own host never counts as independent. Builds, probes, and documentation are skipped; a build inherits the base model's score.
 
@@ -811,19 +814,44 @@ First results on the 2026-11-14 pull:
 
 | Metric | Value |
 | --- | --- |
-| Root and notable models scored | 318 |
-| Builds, probes, and documentation skipped | 346 |
-| Average score | 1.44 |
-| Very strong | 29 |
-| Strong | 10 |
-| Moderate | 8 |
-| Emerging | 12 |
+| Root and notable models scored | 240 |
+| Builds, probes, and documentation skipped | 424 |
+| Average score | 1.42 |
+| Very strong | 21 |
+| Strong | 8 |
+| Moderate | 7 |
+| Emerging | 6 |
 | Weak | 15 |
-| Self-only | 244 |
+| Self-only | 183 |
 
 The inclusionAI real models show the value of the score: Duo scores 1 from its arXiv paper; Realtime-Venus and FastDialogueSidon score 1 from their papers; Ming-3.0-audio-flash, Ming-UniAudio, and XiaomiMiMo MiMo-Audio score 0. They are real models, but independent registries and aggregators have not picked them up yet.
 
+Arena is a worthwhile leaderboard, but its pages are behind a bot challenge and its sitemap has no per-model pages. It adds no points until a verifiable snapshot or API is available.
+
 The score is syndication, not quality, reciprocity, or openness. A closed model can score 10. A reciprocal model can score 0.
+
+### Model index (implemented)
+
+`scripts/index/` writes one record per root or notable model. It does not write a record for a build, probe, or documentation item.
+
+- `data/models/<id>.json` — the model record: tags, capabilities, footprint, licence, openness, lineage, access links, syndication, builds, and sources.
+- `data/dist/models.json` — the compact index for the site and consumers, sorted by syndication score.
+- `data/models.report.json` — root count, attached builds, unmatched builds, and skipped counts.
+
+First run:
+
+| Metric | Value |
+| --- | --- |
+| Root and notable model records | 240 |
+| Builds attached to a base | 174 |
+| Builds with no base in the pull | 220 |
+| Builds skipped as records | 394 |
+| Probes skipped | 29 |
+| Documentation repos skipped | 1 |
+
+The record is honest about what this pass knows. `openness.tier` is `unproven` unless a conditional licence caps it at `shared`. Training-data and training-code evidence is not assessed yet. The syndication score is independent listings, not quality. Model cards and descriptions are linked, not copied.
+
+A build with no base in the pull stays in the report. It does not get a record. The next pull can attach it when the base appears.
 
 ### 11. CI/CD
 
@@ -986,6 +1014,7 @@ Acceptance: the repository is initialised, the skills are referenced, and the ow
 - `data/tag-rules.json` with the pipeline, library, family, keyword, title, runtime, and sitemap rules.
 - `scripts/tag/` (implemented): a rules-first pass plus a Clef confirmation gate for review models. Neither writes a model record.
 - `scripts/syndication/` (implemented): an independent-listing score with source URLs. It skips builds, probes, and documentation.
+- `scripts/index/` (implemented): one record per root or notable model, with builds attached to their base. No build, probe, or documentation record.
 - `schemas/` for model, organization, source, discovery, tag, and report.
 - The first 30 model records from the pull, not from memory.
 - `scripts/build.ts` and `scripts/check.ts`.
@@ -993,7 +1022,7 @@ Acceptance: the repository is initialised, the skills are referenced, and the ow
 - Generated README blocks and `data/dist/`.
 - `CONTRIBUTING.md` with the evidence runbook and the tagging guide.
 
-Acceptance: `deno task fetch` writes a manifest and keeps every raw response; `deno task tag` and `deno task tag:clef` write proposals with evidence; no Clef task is accepted below 0.8; a model in review keeps its other tags and has no guessed task; `deno task syndication` gives every score a source URL and skips builds/probes; the index builds without any report; every task tag has a definition; `deno task check` passes; the tier is recomputed and equal to the stored tier.
+Acceptance: `deno task fetch` writes a manifest and keeps every raw response; `deno task tag` and `deno task tag:clef` write proposals with evidence; no Clef task is accepted below 0.8; a model in review keeps its other tags and has no guessed task; `deno task syndication` gives every score a source URL and skips builds/probes; `deno task index` writes roots only and attaches builds; the index builds without any report; every task tag has a definition; `deno task check` passes; the tier is recomputed and equal to the stored tier.
 
 ### Phase 2 — site and tag index
 
