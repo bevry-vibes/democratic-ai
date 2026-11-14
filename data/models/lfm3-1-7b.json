@@ -13,7 +13,7 @@
   "tags": [
     "task:text-generation",
     "domain:language",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:lfm"
   ],
@@ -101,9 +101,7 @@
       "id": "LiquidAI/LFM3-1.7B-NVFP4",
       "name": "LiquidAI/LFM3-1.7B-NVFP4",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-NVFP4",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP4",
       "relation": "quantized",
       "status": "build"
@@ -112,9 +110,7 @@
       "id": "LiquidAI/LFM3-1.7B-FP8",
       "name": "LiquidAI/LFM3-1.7B-FP8",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-FP8",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
@@ -123,9 +119,7 @@
       "id": "LiquidAI/LFM3-1.7B-MLX-bf16",
       "name": "LiquidAI/LFM3-1.7B-MLX-bf16",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-bf16",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "BF16",
       "relation": "conversion",
       "status": "build"
@@ -134,9 +128,7 @@
       "id": "LiquidAI/LFM3-1.7B-MLX-4bit",
       "name": "LiquidAI/LFM3-1.7B-MLX-4bit",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-4bit",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "4-bit",
       "relation": "quantized",
       "status": "build"
@@ -145,9 +137,7 @@
       "id": "LiquidAI/LFM3-1.7B-ONNX",
       "name": "LiquidAI/LFM3-1.7B-ONNX",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-ONNX",
-      "runtime": [
-        "onnx"
-      ],
+      "runtime": [],
       "quantization": "ONNX",
       "relation": "conversion",
       "status": "build"
@@ -156,9 +146,7 @@
       "id": "LiquidAI/LFM3-1.7B-MLX-8bit",
       "name": "LiquidAI/LFM3-1.7B-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-8bit",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "8-bit",
       "relation": "quantized",
       "status": "build"
@@ -167,9 +155,7 @@
       "id": "LiquidAI/LFM3-1.7B-GGUF",
       "name": "LiquidAI/LFM3-1.7B-GGUF",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

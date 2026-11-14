@@ -16,7 +16,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:qwen"
   ],
@@ -93,9 +93,7 @@
       "id": "badtheorylabs/Tinfield-1-Q8_0-GGUF",
       "name": "badtheorylabs/Tinfield-1-Q8_0-GGUF",
       "url": "https://huggingface.co/badtheorylabs/Tinfield-1-Q8_0-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

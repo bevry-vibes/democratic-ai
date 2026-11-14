@@ -16,8 +16,8 @@
     "task:tool-calling",
     "domain:language",
     "modality:text",
-    "runtime:llama.cpp",
-    "runtime:openrouter",
+    "access:llama.cpp",
+    "access:openrouter",
     "context:commercial-safe",
     "license:apache-2.0"
   ],

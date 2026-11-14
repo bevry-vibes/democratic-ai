@@ -16,7 +16,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "context:commercial-safe",
     "license:mit",
     "family:mimo"

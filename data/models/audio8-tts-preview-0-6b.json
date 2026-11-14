@@ -14,7 +14,7 @@
     "task:speech-synthesis",
     "domain:speech",
     "modality:audio",
-    "runtime:python",
+    "access:python",
     "context:commercial-safe",
     "license:apache-2.0"
   ],

@@ -84,9 +84,7 @@
       "id": "inclusionAI/ZoomGain-9B-GGUF",
       "name": "inclusionAI/ZoomGain-9B-GGUF",
       "url": "https://huggingface.co/inclusionAI/ZoomGain-9B-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

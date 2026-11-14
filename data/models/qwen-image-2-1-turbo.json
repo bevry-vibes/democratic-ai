@@ -14,7 +14,7 @@
     "task:image-generation",
     "domain:vision",
     "modality:image",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:qwen"
   ],
@@ -90,9 +90,7 @@
       "id": "unsloth/Qwen-Image-2.1-Turbo-GGUF",
       "name": "unsloth/Qwen-Image-2.1-Turbo-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -101,9 +99,7 @@
       "id": "unsloth/Qwen-Image-2.1-Turbo-FP8",
       "name": "unsloth/Qwen-Image-2.1-Turbo-FP8",
       "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-FP8",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"

@@ -17,7 +17,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "context:commercial-safe",
     "license:mit"
   ],
@@ -96,10 +96,7 @@
       "id": "FluidInference/unlimited-ocr-mlx-coreml",
       "name": "FluidInference/unlimited-ocr-mlx-coreml",
       "url": "https://huggingface.co/FluidInference/unlimited-ocr-mlx-coreml",
-      "runtime": [
-        "mlx",
-        "coreml"
-      ],
+      "runtime": [],
       "quantization": "MLX",
       "relation": "conversion",
       "status": "build"

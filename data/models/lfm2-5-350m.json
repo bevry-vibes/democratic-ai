@@ -13,7 +13,7 @@
   "tags": [
     "task:text-generation",
     "domain:language",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:lfm"
   ],
@@ -87,9 +87,7 @@
       "id": "LiquidAI/LFM2.5-350M-GGUF",
       "name": "LiquidAI/LFM2.5-350M-GGUF",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-350M-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

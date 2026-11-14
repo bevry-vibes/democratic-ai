@@ -14,7 +14,7 @@
     "task:audio-classification",
     "task:language-identification",
     "domain:speech",
-    "runtime:litert",
+    "access:litert",
     "license:other"
   ],
   "capabilities": {

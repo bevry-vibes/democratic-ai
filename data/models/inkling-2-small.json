@@ -18,9 +18,9 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:opencode",
-    "runtime:openrouter",
-    "runtime:python",
+    "access:opencode",
+    "access:openrouter",
+    "access:python",
     "context:commercial-safe",
     "license:apache-2.0"
   ],
@@ -241,9 +241,7 @@
       "id": "unsloth/Inkling-2-Small-GGUF",
       "name": "unsloth/Inkling-2-Small-GGUF",
       "url": "https://huggingface.co/unsloth/Inkling-2-Small-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -252,9 +250,7 @@
       "id": "thinkingmachines/Inkling-2-Small-MXFP8",
       "name": "thinkingmachines/Inkling-2-Small-MXFP8",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small-MXFP8",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "MXFP8",
       "relation": "quantized",
       "status": "build"

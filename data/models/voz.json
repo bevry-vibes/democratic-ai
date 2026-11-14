@@ -14,7 +14,7 @@
     "task:transcription",
     "domain:speech",
     "modality:audio",
-    "runtime:litert",
+    "access:litert",
     "license:other"
   ],
   "capabilities": {

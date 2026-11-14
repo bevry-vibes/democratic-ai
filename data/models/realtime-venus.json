@@ -15,7 +15,7 @@
     "domain:multimodal",
     "modality:audio",
     "modality:video",
-    "runtime:python",
+    "access:python",
     "context:commercial-safe",
     "license:apache-2.0"
   ],

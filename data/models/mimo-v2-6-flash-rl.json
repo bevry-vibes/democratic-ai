@@ -13,9 +13,9 @@
   "tags": [
     "task:text-generation",
     "domain:language",
-    "runtime:opencode",
-    "runtime:openrouter",
-    "runtime:python",
+    "access:opencode",
+    "access:openrouter",
+    "access:python",
     "context:commercial-safe",
     "license:mit"
   ],

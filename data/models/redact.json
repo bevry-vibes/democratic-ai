@@ -14,7 +14,7 @@
     "task:pii-redaction",
     "task:structured-extraction",
     "domain:language",
-    "runtime:litert",
+    "access:litert",
     "license:other"
   ],
   "capabilities": {

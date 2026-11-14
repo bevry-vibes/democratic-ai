@@ -19,9 +19,9 @@
     "modality:image",
     "modality:text",
     "modality:video",
-    "runtime:opencode",
-    "runtime:openrouter",
-    "runtime:python",
+    "access:opencode",
+    "access:openrouter",
+    "access:python",
     "license:other",
     "family:minimax"
   ],
@@ -555,9 +555,7 @@
       "id": "unsloth/MiniMax-M3.1-Flash-GGUF",
       "name": "unsloth/MiniMax-M3.1-Flash-GGUF",
       "url": "https://huggingface.co/unsloth/MiniMax-M3.1-Flash-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -566,9 +564,7 @@
       "id": "unsloth/MiniMax-M3.1-Flash",
       "name": "unsloth/MiniMax-M3.1-Flash",
       "url": "https://huggingface.co/unsloth/MiniMax-M3.1-Flash",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": null,
       "relation": null,
       "status": "build"

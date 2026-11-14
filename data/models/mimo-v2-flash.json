@@ -16,8 +16,8 @@
     "task:tool-calling",
     "domain:language",
     "modality:text",
-    "runtime:opencode",
-    "runtime:python",
+    "access:opencode",
+    "access:python",
     "context:commercial-safe",
     "license:mit",
     "family:mimo"

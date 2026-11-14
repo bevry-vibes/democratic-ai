@@ -281,7 +281,7 @@ function buildOrgMap(watchlist: Watchlist): Map<string, string> {
 }
 
 function tagList(tags: string[]): string[] {
-  const order = ["task", "domain", "modality", "runtime", "language", "context", "license", "family", "status", "relation"]
+  const order = ["task", "domain", "modality", "access", "language", "context", "license", "family", "status", "relation"]
   const unique = [...new Set(tags.filter((tag) => !tag.startsWith("source:") && !tag.startsWith("org:")))]
   return unique.sort((a, b) => {
     const ai = order.indexOf(a.split(":")[0]!)
@@ -433,7 +433,7 @@ async function main(): Promise<void> {
     const item = itemMap.get(`${root.item.source}|${root.item.source_id}`) ?? (root.item as unknown as PullItem)
     const sourceId = root.item.source_id
     const org = sourceId.split("/")[0] ?? ""
-    const tags = root.tags.map((tag) => tag.tag)
+    const tags = root.tags.map((tag) => tag.tag.startsWith("runtime:") ? `access:${tag.tag.slice("runtime:".length)}` : tag.tag)
     const md = modelsDevByKey.get(norm(sourceId))
     const link = links.models[sourceId] ?? {}
     const usage = link.providers?.length ? [] : await cardUsage(sourceId)
@@ -443,7 +443,9 @@ async function main(): Promise<void> {
     const folded = aliases.filter((alias) => alias.canonical_hugging_face === sourceId)
     for (const alias of folded) {
       const aliasRoot = rootByHf.get(alias.hugging_face)
-      for (const tag of aliasRoot?.tags ?? []) enriched.add(tag.tag)
+      for (const tag of aliasRoot?.tags ?? []) {
+        enriched.add(tag.tag.startsWith("runtime:") ? `access:${tag.tag.slice("runtime:".length)}` : tag.tag)
+      }
     }
     if (md?.tool_call) enriched.add("task:tool-calling")
     if (md?.reasoning) enriched.add("task:reasoning")
@@ -454,9 +456,9 @@ async function main(): Promise<void> {
       enriched.add(`family:${md.family}`)
     }
     const providerIds = new Set(link.providers ?? [])
-    if (providerIds.has("opencode") || providerIds.has("opencode-go")) enriched.add("runtime:opencode")
-    if (providerIds.has("cloudflare-workers-ai")) enriched.add("runtime:cloudflare")
-    if (providerIds.has("openrouter")) enriched.add("runtime:openrouter")
+    if (providerIds.has("opencode") || providerIds.has("opencode-go")) enriched.add("access:opencode")
+    if (providerIds.has("cloudflare-workers-ai")) enriched.add("access:cloudflare")
+    if (providerIds.has("openrouter")) enriched.add("access:openrouter")
     const modelTags = tagList([...enriched])
     const licenseTag = tags.find((tag) => tag.startsWith("license:"))
     const licenseId = licenseTag ? licenseTag.slice("license:".length) : (await cardLicense(sourceId)) ?? "unknown"
@@ -464,7 +466,7 @@ async function main(): Promise<void> {
     const tasks = modelTags.filter((tag) => tag.startsWith("task:")).map((tag) => tag.slice(5))
     const languages = modelTags.filter((tag) => tag.startsWith("language:")).map((tag) => tag.slice(9))
     const modalities = modelTags.filter((tag) => tag.startsWith("modality:")).map((tag) => tag.slice(9))
-    const runtimes = modelTags.filter((tag) => tag.startsWith("runtime:")).map((tag) => tag.slice(8))
+    const runtimes = modelTags.filter((tag) => tag.startsWith("access:")).map((tag) => tag.slice("access:".length))
     const localRuntimes = runtimes.filter((runtime) => !HOSTED_RUNTIMES.has(runtime))
     const orgId = orgMap.get(org.toLowerCase()) ?? slug(org)
     const base = baseName(sourceId)
@@ -475,7 +477,7 @@ async function main(): Promise<void> {
     const synd = syndication.models[sourceId]
     const buildEntries = (buildsByRoot.get(sourceId) ?? []).map((build) => {
       const buildTags = build.tags.map((tag) => tag.tag)
-      const buildRuntimes = buildTags.filter((tag) => tag.startsWith("runtime:")).map((tag) => tag.slice(8))
+      const buildRuntimes = buildTags.filter((tag) => tag.startsWith("access:")).map((tag) => tag.slice("access:".length))
       return {
         id: build.item.source_id,
         name: build.item.source_id,
@@ -573,6 +575,9 @@ async function main(): Promise<void> {
       tags: modelTags,
       license: licenseId,
       tier: tier.tier,
+      weights: tier.weights,
+      training_data: tier.data,
+      training_code: tier.code,
       score: synd?.score ?? 0,
       band: synd?.band ?? "self-only",
       tool_calling: md?.tool_call ?? null,

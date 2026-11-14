@@ -20,10 +20,10 @@
     "modality:pdf",
     "modality:text",
     "modality:video",
-    "runtime:cloudflare",
-    "runtime:opencode",
-    "runtime:openrouter",
-    "runtime:python",
+    "access:cloudflare",
+    "access:opencode",
+    "access:openrouter",
+    "access:python",
     "context:commercial-safe",
     "license:mit"
   ],
@@ -1505,9 +1505,7 @@
       "id": "unsloth/GLM-5.3-Flash-GGUF",
       "name": "unsloth/GLM-5.3-Flash-GGUF",
       "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -1516,9 +1514,7 @@
       "id": "unsloth/GLM-5.3-Flash-FP8",
       "name": "unsloth/GLM-5.3-Flash-FP8",
       "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-FP8",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
@@ -1527,9 +1523,7 @@
       "id": "unsloth/GLM-5.3-Flash",
       "name": "unsloth/GLM-5.3-Flash",
       "url": "https://huggingface.co/unsloth/GLM-5.3-Flash",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": null,
       "relation": null,
       "status": "build"
@@ -1538,9 +1532,7 @@
       "id": "zai-org/GLM-5.3-Flash-BF16",
       "name": "zai-org/GLM-5.3-Flash-BF16",
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash-BF16",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "BF16",
       "relation": null,
       "status": "build"

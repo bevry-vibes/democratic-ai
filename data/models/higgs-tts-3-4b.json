@@ -14,7 +14,7 @@
     "task:speech-synthesis",
     "domain:speech",
     "modality:audio",
-    "runtime:python",
+    "access:python",
     "license:other"
   ],
   "capabilities": {

@@ -17,9 +17,9 @@
     "domain:language",
     "modality:audio",
     "modality:text",
-    "runtime:opencode",
-    "runtime:openrouter",
-    "runtime:python",
+    "access:opencode",
+    "access:openrouter",
+    "access:python",
     "context:commercial-safe",
     "license:mit",
     "family:mimo"
@@ -455,9 +455,7 @@
       "id": "XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
       "name": "XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP4",
       "relation": "quantized",
       "status": "build"

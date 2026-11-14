@@ -17,10 +17,10 @@
     "domain:language",
     "modality:image",
     "modality:text",
-    "runtime:cloudflare",
-    "runtime:opencode",
-    "runtime:openrouter",
-    "runtime:python",
+    "access:cloudflare",
+    "access:opencode",
+    "access:openrouter",
+    "access:python",
     "license:other",
     "family:glm"
   ],
@@ -1557,10 +1557,7 @@
       "id": "unsloth/GLM-5.3-GGUF",
       "name": "unsloth/GLM-5.3-GGUF",
       "url": "https://huggingface.co/unsloth/GLM-5.3-GGUF",
-      "runtime": [
-        "python",
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -1569,9 +1566,7 @@
       "id": "unsloth/GLM-5.3",
       "name": "unsloth/GLM-5.3",
       "url": "https://huggingface.co/unsloth/GLM-5.3",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": null,
       "relation": null,
       "status": "build"
@@ -1580,9 +1575,7 @@
       "id": "zai-org/GLM-5.3-BF16",
       "name": "zai-org/GLM-5.3-BF16",
       "url": "https://huggingface.co/zai-org/GLM-5.3-BF16",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "BF16",
       "relation": null,
       "status": "build"

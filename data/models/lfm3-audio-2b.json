@@ -18,7 +18,7 @@
     "domain:multimodal",
     "domain:speech",
     "modality:audio",
-    "runtime:python",
+    "access:python",
     "license:other"
   ],
   "capabilities": {
@@ -89,10 +89,7 @@
       "id": "FluidInference/lfm3-audio-2b-coreml",
       "name": "FluidInference/lfm3-audio-2b-coreml",
       "url": "https://huggingface.co/FluidInference/lfm3-audio-2b-coreml",
-      "runtime": [
-        "ios",
-        "coreml"
-      ],
+      "runtime": [],
       "quantization": "CoreML",
       "relation": "conversion",
       "status": "build"
@@ -101,9 +98,7 @@
       "id": "FluidInference/lfm3-audio-2b-coreai",
       "name": "FluidInference/lfm3-audio-2b-coreai",
       "url": "https://huggingface.co/FluidInference/lfm3-audio-2b-coreai",
-      "runtime": [
-        "ios"
-      ],
+      "runtime": [],
       "quantization": "CoreAI",
       "relation": "conversion",
       "status": "build"
@@ -112,9 +107,7 @@
       "id": "LiquidAI/LFM3-Audio-2B-ONNX",
       "name": "LiquidAI/LFM3-Audio-2B-ONNX",
       "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-ONNX",
-      "runtime": [
-        "onnx"
-      ],
+      "runtime": [],
       "quantization": "ONNX",
       "relation": "conversion",
       "status": "build"
@@ -123,9 +116,7 @@
       "id": "LiquidAI/LFM3-Audio-2B-MLX-bf16",
       "name": "LiquidAI/LFM3-Audio-2B-MLX-bf16",
       "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-MLX-bf16",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "BF16",
       "relation": "conversion",
       "status": "build"
@@ -134,9 +125,7 @@
       "id": "LiquidAI/LFM3-Audio-2B-MLX-8bit",
       "name": "LiquidAI/LFM3-Audio-2B-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-MLX-8bit",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "8-bit",
       "relation": "quantized",
       "status": "build"
@@ -145,9 +134,7 @@
       "id": "LiquidAI/LFM3-Audio-2B-MLX-4bit",
       "name": "LiquidAI/LFM3-Audio-2B-MLX-4bit",
       "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-MLX-4bit",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "4-bit",
       "relation": "quantized",
       "status": "build"
@@ -156,9 +143,7 @@
       "id": "LiquidAI/LFM3-Audio-2B-GGUF",
       "name": "LiquidAI/LFM3-Audio-2B-GGUF",
       "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

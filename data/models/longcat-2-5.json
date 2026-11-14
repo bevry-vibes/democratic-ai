@@ -18,7 +18,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:opencode",
+    "access:opencode",
     "context:commercial-safe",
     "license:mit"
   ],

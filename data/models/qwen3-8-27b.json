@@ -20,9 +20,9 @@
     "modality:pdf",
     "modality:text",
     "modality:video",
-    "runtime:cloudflare",
-    "runtime:openrouter",
-    "runtime:python",
+    "access:cloudflare",
+    "access:openrouter",
+    "access:python",
     "context:commercial-safe",
     "license:apache-2.0",
     "family:qwen"
@@ -836,9 +836,7 @@
       "id": "nace-ai/Qwen3.8-27B-GGUF",
       "name": "nace-ai/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -847,9 +845,7 @@
       "id": "nace-ai/Qwen3.8-27B-MLX",
       "name": "nace-ai/Qwen3.8-27B-MLX",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-MLX",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "MLX",
       "relation": "conversion",
       "status": "build"
@@ -858,9 +854,7 @@
       "id": "nace-ai/Qwen3.8-27B-MLX-4bit",
       "name": "nace-ai/Qwen3.8-27B-MLX-4bit",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-MLX-4bit",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "4-bit",
       "relation": "quantized",
       "status": "build"
@@ -869,9 +863,7 @@
       "id": "nace-ai/Qwen3.8-27B-MLX-8bit",
       "name": "nace-ai/Qwen3.8-27B-MLX-8bit",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-MLX-8bit",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "8-bit",
       "relation": "quantized",
       "status": "build"
@@ -889,9 +881,7 @@
       "id": "Qwen/Qwen3.8-27B-FP8",
       "name": "Qwen/Qwen3.8-27B-FP8",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
@@ -900,9 +890,7 @@
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "name": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

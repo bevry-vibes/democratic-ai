@@ -218,9 +218,9 @@ function tagItem(item: PullItem, rules: TagRuleFile, orgMap: Map<string, string>
     } else if (tag.startsWith("repo:")) {
       tags.add("domain:tooling", 0.9, "source-native", tag)
       const repo = tag.slice("repo:".length)
-      if (repo.includes("llama.cpp")) tags.add("runtime:llama.cpp", 0.9, "source-native", tag)
-      if (repo.includes("mlx")) tags.add("runtime:mlx", 0.9, "source-native", tag)
-      if (repo.includes("onnxruntime")) tags.add("runtime:onnx", 0.9, "source-native", tag)
+      if (repo.includes("llama.cpp")) tags.add("access:llama.cpp", 0.9, "source-native", tag)
+      if (repo.includes("mlx")) tags.add("access:mlx", 0.9, "source-native", tag)
+      if (repo.includes("onnxruntime")) tags.add("access:onnx", 0.9, "source-native", tag)
     }
   }
 

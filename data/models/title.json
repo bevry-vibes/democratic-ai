@@ -14,7 +14,7 @@
     "task:text-generation",
     "task:title-generation",
     "domain:language",
-    "runtime:mlx",
+    "access:mlx",
     "license:other"
   ],
   "capabilities": {

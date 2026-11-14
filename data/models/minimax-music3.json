@@ -14,7 +14,7 @@
     "task:text-generation",
     "domain:language",
     "domain:speech",
-    "runtime:python",
+    "access:python",
     "family:minimax"
   ],
   "capabilities": {

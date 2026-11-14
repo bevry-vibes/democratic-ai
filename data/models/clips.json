@@ -14,7 +14,7 @@
     "task:clip-selection",
     "task:retrieval",
     "domain:language",
-    "runtime:litert",
+    "access:litert",
     "license:other"
   ],
   "capabilities": {

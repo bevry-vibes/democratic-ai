@@ -14,7 +14,7 @@
     "task:content-moderation",
     "task:image-classification",
     "domain:vision",
-    "runtime:litert",
+    "access:litert",
     "license:other"
   ],
   "capabilities": {

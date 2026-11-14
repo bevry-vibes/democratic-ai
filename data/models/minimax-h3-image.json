@@ -85,9 +85,7 @@
       "id": "unsloth/MiniMax-H3-Image-GGUF",
       "name": "unsloth/MiniMax-H3-Image-GGUF",
       "url": "https://huggingface.co/unsloth/MiniMax-H3-Image-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

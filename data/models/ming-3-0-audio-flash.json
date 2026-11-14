@@ -16,7 +16,7 @@
     "task:transcription",
     "domain:speech",
     "modality:audio",
-    "runtime:python",
+    "access:python",
     "context:commercial-safe",
     "license:mit"
   ],

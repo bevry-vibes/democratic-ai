@@ -19,7 +19,7 @@
     "domain:vision",
     "modality:audio",
     "modality:image",
-    "runtime:python",
+    "access:python",
     "context:commercial-safe",
     "license:mit"
   ],

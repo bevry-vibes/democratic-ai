@@ -17,10 +17,10 @@
     "domain:language",
     "modality:image",
     "modality:text",
-    "runtime:cloudflare",
-    "runtime:opencode",
-    "runtime:openrouter",
-    "runtime:python",
+    "access:cloudflare",
+    "access:opencode",
+    "access:openrouter",
+    "access:python",
     "context:commercial-safe",
     "license:mit",
     "family:glm"
@@ -1544,9 +1544,7 @@
       "id": "zai-org/GLM-5.2-FP8",
       "name": "zai-org/GLM-5.2-FP8",
       "url": "https://huggingface.co/zai-org/GLM-5.2-FP8",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"

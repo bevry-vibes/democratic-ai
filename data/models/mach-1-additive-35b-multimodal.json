@@ -74,9 +74,7 @@
       "id": "SyzygyResearch/Mach-1-Additive-35B-Multimodal-GGUF",
       "name": "SyzygyResearch/Mach-1-Additive-35B-Multimodal-GGUF",
       "url": "https://huggingface.co/SyzygyResearch/Mach-1-Additive-35B-Multimodal-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

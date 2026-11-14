@@ -16,7 +16,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:lfm"
   ],
@@ -100,9 +100,7 @@
       "id": "LiquidAI/LFM2.5-VL-3B-ONNX",
       "name": "LiquidAI/LFM2.5-VL-3B-ONNX",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-3B-ONNX",
-      "runtime": [
-        "onnx"
-      ],
+      "runtime": [],
       "quantization": "ONNX",
       "relation": "conversion",
       "status": "build"
@@ -111,9 +109,7 @@
       "id": "LiquidAI/LFM2.5-VL-3B-GGUF",
       "name": "LiquidAI/LFM2.5-VL-3B-GGUF",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-3B-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

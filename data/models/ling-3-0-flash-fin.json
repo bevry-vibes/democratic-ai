@@ -16,7 +16,7 @@
     "task:tool-calling",
     "domain:language",
     "modality:text",
-    "runtime:opencode",
+    "access:opencode",
     "context:commercial-safe",
     "license:mit"
   ],

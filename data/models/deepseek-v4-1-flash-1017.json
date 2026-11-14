@@ -38,10 +38,10 @@
     "modality:image",
     "modality:pdf",
     "modality:text",
-    "runtime:cloudflare",
-    "runtime:opencode",
-    "runtime:openrouter",
-    "runtime:python",
+    "access:cloudflare",
+    "access:opencode",
+    "access:openrouter",
+    "access:python",
     "context:commercial-safe",
     "license:mit"
   ],
@@ -1132,9 +1132,7 @@
       "id": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
       "name": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
       "url": "https://huggingface.co/unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -1143,9 +1141,7 @@
       "id": "unsloth/DeepSeek-V4.1-Flash-1017",
       "name": "unsloth/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/unsloth/DeepSeek-V4.1-Flash-1017",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": null,
       "relation": null,
       "status": "build"
@@ -1154,10 +1150,7 @@
       "id": "unsloth/DeepSeek-V4-Flash-Vision-Exp-GGUF",
       "name": "unsloth/DeepSeek-V4-Flash-Vision-Exp-GGUF",
       "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-Vision-Exp-GGUF",
-      "runtime": [
-        "python",
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -1166,9 +1159,7 @@
       "id": "unsloth/DeepSeek-V4-Flash-Vision-Exp",
       "name": "unsloth/DeepSeek-V4-Flash-Vision-Exp",
       "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-Vision-Exp",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": null,
       "relation": null,
       "status": "build"

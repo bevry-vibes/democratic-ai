@@ -16,8 +16,8 @@
     "task:tool-calling",
     "domain:language",
     "modality:text",
-    "runtime:opencode",
-    "runtime:openrouter",
+    "access:opencode",
+    "access:openrouter",
     "context:commercial-safe",
     "license:mit"
   ],

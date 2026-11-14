@@ -19,9 +19,9 @@
     "modality:image",
     "modality:text",
     "modality:video",
-    "runtime:opencode",
-    "runtime:openrouter",
-    "runtime:python",
+    "access:opencode",
+    "access:openrouter",
+    "access:python",
     "context:commercial-safe",
     "license:mit",
     "family:mimo"

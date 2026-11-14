@@ -84,9 +84,7 @@
       "id": "SyzygyResearch/Mach-2-Additive-Medium-GGUF",
       "name": "SyzygyResearch/Mach-2-Additive-Medium-GGUF",
       "url": "https://huggingface.co/SyzygyResearch/Mach-2-Additive-Medium-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

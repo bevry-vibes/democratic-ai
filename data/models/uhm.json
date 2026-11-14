@@ -14,7 +14,7 @@
     "task:audio-classification",
     "task:filler-word-detection",
     "domain:speech",
-    "runtime:litert",
+    "access:litert",
     "license:other"
   ],
   "capabilities": {

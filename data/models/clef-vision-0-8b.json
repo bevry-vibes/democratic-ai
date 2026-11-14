@@ -16,7 +16,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "context:commercial-safe",
     "license:apache-2.0",
     "family:qwen"
@@ -94,9 +94,7 @@
       "id": "FluidInference/clef-vision-0.8b-coreml",
       "name": "FluidInference/clef-vision-0.8b-coreml",
       "url": "https://huggingface.co/FluidInference/clef-vision-0.8b-coreml",
-      "runtime": [
-        "coreml"
-      ],
+      "runtime": [],
       "quantization": "CoreML",
       "relation": "conversion",
       "status": "build"

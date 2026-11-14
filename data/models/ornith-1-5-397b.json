@@ -13,7 +13,7 @@
   "tags": [
     "task:text-generation",
     "domain:language",
-    "runtime:python",
+    "access:python",
     "context:commercial-safe",
     "license:mit"
   ],
@@ -81,9 +81,7 @@
       "id": "ornith-ai/Ornith-1.5-397B-NVFP4",
       "name": "ornith-ai/Ornith-1.5-397B-NVFP4",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B-NVFP4",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP4",
       "relation": "quantized",
       "status": "build"
@@ -101,10 +99,7 @@
       "id": "ornith-ai/Ornith-1.5-397B-GGUF",
       "name": "ornith-ai/Ornith-1.5-397B-GGUF",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B-GGUF",
-      "runtime": [
-        "python",
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -113,9 +108,7 @@
       "id": "ornith-ai/Ornith-1.5-397B-FP8",
       "name": "ornith-ai/Ornith-1.5-397B-FP8",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B-FP8",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"

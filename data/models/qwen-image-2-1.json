@@ -15,7 +15,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:qwen"
   ],
@@ -106,9 +106,7 @@
       "id": "unsloth/Qwen-Image-2.1-FP8",
       "name": "unsloth/Qwen-Image-2.1-FP8",
       "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-FP8",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
@@ -117,9 +115,7 @@
       "id": "unsloth/Qwen-Image-2.1",
       "name": "unsloth/Qwen-Image-2.1",
       "url": "https://huggingface.co/unsloth/Qwen-Image-2.1",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": null,
       "relation": null,
       "status": "build"
@@ -128,9 +124,7 @@
       "id": "unsloth/Qwen-Image-2.1-GGUF",
       "name": "unsloth/Qwen-Image-2.1-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

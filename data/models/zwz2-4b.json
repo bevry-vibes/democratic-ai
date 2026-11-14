@@ -16,7 +16,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "family:qwen"
   ],
   "capabilities": {
@@ -99,9 +99,7 @@
       "id": "inclusionAI/ZwZ2-4B-GGUF",
       "name": "inclusionAI/ZwZ2-4B-GGUF",
       "url": "https://huggingface.co/inclusionAI/ZwZ2-4B-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

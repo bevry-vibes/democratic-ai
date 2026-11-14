@@ -14,7 +14,7 @@
     "task:text-generation",
     "domain:language",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "license:other"
   ],
   "capabilities": {
@@ -103,10 +103,7 @@
       "id": "LiquidAI/LFM2-24B-A2B-GGUF",
       "name": "LiquidAI/LFM2-24B-A2B-GGUF",
       "url": "https://huggingface.co/LiquidAI/LFM2-24B-A2B-GGUF",
-      "runtime": [
-        "python",
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

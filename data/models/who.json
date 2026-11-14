@@ -14,7 +14,7 @@
     "task:diarization",
     "task:voice-activity-detection",
     "domain:speech",
-    "runtime:litert",
+    "access:litert",
     "license:other"
   ],
   "capabilities": {

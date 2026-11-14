@@ -16,7 +16,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:lfm"
   ],
@@ -93,9 +93,7 @@
       "id": "FluidInference/d1-omni-600m-coreml",
       "name": "FluidInference/d1-omni-600m-coreml",
       "url": "https://huggingface.co/FluidInference/d1-omni-600m-coreml",
-      "runtime": [
-        "coreml"
-      ],
+      "runtime": [],
       "quantization": "CoreML",
       "relation": "conversion",
       "status": "build"
@@ -104,9 +102,7 @@
       "id": "LiquidAI/d1-omni-600M-MLX-8bit",
       "name": "LiquidAI/d1-omni-600M-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/d1-omni-600M-MLX-8bit",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "8-bit",
       "relation": "quantized",
       "status": "build"
@@ -115,9 +111,7 @@
       "id": "LiquidAI/d1-omni-600M-GGUF",
       "name": "LiquidAI/d1-omni-600M-GGUF",
       "url": "https://huggingface.co/LiquidAI/d1-omni-600M-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

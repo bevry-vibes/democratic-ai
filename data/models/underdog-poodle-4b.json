@@ -16,7 +16,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "context:non-commercial",
     "license:cc-by-nc-4.0",
     "family:qwen"

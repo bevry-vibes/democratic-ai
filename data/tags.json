@@ -72,27 +72,6 @@
         "pdf": "PDF document input: reports, papers, and scanned pages."
       }
     },
-    "runtime": {
-      "definition": "Where the model can run: a harness, a hosted API, or a local runtime.",
-      "values": {
-        "browser": "In a web browser, usually through WASM or WebGPU.",
-        "node": "In Node or Deno.",
-        "python": "In a Python process.",
-        "llama.cpp": "Through llama.cpp or a compatible server.",
-        "ollama": "Through Ollama.",
-        "mlx": "Through Apple MLX.",
-        "coreml": "Through Apple Core ML.",
-        "litert": "Through Google LiteRT.",
-        "onnx": "Through ONNX Runtime.",
-        "android": "On Android.",
-        "ios": "On iOS.",
-        "hosted": "Through a hosted API.",
-        "webgpu": "In a browser through WebGPU.",
-        "opencode": "Through OpenCode, the open-source coding agent.",
-        "cloudflare": "Through Cloudflare Workers AI.",
-        "openrouter": "Through the OpenRouter API."
-      }
-    },
     "language": {
       "definition": "A language the model handles, or its language coverage.",
       "values": {
@@ -215,6 +194,27 @@
         "conversion": "A runtime conversion, such as MLX, CoreML, ONNX, or OpenVINO.",
         "probe": "An internal evaluation probe.",
         "repackaged": "A repackaged or redistributed copy of a base model by a packaging organisation."
+      }
+    },
+    "access": {
+      "definition": "How the model is accessed: a harness, a hosted API, or a local runtime.",
+      "values": {
+        "browser": "In a web browser, usually through WASM or WebGPU.",
+        "node": "In Node or Deno.",
+        "python": "In a Python process.",
+        "llama.cpp": "Through llama.cpp or a compatible server.",
+        "ollama": "Through Ollama.",
+        "mlx": "Through Apple MLX.",
+        "coreml": "Through Apple Core ML.",
+        "litert": "Through Google LiteRT.",
+        "onnx": "Through ONNX Runtime.",
+        "android": "On Android.",
+        "ios": "On iOS.",
+        "hosted": "Through a hosted API.",
+        "webgpu": "In a browser through WebGPU.",
+        "opencode": "Through OpenCode, the open-source coding agent.",
+        "cloudflare": "Through Cloudflare Workers AI.",
+        "openrouter": "Through the OpenRouter API."
       }
     }
   }

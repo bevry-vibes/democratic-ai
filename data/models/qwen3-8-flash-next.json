@@ -19,7 +19,7 @@
     "modality:image",
     "modality:text",
     "modality:video",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:qwen"
   ],
@@ -174,9 +174,7 @@
       "id": "nace-ai/Qwen3.8-Flash-Next-GGUF",
       "name": "nace-ai/Qwen3.8-Flash-Next-GGUF",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-Flash-Next-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -185,9 +183,7 @@
       "id": "nace-ai/Qwen3.8-Flash-Next-MLX",
       "name": "nace-ai/Qwen3.8-Flash-Next-MLX",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-Flash-Next-MLX",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "MLX",
       "relation": "conversion",
       "status": "build"
@@ -196,9 +192,7 @@
       "id": "nace-ai/Qwen3.8-Flash-Next-MLX-4bit",
       "name": "nace-ai/Qwen3.8-Flash-Next-MLX-4bit",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-Flash-Next-MLX-4bit",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "4-bit",
       "relation": "quantized",
       "status": "build"
@@ -207,9 +201,7 @@
       "id": "Qwen/Qwen3.8-Flash-Next-FP8",
       "name": "Qwen/Qwen3.8-Flash-Next-FP8",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
@@ -218,9 +210,7 @@
       "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
       "name": "unsloth/Qwen3.8-Flash-Next-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -229,9 +219,7 @@
       "id": "unsloth/Qwen3.8-Flash-Next",
       "name": "unsloth/Qwen3.8-Flash-Next",
       "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": null,
       "relation": null,
       "status": "build"

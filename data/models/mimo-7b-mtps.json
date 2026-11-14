@@ -13,7 +13,7 @@
   "tags": [
     "task:embedding",
     "domain:embeddings",
-    "runtime:python",
+    "access:python",
     "context:commercial-safe",
     "license:mit"
   ],

@@ -14,7 +14,7 @@
     "task:text-generation",
     "domain:language",
     "domain:vision",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:qwen"
   ],

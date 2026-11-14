@@ -15,7 +15,7 @@
     "task:speech-synthesis",
     "domain:embeddings",
     "domain:speech",
-    "runtime:python",
+    "access:python",
     "license:other"
   ],
   "capabilities": {

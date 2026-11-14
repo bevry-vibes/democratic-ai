@@ -19,8 +19,8 @@
     "modality:image",
     "modality:text",
     "modality:video",
-    "runtime:opencode",
-    "runtime:openrouter",
+    "access:opencode",
+    "access:openrouter",
     "license:other",
     "family:step"
   ],

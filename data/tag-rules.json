@@ -119,17 +119,17 @@
     ]
   },
   "libraries": {
-    "transformers": "runtime:python",
-    "mlx": "runtime:mlx",
-    "coreml": "runtime:coreml",
-    "gguf": "runtime:llama.cpp",
-    "llama.cpp": "runtime:llama.cpp",
-    "ggml": "runtime:llama.cpp",
-    "litert": "runtime:litert",
-    "onnxruntime": "runtime:onnx",
-    "onnx": "runtime:onnx",
-    "fluidaudio": "runtime:ios",
-    "diffusers": "runtime:python"
+    "transformers": "access:python",
+    "mlx": "access:mlx",
+    "coreml": "access:coreml",
+    "gguf": "access:llama.cpp",
+    "llama.cpp": "access:llama.cpp",
+    "ggml": "access:llama.cpp",
+    "litert": "access:litert",
+    "onnxruntime": "access:onnx",
+    "onnx": "access:onnx",
+    "fluidaudio": "access:ios",
+    "diffusers": "access:python"
   },
   "families": {
     "qwen": "qwen",
@@ -532,25 +532,25 @@
     ]
   },
   "title_runtimes": {
-    "runtime:llama.cpp": [
+    "access:llama.cpp": [
       "gguf",
       "ggml"
     ],
-    "runtime:mlx": [
+    "access:mlx": [
       "mlx"
     ],
-    "runtime:coreml": [
+    "access:coreml": [
       "coreml"
     ],
-    "runtime:onnx": [
+    "access:onnx": [
       "onnx",
       "openvino",
       "-ov"
     ],
-    "runtime:litert": [
+    "access:litert": [
       "litert"
     ],
-    "runtime:webgpu": [
+    "access:webgpu": [
       "webgpu"
     ]
   },

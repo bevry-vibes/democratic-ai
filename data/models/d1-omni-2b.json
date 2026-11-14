@@ -15,7 +15,7 @@
     "domain:language",
     "domain:multimodal",
     "domain:speech",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:lfm"
   ],
@@ -89,9 +89,7 @@
       "id": "LiquidAI/d1-Omni-2B-ONNX",
       "name": "LiquidAI/d1-Omni-2B-ONNX",
       "url": "https://huggingface.co/LiquidAI/d1-Omni-2B-ONNX",
-      "runtime": [
-        "onnx"
-      ],
+      "runtime": [],
       "quantization": "ONNX",
       "relation": "conversion",
       "status": "build"
@@ -100,9 +98,7 @@
       "id": "LiquidAI/d1-Omni-2B-MLX-8bit",
       "name": "LiquidAI/d1-Omni-2B-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/d1-Omni-2B-MLX-8bit",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "8-bit",
       "relation": "quantized",
       "status": "build"
@@ -111,9 +107,7 @@
       "id": "LiquidAI/d1-Omni-2B-GGUF",
       "name": "LiquidAI/d1-Omni-2B-GGUF",
       "url": "https://huggingface.co/LiquidAI/d1-Omni-2B-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

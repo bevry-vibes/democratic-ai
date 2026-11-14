@@ -13,7 +13,7 @@
   "tags": [
     "task:text-generation",
     "domain:language",
-    "runtime:python",
+    "access:python",
     "license:other"
   ],
   "capabilities": {
@@ -87,9 +87,7 @@
       "id": "baidu/ERNIE-5.5-Flash-Base-BF16",
       "name": "baidu/ERNIE-5.5-Flash-Base-BF16",
       "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base-BF16",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "BF16",
       "relation": null,
       "status": "build"

@@ -14,7 +14,7 @@
     "task:content-moderation",
     "task:text-classification",
     "domain:language",
-    "runtime:litert",
+    "access:litert",
     "license:other"
   ],
   "capabilities": {

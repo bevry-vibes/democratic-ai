@@ -16,7 +16,7 @@
     "task:tool-calling",
     "domain:language",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:minimax"
   ],

@@ -13,7 +13,7 @@
   "tags": [
     "task:text-generation",
     "domain:language",
-    "runtime:python",
+    "access:python",
     "license:other"
   ],
   "capabilities": {

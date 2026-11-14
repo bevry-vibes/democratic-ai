@@ -14,7 +14,7 @@
     "task:image-understanding",
     "task:ocr",
     "domain:vision",
-    "runtime:python",
+    "access:python",
     "context:commercial-safe",
     "license:mit"
   ],

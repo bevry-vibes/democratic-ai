@@ -14,7 +14,7 @@
     "task:text-classification",
     "task:topic-tagging",
     "domain:language",
-    "runtime:litert",
+    "access:litert",
     "license:other"
   ],
   "capabilities": {

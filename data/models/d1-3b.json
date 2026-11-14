@@ -16,7 +16,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "license:other",
     "family:lfm"
   ],
@@ -93,9 +93,7 @@
       "id": "LiquidAI/d1-3B-MLX-4bit",
       "name": "LiquidAI/d1-3B-MLX-4bit",
       "url": "https://huggingface.co/LiquidAI/d1-3B-MLX-4bit",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "4-bit",
       "relation": "quantized",
       "status": "build"
@@ -104,9 +102,7 @@
       "id": "LiquidAI/d1-3B-MLX-8bit",
       "name": "LiquidAI/d1-3B-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/d1-3B-MLX-8bit",
-      "runtime": [
-        "mlx"
-      ],
+      "runtime": [],
       "quantization": "8-bit",
       "relation": "quantized",
       "status": "build"
@@ -115,9 +111,7 @@
       "id": "LiquidAI/d1-3B-w8a8",
       "name": "LiquidAI/d1-3B-w8a8",
       "url": "https://huggingface.co/LiquidAI/d1-3B-w8a8",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "W8A8",
       "relation": "quantized",
       "status": "build"
@@ -126,9 +120,7 @@
       "id": "LiquidAI/d1-3B-GGUF",
       "name": "LiquidAI/d1-3B-GGUF",
       "url": "https://huggingface.co/LiquidAI/d1-3B-GGUF",
-      "runtime": [
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"

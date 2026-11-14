@@ -13,7 +13,7 @@
   "tags": [
     "task:text-generation",
     "domain:language",
-    "runtime:webgpu",
+    "access:webgpu",
     "context:commercial-safe",
     "context:on-device",
     "license:mit",

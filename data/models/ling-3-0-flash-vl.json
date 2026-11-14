@@ -19,7 +19,7 @@
     "modality:image",
     "modality:text",
     "modality:video",
-    "runtime:openrouter",
+    "access:openrouter",
     "context:commercial-safe",
     "license:mit"
   ],

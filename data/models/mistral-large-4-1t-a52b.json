@@ -16,7 +16,7 @@
     "domain:vision",
     "modality:image",
     "modality:text",
-    "runtime:python",
+    "access:python",
     "license:other"
   ],
   "capabilities": {
@@ -93,10 +93,7 @@
       "id": "unsloth/Mistral-Large-4-1T-A52B-GGUF",
       "name": "unsloth/Mistral-Large-4-1T-A52B-GGUF",
       "url": "https://huggingface.co/unsloth/Mistral-Large-4-1T-A52B-GGUF",
-      "runtime": [
-        "python",
-        "llama.cpp"
-      ],
+      "runtime": [],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -105,9 +102,7 @@
       "id": "unsloth/Mistral-Large-4-1T-A52B-NVFP4",
       "name": "unsloth/Mistral-Large-4-1T-A52B-NVFP4",
       "url": "https://huggingface.co/unsloth/Mistral-Large-4-1T-A52B-NVFP4",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP4",
       "relation": "quantized",
       "status": "build"
@@ -116,9 +111,7 @@
       "id": "unsloth/Mistral-Large-4-1T-A52B-FP8",
       "name": "unsloth/Mistral-Large-4-1T-A52B-FP8",
       "url": "https://huggingface.co/unsloth/Mistral-Large-4-1T-A52B-FP8",
-      "runtime": [
-        "python"
-      ],
+      "runtime": [],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
