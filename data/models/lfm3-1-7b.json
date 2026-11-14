@@ -96,7 +96,7 @@
   "builds": [
     {
       "id": "LiquidAI/LFM3-1.7B-NVFP4",
-      "name": "LFM3-1.7B-NVFP4",
+      "name": "LiquidAI/LFM3-1.7B-NVFP4",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-NVFP4",
       "runtime": [
         "python"
@@ -107,7 +107,7 @@
     },
     {
       "id": "LiquidAI/LFM3-1.7B-FP8",
-      "name": "LFM3-1.7B-FP8",
+      "name": "LiquidAI/LFM3-1.7B-FP8",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-FP8",
       "runtime": [
         "python"
@@ -118,7 +118,7 @@
     },
     {
       "id": "LiquidAI/LFM3-1.7B-MLX-bf16",
-      "name": "LFM3-1.7B-MLX-bf16",
+      "name": "LiquidAI/LFM3-1.7B-MLX-bf16",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-bf16",
       "runtime": [
         "mlx"
@@ -129,7 +129,7 @@
     },
     {
       "id": "LiquidAI/LFM3-1.7B-MLX-4bit",
-      "name": "LFM3-1.7B-MLX-4bit",
+      "name": "LiquidAI/LFM3-1.7B-MLX-4bit",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-4bit",
       "runtime": [
         "mlx"
@@ -140,7 +140,7 @@
     },
     {
       "id": "LiquidAI/LFM3-1.7B-ONNX",
-      "name": "LFM3-1.7B-ONNX",
+      "name": "LiquidAI/LFM3-1.7B-ONNX",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-ONNX",
       "runtime": [
         "onnx"
@@ -151,7 +151,7 @@
     },
     {
       "id": "LiquidAI/LFM3-1.7B-MLX-8bit",
-      "name": "LFM3-1.7B-MLX-8bit",
+      "name": "LiquidAI/LFM3-1.7B-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-8bit",
       "runtime": [
         "mlx"
@@ -162,7 +162,7 @@
     },
     {
       "id": "LiquidAI/LFM3-1.7B-GGUF",
-      "name": "LFM3-1.7B-GGUF",
+      "name": "LiquidAI/LFM3-1.7B-GGUF",
       "url": "https://huggingface.co/LiquidAI/LFM3-1.7B-GGUF",
       "runtime": [
         "llama.cpp"

@@ -82,7 +82,7 @@
   "builds": [
     {
       "id": "LiquidAI/LFM2.5-350M-GGUF",
-      "name": "LFM2.5-350M-GGUF",
+      "name": "LiquidAI/LFM2.5-350M-GGUF",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-350M-GGUF",
       "runtime": [
         "llama.cpp"

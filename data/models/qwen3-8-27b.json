@@ -126,7 +126,7 @@
   "builds": [
     {
       "id": "nace-ai/Qwen3.8-27B-GGUF",
-      "name": "Qwen3.8-27B-GGUF",
+      "name": "nace-ai/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-GGUF",
       "runtime": [
         "llama.cpp"
@@ -137,7 +137,7 @@
     },
     {
       "id": "nace-ai/Qwen3.8-27B-MLX",
-      "name": "Qwen3.8-27B-MLX",
+      "name": "nace-ai/Qwen3.8-27B-MLX",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-MLX",
       "runtime": [
         "mlx"
@@ -148,7 +148,7 @@
     },
     {
       "id": "nace-ai/Qwen3.8-27B-MLX-4bit",
-      "name": "Qwen3.8-27B-MLX-4bit",
+      "name": "nace-ai/Qwen3.8-27B-MLX-4bit",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-MLX-4bit",
       "runtime": [
         "mlx"
@@ -159,7 +159,7 @@
     },
     {
       "id": "nace-ai/Qwen3.8-27B-MLX-8bit",
-      "name": "Qwen3.8-27B-MLX-8bit",
+      "name": "nace-ai/Qwen3.8-27B-MLX-8bit",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-MLX-8bit",
       "runtime": [
         "mlx"
@@ -170,7 +170,7 @@
     },
     {
       "id": "nace-ai/Qwen3.8-27B-NVFP4",
-      "name": "Qwen3.8-27B-NVFP4",
+      "name": "nace-ai/Qwen3.8-27B-NVFP4",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-NVFP4",
       "runtime": [],
       "quantization": "FP4",
@@ -179,7 +179,7 @@
     },
     {
       "id": "Qwen/Qwen3.8-27B-FP8",
-      "name": "Qwen3.8-27B-FP8",
+      "name": "Qwen/Qwen3.8-27B-FP8",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
       "runtime": [
         "python"
@@ -190,7 +190,7 @@
     },
     {
       "id": "unsloth/Qwen3.8-27B-GGUF",
-      "name": "Qwen3.8-27B-GGUF",
+      "name": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
       "runtime": [
         "llama.cpp"
@@ -201,7 +201,7 @@
     },
     {
       "id": "unsloth/Qwen3.8-27B-NVFP4",
-      "name": "Qwen3.8-27B-NVFP4",
+      "name": "unsloth/Qwen3.8-27B-NVFP4",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-NVFP4",
       "runtime": [],
       "quantization": "FP4",

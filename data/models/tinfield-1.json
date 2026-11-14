@@ -88,7 +88,7 @@
   "builds": [
     {
       "id": "badtheorylabs/Tinfield-1-Q8_0-GGUF",
-      "name": "Tinfield-1-Q8_0-GGUF",
+      "name": "badtheorylabs/Tinfield-1-Q8_0-GGUF",
       "url": "https://huggingface.co/badtheorylabs/Tinfield-1-Q8_0-GGUF",
       "runtime": [
         "llama.cpp"

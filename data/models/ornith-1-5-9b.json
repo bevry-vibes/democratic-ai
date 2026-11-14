@@ -76,7 +76,7 @@
   "builds": [
     {
       "id": "ornith-ai/Ornith-1.5-9B-DFlash",
-      "name": "Ornith-1.5-9B-DFlash",
+      "name": "ornith-ai/Ornith-1.5-9B-DFlash",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B-DFlash",
       "runtime": [],
       "quantization": null,
@@ -85,7 +85,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-9B-NVFP4",
-      "name": "Ornith-1.5-9B-NVFP4",
+      "name": "ornith-ai/Ornith-1.5-9B-NVFP4",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B-NVFP4",
       "runtime": [
         "python"
@@ -96,7 +96,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-9B-GGUF",
-      "name": "Ornith-1.5-9B-GGUF",
+      "name": "ornith-ai/Ornith-1.5-9B-GGUF",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B-GGUF",
       "runtime": [
         "python",
@@ -108,7 +108,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-9B-MLX-8bit",
-      "name": "Ornith-1.5-9B-MLX-8bit",
+      "name": "ornith-ai/Ornith-1.5-9B-MLX-8bit",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B-MLX-8bit",
       "runtime": [
         "mlx"
@@ -119,7 +119,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-9B-MLX-4bit",
-      "name": "Ornith-1.5-9B-MLX-4bit",
+      "name": "ornith-ai/Ornith-1.5-9B-MLX-4bit",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B-MLX-4bit",
       "runtime": [
         "mlx"
@@ -130,7 +130,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-9B-MLX",
-      "name": "Ornith-1.5-9B-MLX",
+      "name": "ornith-ai/Ornith-1.5-9B-MLX",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-9B-MLX",
       "runtime": [
         "mlx"

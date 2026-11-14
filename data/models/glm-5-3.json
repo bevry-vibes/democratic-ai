@@ -120,7 +120,7 @@
   "builds": [
     {
       "id": "unsloth/GLM-5.3-GGUF",
-      "name": "GLM-5.3-GGUF",
+      "name": "unsloth/GLM-5.3-GGUF",
       "url": "https://huggingface.co/unsloth/GLM-5.3-GGUF",
       "runtime": [
         "python",
@@ -132,7 +132,7 @@
     },
     {
       "id": "unsloth/GLM-5.3",
-      "name": "GLM-5.3",
+      "name": "unsloth/GLM-5.3",
       "url": "https://huggingface.co/unsloth/GLM-5.3",
       "runtime": [
         "python"
@@ -143,7 +143,7 @@
     },
     {
       "id": "zai-org/GLM-5.3-BF16",
-      "name": "GLM-5.3-BF16",
+      "name": "zai-org/GLM-5.3-BF16",
       "url": "https://huggingface.co/zai-org/GLM-5.3-BF16",
       "runtime": [
         "python"

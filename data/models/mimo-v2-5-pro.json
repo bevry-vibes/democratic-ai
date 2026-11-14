@@ -121,7 +121,7 @@
   "builds": [
     {
       "id": "XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
-      "name": "MiMo-V2.5-Pro-FP4-DFlash",
+      "name": "XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-Pro-FP4-DFlash",
       "runtime": [
         "python"

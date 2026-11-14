@@ -78,7 +78,7 @@
   "builds": [
     {
       "id": "nace-ai/drex-v1.5-Q8_0",
-      "name": "drex-v1.5-Q8_0",
+      "name": "nace-ai/drex-v1.5-Q8_0",
       "url": "https://huggingface.co/nace-ai/drex-v1.5-Q8_0",
       "runtime": [],
       "quantization": "Q8",

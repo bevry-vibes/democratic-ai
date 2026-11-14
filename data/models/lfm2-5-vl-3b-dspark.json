@@ -83,7 +83,7 @@
   "builds": [
     {
       "id": "LiquidAI/LFM2.5-VL-3B-DSpark-GGUF",
-      "name": "LFM2.5-VL-3B-DSpark-GGUF",
+      "name": "LiquidAI/LFM2.5-VL-3B-DSpark-GGUF",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-VL-3B-DSpark-GGUF",
       "runtime": [
         "llama.cpp"

@@ -89,7 +89,7 @@
   "builds": [
     {
       "id": "FluidInference/clef-vision-0.8b-coreml",
-      "name": "clef-vision-0.8b-coreml",
+      "name": "FluidInference/clef-vision-0.8b-coreml",
       "url": "https://huggingface.co/FluidInference/clef-vision-0.8b-coreml",
       "runtime": [
         "coreml"

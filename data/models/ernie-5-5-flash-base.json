@@ -75,7 +75,7 @@
   "builds": [
     {
       "id": "baidu/ERNIE-5.5-Flash-Base-BF16",
-      "name": "ERNIE-5.5-Flash-Base-BF16",
+      "name": "baidu/ERNIE-5.5-Flash-Base-BF16",
       "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base-BF16",
       "runtime": [
         "python"

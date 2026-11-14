@@ -88,7 +88,7 @@
   "builds": [
     {
       "id": "LiquidAI/d1-3B-MLX-4bit",
-      "name": "d1-3B-MLX-4bit",
+      "name": "LiquidAI/d1-3B-MLX-4bit",
       "url": "https://huggingface.co/LiquidAI/d1-3B-MLX-4bit",
       "runtime": [
         "mlx"
@@ -99,7 +99,7 @@
     },
     {
       "id": "LiquidAI/d1-3B-MLX-8bit",
-      "name": "d1-3B-MLX-8bit",
+      "name": "LiquidAI/d1-3B-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/d1-3B-MLX-8bit",
       "runtime": [
         "mlx"
@@ -110,7 +110,7 @@
     },
     {
       "id": "LiquidAI/d1-3B-w8a8",
-      "name": "d1-3B-w8a8",
+      "name": "LiquidAI/d1-3B-w8a8",
       "url": "https://huggingface.co/LiquidAI/d1-3B-w8a8",
       "runtime": [
         "python"
@@ -121,7 +121,7 @@
     },
     {
       "id": "LiquidAI/d1-3B-GGUF",
-      "name": "d1-3B-GGUF",
+      "name": "LiquidAI/d1-3B-GGUF",
       "url": "https://huggingface.co/LiquidAI/d1-3B-GGUF",
       "runtime": [
         "llama.cpp"

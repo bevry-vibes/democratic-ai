@@ -104,7 +104,7 @@
   "builds": [
     {
       "id": "inclusionAI/Ling-3.0-flash-VL-fp8",
-      "name": "Ling-3.0-flash-VL-fp8",
+      "name": "inclusionAI/Ling-3.0-flash-VL-fp8",
       "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL-fp8",
       "runtime": [],
       "quantization": "FP8",
@@ -113,7 +113,7 @@
     },
     {
       "id": "inclusionAI/Ling-3.0-flash-VL-int4",
-      "name": "Ling-3.0-flash-VL-int4",
+      "name": "inclusionAI/Ling-3.0-flash-VL-int4",
       "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL-int4",
       "runtime": [],
       "quantization": "INT4",
@@ -122,7 +122,7 @@
     },
     {
       "id": "inclusionAI/Ling-3.0-flash-VL-fp4",
-      "name": "Ling-3.0-flash-VL-fp4",
+      "name": "inclusionAI/Ling-3.0-flash-VL-fp4",
       "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-VL-fp4",
       "runtime": [],
       "quantization": "FP4",

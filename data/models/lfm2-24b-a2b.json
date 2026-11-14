@@ -85,7 +85,7 @@
   "builds": [
     {
       "id": "LiquidAI/LFM2-24B-A2B-GGUF",
-      "name": "LFM2-24B-A2B-GGUF",
+      "name": "LiquidAI/LFM2-24B-A2B-GGUF",
       "url": "https://huggingface.co/LiquidAI/LFM2-24B-A2B-GGUF",
       "runtime": [
         "python",

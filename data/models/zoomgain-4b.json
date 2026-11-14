@@ -79,7 +79,7 @@
   "builds": [
     {
       "id": "inclusionAI/ZoomGain-4B-GGUF",
-      "name": "ZoomGain-4B-GGUF",
+      "name": "inclusionAI/ZoomGain-4B-GGUF",
       "url": "https://huggingface.co/inclusionAI/ZoomGain-4B-GGUF",
       "runtime": [
         "llama.cpp"

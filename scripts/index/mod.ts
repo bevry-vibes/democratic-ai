@@ -387,7 +387,7 @@ async function main(): Promise<void> {
       const buildRuntimes = buildTags.filter((tag) => tag.startsWith("runtime:")).map((tag) => tag.slice(8))
       return {
         id: build.item.source_id,
-        name: baseName(build.item.source_id),
+        name: build.item.source_id,
         url: `https://huggingface.co/${build.item.source_id}`,
         runtime: buildRuntimes,
         quantization: quantizationFrom(build.item.title),

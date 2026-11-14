@@ -76,7 +76,7 @@
   "builds": [
     {
       "id": "ornith-ai/Ornith-1.5-397B-NVFP4",
-      "name": "Ornith-1.5-397B-NVFP4",
+      "name": "ornith-ai/Ornith-1.5-397B-NVFP4",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B-NVFP4",
       "runtime": [
         "python"
@@ -87,7 +87,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-397B-DFlash",
-      "name": "Ornith-1.5-397B-DFlash",
+      "name": "ornith-ai/Ornith-1.5-397B-DFlash",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B-DFlash",
       "runtime": [],
       "quantization": null,
@@ -96,7 +96,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-397B-GGUF",
-      "name": "Ornith-1.5-397B-GGUF",
+      "name": "ornith-ai/Ornith-1.5-397B-GGUF",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B-GGUF",
       "runtime": [
         "python",
@@ -108,7 +108,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-397B-FP8",
-      "name": "Ornith-1.5-397B-FP8",
+      "name": "ornith-ai/Ornith-1.5-397B-FP8",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B-FP8",
       "runtime": [
         "python"

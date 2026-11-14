@@ -85,7 +85,7 @@
   "builds": [
     {
       "id": "unsloth/Qwen-Image-2.1-Turbo-GGUF",
-      "name": "Qwen-Image-2.1-Turbo-GGUF",
+      "name": "unsloth/Qwen-Image-2.1-Turbo-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-GGUF",
       "runtime": [
         "llama.cpp"
@@ -96,7 +96,7 @@
     },
     {
       "id": "unsloth/Qwen-Image-2.1-Turbo-FP8",
-      "name": "Qwen-Image-2.1-Turbo-FP8",
+      "name": "unsloth/Qwen-Image-2.1-Turbo-FP8",
       "url": "https://huggingface.co/unsloth/Qwen-Image-2.1-Turbo-FP8",
       "runtime": [
         "python"

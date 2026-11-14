@@ -81,7 +81,7 @@
   "builds": [
     {
       "id": "webAI-Official/TwIL-LM3-Pro-LiteRT-LM",
-      "name": "TwIL-LM3-Pro-LiteRT-LM",
+      "name": "webAI-Official/TwIL-LM3-Pro-LiteRT-LM",
       "url": "https://huggingface.co/webAI-Official/TwIL-LM3-Pro-LiteRT-LM",
       "runtime": [
         "litert"

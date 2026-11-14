@@ -121,7 +121,7 @@
   "builds": [
     {
       "id": "unsloth/Inkling-2-Small-GGUF",
-      "name": "Inkling-2-Small-GGUF",
+      "name": "unsloth/Inkling-2-Small-GGUF",
       "url": "https://huggingface.co/unsloth/Inkling-2-Small-GGUF",
       "runtime": [
         "llama.cpp"
@@ -132,7 +132,7 @@
     },
     {
       "id": "thinkingmachines/Inkling-2-Small-MXFP8",
-      "name": "Inkling-2-Small-MXFP8",
+      "name": "thinkingmachines/Inkling-2-Small-MXFP8",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small-MXFP8",
       "runtime": [
         "python"

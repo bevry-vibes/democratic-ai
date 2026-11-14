@@ -98,7 +98,7 @@
   "builds": [
     {
       "id": "stepfun-ai/Step-5-Preview-BF16",
-      "name": "Step-5-Preview-BF16",
+      "name": "stepfun-ai/Step-5-Preview-BF16",
       "url": "https://huggingface.co/stepfun-ai/Step-5-Preview-BF16",
       "runtime": [],
       "quantization": "BF16",
@@ -107,7 +107,7 @@
     },
     {
       "id": "stepfun-ai/Step-5-Preview-NVFP4",
-      "name": "Step-5-Preview-NVFP4",
+      "name": "stepfun-ai/Step-5-Preview-NVFP4",
       "url": "https://huggingface.co/stepfun-ai/Step-5-Preview-NVFP4",
       "runtime": [],
       "quantization": "FP4",

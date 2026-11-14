@@ -70,7 +70,7 @@
   "builds": [
     {
       "id": "nace-ai/drex-max-v1-Q8_0",
-      "name": "drex-max-v1-Q8_0",
+      "name": "nace-ai/drex-max-v1-Q8_0",
       "url": "https://huggingface.co/nace-ai/drex-max-v1-Q8_0",
       "runtime": [],
       "quantization": "Q8",

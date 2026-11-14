@@ -89,7 +89,7 @@
   "builds": [
     {
       "id": "ConwayResearch/Underdog-Poodle-4B-DFlash",
-      "name": "Underdog-Poodle-4B-DFlash",
+      "name": "ConwayResearch/Underdog-Poodle-4B-DFlash",
       "url": "https://huggingface.co/ConwayResearch/Underdog-Poodle-4B-DFlash",
       "runtime": [],
       "quantization": null,

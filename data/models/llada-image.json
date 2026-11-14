@@ -79,7 +79,7 @@
   "builds": [
     {
       "id": "inclusionAI/LLaDA-Image-FP8",
-      "name": "LLaDA-Image-FP8",
+      "name": "inclusionAI/LLaDA-Image-FP8",
       "url": "https://huggingface.co/inclusionAI/LLaDA-Image-FP8",
       "runtime": [
         "python"

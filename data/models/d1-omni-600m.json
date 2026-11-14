@@ -88,7 +88,7 @@
   "builds": [
     {
       "id": "FluidInference/d1-omni-600m-coreml",
-      "name": "d1-omni-600m-coreml",
+      "name": "FluidInference/d1-omni-600m-coreml",
       "url": "https://huggingface.co/FluidInference/d1-omni-600m-coreml",
       "runtime": [
         "coreml"
@@ -99,7 +99,7 @@
     },
     {
       "id": "LiquidAI/d1-omni-600M-MLX-8bit",
-      "name": "d1-omni-600M-MLX-8bit",
+      "name": "LiquidAI/d1-omni-600M-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/d1-omni-600M-MLX-8bit",
       "runtime": [
         "mlx"
@@ -110,7 +110,7 @@
     },
     {
       "id": "LiquidAI/d1-omni-600M-GGUF",
-      "name": "d1-omni-600M-GGUF",
+      "name": "LiquidAI/d1-omni-600M-GGUF",
       "url": "https://huggingface.co/LiquidAI/d1-omni-600M-GGUF",
       "runtime": [
         "llama.cpp"

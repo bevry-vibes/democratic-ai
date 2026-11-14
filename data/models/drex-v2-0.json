@@ -78,7 +78,7 @@
   "builds": [
     {
       "id": "nace-ai/drex-v2.0-Q8_0",
-      "name": "drex-v2.0-Q8_0",
+      "name": "nace-ai/drex-v2.0-Q8_0",
       "url": "https://huggingface.co/nace-ai/drex-v2.0-Q8_0",
       "runtime": [],
       "quantization": "Q8",
@@ -87,7 +87,7 @@
     },
     {
       "id": "nace-ai/drex-v2.0-Q4_K_M",
-      "name": "drex-v2.0-Q4_K_M",
+      "name": "nace-ai/drex-v2.0-Q4_K_M",
       "url": "https://huggingface.co/nace-ai/drex-v2.0-Q4_K_M",
       "runtime": [],
       "quantization": "Q4",

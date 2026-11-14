@@ -84,7 +84,7 @@
   "builds": [
     {
       "id": "FluidInference/lfm3-audio-2b-coreml",
-      "name": "lfm3-audio-2b-coreml",
+      "name": "FluidInference/lfm3-audio-2b-coreml",
       "url": "https://huggingface.co/FluidInference/lfm3-audio-2b-coreml",
       "runtime": [
         "ios",
@@ -96,7 +96,7 @@
     },
     {
       "id": "FluidInference/lfm3-audio-2b-coreai",
-      "name": "lfm3-audio-2b-coreai",
+      "name": "FluidInference/lfm3-audio-2b-coreai",
       "url": "https://huggingface.co/FluidInference/lfm3-audio-2b-coreai",
       "runtime": [
         "ios"
@@ -107,7 +107,7 @@
     },
     {
       "id": "LiquidAI/LFM3-Audio-2B-ONNX",
-      "name": "LFM3-Audio-2B-ONNX",
+      "name": "LiquidAI/LFM3-Audio-2B-ONNX",
       "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-ONNX",
       "runtime": [
         "onnx"
@@ -118,7 +118,7 @@
     },
     {
       "id": "LiquidAI/LFM3-Audio-2B-MLX-bf16",
-      "name": "LFM3-Audio-2B-MLX-bf16",
+      "name": "LiquidAI/LFM3-Audio-2B-MLX-bf16",
       "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-MLX-bf16",
       "runtime": [
         "mlx"
@@ -129,7 +129,7 @@
     },
     {
       "id": "LiquidAI/LFM3-Audio-2B-MLX-8bit",
-      "name": "LFM3-Audio-2B-MLX-8bit",
+      "name": "LiquidAI/LFM3-Audio-2B-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-MLX-8bit",
       "runtime": [
         "mlx"
@@ -140,7 +140,7 @@
     },
     {
       "id": "LiquidAI/LFM3-Audio-2B-MLX-4bit",
-      "name": "LFM3-Audio-2B-MLX-4bit",
+      "name": "LiquidAI/LFM3-Audio-2B-MLX-4bit",
       "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-MLX-4bit",
       "runtime": [
         "mlx"
@@ -151,7 +151,7 @@
     },
     {
       "id": "LiquidAI/LFM3-Audio-2B-GGUF",
-      "name": "LFM3-Audio-2B-GGUF",
+      "name": "LiquidAI/LFM3-Audio-2B-GGUF",
       "url": "https://huggingface.co/LiquidAI/LFM3-Audio-2B-GGUF",
       "runtime": [
         "llama.cpp"

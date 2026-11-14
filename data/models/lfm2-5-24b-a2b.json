@@ -89,7 +89,7 @@
   "builds": [
     {
       "id": "unsloth/LFM2.5-24B-A2B-GGUF",
-      "name": "LFM2.5-24B-A2B-GGUF",
+      "name": "unsloth/LFM2.5-24B-A2B-GGUF",
       "url": "https://huggingface.co/unsloth/LFM2.5-24B-A2B-GGUF",
       "runtime": [
         "python",
@@ -101,7 +101,7 @@
     },
     {
       "id": "unsloth/LFM2.5-24B-A2B",
-      "name": "LFM2.5-24B-A2B",
+      "name": "unsloth/LFM2.5-24B-A2B",
       "url": "https://huggingface.co/unsloth/LFM2.5-24B-A2B",
       "runtime": [
         "python"
@@ -112,7 +112,7 @@
     },
     {
       "id": "LiquidAI/LFM2.5-24B-A2B-GGUF",
-      "name": "LFM2.5-24B-A2B-GGUF",
+      "name": "LiquidAI/LFM2.5-24B-A2B-GGUF",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-GGUF",
       "runtime": [
         "llama.cpp"
@@ -123,7 +123,7 @@
     },
     {
       "id": "LiquidAI/LFM2.5-24B-A2B-FP8",
-      "name": "LFM2.5-24B-A2B-FP8",
+      "name": "LiquidAI/LFM2.5-24B-A2B-FP8",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-FP8",
       "runtime": [
         "python"
@@ -134,7 +134,7 @@
     },
     {
       "id": "LiquidAI/LFM2.5-24B-A2B-MLX-8bit",
-      "name": "LFM2.5-24B-A2B-MLX-8bit",
+      "name": "LiquidAI/LFM2.5-24B-A2B-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-MLX-8bit",
       "runtime": [
         "mlx"
@@ -145,7 +145,7 @@
     },
     {
       "id": "LiquidAI/LFM2.5-24B-A2B-ONNX",
-      "name": "LFM2.5-24B-A2B-ONNX",
+      "name": "LiquidAI/LFM2.5-24B-A2B-ONNX",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-ONNX",
       "runtime": [
         "onnx"
@@ -156,7 +156,7 @@
     },
     {
       "id": "LiquidAI/LFM2.5-24B-A2B-MLX-4bit",
-      "name": "LFM2.5-24B-A2B-MLX-4bit",
+      "name": "LiquidAI/LFM2.5-24B-A2B-MLX-4bit",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-MLX-4bit",
       "runtime": [
         "mlx"
@@ -167,7 +167,7 @@
     },
     {
       "id": "LiquidAI/LFM2.5-24B-A2B-MLX-bf16",
-      "name": "LFM2.5-24B-A2B-MLX-bf16",
+      "name": "LiquidAI/LFM2.5-24B-A2B-MLX-bf16",
       "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-MLX-bf16",
       "runtime": [
         "mlx"

@@ -87,7 +87,7 @@
   "builds": [
     {
       "id": "inclusionAI/ZwZ2-9B-GGUF",
-      "name": "ZwZ2-9B-GGUF",
+      "name": "inclusionAI/ZwZ2-9B-GGUF",
       "url": "https://huggingface.co/inclusionAI/ZwZ2-9B-GGUF",
       "runtime": [
         "llama.cpp"

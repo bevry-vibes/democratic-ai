@@ -92,7 +92,7 @@
   "builds": [
     {
       "id": "unsloth/MiniMax-H3-FP8",
-      "name": "MiniMax-H3-FP8",
+      "name": "unsloth/MiniMax-H3-FP8",
       "url": "https://huggingface.co/unsloth/MiniMax-H3-FP8",
       "runtime": [],
       "quantization": "FP8",
@@ -101,7 +101,7 @@
     },
     {
       "id": "unsloth/MiniMax-H3-GGUF",
-      "name": "MiniMax-H3-GGUF",
+      "name": "unsloth/MiniMax-H3-GGUF",
       "url": "https://huggingface.co/unsloth/MiniMax-H3-GGUF",
       "runtime": [
         "llama.cpp"

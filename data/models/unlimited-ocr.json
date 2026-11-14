@@ -84,7 +84,7 @@
   "builds": [
     {
       "id": "FluidInference/unlimited-ocr-mlx-coreml",
-      "name": "unlimited-ocr-mlx-coreml",
+      "name": "FluidInference/unlimited-ocr-mlx-coreml",
       "url": "https://huggingface.co/FluidInference/unlimited-ocr-mlx-coreml",
       "runtime": [
         "mlx",

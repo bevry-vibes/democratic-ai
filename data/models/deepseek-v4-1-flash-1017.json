@@ -123,7 +123,7 @@
   "builds": [
     {
       "id": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
-      "name": "DeepSeek-V4.1-Flash-1017-GGUF",
+      "name": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
       "url": "https://huggingface.co/unsloth/DeepSeek-V4.1-Flash-1017-GGUF",
       "runtime": [
         "llama.cpp"
@@ -134,7 +134,7 @@
     },
     {
       "id": "unsloth/DeepSeek-V4.1-Flash-1017",
-      "name": "DeepSeek-V4.1-Flash-1017",
+      "name": "unsloth/DeepSeek-V4.1-Flash-1017",
       "url": "https://huggingface.co/unsloth/DeepSeek-V4.1-Flash-1017",
       "runtime": [
         "python"

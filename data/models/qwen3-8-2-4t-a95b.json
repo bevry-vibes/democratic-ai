@@ -113,7 +113,7 @@
   "builds": [
     {
       "id": "Qwen/Qwen3.8-2.4T-A95B-FP8",
-      "name": "Qwen3.8-2.4T-A95B-FP8",
+      "name": "Qwen/Qwen3.8-2.4T-A95B-FP8",
       "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B-FP8",
       "runtime": [
         "python"

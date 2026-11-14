@@ -79,7 +79,7 @@
   "builds": [
     {
       "id": "SyzygyResearch/Mach-2-Additive-Medium-GGUF",
-      "name": "Mach-2-Additive-Medium-GGUF",
+      "name": "SyzygyResearch/Mach-2-Additive-Medium-GGUF",
       "url": "https://huggingface.co/SyzygyResearch/Mach-2-Additive-Medium-GGUF",
       "runtime": [
         "llama.cpp"

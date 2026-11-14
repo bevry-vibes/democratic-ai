@@ -84,7 +84,7 @@
   "builds": [
     {
       "id": "inclusionAI/Duo-1.0-distill-quant",
-      "name": "Duo-1.0-distill-quant",
+      "name": "inclusionAI/Duo-1.0-distill-quant",
       "url": "https://huggingface.co/inclusionAI/Duo-1.0-distill-quant",
       "runtime": [],
       "quantization": null,

@@ -86,7 +86,7 @@
   "builds": [
     {
       "id": "ornith-ai/Ornith-1.5-122B-MLX",
-      "name": "Ornith-1.5-122B-MLX",
+      "name": "ornith-ai/Ornith-1.5-122B-MLX",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-MLX",
       "runtime": [
         "python",
@@ -98,7 +98,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-122B-MLX-8bit",
-      "name": "Ornith-1.5-122B-MLX-8bit",
+      "name": "ornith-ai/Ornith-1.5-122B-MLX-8bit",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-MLX-8bit",
       "runtime": [
         "python",
@@ -110,7 +110,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-122B-MLX-4bit",
-      "name": "Ornith-1.5-122B-MLX-4bit",
+      "name": "ornith-ai/Ornith-1.5-122B-MLX-4bit",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-MLX-4bit",
       "runtime": [
         "python",
@@ -122,7 +122,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-122B-GGUF",
-      "name": "Ornith-1.5-122B-GGUF",
+      "name": "ornith-ai/Ornith-1.5-122B-GGUF",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-GGUF",
       "runtime": [
         "python",
@@ -134,7 +134,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-122B-NVFP4",
-      "name": "Ornith-1.5-122B-NVFP4",
+      "name": "ornith-ai/Ornith-1.5-122B-NVFP4",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-NVFP4",
       "runtime": [
         "python"
@@ -145,7 +145,7 @@
     },
     {
       "id": "ornith-ai/Ornith-1.5-122B-FP8",
-      "name": "Ornith-1.5-122B-FP8",
+      "name": "ornith-ai/Ornith-1.5-122B-FP8",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-FP8",
       "runtime": [
         "python"
@@ -156,7 +156,7 @@
     },
     {
       "id": "unsloth/Ornith-1.5-122B-GGUF",
-      "name": "Ornith-1.5-122B-GGUF",
+      "name": "unsloth/Ornith-1.5-122B-GGUF",
       "url": "https://huggingface.co/unsloth/Ornith-1.5-122B-GGUF",
       "runtime": [
         "llama.cpp"

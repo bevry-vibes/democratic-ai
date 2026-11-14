@@ -113,7 +113,7 @@
   "builds": [
     {
       "id": "inclusionAI/Ling-3.0-flash-fp8",
-      "name": "Ling-3.0-flash-fp8",
+      "name": "inclusionAI/Ling-3.0-flash-fp8",
       "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-fp8",
       "runtime": [],
       "quantization": "FP8",

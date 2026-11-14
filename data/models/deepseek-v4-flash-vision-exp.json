@@ -114,7 +114,7 @@
   "builds": [
     {
       "id": "unsloth/DeepSeek-V4-Flash-Vision-Exp-GGUF",
-      "name": "DeepSeek-V4-Flash-Vision-Exp-GGUF",
+      "name": "unsloth/DeepSeek-V4-Flash-Vision-Exp-GGUF",
       "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-Vision-Exp-GGUF",
       "runtime": [
         "python",
@@ -126,7 +126,7 @@
     },
     {
       "id": "unsloth/DeepSeek-V4-Flash-Vision-Exp",
-      "name": "DeepSeek-V4-Flash-Vision-Exp",
+      "name": "unsloth/DeepSeek-V4-Flash-Vision-Exp",
       "url": "https://huggingface.co/unsloth/DeepSeek-V4-Flash-Vision-Exp",
       "runtime": [
         "python"

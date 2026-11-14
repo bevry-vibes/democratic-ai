@@ -89,7 +89,7 @@
   "builds": [
     {
       "id": "XiaomiMiMo/MiMo-VL-7B-SFT-GGUF",
-      "name": "MiMo-VL-7B-SFT-GGUF",
+      "name": "XiaomiMiMo/MiMo-VL-7B-SFT-GGUF",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-VL-7B-SFT-GGUF",
       "runtime": [
         "llama.cpp"

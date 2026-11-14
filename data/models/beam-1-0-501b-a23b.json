@@ -100,7 +100,7 @@
   "builds": [
     {
       "id": "reflection/Beam-1.0-501B-A23B-FP8",
-      "name": "Beam-1.0-501B-A23B-FP8",
+      "name": "reflection/Beam-1.0-501B-A23B-FP8",
       "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B-FP8",
       "runtime": [],
       "quantization": "FP8",
@@ -109,7 +109,7 @@
     },
     {
       "id": "reflection/Beam-1.0-501B-A23B-NVFP4",
-      "name": "Beam-1.0-501B-A23B-NVFP4",
+      "name": "reflection/Beam-1.0-501B-A23B-NVFP4",
       "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B-NVFP4",
       "runtime": [],
       "quantization": "FP4",
@@ -118,7 +118,7 @@
     },
     {
       "id": "unsloth/Beam-1.0-501B-A23B-GGUF",
-      "name": "Beam-1.0-501B-A23B-GGUF",
+      "name": "unsloth/Beam-1.0-501B-A23B-GGUF",
       "url": "https://huggingface.co/unsloth/Beam-1.0-501B-A23B-GGUF",
       "runtime": [
         "llama.cpp"

@@ -84,7 +84,7 @@
   "builds": [
     {
       "id": "LiquidAI/d1-Omni-2B-ONNX",
-      "name": "d1-Omni-2B-ONNX",
+      "name": "LiquidAI/d1-Omni-2B-ONNX",
       "url": "https://huggingface.co/LiquidAI/d1-Omni-2B-ONNX",
       "runtime": [
         "onnx"
@@ -95,7 +95,7 @@
     },
     {
       "id": "LiquidAI/d1-Omni-2B-MLX-8bit",
-      "name": "d1-Omni-2B-MLX-8bit",
+      "name": "LiquidAI/d1-Omni-2B-MLX-8bit",
       "url": "https://huggingface.co/LiquidAI/d1-Omni-2B-MLX-8bit",
       "runtime": [
         "mlx"
@@ -106,7 +106,7 @@
     },
     {
       "id": "LiquidAI/d1-Omni-2B-GGUF",
-      "name": "d1-Omni-2B-GGUF",
+      "name": "LiquidAI/d1-Omni-2B-GGUF",
       "url": "https://huggingface.co/LiquidAI/d1-Omni-2B-GGUF",
       "runtime": [
         "llama.cpp"

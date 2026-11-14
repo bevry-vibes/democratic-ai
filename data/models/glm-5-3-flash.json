@@ -125,7 +125,7 @@
   "builds": [
     {
       "id": "unsloth/GLM-5.3-Flash-GGUF",
-      "name": "GLM-5.3-Flash-GGUF",
+      "name": "unsloth/GLM-5.3-Flash-GGUF",
       "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-GGUF",
       "runtime": [
         "llama.cpp"
@@ -136,7 +136,7 @@
     },
     {
       "id": "unsloth/GLM-5.3-Flash-FP8",
-      "name": "GLM-5.3-Flash-FP8",
+      "name": "unsloth/GLM-5.3-Flash-FP8",
       "url": "https://huggingface.co/unsloth/GLM-5.3-Flash-FP8",
       "runtime": [
         "python"
@@ -147,7 +147,7 @@
     },
     {
       "id": "unsloth/GLM-5.3-Flash",
-      "name": "GLM-5.3-Flash",
+      "name": "unsloth/GLM-5.3-Flash",
       "url": "https://huggingface.co/unsloth/GLM-5.3-Flash",
       "runtime": [
         "python"
@@ -158,7 +158,7 @@
     },
     {
       "id": "zai-org/GLM-5.3-Flash-BF16",
-      "name": "GLM-5.3-Flash-BF16",
+      "name": "zai-org/GLM-5.3-Flash-BF16",
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash-BF16",
       "runtime": [
         "python"

@@ -118,7 +118,7 @@
   "builds": [
     {
       "id": "XiaomiMiMo/MiMo-V2.5-DFlash",
-      "name": "MiMo-V2.5-DFlash",
+      "name": "XiaomiMiMo/MiMo-V2.5-DFlash",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.5-DFlash",
       "runtime": [],
       "quantization": null,

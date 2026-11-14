@@ -123,7 +123,7 @@
   "builds": [
     {
       "id": "unsloth/MiniMax-M3.1-Flash-GGUF",
-      "name": "MiniMax-M3.1-Flash-GGUF",
+      "name": "unsloth/MiniMax-M3.1-Flash-GGUF",
       "url": "https://huggingface.co/unsloth/MiniMax-M3.1-Flash-GGUF",
       "runtime": [
         "llama.cpp"
@@ -134,7 +134,7 @@
     },
     {
       "id": "unsloth/MiniMax-M3.1-Flash",
-      "name": "MiniMax-M3.1-Flash",
+      "name": "unsloth/MiniMax-M3.1-Flash",
       "url": "https://huggingface.co/unsloth/MiniMax-M3.1-Flash",
       "runtime": [
         "python"
