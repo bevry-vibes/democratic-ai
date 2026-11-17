@@ -29,7 +29,22 @@ interface TaggedItem {
 }
 
 interface LinkIndex {
-  models: Record<string, { models_dev?: string; agent_detect?: string }>
+  models: Record<
+    string,
+    {
+      models_dev?: string
+      agent_detect?: string
+      providers?: string[]
+      provider_models?: Record<
+        string,
+        Array<{
+          id: string
+          name: string
+          cost: { input?: number; output?: number; cache_read?: number; cache_write?: number } | null
+        }>
+      >
+    }
+  >
 }
 
 interface SyndicationModel {
@@ -437,8 +452,19 @@ async function main(): Promise<void> {
   const buildsByRoot = new Map<string, TaggedItem[]>()
   const unmatchedBuilds: string[] = []
   for (const build of builds) {
-    const key = norm(build.item.source_id)
-    const root = rootByKey.get(key)
+    const item = itemMap.get(`${build.item.source}|${build.item.source_id}`)
+    const baseModel = item?.source_tags
+      ?.find((tag) => tag.startsWith("base_model:"))
+      ?.replace(/^base_model:(?:finetune|quantized|adapter|merge|conversion):/, "")
+      .replace(/^base_model:/, "")
+    const candidates = [baseModel, build.item.source_id].filter(
+      (candidate): candidate is string => typeof candidate === "string" && candidate.length > 0,
+    )
+    let root: TaggedItem | undefined
+    for (const candidate of candidates) {
+      root = rootByKey.get(norm(candidate))
+      if (root) break
+    }
     if (!root) {
       unmatchedBuilds.push(build.item.source_id)
       continue
