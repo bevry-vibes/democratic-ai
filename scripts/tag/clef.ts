@@ -122,6 +122,26 @@ function slug(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
 }
 
+async function readCachedClef(sourceId: string): Promise<ClefResponse | null> {
+  const name = `${slug(sourceId)}.v${PROMPT_VERSION}.json`
+  const today = await readIfExists(`data/raw/clef/${isoDate()}/${name}`)
+  if (today != null) return JSON.parse(today) as ClefResponse
+  try {
+    const dates: string[] = []
+    for await (const entry of Deno.readDir("data/raw/clef")) {
+      if (entry.isDirectory) dates.push(entry.name)
+    }
+    dates.sort().reverse()
+    for (const date of dates) {
+      const cached = await readIfExists(`data/raw/clef/${date}/${name}`)
+      if (cached != null) return JSON.parse(cached) as ClefResponse
+    }
+  } catch {
+    // The cache is optional; a missing directory means no cached response.
+  }
+  return null
+}
+
 function stripMarkdown(value: string): string {
   return value
     .replace(/^---[\s\S]*?---\s*/, "")
@@ -239,9 +259,9 @@ async function main(): Promise<void> {
     const sourceId = entry.item.source_id
     const cachePath = `data/raw/clef/${isoDate()}/${slug(sourceId)}.v${PROMPT_VERSION}.json`
     let response: ClefResponse
-    const cached = await readIfExists(cachePath)
+    const cached = await readCachedClef(sourceId)
     if (cached != null) {
-      response = JSON.parse(cached) as ClefResponse
+      response = cached
       reused++
     } else {
       const card = await readModelCard(sourceId, vars)
@@ -357,6 +377,7 @@ async function main(): Promise<void> {
       "Only models marked needs_review by the rules pass are sent to Clef.",
       "Clef answers one independent yes/no question per task. The accepted tasks are the ones at or above the threshold.",
       "Every response is cached under data/raw/clef/ and is never overwritten.",
+      "A cached response from an earlier day is reused when today's response is missing.",
       "A model with no accepted task stays in review. It is not guessed.",
     ],
   }
