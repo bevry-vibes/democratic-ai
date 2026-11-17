@@ -9,7 +9,7 @@
   "releases": [],
   "organization": "minimax",
   "released": "2026-04-09",
-  "summary": "MiniMax model for chat, coding, office work, and agentic tasks",
+  "summary": "Open MiniMax flagship for coding agents, office automation, and complex environments",
   "tags": [
     "task:reasoning",
     "task:text-generation",
@@ -83,12 +83,15 @@
       "frogbot",
       "gmicloud",
       "huggingface",
+      "iteracompute",
+      "joingonka",
       "kenari",
       "kilo",
       "llmgateway",
       "llmgateway-providers",
       "merge-gateway",
       "moark",
+      "moneo",
       "nano-gpt",
       "novita-ai",
       "ofox",
@@ -101,7 +104,6 @@
       "requesty",
       "scnet-token-plan",
       "scx-ai",
-      "tempr",
       "togetherai",
       "unorouter",
       "venice",
@@ -109,226 +111,6 @@
       "zenmux"
     ],
     "provider_models": {
-      "novita-ai": [
-        {
-          "id": "minimax/minimax-m2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "merge-gateway": [
-        {
-          "id": "minimax/minimax-m2.7",
-          "name": "MiniMax M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "cache_write": 0.375
-          }
-        }
-      ],
-      "togetherai": [
-        {
-          "id": "MiniMaxAI/MiniMax-M2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "moark": [
-        {
-          "id": "MiniMax-M2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.29,
-            "output": 1.2
-          }
-        }
-      ],
-      "scnet-token-plan": [
-        {
-          "id": "MiniMax-M2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "opencode": [
-        {
-          "id": "minimax-m2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "zenmux": [
-        {
-          "id": "minimax/minimax-m2.7",
-          "name": "MiniMax M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "cache_write": 0.375
-          }
-        }
-      ],
-      "ofox": [
-        {
-          "id": "minimax/minimax-m2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "cache_write": 0.375
-          }
-        }
-      ],
-      "deepinfra": [
-        {
-          "id": "MiniMaxAI/MiniMax-M2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.25,
-            "output": 1,
-            "cache_read": 0.05
-          }
-        }
-      ],
-      "tempr": [
-        {
-          "id": "minimax/MiniMax-M2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "cache_write": 0.375
-          }
-        }
-      ],
-      "auriko": [
-        {
-          "id": "minimax-m2-7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "cache_write": 0.375
-          }
-        }
-      ],
-      "commandcode": [
-        {
-          "id": "MiniMaxAI/MiniMax-M2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "vercel": [
-        {
-          "id": "minimax/minimax-m2.7",
-          "name": "Minimax M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "cache_write": 0.375
-          }
-        }
-      ],
-      "huggingface": [
-        {
-          "id": "MiniMaxAI/MiniMax-M2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "aihubmix": [
-        {
-          "id": "coding-minimax-m2.7",
-          "name": "Coding MiniMax M2.7",
-          "cost": {
-            "input": 0.2,
-            "output": 0.2
-          }
-        },
-        {
-          "id": "coding-minimax-m2.7-free",
-          "name": "Coding MiniMax M2.7 (Free)",
-          "cost": {
-            "input": 0,
-            "output": 0
-          }
-        },
-        {
-          "id": "minimax-m2.7",
-          "name": "MiniMax M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "cache_write": 0.375
-          }
-        }
-      ],
-      "orcarouter": [
-        {
-          "id": "minimax/minimax-m2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "cache_write": 0.375
-          }
-        }
-      ],
-      "scx-ai": [
-        {
-          "id": "MiniMax-M2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.48,
-            "output": 1.79,
-            "cache_read": 0.05
-          }
-        }
-      ],
-      "opper": [
-        {
-          "id": "minimax-m2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.69732,
-            "output": 2.78928
-          }
-        }
-      ],
       "empiriolabs": [
         {
           "id": "minimax-m2-7",
@@ -351,15 +133,6 @@
           }
         },
         {
-          "id": "scx-ai/minimax-m2.7",
-          "name": "MiniMax M2.7 (SCX.ai (Turbo))",
-          "cost": {
-            "input": 0.48,
-            "output": 1.79,
-            "cache_read": 0.05
-          }
-        },
-        {
           "id": "minimax/minimax-m2.7",
           "name": "MiniMax M2.7 (MiniMax)",
           "cost": {
@@ -376,57 +149,49 @@
             "output": 1.2,
             "cache_read": 0.06
           }
-        }
-      ],
-      "unorouter": [
-        {
-          "id": "minimax-m2.7:free",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0,
-            "output": 0
-          }
         },
         {
-          "id": "minimax-m2.7",
-          "name": "MiniMax-M2.7",
+          "id": "scx-ai/minimax-m2.7",
+          "name": "MiniMax M2.7 (SCX.ai (Turbo))",
           "cost": {
-            "input": 0.819,
-            "output": 3.276
+            "input": 0.48,
+            "output": 1.79,
+            "cache_read": 0.05
           }
         }
       ],
-      "kilo": [
+      "orcarouter": [
         {
           "id": "minimax/minimax-m2.7",
-          "name": "MiniMax-M2.7",
-          "cost": {
-            "input": 0.21,
-            "output": 0.84,
-            "cache_read": 0.042
-          }
-        }
-      ],
-      "venice": [
-        {
-          "id": "minimax-m27",
-          "name": "MiniMax M2.7",
-          "cost": {
-            "input": 0.375,
-            "output": 1.5,
-            "cache_read": 0.06875
-          }
-        }
-      ],
-      "llmgateway": [
-        {
-          "id": "minimax-m2.7",
           "name": "MiniMax-M2.7",
           "cost": {
             "input": 0.3,
             "output": 1.2,
             "cache_read": 0.06,
             "cache_write": 0.375
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "minimax/minimax-m2.7",
+          "name": "Minimax M2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06,
+            "cache_write": 0.375
+          }
+        }
+      ],
+      "edenai": [
+        {
+          "id": "minimax/MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
           }
         }
       ],
@@ -442,26 +207,107 @@
           }
         }
       ],
-      "ollama-cloud": [
+      "302ai": [
         {
-          "id": "minimax-m2.7",
-          "name": "minimax-m2.7",
+          "id": "MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
           "cost": {
             "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
+            "output": 1.2
           }
         }
       ],
-      "fastrouter": [
+      "joingonka": [
+        {
+          "id": "MiniMaxAI/MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.006171,
+            "output": 0.018513
+          }
+        }
+      ],
+      "nano-gpt": [
         {
           "id": "minimax/minimax-m2.7",
+          "name": "MiniMax M2.7",
+          "cost": {
+            "input": 0.21,
+            "output": 0.84,
+            "cache_read": 0.042
+          }
+        }
+      ],
+      "auriko": [
+        {
+          "id": "minimax-m2-7",
           "name": "MiniMax-M2.7",
           "cost": {
             "input": 0.3,
             "output": 1.2,
             "cache_read": 0.06,
             "cache_write": 0.375
+          }
+        }
+      ],
+      "iteracompute": [
+        {
+          "id": "minimax/minimax-m2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.38,
+            "output": 1.48,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "unorouter": [
+        {
+          "id": "minimax-m2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.819,
+            "output": 3.276
+          }
+        },
+        {
+          "id": "minimax-m2.7:free",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "opper": [
+        {
+          "id": "minimax-m2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.69732,
+            "output": 2.78928
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "minimax/minimax-m2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.21,
+            "output": 0.84,
+            "cache_read": 0.042
+          }
+        }
+      ],
+      "commandcode": [
+        {
+          "id": "MiniMaxAI/MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
           }
         }
       ],
@@ -477,13 +323,26 @@
           }
         }
       ],
-      "abacus": [
+      "ofox": [
         {
-          "id": "MiniMaxAI/MiniMax-M2.7",
+          "id": "minimax/minimax-m2.7",
           "name": "MiniMax-M2.7",
           "cost": {
             "input": 0.3,
-            "output": 1.2
+            "output": 1.2,
+            "cache_read": 0.06,
+            "cache_write": 0.375
+          }
+        }
+      ],
+      "kenari": [
+        {
+          "id": "minimax-m2-7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.36,
+            "output": 1.42857143,
+            "cache_read": 0.06857143
           }
         }
       ],
@@ -495,6 +354,70 @@
             "input": 0.3,
             "output": 1.2,
             "cache_read": 0.06
+          }
+        }
+      ],
+      "ollama-cloud": [
+        {
+          "id": "minimax-m2.7",
+          "name": "minimax-m2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "moneo": [
+        {
+          "id": "MiniMax-M2.7:web",
+          "name": "MiniMax M2.7 (Web)",
+          "cost": {
+            "input": 0.35,
+            "output": 1.5
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "minimax-m2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "abacus": [
+        {
+          "id": "MiniMaxAI/MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2
+          }
+        }
+      ],
+      "moark": [
+        {
+          "id": "MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.29,
+            "output": 1.2
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "minimax-m2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06,
+            "cache_write": 0.375
           }
         }
       ],
@@ -510,50 +433,47 @@
           }
         }
       ],
-      "kenari": [
+      "aihubmix": [
         {
-          "id": "minimax-m2-7",
-          "name": "MiniMax-M2.7",
+          "id": "coding-minimax-m2.7",
+          "name": "Coding MiniMax M2.7",
           "cost": {
-            "input": 0.36,
-            "output": 1.42857143,
-            "cache_read": 0.06857143
+            "input": 0.2,
+            "output": 0.2
           }
-        }
-      ],
-      "edenai": [
+        },
         {
-          "id": "minimax/MiniMax-M2.7",
-          "name": "MiniMax-M2.7",
+          "id": "minimax-m2.7",
+          "name": "MiniMax M2.7",
           "cost": {
             "input": 0.3,
             "output": 1.2,
-            "cache_read": 0.06
+            "cache_read": 0.06,
+            "cache_write": 0.375
           }
-        }
-      ],
-      "302ai": [
+        },
         {
-          "id": "MiniMax-M2.7",
-          "name": "MiniMax-M2.7",
+          "id": "coding-minimax-m2.7-free",
+          "name": "Coding MiniMax M2.7 (Free)",
           "cost": {
-            "input": 0.3,
-            "output": 1.2
+            "input": 0,
+            "output": 0
           }
         }
       ],
-      "nano-gpt": [
+      "merge-gateway": [
         {
           "id": "minimax/minimax-m2.7",
           "name": "MiniMax M2.7",
           "cost": {
-            "input": 0.21,
-            "output": 0.84,
-            "cache_read": 0.042
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06,
+            "cache_write": 0.375
           }
         }
       ],
-      "openrouter": [
+      "kilo": [
         {
           "id": "minimax/minimax-m2.7",
           "name": "MiniMax-M2.7",
@@ -561,6 +481,17 @@
             "input": 0.21,
             "output": 0.84,
             "cache_read": 0.042
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "MiniMaxAI/MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.25,
+            "output": 1,
+            "cache_read": 0.05
           }
         }
       ],
@@ -572,6 +503,96 @@
             "input": 0.3,
             "output": 1.2,
             "cache_read": 0.06
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "MiniMaxAI/MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "venice": [
+        {
+          "id": "minimax-m27",
+          "name": "MiniMax M2.7",
+          "cost": {
+            "input": 0.375,
+            "output": 1.5,
+            "cache_read": 0.06875
+          }
+        }
+      ],
+      "fastrouter": [
+        {
+          "id": "minimax/minimax-m2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06,
+            "cache_write": 0.375
+          }
+        }
+      ],
+      "togetherai": [
+        {
+          "id": "MiniMaxAI/MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "scx-ai": [
+        {
+          "id": "MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.48,
+            "output": 1.79,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "scnet-token-plan": [
+        {
+          "id": "MiniMax-M2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "novita-ai": [
+        {
+          "id": "minimax/minimax-m2.7",
+          "name": "MiniMax-M2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "zenmux": [
+        {
+          "id": "minimax/minimax-m2.7",
+          "name": "MiniMax M2.7",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06,
+            "cache_write": 0.375
           }
         }
       ]
@@ -633,11 +654,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.7",
-      "retrieved_at": "2026-11-14"
+      "retrieved_at": "2026-11-17"
     }
   ],
-  "verified_at": "2026-11-14",
-  "updated_at": "2026-11-14",
+  "verified_at": "2026-11-17",
+  "updated_at": "2026-11-17",
   "notes": "",
   "scorecard": {
     "overall": {
@@ -762,7 +783,7 @@
       "band": "very-strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-17",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

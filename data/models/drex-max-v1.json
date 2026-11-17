@@ -80,18 +80,27 @@
       "quantization": "Q8",
       "relation": "quantized",
       "status": "build"
+    },
+    {
+      "id": "nace-ai/drex-max-v1-affine-q4",
+      "name": "nace-ai/drex-max-v1-affine-q4",
+      "url": "https://huggingface.co/nace-ai/drex-max-v1-affine-q4",
+      "runtime": [],
+      "quantization": "Q4",
+      "relation": "quantized",
+      "status": "build"
     }
   ],
   "sources": [
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/nace-ai/drex-max-v1",
-      "retrieved_at": "2026-11-14"
+      "retrieved_at": "2026-11-17"
     }
   ],
-  "verified_at": "2026-11-14",
-  "updated_at": "2026-11-14",
-  "notes": "1 builds are attached.",
+  "verified_at": "2026-11-17",
+  "updated_at": "2026-11-17",
+  "notes": "2 builds are attached.",
   "scorecard": {
     "overall": {
       "score": 36.7,
@@ -200,7 +209,7 @@
       "band": "self-only",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-17",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

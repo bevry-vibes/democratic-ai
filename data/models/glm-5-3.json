@@ -75,6 +75,8 @@
     "agent_detect": "https://agent-detect.bevry.me/model/glm53",
     "providers": [
       "302ai",
+      "abliteratedllm",
+      "adzuki",
       "agentrouter",
       "aiand",
       "aihubmix",
@@ -85,10 +87,14 @@
       "alibaba-token-plan-cn",
       "amazon-bedrock",
       "arcee",
+      "augure",
       "baseten",
       "bothub",
       "boundless",
+      "cheapaimodel",
+      "cheapest-token",
       "cline-pass",
+      "cloudcode",
       "cloudferro-sherlock",
       "cloudflare-workers-ai",
       "commandcode",
@@ -96,22 +102,39 @@
       "crossmodel",
       "deepinfra",
       "digitalocean",
+      "doubleword",
       "edenai",
       "empiriolabs",
       "engy",
+      "entrim",
+      "ezkielyna",
       "fireworks-ai",
       "friendli",
       "frogbot",
+      "gisoo",
+      "graphn",
       "greenpt",
+      "huawei-maas",
       "huggingface",
       "hyper",
       "inceptron",
       "inco",
+      "inferall",
+      "inference-coop",
+      "inferenceapis",
+      "inferris",
       "iteracompute",
+      "jzstoken",
+      "keln",
       "kenari",
       "kilo",
+      "kitani",
+      "klavo",
+      "korouter",
+      "liquid",
       "llmgateway",
       "llmgateway-providers",
+      "lyceum",
       "melious",
       "merge-gateway",
       "mistral",
@@ -126,6 +149,8 @@
       "neuralwatt",
       "novita-ai",
       "nvidia",
+      "oathbreaker",
+      "obscurify",
       "ofox",
       "ollama-cloud",
       "opencode",
@@ -134,518 +159,310 @@
       "opper",
       "orcarouter",
       "perplexity-agent",
+      "phala",
       "privatemode-ai",
+      "proxystacks",
+      "refuseless",
       "requesty",
+      "runcrate",
       "runinfra",
       "sambanova",
+      "sandbase",
       "scaleway",
       "scnet-token-plan",
+      "scx-ai",
       "siliconflow",
       "siliconflow-cn",
       "standardcompute",
       "subconscious",
       "synthetic",
-      "tempr",
+      "synthorai",
+      "teamorouter",
+      "tencent-token-plan",
       "tensorx",
+      "tenstorrent",
       "thinkingmachines",
       "tinfoil",
       "togetherai",
       "tokengo",
       "tokenrouter",
+      "trustedtokens",
       "umans-ai",
       "umans-ai-coding-plan",
+      "uncensuredai",
+      "uplinkswitch",
       "vancine",
       "venice",
       "vercel",
       "vivgrid",
       "volcengine-coding-plan",
       "vultr",
+      "wafer.ai",
       "wally",
       "wandb",
+      "watt",
       "zai",
       "zai-coding-plan",
       "zenmux",
       "zhipuai",
-      "zhipuai-coding-plan"
+      "zhipuai-coding-plan",
+      "zro"
     ],
     "provider_models": {
-      "siliconflow": [
+      "empiriolabs": [
         {
-          "id": "zai-org/GLM-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26,
-            "cache_write": 0
-          }
-        }
-      ],
-      "novita-ai": [
-        {
-          "id": "zai-org/glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "baseten": [
-        {
-          "id": "zai-org/GLM-5.3",
+          "id": "glm-5-3",
           "name": "GLM 5.3",
           "cost": {
             "input": 1.4,
             "output": 4.4,
-            "cache_read": 0.14
-          }
-        },
-        {
-          "id": "zai-org/GLM-5.3-Fast",
-          "name": "GLM 5.3 Fast",
-          "cost": {
-            "input": 2.1,
-            "output": 6.6,
-            "cache_read": 0.21
+            "cache_read": 1.4
           }
         }
       ],
-      "engy": [
+      "inference-coop": [
         {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0.98,
-            "output": 3.08,
-            "cache_read": 0.18
-          }
-        }
-      ],
-      "zhipuai-coding-plan": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        },
-        {
-          "id": "glm-5.3-highspeed",
-          "name": "GLM-5.3 Highspeed",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        }
-      ],
-      "scaleway": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 2.01,
-            "output": 6.15
-          }
-        }
-      ],
-      "cortecs": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0.511,
-            "output": 2.045,
-            "cache_read": 0.154
-          }
-        }
-      ],
-      "merge-gateway": [
-        {
-          "id": "zai/glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0.7,
-            "output": 2.2,
-            "cache_read": 0.13
-          }
-        }
-      ],
-      "subconscious": [
-        {
-          "id": "subconscious/glm-5.3-marathon",
-          "name": "GLM-5.3 Marathon",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "neuralwatt": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM 5.3",
-          "cost": {
-            "input": 1.45,
-            "output": 4.5,
-            "cache_read": 0.145
-          }
-        },
-        {
-          "id": "glm-5.3-flex",
-          "name": "GLM 5.3 Flex",
-          "cost": {
-            "input": 0.9425,
-            "output": 2.925,
-            "cache_read": 0.09425
-          }
-        }
-      ],
-      "vancine": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.12,
-            "output": 3.52,
-            "cache_read": 0.208
-          }
-        }
-      ],
-      "togetherai": [
-        {
-          "id": "zai-org/GLM-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "greenpt": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.27754,
-            "output": 5.11016,
-            "cache_read": 0.319385
-          }
-        }
-      ],
-      "moark": [
-        {
-          "id": "GLM-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.2,
-            "output": 4.18
-          }
-        }
-      ],
-      "nearai": [
-        {
-          "id": "z-ai/glm-5.3",
+          "id": "tinfoil/glm-5.3",
           "name": "GLM-5.3",
           "cost": {
             "input": 1.8,
             "output": 5.75,
             "cache_read": 0.45
           }
-        }
-      ],
-      "fireworks-ai": [
-        {
-          "id": "accounts/fireworks/models/glm-5p3",
-          "name": "GLM 5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
         },
         {
-          "id": "accounts/fireworks/routers/glm-latest",
-          "name": "GLM Latest",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        },
-        {
-          "id": "accounts/fireworks/routers/glm-5p3-fast",
-          "name": "GLM 5.3 Fast",
-          "cost": {
-            "input": 2.1,
-            "output": 6.6,
-            "cache_read": 0.39
-          }
-        },
-        {
-          "id": "accounts/fireworks/routers/glm-5p3-spot",
-          "name": "GLM 5.3 Spot",
-          "cost": {
-            "input": 0.98,
-            "output": 3.08,
-            "cache_read": 0.182
-          }
-        },
-        {
-          "id": "accounts/fireworks/routers/glm-fast-latest",
-          "name": "GLM 5.3 Fast (Latest)",
-          "cost": {
-            "input": 2.1,
-            "output": 6.6,
-            "cache_read": 0.39
-          }
-        }
-      ],
-      "aimlapi": [
-        {
-          "id": "zhipu/glm-5.3",
-          "name": "GLM 5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "cloudflare-workers-ai": [
-        {
-          "id": "@cf/zai-org/glm-5.3",
-          "name": "Glm 5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "nebius": [
-        {
-          "id": "zai-org/GLM-5.3",
+          "id": "greenpt/glm-5.3",
           "name": "GLM-5.3",
           "cost": {
-            "input": 1.4,
+            "input": 1.1,
             "output": 4.4,
-            "cache_read": 0.26
+            "cache_read": 0.275
           }
         }
       ],
-      "vivgrid": [
+      "llmgateway-providers": [
         {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.2,
-            "output": 4.2,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "inco": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        },
-        {
-          "id": "glm-5.3:fast",
-          "name": "GLM-5.3 Fast",
-          "cost": {
-            "input": 2.8,
-            "output": 8.8,
-            "cache_read": 0.52
-          }
-        }
-      ],
-      "boundless": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
+          "id": "novita/glm-5.3",
+          "name": "GLM-5.3 (NovitaAI)",
           "cost": {
             "input": 1.12,
             "output": 3.52,
-            "cache_read": 0.14
+            "cache_read": 0.208
           }
-        }
-      ],
-      "zai": [
+        },
         {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
+          "id": "entrim/glm-5.3",
+          "name": "GLM-5.3 (entrim)",
           "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26,
-            "cache_write": 0
+            "input": 0.45,
+            "output": 1.8,
+            "cache_read": 0.135
           }
-        }
-      ],
-      "scnet-token-plan": [
+        },
         {
-          "id": "GLM-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "hyper": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.52432,
-            "output": 4.79072,
-            "cache_read": 0.283088
-          }
-        }
-      ],
-      "sambanova": [
-        {
-          "id": "GLM-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 2.8,
-            "output": 8.8,
-            "cache_read": 0.14
-          }
-        }
-      ],
-      "morph": [
-        {
-          "id": "morph-glm53-744b",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.19,
-            "output": 6,
-            "cache_read": 0.1955
-          }
-        }
-      ],
-      "opencode": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
+          "id": "tencent/glm-5.3",
+          "name": "GLM-5.3 (Tencent Cloud)",
           "cost": {
             "input": 1.4,
             "output": 4.4,
             "cache_read": 0.26
           }
-        }
-      ],
-      "zenmux": [
+        },
         {
-          "id": "z-ai/glm-5.3",
-          "name": "GLM 5.3",
+          "id": "zai/glm-5.3",
+          "name": "GLM-5.3 (Z AI)",
           "cost": {
             "input": 1.4,
             "output": 4.4,
             "cache_read": 0.26
           }
-        }
-      ],
-      "ofox": [
+        },
         {
-          "id": "z-ai/glm-5.3",
-          "name": "GLM-5.3",
+          "id": "runpod/glm-5.3",
+          "name": "GLM-5.3 (Runpod)",
+          "cost": {
+            "input": 0.77,
+            "output": 2.42,
+            "cache_read": 0.143
+          }
+        },
+        {
+          "id": "fireworks/glm-5.3",
+          "name": "GLM-5.3 (Fireworks AI)",
           "cost": {
             "input": 1.4,
             "output": 4.4,
             "cache_read": 0.26
           }
-        }
-      ],
-      "deepinfra": [
+        },
         {
-          "id": "zai-org/GLM-5.3",
-          "name": "GLM-5.3",
+          "id": "alibaba/glm-5.3",
+          "name": "GLM-5.3 (Alibaba Cloud)",
           "cost": {
-            "input": 0.9,
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.28
+          }
+        },
+        {
+          "id": "runware/glm-5.3",
+          "name": "GLM-5.3 (Runware)",
+          "cost": {
+            "input": 1.2,
             "output": 4,
             "cache_read": 0.2
           }
-        }
-      ],
-      "thinkingmachines": [
+        },
         {
-          "id": "zai-org/GLM-5.3:peft:262144",
-          "name": "GLM-5.3",
+          "id": "cloudflare/glm-5.3",
+          "name": "GLM-5.3 (Cloudflare)",
           "cost": {
-            "input": 3.78,
-            "output": 12.15,
-            "cache_read": 0.756
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        },
+        {
+          "id": "together-ai/glm-5.3",
+          "name": "GLM-5.3 (Together AI)",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        },
+        {
+          "id": "baidu/glm-5.3",
+          "name": "GLM-5.3 (Baidu)",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        },
+        {
+          "id": "inference.net/glm-5.3",
+          "name": "GLM-5.3 (Inference.net)",
+          "cost": {
+            "input": 0.9,
+            "output": 3,
+            "cache_read": 0.15
+          }
+        },
+        {
+          "id": "scx-ai-gp/glm-5.3-fast",
+          "name": "GLM 5.3 Fast (SCX.ai)",
+          "cost": {
+            "input": 2.8,
+            "output": 8.8,
+            "cache_read": 0.56
+          }
+        },
+        {
+          "id": "scx-ai-gp/glm-5.3",
+          "name": "GLM-5.3 (SCX.ai)",
+          "cost": {
+            "input": 0.7224,
+            "output": 2.2704,
+            "cache_read": 0.1342
+          }
+        },
+        {
+          "id": "mistral/glm-5.3",
+          "name": "GLM-5.3 (Mistral AI)",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.14
           }
         }
       ],
-      "melious": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.115,
-            "output": 3.345,
-            "cache_read": 0.223
-          }
-        }
-      ],
-      "aiand": [
+      "keln": [
         {
           "id": "zai-org/glm-5.3",
           "name": "GLM-5.3",
           "cost": {
-            "input": 1,
-            "output": 4,
-            "cache_read": 0.3
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.29
           }
         }
       ],
-      "tempr": [
-        {
-          "id": "zai/glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26,
-            "cache_write": 0
-          }
-        },
-        {
-          "id": "mistral/zai-glm-5-3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.14
-          }
-        }
-      ],
-      "commandcode": [
+      "entrim": [
         {
           "id": "zai-org/GLM-5.3",
           "name": "GLM-5.3",
           "cost": {
+            "input": 0.5,
+            "output": 2,
+            "cache_read": 0.15
+          }
+        }
+      ],
+      "orcarouter": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.26,
+            "output": 3.96,
+            "cache_read": 0.234
+          }
+        }
+      ],
+      "alibaba-cn": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.1,
+            "output": 3.851,
+            "cache_read": 0.275,
+            "cache_write": 0
+          }
+        }
+      ],
+      "cheapaimodel": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.9800714,
+            "output": 3.0802244,
+            "cache_read": 0.18201326
+          }
+        }
+      ],
+      "sandbase": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
             "input": 1.4,
             "output": 4.4,
-            "cache_read": 0.26
+            "cache_read": 0.25998
+          }
+        }
+      ],
+      "tokenrouter": [
+        {
+          "id": "z-ai/glm-5.3-free",
+          "name": "GLM-5.3 (free)",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "umans-ai-coding-plan": [
+        {
+          "id": "umans-glm-5.3",
+          "name": "GLM 5.3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
           }
         }
       ],
@@ -669,20 +486,9 @@
           }
         }
       ],
-      "siliconflow-cn": [
+      "edenai": [
         {
-          "id": "zai-org/GLM-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.19947835,
-            "output": 4.19817421,
-            "cache_read": 0.29986959
-          }
-        }
-      ],
-      "cline-pass": [
-        {
-          "id": "cline-pass/glm-5.3",
+          "id": "zai/glm-5.3",
           "name": "GLM-5.3",
           "cost": {
             "input": 1.4,
@@ -691,106 +497,13 @@
           }
         }
       ],
-      "privatemode-ai": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.791,
-            "output": 6.6326,
-            "cache_read": 0.1733
-          }
-        },
-        {
-          "id": "glm-latest",
-          "name": "GLM (latest)",
-          "cost": {
-            "input": 1.791,
-            "output": 6.6326,
-            "cache_read": 0.1733
-          }
-        }
-      ],
-      "huggingface": [
-        {
-          "id": "zai-org/GLM-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4
-          }
-        }
-      ],
-      "aki-io": [
-        {
-          "id": "glm5.3-754b",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.1215,
-            "output": 3.92525,
-            "cache_read": 0.280375
-          }
-        }
-      ],
-      "runinfra": [
-        {
-          "id": "zai-org/GLM-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.3,
-            "output": 4.2,
-            "cache_read": 0.13
-          }
-        }
-      ],
-      "standardcompute": [
+      "inferall": [
         {
           "id": "z-ai/glm-5.3",
           "name": "GLM-5.3",
           "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "cloudferro-sherlock": [
-        {
-          "id": "zai-org/GLM-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0.34,
-            "output": 4.48
-          }
-        }
-      ],
-      "aihubmix": [
-        {
-          "id": "coding-glm-5.3-free",
-          "name": "GLM-5.3 (Coding, free)",
-          "cost": {
             "input": 0,
             "output": 0
-          }
-        },
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.1268,
-            "output": 3.9438,
-            "cache_read": 0.2817
-          }
-        }
-      ],
-      "wandb": [
-        {
-          "id": "zai-org/GLM-5.3",
-          "name": "GLM 5.3",
-          "cost": {
-            "input": 0.75,
-            "output": 3,
-            "cache_read": 0.19
           }
         }
       ],
@@ -805,359 +518,70 @@
           }
         }
       ],
-      "bothub": [
+      "sambanova": [
         {
-          "id": "glm-5.3",
+          "id": "GLM-5.3",
           "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4243,
-            "output": 4.4765
-          }
-        }
-      ],
-      "orcarouter": [
-        {
-          "id": "z-ai/glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.26,
-            "output": 3.96,
-            "cache_read": 0.234
-          }
-        }
-      ],
-      "mistral": [
-        {
-          "id": "zai-glm-5-3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.14
-          }
-        }
-      ],
-      "tokengo": [
-        {
-          "id": "z-ai/glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "opper": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.75,
-            "output": 4.6488,
-            "cache_read": 0.44
-          }
-        }
-      ],
-      "nan": [
-        {
-          "id": "glm5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0,
-            "output": 0
-          }
-        }
-      ],
-      "arcee": [
-        {
-          "id": "zai-org/glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "empiriolabs": [
-        {
-          "id": "glm-5-3",
-          "name": "GLM 5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 1.4
-          }
-        }
-      ],
-      "amazon-bedrock": [
-        {
-          "id": "global.zai.glm-5.3",
-          "name": "GLM-5.3 (Global)",
-          "cost": {
-            "input": 1.68,
-            "output": 5.28,
-            "cache_read": 0.312,
-            "cache_write": 2.1
-          }
-        },
-        {
-          "id": "us.zai.glm-5.3",
-          "name": "GLM-5.3 (US)",
-          "cost": {
-            "input": 1.848,
-            "output": 5.808,
-            "cache_read": 0.3432,
-            "cache_write": 2.31
-          }
-        }
-      ],
-      "llmgateway-providers": [
-        {
-          "id": "novita/glm-5.3",
-          "name": "GLM-5.3 (NovitaAI)",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        },
-        {
-          "id": "runpod/glm-5.3",
-          "name": "GLM-5.3 (Runpod)",
-          "cost": {
-            "input": 0.77,
-            "output": 2.42,
-            "cache_read": 0.143
-          }
-        },
-        {
-          "id": "runware/glm-5.3",
-          "name": "GLM-5.3 (Runware)",
-          "cost": {
-            "input": 1.2,
-            "output": 4,
-            "cache_read": 0.2
-          }
-        },
-        {
-          "id": "zai/glm-5.3",
-          "name": "GLM-5.3 (Z AI)",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        },
-        {
-          "id": "entrim/glm-5.3",
-          "name": "GLM-5.3 (entrim)",
-          "cost": {
-            "input": 0.5,
-            "output": 2,
-            "cache_read": 0.15
-          }
-        },
-        {
-          "id": "together-ai/glm-5.3",
-          "name": "GLM-5.3 (Together AI)",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        },
-        {
-          "id": "cloudflare/glm-5.3",
-          "name": "GLM-5.3 (Cloudflare)",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        },
-        {
-          "id": "baidu/glm-5.3",
-          "name": "GLM-5.3 (Baidu)",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        },
-        {
-          "id": "mistral/glm-5.3",
-          "name": "GLM-5.3 (Mistral AI)",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.14
-          }
-        },
-        {
-          "id": "alibaba/glm-5.3",
-          "name": "GLM-5.3 (Alibaba Cloud)",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.28
-          }
-        },
-        {
-          "id": "scx-ai-gp/glm-5.3-fast",
-          "name": "GLM 5.3 Fast (SCX.ai)",
           "cost": {
             "input": 2.8,
             "output": 8.8,
-            "cache_read": 0.56
-          }
-        },
-        {
-          "id": "scx-ai-gp/glm-5.3",
-          "name": "GLM-5.3 (SCX.ai)",
-          "cost": {
-            "input": 0.924,
-            "output": 2.904,
-            "cache_read": 0.1716
-          }
-        },
-        {
-          "id": "fireworks/glm-5.3",
-          "name": "GLM-5.3 (Fireworks AI)",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        },
-        {
-          "id": "inference.net/glm-5.3",
-          "name": "GLM-5.3 (Inference.net)",
-          "cost": {
-            "input": 0.9,
-            "output": 3,
-            "cache_read": 0.15
-          }
-        },
-        {
-          "id": "reka-ai/glm-5.3",
-          "name": "GLM-5.3 (reka-ai)",
-          "cost": {
-            "input": 0.45,
-            "output": 1.8,
-            "cache_read": 0.135
-          }
-        },
-        {
-          "id": "tencent/glm-5.3",
-          "name": "GLM-5.3 (Tencent Cloud)",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
+            "cache_read": 0.14
           }
         }
       ],
-      "wally": [
-        {
-          "id": "glm-5.3-fast",
-          "name": "GLM-5.3 Fast",
-          "cost": {
-            "input": 2.1,
-            "output": 6.6,
-            "cache_read": 0.39
-          }
-        }
-      ],
-      "alibaba-token-plan": [
+      "zai": [
         {
           "id": "glm-5.3",
           "name": "GLM-5.3",
           "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26,
             "cache_write": 0
           }
         }
       ],
-      "tokenrouter": [
+      "cloudferro-sherlock": [
         {
-          "id": "z-ai/glm-5.3-free",
-          "name": "GLM-5.3 (free)",
-          "cost": {
-            "input": 0,
-            "output": 0
-          }
-        }
-      ],
-      "kilo": [
-        {
-          "id": "z-ai/glm-5.3-fast",
-          "name": "Z.ai: GLM 5.3 Fast",
-          "cost": {
-            "input": 2.1,
-            "output": 6.6,
-            "cache_read": 0.21
-          }
-        },
-        {
-          "id": "z-ai/glm-5.3",
+          "id": "zai-org/GLM-5.3",
           "name": "GLM-5.3",
           "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
+            "input": 0.34,
+            "output": 4.48
           }
         }
       ],
-      "tensorx": [
+      "thinkingmachines": [
         {
-          "id": "z-ai/glm-5.3",
+          "id": "zai-org/GLM-5.3:peft:262144",
           "name": "GLM-5.3",
           "cost": {
-            "input": 1.75,
-            "output": 4.5,
-            "cache_read": 0.44
+            "input": 3.78,
+            "output": 12.15,
+            "cache_read": 0.756
           }
         }
       ],
-      "venice": [
-        {
-          "id": "z-ai-glm-5-3",
-          "name": "GLM 5.3",
-          "cost": {
-            "input": 1.75,
-            "output": 5.5,
-            "cache_read": 0.325
-          }
-        }
-      ],
-      "agentrouter": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": null
-        }
-      ],
-      "llmgateway": [
-        {
-          "id": "glm-5.3-fast",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 2.8,
-            "output": 8.8,
-            "cache_read": 0.56
-          }
-        },
+      "engy": [
         {
           "id": "glm-5.3",
           "name": "GLM-5.3",
           "cost": {
-            "input": 0.5,
-            "output": 2,
-            "cache_read": 0.15
+            "input": 0.98,
+            "output": 3.08,
+            "cache_read": 0.18
+          }
+        }
+      ],
+      "zhipuai": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.19516,
+            "output": 4.18306,
+            "cache_read": 0.29879,
+            "cache_write": 0
           }
         }
       ],
@@ -1181,211 +605,57 @@
           }
         }
       ],
-      "ollama-cloud": [
+      "wafer.ai": [
         {
-          "id": "glm-5.3",
+          "id": "GLM-5.3",
           "name": "GLM-5.3",
           "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
+            "input": 0.2,
+            "output": 1.8,
+            "cache_read": 0.18
           }
         }
       ],
-      "neon": [
+      "fireworks-ai": [
         {
-          "id": "glm-5-3",
-          "name": "GLM-5.3",
+          "id": "accounts/fireworks/routers/glm-fast-latest",
+          "name": "GLM 5.3 Fast (Latest)",
           "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "opencode-go": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "synthetic": [
-        {
-          "id": "hf:zai-org/GLM-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "zhipuai": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.19516,
-            "output": 4.18306,
-            "cache_read": 0.29879,
-            "cache_write": 0
-          }
-        }
-      ],
-      "umans-ai": [
-        {
-          "id": "umans-glm-5.3",
-          "name": "GLM 5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "zai-coding-plan": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
+            "input": 2.1,
+            "output": 6.6,
+            "cache_read": 0.39
           }
         },
         {
-          "id": "glm-5.3-highspeed",
-          "name": "GLM-5.3 Highspeed",
+          "id": "accounts/fireworks/routers/glm-5p3-fast",
+          "name": "GLM 5.3 Fast",
           "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
+            "input": 2.1,
+            "output": 6.6,
+            "cache_read": 0.39
           }
-        }
-      ],
-      "frogbot": [
+        },
         {
-          "id": "zai-glm-5-3",
+          "id": "accounts/fireworks/routers/glm-latest",
+          "name": "GLM Latest",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        },
+        {
+          "id": "accounts/fireworks/routers/glm-5p3-spot",
+          "name": "GLM 5.3 Spot",
+          "cost": {
+            "input": 0.98,
+            "output": 3.08,
+            "cache_read": 0.182
+          }
+        },
+        {
+          "id": "accounts/fireworks/models/glm-5p3",
           "name": "GLM 5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "volcengine-coding-plan": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "alibaba-token-plan-cn": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        }
-      ],
-      "crossmodel": [
-        {
-          "id": "z-ai/glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.2,
-            "output": 4.4,
-            "cache_read": 0.3,
-            "cache_write": 1.2
-          }
-        }
-      ],
-      "kenari": [
-        {
-          "id": "glm-5-3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0.28571429,
-            "output": 3.42857143,
-            "cache_read": 0.05314286
-          }
-        }
-      ],
-      "perplexity-agent": [
-        {
-          "id": "perplexity/glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "vultr": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 0.75,
-            "output": 3
-          }
-        }
-      ],
-      "umans-ai-coding-plan": [
-        {
-          "id": "umans-glm-5.3",
-          "name": "GLM 5.3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        }
-      ],
-      "friendli": [
-        {
-          "id": "zai-org/GLM-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.26,
-            "output": 3.96,
-            "cache_read": 0.234
-          }
-        }
-      ],
-      "edenai": [
-        {
-          "id": "zai/glm-5.3",
-          "name": "GLM-5.3",
-          "cost": {
-            "input": 1.4,
-            "output": 4.4,
-            "cache_read": 0.26
-          }
-        }
-      ],
-      "302ai": [
-        {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
           "cost": {
             "input": 1.4,
             "output": 4.4,
@@ -1404,13 +674,71 @@
           }
         }
       ],
-      "nvidia": [
+      "302ai": [
         {
-          "id": "z-ai/glm-5.3",
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "hyper": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.52432,
+            "output": 4.79072,
+            "cache_read": 0.283088
+          }
+        }
+      ],
+      "liquid": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.84,
+            "output": 3.1,
+            "cache_read": 0.195
+          }
+        }
+      ],
+      "volcengine-coding-plan": [
+        {
+          "id": "glm-5.3",
           "name": "GLM-5.3",
           "cost": {
             "input": 0,
-            "output": 0
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "jzstoken": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.6228,
+            "output": 3.11,
+            "cache_read": 0.0623,
+            "cache_write": 0.6228
+          }
+        }
+      ],
+      "doubleword": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.28,
+            "cache_write": 1.75
           }
         }
       ],
@@ -1425,8 +753,8 @@
           }
         },
         {
-          "id": "z-ai/glm-5.3",
-          "name": "GLM 5.3",
+          "id": "z-ai/glm-5.3:thinking",
+          "name": "GLM 5.3 Thinking",
           "cost": {
             "input": 0.6,
             "output": 1.1,
@@ -1434,12 +762,99 @@
           }
         },
         {
-          "id": "z-ai/glm-5.3:thinking",
-          "name": "GLM 5.3 Thinking",
+          "id": "z-ai/glm-5.3",
+          "name": "GLM 5.3",
           "cost": {
             "input": 0.6,
             "output": 1.1,
             "cache_read": 0.2
+          }
+        }
+      ],
+      "bothub": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4243,
+            "output": 4.4765
+          }
+        }
+      ],
+      "subconscious": [
+        {
+          "id": "subconscious/glm-5.3-marathon",
+          "name": "GLM-5.3 Marathon",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "nan": [
+        {
+          "id": "glm5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.37592,
+            "output": 4.32432,
+            "cache_read": 0.029484
+          }
+        }
+      ],
+      "uncensuredai": [
+        {
+          "id": "glm-5.3-abliterated",
+          "name": "GLM 5.3 Abliterated",
+          "cost": {
+            "input": 0.7,
+            "output": 1.95,
+            "cache_read": 0.28
+          }
+        }
+      ],
+      "cloudcode": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.26,
+            "output": 3.96,
+            "cache_read": 0.234
+          }
+        }
+      ],
+      "runcrate": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.590625,
+            "output": 2.625,
+            "cache_read": 0.13125
+          }
+        }
+      ],
+      "cheapest-token": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 3.96,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "obscurify": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.663,
+            "output": 1.2155,
+            "cache_read": 0.221
           }
         }
       ],
@@ -1454,14 +869,175 @@
           }
         }
       ],
+      "standardcompute": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "amazon-bedrock": [
+        {
+          "id": "us.zai.glm-5.3",
+          "name": "GLM-5.3 (US)",
+          "cost": {
+            "input": 1.848,
+            "output": 5.808,
+            "cache_read": 0.3432,
+            "cache_write": 2.31
+          }
+        },
+        {
+          "id": "global.zai.glm-5.3",
+          "name": "GLM-5.3 (Global)",
+          "cost": {
+            "input": 1.68,
+            "output": 5.28,
+            "cache_read": 0.312,
+            "cache_write": 2.1
+          }
+        }
+      ],
+      "opper": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.75,
+            "output": 4.6488,
+            "cache_read": 0.44
+          }
+        }
+      ],
+      "nvidia": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "inferenceapis": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.82,
+            "output": 5.72,
+            "cache_read": 0.34
+          }
+        }
+      ],
+      "vivgrid": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.2,
+            "output": 4.2,
+            "cache_read": 0.3
+          }
+        }
+      ],
       "openrouter": [
         {
           "id": "z-ai/glm-5.3",
           "name": "GLM-5.3",
           "cost": {
-            "input": 0.084,
-            "output": 3.6,
-            "cache_read": 0.079
+            "input": 0.0699,
+            "output": 1.4,
+            "cache_read": 0.0689
+          }
+        }
+      ],
+      "commandcode": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "abliteratedllm": [
+        {
+          "id": "glm-5.3-fast",
+          "name": "GLM-5.3 Fast",
+          "cost": {
+            "input": 1.89,
+            "output": 5.94,
+            "cache_read": 0.351
+          }
+        },
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.26,
+            "output": 3.96,
+            "cache_read": 0.234
+          }
+        }
+      ],
+      "opencode-go": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "greenpt": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.27754,
+            "output": 5.11016,
+            "cache_read": 0.319385
+          }
+        }
+      ],
+      "watt": [
+        {
+          "id": "GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4
+          }
+        }
+      ],
+      "ofox": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "klavo": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.696,
+            "output": 5.3302,
+            "cache_read": 0.3029
           }
         }
       ],
@@ -1472,8 +1048,529 @@
           "cost": {
             "input": 1,
             "output": 4.2,
-            "cache_read": 0.14,
+            "cache_read": 0.135,
             "cache_write": 0
+          }
+        }
+      ],
+      "friendli": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.26,
+            "output": 3.96,
+            "cache_read": 0.234
+          }
+        }
+      ],
+      "synthetic": [
+        {
+          "id": "hf:zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "cloudflare-workers-ai": [
+        {
+          "id": "@cf/zai-org/glm-5.3",
+          "name": "Glm 5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "vancine": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.12,
+            "output": 3.52,
+            "cache_read": 0.208
+          }
+        }
+      ],
+      "kenari": [
+        {
+          "id": "glm-5-3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.2857,
+            "output": 3.43,
+            "cache_read": 0.0531
+          }
+        }
+      ],
+      "zro": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.2,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "frogbot": [
+        {
+          "id": "zai-glm-5-3",
+          "name": "GLM 5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "siliconflow-cn": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.19947835,
+            "output": 4.19817421,
+            "cache_read": 0.29986959
+          }
+        }
+      ],
+      "perplexity-agent": [
+        {
+          "id": "perplexity/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "ollama-cloud": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "zhipuai-coding-plan": [
+        {
+          "id": "glm-5.3-highspeed",
+          "name": "GLM-5.3 Highspeed",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "graphn": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.14
+          }
+        }
+      ],
+      "aimlapi": [
+        {
+          "id": "zhipu/glm-5.3",
+          "name": "GLM 5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "umans-ai": [
+        {
+          "id": "umans-glm-5.3",
+          "name": "GLM 5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "cortecs": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.511,
+            "output": 2.045,
+            "cache_read": 0.154
+          }
+        }
+      ],
+      "baseten": [
+        {
+          "id": "zai-org/GLM-5.3-Fast",
+          "name": "GLM 5.3 Fast",
+          "cost": {
+            "input": 2.1,
+            "output": 6.6,
+            "cache_read": 0.21
+          }
+        },
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM 5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.14
+          }
+        }
+      ],
+      "ezkielyna": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.2244,
+            "output": 0.7013,
+            "cache_read": 0.04208
+          }
+        }
+      ],
+      "inferris": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.84,
+            "output": 2.64,
+            "cache_read": 0.156
+          }
+        }
+      ],
+      "wandb": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM 5.3",
+          "cost": {
+            "input": 0.75,
+            "output": 3,
+            "cache_read": 0.19
+          }
+        }
+      ],
+      "proxystacks": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.78,
+            "output": 2.86,
+            "reasoning": 2.86,
+            "cache_read": 0.17
+          }
+        }
+      ],
+      "nebius": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "zai-coding-plan": [
+        {
+          "id": "glm-5.3-highspeed",
+          "name": "GLM-5.3 Highspeed",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "runinfra": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.3,
+            "output": 4.2,
+            "cache_read": 0.13
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "tensorx": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.75,
+            "output": 4.5,
+            "cache_read": 0.44
+          }
+        }
+      ],
+      "agentrouter": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": null
+        }
+      ],
+      "moark": [
+        {
+          "id": "GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.2,
+            "output": 4.18
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "glm-5.3-fast",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 2.8,
+            "output": 8.8,
+            "cache_read": 0.56
+          }
+        },
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.45,
+            "output": 1.8,
+            "cache_read": 0.135
+          }
+        }
+      ],
+      "crossmodel": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.2,
+            "output": 4.4,
+            "cache_read": 0.3,
+            "cache_write": 1.2
+          }
+        }
+      ],
+      "wally": [
+        {
+          "id": "glm-5.3-fast",
+          "name": "GLM-5.3 Fast",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "huawei-maas": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.1994,
+            "output": 4.1979,
+            "cache_read": 0.29985
+          }
+        }
+      ],
+      "aihubmix": [
+        {
+          "id": "coding-glm-5.3-free",
+          "name": "GLM-5.3 (Coding, free)",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        },
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.1268,
+            "output": 3.9438,
+            "cache_read": 0.2817
+          }
+        }
+      ],
+      "merge-gateway": [
+        {
+          "id": "zai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.7,
+            "output": 2.2,
+            "cache_read": 0.13
+          }
+        }
+      ],
+      "refuseless": [
+        {
+          "id": "glm-5.3-abliterated",
+          "name": "GLM 5.3 Abliterated",
+          "cost": {
+            "input": 1,
+            "output": 2,
+            "cache_read": 0.15
+          }
+        }
+      ],
+      "inco": [
+        {
+          "id": "glm-5.3:fast",
+          "name": "GLM-5.3 Fast",
+          "cost": {
+            "input": 2.8,
+            "output": 8.8,
+            "cache_read": 0.52
+          }
+        },
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "z-ai/glm-5.3-fast",
+          "name": "Z.ai: GLM 5.3 Fast",
+          "cost": {
+            "input": 2.1,
+            "output": 6.6,
+            "cache_read": 0.21
+          }
+        },
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.9,
+            "output": 4,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "neon": [
+        {
+          "id": "glm-5-3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "tencent-token-plan": [
+        {
+          "id": "glm-5-3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.20104683,
+            "output": 4.20366391,
+            "cache_read": 0.30026171
+          }
+        },
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.20104683,
+            "output": 4.20366391,
+            "cache_read": 0.30026171
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4
+          }
+        }
+      ],
+      "gisoo": [
+        {
+          "id": "alibaba/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.96,
+            "output": 6.16
           }
         }
       ],
@@ -1488,15 +1585,402 @@
           }
         }
       ],
-      "alibaba-cn": [
+      "siliconflow": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26,
+            "cache_write": 0
+          }
+        }
+      ],
+      "venice": [
+        {
+          "id": "z-ai-glm-5-3",
+          "name": "GLM 5.3",
+          "cost": {
+            "input": 1.75,
+            "output": 5.5,
+            "cache_read": 0.325
+          }
+        }
+      ],
+      "oathbreaker": [
+        {
+          "id": "oathbreaker-glm-5.3",
+          "name": "Oathbreaker GLM-5.3 Abliterated",
+          "cost": {
+            "input": 3,
+            "output": 5,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "aiand": [
+        {
+          "id": "zai-org/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1,
+            "output": 4,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "alibaba-token-plan": [
         {
           "id": "glm-5.3",
           "name": "GLM-5.3",
           "cost": {
-            "input": 1.1,
-            "output": 3.851,
-            "cache_read": 0.275,
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
             "cache_write": 0
+          }
+        }
+      ],
+      "augure": [
+        {
+          "id": "open-glm-5-3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 2.14,
+            "output": 4.99
+          }
+        }
+      ],
+      "phala": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "adzuki": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 2.2857,
+            "output": 8,
+            "cache_read": 0.5714
+          }
+        }
+      ],
+      "arcee": [
+        {
+          "id": "zai-org/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "morph": [
+        {
+          "id": "morph-glm53-744b",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.19,
+            "output": 6,
+            "cache_read": 0.1955
+          }
+        }
+      ],
+      "tenstorrent": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.6,
+            "output": 2.5,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "alibaba-token-plan-cn": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "togetherai": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "scx-ai": [
+        {
+          "id": "GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.98,
+            "output": 3.08,
+            "cache_read": 0.18
+          }
+        }
+      ],
+      "trustedtokens": [
+        {
+          "id": "zai-org/GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": null
+        }
+      ],
+      "synthorai": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.28
+          }
+        }
+      ],
+      "privatemode-ai": [
+        {
+          "id": "glm-latest",
+          "name": "GLM (latest)",
+          "cost": {
+            "input": 1.791,
+            "output": 6.6326,
+            "cache_read": 0.1733
+          }
+        },
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.791,
+            "output": 6.6326,
+            "cache_read": 0.1733
+          }
+        }
+      ],
+      "melious": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.115,
+            "output": 3.345,
+            "cache_read": 0.223
+          }
+        }
+      ],
+      "aki-io": [
+        {
+          "id": "glm5.3-754b",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.1215,
+            "output": 3.92525,
+            "cache_read": 0.280375
+          }
+        }
+      ],
+      "mistral": [
+        {
+          "id": "zai-glm-5-3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.14
+          }
+        }
+      ],
+      "teamorouter": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "lyceum": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "scaleway": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 2.01,
+            "output": 6.15
+          }
+        }
+      ],
+      "cline-pass": [
+        {
+          "id": "cline-pass/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "scnet-token-plan": [
+        {
+          "id": "GLM-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "uplinkswitch": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.317772,
+            "output": 0.998712,
+            "cache_read": 0.06596
+          }
+        }
+      ],
+      "novita-ai": [
+        {
+          "id": "zai-org/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "kitani": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.3,
+            "output": 4.25,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "nearai": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.8,
+            "output": 5.75,
+            "cache_read": 0.45
+          }
+        }
+      ],
+      "vultr": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.75,
+            "output": 3
+          }
+        }
+      ],
+      "tokengo": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "neuralwatt": [
+        {
+          "id": "glm-5.3-flex",
+          "name": "GLM 5.3 Flex",
+          "cost": {
+            "input": 0.9425,
+            "output": 2.925,
+            "cache_read": 0.09425
+          }
+        },
+        {
+          "id": "glm-5.3",
+          "name": "GLM 5.3",
+          "cost": {
+            "input": 1.45,
+            "output": 4.5,
+            "cache_read": 0.145
+          }
+        }
+      ],
+      "zenmux": [
+        {
+          "id": "z-ai/glm-5.3",
+          "name": "GLM 5.3",
+          "cost": {
+            "input": 1.4,
+            "output": 4.4,
+            "cache_read": 0.26
+          }
+        }
+      ],
+      "boundless": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 1.12,
+            "output": 3.52,
+            "cache_read": 0.14
+          }
+        }
+      ],
+      "korouter": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "cost": {
+            "input": 0.714,
+            "output": 2.24,
+            "cache_read": 0.1326
           }
         }
       ]
@@ -1558,7 +2042,10 @@
       "id": "unsloth/GLM-5.3-GGUF",
       "name": "unsloth/GLM-5.3-GGUF",
       "url": "https://huggingface.co/unsloth/GLM-5.3-GGUF",
-      "runtime": [],
+      "runtime": [
+        "python",
+        "llama.cpp"
+      ],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -1567,7 +2054,9 @@
       "id": "unsloth/GLM-5.3",
       "name": "unsloth/GLM-5.3",
       "url": "https://huggingface.co/unsloth/GLM-5.3",
-      "runtime": [],
+      "runtime": [
+        "python"
+      ],
       "quantization": null,
       "relation": null,
       "status": "build"
@@ -1576,7 +2065,9 @@
       "id": "zai-org/GLM-5.3-BF16",
       "name": "zai-org/GLM-5.3-BF16",
       "url": "https://huggingface.co/zai-org/GLM-5.3-BF16",
-      "runtime": [],
+      "runtime": [
+        "python"
+      ],
       "quantization": "BF16",
       "relation": null,
       "status": "build"
@@ -1586,11 +2077,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/zai-org/GLM-5.3",
-      "retrieved_at": "2026-11-14"
+      "retrieved_at": "2026-11-17"
     }
   ],
-  "verified_at": "2026-11-14",
-  "updated_at": "2026-11-14",
+  "verified_at": "2026-11-17",
+  "updated_at": "2026-11-17",
   "notes": "3 builds are attached.",
   "scorecard": {
     "overall": {
@@ -1708,7 +2199,7 @@
       "band": "very-strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-17",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

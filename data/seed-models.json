@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-14",
+  "updated_at": "2026-11-17",
   "note": "Curated roots for coverage gaps that the watchlist does not reach. They enter the normal pull, tagging, indexing, and scorecard pipeline.",
   "models": [
     "facebook/nllb-200-distilled-600M",
@@ -10,6 +10,8 @@
     "Helsinki-NLP/opus-mt-id-en",
     "Helsinki-NLP/opus-mt-en-id",
     "google/madlad400-3b-mt",
-    "google/madlad400-10b-mt"
+    "google/madlad400-10b-mt",
+    "nex-agi/Nex-N2.6",
+    "RecursiveSI/flint"
   ]
 }

@@ -77,6 +77,7 @@
     "models_dev": "https://models.dev/models/alibaba/qwen3.8-27b",
     "agent_detect": "https://agent-detect.bevry.me/model/qwen3827b",
     "providers": [
+      "adaption",
       "aiand",
       "aimlapi",
       "aki-io",
@@ -84,26 +85,35 @@
       "amd",
       "berget",
       "blueclaw",
+      "cedarllm",
       "cerebras",
       "chutes",
       "cloudflare-workers-ai",
       "commandcode",
       "cortecs",
       "deepinfra",
+      "doubleword",
       "edenai",
       "empiriolabs",
       "engy",
+      "entrim",
       "evroc",
+      "fortytwo",
+      "graphn",
       "groq",
       "hetzner",
       "huggingface",
       "hyper",
       "iteracompute",
+      "keln",
       "kilo",
+      "klavo",
       "kosmik",
+      "liquid",
       "llmgateway",
       "llmgateway-providers",
       "llmtech",
+      "lyceum",
       "merge-gateway",
       "munito",
       "munito-eu",
@@ -112,452 +122,35 @@
       "nebius",
       "neuralwatt",
       "novita-ai",
+      "obscurify",
       "ofox",
       "openrouter",
       "opper",
       "orcarouter",
       "ovhcloud",
+      "paraloncloud",
+      "phala",
+      "powerspring",
       "prime",
       "regolo-ai",
       "runinfra",
       "scaleway",
       "siliconflow-cn",
+      "sokkan",
       "standardcompute",
-      "tempr",
+      "stepping-stone",
+      "synthetic",
       "tensorx",
+      "tenstorrent",
       "thinkingmachines",
+      "trustedtokens",
       "venice",
       "vercel",
       "vultr",
+      "wafer.ai",
       "wandb"
     ],
     "provider_models": {
-      "cerebras": [
-        {
-          "id": "qwen-3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.99,
-            "output": 1.49,
-            "cache_read": 0.99
-          }
-        }
-      ],
-      "evroc": [
-        {
-          "id": "Qwen/Qwen3.8-27B",
-          "name": "Qwen3.8-27B",
-          "cost": {
-            "input": 0.87,
-            "output": 3.5
-          }
-        }
-      ],
-      "novita-ai": [
-        {
-          "id": "qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.42,
-            "output": 3,
-            "cache_read": 0.085
-          }
-        }
-      ],
-      "engy": [
-        {
-          "id": "qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.045,
-            "output": 0.32,
-            "cache_read": 0.015
-          }
-        }
-      ],
-      "munito": [
-        {
-          "id": "qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.18,
-            "output": 2.4,
-            "cache_read": 0.05
-          }
-        }
-      ],
-      "berget": [
-        {
-          "id": "Qwen/Qwen3.8-27B-FP8",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.46,
-            "output": 3.48
-          }
-        }
-      ],
-      "regolo-ai": [
-        {
-          "id": "qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.58,
-            "output": 2.42
-          }
-        }
-      ],
-      "scaleway": [
-        {
-          "id": "qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.684,
-            "output": 3.762,
-            "reasoning": 3.762,
-            "cache_read": 0.137
-          }
-        }
-      ],
-      "cortecs": [
-        {
-          "id": "qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.1,
-            "output": 0.4,
-            "cache_read": 0.04
-          }
-        }
-      ],
-      "merge-gateway": [
-        {
-          "id": "qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.4,
-            "output": 3,
-            "cache_read": 0.05
-          }
-        }
-      ],
-      "neuralwatt": [
-        {
-          "id": "qwen-3.8-27b-flex",
-          "name": "Qwen3.8 27B Flex",
-          "cost": {
-            "input": 0.2925,
-            "output": 2.08,
-            "cache_read": 0.1625
-          }
-        },
-        {
-          "id": "qwen-3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.45,
-            "output": 3.2,
-            "cache_read": 0.25
-          }
-        }
-      ],
-      "nearai": [
-        {
-          "id": "Qwen/Qwen3.8-27B",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.04,
-            "output": 1.35,
-            "cache_read": 0.018
-          }
-        }
-      ],
-      "aimlapi": [
-        {
-          "id": "alibaba/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.4761,
-            "output": 3.3856
-          }
-        }
-      ],
-      "cloudflare-workers-ai": [
-        {
-          "id": "@cf/qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.45,
-            "output": 3.2,
-            "cache_read": 0.05
-          }
-        }
-      ],
-      "nebius": [
-        {
-          "id": "Qwen/Qwen3.8-27B",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.45,
-            "output": 3,
-            "cache_read": 0.1
-          }
-        }
-      ],
-      "amd": [
-        {
-          "id": "Qwen3.8-27B",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "llmtech": [
-        {
-          "id": "nvidia/Qwen3.8-27B-NVFP4",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.25,
-            "output": 2.09,
-            "cache_read": 0.04
-          }
-        }
-      ],
-      "hyper": [
-        {
-          "id": "qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.5,
-            "output": 3,
-            "cache_read": 0.1
-          }
-        }
-      ],
-      "hetzner": [
-        {
-          "id": "Qwen3.8-27B",
-          "name": "Qwen3.8-27B",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "ofox": [
-        {
-          "id": "qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.5,
-            "output": 1.71,
-            "cache_read": 0.043,
-            "cache_write": 0.63
-          }
-        },
-        {
-          "id": "bailian/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.45,
-            "output": 3.2,
-            "cache_read": 0.05,
-            "cache_write": 0.5625
-          }
-        }
-      ],
-      "deepinfra": [
-        {
-          "id": "Qwen/Qwen3.8-27B",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.2,
-            "output": 2.5,
-            "cache_read": 0.05
-          }
-        }
-      ],
-      "thinkingmachines": [
-        {
-          "id": "Qwen/Qwen3.8-27B:peft:262144",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.6975,
-            "output": 5.595,
-            "cache_read": 0.1395
-          }
-        },
-        {
-          "id": "Qwen/Qwen3.8-27B",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.6975,
-            "output": 5.595,
-            "cache_read": 0.1395
-          }
-        }
-      ],
-      "aiand": [
-        {
-          "id": "qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.4,
-            "output": 3,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "tempr": [
-        {
-          "id": "cerebras/qwen-3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.99,
-            "output": 1.49
-          }
-        },
-        {
-          "id": "groq/qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.8,
-            "output": 4,
-            "cache_read": 0.4
-          }
-        }
-      ],
-      "commandcode": [
-        {
-          "id": "Qwen/Qwen3.8-27B",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.4,
-            "output": 3,
-            "cache_read": 0.04
-          }
-        }
-      ],
-      "vercel": [
-        {
-          "id": "alibaba/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.06,
-            "output": 2.2,
-            "cache_read": 0.059
-          }
-        }
-      ],
-      "siliconflow-cn": [
-        {
-          "id": "Qwen/Qwen3.8-27B",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.44980438,
-            "output": 1.79921752
-          }
-        }
-      ],
-      "huggingface": [
-        {
-          "id": "Qwen/Qwen3.8-27B",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.4,
-            "output": 3
-          }
-        }
-      ],
-      "aki-io": [
-        {
-          "id": "qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.33645,
-            "output": 2.4673,
-            "cache_read": 0.11215
-          }
-        }
-      ],
-      "runinfra": [
-        {
-          "id": "Qwen/Qwen3.8-27B",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.1,
-            "output": 0.4,
-            "cache_read": 0.01
-          }
-        }
-      ],
-      "groq": [
-        {
-          "id": "qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.8,
-            "output": 4
-          }
-        }
-      ],
-      "prime": [
-        {
-          "id": "qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.45,
-            "output": 3.2,
-            "cache_read": 0.05
-          }
-        }
-      ],
-      "standardcompute": [
-        {
-          "id": "qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.425,
-            "output": 2.55,
-            "cache_read": 0.085,
-            "cache_write": 0.53125
-          }
-        }
-      ],
-      "wandb": [
-        {
-          "id": "Qwen/Qwen3.8-27B",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.4,
-            "output": 3,
-            "cache_read": 0.15
-          }
-        }
-      ],
-      "orcarouter": [
-        {
-          "id": "qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.33,
-            "output": 2.4
-          }
-        }
-      ],
-      "opper": [
-        {
-          "id": "qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.5811,
-            "output": 3
-          }
-        }
-      ],
       "empiriolabs": [
         {
           "id": "qwen3-8-27b",
@@ -599,97 +192,68 @@
           }
         }
       ],
-      "kilo": [
+      "munito": [
         {
           "id": "qwen/qwen3.8-27b",
           "name": "Qwen3.8 27B",
           "cost": {
-            "input": 0.425,
-            "output": 2.55,
-            "cache_read": 0.085,
-            "cache_write": 0.53125
-          }
-        }
-      ],
-      "tensorx": [
-        {
-          "id": "qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.4,
+            "input": 0.18,
             "output": 2.4,
-            "cache_read": 0.1
-          }
-        }
-      ],
-      "venice": [
-        {
-          "id": "qwen-3-8-27b",
-          "name": "Qwen 3.8 27B",
-          "cost": {
-            "input": 0.45,
-            "output": 3.2
-          }
-        }
-      ],
-      "llmgateway": [
-        {
-          "id": "qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.08,
-            "output": 0.35,
             "cache_read": 0.05
           }
         }
       ],
-      "ovhcloud": [
-        {
-          "id": "qwen3.8-27b",
-          "name": "Qwen3.8-27B",
-          "cost": {
-            "input": 0.47,
-            "output": 3.19
-          }
-        }
-      ],
-      "munito-eu": [
+      "keln": [
         {
           "id": "qwen/qwen3.8-27b",
           "name": "Qwen3.8 27B",
           "cost": {
-            "input": 0.2,
-            "output": 2.7,
-            "cache_read": 0.11
-          }
-        }
-      ],
-      "blueclaw": [
-        {
-          "id": "Qwen3.8-27B",
-          "name": "Qwen3.8 27B",
-          "cost": null
-        }
-      ],
-      "ambient": [
-        {
-          "id": "qwen/qwen3.8-27b",
-          "name": "Qwen3.8 27B",
-          "cost": {
-            "input": 0.32,
+            "input": 0.5,
             "output": 3.2,
-            "cache_read": 0.16,
-            "cache_write": 0
+            "cache_read": 0.15
           }
         }
       ],
-      "vultr": [
+      "entrim": [
         {
-          "id": "qwen3.8-27b",
+          "id": "Qwen/Qwen3.8-27B",
           "name": "Qwen3.8 27B",
           "cost": {
-            "input": 0.15,
-            "output": 1
+            "input": 0.1,
+            "output": 0.4,
+            "cache_read": 0.04
+          }
+        }
+      ],
+      "orcarouter": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.33,
+            "output": 2.4
+          }
+        }
+      ],
+      "cerebras": [
+        {
+          "id": "qwen-3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.99,
+            "output": 1.49,
+            "cache_read": 0.99
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "alibaba/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.06,
+            "output": 2.2,
+            "cache_read": 0.059
           }
         }
       ],
@@ -705,14 +269,111 @@
           }
         }
       ],
-      "nano-gpt": [
+      "hetzner": [
         {
-          "id": "qwen/qwen3.8-27b",
+          "id": "Qwen3.8-27B",
+          "name": "Qwen3.8-27B",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "thinkingmachines": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
           "name": "Qwen3.8 27B",
           "cost": {
-            "input": 0.15,
-            "output": 0.7,
-            "cache_read": 0.04
+            "input": 0.6975,
+            "output": 5.595,
+            "cache_read": 0.1395
+          }
+        },
+        {
+          "id": "Qwen/Qwen3.8-27B:peft:262144",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.6975,
+            "output": 5.595,
+            "cache_read": 0.1395
+          }
+        }
+      ],
+      "engy": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.045,
+            "output": 0.32,
+            "cache_read": 0.015
+          }
+        }
+      ],
+      "wafer.ai": [
+        {
+          "id": "Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.06,
+            "output": 2.3,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "hyper": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.5,
+            "output": 3,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "regolo-ai": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.58,
+            "output": 2.42
+          }
+        }
+      ],
+      "liquid": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.08,
+            "output": 0.525,
+            "cache_read": 0.0525
+          }
+        }
+      ],
+      "doubleword": [
+        {
+          "id": "Qwen/Qwen3.8-27B-FP8",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.45,
+            "output": 3,
+            "cache_read": 0.045,
+            "cache_write": 0.5625
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "TEE/qwen3.8-27b",
+          "name": "Qwen3.8 27B TEE",
+          "cost": {
+            "input": 0.2,
+            "output": 2.5,
+            "cache_read": 0.05
           }
         },
         {
@@ -725,12 +386,12 @@
           }
         },
         {
-          "id": "TEE/qwen3.8-27b",
-          "name": "Qwen3.8 27B TEE",
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
           "cost": {
-            "input": 0.2,
-            "output": 2.5,
-            "cache_read": 0.05
+            "input": 0.15,
+            "output": 0.7,
+            "cache_read": 0.04
           }
         }
       ],
@@ -745,6 +406,28 @@
           }
         }
       ],
+      "chutes": [
+        {
+          "id": "Qwen/Qwen3.8-27B-TEE",
+          "name": "Qwen3.8 27B TEE",
+          "cost": {
+            "input": 0.039,
+            "output": 1.25,
+            "cache_read": 0.0039
+          }
+        }
+      ],
+      "obscurify": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.16575,
+            "output": 0.7735,
+            "cache_read": 0.0442
+          }
+        }
+      ],
       "iteracompute": [
         {
           "id": "qwen/qwen3.8-27b",
@@ -753,6 +436,71 @@
             "input": 0,
             "output": 0,
             "cache_read": 0
+          }
+        }
+      ],
+      "adaption": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.039,
+            "output": 1.25,
+            "cache_read": 0.0039
+          }
+        }
+      ],
+      "paraloncloud": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.12,
+            "output": 1.7,
+            "reasoning": 1.7
+          }
+        }
+      ],
+      "standardcompute": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.425,
+            "output": 2.55,
+            "cache_read": 0.085,
+            "cache_write": 0.53125
+          }
+        }
+      ],
+      "amd": [
+        {
+          "id": "Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "opper": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.5811,
+            "output": 3
+          }
+        }
+      ],
+      "berget": [
+        {
+          "id": "Qwen/Qwen3.8-27B-FP8",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.46,
+            "output": 3.48
           }
         }
       ],
@@ -767,14 +515,501 @@
           }
         }
       ],
-      "chutes": [
+      "commandcode": [
         {
-          "id": "Qwen/Qwen3.8-27B-TEE",
-          "name": "Qwen3.8 27B TEE",
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
           "cost": {
-            "input": 0.039,
-            "output": 1.25,
-            "cache_read": 0.0039
+            "input": 0.4,
+            "output": 3,
+            "cache_read": 0.04
+          }
+        }
+      ],
+      "ofox": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.5,
+            "output": 1.71,
+            "cache_read": 0.043,
+            "cache_write": 0.63
+          }
+        },
+        {
+          "id": "bailian/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.45,
+            "output": 3.2,
+            "cache_read": 0.05,
+            "cache_write": 0.5625
+          }
+        }
+      ],
+      "klavo": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.5088,
+            "output": 3.0285,
+            "cache_read": 0.0969
+          }
+        }
+      ],
+      "synthetic": [
+        {
+          "id": "hf:Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.45,
+            "output": 3.6,
+            "cache_read": 0.45
+          }
+        }
+      ],
+      "cloudflare-workers-ai": [
+        {
+          "id": "@cf/qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.45,
+            "output": 3.2,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "siliconflow-cn": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.44980438,
+            "output": 1.79921752
+          }
+        }
+      ],
+      "powerspring": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.1044414,
+            "output": 0.41660514,
+            "cache_read": 0.04177656
+          }
+        }
+      ],
+      "graphn": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.45,
+            "output": 3.2,
+            "cache_read": 0.045
+          }
+        }
+      ],
+      "aimlapi": [
+        {
+          "id": "alibaba/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.4761,
+            "output": 3.3856
+          }
+        }
+      ],
+      "groq": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.8,
+            "output": 4
+          }
+        }
+      ],
+      "cortecs": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.1,
+            "output": 0.4,
+            "cache_read": 0.04
+          }
+        }
+      ],
+      "munito-eu": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.2,
+            "output": 2.7,
+            "cache_read": 0.11
+          }
+        }
+      ],
+      "wandb": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.4,
+            "output": 3,
+            "cache_read": 0.15
+          }
+        }
+      ],
+      "nebius": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.45,
+            "output": 3,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "runinfra": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.1,
+            "output": 0.4,
+            "cache_read": 0.01
+          }
+        }
+      ],
+      "tensorx": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.4,
+            "output": 2.4,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.08,
+            "output": 0.35,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "evroc": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8-27B",
+          "cost": {
+            "input": 0.87,
+            "output": 3.5
+          }
+        }
+      ],
+      "merge-gateway": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.4,
+            "output": 3,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "ovhcloud": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8-27B",
+          "cost": {
+            "input": 0.47,
+            "output": 3.19
+          }
+        }
+      ],
+      "fortytwo": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.425,
+            "output": 2.55,
+            "cache_read": 0.085
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.425,
+            "output": 2.55,
+            "cache_read": 0.085,
+            "cache_write": 0.53125
+          }
+        }
+      ],
+      "cedarllm": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.03,
+            "output": 1.15,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.2,
+            "output": 2.5,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "stepping-stone": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.2975,
+            "output": 1.785,
+            "cache_read": 0.0607
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.4,
+            "output": 3
+          }
+        }
+      ],
+      "venice": [
+        {
+          "id": "qwen-3-8-27b",
+          "name": "Qwen 3.8 27B",
+          "cost": {
+            "input": 0.45,
+            "output": 3.2
+          }
+        }
+      ],
+      "sokkan": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.2,
+            "output": 2.5,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "aiand": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.4,
+            "output": 3,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "phala": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.2,
+            "output": 2.5,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "tenstorrent": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.15,
+            "output": 2,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "llmtech": [
+        {
+          "id": "nvidia/Qwen3.8-27B-NVFP4",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.25,
+            "output": 2.09,
+            "cache_read": 0.04
+          }
+        }
+      ],
+      "trustedtokens": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": null
+        }
+      ],
+      "aki-io": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.167475,
+            "output": 0.725725,
+            "cache_read": 0.0837375
+          }
+        }
+      ],
+      "prime": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.45,
+            "output": 3.2,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "blueclaw": [
+        {
+          "id": "Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": null
+        }
+      ],
+      "lyceum": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.4,
+            "output": 2.4,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "scaleway": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.684,
+            "output": 3.762,
+            "reasoning": 3.762,
+            "cache_read": 0.137
+          }
+        }
+      ],
+      "novita-ai": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.42,
+            "output": 3,
+            "cache_read": 0.085
+          }
+        }
+      ],
+      "nearai": [
+        {
+          "id": "Qwen/Qwen3.8-27B",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.04,
+            "output": 1.35,
+            "cache_read": 0.018
+          }
+        }
+      ],
+      "vultr": [
+        {
+          "id": "qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.15,
+            "output": 1
+          }
+        }
+      ],
+      "neuralwatt": [
+        {
+          "id": "nw-small",
+          "name": "Neuralwatt Small",
+          "cost": {
+            "input": 0.45,
+            "output": 3.2,
+            "cache_read": 0.25
+          }
+        },
+        {
+          "id": "nw-small-flex",
+          "name": "Neuralwatt Small (flex)",
+          "cost": {
+            "input": 0.2925,
+            "output": 2.08,
+            "cache_read": 0.1625
+          }
+        },
+        {
+          "id": "qwen-3.8-27b-flex",
+          "name": "Qwen3.8 27B Flex",
+          "cost": {
+            "input": 0.2925,
+            "output": 2.08,
+            "cache_read": 0.1625
+          }
+        },
+        {
+          "id": "qwen-3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.45,
+            "output": 3.2,
+            "cache_read": 0.25
+          }
+        }
+      ],
+      "ambient": [
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "Qwen3.8 27B",
+          "cost": {
+            "input": 0.32,
+            "output": 3.2,
+            "cache_read": 0.16,
+            "cache_write": 0
           }
         }
       ]
@@ -833,19 +1068,67 @@
   },
   "builds": [
     {
+      "id": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+      "name": "prism-ml/Ternary-Bonsai-2-27B-gguf",
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "prism-ml/Ternary-Bonsai-2-27B-mlx-2bit",
+      "name": "prism-ml/Ternary-Bonsai-2-27B-mlx-2bit",
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-mlx-2bit",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "MLX",
+      "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "prism-ml/Ternary-Bonsai-2-27B-gguf-dev",
+      "name": "prism-ml/Ternary-Bonsai-2-27B-gguf-dev",
+      "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2-27B-gguf-dev",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
       "id": "nace-ai/Qwen3.8-27B-GGUF",
       "name": "nace-ai/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-GGUF",
-      "runtime": [],
+      "runtime": [
+        "llama.cpp"
+      ],
       "quantization": "GGUF",
       "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "nace-ai/Qwen3.8-27B-MLX-Q5",
+      "name": "nace-ai/Qwen3.8-27B-MLX-Q5",
+      "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-MLX-Q5",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "MLX",
+      "relation": "conversion",
       "status": "build"
     },
     {
       "id": "nace-ai/Qwen3.8-27B-MLX",
       "name": "nace-ai/Qwen3.8-27B-MLX",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-MLX",
-      "runtime": [],
+      "runtime": [
+        "mlx"
+      ],
       "quantization": "MLX",
       "relation": "conversion",
       "status": "build"
@@ -854,7 +1137,9 @@
       "id": "nace-ai/Qwen3.8-27B-MLX-4bit",
       "name": "nace-ai/Qwen3.8-27B-MLX-4bit",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-MLX-4bit",
-      "runtime": [],
+      "runtime": [
+        "mlx"
+      ],
       "quantization": "4-bit",
       "relation": "quantized",
       "status": "build"
@@ -863,9 +1148,22 @@
       "id": "nace-ai/Qwen3.8-27B-MLX-8bit",
       "name": "nace-ai/Qwen3.8-27B-MLX-8bit",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-MLX-8bit",
-      "runtime": [],
+      "runtime": [
+        "mlx"
+      ],
       "quantization": "8-bit",
       "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "nace-ai/Qwen3.8-27B-MLX-3bit",
+      "name": "nace-ai/Qwen3.8-27B-MLX-3bit",
+      "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-MLX-3bit",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "MLX",
+      "relation": "conversion",
       "status": "build"
     },
     {
@@ -878,10 +1176,21 @@
       "status": "build"
     },
     {
+      "id": "nace-ai/Qwen3.8-27B-DFlash2-Kapitsa",
+      "name": "nace-ai/Qwen3.8-27B-DFlash2-Kapitsa",
+      "url": "https://huggingface.co/nace-ai/Qwen3.8-27B-DFlash2-Kapitsa",
+      "runtime": [],
+      "quantization": null,
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
       "id": "Qwen/Qwen3.8-27B-FP8",
       "name": "Qwen/Qwen3.8-27B-FP8",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
-      "runtime": [],
+      "runtime": [
+        "python"
+      ],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
@@ -890,7 +1199,9 @@
       "id": "unsloth/Qwen3.8-27B-GGUF",
       "name": "unsloth/Qwen3.8-27B-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-      "runtime": [],
+      "runtime": [
+        "llama.cpp"
+      ],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -909,12 +1220,12 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-      "retrieved_at": "2026-11-14"
+      "retrieved_at": "2026-11-17"
     }
   ],
-  "verified_at": "2026-11-14",
-  "updated_at": "2026-11-14",
-  "notes": "8 builds are attached.",
+  "verified_at": "2026-11-17",
+  "updated_at": "2026-11-17",
+  "notes": "14 builds are attached.",
   "scorecard": {
     "overall": {
       "score": 74.1,
@@ -1045,7 +1356,7 @@
       "band": "very-strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-17",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

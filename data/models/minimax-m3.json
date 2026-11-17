@@ -79,6 +79,8 @@
     "providers": [
       "302ai",
       "abacus",
+      "abliteratedllm",
+      "adzuki",
       "aihubmix",
       "ambient",
       "boundless",
@@ -93,13 +95,14 @@
       "frogbot",
       "gmicloud",
       "huggingface",
+      "humain",
       "hyper",
       "inco",
+      "inferenceapis",
       "iteracompute",
       "jalapeno",
       "kenari",
       "kilo",
-      "lilac",
       "llmgateway",
       "llmgateway-providers",
       "merge-gateway",
@@ -118,447 +121,20 @@
       "scnet-token-plan",
       "siliconflow",
       "standardcompute",
-      "synthetic",
-      "tempr",
+      "steadyrouter",
+      "tencent-token-plan",
       "tensorx",
       "togetherai",
       "vancine",
       "vercel",
       "volcengine-coding-plan",
       "vultr",
-      "wafer.ai",
       "wally",
       "wandb",
+      "watt",
       "zenmux"
     ],
     "provider_models": {
-      "siliconflow": [
-        {
-          "id": "MiniMaxAI/MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "novita-ai": [
-        {
-          "id": "minimax/minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "tiers": [
-              {
-                "input": 0.6,
-                "output": 2.4,
-                "cache_read": 0.12,
-                "tier": {
-                  "type": "context",
-                  "size": 524288
-                }
-              }
-            ],
-            "context_over_200k": {
-              "input": 0.6,
-              "output": 2.4,
-              "cache_read": 0.12
-            }
-          }
-        }
-      ],
-      "cortecs": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "merge-gateway": [
-        {
-          "id": "minimax/minimax-m3",
-          "name": "MiniMax M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "vancine": [
-        {
-          "id": "MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.24,
-            "output": 0.96,
-            "cache_read": 0.048
-          }
-        }
-      ],
-      "togetherai": [
-        {
-          "id": "MiniMaxAI/MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "fireworks-ai": [
-        {
-          "id": "accounts/fireworks/models/minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        },
-        {
-          "id": "accounts/fireworks/routers/minimax-latest",
-          "name": "MiniMax Latest",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "nebius": [
-        {
-          "id": "MiniMaxAI/MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "inco": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        },
-        {
-          "id": "minimax-m3:fast",
-          "name": "MiniMax M3 Fast",
-          "cost": {
-            "input": 0.6,
-            "output": 2.4,
-            "cache_read": 0.12
-          }
-        }
-      ],
-      "boundless": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.28,
-            "output": 1.1,
-            "cache_read": 0.056
-          }
-        }
-      ],
-      "scnet-token-plan": [
-        {
-          "id": "MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "hyper": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.32664,
-            "output": 1.30656,
-            "cache_read": 0.064239
-          }
-        }
-      ],
-      "modular": [
-        {
-          "id": "minimax/minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "opencode": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        },
-        {
-          "id": "minimax-m3-free",
-          "name": "MiniMax-M3 Free",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "zenmux": [
-        {
-          "id": "minimax/minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "tiers": [
-              {
-                "input": 0.6,
-                "output": 2.4,
-                "cache_read": 0.12,
-                "tier": {
-                  "type": "context",
-                  "size": 512000
-                }
-              }
-            ],
-            "context_over_200k": {
-              "input": 0.6,
-              "output": 2.4,
-              "cache_read": 0.12
-            }
-          }
-        }
-      ],
-      "ofox": [
-        {
-          "id": "minimax/minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.6,
-            "output": 2.4,
-            "cache_read": 0.12
-          }
-        }
-      ],
-      "deepinfra": [
-        {
-          "id": "MiniMaxAI/MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.28,
-            "output": 1.1,
-            "cache_read": 0.056
-          }
-        }
-      ],
-      "tempr": [
-        {
-          "id": "minimax/MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "tiers": [
-              {
-                "input": 0.6,
-                "output": 2.4,
-                "cache_read": 0.12,
-                "tier": {
-                  "type": "context",
-                  "size": 512000
-                }
-              }
-            ],
-            "context_over_200k": {
-              "input": 0.6,
-              "output": 2.4,
-              "cache_read": 0.12
-            }
-          }
-        }
-      ],
-      "commandcode": [
-        {
-          "id": "MiniMaxAI/MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "jalapeno": [
-        {
-          "id": "MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "vercel": [
-        {
-          "id": "minimax/minimax-m3",
-          "name": "MiniMax M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "cline-pass": [
-        {
-          "id": "cline-pass/minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "wafer.ai": [
-        {
-          "id": "MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.33,
-            "output": 1.32,
-            "cache_read": 0.07,
-            "cache_write": 0,
-            "tiers": [
-              {
-                "input": 0.66,
-                "output": 2.64,
-                "cache_read": 0.13,
-                "cache_write": 0,
-                "tier": {
-                  "type": "context",
-                  "size": 512000
-                }
-              }
-            ],
-            "context_over_200k": {
-              "input": 0.66,
-              "output": 2.64,
-              "cache_read": 0.13,
-              "cache_write": 0
-            }
-          }
-        }
-      ],
-      "huggingface": [
-        {
-          "id": "MiniMaxAI/MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2
-          }
-        }
-      ],
-      "standardcompute": [
-        {
-          "id": "minimax/minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "aihubmix": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.288,
-            "output": 1.152
-          }
-        }
-      ],
-      "wandb": [
-        {
-          "id": "MiniMaxAI/MiniMax-M3",
-          "name": "MiniMax M3",
-          "cost": {
-            "input": 0.23,
-            "output": 0.96,
-            "cache_read": 0.05
-          }
-        }
-      ],
-      "orcarouter": [
-        {
-          "id": "minimax/minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
-          }
-        }
-      ],
-      "opper": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.6,
-            "output": 2.4,
-            "cache_read": 0.12,
-            "tiers": [
-              {
-                "input": 1.2,
-                "output": 4.8,
-                "cache_read": 0.24,
-                "tier": {
-                  "type": "context",
-                  "size": 524288
-                }
-              }
-            ],
-            "context_over_200k": {
-              "input": 1.2,
-              "output": 4.8,
-              "cache_read": 0.24
-            }
-          }
-        }
-      ],
       "empiriolabs": [
         {
           "id": "minimax-m3",
@@ -597,15 +173,6 @@
           }
         },
         {
-          "id": "deepinfra/minimax-m3",
-          "name": "MiniMax M3 (DeepInfra)",
-          "cost": {
-            "input": 0.28,
-            "output": 1.1,
-            "cache_read": 0.056
-          }
-        },
-        {
           "id": "minimax/minimax-m3",
           "name": "MiniMax M3 (MiniMax)",
           "cost": {
@@ -622,31 +189,18 @@
             "output": 1.2,
             "cache_read": 0.06
           }
-        }
-      ],
-      "wally": [
+        },
         {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.33,
-            "output": 1.32,
-            "cache_read": 0.066
-          }
-        }
-      ],
-      "lilac": [
-        {
-          "id": "minimaxai/minimax-m3",
-          "name": "MiniMax M3",
+          "id": "deepinfra/minimax-m3",
+          "name": "MiniMax M3 (DeepInfra)",
           "cost": {
             "input": 0.28,
             "output": 1.1,
-            "cache_read": 0.05
+            "cache_read": 0.056
           }
         }
       ],
-      "kilo": [
+      "orcarouter": [
         {
           "id": "minimax/minimax-m3",
           "name": "MiniMax-M3",
@@ -657,25 +211,41 @@
           }
         }
       ],
-      "tensorx": [
+      "vercel": [
         {
           "id": "minimax/minimax-m3",
-          "name": "MiniMax-M3",
+          "name": "MiniMax M3",
           "cost": {
-            "input": 0.4,
-            "output": 2,
-            "cache_read": 0.1
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06,
+            "tiers": [
+              {
+                "input": 1.2,
+                "output": 4.8,
+                "cache_read": 0.24,
+                "tier": {
+                  "type": "context",
+                  "size": 512000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 1.2,
+              "output": 4.8,
+              "cache_read": 0.24
+            }
           }
         }
       ],
-      "llmgateway": [
+      "edenai": [
         {
-          "id": "minimax-m3",
+          "id": "minimax/MiniMax-M3",
           "name": "MiniMax-M3",
           "cost": {
-            "input": 0.28,
-            "output": 1.1,
-            "cache_read": 0.056
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
           }
         }
       ],
@@ -699,153 +269,18 @@
           }
         }
       ],
-      "ollama-cloud": [
+      "fireworks-ai": [
         {
-          "id": "minimax-m3",
-          "name": "minimax-m3",
-          "cost": {
-            "input": 0.6,
-            "output": 2.4,
-            "cache_read": 0.12
-          }
-        }
-      ],
-      "opencode-go": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06,
-            "tiers": [
-              {
-                "input": 0.6,
-                "output": 2.4,
-                "cache_read": 0.12,
-                "tier": {
-                  "type": "context",
-                  "size": 512000
-                }
-              }
-            ],
-            "context_over_200k": {
-              "input": 0.6,
-              "output": 2.4,
-              "cache_read": 0.12
-            }
-          }
-        }
-      ],
-      "synthetic": [
-        {
-          "id": "hf:MiniMaxAI/MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.6,
-            "output": 1.2,
-            "cache_read": 0.6
-          }
-        }
-      ],
-      "abacus": [
-        {
-          "id": "MiniMaxAI/MiniMax-M3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.3,
-            "output": 1.2
-          }
-        }
-      ],
-      "frogbot": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax M3",
+          "id": "accounts/fireworks/routers/minimax-latest",
+          "name": "MiniMax Latest",
           "cost": {
             "input": 0.3,
             "output": 1.2,
             "cache_read": 0.06
           }
-        }
-      ],
-      "ambient": [
+        },
         {
-          "id": "minimax/minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.23,
-            "output": 0.96,
-            "cache_read": 0.05,
-            "cache_write": 0
-          }
-        }
-      ],
-      "volcengine-coding-plan": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "crossmodel": [
-        {
-          "id": "minimax/minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.33,
-            "output": 1.32,
-            "cache_read": 0.066,
-            "cache_write": 0.33,
-            "tiers": [
-              {
-                "input": 0.66,
-                "output": 2.63,
-                "cache_read": 0.132,
-                "cache_write": 0.66,
-                "tier": {
-                  "type": "context",
-                  "size": 512000
-                }
-              }
-            ],
-            "context_over_200k": {
-              "input": 0.66,
-              "output": 2.63,
-              "cache_read": 0.132,
-              "cache_write": 0.66
-            }
-          }
-        }
-      ],
-      "kenari": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.36,
-            "output": 1.42857143,
-            "cache_read": 0.06857143
-          }
-        }
-      ],
-      "vultr": [
-        {
-          "id": "minimax-m3",
-          "name": "MiniMax-M3",
-          "cost": {
-            "input": 0.2,
-            "output": 0.9
-          }
-        }
-      ],
-      "edenai": [
-        {
-          "id": "minimax/MiniMax-M3",
+          "id": "accounts/fireworks/models/minimax-m3",
           "name": "MiniMax-M3",
           "cost": {
             "input": 0.3,
@@ -884,16 +319,29 @@
           }
         }
       ],
-      "nano-gpt": [
+      "hyper": [
         {
-          "id": "minimax/minimax-m3",
-          "name": "MiniMax M3",
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
           "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.06
+            "input": 0.32664,
+            "output": 1.30656,
+            "cache_read": 0.064239
           }
-        },
+        }
+      ],
+      "volcengine-coding-plan": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "nano-gpt": [
         {
           "id": "minimax/minimax-m3:thinking",
           "name": "MiniMax M3 Thinking",
@@ -902,6 +350,22 @@
             "output": 1.2,
             "cache_read": 0.06
           }
+        },
+        {
+          "id": "minimax/minimax-m3",
+          "name": "MiniMax M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "steadyrouter": [
+        {
+          "id": "MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": null
         }
       ],
       "iteracompute": [
@@ -915,6 +379,66 @@
           }
         }
       ],
+      "modular": [
+        {
+          "id": "minimax/minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "standardcompute": [
+        {
+          "id": "minimax/minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "opper": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.6,
+            "output": 2.4,
+            "cache_read": 0.12,
+            "tiers": [
+              {
+                "input": 1.2,
+                "output": 4.8,
+                "cache_read": 0.24,
+                "tier": {
+                  "type": "context",
+                  "size": 524288
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 1.2,
+              "output": 4.8,
+              "cache_read": 0.24
+            }
+          }
+        }
+      ],
+      "inferenceapis": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.39,
+            "output": 1.56,
+            "cache_read": 0.08
+          }
+        }
+      ],
       "openrouter": [
         {
           "id": "minimax/minimax-m3",
@@ -923,6 +447,379 @@
             "input": 0.3,
             "output": 1.2,
             "cache_read": 0.06
+          }
+        }
+      ],
+      "commandcode": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "abliteratedllm": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.27,
+            "output": 1.08,
+            "cache_read": 0.054
+          }
+        }
+      ],
+      "opencode-go": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06,
+            "tiers": [
+              {
+                "input": 0.6,
+                "output": 2.4,
+                "cache_read": 0.12,
+                "tier": {
+                  "type": "context",
+                  "size": 512000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 0.6,
+              "output": 2.4,
+              "cache_read": 0.12
+            }
+          }
+        }
+      ],
+      "watt": [
+        {
+          "id": "MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.6,
+            "output": 2.4
+          }
+        }
+      ],
+      "ofox": [
+        {
+          "id": "minimax/minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.6,
+            "output": 2.4,
+            "cache_read": 0.12
+          }
+        }
+      ],
+      "vancine": [
+        {
+          "id": "MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.24,
+            "output": 0.96,
+            "cache_read": 0.048
+          }
+        }
+      ],
+      "kenari": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.36,
+            "output": 1.42857143,
+            "cache_read": 0.06857143
+          }
+        }
+      ],
+      "frogbot": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "ollama-cloud": [
+        {
+          "id": "minimax-m3",
+          "name": "minimax-m3",
+          "cost": {
+            "input": 0.6,
+            "output": 2.4,
+            "cache_read": 0.12
+          }
+        }
+      ],
+      "cortecs": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "wandb": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3",
+          "name": "MiniMax M3",
+          "cost": {
+            "input": 0.23,
+            "output": 0.96,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "nebius": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "minimax-m3-free",
+          "name": "MiniMax-M3 Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        },
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "tensorx": [
+        {
+          "id": "minimax/minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.4,
+            "output": 2,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "abacus": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.28,
+            "output": 1.1,
+            "cache_read": 0.056
+          }
+        }
+      ],
+      "crossmodel": [
+        {
+          "id": "minimax/minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.33,
+            "output": 1.32,
+            "cache_read": 0.066,
+            "cache_write": 0.33,
+            "tiers": [
+              {
+                "input": 0.66,
+                "output": 2.63,
+                "cache_read": 0.132,
+                "cache_write": 0.66,
+                "tier": {
+                  "type": "context",
+                  "size": 512000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 0.66,
+              "output": 2.63,
+              "cache_read": 0.132,
+              "cache_write": 0.66
+            }
+          }
+        }
+      ],
+      "wally": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "aihubmix": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.288,
+            "output": 1.152
+          }
+        }
+      ],
+      "merge-gateway": [
+        {
+          "id": "minimax/minimax-m3",
+          "name": "MiniMax M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "inco": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        },
+        {
+          "id": "minimax-m3:fast",
+          "name": "MiniMax M3 Fast",
+          "cost": {
+            "input": 0.6,
+            "output": 2.4,
+            "cache_read": 0.12
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "minimax/minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "humain": [
+        {
+          "id": "humain-m3-research-preview",
+          "name": "HUMAIN M3 Research Preview",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2
+          }
+        },
+        {
+          "id": "humain-m3-preview",
+          "name": "HUMAIN M3 Preview",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.28,
+            "output": 1.1,
+            "cache_read": 0.056
+          }
+        }
+      ],
+      "tencent-token-plan": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.31527479,
+            "output": 1.26109917,
+            "cache_read": 0.06305496,
+            "tiers": [
+              {
+                "input": 0.63054959,
+                "output": 2.52219835,
+                "cache_read": 0.12610992,
+                "tier": {
+                  "type": "context",
+                  "size": 512000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 0.63054959,
+              "output": 2.52219835,
+              "cache_read": 0.12610992
+            }
+          }
+        },
+        {
+          "id": "minimax-m-3-0",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.31527479,
+            "output": 1.26109917,
+            "cache_read": 0.06305496,
+            "tiers": [
+              {
+                "input": 0.63054959,
+                "output": 2.52219835,
+                "cache_read": 0.12610992,
+                "tier": {
+                  "type": "context",
+                  "size": 512000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 0.63054959,
+              "output": 2.52219835,
+              "cache_read": 0.12610992
+            }
           }
         }
       ],
@@ -950,6 +847,169 @@
               "output": 4.8,
               "cache_read": 0.24
             }
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2
+          }
+        }
+      ],
+      "siliconflow": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "jalapeno": [
+        {
+          "id": "MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "adzuki": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 1.2,
+            "output": 4.8,
+            "cache_read": 0.24
+          }
+        }
+      ],
+      "togetherai": [
+        {
+          "id": "MiniMaxAI/MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "cline-pass": [
+        {
+          "id": "cline-pass/minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "scnet-token-plan": [
+        {
+          "id": "MiniMax-M3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "novita-ai": [
+        {
+          "id": "minimax/minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06,
+            "tiers": [
+              {
+                "input": 0.6,
+                "output": 2.4,
+                "cache_read": 0.12,
+                "tier": {
+                  "type": "context",
+                  "size": 524288
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 0.6,
+              "output": 2.4,
+              "cache_read": 0.12
+            }
+          }
+        }
+      ],
+      "vultr": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.2,
+            "output": 0.9
+          }
+        }
+      ],
+      "zenmux": [
+        {
+          "id": "minimax/minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.06,
+            "tiers": [
+              {
+                "input": 0.6,
+                "output": 2.4,
+                "cache_read": 0.12,
+                "tier": {
+                  "type": "context",
+                  "size": 512000
+                }
+              }
+            ],
+            "context_over_200k": {
+              "input": 0.6,
+              "output": 2.4,
+              "cache_read": 0.12
+            }
+          }
+        }
+      ],
+      "boundless": [
+        {
+          "id": "minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.28,
+            "output": 1.1,
+            "cache_read": 0.056
+          }
+        }
+      ],
+      "ambient": [
+        {
+          "id": "minimax/minimax-m3",
+          "name": "MiniMax-M3",
+          "cost": {
+            "input": 0.23,
+            "output": 0.96,
+            "cache_read": 0.05,
+            "cache_write": 0
           }
         }
       ]
@@ -1011,7 +1071,9 @@
       "id": "MiniMaxAI/MiniMax-M3-MXFP8",
       "name": "MiniMaxAI/MiniMax-M3-MXFP8",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3-MXFP8",
-      "runtime": [],
+      "runtime": [
+        "python"
+      ],
       "quantization": "MXFP8",
       "relation": "quantized",
       "status": "build"
@@ -1020,7 +1082,10 @@
       "id": "unsloth/MiniMax-M3-GGUF",
       "name": "unsloth/MiniMax-M3-GGUF",
       "url": "https://huggingface.co/unsloth/MiniMax-M3-GGUF",
-      "runtime": [],
+      "runtime": [
+        "python",
+        "llama.cpp"
+      ],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -1030,11 +1095,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
-      "retrieved_at": "2026-11-14"
+      "retrieved_at": "2026-11-17"
     }
   ],
-  "verified_at": "2026-11-14",
-  "updated_at": "2026-11-14",
+  "verified_at": "2026-11-17",
+  "updated_at": "2026-11-17",
   "notes": "2 builds are attached.",
   "scorecard": {
     "overall": {
@@ -1174,7 +1239,7 @@
       "band": "very-strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-17",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

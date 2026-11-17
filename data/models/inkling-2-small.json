@@ -9,7 +9,7 @@
   "releases": [],
   "organization": "thinking-machines-lab",
   "released": "2026-11-04",
-  "summary": "Multimodal reasoning model for visual analysis, planning, and tool use",
+  "summary": "Multimodal MoE reasoning model (594B total, 17B active) for agentic coding, vision, and knowledge work",
   "tags": [
     "task:image-understanding",
     "task:reasoning",
@@ -73,26 +73,21 @@
     "models_dev": "https://models.dev/models/thinkingmachines/inkling-2-small",
     "agent_detect": "https://agent-detect.bevry.me/model/inkling2small",
     "providers": [
+      "cortecs",
+      "deepinfra",
       "edenai",
+      "huggingface",
       "kilo",
+      "nano-gpt",
+      "nebius",
+      "ollama-cloud",
       "opencode",
       "openrouter",
       "prime",
+      "tinfoil",
       "vercel"
     ],
     "provider_models": {
-      "opencode": [
-        {
-          "id": "inkling-2-small-free",
-          "name": "Inkling 2 Small Free",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        }
-      ],
       "vercel": [
         {
           "id": "thinkingmachines/inkling-2-small",
@@ -104,15 +99,127 @@
           }
         }
       ],
-      "prime": [
+      "edenai": [
+        {
+          "id": "cloudflare/@cf/thinkingmachines/inkling-2-small",
+          "name": "Inkling 2 Small (Cloudflare)",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.1
+          }
+        },
+        {
+          "id": "nebius/thinkingmachines/Inkling-2-Small",
+          "name": "Inkling 2 Small (Nebius)",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "deepinfra/thinkingmachines/Inkling-2-Small",
+          "name": "Inkling 2 Small (Deep Infra)",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        },
+        {
+          "id": "together_ai/thinkingmachines/Inkling-2-Small",
+          "name": "Inkling 2 Small (Together AI)",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "tinfoil": [
+        {
+          "id": "inkling-2-small",
+          "name": "Inkling 2 Small",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "TEE/inkling-2-small",
+          "name": "Inkling 2 Small TEE",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "thinkingmachines/inkling-2-small:free",
+          "name": "Inkling 2 Small (free)",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        },
         {
           "id": "thinkingmachines/inkling-2-small",
           "name": "Inkling 2 Small",
           "cost": {
-            "input": 0.15,
-            "output": 0.5,
-            "cache_read": 0.03,
-            "cache_write": 0.15
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "ollama-cloud": [
+        {
+          "id": "inkling-2-small",
+          "name": "Inkling 2 Small",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "cortecs": [
+        {
+          "id": "inkling-2-small",
+          "name": "Inkling 2 Small",
+          "cost": {
+            "input": 0.306,
+            "output": 1.023,
+            "cache_read": 0.061
+          }
+        }
+      ],
+      "nebius": [
+        {
+          "id": "thinkingmachines/Inkling-2-Small",
+          "name": "Inkling 2 Small",
+          "cost": {
+            "input": 0.3,
+            "output": 1,
+            "cache_read": 0.06
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "inkling-2-small-free",
+          "name": "Inkling 2 Small Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
           }
         }
       ],
@@ -127,60 +234,36 @@
           }
         }
       ],
-      "edenai": [
+      "deepinfra": [
         {
-          "id": "nebius/thinkingmachines/Inkling-2-Small",
-          "name": "Inkling 2 Small (Nebius)",
-          "cost": {
-            "input": 0.3,
-            "output": 1,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "together_ai/thinkingmachines/Inkling-2-Small",
-          "name": "Inkling 2 Small (Together AI)",
-          "cost": {
-            "input": 0.3,
-            "output": 1,
-            "cache_read": 0.03
-          }
-        },
-        {
-          "id": "deepinfra/thinkingmachines/Inkling-2-Small",
-          "name": "Inkling 2 Small (Deep Infra)",
-          "cost": {
-            "input": 0.3,
-            "output": 1,
-            "cache_read": 0.03
-          }
-        },
-        {
-          "id": "cloudflare/@cf/thinkingmachines/inkling-2-small",
-          "name": "Inkling 2 Small (Cloudflare)",
-          "cost": {
-            "input": 0.3,
-            "output": 1,
-            "cache_read": 0.1
-          }
-        }
-      ],
-      "openrouter": [
-        {
-          "id": "thinkingmachines/inkling-2-small",
+          "id": "thinkingmachines/Inkling-2-Small",
           "name": "Inkling 2 Small",
           "cost": {
             "input": 0.3,
             "output": 1,
             "cache_read": 0.03
           }
-        },
+        }
+      ],
+      "huggingface": [
         {
-          "id": "thinkingmachines/inkling-2-small:free",
-          "name": "Inkling 2 Small (free)",
+          "id": "thinkingmachines/Inkling-2-Small",
+          "name": "Inkling 2 Small",
           "cost": {
-            "input": 0,
-            "output": 0
+            "input": 0.3,
+            "output": 1
+          }
+        }
+      ],
+      "prime": [
+        {
+          "id": "thinkingmachines/inkling-2-small",
+          "name": "Inkling 2 Small",
+          "cost": {
+            "input": 0.15,
+            "output": 0.5,
+            "cache_read": 0.03,
+            "cache_write": 0.15
           }
         }
       ]
@@ -242,7 +325,9 @@
       "id": "unsloth/Inkling-2-Small-GGUF",
       "name": "unsloth/Inkling-2-Small-GGUF",
       "url": "https://huggingface.co/unsloth/Inkling-2-Small-GGUF",
-      "runtime": [],
+      "runtime": [
+        "llama.cpp"
+      ],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -251,7 +336,9 @@
       "id": "thinkingmachines/Inkling-2-Small-MXFP8",
       "name": "thinkingmachines/Inkling-2-Small-MXFP8",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small-MXFP8",
-      "runtime": [],
+      "runtime": [
+        "python"
+      ],
       "quantization": "MXFP8",
       "relation": "quantized",
       "status": "build"
@@ -261,11 +348,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small",
-      "retrieved_at": "2026-11-14"
+      "retrieved_at": "2026-11-17"
     }
   ],
-  "verified_at": "2026-11-14",
-  "updated_at": "2026-11-14",
+  "verified_at": "2026-11-17",
+  "updated_at": "2026-11-17",
   "notes": "2 builds are attached.",
   "scorecard": {
     "overall": {
@@ -391,7 +478,7 @@
       "band": "very-strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-17",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

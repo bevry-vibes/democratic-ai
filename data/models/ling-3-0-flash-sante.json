@@ -9,7 +9,7 @@
   "releases": [],
   "organization": "ant-ling",
   "released": "2026-10-19",
-  "summary": "Health and medicine specialization of Ling 3.0 Flash for medical reasoning and evidence-based retrieval",
+  "summary": "Efficient model for low-latency assistance, extraction, and routine automation",
   "tags": [
     "task:reasoning",
     "task:text-generation",
@@ -65,7 +65,7 @@
       "vercel"
     ],
     "provider_models": {
-      "novita-ai": [
+      "vercel": [
         {
           "id": "inclusionai/ling-3.0-flash-sante",
           "name": "Ling 3.0 Flash Sante",
@@ -76,7 +76,7 @@
           }
         }
       ],
-      "vercel": [
+      "novita-ai": [
         {
           "id": "inclusionai/ling-3.0-flash-sante",
           "name": "Ling 3.0 Flash Sante",
@@ -134,11 +134,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Sante",
-      "retrieved_at": "2026-11-14"
+      "retrieved_at": "2026-11-17"
     }
   ],
-  "verified_at": "2026-11-14",
-  "updated_at": "2026-11-14",
+  "verified_at": "2026-11-17",
+  "updated_at": "2026-11-17",
   "notes": "1 builds are attached.",
   "scorecard": {
     "overall": {
@@ -248,7 +248,7 @@
       "band": "moderate",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-17",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

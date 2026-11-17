@@ -99,29 +99,16 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Clean",
-      "retrieved_at": "2026-11-14"
+      "retrieved_at": "2026-11-17"
     }
   ],
-  "verified_at": "2026-11-14",
-  "updated_at": "2026-11-14",
+  "verified_at": "2026-11-17",
+  "updated_at": "2026-11-17",
   "notes": "",
-  "task_performance": {
-    "task": "transcription",
-    "metric": "Average WER",
-    "value": 5.83,
-    "unit": "%",
-    "direction": "lower",
-    "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Clean",
-    "source_kind": "model-card",
-    "as_of": "2026-11-14",
-    "match": "exact",
-    "via": null,
-    "note": "Self-reported seven-set average. Cleanup removes disfluencies on purpose, so verbatim references count those removals as errors."
-  },
   "scorecard": {
     "overall": {
-      "score": 65.5,
-      "coverage": 3,
+      "score": 40,
+      "coverage": 2,
       "weights": {
         "syndication": 15,
         "performance": 40,
@@ -135,17 +122,17 @@
           "score": 10,
           "weight": 15,
           "included": true,
-          "effective_weight": 17.6,
-          "contribution": 1.8
+          "effective_weight": 33.3,
+          "contribution": 3.3
         },
         {
           "key": "performance",
           "label": "Performance/Intelligence",
-          "score": 94.2,
+          "score": null,
           "weight": 40,
-          "included": true,
-          "effective_weight": 47.1,
-          "contribution": 44.3
+          "included": false,
+          "effective_weight": 0,
+          "contribution": null
         },
         {
           "key": "openness",
@@ -153,8 +140,8 @@
           "score": 55,
           "weight": 30,
           "included": true,
-          "effective_weight": 35.3,
-          "contribution": 19.4
+          "effective_weight": 66.7,
+          "contribution": 36.7
         },
         {
           "key": "research",
@@ -200,16 +187,16 @@
       ]
     },
     "performance": {
-      "score": 94.2,
-      "basis": "task",
-      "match": "exact",
+      "score": null,
+      "basis": null,
+      "match": null,
       "inherited_from": null,
       "benchmarks": [],
       "own_benchmarks": [],
-      "metric": "Average WER",
-      "source": "https://huggingface.co/ConwayResearch/Underdog-Bark-3.0-Clean",
-      "as_of": "2026-11-14",
-      "note": "Derived from Average WER (5.83%) reported by model-card."
+      "metric": null,
+      "source": null,
+      "as_of": null,
+      "note": "Not measured. No current benchmark is recorded."
     },
     "research_citation": {
       "score": null,
@@ -226,7 +213,7 @@
       "band": "weak",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-17",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

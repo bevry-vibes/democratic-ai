@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-11-14T09:20:23.509Z",
-  "generated_on": "2026-11-14",
+  "updated_at": "2026-11-17T09:55:09.374Z",
+  "generated_on": "2026-11-17",
   "title": "Democratic AI Scorecard",
   "as_of": "2026-11-14",
-  "models": 245,
-  "openness_scored": 245,
-  "performance_scored": 46,
+  "models": 243,
+  "openness_scored": 243,
+  "performance_scored": 38,
   "research_scored": 13,
-  "average_overall": 44.1,
-  "overall_scored": 245,
+  "average_overall": 43.3,
+  "overall_scored": 243,
   "note": "Current values only. The scorecard computes openness from release terms and takes performance and research from current task benchmarks. Missing axes stay missing; they are not zero.",
   "applied": [
     {
@@ -588,9 +588,9 @@
     {
       "id": "underdog-bark-3-0-clean",
       "openness": 55,
-      "performance": 94.2,
+      "performance": null,
       "research": null,
-      "overall": 65.5
+      "overall": 40
     },
     {
       "id": "unlimited-ocr",
@@ -605,13 +605,6 @@
       "performance": null,
       "research": null,
       "overall": 43.3
-    },
-    {
-      "id": "webai-colvec1-9b",
-      "openness": 55,
-      "performance": null,
-      "research": null,
-      "overall": 40
     },
     {
       "id": "zoomgain-4b",
@@ -824,6 +817,13 @@
       "overall": 33.3
     },
     {
+      "id": "flint",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
       "id": "fluidaudio-web",
       "openness": 60,
       "performance": null,
@@ -1029,9 +1029,9 @@
     {
       "id": "lfm2-5-audio-1-5b",
       "openness": 55,
-      "performance": 92.5,
+      "performance": null,
       "research": null,
-      "overall": 62.9
+      "overall": 36.7
     },
     {
       "id": "lfm2-8b-a1b",
@@ -1050,9 +1050,9 @@
     {
       "id": "lfm3-audio-2b",
       "openness": 55,
-      "performance": 93.8,
+      "performance": null,
       "research": null,
-      "overall": 63.6
+      "overall": 36.7
     },
     {
       "id": "lfm3-omni-2b",
@@ -1111,18 +1111,11 @@
       "overall": 40
     },
     {
-      "id": "mach-1-additive-35b",
+      "id": "longcat-video-avatar-1-6",
       "openness": 60,
       "performance": null,
       "research": null,
       "overall": 40
-    },
-    {
-      "id": "mach-1-additive-35b-multimodal",
-      "openness": 50,
-      "performance": null,
-      "research": null,
-      "overall": 33.3
     },
     {
       "id": "mach-2-additive-medium",
@@ -1314,6 +1307,13 @@
       "overall": 36.7
     },
     {
+      "id": "nex-n2-6",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
       "id": "nllb-200-3-3b",
       "openness": 55,
       "performance": null,
@@ -1400,16 +1400,16 @@
     {
       "id": "qwen3-asr-1-7b-hf-beam4",
       "openness": 60,
-      "performance": 93.9,
+      "performance": null,
       "research": null,
-      "overall": 65.4
+      "overall": 40
     },
     {
       "id": "qwen3-asr-1-7b-hf-orze",
       "openness": 60,
-      "performance": 93.9,
+      "performance": null,
       "research": null,
-      "overall": 65.4
+      "overall": 40
     },
     {
       "id": "qwen3guard-stream-0-6b",
@@ -1610,23 +1610,23 @@
     {
       "id": "underdog-bark-3-0",
       "openness": 55,
-      "performance": 95.1,
+      "performance": null,
       "research": null,
-      "overall": 64.2
+      "overall": 36.7
     },
     {
       "id": "underdog-bark-3-0-plus",
       "openness": 55,
-      "performance": 95.2,
+      "performance": null,
       "research": null,
-      "overall": 64.2
+      "overall": 36.7
     },
     {
       "id": "underdog-bark-3-0-pro",
       "openness": 55,
-      "performance": 95.7,
+      "performance": null,
       "research": null,
-      "overall": 64.4
+      "overall": 36.7
     },
     {
       "id": "underdog-poodle-4b",
@@ -1693,20 +1693,6 @@
     },
     {
       "id": "voz",
-      "openness": 55,
-      "performance": null,
-      "research": null,
-      "overall": 36.7
-    },
-    {
-      "id": "webai-colvec1-1-4b",
-      "openness": 55,
-      "performance": null,
-      "research": null,
-      "overall": 36.7
-    },
-    {
-      "id": "webai-colvec1-1-8b",
       "openness": 55,
       "performance": null,
       "research": null,

@@ -65,10 +65,24 @@
   "lineage": [],
   "access": {
     "hugging_face": "ornith-ai/Ornith-1.5-122B",
-    "models_dev": null,
+    "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-122b",
     "agent_detect": null,
-    "providers": [],
-    "provider_models": {},
+    "providers": [
+      "commandcode"
+    ],
+    "provider_models": {
+      "commandcode": [
+        {
+          "id": "ornith/ornith-1.5-122b",
+          "name": "Ornith 1.5 122B",
+          "cost": {
+            "input": 0.16,
+            "output": 0.64,
+            "cache_read": 0.02
+          }
+        }
+      ]
+    },
     "gated": null
   },
   "syndication": {
@@ -91,7 +105,10 @@
       "id": "ornith-ai/Ornith-1.5-122B-MLX",
       "name": "ornith-ai/Ornith-1.5-122B-MLX",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-MLX",
-      "runtime": [],
+      "runtime": [
+        "python",
+        "mlx"
+      ],
       "quantization": "MLX",
       "relation": "conversion",
       "status": "build"
@@ -100,7 +117,10 @@
       "id": "ornith-ai/Ornith-1.5-122B-MLX-8bit",
       "name": "ornith-ai/Ornith-1.5-122B-MLX-8bit",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-MLX-8bit",
-      "runtime": [],
+      "runtime": [
+        "python",
+        "mlx"
+      ],
       "quantization": "8-bit",
       "relation": "quantized",
       "status": "build"
@@ -109,7 +129,10 @@
       "id": "ornith-ai/Ornith-1.5-122B-MLX-4bit",
       "name": "ornith-ai/Ornith-1.5-122B-MLX-4bit",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-MLX-4bit",
-      "runtime": [],
+      "runtime": [
+        "python",
+        "mlx"
+      ],
       "quantization": "4-bit",
       "relation": "quantized",
       "status": "build"
@@ -118,7 +141,10 @@
       "id": "ornith-ai/Ornith-1.5-122B-GGUF",
       "name": "ornith-ai/Ornith-1.5-122B-GGUF",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-GGUF",
-      "runtime": [],
+      "runtime": [
+        "python",
+        "llama.cpp"
+      ],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -127,7 +153,9 @@
       "id": "ornith-ai/Ornith-1.5-122B-NVFP4",
       "name": "ornith-ai/Ornith-1.5-122B-NVFP4",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-NVFP4",
-      "runtime": [],
+      "runtime": [
+        "python"
+      ],
       "quantization": "FP4",
       "relation": "quantized",
       "status": "build"
@@ -136,7 +164,9 @@
       "id": "ornith-ai/Ornith-1.5-122B-FP8",
       "name": "ornith-ai/Ornith-1.5-122B-FP8",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B-FP8",
-      "runtime": [],
+      "runtime": [
+        "python"
+      ],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
@@ -145,7 +175,9 @@
       "id": "unsloth/Ornith-1.5-122B-GGUF",
       "name": "unsloth/Ornith-1.5-122B-GGUF",
       "url": "https://huggingface.co/unsloth/Ornith-1.5-122B-GGUF",
-      "runtime": [],
+      "runtime": [
+        "llama.cpp"
+      ],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -155,11 +187,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B",
-      "retrieved_at": "2026-11-14"
+      "retrieved_at": "2026-11-17"
     }
   ],
-  "verified_at": "2026-11-14",
-  "updated_at": "2026-11-14",
+  "verified_at": "2026-11-17",
+  "updated_at": "2026-11-17",
   "notes": "7 builds are attached.",
   "scorecard": {
     "overall": {
@@ -291,7 +323,7 @@
       "band": "self-only",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-17",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

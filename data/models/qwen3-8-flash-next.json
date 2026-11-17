@@ -71,34 +71,14 @@
     "models_dev": "https://models.dev/models/alibaba/qwen3.8-flash-next",
     "agent_detect": null,
     "providers": [
+      "aipg",
       "amd",
+      "augure",
       "requesty",
       "tensorx",
       "vultr"
     ],
     "provider_models": {
-      "amd": [
-        {
-          "id": "Qwen3.8-Flash-Next",
-          "name": "Qwen3.8 Flash Next",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "tensorx": [
-        {
-          "id": "qwen/qwen3.8-flash-next",
-          "name": "Qwen3.8 Flash Next",
-          "cost": {
-            "input": 0.2,
-            "output": 0.5,
-            "cache_read": 0.05
-          }
-        }
-      ],
       "requesty": [
         {
           "id": "qwen3.8-flash-next",
@@ -118,6 +98,48 @@
             "output": 0.5,
             "cache_read": 0.05,
             "cache_write": 0.2
+          }
+        }
+      ],
+      "amd": [
+        {
+          "id": "Qwen3.8-Flash-Next",
+          "name": "Qwen3.8 Flash Next",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "aipg": [
+        {
+          "id": "qwen38-flash-next-nvfp4",
+          "name": "Qwen3.8 Flash Next",
+          "cost": {
+            "input": 0.075,
+            "output": 0.3
+          }
+        }
+      ],
+      "tensorx": [
+        {
+          "id": "qwen/qwen3.8-flash-next",
+          "name": "Qwen3.8 Flash Next",
+          "cost": {
+            "input": 0.2,
+            "output": 0.5,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "augure": [
+        {
+          "id": "open-qwen-3.8-flash-next",
+          "name": "Qwen3.8 Flash Next",
+          "cost": {
+            "input": 1.42,
+            "output": 2.85
           }
         }
       ],
@@ -172,11 +194,38 @@
   },
   "builds": [
     {
-      "id": "nace-ai/Qwen3.8-Flash-Next-GGUF",
-      "name": "nace-ai/Qwen3.8-Flash-Next-GGUF",
-      "url": "https://huggingface.co/nace-ai/Qwen3.8-Flash-Next-GGUF",
+      "id": "Edge0/Edge0-120B-q3k",
+      "name": "Edge0/Edge0-120B-q3k",
+      "url": "https://huggingface.co/Edge0/Edge0-120B-q3k",
       "runtime": [],
-      "quantization": "GGUF",
+      "quantization": "Q3_K",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "Edge0/Edge0-120B-NVFP4",
+      "name": "Edge0/Edge0-120B-NVFP4",
+      "url": "https://huggingface.co/Edge0/Edge0-120B-NVFP4",
+      "runtime": [],
+      "quantization": "FP4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "Edge0/Edge0-145B-NVFP4",
+      "name": "Edge0/Edge0-145B-NVFP4",
+      "url": "https://huggingface.co/Edge0/Edge0-145B-NVFP4",
+      "runtime": [],
+      "quantization": "FP4",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "Edge0/Edge0-145B-q3k",
+      "name": "Edge0/Edge0-145B-q3k",
+      "url": "https://huggingface.co/Edge0/Edge0-145B-q3k",
+      "runtime": [],
+      "quantization": "Q3_K",
       "relation": "quantized",
       "status": "build"
     },
@@ -184,16 +233,31 @@
       "id": "nace-ai/Qwen3.8-Flash-Next-MLX",
       "name": "nace-ai/Qwen3.8-Flash-Next-MLX",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-Flash-Next-MLX",
-      "runtime": [],
+      "runtime": [
+        "mlx"
+      ],
       "quantization": "MLX",
       "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "nace-ai/Qwen3.8-Flash-Next-GGUF",
+      "name": "nace-ai/Qwen3.8-Flash-Next-GGUF",
+      "url": "https://huggingface.co/nace-ai/Qwen3.8-Flash-Next-GGUF",
+      "runtime": [
+        "llama.cpp"
+      ],
+      "quantization": "GGUF",
+      "relation": "quantized",
       "status": "build"
     },
     {
       "id": "nace-ai/Qwen3.8-Flash-Next-MLX-4bit",
       "name": "nace-ai/Qwen3.8-Flash-Next-MLX-4bit",
       "url": "https://huggingface.co/nace-ai/Qwen3.8-Flash-Next-MLX-4bit",
-      "runtime": [],
+      "runtime": [
+        "mlx"
+      ],
       "quantization": "4-bit",
       "relation": "quantized",
       "status": "build"
@@ -202,7 +266,9 @@
       "id": "Qwen/Qwen3.8-Flash-Next-FP8",
       "name": "Qwen/Qwen3.8-Flash-Next-FP8",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8",
-      "runtime": [],
+      "runtime": [
+        "python"
+      ],
       "quantization": "FP8",
       "relation": "quantized",
       "status": "build"
@@ -211,7 +277,9 @@
       "id": "unsloth/Qwen3.8-Flash-Next-GGUF",
       "name": "unsloth/Qwen3.8-Flash-Next-GGUF",
       "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next-GGUF",
-      "runtime": [],
+      "runtime": [
+        "llama.cpp"
+      ],
       "quantization": "GGUF",
       "relation": "quantized",
       "status": "build"
@@ -220,7 +288,9 @@
       "id": "unsloth/Qwen3.8-Flash-Next",
       "name": "unsloth/Qwen3.8-Flash-Next",
       "url": "https://huggingface.co/unsloth/Qwen3.8-Flash-Next",
-      "runtime": [],
+      "runtime": [
+        "python"
+      ],
       "quantization": null,
       "relation": null,
       "status": "build"
@@ -230,12 +300,12 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
-      "retrieved_at": "2026-11-14"
+      "retrieved_at": "2026-11-17"
     }
   ],
-  "verified_at": "2026-11-14",
-  "updated_at": "2026-11-14",
-  "notes": "6 builds are attached.",
+  "verified_at": "2026-11-17",
+  "updated_at": "2026-11-17",
+  "notes": "10 builds are attached.",
   "scorecard": {
     "overall": {
       "score": 68.1,
@@ -359,7 +429,7 @@
       "band": "strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-17",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }
