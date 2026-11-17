@@ -37,6 +37,19 @@ const syndication = getSyndication()
       </div>
 
       <div class="panel">
+        <h2>Feeds</h2>
+        <ul>
+          <li>
+            <a href="/journal/feed.xml">Journal feed</a> — dated site, catalogue, and watchlist entries.
+          </li>
+          <li>
+            <a href="/models/feed.xml">Model feed</a> — every catalogue model, newest release first.
+          </li>
+        </ul>
+        <p class="muted" style="font-size:0.88rem">Both feeds are RSS 2.0 and need no key.</p>
+      </div>
+
+      <div class="panel">
         <h2>Use it</h2>
         <pre><code>{`const response = await fetch("https://democratic-ai.bevry.me/api/v1/index.json")
 const { models } = await response.json()

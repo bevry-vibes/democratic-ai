@@ -394,6 +394,8 @@ These are three different things. Do not use the words interchangeably.
 - **Changelog** — the repository's own release notes. Generated from Conventional Commits and published as GitHub releases.
 - **Newsletter** — a monthly curated digest of the journal. It reads like a letter, not a data dump. It is published on the site and, later, sent by email.
 
+The site publishes an RSS 2.0 feed for the journal and a second feed for the model catalogue. The model feed follows release dates, newest first. The journal feed follows the dated entries. A future model enters the journal as a watchlist entry; it enters the model feed only after it has a catalogue record.
+
 ### Automation doctrine
 
 1. **Fetch is deterministic.** A script collects releases, metadata, and licence tags. It writes snapshots and a change list.

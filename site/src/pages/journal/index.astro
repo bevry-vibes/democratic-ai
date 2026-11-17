@@ -1,0 +1,90 @@
+---
+import Base from "../../layouts/Base.astro"
+import { getJournal, type JournalKind } from "../../lib/data"
+import { marked } from "marked"
+
+const entries = getJournal()
+const badges: Record<JournalKind, string> = {
+  site: "badge-reciprocal",
+  catalogue: "badge-commons",
+  watchlist: "badge-shared",
+}
+const labels: Record<JournalKind, string> = {
+  site: "Site",
+  catalogue: "Catalogue",
+  watchlist: "Watchlist",
+}
+const formatDate = (value: string) =>
+  new Date(`${value}T00:00:00Z`).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  })
+---
+
+<Base
+  title="Journal"
+  description="Dated entries about site updates, catalogue changes, and models whose weights are promised but not yet released."
+>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">The record</p>
+      <h1>Journal</h1>
+      <p class="lede">
+        Dated entries about site updates, catalogue changes, and models whose weights are promised but not yet
+        released. The journal is append-only Markdown in the repository.
+      </p>
+      <p class="hero-meta">
+        <a href="/journal/feed.xml">Journal feed</a> · <a href="/models/feed.xml">Model feed</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap journal-layout">
+    <div class="journal-list">
+      {entries.map((entry) => (
+        <article class="journal-entry" id={entry.id}>
+          <header class="journal-meta">
+            <time datetime={entry.date}>{formatDate(entry.date)}</time>
+            <span class={`badge ${badges[entry.kind]}`}>{labels[entry.kind]}</span>
+          </header>
+          <h2>{entry.title}</h2>
+          <div class="journal-body" set:html={marked.parse(entry.body) as string} />
+        </article>
+      ))}
+    </div>
+
+    <aside>
+      <div class="panel">
+        <h2>Feeds</h2>
+        <p class="muted" style="font-size:0.9rem">
+          Follow the record or the catalogue. Both feeds are RSS 2.0.
+        </p>
+        <ul class="source-list">
+          <li>
+            <a href="/journal/feed.xml">Journal</a>
+            <span class="weight">entries</span>
+          </li>
+          <li>
+            <a href="/models/feed.xml">Models</a>
+            <span class="weight">release date</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h2>What belongs here</h2>
+        <ul>
+          <li><strong>Site</strong> — new pages, feeds, and corrections.</li>
+          <li><strong>Catalogue</strong> — models added, folded, re-licensed, or removed.</li>
+          <li><strong>Watchlist</strong> — promised weights that are not yet public.</li>
+        </ul>
+        <p class="muted" style="font-size:0.86rem">
+          A watchlist entry is not a catalogue record. The model gets a record only when its weights are downloadable
+          and its licence is visible.
+        </p>
+      </div>
+    </aside>
+  </section>
+</Base>

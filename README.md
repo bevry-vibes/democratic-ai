@@ -13,7 +13,7 @@ This repository tracks democratic AI models and discoveries. It helps you answer
 - Optional reports for specific jobs, with measured comparisons and a recommendation.
 - Side-by-side model comparisons on a shareable page.
 - A record of datasets, runtimes, evaluations, and tools that keep AI accountable.
-- A JSON API and an RSS feed for your own projects.
+- A JSON API, a journal, and RSS feeds for the journal and the model catalogue.
 
 ## Start with the job
 
@@ -104,6 +104,15 @@ GET /api/v1/meta.json
 ```
 
 Every record links to its sources and the date of the last check. The data is free to use under the repository licence.
+
+## Journal and feeds
+
+The [Journal](https://democratic-ai.bevry.me/journal/) records site updates, catalogue changes, and models whose weights are promised but not released. It is append-only Markdown in the repository.
+
+- [Journal feed](https://democratic-ai.bevry.me/journal/feed.xml) — the dated entries.
+- [Model feed](https://democratic-ai.bevry.me/models/feed.xml) — every catalogue model, newest release first.
+
+Both feeds are RSS 2.0.
 
 ## How we judge
 

@@ -180,6 +180,19 @@ export interface ModelRecord extends Omit<CompactModel, "license" | "releases"> 
   notes: string
 }
 
+export type JournalKind = "site" | "catalogue" | "watchlist"
+
+export interface JournalEntry {
+  id: string
+  title: string
+  date: string
+  kind: JournalKind
+  order: number
+  summary: string
+  body: string
+  href: string
+}
+
 export interface TagVocabulary {
   schema_version: number
   updated_at: string
@@ -238,6 +251,42 @@ export function getLinks(): LinksFile {
 
 export function getReadme(): string {
   return fs.readFileSync(path.join(root, "README.md"), "utf8")
+}
+
+function parseFrontmatter(text: string): { fields: Record<string, string>; body: string } {
+  const match = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/)
+  if (!match) return { fields: {}, body: text.trim() }
+  const fields: Record<string, string> = {}
+  for (const line of match[1]!.split(/\r?\n/)) {
+    const pair = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/)
+    if (!pair) continue
+    fields[pair[1]!] = pair[2]!.trim().replace(/^"(.*)"$/, "$1").replace(/^'(.*)'$/, "$1")
+  }
+  return { fields, body: match[2]!.trim() }
+}
+
+export function getJournal(): JournalEntry[] {
+  const dir = path.join(root, "journal")
+  if (!fs.existsSync(dir)) return []
+  return fs
+    .readdirSync(dir)
+    .filter((name) => name.endsWith(".md"))
+    .map((name) => {
+      const text = fs.readFileSync(path.join(dir, name), "utf8")
+      const { fields, body } = parseFrontmatter(text)
+      const id = name.slice(0, -".md".length)
+      return {
+        id,
+        title: fields.title ?? id,
+        date: fields.date ?? "",
+        kind: (fields.kind === "catalogue" || fields.kind === "watchlist" ? fields.kind : "site") as JournalKind,
+        order: Number(fields.order ?? 0) || 0,
+        summary: fields.summary ?? "",
+        body,
+        href: `/journal/#${id}`,
+      }
+    })
+    .sort((a, b) => b.date.localeCompare(a.date) || b.order - a.order || a.title.localeCompare(b.title))
 }
 
 export const TAG_NAMESPACE_ORDER = [
