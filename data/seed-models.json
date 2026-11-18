@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17",
+  "updated_at": "2026-11-18",
   "note": "Curated roots for coverage gaps that the watchlist does not reach. They enter the normal pull, tagging, indexing, and scorecard pipeline.",
   "models": [
     "facebook/nllb-200-distilled-600M",
@@ -12,6 +12,11 @@
     "google/madlad400-3b-mt",
     "google/madlad400-10b-mt",
     "nex-agi/Nex-N2.6",
-    "RecursiveSI/flint"
+    "RecursiveSI/flint",
+    "tencent/Hy4-flash",
+    "tencent/Hy4-flash-FP8",
+    "tencent/Hy4-flash-base",
+    "tencent/Hy4-preview",
+    "tencent/Hy4-preview-FP8"
   ]
 }

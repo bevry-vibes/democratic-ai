@@ -75,14 +75,24 @@
       "qiniu-ai"
     ],
     "provider_models": {
-      "qiniu-ai": [
+      "jiekou": [
         {
-          "id": "mimo-v2-flash",
-          "name": "Mimo-V2-Flash",
+          "id": "xiaomimimo/mimo-v2-flash",
+          "name": "XiaomiMiMo/MiMo-V2-Flash",
           "cost": {
             "input": 0.1,
             "output": 0.3,
-            "cache_read": 0.01
+            "cache_read": 0.02
+          }
+        }
+      ],
+      "meganova": [
+        {
+          "id": "XiaomiMiMo/MiMo-V2-Flash",
+          "name": "MiMo V2 Flash",
+          "cost": {
+            "input": 0.1,
+            "output": 0.3
           }
         }
       ],
@@ -97,24 +107,14 @@
           }
         }
       ],
-      "meganova": [
+      "qiniu-ai": [
         {
-          "id": "XiaomiMiMo/MiMo-V2-Flash",
-          "name": "MiMo V2 Flash",
-          "cost": {
-            "input": 0.1,
-            "output": 0.3
-          }
-        }
-      ],
-      "jiekou": [
-        {
-          "id": "xiaomimimo/mimo-v2-flash",
-          "name": "XiaomiMiMo/MiMo-V2-Flash",
+          "id": "mimo-v2-flash",
+          "name": "Mimo-V2-Flash",
           "cost": {
             "input": 0.1,
             "output": 0.3,
-            "cache_read": 0.02
+            "cache_read": 0.01
           }
         }
       ]
@@ -122,22 +122,15 @@
     "gated": null
   },
   "syndication": {
-    "score": 5,
-    "points": 5,
-    "band": "moderate",
+    "score": 3,
+    "points": 3,
+    "band": "emerging",
     "sources": [
       {
         "id": "models.dev",
         "url": "https://models.dev/models/xiaomi/mimo-v2-flash",
         "weight": 3,
         "kind": "registry",
-        "self": false
-      },
-      {
-        "id": "llm-stats",
-        "url": "https://llm-stats.com/models/mimo-v2-flash",
-        "weight": 2,
-        "kind": "aggregator",
         "self": false
       },
       {
@@ -148,22 +141,22 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-14"
+    "checked_at": "2026-11-18"
   },
   "builds": [],
   "sources": [
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash",
-      "retrieved_at": "2026-11-17"
+      "retrieved_at": "2026-11-18"
     }
   ],
-  "verified_at": "2026-11-17",
-  "updated_at": "2026-11-17",
+  "verified_at": "2026-11-18",
+  "updated_at": "2026-11-18",
   "notes": "",
   "scorecard": {
     "overall": {
-      "score": 59.9,
+      "score": 56.9,
       "coverage": 4,
       "weights": {
         "syndication": 15,
@@ -175,11 +168,11 @@
         {
           "key": "syndication",
           "label": "Syndication",
-          "score": 50,
+          "score": 30,
           "weight": 15,
           "included": true,
           "effective_weight": 15,
-          "contribution": 7.5
+          "contribution": 4.5
         },
         {
           "key": "performance",
@@ -294,12 +287,12 @@
       "citation": "not measured"
     },
     "syndication": {
-      "score": 5,
+      "score": 3,
       "max": 10,
-      "band": "moderate",
+      "band": "emerging",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-17",
+    "as_of": "2026-11-18",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

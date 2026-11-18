@@ -97,152 +97,25 @@
       "xiaomi-token-plan-sgp"
     ],
     "provider_models": {
-      "empiriolabs": [
+      "above": [
         {
-          "id": "mimo-v2-6-flash",
+          "id": "mimo-v2.6-flash",
           "name": "MiMo V2.6 Flash",
           "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.14
+            "input": 0.1692,
+            "output": 0.3385,
+            "cache_read": 0.0034
           }
         }
       ],
-      "llmgateway-providers": [
-        {
-          "id": "xiaomi/mimo-v2.6-flash",
-          "name": "MiMo V2.6 Flash (Xiaomi)",
-          "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.0028
-          }
-        },
-        {
-          "id": "tencent/mimo-v2.6-flash",
-          "name": "MiMo V2.6 Flash (Tencent Cloud)",
-          "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.0028
-          }
-        },
-        {
-          "id": "deepinfra/mimo-v2.6-flash",
-          "name": "MiMo V2.6 Flash (DeepInfra)",
-          "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.0028
-          }
-        },
-        {
-          "id": "flexai/mimo-v2.6-flash",
-          "name": "MiMo V2.6 Flash (flexai)",
-          "cost": {
-            "input": 0.133,
-            "output": 0.266,
-            "cache_read": 0.00266
-          }
-        }
-      ],
-      "pareto": [
-        {
-          "id": "xiaomi/mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0.126,
-            "output": 0.252,
-            "cache_read": 0.00252
-          }
-        }
-      ],
-      "xiaomi": [
+      "aihubmix": [
         {
           "id": "mimo-v2.6-flash",
           "name": "MiMo-V2.6-Flash",
           "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.0028
-          }
-        }
-      ],
-      "sparrowcodes": [
-        {
-          "id": "xiaomi/mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.003
-          }
-        }
-      ],
-      "vercel": [
-        {
-          "id": "xiaomi/mimo-v2.6-flash",
-          "name": "MiMo V2.6 Flash",
-          "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.0028
-          }
-        }
-      ],
-      "xiaomi-token-plan-sgp": [
-        {
-          "id": "mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "requesty": [
-        {
-          "id": "mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.0027
-          }
-        }
-      ],
-      "nano-gpt": [
-        {
-          "id": "xiaomi/mimo-v2.6-flash",
-          "name": "MiMo V2.6 Flash",
-          "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.0028,
-            "cache_write": 0
-          }
-        }
-      ],
-      "nan": [
-        {
-          "id": "mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0.19656,
-            "output": 0.39312,
-            "cache_read": 0.0039312
-          }
-        }
-      ],
-      "standardcompute": [
-        {
-          "id": "xiaomi/mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.0028
+            "input": 0.155,
+            "output": 0.31,
+            "cache_read": 0.0031
           }
         }
       ],
@@ -257,9 +130,20 @@
           }
         }
       ],
-      "openrouter": [
+      "boundless": [
         {
-          "id": "xiaomi/mimo-v2.6-flash",
+          "id": "mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        }
+      ],
+      "cline-pass": [
+        {
+          "id": "cline-pass/mimo-v2.6-flash",
           "name": "MiMo-V2.6-Flash",
           "cost": {
             "input": 0.14,
@@ -279,9 +163,137 @@
           }
         }
       ],
-      "opencode-go": [
+      "crossmodel": [
+        {
+          "id": "xiaomi/mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.16,
+            "output": 0.32,
+            "cache_read": 0.004,
+            "cache_write": 0.16
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "XiaomiMiMo/MiMo-V2.6-Flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        }
+      ],
+      "empiriolabs": [
+        {
+          "id": "mimo-v2-6-flash",
+          "name": "MiMo V2.6 Flash",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.14
+          }
+        }
+      ],
+      "infersia": [
+        {
+          "id": "xiaomi/mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.2,
+            "output": 0.4,
+            "cache_read": 0.005
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "xiaomi/mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.1,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        }
+      ],
+      "llmgateway": [
         {
           "id": "mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.1358,
+            "output": 0.2716,
+            "cache_read": 0.003589
+          }
+        }
+      ],
+      "llmgateway-providers": [
+        {
+          "id": "deepinfra/mimo-v2.6-flash",
+          "name": "MiMo V2.6 Flash (DeepInfra)",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        },
+        {
+          "id": "flexai/mimo-v2.6-flash",
+          "name": "MiMo V2.6 Flash (flexai)",
+          "cost": {
+            "input": 0.1358,
+            "output": 0.2716,
+            "cache_read": 0.003589
+          }
+        },
+        {
+          "id": "tencent/mimo-v2.6-flash",
+          "name": "MiMo V2.6 Flash (Tencent Cloud)",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        },
+        {
+          "id": "xiaomi/mimo-v2.6-flash",
+          "name": "MiMo V2.6 Flash (Xiaomi)",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        }
+      ],
+      "nan": [
+        {
+          "id": "mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.19656,
+            "output": 0.39312,
+            "cache_read": 0.0039312
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "xiaomi/mimo-v2.6-flash",
+          "name": "MiMo V2.6 Flash",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028,
+            "cache_write": 0
+          }
+        }
+      ],
+      "novita-ai": [
+        {
+          "id": "xiaomimimo/mimo-v2.6-flash",
           "name": "MiMo-V2.6-Flash",
           "cost": {
             "input": 0.14,
@@ -312,65 +324,64 @@
           }
         }
       ],
-      "llmgateway": [
+      "opencode-go": [
         {
           "id": "mimo-v2.6-flash",
           "name": "MiMo-V2.6-Flash",
           "cost": {
-            "input": 0.133,
-            "output": 0.266,
-            "cache_read": 0.00266
-          }
-        }
-      ],
-      "crossmodel": [
-        {
-          "id": "xiaomi/mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0.16,
-            "output": 0.32,
-            "cache_read": 0.004,
-            "cache_write": 0.16
-          }
-        }
-      ],
-      "xiaomi-token-plan-cn": [
-        {
-          "id": "mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "aihubmix": [
-        {
-          "id": "mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0.155,
-            "output": 0.31,
-            "cache_read": 0.0031
-          }
-        }
-      ],
-      "kilo": [
-        {
-          "id": "xiaomi/mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0.1,
+            "input": 0.14,
             "output": 0.28,
             "cache_read": 0.0028
           }
         }
       ],
-      "deepinfra": [
+      "openrouter": [
         {
-          "id": "XiaomiMiMo/MiMo-V2.6-Flash",
+          "id": "xiaomi/mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
+          }
+        }
+      ],
+      "pareto": [
+        {
+          "id": "xiaomi/mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.126,
+            "output": 0.252,
+            "cache_read": 0.00252
+          }
+        }
+      ],
+      "requesty": [
+        {
+          "id": "mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0027
+          }
+        }
+      ],
+      "sparrowcodes": [
+        {
+          "id": "xiaomi/mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.003
+          }
+        }
+      ],
+      "standardcompute": [
+        {
+          "id": "xiaomi/mimo-v2.6-flash",
           "name": "MiMo-V2.6-Flash",
           "cost": {
             "input": 0.14,
@@ -401,47 +412,14 @@
           }
         }
       ],
-      "infersia": [
+      "vercel": [
         {
           "id": "xiaomi/mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0.2,
-            "output": 0.4,
-            "cache_read": 0.005
-          }
-        }
-      ],
-      "cline-pass": [
-        {
-          "id": "cline-pass/mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.0028
-          }
-        }
-      ],
-      "novita-ai": [
-        {
-          "id": "xiaomimimo/mimo-v2.6-flash",
-          "name": "MiMo-V2.6-Flash",
-          "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.0028
-          }
-        }
-      ],
-      "above": [
-        {
-          "id": "mimo-v2.6-flash",
           "name": "MiMo V2.6 Flash",
           "cost": {
-            "input": 0.1692,
-            "output": 0.3385,
-            "cache_read": 0.0034
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
           }
         }
       ],
@@ -452,6 +430,17 @@
           "cost": {
             "input": 0.1,
             "output": 0.25
+          }
+        }
+      ],
+      "xiaomi": [
+        {
+          "id": "mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0.14,
+            "output": 0.28,
+            "cache_read": 0.0028
           }
         }
       ],
@@ -466,14 +455,25 @@
           }
         }
       ],
-      "boundless": [
+      "xiaomi-token-plan-cn": [
         {
           "id": "mimo-v2.6-flash",
           "name": "MiMo-V2.6-Flash",
           "cost": {
-            "input": 0.14,
-            "output": 0.28,
-            "cache_read": 0.0028
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "xiaomi-token-plan-sgp": [
+        {
+          "id": "mimo-v2.6-flash",
+          "name": "MiMo-V2.6-Flash",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
           }
         }
       ]
@@ -500,18 +500,18 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-14"
+    "checked_at": "2026-11-18"
   },
   "builds": [],
   "sources": [
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
-      "retrieved_at": "2026-11-17"
+      "retrieved_at": "2026-11-18"
     }
   ],
-  "verified_at": "2026-11-17",
-  "updated_at": "2026-11-17",
+  "verified_at": "2026-11-18",
+  "updated_at": "2026-11-18",
   "notes": "",
   "scorecard": {
     "overall": {
@@ -621,7 +621,7 @@
       "band": "emerging",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-17",
+    "as_of": "2026-11-18",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

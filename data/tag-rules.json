@@ -626,7 +626,8 @@
       "-litert-lm",
       "-coreai",
       "-lora",
-      "-peft"
+      "-peft",
+      "-transformers"
     ],
     "status:probe": [
       "-singprobe"
@@ -661,7 +662,8 @@
       "-onnx",
       "-ov",
       "-litert-lm",
-      "-coreai"
+      "-coreai",
+      "-transformers"
     ],
     "relation:probe": [
       "-singprobe"
@@ -672,6 +674,54 @@
     ]
   },
   "model_overrides": {
+    "inclusionAI/Ling-3.0-tiny-base": [
+      "task:text-generation",
+      "domain:language",
+      "modality:text"
+    ],
+    "inclusionAI/Ling-3.0-tiny-base-30T": [
+      "task:text-generation",
+      "domain:language",
+      "modality:text"
+    ],
+    "inclusionAI/Ling-3.0-tiny-base-midtrain": [
+      "task:text-generation",
+      "domain:language",
+      "modality:text"
+    ],
+    "Zyphra/fusealign": [
+      "task:word-timestamps",
+      "domain:speech",
+      "modality:audio",
+      "access:python"
+    ],
+    "Zyphra/ZAC-1": [
+      "task:embedding",
+      "domain:embeddings",
+      "domain:speech",
+      "modality:audio",
+      "access:python"
+    ],
+    "Zyphra/ZAC-1-hf": [
+      "status:build",
+      "relation:conversion"
+    ],
+    "Zyphra/ZONOS3-Mini-hf": [
+      "status:build",
+      "relation:conversion"
+    ],
+    "inclusionAI/invoker-render-1.0": [
+      "task:video-generation",
+      "task:world-model",
+      "domain:vision",
+      "modality:video"
+    ],
+    "meituan-longcat/LongCat-Video-Avatar-1.6": [
+      "task:video-generation",
+      "domain:vision",
+      "modality:video",
+      "modality:audio"
+    ],
     "XiaomiMiMo/MiMo-Audio-Tokenizer": [
       "task:audio-language",
       "domain:speech",

@@ -1216,6 +1216,35 @@
       "notes": "Followed on Hugging Face; not on the X list. The Inkling model family is in agent-detect.",
       "hf_followed": true,
       "verified_at": "2026-11-14"
+    },
+    {
+      "id": "zyphra",
+      "name": "Zyphra",
+      "kind": "organization",
+      "roles": [
+        "model-lab",
+        "infrastructure"
+      ],
+      "x": [
+        "ZyphraAI"
+      ],
+      "x_url": "https://x.com/ZyphraAI",
+      "website": "https://zyphra.com/",
+      "hugging_face": "Zyphra",
+      "github": "Zyphra",
+      "domains": [
+        "language",
+        "speech",
+        "vision"
+      ],
+      "contexts": [
+        "on-device"
+      ],
+      "x_bio": "Full stack open superintelligence",
+      "x_followers": 15000,
+      "notes": "Open-weight ZAYA language, ZONOS speech, ZAC audio-codec, and ZUNA thought models, plus the Zyphra Inference service. Added after the ZONOS3-Mini release.",
+      "verified_at": "2026-11-18",
+      "hf_followed": false
     }
   ],
   "notes": "Seeded from the owner's public X list and Hugging Face following list on 2026-11-14. The two Kimi accounts are merged into one entity. Follower counts are context, not a quality signal.",

@@ -1,10 +1,10 @@
 {
   "aliases_folded": 3,
-  "pull_id": "20261117T094411Z",
-  "generated_at": "2026-11-17T09:55:09.209Z",
-  "roots": 243,
-  "builds_attached": 204,
-  "builds_unmatched": 190,
+  "pull_id": "20261118T122011Z",
+  "generated_at": "2026-11-18T12:21:57.907Z",
+  "roots": 261,
+  "builds_attached": 211,
+  "builds_unmatched": 184,
   "builds_unmatched_samples": [
     "ConwayResearch/woof-textfiller-4B-4bit-v2.1",
     "ConwayResearch/woof-textfiller-0.8B-4bit-v2.1",
@@ -15,11 +15,7 @@
     "ConwayResearch/pii-30M-coreml-ane-v1.0",
     "ConwayResearch/bark-0.6B-4bit-v2.0",
     "ConwayResearch/underdog-llama-server",
-    "ornith-ai/Ornith-1.5-35B-A3B-MLX-6bit",
-    "ornith-ai/Ornith-1.5-9B-MLX-6bit",
     "badtheorylabs/Tinfield-1-Q4_K_XL-GGUF",
-    "SyzygyResearch/Mach-1-Additive-35B-Multimodal-GGUF",
-    "SyzygyResearch/Mach-1-Additive-35B-GGUF",
     "FluidInference/paradee-8m-coreml",
     "FluidInference/Nemotron-3.5-ASR-Streaming-Multilingual-0.6b-CoreML",
     "FluidInference/kokoro-82m-coreml",
@@ -35,11 +31,15 @@
     "FluidInference/phonon-2-coreml",
     "FluidInference/speaker-diarization-coreml",
     "FluidInference/supertonic-3-coreml",
-    "FluidInference/mario-student-coreml"
+    "FluidInference/mario-student-coreml",
+    "FluidInference/d3-mini-coreml",
+    "FluidInference/d3-nano-coreml",
+    "FluidInference/d3-lite-coreml",
+    "FluidInference/jev-9b-coreml"
   ],
   "skipped": {
-    "builds": 394,
-    "probes": 29,
+    "builds": 395,
+    "probes": 31,
     "documentation": 1
   },
   "notes": [

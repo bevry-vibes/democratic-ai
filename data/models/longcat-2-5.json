@@ -9,7 +9,7 @@
   "releases": [],
   "organization": "meituan-longcat",
   "released": "2026-11-04",
-  "summary": "Multimodal reasoning model for visual analysis, planning, and tool use",
+  "summary": "LongCat 2.5 is Meituan’s native multimodal model for coding and long-running agent workflows. It combines visual understanding with multi-step reasoning and tool use to work across complex codebases and full-project development. Its 1M-token context window supports tasks involving large documents, codebases, and text and image inputs.",
   "tags": [
     "task:image-understanding",
     "task:reasoning",
@@ -72,17 +72,6 @@
       "opencode-go"
     ],
     "provider_models": {
-      "opencode-go": [
-        {
-          "id": "longcat-2.5-free",
-          "name": "LongCat 2.5 Free",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
       "kenari": [
         {
           "id": "longcat-2-5:free",
@@ -103,13 +92,24 @@
             "cache_read": 0
           }
         }
+      ],
+      "opencode-go": [
+        {
+          "id": "longcat-2.5-free",
+          "name": "LongCat 2.5 Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
       ]
     },
     "gated": null
   },
   "syndication": {
-    "score": 8,
-    "points": 8,
+    "score": 7,
+    "points": 7,
     "band": "strong",
     "sources": [
       {
@@ -127,10 +127,10 @@
         "self": false
       },
       {
-        "id": "llm-stats",
-        "url": "https://llm-stats.com/models/longcat-2.5",
-        "weight": 2,
-        "kind": "aggregator",
+        "id": "research",
+        "url": "https://arxiv.org/abs/2603.27538",
+        "weight": 1,
+        "kind": "research",
         "self": false
       },
       {
@@ -141,7 +141,7 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-14"
+    "checked_at": "2026-11-18"
   },
   "builds": [
     {
@@ -158,15 +158,15 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/meituan-longcat/LongCat-2.5",
-      "retrieved_at": "2026-11-17"
+      "retrieved_at": "2026-11-18"
     }
   ],
-  "verified_at": "2026-11-17",
-  "updated_at": "2026-11-17",
+  "verified_at": "2026-11-18",
+  "updated_at": "2026-11-18",
   "notes": "1 builds are attached.",
   "scorecard": {
     "overall": {
-      "score": 77,
+      "score": 75.5,
       "coverage": 4,
       "weights": {
         "syndication": 15,
@@ -178,11 +178,11 @@
         {
           "key": "syndication",
           "label": "Syndication",
-          "score": 80,
+          "score": 70,
           "weight": 15,
           "included": true,
           "effective_weight": 15,
-          "contribution": 12
+          "contribution": 10.5
         },
         {
           "key": "performance",
@@ -290,12 +290,12 @@
       "citation": "not measured"
     },
     "syndication": {
-      "score": 8,
+      "score": 7,
       "max": 10,
       "band": "strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-17",
+    "as_of": "2026-11-18",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

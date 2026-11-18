@@ -97,137 +97,6 @@
       "vercel"
     ],
     "provider_models": {
-      "llmgateway-providers": [
-        {
-          "id": "novita/qwen3.8-2.4t-a95b",
-          "name": "Qwen3.8 2.4T A95B (NovitaAI)",
-          "cost": {
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.25
-          }
-        },
-        {
-          "id": "alibaba/qwen3.8-2.4t-a95b",
-          "name": "Qwen3.8 2.4T A95B (Alibaba Cloud)",
-          "cost": {
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.25,
-            "cache_write": 2.5
-          }
-        }
-      ],
-      "keln": [
-        {
-          "id": "qwen/qwen3.8-2.4t-a95b",
-          "name": "Qwen3.8 2.4T A95B",
-          "cost": {
-            "input": 2.5,
-            "output": 6.25,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "vercel": [
-        {
-          "id": "alibaba/qwen3.8-2.4t-a95b",
-          "name": "Qwen3.8 2.4T A95B",
-          "cost": {
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.25
-          }
-        }
-      ],
-      "edenai": [
-        {
-          "id": "qwen/qwen3.8-2.4t-a95b",
-          "name": "Qwen3.8 2.4T A95B",
-          "cost": {
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.25,
-            "cache_write": 2.5
-          }
-        }
-      ],
-      "requesty": [
-        {
-          "id": "qwen3.8-2.4T-A95B",
-          "name": "Qwen3.8 2.4T A95B",
-          "cost": {
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.2
-          }
-        },
-        {
-          "id": "qwen3.8-2.4T-A95B@eu",
-          "name": "Qwen3.8 2.4T A95B (EU)",
-          "cost": {
-            "input": 2.5,
-            "output": 6,
-            "cache_read": 0.63,
-            "cache_write": 2.5
-          }
-        }
-      ],
-      "fireworks-ai": [
-        {
-          "id": "accounts/fireworks/models/qwen3p8-2p4t-a95b",
-          "name": "Qwen3.8 2.4T A95B",
-          "cost": {
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.25
-          }
-        }
-      ],
-      "hyper": [
-        {
-          "id": "qwen3.8-2.4t-a95b",
-          "name": "Qwen3.8 2.4T A95B",
-          "cost": {
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.25
-          }
-        }
-      ],
-      "iteracompute": [
-        {
-          "id": "qwen/qwen3.8-2.4t-a95b",
-          "name": "Qwen3.8 2.4T A95B",
-          "cost": {
-            "input": 1.95,
-            "output": 5.7,
-            "cache_read": 0.25
-          }
-        }
-      ],
-      "opper": [
-        {
-          "id": "qwen3.8-2.4t-a95b",
-          "name": "Qwen3.8 2.4T A95B",
-          "cost": {
-            "input": 2.5,
-            "output": 6,
-            "cache_read": 0.63
-          }
-        }
-      ],
-      "openrouter": [
-        {
-          "id": "qwen/qwen3.8-2.4t-a95b",
-          "name": "Qwen3.8 2.4T A95B",
-          "cost": {
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.25
-          }
-        }
-      ],
       "abliteratedllm": [
         {
           "id": "qwen3.8-2.4t-a95b",
@@ -236,6 +105,17 @@
             "input": 1.8,
             "output": 5.4,
             "cache_read": 0.225
+          }
+        }
+      ],
+      "aihubmix": [
+        {
+          "id": "qwen3.8-2.4t-a95b",
+          "name": "Qwen3.8 2.4T A95B",
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cache_read": 0.5
           }
         }
       ],
@@ -261,10 +141,10 @@
           }
         }
       ],
-      "runinfra": [
+      "deepinfra": [
         {
-          "id": "Inferact/Qwen3.8-2.4T-A95B-NVFP4",
-          "name": "Qwen3.8 2.4T A95B (NVFP4)",
+          "id": "Qwen/Qwen3.8-2.4T-A95B",
+          "name": "Qwen3.8 2.4T A95B",
           "cost": {
             "input": 2,
             "output": 6,
@@ -272,18 +152,40 @@
           }
         }
       ],
-      "tensorx": [
+      "edenai": [
         {
           "id": "qwen/qwen3.8-2.4t-a95b",
           "name": "Qwen3.8 2.4T A95B",
           "cost": {
-            "input": 2.5,
+            "input": 2,
             "output": 6,
-            "cache_read": 0.63
+            "cache_read": 0.25,
+            "cache_write": 2.5
           }
         }
       ],
-      "llmgateway": [
+      "fireworks-ai": [
+        {
+          "id": "accounts/fireworks/models/qwen3p8-2p4t-a95b",
+          "name": "Qwen3.8 2.4T A95B",
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cache_read": 0.25
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "Qwen/Qwen3.8-2.4T-A95B",
+          "name": "Qwen3.8 2.4T A95B",
+          "cost": {
+            "input": 2.5,
+            "output": 6.25
+          }
+        }
+      ],
+      "hyper": [
         {
           "id": "qwen3.8-2.4t-a95b",
           "name": "Qwen3.8 2.4T A95B",
@@ -294,25 +196,25 @@
           }
         }
       ],
-      "aihubmix": [
+      "iteracompute": [
         {
-          "id": "qwen3.8-2.4t-a95b",
+          "id": "qwen/qwen3.8-2.4t-a95b",
           "name": "Qwen3.8 2.4T A95B",
           "cost": {
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.5
+            "input": 1.95,
+            "output": 5.7,
+            "cache_read": 0.25
           }
         }
       ],
-      "merge-gateway": [
+      "keln": [
         {
           "id": "qwen/qwen3.8-2.4t-a95b",
           "name": "Qwen3.8 2.4T A95B",
           "cost": {
             "input": 2.5,
             "output": 6.25,
-            "cache_read": 0.5
+            "cache_read": 0.3
           }
         }
       ],
@@ -328,41 +230,9 @@
           }
         }
       ],
-      "deepinfra": [
+      "llmgateway": [
         {
-          "id": "Qwen/Qwen3.8-2.4T-A95B",
-          "name": "Qwen3.8 2.4T A95B",
-          "cost": {
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "huggingface": [
-        {
-          "id": "Qwen/Qwen3.8-2.4T-A95B",
-          "name": "Qwen3.8 2.4T A95B",
-          "cost": {
-            "input": 2.5,
-            "output": 6.25
-          }
-        }
-      ],
-      "modal": [
-        {
-          "id": "Qwen/Qwen3.8-2.4T-A95B",
-          "name": "Qwen3.8-Max",
-          "cost": {
-            "input": 2,
-            "output": 6,
-            "cache_read": 0.25
-          }
-        }
-      ],
-      "siliconflow": [
-        {
-          "id": "Qwen/Qwen3.8-2.4T-A95B",
+          "id": "qwen3.8-2.4t-a95b",
           "name": "Qwen3.8 2.4T A95B",
           "cost": {
             "input": 2,
@@ -371,14 +241,24 @@
           }
         }
       ],
-      "venice": [
+      "llmgateway-providers": [
         {
-          "id": "qwen-3-8-2-4t-a95b",
-          "name": "Qwen 3.8 2.4T",
+          "id": "alibaba/qwen3.8-2.4t-a95b",
+          "name": "Qwen3.8 2.4T A95B (Alibaba Cloud)",
           "cost": {
-            "input": 2.5,
-            "output": 7.5,
-            "cache_read": 0.3125
+            "input": 2,
+            "output": 6,
+            "cache_read": 0.25,
+            "cache_write": 2.5
+          }
+        },
+        {
+          "id": "novita/qwen3.8-2.4t-a95b",
+          "name": "Qwen3.8 2.4T A95B (NovitaAI)",
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cache_read": 0.25
           }
         }
       ],
@@ -393,9 +273,129 @@
           }
         }
       ],
+      "merge-gateway": [
+        {
+          "id": "qwen/qwen3.8-2.4t-a95b",
+          "name": "Qwen3.8 2.4T A95B",
+          "cost": {
+            "input": 2.5,
+            "output": 6.25,
+            "cache_read": 0.5
+          }
+        }
+      ],
+      "modal": [
+        {
+          "id": "Qwen/Qwen3.8-2.4T-A95B",
+          "name": "Qwen3.8-Max",
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cache_read": 0.25
+          }
+        }
+      ],
       "novita-ai": [
         {
           "id": "qwen/qwen3.8-2.4t-a95b",
+          "name": "Qwen3.8 2.4T A95B",
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cache_read": 0.25
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "qwen/qwen3.8-2.4t-a95b",
+          "name": "Qwen3.8 2.4T A95B",
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cache_read": 0.25
+          }
+        }
+      ],
+      "opper": [
+        {
+          "id": "qwen3.8-2.4t-a95b",
+          "name": "Qwen3.8 2.4T A95B",
+          "cost": {
+            "input": 2.5,
+            "output": 6,
+            "cache_read": 0.63
+          }
+        }
+      ],
+      "requesty": [
+        {
+          "id": "qwen3.8-2.4T-A95B",
+          "name": "Qwen3.8 2.4T A95B",
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cache_read": 0.2
+          }
+        },
+        {
+          "id": "qwen3.8-2.4T-A95B@eu",
+          "name": "Qwen3.8 2.4T A95B (EU)",
+          "cost": {
+            "input": 2.5,
+            "output": 6,
+            "cache_read": 0.63,
+            "cache_write": 2.5
+          }
+        }
+      ],
+      "runinfra": [
+        {
+          "id": "Inferact/Qwen3.8-2.4T-A95B-NVFP4",
+          "name": "Qwen3.8 2.4T A95B (NVFP4)",
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "siliconflow": [
+        {
+          "id": "Qwen/Qwen3.8-2.4T-A95B",
+          "name": "Qwen3.8 2.4T A95B",
+          "cost": {
+            "input": 2,
+            "output": 6,
+            "cache_read": 0.25
+          }
+        }
+      ],
+      "tensorx": [
+        {
+          "id": "qwen/qwen3.8-2.4t-a95b",
+          "name": "Qwen3.8 2.4T A95B",
+          "cost": {
+            "input": 2.5,
+            "output": 6,
+            "cache_read": 0.63
+          }
+        }
+      ],
+      "venice": [
+        {
+          "id": "qwen-3-8-2-4t-a95b",
+          "name": "Qwen 3.8 2.4T",
+          "cost": {
+            "input": 2.5,
+            "output": 7.5,
+            "cache_read": 0.3125
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "alibaba/qwen3.8-2.4t-a95b",
           "name": "Qwen3.8 2.4T A95B",
           "cost": {
             "input": 2,
@@ -408,9 +408,9 @@
     "gated": null
   },
   "syndication": {
-    "score": 9,
-    "points": 9,
-    "band": "very-strong",
+    "score": 5,
+    "points": 5,
+    "band": "moderate",
     "sources": [
       {
         "id": "models.dev",
@@ -427,20 +427,6 @@
         "self": false
       },
       {
-        "id": "llm-stats",
-        "url": "https://llm-stats.com/models/qwen3.8-2.4t-a95b",
-        "weight": 2,
-        "kind": "aggregator",
-        "self": false
-      },
-      {
-        "id": "artificial-analysis",
-        "url": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
-        "weight": 2,
-        "kind": "evaluation",
-        "self": false
-      },
-      {
         "id": "hugging-face",
         "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
         "weight": 0,
@@ -448,7 +434,7 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-14"
+    "checked_at": "2026-11-18"
   },
   "builds": [
     {
@@ -467,15 +453,15 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
-      "retrieved_at": "2026-11-17"
+      "retrieved_at": "2026-11-18"
     }
   ],
-  "verified_at": "2026-11-17",
-  "updated_at": "2026-11-17",
+  "verified_at": "2026-11-18",
+  "updated_at": "2026-11-18",
   "notes": "1 builds are attached.",
   "scorecard": {
     "overall": {
-      "score": 71.6,
+      "score": 64.6,
       "coverage": 3,
       "weights": {
         "syndication": 15,
@@ -487,11 +473,11 @@
         {
           "key": "syndication",
           "label": "Syndication",
-          "score": 90,
+          "score": 50,
           "weight": 15,
           "included": true,
           "effective_weight": 17.6,
-          "contribution": 15.9
+          "contribution": 8.8
         },
         {
           "key": "performance",
@@ -591,12 +577,12 @@
       "citation": "not measured"
     },
     "syndication": {
-      "score": 9,
+      "score": 5,
       "max": 10,
-      "band": "very-strong",
+      "band": "moderate",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-17",
+    "as_of": "2026-11-18",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

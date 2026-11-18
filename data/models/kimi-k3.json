@@ -180,360 +180,6 @@
       "zenmux"
     ],
     "provider_models": {
-      "empiriolabs": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 3
-          }
-        }
-      ],
-      "llmgateway-providers": [
-        {
-          "id": "novita/kimi-k3",
-          "name": "Kimi K3 (NovitaAI)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "tencent/kimi-k3",
-          "name": "Kimi K3 (Tencent Cloud)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "runpod/kimi-k3",
-          "name": "Kimi K3 (Runpod)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "aws-bedrock/kimi-k3",
-          "name": "Kimi K3 (AWS Bedrock)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3,
-            "cache_write": 3.75
-          }
-        },
-        {
-          "id": "fireworks/kimi-k3",
-          "name": "Kimi K3 (Fireworks AI)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "fireworks/kimi-k3-fast",
-          "name": "Kimi K3 Fast (Fireworks AI)",
-          "cost": {
-            "input": 4.5,
-            "output": 22.5,
-            "cache_read": 0.45
-          }
-        },
-        {
-          "id": "alibaba/kimi-k3",
-          "name": "Kimi K3 (Alibaba Cloud)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "runware/kimi-k3",
-          "name": "Kimi K3 (Runware)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "together-ai/kimi-k3",
-          "name": "Kimi K3 (Together AI)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "baidu/kimi-k3",
-          "name": "Kimi K3 (Baidu)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "scx-ai-gp/kimi-k3",
-          "name": "Kimi K3 (SCX.ai)",
-          "cost": {
-            "input": 3.135,
-            "output": 15.675,
-            "cache_read": 0.319
-          }
-        },
-        {
-          "id": "canopywave/kimi-k3",
-          "name": "Kimi K3 (CanopyWave)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "moonshot/kimi-k3",
-          "name": "Kimi K3 (Moonshot AI)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "keln": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.38
-          }
-        }
-      ],
-      "moonshotai": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3,
-            "cache_write": 3
-          }
-        }
-      ],
-      "sensenova": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "orcarouter": [
-        {
-          "id": "kimi/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "alibaba-cn": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 2.827,
-            "output": 14.133,
-            "cache_read": 0.283
-          }
-        }
-      ],
-      "cheapaimodel": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 2.100153,
-            "output": 10.500765,
-            "cache_read": 0.2100153,
-            "cache_write": 2.100153
-          }
-        }
-      ],
-      "sandbase": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "vercel": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "moonshotai/kimi-k3-fast",
-          "name": "Kimi K3 Fast",
-          "cost": {
-            "input": 6,
-            "output": 22.5,
-            "cache_read": 0.6
-          }
-        }
-      ],
-      "edenai": [
-        {
-          "id": "moonshot/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3,
-            "cache_write": 3
-          }
-        }
-      ],
-      "moonshotai-cn": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 2.9879,
-            "output": 14.9395,
-            "cache_read": 0.2988,
-            "cache_write": 2.9879
-          }
-        }
-      ],
-      "digitalocean": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "engy": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 1.95,
-            "output": 9.75,
-            "cache_read": 0.195
-          }
-        }
-      ],
-      "requesty": [
-        {
-          "id": "kimi-k3@eu",
-          "name": "Kimi K3 (EU)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.45
-          }
-        },
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.45
-          }
-        }
-      ],
-      "wafer.ai": [
-        {
-          "id": "Kimi-K3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 0.6,
-            "output": 15,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "fireworks-ai": [
-        {
-          "id": "accounts/fireworks/routers/kimi-k3-spot",
-          "name": "Kimi K3 Spot",
-          "cost": {
-            "input": 2.1,
-            "output": 10.5,
-            "cache_read": 0.21
-          }
-        },
-        {
-          "id": "accounts/fireworks/routers/kimi-latest",
-          "name": "Kimi Latest",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        },
-        {
-          "id": "accounts/fireworks/routers/kimi-fast-latest",
-          "name": "Kimi Fast Latest",
-          "cost": {
-            "input": 4.5,
-            "output": 22.5,
-            "cache_read": 0.45
-          }
-        },
-        {
-          "id": "accounts/fireworks/routers/kimi-k3-fast",
-          "name": "Kimi K3 Fast",
-          "cost": {
-            "input": 4.5,
-            "output": 22.5,
-            "cache_read": 0.45
-          }
-        },
-        {
-          "id": "accounts/fireworks/models/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
       "302ai": [
         {
           "id": "kimi-k3",
@@ -545,244 +191,7 @@
           }
         }
       ],
-      "hostinger-router": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3.96,
-            "output": 19.8,
-            "cache_read": 0.9,
-            "cache_write": 4.95
-          }
-        }
-      ],
-      "hyper": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3.2664,
-            "output": 16.332,
-            "cache_read": 0.32664
-          }
-        }
-      ],
-      "liquid": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 1.26,
-            "output": 10.2,
-            "cache_read": 0.315
-          }
-        }
-      ],
-      "volcengine-coding-plan": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "dothoosh": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3.850003,
-            "output": 19.250002,
-            "cache_read": 0.385001
-          }
-        }
-      ],
-      "ainetcafe": [
-        {
-          "id": "Kimi-K3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 2.1,
-            "output": 10.5,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "jzstoken": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 1.95,
-            "output": 9.73,
-            "cache_read": 0.1946,
-            "cache_write": 1.95
-          }
-        }
-      ],
-      "doubleword": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3,
-            "cache_write": 3.75
-          }
-        }
-      ],
-      "nano-gpt": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 0.45,
-            "output": 9.6,
-            "cache_read": 0.13
-          }
-        },
-        {
-          "id": "TEE/kimi-k3",
-          "name": "Kimi K3 TEE",
-          "cost": {
-            "input": 1.85,
-            "output": 9.5,
-            "cache_read": 0.185
-          }
-        }
-      ],
-      "chutes": [
-        {
-          "id": "moonshotai/Kimi-K3-TEE",
-          "name": "Kimi K3 TEE",
-          "cost": {
-            "input": 1.85,
-            "output": 9.5,
-            "cache_read": 0.185
-          }
-        }
-      ],
-      "cheapest-token": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 4,
-            "output": 12,
-            "cache_read": 1
-          }
-        }
-      ],
-      "steadyrouter": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": null
-        }
-      ],
-      "iteracompute": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 2.35,
-            "output": 11.76,
-            "cache_read": 0.23
-          }
-        }
-      ],
-      "standardcompute": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "amazon-bedrock": [
-        {
-          "id": "global.moonshotai.kimi-k3",
-          "name": "Kimi K3 (Global)",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3,
-            "cache_write": 3.75
-          }
-        },
-        {
-          "id": "us.moonshotai.kimi-k3",
-          "name": "Kimi K3 (US)",
-          "cost": {
-            "input": 3.3,
-            "output": 16.5,
-            "cache_read": 0.33,
-            "cache_write": 4.125
-          }
-        }
-      ],
-      "opper": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15
-          }
-        }
-      ],
-      "nvidia": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 0,
-            "output": 0
-          }
-        }
-      ],
-      "berget": [
-        {
-          "id": "moonshotai/Kimi-K3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3.3645,
-            "output": 16.8225,
-            "cache_read": 1.00935
-          }
-        }
-      ],
-      "vivgrid": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "openrouter": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 0.192,
-            "output": 16,
-            "cache_read": 0.182
-          }
-        }
-      ],
-      "commandcode": [
+      "abacus": [
         {
           "id": "moonshotai/Kimi-K3",
           "name": "Kimi K3",
@@ -813,36 +222,58 @@
           }
         }
       ],
-      "opencode-go": [
+      "adzuki": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 5.7143,
+            "output": 28.5714,
+            "cache_read": 0.5714
+          }
+        }
+      ],
+      "aiand": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 12.5,
+            "cache_read": 0.5
+          }
+        }
+      ],
+      "aihubmix": [
         {
           "id": "kimi-k3",
           "name": "Kimi K3",
           "cost": {
             "input": 3,
             "output": 15,
-            "cache_read": 0.3,
-            "cache_write": 3
+            "cache_read": 0.3
           }
         }
       ],
-      "greenpt": [
+      "aimlapi": [
         {
-          "id": "kimi-k3",
+          "id": "moonshot/kimi-k3",
           "name": "Kimi K3",
           "cost": {
-            "input": 3.762,
-            "output": 18.81,
-            "cache_read": 0.9405
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
           }
         }
       ],
-      "watt": [
+      "ainetcafe": [
         {
           "id": "Kimi-K3",
           "name": "Kimi K3",
           "cost": {
-            "input": 3,
-            "output": 15
+            "input": 2.1,
+            "output": 10.5,
+            "cache_read": 0.3
           }
         }
       ],
@@ -857,7 +288,40 @@
           }
         }
       ],
-      "ofox": [
+      "alibaba-cn": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 2.827,
+            "output": 14.133,
+            "cache_read": 0.283
+          }
+        }
+      ],
+      "amazon-bedrock": [
+        {
+          "id": "global.moonshotai.kimi-k3",
+          "name": "Kimi K3 (Global)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3.75
+          }
+        },
+        {
+          "id": "us.moonshotai.kimi-k3",
+          "name": "Kimi K3 (US)",
+          "cost": {
+            "input": 3.3,
+            "output": 16.5,
+            "cache_read": 0.33,
+            "cache_write": 4.125
+          }
+        }
+      ],
+      "arcee": [
         {
           "id": "moonshotai/kimi-k3",
           "name": "Kimi K3",
@@ -868,25 +332,396 @@
           }
         }
       ],
-      "synthetic": [
+      "baseten": [
         {
-          "id": "hf:moonshotai/Kimi-K3",
+          "id": "moonshotai/Kimi-K3",
           "name": "Kimi K3",
           "cost": {
             "input": 3,
             "output": 15,
-            "cache_read": 0.45
+            "cache_read": 0.3
           }
         }
       ],
-      "vancine": [
+      "berget": [
+        {
+          "id": "moonshotai/Kimi-K3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3.3645,
+            "output": 16.8225,
+            "cache_read": 1.00935
+          }
+        }
+      ],
+      "boundless": [
         {
           "id": "kimi-k3",
           "name": "Kimi K3",
           "cost": {
-            "input": 2.4,
+            "input": 2.3,
+            "output": 11.4,
+            "cache_read": 0.23
+          }
+        }
+      ],
+      "cheapaimodel": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 2.100153,
+            "output": 10.500765,
+            "cache_read": 0.2100153,
+            "cache_write": 2.100153
+          }
+        }
+      ],
+      "cheapest-token": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 4,
             "output": 12,
-            "cache_read": 0.24
+            "cache_read": 1
+          }
+        }
+      ],
+      "chutes": [
+        {
+          "id": "moonshotai/Kimi-K3-TEE",
+          "name": "Kimi K3 TEE",
+          "cost": {
+            "input": 1.85,
+            "output": 9.5,
+            "cache_read": 0.185
+          }
+        }
+      ],
+      "cline-pass": [
+        {
+          "id": "cline-pass/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "cloudflare-ai-gateway": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "commandcode": [
+        {
+          "id": "moonshotai/Kimi-K3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "cortecs": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 14.999
+          }
+        }
+      ],
+      "crossmodel": [
+        {
+          "id": "moonshot/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "moonshotai/Kimi-K3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 2.85,
+            "output": 14.25,
+            "cache_read": 0.285,
+            "cache_write": 3.5625
+          }
+        }
+      ],
+      "digitalocean": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "dothoosh": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3.850003,
+            "output": 19.250002,
+            "cache_read": 0.385001
+          }
+        }
+      ],
+      "doubleword": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3.75
+          }
+        }
+      ],
+      "edenai": [
+        {
+          "id": "moonshot/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3
+          }
+        }
+      ],
+      "empiriolabs": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 3
+          }
+        }
+      ],
+      "engy": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 1.95,
+            "output": 9.75,
+            "cache_read": 0.195
+          }
+        }
+      ],
+      "fireworks-ai": [
+        {
+          "id": "accounts/fireworks/models/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "accounts/fireworks/routers/kimi-fast-latest",
+          "name": "Kimi Fast Latest",
+          "cost": {
+            "input": 4.5,
+            "output": 22.5,
+            "cache_read": 0.45
+          }
+        },
+        {
+          "id": "accounts/fireworks/routers/kimi-k3-fast",
+          "name": "Kimi K3 Fast",
+          "cost": {
+            "input": 4.5,
+            "output": 22.5,
+            "cache_read": 0.45
+          }
+        },
+        {
+          "id": "accounts/fireworks/routers/kimi-k3-spot",
+          "name": "Kimi K3 Spot",
+          "cost": {
+            "input": 2.1,
+            "output": 10.5,
+            "cache_read": 0.21
+          }
+        },
+        {
+          "id": "accounts/fireworks/routers/kimi-latest",
+          "name": "Kimi Latest",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "frogbot": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "github-copilot": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "greenpt": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3.762,
+            "output": 18.81,
+            "cache_read": 0.9405
+          }
+        }
+      ],
+      "hostinger-router": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3.96,
+            "output": 19.8,
+            "cache_read": 0.9,
+            "cache_write": 4.95
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "moonshotai/Kimi-K3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15
+          }
+        }
+      ],
+      "hyper": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3.2664,
+            "output": 16.332,
+            "cache_read": 0.32664
+          }
+        }
+      ],
+      "impossibl": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "inco": [
+        {
+          "id": "kimi-k3:fast",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 6,
+            "output": 30,
+            "cache_read": 0.6
+          }
+        }
+      ],
+      "inferris": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 1.8,
+            "output": 9,
+            "cache_read": 0.18
+          }
+        }
+      ],
+      "iteracompute": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 2.35,
+            "output": 11.76,
+            "cache_read": 0.23
+          }
+        }
+      ],
+      "jalapeno": [
+        {
+          "id": "Kimi-K3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "jzstoken": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 1.95,
+            "output": 9.73,
+            "cache_read": 0.1946,
+            "cache_write": 1.95
+          }
+        }
+      ],
+      "keln": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.38
           }
         }
       ],
@@ -901,20 +736,468 @@
           }
         }
       ],
-      "zenifra": [
+      "kilo": [
         {
-          "id": "zenifra/kimi-k3",
+          "id": "moonshotai/kimi-k3",
           "name": "Kimi K3",
           "cost": {
-            "input": 2.6657,
-            "output": 13.3264,
-            "cache_read": 0.272
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3.75
+          }
+        },
+        {
+          "id": "moonshotai/kimi-k3-fast",
+          "name": "MoonshotAI: Kimi K3 Fast",
+          "cost": {
+            "input": 4.5,
+            "output": 22.5,
+            "reasoning": 0,
+            "cache_read": 0.45
           }
         }
       ],
-      "frogbot": [
+      "kimi-code-plan-cn": [
+        {
+          "id": "k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        {
+          "id": "k3-256k",
+          "name": "Kimi K3-256K",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "kimi-code-plan-global": [
+        {
+          "id": "k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        {
+          "id": "k3-256k",
+          "name": "Kimi K3-256K",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "korouter": [
         {
           "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 1.74,
+            "output": 8.7,
+            "cache_read": 0.174,
+            "cache_write": 1.74
+          }
+        }
+      ],
+      "liquid": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 1.26,
+            "output": 10.2,
+            "cache_read": 0.315
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "kimi-k3-fast",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 4.5,
+            "output": 22.5,
+            "cache_read": 0.45
+          }
+        }
+      ],
+      "llmgateway-providers": [
+        {
+          "id": "alibaba/kimi-k3",
+          "name": "Kimi K3 (Alibaba Cloud)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "aws-bedrock/kimi-k3",
+          "name": "Kimi K3 (AWS Bedrock)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3.75
+          }
+        },
+        {
+          "id": "baidu/kimi-k3",
+          "name": "Kimi K3 (Baidu)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "canopywave/kimi-k3",
+          "name": "Kimi K3 (CanopyWave)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "fireworks/kimi-k3",
+          "name": "Kimi K3 (Fireworks AI)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "fireworks/kimi-k3-fast",
+          "name": "Kimi K3 Fast (Fireworks AI)",
+          "cost": {
+            "input": 4.5,
+            "output": 22.5,
+            "cache_read": 0.45
+          }
+        },
+        {
+          "id": "moonshot/kimi-k3",
+          "name": "Kimi K3 (Moonshot AI)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "novita/kimi-k3",
+          "name": "Kimi K3 (NovitaAI)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "runpod/kimi-k3",
+          "name": "Kimi K3 (Runpod)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "runware/kimi-k3",
+          "name": "Kimi K3 (Runware)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "scx-ai-gp/kimi-k3",
+          "name": "Kimi K3 (SCX.ai)",
+          "cost": {
+            "input": 3.135,
+            "output": 15.675,
+            "cache_read": 0.319
+          }
+        },
+        {
+          "id": "tencent/kimi-k3",
+          "name": "Kimi K3 (Tencent Cloud)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "together-ai/kimi-k3",
+          "name": "Kimi K3 (Together AI)",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "melious": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3.17775,
+            "output": 15.88875,
+            "cache_read": 0.79165
+          }
+        }
+      ],
+      "merge-gateway": [
+        {
+          "id": "moonshot/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "moark": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15
+          }
+        }
+      ],
+      "modal": [
+        {
+          "id": "moonshotai/Kimi-K3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "reasoning": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "moonshotai": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3
+          }
+        }
+      ],
+      "moonshotai-cn": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 2.9879,
+            "output": 14.9395,
+            "cache_read": 0.2988,
+            "cache_write": 2.9879
+          }
+        }
+      ],
+      "morph": [
+        {
+          "id": "morph-kimik3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 2.5,
+            "output": 14,
+            "cache_read": 0.29
+          }
+        },
+        {
+          "id": "morph-kimik3-fast",
+          "name": "Kimi K3 Fast",
+          "cost": {
+            "input": 6,
+            "output": 22.5,
+            "cache_read": 0.6
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 0.45,
+            "output": 9.6,
+            "cache_read": 0.13
+          }
+        },
+        {
+          "id": "TEE/kimi-k3",
+          "name": "Kimi K3 TEE",
+          "cost": {
+            "input": 1.85,
+            "output": 9.5,
+            "cache_read": 0.185
+          }
+        }
+      ],
+      "nearai": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3.3,
+            "output": 16.5,
+            "cache_read": 0.33
+          }
+        }
+      ],
+      "nebius": [
+        {
+          "id": "moonshotai/Kimi-K3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "neon": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "novita-ai": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3
+          }
+        }
+      ],
+      "nvidia": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "ofox": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "ollama-cloud": [
+        {
+          "id": "kimi-k3",
+          "name": "kimi-k3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3
+          }
+        }
+      ],
+      "opencode-go": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 0.192,
+            "output": 16,
+            "cache_read": 0.182
+          }
+        }
+      ],
+      "opper": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15
+          }
+        }
+      ],
+      "orcarouter": [
+        {
+          "id": "kimi/kimi-k3",
           "name": "Kimi K3",
           "cost": {
             "input": 3,
@@ -943,51 +1226,7 @@
           }
         }
       ],
-      "ollama-cloud": [
-        {
-          "id": "kimi-k3",
-          "name": "kimi-k3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "kimi-code-plan-global": [
-        {
-          "id": "k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        },
-        {
-          "id": "k3-256k",
-          "name": "Kimi K3-256K",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        }
-      ],
-      "aimlapi": [
-        {
-          "id": "moonshot/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "impossibl": [
+      "phala": [
         {
           "id": "moonshotai/kimi-k3",
           "name": "Kimi K3",
@@ -998,52 +1237,9 @@
           }
         }
       ],
-      "cortecs": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 14.999
-          }
-        }
-      ],
-      "baseten": [
+      "pioneer": [
         {
           "id": "moonshotai/Kimi-K3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "inferris": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 1.8,
-            "output": 9,
-            "cache_read": 0.18
-          }
-        }
-      ],
-      "nebius": [
-        {
-          "id": "moonshotai/Kimi-K3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "opencode": [
-        {
-          "id": "kimi-k3",
           "name": "Kimi K3",
           "cost": {
             "input": 3,
@@ -1051,12 +1247,41 @@
             "cache_read": 0.3,
             "cache_write": 3
           }
+        },
+        {
+          "id": "moonshotai/Kimi-K3-Fast",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 4.5,
+            "output": 22.5,
+            "cache_read": 0.45,
+            "cache_write": 4.5
+          }
         }
       ],
-      "tensorx": [
+      "prime": [
         {
           "id": "moonshotai/kimi-k3",
           "name": "Kimi K3",
+          "cost": {
+            "input": 3.45,
+            "output": 17.25
+          }
+        }
+      ],
+      "requesty": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "kimi-k3@eu",
+          "name": "Kimi K3 (EU)",
           "cost": {
             "input": 3,
             "output": 15,
@@ -1064,137 +1289,91 @@
           }
         }
       ],
-      "abacus": [
-        {
-          "id": "moonshotai/Kimi-K3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "moark": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15
-          }
-        }
-      ],
-      "llmgateway": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        },
-        {
-          "id": "kimi-k3-fast",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 4.5,
-            "output": 22.5,
-            "cache_read": 0.45
-          }
-        }
-      ],
-      "crossmodel": [
-        {
-          "id": "moonshot/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3,
-            "cache_write": 3
-          }
-        }
-      ],
-      "wally": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 2.925,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "aihubmix": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "merge-gateway": [
-        {
-          "id": "moonshot/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "inco": [
-        {
-          "id": "kimi-k3:fast",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 6,
-            "output": 30,
-            "cache_read": 0.6
-          }
-        }
-      ],
-      "kilo": [
+      "sandbase": [
         {
           "id": "moonshotai/kimi-k3",
           "name": "Kimi K3",
           "cost": {
             "input": 3,
             "output": 15,
-            "cache_read": 0.3,
-            "cache_write": 3.75
-          }
-        },
-        {
-          "id": "moonshotai/kimi-k3-fast",
-          "name": "MoonshotAI: Kimi K3 Fast",
-          "cost": {
-            "input": 6,
-            "output": 22.5,
-            "cache_read": 0.6
+            "cache_read": 0.3
           }
         }
       ],
-      "deepinfra": [
+      "scnet-token-plan": [
+        {
+          "id": "Kimi-K3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "scx-ai": [
+        {
+          "id": "Kimi-K3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 2.827,
+            "output": 14.133,
+            "cache_read": 0.283
+          }
+        }
+      ],
+      "sensenova": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "siliconflow": [
         {
           "id": "moonshotai/Kimi-K3",
           "name": "Kimi K3",
           "cost": {
-            "input": 2.85,
-            "output": 14.25,
-            "cache_read": 0.285,
-            "cache_write": 3.5625
+            "input": 2.7,
+            "output": 13.5,
+            "cache_read": 0.27
           }
         }
       ],
-      "neon": [
+      "standardcompute": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "steadyrouter": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": null
+        }
+      ],
+      "synthetic": [
+        {
+          "id": "hf:moonshotai/Kimi-K3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.45
+          }
+        }
+      ],
+      "synthorai": [
         {
           "id": "kimi-k3",
           "name": "Kimi K3",
@@ -1216,47 +1395,58 @@
           }
         }
       ],
-      "github-copilot": [
+      "tensorx": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.75
+          }
+        }
+      ],
+      "togetherai": [
+        {
+          "id": "moonshotai/Kimi-K3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "tokengo": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "uplinkswitch": [
         {
           "id": "kimi-k3",
           "name": "Kimi K3",
           "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
+            "input": 0.9,
+            "output": 4.5,
+            "cache_read": 0.12
           }
         }
       ],
-      "huggingface": [
+      "vancine": [
         {
-          "id": "moonshotai/Kimi-K3",
+          "id": "kimi-k3",
           "name": "Kimi K3",
           "cost": {
-            "input": 3,
-            "output": 15
-          }
-        }
-      ],
-      "modal": [
-        {
-          "id": "moonshotai/Kimi-K3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "reasoning": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "siliconflow": [
-        {
-          "id": "moonshotai/Kimi-K3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 2.7,
-            "output": 13.5,
-            "cache_read": 0.27
+            "input": 2.4,
+            "output": 12,
+            "cache_read": 0.24
           }
         }
       ],
@@ -1280,36 +1470,56 @@
           }
         }
       ],
-      "jalapeno": [
+      "vercel": [
+        {
+          "id": "moonshotai/kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        },
+        {
+          "id": "moonshotai/kimi-k3-fast",
+          "name": "Kimi K3 Fast",
+          "cost": {
+            "input": 6,
+            "output": 22.5,
+            "cache_read": 0.6
+          }
+        }
+      ],
+      "vivgrid": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3
+          }
+        }
+      ],
+      "volcengine-coding-plan": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "wafer.ai": [
         {
           "id": "Kimi-K3",
           "name": "Kimi K3",
           "cost": {
-            "input": 3,
+            "input": 0.6,
             "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "aiand": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 12.5,
-            "cache_read": 0.5
-          }
-        }
-      ],
-      "cloudflare-ai-gateway": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
+            "cache_read": 0.2
           }
         }
       ],
@@ -1324,221 +1534,35 @@
           }
         }
       ],
-      "pioneer": [
-        {
-          "id": "moonshotai/Kimi-K3-Fast",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 4.5,
-            "output": 22.5,
-            "cache_read": 0.45,
-            "cache_write": 4.5
-          }
-        },
-        {
-          "id": "moonshotai/Kimi-K3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3,
-            "cache_write": 3
-          }
-        }
-      ],
-      "phala": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "adzuki": [
+      "wally": [
         {
           "id": "kimi-k3",
           "name": "Kimi K3",
           "cost": {
-            "input": 5.7143,
-            "output": 28.5714,
-            "cache_read": 0.5714
-          }
-        }
-      ],
-      "arcee": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
+            "input": 2.925,
             "output": 15,
             "cache_read": 0.3
           }
         }
       ],
-      "morph": [
-        {
-          "id": "morph-kimik3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 2.5,
-            "output": 14,
-            "cache_read": 0.29
-          }
-        },
-        {
-          "id": "morph-kimik3-fast",
-          "name": "Kimi K3 Fast",
-          "cost": {
-            "input": 6,
-            "output": 22.5,
-            "cache_read": 0.6
-          }
-        }
-      ],
-      "togetherai": [
-        {
-          "id": "moonshotai/Kimi-K3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "scx-ai": [
+      "watt": [
         {
           "id": "Kimi-K3",
           "name": "Kimi K3",
           "cost": {
-            "input": 2.827,
-            "output": 14.133,
-            "cache_read": 0.283
-          }
-        }
-      ],
-      "synthorai": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
             "input": 3,
-            "output": 15,
-            "cache_read": 0.3
+            "output": 15
           }
         }
       ],
-      "kimi-code-plan-cn": [
+      "zenifra": [
         {
-          "id": "k3",
+          "id": "zenifra/kimi-k3",
           "name": "Kimi K3",
           "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        },
-        {
-          "id": "k3-256k",
-          "name": "Kimi K3-256K",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        }
-      ],
-      "melious": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3.17775,
-            "output": 15.88875,
-            "cache_read": 0.79165
-          }
-        }
-      ],
-      "prime": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3.45,
-            "output": 17.25
-          }
-        }
-      ],
-      "cline-pass": [
-        {
-          "id": "cline-pass/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
-          }
-        }
-      ],
-      "scnet-token-plan": [
-        {
-          "id": "Kimi-K3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "uplinkswitch": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 0.9,
-            "output": 4.5,
-            "cache_read": 0.12
-          }
-        }
-      ],
-      "novita-ai": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3,
-            "cache_write": 3
-          }
-        }
-      ],
-      "nearai": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3.3,
-            "output": 16.5,
-            "cache_read": 0.33
-          }
-        }
-      ],
-      "tokengo": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
+            "input": 2.6657,
+            "output": 13.3264,
+            "cache_read": 0.272
           }
         }
       ],
@@ -1552,37 +1576,14 @@
             "cache_read": 0.3
           }
         }
-      ],
-      "boundless": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 2.3,
-            "output": 11.4,
-            "cache_read": 0.23
-          }
-        }
-      ],
-      "korouter": [
-        {
-          "id": "kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 1.74,
-            "output": 8.7,
-            "cache_read": 0.174,
-            "cache_write": 1.74
-          }
-        }
       ]
     },
     "gated": null
   },
   "syndication": {
-    "score": 10,
-    "points": 12,
-    "band": "very-strong",
+    "score": 8,
+    "points": 8,
+    "band": "strong",
     "sources": [
       {
         "id": "models.dev",
@@ -1606,20 +1607,6 @@
         "self": false
       },
       {
-        "id": "llm-stats",
-        "url": "https://llm-stats.com/models/kimi-k3",
-        "weight": 2,
-        "kind": "aggregator",
-        "self": false
-      },
-      {
-        "id": "artificial-analysis",
-        "url": "https://artificialanalysis.ai/models/kimi-k3",
-        "weight": 2,
-        "kind": "evaluation",
-        "self": false
-      },
-      {
         "id": "hugging-face",
         "url": "https://huggingface.co/moonshotai/Kimi-K3",
         "weight": 0,
@@ -1627,22 +1614,22 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-14"
+    "checked_at": "2026-11-18"
   },
   "builds": [],
   "sources": [
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/moonshotai/Kimi-K3",
-      "retrieved_at": "2026-11-17"
+      "retrieved_at": "2026-11-18"
     }
   ],
-  "verified_at": "2026-11-17",
-  "updated_at": "2026-11-17",
+  "verified_at": "2026-11-18",
+  "updated_at": "2026-11-18",
   "notes": "",
   "scorecard": {
     "overall": {
-      "score": 80.8,
+      "score": 77.8,
       "coverage": 4,
       "weights": {
         "syndication": 15,
@@ -1654,11 +1641,11 @@
         {
           "key": "syndication",
           "label": "Syndication",
-          "score": 100,
+          "score": 80,
           "weight": 15,
           "included": true,
           "effective_weight": 15,
-          "contribution": 15
+          "contribution": 12
         },
         {
           "key": "performance",
@@ -1766,12 +1753,12 @@
       "citation": "not measured"
     },
     "syndication": {
-      "score": 10,
+      "score": 8,
       "max": 10,
-      "band": "very-strong",
+      "band": "strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-17",
+    "as_of": "2026-11-18",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

@@ -141,289 +141,6 @@
       "wallaby"
     ],
     "provider_models": {
-      "empiriolabs": [
-        {
-          "id": "kimi-k3-1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.184
-          }
-        }
-      ],
-      "llmgateway-providers": [
-        {
-          "id": "runpod/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro (Runpod)",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        },
-        {
-          "id": "fireworks/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro (Fireworks AI)",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        },
-        {
-          "id": "alibaba/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro (Alibaba Cloud)",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        },
-        {
-          "id": "runware/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro (runware)",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        },
-        {
-          "id": "together-ai/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro (Together AI)",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        },
-        {
-          "id": "inference.net/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro (Inference.net)",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        },
-        {
-          "id": "scx-ai-gp/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro (scx-ai-gp)",
-          "cost": {
-            "input": 1.9,
-            "output": 9.5,
-            "cache_read": 0.19
-          }
-        },
-        {
-          "id": "moonshot/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro (Moonshot AI)",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2,
-            "cache_write": 2
-          }
-        }
-      ],
-      "keln": [
-        {
-          "id": "moonshotai/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.24
-          }
-        }
-      ],
-      "moonshotai": [
-        {
-          "id": "kimi-k3.1-pro-highspeed",
-          "name": "Kimi K3.1 Pro Highspeed",
-          "cost": {
-            "input": 4,
-            "output": 20,
-            "cache_read": 0.2,
-            "cache_write": 4
-          }
-        },
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2,
-            "cache_write": 2
-          }
-        }
-      ],
-      "logits": [
-        {
-          "id": "moonshotai/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "umans-ai-coding-plan": [
-        {
-          "id": "umans-kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        },
-        {
-          "id": "umans-kimi-k3",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        }
-      ],
-      "vercel": [
-        {
-          "id": "moonshotai/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "edenai": [
-        {
-          "id": "moonshot/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2,
-            "cache_write": 2
-          }
-        }
-      ],
-      "moonshotai-cn": [
-        {
-          "id": "kimi-k3.1-pro-highspeed",
-          "name": "Kimi K3.1 Pro Highspeed",
-          "cost": {
-            "input": 3.8874,
-            "output": 20.3342,
-            "cache_read": 0.1944,
-            "cache_write": 3.8874
-          }
-        },
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 1.9437,
-            "output": 10.1671,
-            "cache_read": 0.1944,
-            "cache_write": 1.9437
-          }
-        }
-      ],
-      "digitalocean": [
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "engy": [
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 1.4,
-            "output": 7,
-            "cache_read": 0.14
-          }
-        }
-      ],
-      "requesty": [
-        {
-          "id": "kimi-k3.1-pro@eu",
-          "name": "Kimi K3.1 Pro (EU)",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        },
-        {
-          "id": "kimi-k3.1-pro-highspeed",
-          "name": "Kimi K3.1 Pro Highspeed",
-          "cost": {
-            "input": 4,
-            "output": 20,
-            "cache_read": 0.2,
-            "cache_write": 4
-          }
-        },
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2,
-            "cache_write": 2
-          }
-        }
-      ],
-      "wafer.ai": [
-        {
-          "id": "Kimi-K3.1-Pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "fireworks-ai": [
-        {
-          "id": "accounts/fireworks/models/kimi-k3p1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "tinfoil": [
-        {
-          "id": "kimi-k3-1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 4,
-            "output": 20,
-            "cache_read": 0.4
-          }
-        }
-      ],
       "302ai": [
         {
           "id": "kimi-k3.1-pro",
@@ -435,102 +152,36 @@
           }
         }
       ],
-      "hyper": [
+      "abliteratedllm": [
         {
           "id": "kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
-            "input": 2.2,
-            "output": 11,
-            "cache_read": 0.22
+            "input": 1.8,
+            "output": 9,
+            "cache_read": 0.18
           }
         }
       ],
-      "liquid": [
+      "adzuki": [
         {
           "id": "kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
-            "input": 2.18,
-            "output": 5.46,
-            "cache_read": 1.23
+            "input": 3.7143,
+            "output": 19.4286,
+            "cache_read": 0.3714
           }
         }
       ],
-      "volcengine-coding-plan": [
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        }
-      ],
-      "dothoosh": [
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2.566667,
-            "output": 12.833334,
-            "cache_read": 0.256667
-          }
-        }
-      ],
-      "jzstoken": [
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 1.17,
-            "output": 5.84,
-            "cache_read": 0.0778,
-            "cache_write": 1.17
-          }
-        }
-      ],
-      "doubleword": [
-        {
-          "id": "moonshotai/Kimi-K3.1-Pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10
-          }
-        }
-      ],
-      "nano-gpt": [
+      "aiand": [
         {
           "id": "moonshotai/kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
-            "input": 1.4,
-            "output": 7,
-            "cache_read": 0.14,
-            "cache_write": 1.4
-          }
-        },
-        {
-          "id": "TEE/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro TEE",
-          "cost": {
-            "input": 4,
-            "output": 20,
-            "cache_read": 0.4
-          }
-        }
-      ],
-      "nan": [
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2.808,
-            "output": 14.04,
-            "cache_read": 0.2808,
-            "cache_write": 2.808
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
           }
         }
       ],
@@ -556,29 +207,7 @@
           }
         }
       ],
-      "verda": [
-        {
-          "id": "kimi-k3-1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "openrouter": [
-        {
-          "id": "moonshotai/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 0.2403,
-            "output": 8.4023,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "commandcode": [
+      "baseten": [
         {
           "id": "moonshotai/Kimi-K3.1-Pro",
           "name": "Kimi K3.1 Pro",
@@ -589,20 +218,9 @@
           }
         }
       ],
-      "abliteratedllm": [
+      "cline-pass": [
         {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 1.8,
-            "output": 9,
-            "cache_read": 0.18
-          }
-        }
-      ],
-      "opencode-go": [
-        {
-          "id": "kimi-k3.1-pro",
+          "id": "cline-pass/kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
             "input": 2,
@@ -612,84 +230,20 @@
           }
         }
       ],
-      "ofox": [
+      "cloudflare-ai-gateway": [
         {
           "id": "moonshotai/kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
             "input": 2,
-            "output": 11,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "synthetic": [
-        {
-          "id": "hf:moonshotai/Kimi-K3.1-Pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
             "output": 10,
             "cache_read": 0.2
           }
         }
       ],
-      "kenari": [
+      "commandcode": [
         {
-          "id": "kimi-k3-1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 0.8,
-            "output": 8,
-            "cache_read": 0.08
-          }
-        }
-      ],
-      "ollama-cloud": [
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "kimi-code-plan-global": [
-        {
-          "id": "k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        },
-        {
-          "id": "k3.1-pro-highspeed",
-          "name": "Kimi K3.1 Pro Highspeed",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0,
-            "cache_write": 0
-          }
-        }
-      ],
-      "umans-ai": [
-        {
-          "id": "umans-kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        },
-        {
-          "id": "umans-kimi-k3",
+          "id": "moonshotai/Kimi-K3.1-Pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
             "input": 2,
@@ -709,64 +263,6 @@
           }
         }
       ],
-      "baseten": [
-        {
-          "id": "moonshotai/Kimi-K3.1-Pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "inferris": [
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 1.2,
-            "output": 6,
-            "cache_read": 0.12
-          }
-        }
-      ],
-      "proxystacks": [
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 1.6,
-            "output": 8,
-            "reasoning": 8,
-            "cache_read": 0.16,
-            "cache_write": 1.6
-          }
-        }
-      ],
-      "nebius": [
-        {
-          "id": "moonshotai/Kimi-K3.1-Pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "llmgateway": [
-        {
-          "id": "kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 1.9,
-            "output": 9.5,
-            "cache_read": 0.19,
-            "cache_write": 2
-          }
-        }
-      ],
       "crossmodel": [
         {
           "id": "moonshot/kimi-k3.1-pro",
@@ -779,9 +275,9 @@
           }
         }
       ],
-      "merge-gateway": [
+      "deepinfra": [
         {
-          "id": "moonshot/kimi-k3.1-pro",
+          "id": "moonshotai/Kimi-K3.1-Pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
             "input": 2,
@@ -790,20 +286,75 @@
           }
         }
       ],
-      "kilo": [
+      "digitalocean": [
         {
-          "id": "moonshotai/kimi-k3.1-pro",
-          "name": "MoonshotAI: Kimi K3.1 Pro",
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
           "cost": {
-            "input": 0.2403,
-            "output": 8.4023,
+            "input": 2,
+            "output": 10,
             "cache_read": 0.2
           }
         }
       ],
-      "deepinfra": [
+      "dothoosh": [
+        {
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2.566667,
+            "output": 12.833334,
+            "cache_read": 0.256667
+          }
+        }
+      ],
+      "doubleword": [
         {
           "id": "moonshotai/Kimi-K3.1-Pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10
+          }
+        }
+      ],
+      "edenai": [
+        {
+          "id": "moonshot/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2,
+            "cache_write": 2
+          }
+        }
+      ],
+      "empiriolabs": [
+        {
+          "id": "kimi-k3-1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.184
+          }
+        }
+      ],
+      "engy": [
+        {
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 1.4,
+            "output": 7,
+            "cache_read": 0.14
+          }
+        }
+      ],
+      "fireworks-ai": [
+        {
+          "id": "accounts/fireworks/models/kimi-k3p1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
             "input": 2,
@@ -822,100 +373,71 @@
           }
         }
       ],
-      "venice": [
-        {
-          "id": "kimi-k3-1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "aiand": [
-        {
-          "id": "moonshotai/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "cloudflare-ai-gateway": [
-        {
-          "id": "moonshotai/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
-          }
-        }
-      ],
-      "wallaby": [
-        {
-          "id": "moonshotai/kimi-k3.1-pro-highspeed",
-          "name": "Kimi K3.1 Pro Highspeed",
-          "cost": {
-            "input": 3.6,
-            "output": 18,
-            "cache_read": 0.18
-          }
-        },
-        {
-          "id": "moonshotai/kimi-k3.1-pro",
-          "name": "Kimi K3.1 Pro",
-          "cost": {
-            "input": 1.8,
-            "output": 9,
-            "cache_read": 0.18
-          }
-        }
-      ],
-      "adzuki": [
+      "hyper": [
         {
           "id": "kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
-            "input": 3.7143,
-            "output": 19.4286,
-            "cache_read": 0.3714
+            "input": 2.2,
+            "output": 11,
+            "cache_read": 0.22
           }
         }
       ],
-      "morph": [
+      "inferris": [
         {
-          "id": "morph-kimik31",
+          "id": "kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
-            "input": 2.5,
-            "output": 14,
-            "cache_read": 0.29
+            "input": 1.2,
+            "output": 6,
+            "cache_read": 0.12
           }
         }
       ],
-      "togetherai": [
+      "jzstoken": [
         {
-          "id": "moonshotai/Kimi-K3.1-Pro",
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 1.17,
+            "output": 5.84,
+            "cache_read": 0.0778,
+            "cache_write": 1.17
+          }
+        }
+      ],
+      "keln": [
+        {
+          "id": "moonshotai/kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
             "input": 2,
             "output": 10,
-            "cache_read": 0.2
+            "cache_read": 0.24
           }
         }
       ],
-      "scx-ai": [
+      "kenari": [
         {
-          "id": "Kimi-K3.1-Pro",
+          "id": "kimi-k3-1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2
+            "input": 0.8,
+            "output": 8,
+            "cache_read": 0.08
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "moonshotai/kimi-k3.1-pro",
+          "name": "MoonshotAI: Kimi K3.1 Pro",
+          "cost": {
+            "input": 4,
+            "output": 20,
+            "cache_read": 0.2,
+            "cache_write": 5
           }
         }
       ],
@@ -941,10 +463,119 @@
           }
         }
       ],
-      "teamorouter": [
+      "kimi-code-plan-global": [
+        {
+          "id": "k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        {
+          "id": "k3.1-pro-highspeed",
+          "name": "Kimi K3.1 Pro Highspeed",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "liquid": [
         {
           "id": "kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2.18,
+            "output": 5.46,
+            "cache_read": 1.23
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 1.9,
+            "output": 9.5,
+            "cache_read": 0.19,
+            "cache_write": 2
+          }
+        }
+      ],
+      "llmgateway-providers": [
+        {
+          "id": "alibaba/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro (Alibaba Cloud)",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        },
+        {
+          "id": "fireworks/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro (Fireworks AI)",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        },
+        {
+          "id": "inference.net/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro (Inference.net)",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        },
+        {
+          "id": "moonshot/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro (Moonshot AI)",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2,
+            "cache_write": 2
+          }
+        },
+        {
+          "id": "runpod/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro (Runpod)",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        },
+        {
+          "id": "runware/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro (runware)",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        },
+        {
+          "id": "scx-ai-gp/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro (scx-ai-gp)",
+          "cost": {
+            "input": 1.9,
+            "output": 9.5,
+            "cache_read": 0.19
+          }
+        },
+        {
+          "id": "together-ai/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro (Together AI)",
           "cost": {
             "input": 2,
             "output": 10,
@@ -952,13 +583,14 @@
           }
         }
       ],
-      "prime": [
+      "logits": [
         {
           "id": "moonshotai/kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
             "input": 2,
-            "output": 10
+            "output": 10,
+            "cache_read": 0.2
           }
         }
       ],
@@ -973,9 +605,20 @@
           }
         }
       ],
-      "cline-pass": [
+      "merge-gateway": [
         {
-          "id": "cline-pass/kimi-k3.1-pro",
+          "id": "moonshot/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "moonshotai": [
+        {
+          "id": "kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
             "input": 2,
@@ -983,11 +626,9 @@
             "cache_read": 0.2,
             "cache_write": 2
           }
-        }
-      ],
-      "novita-ai": [
+        },
         {
-          "id": "moonshotai/kimi-k3.1-pro-highspeed",
+          "id": "kimi-k3.1-pro-highspeed",
           "name": "Kimi K3.1 Pro Highspeed",
           "cost": {
             "input": 4,
@@ -995,15 +636,71 @@
             "cache_read": 0.2,
             "cache_write": 4
           }
+        }
+      ],
+      "moonshotai-cn": [
+        {
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 1.9437,
+            "output": 10.1671,
+            "cache_read": 0.1944,
+            "cache_write": 1.9437
+          }
         },
+        {
+          "id": "kimi-k3.1-pro-highspeed",
+          "name": "Kimi K3.1 Pro Highspeed",
+          "cost": {
+            "input": 3.8874,
+            "output": 20.3342,
+            "cache_read": 0.1944,
+            "cache_write": 3.8874
+          }
+        }
+      ],
+      "morph": [
+        {
+          "id": "morph-kimik31",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2.5,
+            "output": 14,
+            "cache_read": 0.29
+          }
+        }
+      ],
+      "nan": [
+        {
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2.808,
+            "output": 14.04,
+            "cache_read": 0.2808,
+            "cache_write": 2.808
+          }
+        }
+      ],
+      "nano-gpt": [
         {
           "id": "moonshotai/kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
-            "input": 2,
-            "output": 10,
-            "cache_read": 0.2,
-            "cache_write": 2
+            "input": 1.4,
+            "output": 7,
+            "cache_read": 0.14,
+            "cache_write": 1.4
+          }
+        },
+        {
+          "id": "TEE/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro TEE",
+          "cost": {
+            "input": 4,
+            "output": 20,
+            "cache_read": 0.4
           }
         }
       ],
@@ -1018,14 +715,25 @@
           }
         }
       ],
+      "nebius": [
+        {
+          "id": "moonshotai/Kimi-K3.1-Pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
       "neuralwatt": [
         {
-          "id": "nw-large-flex",
-          "name": "Neuralwatt Large (flex)",
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
           "cost": {
-            "input": 1.3,
-            "output": 6.5,
-            "cache_read": 0.13
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
           }
         },
         {
@@ -1047,6 +755,50 @@
           }
         },
         {
+          "id": "nw-large-flex",
+          "name": "Neuralwatt Large (flex)",
+          "cost": {
+            "input": 1.3,
+            "output": 6.5,
+            "cache_read": 0.13
+          }
+        }
+      ],
+      "novita-ai": [
+        {
+          "id": "moonshotai/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2,
+            "cache_write": 2
+          }
+        },
+        {
+          "id": "moonshotai/kimi-k3.1-pro-highspeed",
+          "name": "Kimi K3.1 Pro Highspeed",
+          "cost": {
+            "input": 4,
+            "output": 20,
+            "cache_read": 0.2,
+            "cache_write": 4
+          }
+        }
+      ],
+      "ofox": [
+        {
+          "id": "moonshotai/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 11,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "ollama-cloud": [
+        {
           "id": "kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
@@ -1055,14 +807,263 @@
             "cache_read": 0.2
           }
         }
+      ],
+      "opencode-go": [
+        {
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2,
+            "cache_write": 2
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "moonshotai/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 0.2403,
+            "output": 8.4023,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "prime": [
+        {
+          "id": "moonshotai/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10
+          }
+        }
+      ],
+      "proxystacks": [
+        {
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 1.6,
+            "output": 8,
+            "reasoning": 8,
+            "cache_read": 0.16,
+            "cache_write": 1.6
+          }
+        }
+      ],
+      "requesty": [
+        {
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2,
+            "cache_write": 2
+          }
+        },
+        {
+          "id": "kimi-k3.1-pro-highspeed",
+          "name": "Kimi K3.1 Pro Highspeed",
+          "cost": {
+            "input": 4,
+            "output": 20,
+            "cache_read": 0.2,
+            "cache_write": 4
+          }
+        },
+        {
+          "id": "kimi-k3.1-pro@eu",
+          "name": "Kimi K3.1 Pro (EU)",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "scx-ai": [
+        {
+          "id": "Kimi-K3.1-Pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "synthetic": [
+        {
+          "id": "hf:moonshotai/Kimi-K3.1-Pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "teamorouter": [
+        {
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "tinfoil": [
+        {
+          "id": "kimi-k3-1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 4,
+            "output": 20,
+            "cache_read": 0.4
+          }
+        }
+      ],
+      "togetherai": [
+        {
+          "id": "moonshotai/Kimi-K3.1-Pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "umans-ai": [
+        {
+          "id": "umans-kimi-k3",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        },
+        {
+          "id": "umans-kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "umans-ai-coding-plan": [
+        {
+          "id": "umans-kimi-k3",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        },
+        {
+          "id": "umans-kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0
+          }
+        }
+      ],
+      "venice": [
+        {
+          "id": "kimi-k3-1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "vercel": [
+        {
+          "id": "moonshotai/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "verda": [
+        {
+          "id": "kimi-k3-1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "volcengine-coding-plan": [
+        {
+          "id": "kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "wafer.ai": [
+        {
+          "id": "Kimi-K3.1-Pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "wallaby": [
+        {
+          "id": "moonshotai/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 1.8,
+            "output": 9,
+            "cache_read": 0.18
+          }
+        },
+        {
+          "id": "moonshotai/kimi-k3.1-pro-highspeed",
+          "name": "Kimi K3.1 Pro Highspeed",
+          "cost": {
+            "input": 3.6,
+            "output": 18,
+            "cache_read": 0.18
+          }
+        }
       ]
     },
     "gated": null
   },
   "syndication": {
-    "score": 9,
-    "points": 9,
-    "band": "very-strong",
+    "score": 5,
+    "points": 5,
+    "band": "moderate",
     "sources": [
       {
         "id": "models.dev",
@@ -1079,20 +1080,6 @@
         "self": false
       },
       {
-        "id": "llm-stats",
-        "url": "https://llm-stats.com/models/kimi-k3.1-pro",
-        "weight": 2,
-        "kind": "aggregator",
-        "self": false
-      },
-      {
-        "id": "artificial-analysis",
-        "url": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
-        "weight": 2,
-        "kind": "evaluation",
-        "self": false
-      },
-      {
         "id": "hugging-face",
         "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
         "weight": 0,
@@ -1100,7 +1087,7 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-14"
+    "checked_at": "2026-11-18"
   },
   "builds": [
     {
@@ -1119,15 +1106,15 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
-      "retrieved_at": "2026-11-17"
+      "retrieved_at": "2026-11-18"
     }
   ],
-  "verified_at": "2026-11-17",
-  "updated_at": "2026-11-17",
+  "verified_at": "2026-11-18",
+  "updated_at": "2026-11-18",
   "notes": "1 builds are attached.",
   "scorecard": {
     "overall": {
-      "score": 79.1,
+      "score": 73.1,
       "coverage": 4,
       "weights": {
         "syndication": 15,
@@ -1139,11 +1126,11 @@
         {
           "key": "syndication",
           "label": "Syndication",
-          "score": 90,
+          "score": 50,
           "weight": 15,
           "included": true,
           "effective_weight": 15,
-          "contribution": 13.5
+          "contribution": 7.5
         },
         {
           "key": "performance",
@@ -1371,12 +1358,12 @@
       "citation": "not measured"
     },
     "syndication": {
-      "score": 9,
+      "score": 5,
       "max": 10,
-      "band": "very-strong",
+      "band": "moderate",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-17",
+    "as_of": "2026-11-18",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

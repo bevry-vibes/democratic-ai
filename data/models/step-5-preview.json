@@ -9,7 +9,7 @@
   "releases": [],
   "organization": "stepfun",
   "released": "2026-09-20",
-  "summary": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
+  "summary": "Step 5 Preview is StepFun's flagship model for agentic work, built on a sparse Mixture-of-Experts architecture (27B active / 600B total parameters). It performs strongly in software engineering and professional...",
   "tags": [
     "task:reasoning",
     "task:text-generation",
@@ -98,7 +98,115 @@
       "vercel"
     ],
     "provider_models": {
+      "aihubmix": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1.08,
+            "output": 3.0888,
+            "cache_read": 0.054
+          }
+        }
+      ],
+      "aimlapi": [
+        {
+          "id": "stepfun/step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1.058,
+            "output": 2.8566,
+            "cache_read": 0.0529
+          }
+        }
+      ],
+      "commandcode": [
+        {
+          "id": "stepfun/Step-5-Preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.05
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "stepfun-ai/Step-5-Preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "edenai": [
+        {
+          "id": "deepinfra/stepfun-ai/Step-5-Preview",
+          "name": "Step 5 Preview (Deep Infra)",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        },
+        {
+          "id": "tencent/step-5-preview",
+          "name": "Step 5 Preview (Tencent)",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.05
+          }
+        }
+      ],
       "empiriolabs": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "ezkielyna": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 0.4579,
+            "output": 1.236,
+            "cache_read": 0.04579
+          }
+        }
+      ],
+      "kenari": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1.14,
+            "output": 2.86,
+            "cache_read": 0.0571
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "stepfun/step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 1,
+            "output": 2.7,
+            "cache_read": 0.1
+          }
+        }
+      ],
+      "llmgateway": [
         {
           "id": "step-5-preview",
           "name": "Step 5 Preview",
@@ -120,18 +228,18 @@
           }
         }
       ],
-      "stepfun-ai": [
+      "nano-gpt": [
         {
-          "id": "step-5-preview",
+          "id": "stepfun/step-5-preview",
           "name": "Step 5 Preview",
           "cost": {
             "input": 1,
             "output": 2.7,
-            "cache_read": 0.1
+            "cache_read": 0.05
           }
         }
       ],
-      "vercel": [
+      "novita-ai": [
         {
           "id": "stepfun/step-5-preview",
           "name": "Step 5 Preview",
@@ -142,19 +250,51 @@
           }
         }
       ],
-      "edenai": [
+      "nvidia": [
         {
-          "id": "tencent/step-5-preview",
-          "name": "Step 5 Preview (Tencent)",
+          "id": "stepfun-ai/step-5-preview",
+          "name": "Step 5 Preview",
+          "cost": {
+            "input": 0,
+            "output": 0
+          }
+        }
+      ],
+      "opencode": [
+        {
+          "id": "step-5-preview-free",
+          "name": "Step 5 Preview Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "opencode-go": [
+        {
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
           "cost": {
             "input": 1,
             "output": 2.7,
-            "cache_read": 0.05
+            "cache_read": 0.1
           }
         },
         {
-          "id": "deepinfra/stepfun-ai/Step-5-Preview",
-          "name": "Step 5 Preview (Deep Infra)",
+          "id": "step-5-preview-free",
+          "name": "Step 5 Preview Free",
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "stepfun/step-5-preview",
+          "name": "Step 5 Preview",
           "cost": {
             "input": 1,
             "output": 2.7,
@@ -173,102 +313,6 @@
           }
         }
       ],
-      "nano-gpt": [
-        {
-          "id": "stepfun/step-5-preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 1,
-            "output": 2.7,
-            "cache_read": 0.05
-          }
-        }
-      ],
-      "nvidia": [
-        {
-          "id": "stepfun-ai/step-5-preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 0,
-            "output": 0
-          }
-        }
-      ],
-      "openrouter": [
-        {
-          "id": "stepfun/step-5-preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 1,
-            "output": 2.7,
-            "cache_read": 0.1
-          }
-        }
-      ],
-      "commandcode": [
-        {
-          "id": "stepfun/Step-5-Preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 1,
-            "output": 2.7,
-            "cache_read": 0.05
-          }
-        }
-      ],
-      "opencode-go": [
-        {
-          "id": "step-5-preview-free",
-          "name": "Step 5 Preview Free",
-          "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
-          }
-        },
-        {
-          "id": "step-5-preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 1,
-            "output": 2.7,
-            "cache_read": 0.1
-          }
-        }
-      ],
-      "kenari": [
-        {
-          "id": "step-5-preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 1.14,
-            "output": 2.86,
-            "cache_read": 0.0571
-          }
-        }
-      ],
-      "aimlapi": [
-        {
-          "id": "stepfun/step-5-preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 1.058,
-            "output": 2.8566,
-            "cache_read": 0.0529
-          }
-        }
-      ],
-      "ezkielyna": [
-        {
-          "id": "step-5-preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 0.4579,
-            "output": 1.236,
-            "cache_read": 0.04579
-          }
-        }
-      ],
       "runinfra": [
         {
           "id": "stepfun-ai/Step-5-Preview",
@@ -280,18 +324,18 @@
           }
         }
       ],
-      "opencode": [
+      "stepfun": [
         {
-          "id": "step-5-preview-free",
-          "name": "Step 5 Preview Free",
+          "id": "step-5-preview",
+          "name": "Step 5 Preview",
           "cost": {
-            "input": 0,
-            "output": 0,
-            "cache_read": 0
+            "input": 1.04613,
+            "output": 2.98895,
+            "cache_read": 0.10461
           }
         }
       ],
-      "llmgateway": [
+      "stepfun-ai": [
         {
           "id": "step-5-preview",
           "name": "Step 5 Preview",
@@ -299,17 +343,6 @@
             "input": 1,
             "output": 2.7,
             "cache_read": 0.1
-          }
-        }
-      ],
-      "aihubmix": [
-        {
-          "id": "step-5-preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 1.08,
-            "output": 3.0888,
-            "cache_read": 0.054
           }
         }
       ],
@@ -320,28 +353,6 @@
           "cost": null
         }
       ],
-      "kilo": [
-        {
-          "id": "stepfun/step-5-preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 1,
-            "output": 2.7,
-            "cache_read": 0.1
-          }
-        }
-      ],
-      "deepinfra": [
-        {
-          "id": "stepfun-ai/Step-5-Preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 1,
-            "output": 2.7,
-            "cache_read": 0.1
-          }
-        }
-      ],
       "stepfun-step-plan": [
         {
           "id": "step-5-preview",
@@ -349,7 +360,7 @@
           "cost": null
         }
       ],
-      "novita-ai": [
+      "vercel": [
         {
           "id": "stepfun/step-5-preview",
           "name": "Step 5 Preview",
@@ -357,17 +368,6 @@
             "input": 1,
             "output": 2.7,
             "cache_read": 0.1
-          }
-        }
-      ],
-      "stepfun": [
-        {
-          "id": "step-5-preview",
-          "name": "Step 5 Preview",
-          "cost": {
-            "input": 1.04613,
-            "output": 2.98895,
-            "cache_read": 0.10461
           }
         }
       ]
@@ -401,7 +401,7 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-14"
+    "checked_at": "2026-11-18"
   },
   "builds": [
     {
@@ -427,11 +427,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/stepfun-ai/Step-5-Preview",
-      "retrieved_at": "2026-11-17"
+      "retrieved_at": "2026-11-18"
     }
   ],
-  "verified_at": "2026-11-17",
-  "updated_at": "2026-11-17",
+  "verified_at": "2026-11-18",
+  "updated_at": "2026-11-18",
   "notes": "2 builds are attached.",
   "scorecard": {
     "overall": {
@@ -556,7 +556,7 @@
       "band": "moderate",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-17",
+    "as_of": "2026-11-18",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }
