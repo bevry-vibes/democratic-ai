@@ -93,10 +93,12 @@ interface ModelsDevApi {
 
 const HOSTED_RUNTIMES = new Set(["opencode", "cloudflare", "openrouter", "hosted"])
 
+// Suffixes that name a packaging or quantisation of another root, so the build attaches instead of opening a second page. `-hf` and `-transformers` strip only when matching a build's declared base or its own name; the tag rules decide which repositories are builds, because a bare `-hf` suffix also appears on conversions whose base is not catalogued.
 const BUILD_MARKERS = [
   "-gguf", "-mlx", "-coreml", "-onnx", "-nvfp4", "-q8_0", "-q4_k_m", "-q4", "-q8", "-q6",
   "-4bit", "-8bit", "-bf16", "-int4", "-int8", "-ov", "-quant", "-dflash", "-singprobe", "-server",
   "-fp8", "-fp4", "-mxfp8", "-w4a4", "-w8a8", "-q3k", "-q4k", "-q5k", "-q6k", "-litert-lm", "-coreai", "-lora", "-peft",
+  "-hf", "-transformers",
 ]
 
 function stripCard(value: string): string {
