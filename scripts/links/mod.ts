@@ -49,6 +49,17 @@ interface AgentDetectIndex {
 const MODELS_DEV_URL = "https://models.dev/api.json"
 const AGENT_DETECT_URL = "https://agent-detect.bevry.me/data/index.json"
 
+// models.dev returns providers and their models in a fresh order on each build, so the links file sorts both. The output stays diffable from one day to the next.
+function sortedProviderModels(
+  value: Record<string, Array<{ id: string; name: string; cost: ModelsDevCost | null }>>,
+): Record<string, Array<{ id: string; name: string; cost: ModelsDevCost | null }>> {
+  return Object.fromEntries(
+    Object.entries(value)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([provider, models]) => [provider, [...models].sort((a, b) => a.id.localeCompare(b.id))]),
+  )
+}
+
 const BUILD_MARKERS = [
   "-gguf",
   "-mlx",
@@ -224,7 +235,9 @@ async function main(): Promise<void> {
       ...(md ? { models_dev: md.url } : {}),
       ...(ad ? { agent_detect: ad.url } : {}),
       ...(md ? { providers: [...(providersByCanonical.get(md.canonical) ?? [])].sort() } : {}),
-      ...(md ? { provider_models: providerModelsByCanonical.get(md.canonical) ?? {} } : {}),
+      ...(md
+        ? { provider_models: sortedProviderModels(providerModelsByCanonical.get(md.canonical) ?? {}) }
+        : {}),
     }
     if (md) withModelsDev++
     if (ad) withAgentDetect++
@@ -233,6 +246,7 @@ async function main(): Promise<void> {
   const sortedModels = Object.fromEntries(
     Object.entries(models).sort(([a], [b]) => a.localeCompare(b)),
   )
+
   const report = {
     schema_version: 1,
     updated_at: new Date().toISOString(),
