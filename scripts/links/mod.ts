@@ -106,7 +106,7 @@ async function latestPull(): Promise<string> {
       // not a complete pull
     }
   }
-  candidates.sort((a, b) => b.size - a.size)
+  candidates.sort((a, b) => b.name.localeCompare(a.name))
   if (candidates.length === 0) throw new Error("no complete pulls found under data/pulls")
   return candidates[0]!.name
 }
