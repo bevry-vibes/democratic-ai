@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "id": "parakeet-air",
+  "kind": "model",
+  "name": "Parakeet-Air",
+  "aliases": [
+    "webAI-Official/Parakeet-Air"
+  ],
+  "releases": [],
+  "organization": "webai",
+  "released": "2026-11-09",
+  "summary": "Parakeet-Air A 4-bit build of NVIDIA's Parakeet TDT 0.6B v3 speech recognition model for 25 European languages, in GGUF for transcribe.cpp.",
+  "tags": [
+    "task:transcription",
+    "domain:speech",
+    "modality:audio",
+    "access:llama.cpp",
+    "license:other",
+    "family:parakeet"
+  ],
+  "capabilities": {
+    "tasks": [
+      "transcription"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": [
+      "llama.cpp"
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
+  },
+  "footprint": {
+    "params_b": null,
+    "weights_gb": 0,
+    "runtimes": [
+      "llama.cpp"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/webAI-Official/Parakeet-Air"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/webAI-Official/Parakeet-Air"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "nvidia/parakeet-tdt-0.6b-v3",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "webAI-Official/Parakeet-Air",
+    "models_dev": null,
+    "agent_detect": null,
+    "providers": [],
+    "provider_models": {},
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/webAI-Official/Parakeet-Air",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-19"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/webAI-Official/Parakeet-Air",
+      "retrieved_at": "2026-11-19"
+    }
+  ],
+  "verified_at": "2026-11-19",
+  "updated_at": "2026-11-19",
+  "notes": ""
+}

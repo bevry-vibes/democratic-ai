@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "id": "sava",
+  "kind": "model",
+  "name": "sava",
+  "aliases": [
+    "inworld/sava"
+  ],
+  "releases": [],
+  "organization": "inworld",
+  "released": "2026-11-14",
+  "summary": "Apache-2.0 semantic acoustic voice-activity detection that also marks end-of-turn, for streaming speech pipelines on recorded or live audio.",
+  "tags": [
+    "task:voice-activity-detection",
+    "domain:speech",
+    "licensing:commercial-safe",
+    "license:apache-2.0"
+  ],
+  "capabilities": {
+    "tasks": [
+      "voice-activity-detection"
+    ],
+    "languages": [],
+    "modality": [],
+    "runtimes": [],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
+  },
+  "footprint": {
+    "params_b": null,
+    "weights_gb": 0,
+    "runtimes": []
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/inworld/sava"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inworld/sava"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "inworld/sava",
+    "models_dev": null,
+    "agent_detect": null,
+    "providers": [],
+    "provider_models": {},
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inworld/sava",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-19"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inworld/sava",
+      "retrieved_at": "2026-11-19"
+    }
+  ],
+  "verified_at": "2026-11-19",
+  "updated_at": "2026-11-19",
+  "notes": ""
+}

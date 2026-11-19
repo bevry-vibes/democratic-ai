@@ -674,6 +674,13 @@
     ]
   },
   "model_overrides": {
+    "inworld/voice-isolator": [
+      "task:speech-separation",
+      "task:speech-enhancement",
+      "domain:speech",
+      "modality:audio",
+      "access:python"
+    ],
     "inclusionAI/Ling-3.0-tiny-base": [
       "task:text-generation",
       "domain:language",

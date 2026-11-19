@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T12:21:08.525Z",
-  "pull_id": "20261118T122011Z",
+  "updated_at": "2026-11-19T00:07:23.630Z",
+  "pull_id": "20261119T000604Z",
   "sources": {
     "models_dev": {
       "url": "https://models.dev/api.json",
-      "fetched_at": "2026-11-18",
-      "models": 3057,
+      "fetched_at": "2026-11-19",
+      "models": 3067,
       "note": "Only entries with a canonical_model_id are linked."
     },
     "agent_detect": {
       "url": "https://agent-detect.bevry.me/data/index.json",
-      "fetched_at": "2026-11-18",
-      "models": 328,
+      "fetched_at": "2026-11-19",
+      "models": 349,
       "note": "Links use the agent-detect model id."
     }
   },
   "counts": {
-    "models": 183,
-    "with_models_dev": 168,
-    "with_agent_detect": 99,
-    "unmatched": 508
+    "models": 185,
+    "with_models_dev": 169,
+    "with_agent_detect": 104,
+    "unmatched": 503
   },
   "models": {
     "deepseek-ai/DeepSeek-V4-Flash-Vision-Exp": {
@@ -897,9 +897,9 @@
             "id": "deepseek/deepseek-v4.1-flash",
             "name": "DeepSeek V4.1 Flash",
             "cost": {
-              "input": 0.3,
-              "output": 1.2,
-              "cache_read": 0.006
+              "input": 0.0507,
+              "output": 0.2028,
+              "cache_read": 0.001014
             }
           },
           {
@@ -1219,9 +1219,9 @@
             "id": "deepseek/deepseek-v4.1-flash",
             "name": "DeepSeek V4.1 Flash",
             "cost": {
-              "input": 0.051,
-              "output": 0.567,
-              "cache_read": 0.018
+              "input": 0.0507,
+              "output": 0.2028,
+              "cache_read": 0.001014
             }
           }
         ],
@@ -1657,6 +1657,7 @@
         "huawei-maas",
         "huggingface",
         "hyper",
+        "inceptron",
         "infersia",
         "isoquant",
         "iteracompute",
@@ -2264,6 +2265,18 @@
             }
           }
         ],
+        "inceptron": [
+          {
+            "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+            "name": "DeepSeek V4.1 Flash 1017",
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cache_read": 0.006,
+              "cache_write": 0
+            }
+          }
+        ],
         "infersia": [
           {
             "id": "deepseek/deepseek-v4.1-flash-1017",
@@ -2315,7 +2328,7 @@
             "cost": {
               "input": 0.3,
               "output": 1.2,
-              "cache_read": 0.006
+              "cache_read": 0.007
             }
           },
           {
@@ -3660,9 +3673,9 @@
             "id": "deepseek/deepseek-v4-flash-0731",
             "name": "DeepSeek V4 Flash 0731",
             "cost": {
-              "input": 0.44,
-              "output": 1.32,
-              "cache_read": 0.028
+              "input": 0.06,
+              "output": 0.18,
+              "cache_read": 0.015
             }
           }
         ],
@@ -4271,6 +4284,7 @@
     },
     "inclusionAI/gemma-4-26B-A4B-it-singprobe": {
       "models_dev": "https://models.dev/models/google/gemma-4-26b-a4b-it",
+      "agent_detect": "https://agent-detect.bevry.me/model/gemma426ba4b",
       "providers": [
         "adaption",
         "aihubmix",
@@ -4546,9 +4560,9 @@
             "id": "google/gemma-4-26b-a4b-it:thinking",
             "name": "Gemma 4 26B A4B Thinking",
             "cost": {
-              "input": 0.064,
-              "output": 0.191,
-              "cache_read": 0.032
+              "input": 0.07,
+              "output": 0.24,
+              "cache_read": 0.046
             }
           }
         ],
@@ -4701,7 +4715,6 @@
         "inferx",
         "infomaniak",
         "keln",
-        "kenari",
         "kilo",
         "llmgateway",
         "llmgateway-providers",
@@ -4953,17 +4966,6 @@
             }
           }
         ],
-        "kenari": [
-          {
-            "id": "gemma-4-31b-it",
-            "name": "Gemma 4 31B IT",
-            "cost": {
-              "input": 0.10285714,
-              "output": 0.40571429,
-              "cache_read": 0.04114286
-            }
-          }
-        ],
         "kilo": [
           {
             "id": "google/gemma-4-31b-it",
@@ -4972,6 +4974,14 @@
               "input": 0.1,
               "output": 0.34,
               "cache_read": 0.1
+            }
+          },
+          {
+            "id": "google/gemma-4-31b-it:free",
+            "name": "Google: Gemma 4 31B (free)",
+            "cost": {
+              "input": 0,
+              "output": 0
             }
           }
         ],
@@ -5431,7 +5441,6 @@
         "huawei-maas",
         "huggingface",
         "impossibl",
-        "inceptron",
         "iteracompute",
         "jalapeno",
         "keln",
@@ -6074,18 +6083,6 @@
               "input": 1.4,
               "output": 4.4,
               "cache_read": 0.26
-            }
-          }
-        ],
-        "inceptron": [
-          {
-            "id": "zai-org/GLM-5.2",
-            "name": "GLM 5.2",
-            "cost": {
-              "input": 1.4,
-              "output": 4.4,
-              "cache_read": 0.26,
-              "cache_write": 0
             }
           }
         ],
@@ -7482,7 +7479,7 @@
             "id": "zai-org/GLM-5.3-Flash",
             "name": "GLM 5.3 Flash",
             "cost": {
-              "input": 0.175,
+              "input": 0.16,
               "output": 0.49,
               "cache_read": 0.04,
               "cache_write": 0
@@ -8136,8 +8133,8 @@
             "id": "z-ai/glm-5.3-flash",
             "name": "GLM-5.3-Flash",
             "cost": {
-              "input": 0.0399,
-              "output": 0.0784,
+              "input": 0.15,
+              "output": 0.5,
               "cache_read": 0.03
             }
           }
@@ -9463,9 +9460,9 @@
             "id": "zai-org/GLM-5.3",
             "name": "GLM 5.3",
             "cost": {
-              "input": 1,
-              "output": 3.85,
-              "cache_read": 0.1344,
+              "input": 1.05,
+              "output": 4.2,
+              "cache_read": 0.1378,
               "cache_write": 0
             }
           }
@@ -12707,9 +12704,9 @@
             "id": "tencent/hy3",
             "name": "Hy3",
             "cost": {
-              "input": 0.132,
-              "output": 0.528,
-              "cache_read": 0.033
+              "input": 0.0825,
+              "output": 0.33,
+              "cache_read": 0.020625
             }
           }
         ],
@@ -16846,9 +16843,9 @@
             "id": "qwen/qwen3.5-9b",
             "name": "Qwen3.5 9B",
             "cost": {
-              "input": 0.147,
-              "output": 0.216,
-              "cache_read": 0.132
+              "input": 0.17,
+              "output": 0.25,
+              "cache_read": 0.153
             }
           }
         ],
@@ -16897,9 +16894,9 @@
             "id": "qwen/qwen3.5-9b",
             "name": "Qwen3.5 9B",
             "cost": {
-              "input": 0.05,
+              "input": 0.1,
               "output": 0.15,
-              "cache_read": 0.008
+              "cache_read": 0.05
             }
           }
         ],
@@ -22797,9 +22794,9 @@
             "id": "minimax/MiniMax-M3.1-Flash",
             "name": "MiniMax-M3.1-Flash",
             "cost": {
-              "input": 0.15,
-              "output": 0.6,
-              "cache_read": 0.015
+              "input": 0.075,
+              "output": 0.3,
+              "cache_read": 0.0075
             }
           }
         ],
@@ -22873,9 +22870,9 @@
             "id": "minimax/minimax-m3.1-flash",
             "name": "MiniMax: MiniMax M3.1 Flash",
             "cost": {
-              "input": 0.15,
-              "output": 0.6,
-              "cache_read": 0.015
+              "input": 0.075,
+              "output": 0.3,
+              "cache_read": 0.0075
             }
           }
         ],
@@ -23091,9 +23088,9 @@
             "id": "minimax/minimax-m3.1-flash",
             "name": "MiniMax-M3.1-Flash",
             "cost": {
-              "input": 0.16575,
-              "output": 0.663,
-              "cache_read": 0.016575
+              "input": 0.0975,
+              "output": 0.39,
+              "cache_read": 0.00975
             }
           }
         ],
@@ -23144,9 +23141,9 @@
             "id": "minimax/minimax-m3.1-flash",
             "name": "MiniMax-M3.1-Flash",
             "cost": {
-              "input": 0.15,
-              "output": 0.6,
-              "cache_read": 0.015
+              "input": 0.075,
+              "output": 0.3,
+              "cache_read": 0.0075
             }
           }
         ],
@@ -25967,6 +25964,154 @@
         ]
       }
     },
+    "nace-ai/Hy4-flash-GGUF": {
+      "models_dev": "https://models.dev/models/tencent/hy4-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/hy4flash",
+      "providers": [
+        "crossmodel",
+        "huggingface",
+        "kenari",
+        "kilo",
+        "llmgateway",
+        "llmgateway-providers",
+        "novita-ai",
+        "opencode",
+        "opencode-go",
+        "openrouter",
+        "vercel"
+      ],
+      "provider_models": {
+        "crossmodel": [
+          {
+            "id": "tencent/hy4-flash",
+            "name": "Hy4 flash",
+            "cost": {
+              "input": 0.08,
+              "output": 0.32,
+              "cache_read": 0.0032,
+              "cache_write": 0.08
+            }
+          }
+        ],
+        "huggingface": [
+          {
+            "id": "tencent/Hy4-flash",
+            "name": "Hy4 flash",
+            "cost": {
+              "input": 0.035,
+              "output": 0.1405
+            }
+          }
+        ],
+        "kenari": [
+          {
+            "id": "hy4-flash",
+            "name": "Hy4 flash",
+            "cost": {
+              "input": 0.07142857,
+              "output": 0.28571429,
+              "cache_read": 0.00428571
+            }
+          },
+          {
+            "id": "hy4-flash:free",
+            "name": "Hy4 flash (Free)",
+            "cost": {
+              "input": 0,
+              "output": 0
+            }
+          }
+        ],
+        "kilo": [
+          {
+            "id": "tencent/hy4-flash",
+            "name": "Tencent: Hy4 flash",
+            "cost": {
+              "input": 0.07,
+              "output": 0.281,
+              "cache_read": 0.003
+            }
+          }
+        ],
+        "llmgateway": [
+          {
+            "id": "hy4-flash",
+            "name": "Hy4 Flash",
+            "cost": {
+              "input": 0.07,
+              "output": 0.281,
+              "cache_read": 0.003
+            }
+          }
+        ],
+        "llmgateway-providers": [
+          {
+            "id": "tencent/hy4-flash",
+            "name": "Hy4 Flash (Tencent Cloud)",
+            "cost": {
+              "input": 0.07,
+              "output": 0.281,
+              "cache_read": 0.003
+            }
+          }
+        ],
+        "novita-ai": [
+          {
+            "id": "tencent/hy4-flash",
+            "name": "Hy4 flash",
+            "cost": {
+              "input": 0.07,
+              "output": 0.281,
+              "cache_read": 0.003
+            }
+          }
+        ],
+        "opencode": [
+          {
+            "id": "hy4-flash-free",
+            "name": "Hy4 flash Free",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cache_read": 0
+            }
+          }
+        ],
+        "opencode-go": [
+          {
+            "id": "hy4-flash-free",
+            "name": "Hy4 flash Free",
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cache_read": 0
+            }
+          }
+        ],
+        "openrouter": [
+          {
+            "id": "tencent/hy4-flash",
+            "name": "Hy4 flash",
+            "cost": {
+              "input": 0.035,
+              "output": 0.1405,
+              "cache_read": 0.0015
+            }
+          }
+        ],
+        "vercel": [
+          {
+            "id": "tencent/hy4-flash",
+            "name": "Tencent Hy4 Flash",
+            "cost": {
+              "input": 0.035,
+              "output": 0.1405,
+              "cache_read": 0.0015
+            }
+          }
+        ]
+      }
+    },
     "nace-ai/Qwen3.5-4B-MLX": {
       "models_dev": "https://models.dev/models/alibaba/qwen3.5-4b",
       "providers": [
@@ -26141,9 +26286,9 @@
             "id": "qwen/qwen3.5-9b",
             "name": "Qwen3.5 9B",
             "cost": {
-              "input": 0.147,
-              "output": 0.216,
-              "cache_read": 0.132
+              "input": 0.17,
+              "output": 0.25,
+              "cache_read": 0.153
             }
           }
         ],
@@ -26192,9 +26337,9 @@
             "id": "qwen/qwen3.5-9b",
             "name": "Qwen3.5 9B",
             "cost": {
-              "input": 0.05,
+              "input": 0.1,
               "output": 0.15,
-              "cache_read": 0.008
+              "cache_read": 0.05
             }
           }
         ],
@@ -26415,9 +26560,9 @@
             "id": "qwen/qwen3.5-9b",
             "name": "Qwen3.5 9B",
             "cost": {
-              "input": 0.147,
-              "output": 0.216,
-              "cache_read": 0.132
+              "input": 0.17,
+              "output": 0.25,
+              "cache_read": 0.153
             }
           }
         ],
@@ -26466,9 +26611,9 @@
             "id": "qwen/qwen3.5-9b",
             "name": "Qwen3.5 9B",
             "cost": {
-              "input": 0.05,
+              "input": 0.1,
               "output": 0.15,
-              "cache_read": 0.008
+              "cache_read": 0.05
             }
           }
         ],
@@ -26689,9 +26834,9 @@
             "id": "qwen/qwen3.5-9b",
             "name": "Qwen3.5 9B",
             "cost": {
-              "input": 0.147,
-              "output": 0.216,
-              "cache_read": 0.132
+              "input": 0.17,
+              "output": 0.25,
+              "cache_read": 0.153
             }
           }
         ],
@@ -26740,9 +26885,9 @@
             "id": "qwen/qwen3.5-9b",
             "name": "Qwen3.5 9B",
             "cost": {
-              "input": 0.05,
+              "input": 0.1,
               "output": 0.15,
-              "cache_read": 0.008
+              "cache_read": 0.05
             }
           }
         ],
@@ -32958,6 +33103,9 @@
           }
         ]
       }
+    },
+    "nex-agi/Nex-N2.6": {
+      "agent_detect": "https://agent-detect.bevry.me/model/nexn26"
     },
     "ornith-ai/Ornith-1.5-122B": {
       "models_dev": "https://models.dev/models/deepreinforce/ornith-1.5-122b",
@@ -39361,8 +39509,10 @@
     },
     "tencent/Hy4-flash": {
       "models_dev": "https://models.dev/models/tencent/hy4-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/hy4flash",
       "providers": [
         "crossmodel",
+        "huggingface",
         "kenari",
         "kilo",
         "llmgateway",
@@ -39383,6 +39533,16 @@
               "output": 0.32,
               "cache_read": 0.0032,
               "cache_write": 0.08
+            }
+          }
+        ],
+        "huggingface": [
+          {
+            "id": "tencent/Hy4-flash",
+            "name": "Hy4 flash",
+            "cost": {
+              "input": 0.035,
+              "output": 0.1405
             }
           }
         ],
@@ -39497,8 +39657,10 @@
     },
     "tencent/Hy4-flash-FP8": {
       "models_dev": "https://models.dev/models/tencent/hy4-flash",
+      "agent_detect": "https://agent-detect.bevry.me/model/hy4flash",
       "providers": [
         "crossmodel",
+        "huggingface",
         "kenari",
         "kilo",
         "llmgateway",
@@ -39519,6 +39681,16 @@
               "output": 0.32,
               "cache_read": 0.0032,
               "cache_write": 0.08
+            }
+          }
+        ],
+        "huggingface": [
+          {
+            "id": "tencent/Hy4-flash",
+            "name": "Hy4 flash",
+            "cost": {
+              "input": 0.035,
+              "output": 0.1405
             }
           }
         ],
@@ -39831,9 +40003,9 @@
             "id": "tencent/hy4-preview",
             "name": "Hy4 preview",
             "cost": {
-              "input": 0.834,
-              "output": 2.501,
-              "cache_read": 0.042
+              "input": 0.7506,
+              "output": 2.2509,
+              "cache_read": 0.0378
             }
           }
         ],
@@ -40104,9 +40276,9 @@
             "id": "tencent/hy4-preview",
             "name": "Hy4 preview",
             "cost": {
-              "input": 0.834,
-              "output": 2.501,
-              "cache_read": 0.042
+              "input": 0.7506,
+              "output": 2.2509,
+              "cache_read": 0.0378
             }
           }
         ],
@@ -40274,6 +40446,14 @@
               "input": 0.15,
               "output": 0.5,
               "cache_read": 0.03
+            }
+          },
+          {
+            "id": "thinkingmachines/inkling-2-small:free",
+            "name": "Thinking Machines: Inkling 2 Small (free)",
+            "cost": {
+              "input": 0,
+              "output": 0
             }
           }
         ],
@@ -40474,6 +40654,14 @@
               "input": 0.15,
               "output": 0.5,
               "cache_read": 0.03
+            }
+          },
+          {
+            "id": "thinkingmachines/inkling-2-small:free",
+            "name": "Thinking Machines: Inkling 2 Small (free)",
+            "cost": {
+              "input": 0,
+              "output": 0
             }
           }
         ],
@@ -41234,6 +41422,7 @@
         "huawei-maas",
         "huggingface",
         "hyper",
+        "inceptron",
         "infersia",
         "isoquant",
         "iteracompute",
@@ -41841,6 +42030,18 @@
             }
           }
         ],
+        "inceptron": [
+          {
+            "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+            "name": "DeepSeek V4.1 Flash 1017",
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cache_read": 0.006,
+              "cache_write": 0
+            }
+          }
+        ],
         "infersia": [
           {
             "id": "deepseek/deepseek-v4.1-flash-1017",
@@ -41892,7 +42093,7 @@
             "cost": {
               "input": 0.3,
               "output": 1.2,
-              "cache_read": 0.006
+              "cache_read": 0.007
             }
           },
           {
@@ -42828,6 +43029,7 @@
         "huawei-maas",
         "huggingface",
         "hyper",
+        "inceptron",
         "infersia",
         "isoquant",
         "iteracompute",
@@ -43435,6 +43637,18 @@
             }
           }
         ],
+        "inceptron": [
+          {
+            "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+            "name": "DeepSeek V4.1 Flash 1017",
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cache_read": 0.006,
+              "cache_write": 0
+            }
+          }
+        ],
         "infersia": [
           {
             "id": "deepseek/deepseek-v4.1-flash-1017",
@@ -43486,7 +43700,7 @@
             "cost": {
               "input": 0.3,
               "output": 1.2,
-              "cache_read": 0.006
+              "cache_read": 0.007
             }
           },
           {
@@ -45231,9 +45445,9 @@
             "id": "zai-org/GLM-5.3",
             "name": "GLM 5.3",
             "cost": {
-              "input": 1,
-              "output": 3.85,
-              "cache_read": 0.1344,
+              "input": 1.05,
+              "output": 4.2,
+              "cache_read": 0.1378,
               "cache_write": 0
             }
           }
@@ -47066,7 +47280,7 @@
             "id": "zai-org/GLM-5.3-Flash",
             "name": "GLM 5.3 Flash",
             "cost": {
-              "input": 0.175,
+              "input": 0.16,
               "output": 0.49,
               "cache_read": 0.04,
               "cache_write": 0
@@ -47720,8 +47934,8 @@
             "id": "z-ai/glm-5.3-flash",
             "name": "GLM-5.3-Flash",
             "cost": {
-              "input": 0.0399,
-              "output": 0.0784,
+              "input": 0.15,
+              "output": 0.5,
               "cache_read": 0.03
             }
           }
@@ -48956,7 +49170,7 @@
             "id": "zai-org/GLM-5.3-Flash",
             "name": "GLM 5.3 Flash",
             "cost": {
-              "input": 0.175,
+              "input": 0.16,
               "output": 0.49,
               "cache_read": 0.04,
               "cache_write": 0
@@ -49610,8 +49824,8 @@
             "id": "z-ai/glm-5.3-flash",
             "name": "GLM-5.3-Flash",
             "cost": {
-              "input": 0.0399,
-              "output": 0.0784,
+              "input": 0.15,
+              "output": 0.5,
               "cache_read": 0.03
             }
           }
@@ -50846,7 +51060,7 @@
             "id": "zai-org/GLM-5.3-Flash",
             "name": "GLM 5.3 Flash",
             "cost": {
-              "input": 0.175,
+              "input": 0.16,
               "output": 0.49,
               "cache_read": 0.04,
               "cache_write": 0
@@ -51500,8 +51714,8 @@
             "id": "z-ai/glm-5.3-flash",
             "name": "GLM-5.3-Flash",
             "cost": {
-              "input": 0.0399,
-              "output": 0.0784,
+              "input": 0.15,
+              "output": 0.5,
               "cache_read": 0.03
             }
           }
@@ -52827,9 +53041,9 @@
             "id": "zai-org/GLM-5.3",
             "name": "GLM 5.3",
             "cost": {
-              "input": 1,
-              "output": 3.85,
-              "cache_read": 0.1344,
+              "input": 1.05,
+              "output": 4.2,
+              "cache_read": 0.1378,
               "cache_write": 0
             }
           }
@@ -57719,6 +57933,14 @@
               "output": 0.5,
               "cache_read": 0.03
             }
+          },
+          {
+            "id": "thinkingmachines/inkling-2-small:free",
+            "name": "Thinking Machines: Inkling 2 Small (free)",
+            "cost": {
+              "input": 0,
+              "output": 0
+            }
           }
         ],
         "nano-gpt": [
@@ -59908,9 +60130,9 @@
             "id": "minimax/MiniMax-M3.1-Flash",
             "name": "MiniMax-M3.1-Flash",
             "cost": {
-              "input": 0.15,
-              "output": 0.6,
-              "cache_read": 0.015
+              "input": 0.075,
+              "output": 0.3,
+              "cache_read": 0.0075
             }
           }
         ],
@@ -59984,9 +60206,9 @@
             "id": "minimax/minimax-m3.1-flash",
             "name": "MiniMax: MiniMax M3.1 Flash",
             "cost": {
-              "input": 0.15,
-              "output": 0.6,
-              "cache_read": 0.015
+              "input": 0.075,
+              "output": 0.3,
+              "cache_read": 0.0075
             }
           }
         ],
@@ -60202,9 +60424,9 @@
             "id": "minimax/minimax-m3.1-flash",
             "name": "MiniMax-M3.1-Flash",
             "cost": {
-              "input": 0.16575,
-              "output": 0.663,
-              "cache_read": 0.016575
+              "input": 0.0975,
+              "output": 0.39,
+              "cache_read": 0.00975
             }
           }
         ],
@@ -60255,9 +60477,9 @@
             "id": "minimax/minimax-m3.1-flash",
             "name": "MiniMax-M3.1-Flash",
             "cost": {
-              "input": 0.15,
-              "output": 0.6,
-              "cache_read": 0.015
+              "input": 0.075,
+              "output": 0.3,
+              "cache_read": 0.0075
             }
           }
         ],
@@ -60478,9 +60700,9 @@
             "id": "minimax/MiniMax-M3.1-Flash",
             "name": "MiniMax-M3.1-Flash",
             "cost": {
-              "input": 0.15,
-              "output": 0.6,
-              "cache_read": 0.015
+              "input": 0.075,
+              "output": 0.3,
+              "cache_read": 0.0075
             }
           }
         ],
@@ -60554,9 +60776,9 @@
             "id": "minimax/minimax-m3.1-flash",
             "name": "MiniMax: MiniMax M3.1 Flash",
             "cost": {
-              "input": 0.15,
-              "output": 0.6,
-              "cache_read": 0.015
+              "input": 0.075,
+              "output": 0.3,
+              "cache_read": 0.0075
             }
           }
         ],
@@ -60772,9 +60994,9 @@
             "id": "minimax/minimax-m3.1-flash",
             "name": "MiniMax-M3.1-Flash",
             "cost": {
-              "input": 0.16575,
-              "output": 0.663,
-              "cache_read": 0.016575
+              "input": 0.0975,
+              "output": 0.39,
+              "cache_read": 0.00975
             }
           }
         ],
@@ -60825,9 +61047,9 @@
             "id": "minimax/minimax-m3.1-flash",
             "name": "MiniMax-M3.1-Flash",
             "cost": {
-              "input": 0.15,
-              "output": 0.6,
-              "cache_read": 0.015
+              "input": 0.075,
+              "output": 0.3,
+              "cache_read": 0.0075
             }
           }
         ],
@@ -65963,9 +66185,9 @@
             "id": "xiaomi/mimo-v2.5-pro",
             "name": "MiMo-V2.5-Pro",
             "cost": {
-              "input": 0.435,
-              "output": 0.87,
-              "cache_read": 0.0036,
+              "input": 0.48,
+              "output": 1.8,
+              "cache_read": 0.096,
               "tiers": [
                 {
                   "input": 2,
@@ -66000,9 +66222,9 @@
             "id": "xiaomi/mimo-v2.5-pro",
             "name": "MiMo V2.5 Pro",
             "cost": {
-              "input": 0.435,
-              "output": 0.87,
-              "cache_read": 0.0036,
+              "input": 0.48,
+              "output": 1.8,
+              "cache_read": 0.096,
               "cache_write": 0
             }
           },
@@ -66010,9 +66232,9 @@
             "id": "xiaomi/mimo-v2.5-pro:thinking",
             "name": "MiMo V2.5 Pro Thinking",
             "cost": {
-              "input": 0.435,
-              "output": 0.87,
-              "cache_read": 0.0036,
+              "input": 0.48,
+              "output": 1.8,
+              "cache_read": 0.096,
               "cache_write": 0
             }
           }
@@ -66044,9 +66266,9 @@
             "id": "xiaomi/mimo-v2.5-pro",
             "name": "MiMo-V2.5-Pro",
             "cost": {
-              "input": 0.435,
-              "output": 0.87,
-              "cache_read": 0.0036
+              "input": 0.48,
+              "output": 1.8,
+              "cache_read": 0.096
             }
           }
         ],
@@ -66295,9 +66517,9 @@
             "id": "xiaomi/mimo-v2.5-pro",
             "name": "MiMo-V2.5-Pro",
             "cost": {
-              "input": 0.435,
-              "output": 0.87,
-              "cache_read": 0.0036,
+              "input": 0.48,
+              "output": 1.8,
+              "cache_read": 0.096,
               "tiers": [
                 {
                   "input": 2,
@@ -66332,9 +66554,9 @@
             "id": "xiaomi/mimo-v2.5-pro",
             "name": "MiMo V2.5 Pro",
             "cost": {
-              "input": 0.435,
-              "output": 0.87,
-              "cache_read": 0.0036,
+              "input": 0.48,
+              "output": 1.8,
+              "cache_read": 0.096,
               "cache_write": 0
             }
           },
@@ -66342,9 +66564,9 @@
             "id": "xiaomi/mimo-v2.5-pro:thinking",
             "name": "MiMo V2.5 Pro Thinking",
             "cost": {
-              "input": 0.435,
-              "output": 0.87,
-              "cache_read": 0.0036,
+              "input": 0.48,
+              "output": 1.8,
+              "cache_read": 0.096,
               "cache_write": 0
             }
           }
@@ -66376,9 +66598,9 @@
             "id": "xiaomi/mimo-v2.5-pro",
             "name": "MiMo-V2.5-Pro",
             "cost": {
-              "input": 0.435,
-              "output": 0.87,
-              "cache_read": 0.0036
+              "input": 0.48,
+              "output": 1.8,
+              "cache_read": 0.096
             }
           }
         ],
@@ -67324,7 +67546,6 @@
         "huawei-maas",
         "huggingface",
         "impossibl",
-        "inceptron",
         "iteracompute",
         "jalapeno",
         "keln",
@@ -67967,18 +68188,6 @@
               "input": 1.4,
               "output": 4.4,
               "cache_read": 0.26
-            }
-          }
-        ],
-        "inceptron": [
-          {
-            "id": "zai-org/GLM-5.2",
-            "name": "GLM 5.2",
-            "cost": {
-              "input": 1.4,
-              "output": 4.4,
-              "cache_read": 0.26,
-              "cache_write": 0
             }
           }
         ],
@@ -68824,7 +69033,6 @@
         "huawei-maas",
         "huggingface",
         "impossibl",
-        "inceptron",
         "iteracompute",
         "jalapeno",
         "keln",
@@ -69467,18 +69675,6 @@
               "input": 1.4,
               "output": 4.4,
               "cache_read": 0.26
-            }
-          }
-        ],
-        "inceptron": [
-          {
-            "id": "zai-org/GLM-5.2",
-            "name": "GLM 5.2",
-            "cost": {
-              "input": 1.4,
-              "output": 4.4,
-              "cache_read": 0.26,
-              "cache_write": 0
             }
           }
         ],
@@ -70966,9 +71162,9 @@
             "id": "zai-org/GLM-5.3",
             "name": "GLM 5.3",
             "cost": {
-              "input": 1,
-              "output": 3.85,
-              "cache_read": 0.1344,
+              "input": 1.05,
+              "output": 4.2,
+              "cache_read": 0.1378,
               "cache_write": 0
             }
           }
@@ -72892,9 +73088,9 @@
             "id": "zai-org/GLM-5.3",
             "name": "GLM 5.3",
             "cost": {
-              "input": 1,
-              "output": 3.85,
-              "cache_read": 0.1344,
+              "input": 1.05,
+              "output": 4.2,
+              "cache_read": 0.1378,
               "cache_write": 0
             }
           }
@@ -74727,7 +74923,7 @@
             "id": "zai-org/GLM-5.3-Flash",
             "name": "GLM 5.3 Flash",
             "cost": {
-              "input": 0.175,
+              "input": 0.16,
               "output": 0.49,
               "cache_read": 0.04,
               "cache_write": 0
@@ -75381,8 +75577,8 @@
             "id": "z-ai/glm-5.3-flash",
             "name": "GLM-5.3-Flash",
             "cost": {
-              "input": 0.0399,
-              "output": 0.0784,
+              "input": 0.15,
+              "output": 0.5,
               "cache_read": 0.03
             }
           }
@@ -76617,7 +76813,7 @@
             "id": "zai-org/GLM-5.3-Flash",
             "name": "GLM 5.3 Flash",
             "cost": {
-              "input": 0.175,
+              "input": 0.16,
               "output": 0.49,
               "cache_read": 0.04,
               "cache_write": 0
@@ -77271,8 +77467,8 @@
             "id": "z-ai/glm-5.3-flash",
             "name": "GLM-5.3-Flash",
             "cost": {
-              "input": 0.0399,
-              "output": 0.0784,
+              "input": 0.15,
+              "output": 0.5,
               "cache_read": 0.03
             }
           }

@@ -1,10 +1,10 @@
 {
   "aliases_folded": 3,
-  "pull_id": "20261118T122011Z",
-  "generated_at": "2026-11-18T12:21:57.907Z",
-  "roots": 261,
-  "builds_attached": 211,
-  "builds_unmatched": 184,
+  "pull_id": "20261119T000604Z",
+  "generated_at": "2026-11-19T00:10:19.580Z",
+  "roots": 256,
+  "builds_attached": 210,
+  "builds_unmatched": 187,
   "builds_unmatched_samples": [
     "ConwayResearch/woof-textfiller-4B-4bit-v2.1",
     "ConwayResearch/woof-textfiller-0.8B-4bit-v2.1",
@@ -38,7 +38,7 @@
     "FluidInference/jev-9b-coreml"
   ],
   "skipped": {
-    "builds": 395,
+    "builds": 397,
     "probes": 31,
     "documentation": 1
   },

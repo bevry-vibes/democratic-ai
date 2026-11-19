@@ -9,7 +9,7 @@
   "releases": [],
   "organization": "ant-ling",
   "released": "2026-09-03",
-  "summary": "Ling 3.0 Flash Fin is InclusionAI’s finance-enhanced MoE language model, combining 124 billion total parameters with approximately 5.1 billion active parameters for efficient financial reasoning. Its 256K context window, function calling, and support for complex, multi-step investment workflows make it ideal for financial research, analysis, long-horizon planning, and execution, while retaining st",
+  "summary": "Finance-enhanced model for financial research, multi-step investment workflows, and long-horizon planning and execution",
   "tags": [
     "task:reasoning",
     "task:text-generation",
@@ -138,194 +138,17 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-18"
+    "checked_at": "2026-11-19"
   },
   "builds": [],
   "sources": [
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/inclusionAI/Ling-3.0-flash-Fin",
-      "retrieved_at": "2026-11-18"
+      "retrieved_at": "2026-11-19"
     }
   ],
-  "verified_at": "2026-11-18",
-  "updated_at": "2026-11-18",
-  "notes": "",
-  "scorecard": {
-    "overall": {
-      "score": 62.6,
-      "coverage": 3,
-      "weights": {
-        "syndication": 15,
-        "performance": 40,
-        "openness": 30,
-        "research": 15
-      },
-      "components": [
-        {
-          "key": "syndication",
-          "label": "Syndication",
-          "score": 60,
-          "weight": 15,
-          "included": true,
-          "effective_weight": 17.6,
-          "contribution": 10.6
-        },
-        {
-          "key": "performance",
-          "label": "Performance/Intelligence",
-          "score": 65.5,
-          "weight": 40,
-          "included": true,
-          "effective_weight": 47.1,
-          "contribution": 30.8
-        },
-        {
-          "key": "openness",
-          "label": "Openness/Morality",
-          "score": 60,
-          "weight": 30,
-          "included": true,
-          "effective_weight": 35.3,
-          "contribution": 21.2
-        },
-        {
-          "key": "research",
-          "label": "Citation/Research",
-          "score": null,
-          "weight": 15,
-          "included": false,
-          "effective_weight": 0,
-          "contribution": null
-        }
-      ],
-      "note": "Weighted mean of the available scorecard axes. Missing axes are excluded, not treated as zero. Coverage is shown so a sparse score is not mistaken for a complete one."
-    },
-    "openness_morality": {
-      "score": 60,
-      "tier": "shared",
-      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed.",
-      "components": [
-        {
-          "label": "Weights",
-          "value": "open-weight",
-          "points": 50,
-          "max": 50
-        },
-        {
-          "label": "Training data",
-          "value": "unknown",
-          "points": 0,
-          "max": 25
-        },
-        {
-          "label": "Training code",
-          "value": "unknown",
-          "points": 0,
-          "max": 15
-        },
-        {
-          "label": "Licence",
-          "value": "mit",
-          "points": 10,
-          "max": 10
-        }
-      ]
-    },
-    "performance": {
-      "score": 65.5,
-      "basis": "primary",
-      "match": "base",
-      "inherited_from": "ling-3.0-flash",
-      "benchmarks": [
-        {
-          "id": "swe-bench-pro",
-          "name": "SWE-Bench Pro",
-          "group": "swe_pro",
-          "score": 56.6,
-          "self_reported": true
-        },
-        {
-          "id": "terminal-bench-2.1",
-          "name": "Terminal-Bench 2.1",
-          "group": "terminal",
-          "score": 57,
-          "self_reported": true
-        },
-        {
-          "id": "livecodebench-v6",
-          "name": "LiveCodeBench v6",
-          "group": "livecodebench",
-          "score": 82.8,
-          "self_reported": true
-        }
-      ],
-      "own_benchmarks": [
-        {
-          "id": "apex-agents",
-          "name": "APEX-Agents",
-          "group": "own",
-          "score": 29.2,
-          "self_reported": true
-        },
-        {
-          "id": "finance-agent-v1.1",
-          "name": "Finance Agent v1.1",
-          "group": "own",
-          "score": 69.2,
-          "self_reported": true
-        },
-        {
-          "id": "finance-agent-v2",
-          "name": "Finance Agent v2",
-          "group": "own",
-          "score": 59.8,
-          "self_reported": true
-        },
-        {
-          "id": "spreadsheetbench-2",
-          "name": "SpreadsheetBench 2",
-          "group": "own",
-          "score": 21.8,
-          "self_reported": true
-        },
-        {
-          "id": "spreadsheetbench-v1",
-          "name": "SpreadSheetBench-v1",
-          "group": "own",
-          "score": 86.5,
-          "self_reported": true
-        },
-        {
-          "id": "tau3-banking",
-          "name": "Tau3 Banking",
-          "group": "own",
-          "score": 41,
-          "self_reported": true
-        }
-      ],
-      "metric": null,
-      "source": "https://llm-stats.com/models/ling-3.0-flash-fin",
-      "as_of": "2026-11-14T05:30:40.128Z",
-      "note": "The update has no comparable benchmark of its own, so this uses the base model's primary result."
-    },
-    "research_citation": {
-      "score": null,
-      "basis": null,
-      "benchmarks": [],
-      "source": null,
-      "as_of": null,
-      "note": "Not measured. No current research benchmark is recorded.",
-      "citation": "not measured"
-    },
-    "syndication": {
-      "score": 6,
-      "max": 10,
-      "band": "moderate",
-      "note": "Independent listings, not quality. The model's own host has weight 0."
-    },
-    "as_of": "2026-11-18",
-    "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
-    "source": "internal://democratic-ai/scorecard-v2"
-  }
+  "verified_at": "2026-11-19",
+  "updated_at": "2026-11-19",
+  "notes": ""
 }

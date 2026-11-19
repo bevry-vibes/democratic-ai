@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "id": "voice-isolator",
+  "kind": "model",
+  "name": "voice-isolator",
+  "aliases": [
+    "inworld/voice-isolator"
+  ],
+  "releases": [],
+  "organization": "inworld",
+  "released": "2026-11-14",
+  "summary": "Apache-2.0 48 kHz voice isolation for noisy recordings and live audio: the cleaned voice and the removed background come out as two aligned tracks.",
+  "tags": [
+    "task:speech-enhancement",
+    "task:speech-separation",
+    "domain:speech",
+    "modality:audio",
+    "access:python",
+    "licensing:commercial-safe",
+    "license:apache-2.0"
+  ],
+  "capabilities": {
+    "tasks": [
+      "speech-enhancement",
+      "speech-separation"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": [
+      "python"
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
+  },
+  "footprint": {
+    "params_b": null,
+    "weights_gb": 0,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/inworld/voice-isolator"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/inworld/voice-isolator"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "inworld/voice-isolator",
+    "models_dev": null,
+    "agent_detect": null,
+    "providers": [],
+    "provider_models": {},
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/inworld/voice-isolator",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-19"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/inworld/voice-isolator",
+      "retrieved_at": "2026-11-19"
+    }
+  ],
+  "verified_at": "2026-11-19",
+  "updated_at": "2026-11-19",
+  "notes": ""
+}

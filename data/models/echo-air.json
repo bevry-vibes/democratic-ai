@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "echo-air",
+  "kind": "model",
+  "name": "Echo-Air",
+  "aliases": [
+    "webAI-Official/Echo-Air"
+  ],
+  "releases": [],
+  "organization": "webai",
+  "released": "2026-11-09",
+  "summary": "Echo-Air A 4-bit build of Gradium's phonon-31m-en English text-to-speech model.",
+  "tags": [
+    "task:speech-synthesis",
+    "domain:speech",
+    "modality:audio",
+    "access:llama.cpp",
+    "license:other"
+  ],
+  "capabilities": {
+    "tasks": [
+      "speech-synthesis"
+    ],
+    "languages": [],
+    "modality": [
+      "audio"
+    ],
+    "runtimes": [
+      "llama.cpp"
+    ],
+    "tool_calling": null,
+    "reasoning": null,
+    "structured_output": null,
+    "context_tokens": null
+  },
+  "footprint": {
+    "params_b": null,
+    "weights_gb": 0,
+    "runtimes": [
+      "llama.cpp"
+    ]
+  },
+  "license": {
+    "id": "other",
+    "class": "use-restricted",
+    "url": "https://huggingface.co/webAI-Official/Echo-Air"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/webAI-Official/Echo-Air"
+    ]
+  },
+  "lineage": [
+    {
+      "base": "gradium/phonon-31m-en",
+      "relation": "derivative",
+      "license_inherited": null
+    }
+  ],
+  "access": {
+    "hugging_face": "webAI-Official/Echo-Air",
+    "models_dev": null,
+    "agent_detect": null,
+    "providers": [],
+    "provider_models": {},
+    "gated": null
+  },
+  "syndication": {
+    "score": 0,
+    "points": 0,
+    "band": "self-only",
+    "sources": [
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/webAI-Official/Echo-Air",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-19"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/webAI-Official/Echo-Air",
+      "retrieved_at": "2026-11-19"
+    }
+  ],
+  "verified_at": "2026-11-19",
+  "updated_at": "2026-11-19",
+  "notes": ""
+}
