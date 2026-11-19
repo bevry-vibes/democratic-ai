@@ -870,8 +870,15 @@ tr:last-child td {
   border-color: var(--clay);
 }
 
-.journal-entry:target {
+.journal-entry:target,
+.journal-entry.journal-flash {
   animation: journal-target 2.4s ease-out;
+}
+
+.journal-day-anchor {
+  display: block;
+  height: 0;
+  scroll-margin-top: 1.5rem;
 }
 
 @keyframes journal-target {

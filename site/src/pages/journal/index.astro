@@ -43,10 +43,15 @@ const formatDate = (value: string) =>
 
   <section class="wrap journal-layout">
     <div class="journal-list">
-      {entries.map((entry) => (
-        <article class="journal-entry" id={entry.id}>
+      {entries.map((entry, index) => (
+        <article class="journal-entry" id={entry.id} data-date={entry.date}>
+          {/* one date anchor per day: #<yyyy-mm-dd> highlights every entry of
+              that date, and the first entry carries the anchor itself */}
+          {index === 0 || entries[index - 1]?.date !== entry.date ? (
+            <span id={entry.date} class="journal-day-anchor" aria-hidden="true" />
+          ) : null}
           <header class="journal-meta">
-            <a class="journal-date" href={`#${entry.id}`}>
+            <a class="journal-date" href={`#${entry.date}`}>
               <time datetime={entry.date}>{formatDate(entry.date)}</time>
             </a>
             <span class={`badge ${badges[entry.kind]}`}>{labels[entry.kind]}</span>
@@ -94,4 +99,34 @@ const formatDate = (value: string) =>
       </div>
     </aside>
   </section>
+
+  <script is:inline>
+    // #<yyyy-mm-dd> is the day permalink: flash every entry of that date, since
+    // one :target can only cover the anchor span. Entry anchors keep the CSS
+    // :target flash. Re-applied on a repeat click, where no hashchange fires.
+    (() => {
+      const DAY = /^\d{4}-\d{2}-\d{2}$/;
+      const FLASH = "journal-flash";
+      let timer;
+      const apply = () => {
+        const id = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+        for (const el of document.querySelectorAll("." + FLASH)) el.classList.remove(FLASH);
+        if (!DAY.test(id)) return;
+        const entries = [...document.querySelectorAll(`.journal-entry[data-date="${id}"]`)];
+        if (entries.length === 0) return;
+        for (const el of entries) el.classList.add(FLASH);
+        entries[0].scrollIntoView({ block: "start" });
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          for (const el of document.querySelectorAll("." + FLASH)) el.classList.remove(FLASH);
+        }, 2400);
+      };
+      window.addEventListener("hashchange", apply);
+      document.addEventListener("click", (event) => {
+        const anchor = event.target.closest && event.target.closest('a[href^="#"]');
+        if (anchor) setTimeout(apply, 0);
+      });
+      apply();
+    })();
+  </script>
 </Base>
