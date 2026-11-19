@@ -838,6 +838,52 @@ tr:last-child td {
   color: var(--ink-faint);
 }
 
+.journal-date,
+.journal-permalink {
+  color: var(--ink-faint);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.journal-date:hover,
+.journal-permalink:hover,
+.journal-date:focus-visible,
+.journal-permalink:focus-visible {
+  color: var(--ink);
+  border-color: var(--clay);
+}
+
+.journal-permalink {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.journal-entry h2 a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.journal-entry h2 a:hover,
+.journal-entry h2 a:focus-visible {
+  border-color: var(--clay);
+}
+
+.journal-entry:target {
+  animation: journal-target 2.4s ease-out;
+}
+
+@keyframes journal-target {
+  0% {
+    background: var(--clay-tint);
+  }
+
+  100% {
+    background: transparent;
+  }
+}
+
 .journal-entry h2 {
   font-size: clamp(1.5rem, 2.6vw, 2rem);
   margin-bottom: 0.7rem;

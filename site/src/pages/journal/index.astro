@@ -46,10 +46,17 @@ const formatDate = (value: string) =>
       {entries.map((entry) => (
         <article class="journal-entry" id={entry.id}>
           <header class="journal-meta">
-            <time datetime={entry.date}>{formatDate(entry.date)}</time>
+            <a class="journal-date" href={`#${entry.id}`}>
+              <time datetime={entry.date}>{formatDate(entry.date)}</time>
+            </a>
             <span class={`badge ${badges[entry.kind]}`}>{labels[entry.kind]}</span>
+            <a class="journal-permalink" href={`#${entry.id}`} title={`permalink to ${entry.title}`} aria-label={`permalink to ${entry.title}`}>
+              #
+            </a>
           </header>
-          <h2>{entry.title}</h2>
+          <h2>
+            <a href={`#${entry.id}`}>{entry.title}</a>
+          </h2>
           <div class="journal-body" set:html={marked.parse(entry.body) as string} />
         </article>
       ))}
