@@ -23,7 +23,8 @@
     "access:opencode",
     "access:openrouter",
     "access:python",
-    "license:other"
+    "license:other",
+    "family:kimi"
   ],
   "capabilities": {
     "tasks": [
@@ -97,6 +98,7 @@
       "cline-pass",
       "cloudflare-ai-gateway",
       "commandcode",
+      "concentrate",
       "cortecs",
       "crossmodel",
       "deepinfra",
@@ -119,7 +121,6 @@
       "iteracompute",
       "jalapeno",
       "jzstoken",
-      "keln",
       "kenari",
       "kilo",
       "kimi-code-plan-cn",
@@ -432,6 +433,18 @@
           }
         }
       ],
+      "concentrate": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "cost": {
+            "input": 3,
+            "output": 15,
+            "cache_read": 0.3,
+            "cache_write": 3
+          }
+        }
+      ],
       "cortecs": [
         {
           "id": "kimi-k3",
@@ -714,17 +727,6 @@
           }
         }
       ],
-      "keln": [
-        {
-          "id": "moonshotai/kimi-k3",
-          "name": "Kimi K3",
-          "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.38
-          }
-        }
-      ],
       "kenari": [
         {
           "id": "kimi-k3",
@@ -830,9 +832,9 @@
           "id": "kimi-k3",
           "name": "Kimi K3",
           "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
+            "input": 2.7,
+            "output": 13.5,
+            "cache_read": 0.27
           }
         },
         {
@@ -878,9 +880,9 @@
           "id": "canopywave/kimi-k3",
           "name": "Kimi K3 (CanopyWave)",
           "cost": {
-            "input": 3,
-            "output": 15,
-            "cache_read": 0.3
+            "input": 2.7,
+            "output": 13.5,
+            "cache_read": 0.27
           }
         },
         {
@@ -1614,18 +1616,18 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-23"
   },
   "builds": [],
   "sources": [
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/moonshotai/Kimi-K3",
-      "retrieved_at": "2026-11-19"
+      "retrieved_at": "2026-11-23"
     }
   ],
-  "verified_at": "2026-11-19",
-  "updated_at": "2026-11-19",
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
   "notes": "",
   "scorecard": {
     "overall": {
@@ -1758,7 +1760,7 @@
       "band": "strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-19",
+    "as_of": "2026-11-23",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

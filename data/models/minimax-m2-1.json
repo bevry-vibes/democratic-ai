@@ -9,17 +9,17 @@
   "releases": [],
   "organization": "minimax",
   "released": "2025-12-20",
-  "summary": "Legacy model retained for compatibility with older integrations",
+  "summary": "MiniMax model for chat, coding, office work, and agentic tasks",
   "tags": [
     "task:reasoning",
     "task:text-generation",
     "task:tool-calling",
     "domain:language",
+    "modality:pdf",
     "modality:text",
     "access:opencode",
     "access:python",
-    "license:other",
-    "family:minimax"
+    "license:other"
   ],
   "capabilities": {
     "tasks": [
@@ -29,6 +29,7 @@
     ],
     "languages": [],
     "modality": [
+      "pdf",
       "text"
     ],
     "runtimes": [
@@ -70,6 +71,7 @@
     "providers": [
       "302ai",
       "amazon-bedrock",
+      "concentrate",
       "cortecs",
       "edenai",
       "huggingface",
@@ -106,6 +108,28 @@
           "cost": {
             "input": 0.3,
             "output": 1.2
+          }
+        }
+      ],
+      "concentrate": [
+        {
+          "id": "minimax-m2-1",
+          "name": "MiniMax-M2.1",
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cache_read": 0.03,
+            "cache_write": 0.375
+          }
+        },
+        {
+          "id": "minimax-m2-1-highspeed",
+          "name": "MiniMax-M2.1",
+          "cost": {
+            "input": 0.6,
+            "output": 2.4,
+            "cache_read": 0.03,
+            "cache_write": 0.375
           }
         }
       ],
@@ -220,9 +244,9 @@
           "id": "minimax/minimax-m2.1",
           "name": "MiniMax M2.1",
           "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.15
+            "input": 0.33,
+            "output": 1.32,
+            "cache_read": 0.165
           }
         }
       ],
@@ -335,18 +359,18 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-23"
   },
   "builds": [],
   "sources": [
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.1",
-      "retrieved_at": "2026-11-19"
+      "retrieved_at": "2026-11-23"
     }
   ],
-  "verified_at": "2026-11-19",
-  "updated_at": "2026-11-19",
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
   "notes": "",
   "scorecard": {
     "overall": {
@@ -479,7 +503,7 @@
       "band": "emerging",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-19",
+    "as_of": "2026-11-23",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

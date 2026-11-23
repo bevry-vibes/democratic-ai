@@ -78,11 +78,13 @@
       "kilo",
       "llmgateway",
       "llmgateway-providers",
+      "nano-gpt",
       "novita-ai",
       "opencode",
       "opencode-go",
       "openrouter",
-      "vercel"
+      "vercel",
+      "vivgrid"
     ],
     "provider_models": {
       "crossmodel": [
@@ -159,14 +161,25 @@
           }
         }
       ],
+      "nano-gpt": [
+        {
+          "id": "tencent/hy4-flash",
+          "name": "Tencent Hy4 Flash",
+          "cost": {
+            "input": 0.035,
+            "output": 0.1405,
+            "cache_read": 0.0015
+          }
+        }
+      ],
       "novita-ai": [
         {
           "id": "tencent/hy4-flash",
           "name": "Hy4 flash",
           "cost": {
-            "input": 0.07,
-            "output": 0.281,
-            "cache_read": 0.003
+            "input": 0.035,
+            "output": 0.1405,
+            "cache_read": 0.0015
           }
         }
       ],
@@ -213,6 +226,17 @@
             "cache_read": 0.0015
           }
         }
+      ],
+      "vivgrid": [
+        {
+          "id": "hy4-flash",
+          "name": "Hy4 flash",
+          "cost": {
+            "input": 0.07,
+            "output": 0.281,
+            "cache_read": 0.01
+          }
+        }
       ]
     },
     "gated": false
@@ -251,7 +275,7 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-23"
   },
   "builds": [
     {
@@ -263,6 +287,50 @@
       ],
       "quantization": "GGUF",
       "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "nace-ai/Hy4-flash-MLX-4bit",
+      "name": "nace-ai/Hy4-flash-MLX-4bit",
+      "url": "https://huggingface.co/nace-ai/Hy4-flash-MLX-4bit",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "4-bit",
+      "relation": "quantized",
+      "status": "build"
+    },
+    {
+      "id": "nace-ai/Hy4-flash-MLX-4.6bit",
+      "name": "nace-ai/Hy4-flash-MLX-4.6bit",
+      "url": "https://huggingface.co/nace-ai/Hy4-flash-MLX-4.6bit",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "MLX",
+      "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "nace-ai/Hy4-flash-MLX-3.1bit",
+      "name": "nace-ai/Hy4-flash-MLX-3.1bit",
+      "url": "https://huggingface.co/nace-ai/Hy4-flash-MLX-3.1bit",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "MLX",
+      "relation": "conversion",
+      "status": "build"
+    },
+    {
+      "id": "nace-ai/Hy4-flash-MLX-3.8bit",
+      "name": "nace-ai/Hy4-flash-MLX-3.8bit",
+      "url": "https://huggingface.co/nace-ai/Hy4-flash-MLX-3.8bit",
+      "runtime": [
+        "mlx"
+      ],
+      "quantization": "8-bit",
+      "relation": "conversion",
       "status": "build"
     },
     {
@@ -281,12 +349,12 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/tencent/Hy4-flash",
-      "retrieved_at": "2026-11-19"
+      "retrieved_at": "2026-11-23"
     }
   ],
-  "verified_at": "2026-11-19",
-  "updated_at": "2026-11-19",
-  "notes": "2 builds are attached.",
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
+  "notes": "6 builds are attached.",
   "scorecard": {
     "overall": {
       "score": 63.3,
@@ -395,7 +463,7 @@
       "band": "strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-19",
+    "as_of": "2026-11-23",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

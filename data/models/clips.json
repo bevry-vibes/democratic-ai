@@ -76,7 +76,7 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-23"
   },
   "builds": [],
   "usage": [
@@ -97,11 +97,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/desert-ant-labs/clips",
-      "retrieved_at": "2026-11-19"
+      "retrieved_at": "2026-11-23"
     }
   ],
-  "verified_at": "2026-11-19",
-  "updated_at": "2026-11-19",
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
   "notes": "",
   "scorecard": {
     "overall": {
@@ -211,7 +211,7 @@
       "band": "self-only",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-19",
+    "as_of": "2026-11-23",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

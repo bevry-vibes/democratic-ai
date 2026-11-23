@@ -1270,6 +1270,86 @@
       "notes": "Open-license speech models: Voice Isolator (48 kHz denoising and voice isolation) and SAVA (semantic voice activity and end-of-turn detection), both streaming.",
       "verified_at": "2026-11-19",
       "hf_followed": false
+    },
+    {
+      "id": "supersonic-labs",
+      "name": "Supersonic Labs",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "supersonicai"
+      ],
+      "x_url": "https://x.com/supersonicai",
+      "website": "https://supersoniclabs.ai/",
+      "hugging_face": "SupersonicLabs",
+      "github": null,
+      "domains": [
+        "language",
+        "vision"
+      ],
+      "contexts": [
+        "on-device",
+        "edge"
+      ],
+      "x_bio": "We're an AI research lab building fast, local, and accessible AI.",
+      "x_followers": null,
+      "notes": "Decision models with open Apache-2.0 weights: Julia 1.5, Julia 2, Julia 2 Flash, and Julia 2 Nano for microcontrollers.",
+      "verified_at": "2026-11-23",
+      "hf_followed": false
+    },
+    {
+      "id": "fluidvoice-labs",
+      "name": "FluidVoice Labs",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "FluidVoiceApp"
+      ],
+      "x_url": "https://x.com/FluidVoiceApp",
+      "website": "https://www.fluidvoice.com/",
+      "hugging_face": "FluidVoice-Labs",
+      "github": null,
+      "domains": [
+        "speech"
+      ],
+      "contexts": [
+        "on-device",
+        "privacy"
+      ],
+      "x_bio": "Making Local AI shine. AI Research lab cooking fully local AI dictation and more.",
+      "x_followers": 4508,
+      "notes": "The model arm of FluidVoice: Fluid Speech Pro (0.6B, CC-BY-4.0) and Fluid Speech Mini, with GGUF, MLX, ONNX, and CoreML builds.",
+      "verified_at": "2026-11-23",
+      "hf_followed": false
+    },
+    {
+      "id": "meta-models",
+      "name": "Meta Models",
+      "kind": "organization",
+      "roles": [
+        "model-lab"
+      ],
+      "x": [
+        "AIatMeta"
+      ],
+      "x_url": "https://x.com/AIatMeta",
+      "website": "https://ai.meta.com/",
+      "hugging_face": "meta-models",
+      "github": null,
+      "domains": [
+        "language",
+        "vision"
+      ],
+      "contexts": [],
+      "x_bio": "We're building the future of personal superintelligence to help people create, connect, and achieve more in life.",
+      "x_followers": 887600,
+      "notes": "Meta's open-weight model org: Muse Spark Open (816B-A42B) and Muse Glimmer 30B, with quantised builds.",
+      "verified_at": "2026-11-23",
+      "hf_followed": false
     }
   ],
   "notes": "Seeded from the owner's public X list and Hugging Face following list on 2026-11-14. The two Kimi accounts are merged into one entity. Follower counts are context, not a quality signal.",

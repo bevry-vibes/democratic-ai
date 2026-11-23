@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18",
+  "updated_at": "2026-11-23",
   "note": "Curated roots for coverage gaps that the watchlist does not reach. They enter the normal pull, tagging, indexing, and scorecard pipeline.",
   "models": [
     "facebook/nllb-200-distilled-600M",
@@ -17,6 +17,13 @@
     "tencent/Hy4-flash-FP8",
     "tencent/Hy4-flash-base",
     "tencent/Hy4-preview",
-    "tencent/Hy4-preview-FP8"
+    "tencent/Hy4-preview-FP8",
+    "Reson8/Rumble-2-Flash",
+    "RadixArk/DaisyRose-27B",
+    "RadixArk/DaisyRose-27B-GGUF",
+    "RadixArk/DaisyRose-27B-FP8",
+    "RadixArk/DaisyRose-27B-NVFP4",
+    "ricursiveAI/Ripple-65B-Preview",
+    "Motif-Technologies/Motif-3"
   ]
 }

@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/ggml-org/llama.cpp/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/ggml-org/llama.cpp/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/ggml-org/llama.cpp/releases.atom"/>
+  <title>Release notes from llama.cpp</title>
+  <updated>2026-11-23T10:05:21Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/612354784/b12653</id>
+    <updated>2026-11-23T10:05:21Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12653"/>
+    <title>b12653: ggml : update cmake MATH_LIBRARY check (#32864)</title>
+    <content type="html">&lt;p&gt;This commit updates the cmake check for &lt;code&gt;MATH_LIBRARY&lt;/code&gt; and removes the&lt;br&gt;
+DEFINED operator for the if() command.&lt;/p&gt;
+&lt;p&gt;The motivation for this is that on windows if a parent project of ggml&lt;br&gt;
+calls find_library(MATH_LIBRARY) this could return&lt;br&gt;
+&lt;code&gt;MATH_LIBRARY-NOTFOUND&lt;/code&gt; which will cause the if clause to be true.&lt;/p&gt;
+&lt;p&gt;Removing the DEFINED operator will work as intended will evaluate to&lt;br&gt;
+false, as specified by cmake if command docs:&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-text-shell-session notranslate position-relative overflow-auto&quot; data-snippet-clipboard-copy-content=&quot;False if the constant is 0, OFF, NO, FALSE, N, IGNORE, NOTFOUND, the
+empty string, or ends in the suffix -NOTFOUND.&quot;&gt;&lt;pre&gt;&lt;span class=&quot;pl-c1&quot;&gt;False if the constant is 0, OFF, NO, FALSE, N, IGNORE, NOTFOUND, the&lt;/span&gt;
+&lt;span class=&quot;pl-c1&quot;&gt;empty string, or ends in the suffix -NOTFOUND.&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This commit was originally opened in a PR against whisper.cpp, see link&lt;br&gt;
+below.&lt;/p&gt;
+&lt;p&gt;Refs: &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6346482993&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ggml-org/whisper.cpp/issues/4168&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/whisper.cpp/pull/4168/hovercard&quot; href=&quot;https://github.com/ggml-org/whisper.cpp/pull/4168&quot;&gt;ggml-org/whisper.cpp#4168&lt;/a&gt;&lt;br&gt;
+Refs: &lt;a href=&quot;https://cmake.org/cmake/help/latest/command/if.html#constant&quot; rel=&quot;nofollow&quot;&gt;https://cmake.org/cmake/help/latest/command/if.html#constant&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>danbev</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/432351?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/612354784/b12651</id>
+    <updated>2026-11-23T08:56:20Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12651"/>
+    <title>b12651</title>
+    <content type="html">&lt;details open=&quot;&quot;&gt;
+&lt;p&gt;webgpu : add ROLL support (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6269942008&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ggml-org/llama.cpp/issues/31887&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/31887/hovercard&quot; href=&quot;https://github.com/ggml-org/llama.cpp/pull/31887&quot;&gt;#31887&lt;/a&gt;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;webgpu : add ROLL support&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tests : keep ROLL cases portable across backends&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://llama.app&quot; rel=&quot;nofollow&quot;&gt;https://llama.app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Attestations:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/attestations/71003574&quot;&gt;https://github.com/ggml-org/llama.cpp/attestations/71003574&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;macOS/iOS:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-macos-arm64.tar.gz&quot;&gt;macOS Apple Silicon (arm64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;macOS Apple Silicon (arm64, KleidiAI enabled) &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23780&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23780/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-macos-x64.tar.gz&quot;&gt;macOS Intel (x64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-xcframework.zip&quot;&gt;iOS XCFramework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-x64.tar.gz&quot;&gt;Ubuntu x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-s390x.tar.gz&quot;&gt;Ubuntu 24.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-26.04-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-zdnn-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (zDNN)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-vulkan-x64.tar.gz&quot;&gt;Ubuntu x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-vulkan-arm64.tar.gz&quot;&gt;Ubuntu arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/cudart-llama-b12651-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;CUDA 12.8 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/cudart-llama-b12651-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/cudart-llama-b12651-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-rocm-10.0-x64.tar.gz&quot;&gt;Ubuntu x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-openvino-2026.4.1-x64.tar.gz&quot;&gt;Ubuntu x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-sycl-fp32-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP32)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-ubuntu-sycl-fp16-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP16)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-linux-arm64-snapdragon.tar.gz&quot;&gt;Linux arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/linux.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Android:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-android-arm64.tar.gz&quot;&gt;Android arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-android-arm64-snapdragon.tar.gz&quot;&gt;Android arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/README.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-win-cpu-x64.zip&quot;&gt;Windows x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-win-cpu-arm64.zip&quot;&gt;Windows arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-win-opencl-adreno-arm64.zip&quot;&gt;Windows arm64 (OpenCL Adreno)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-win-cuda-12.4-x64.zip&quot;&gt;Windows x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/cudart-llama-bin-win-cuda-12.4-x64.zip&quot;&gt;CUDA 12.4 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-win-cuda-13.5-x64.zip&quot;&gt;Windows x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/cudart-llama-bin-win-cuda-13.5-x64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-win-cuda-13.5-arm64.zip&quot;&gt;Windows arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/cudart-llama-bin-win-cuda-13.5-arm64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-win-vulkan-x64.zip&quot;&gt;Windows x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-win-vulkan-arm64.zip&quot;&gt;Windows arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-win-openvino-2026.4.1-x64.zip&quot;&gt;Windows x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-win-sycl-x64.zip&quot;&gt;Windows x64 (SYCL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-bin-win-rocm-10.0-x64.zip&quot;&gt;Windows x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;openEuler:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23705&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23705/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openEuler x86 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler x86 (910b, ACL Graph)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (910b, ACL Graph)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12651/llama-b12651-ui.tar.gz&quot;&gt;UI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/612354784/b12650</id>
+    <updated>2026-11-23T08:40:41Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12650"/>
+    <title>b12650</title>
+    <content type="html">&lt;details open=&quot;&quot;&gt;
+&lt;p&gt;chat : improve inkling parser/grammar (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6548026090&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ggml-org/llama.cpp/issues/32833&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/32833/hovercard&quot; href=&quot;https://github.com/ggml-org/llama.cpp/pull/32833&quot;&gt;#32833&lt;/a&gt;)&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://llama.app&quot; rel=&quot;nofollow&quot;&gt;https://llama.app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Attestations:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/attestations/70997558&quot;&gt;https://github.com/ggml-org/llama.cpp/attestations/70997558&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;macOS/iOS:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-macos-arm64.tar.gz&quot;&gt;macOS Apple Silicon (arm64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;macOS Apple Silicon (arm64, KleidiAI enabled) &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23780&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23780/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-macos-x64.tar.gz&quot;&gt;macOS Intel (x64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-xcframework.zip&quot;&gt;iOS XCFramework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-x64.tar.gz&quot;&gt;Ubuntu x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-s390x.tar.gz&quot;&gt;Ubuntu 24.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-26.04-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-zdnn-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (zDNN)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-vulkan-x64.tar.gz&quot;&gt;Ubuntu x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-vulkan-arm64.tar.gz&quot;&gt;Ubuntu arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/cudart-llama-b12650-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;CUDA 12.8 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/cudart-llama-b12650-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/cudart-llama-b12650-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-rocm-10.0-x64.tar.gz&quot;&gt;Ubuntu x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-openvino-2026.4.1-x64.tar.gz&quot;&gt;Ubuntu x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-sycl-fp32-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP32)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-ubuntu-sycl-fp16-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP16)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-linux-arm64-snapdragon.tar.gz&quot;&gt;Linux arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/linux.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Android:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-android-arm64.tar.gz&quot;&gt;Android arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-android-arm64-snapdragon.tar.gz&quot;&gt;Android arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/README.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-win-cpu-x64.zip&quot;&gt;Windows x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-win-cpu-arm64.zip&quot;&gt;Windows arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-win-opencl-adreno-arm64.zip&quot;&gt;Windows arm64 (OpenCL Adreno)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-win-cuda-12.4-x64.zip&quot;&gt;Windows x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/cudart-llama-bin-win-cuda-12.4-x64.zip&quot;&gt;CUDA 12.4 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-win-cuda-13.5-x64.zip&quot;&gt;Windows x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/cudart-llama-bin-win-cuda-13.5-x64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-win-cuda-13.5-arm64.zip&quot;&gt;Windows arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/cudart-llama-bin-win-cuda-13.5-arm64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-win-vulkan-x64.zip&quot;&gt;Windows x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-win-vulkan-arm64.zip&quot;&gt;Windows arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-win-openvino-2026.4.1-x64.zip&quot;&gt;Windows x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-win-sycl-x64.zip&quot;&gt;Windows x64 (SYCL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-bin-win-rocm-10.0-x64.zip&quot;&gt;Windows x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;openEuler:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23705&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23705/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openEuler x86 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler x86 (910b, ACL Graph)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (910b, ACL Graph)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12650/llama-b12650-ui.tar.gz&quot;&gt;UI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/612354784/b12649</id>
+    <updated>2026-11-23T06:59:30Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12649"/>
+    <title>b12649</title>
+    <content type="html">&lt;details open=&quot;&quot;&gt;
+&lt;p&gt;opencl: add xielu (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6540137217&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ggml-org/llama.cpp/issues/32791&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/32791/hovercard&quot; href=&quot;https://github.com/ggml-org/llama.cpp/pull/32791&quot;&gt;#32791&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Assisted-by: Codex&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://llama.app&quot; rel=&quot;nofollow&quot;&gt;https://llama.app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Attestations:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/attestations/70965633&quot;&gt;https://github.com/ggml-org/llama.cpp/attestations/70965633&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;macOS/iOS:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-macos-arm64.tar.gz&quot;&gt;macOS Apple Silicon (arm64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;macOS Apple Silicon (arm64, KleidiAI enabled) &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23780&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23780/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-macos-x64.tar.gz&quot;&gt;macOS Intel (x64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-xcframework.zip&quot;&gt;iOS XCFramework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-x64.tar.gz&quot;&gt;Ubuntu x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-s390x.tar.gz&quot;&gt;Ubuntu 24.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-26.04-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-zdnn-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (zDNN)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-vulkan-x64.tar.gz&quot;&gt;Ubuntu x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-vulkan-arm64.tar.gz&quot;&gt;Ubuntu arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/cudart-llama-b12649-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;CUDA 12.8 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/cudart-llama-b12649-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/cudart-llama-b12649-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-rocm-10.0-x64.tar.gz&quot;&gt;Ubuntu x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-openvino-2026.4.1-x64.tar.gz&quot;&gt;Ubuntu x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-sycl-fp32-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP32)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-ubuntu-sycl-fp16-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP16)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-linux-arm64-snapdragon.tar.gz&quot;&gt;Linux arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/linux.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Android:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-android-arm64.tar.gz&quot;&gt;Android arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-android-arm64-snapdragon.tar.gz&quot;&gt;Android arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/README.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-win-cpu-x64.zip&quot;&gt;Windows x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-win-cpu-arm64.zip&quot;&gt;Windows arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-win-opencl-adreno-arm64.zip&quot;&gt;Windows arm64 (OpenCL Adreno)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-win-cuda-12.4-x64.zip&quot;&gt;Windows x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/cudart-llama-bin-win-cuda-12.4-x64.zip&quot;&gt;CUDA 12.4 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-win-cuda-13.5-x64.zip&quot;&gt;Windows x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/cudart-llama-bin-win-cuda-13.5-x64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-win-cuda-13.5-arm64.zip&quot;&gt;Windows arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/cudart-llama-bin-win-cuda-13.5-arm64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-win-vulkan-x64.zip&quot;&gt;Windows x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-win-vulkan-arm64.zip&quot;&gt;Windows arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-win-openvino-2026.4.1-x64.zip&quot;&gt;Windows x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-win-sycl-x64.zip&quot;&gt;Windows x64 (SYCL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-bin-win-rocm-10.0-x64.zip&quot;&gt;Windows x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;openEuler:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23705&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23705/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openEuler x86 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler x86 (910b, ACL Graph)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (910b, ACL Graph)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12649/llama-b12649-ui.tar.gz&quot;&gt;UI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/612354784/b12648</id>
+    <updated>2026-11-23T03:35:29Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12648"/>
+    <title>b12648</title>
+    <content type="html">&lt;details open=&quot;&quot;&gt;
+&lt;p&gt;opencl: add q4_k coop-k c8 GEMM for spec verify (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6525941224&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ggml-org/llama.cpp/issues/32716&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/32716/hovercard&quot; href=&quot;https://github.com/ggml-org/llama.cpp/pull/32716&quot;&gt;#32716&lt;/a&gt;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;opencl: add q4_k coop-k c8 GEMM for spec verify&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Co-authored-by: Hongqiang Wang &lt;a href=&quot;mailto:wangh@qti.qualcomm.com&quot;&gt;wangh@qti.qualcomm.com&lt;/a&gt;&lt;br&gt;
+Assisted-by: Codex&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;opencl: enable q4_k c8 GEMM for n &amp;gt;= 2 for X2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Co-authored-by: Hongqiang Wang &lt;a href=&quot;mailto:wangh@qti.qualcomm.com&quot;&gt;wangh@qti.qualcomm.com&lt;/a&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://llama.app&quot; rel=&quot;nofollow&quot;&gt;https://llama.app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Attestations:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/attestations/70922974&quot;&gt;https://github.com/ggml-org/llama.cpp/attestations/70922974&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;macOS/iOS:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-macos-arm64.tar.gz&quot;&gt;macOS Apple Silicon (arm64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;macOS Apple Silicon (arm64, KleidiAI enabled) &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23780&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23780/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-macos-x64.tar.gz&quot;&gt;macOS Intel (x64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-xcframework.zip&quot;&gt;iOS XCFramework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-x64.tar.gz&quot;&gt;Ubuntu x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-s390x.tar.gz&quot;&gt;Ubuntu 24.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-26.04-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-zdnn-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (zDNN)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-vulkan-x64.tar.gz&quot;&gt;Ubuntu x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-vulkan-arm64.tar.gz&quot;&gt;Ubuntu arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/cudart-llama-b12648-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;CUDA 12.8 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/cudart-llama-b12648-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/cudart-llama-b12648-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-rocm-10.0-x64.tar.gz&quot;&gt;Ubuntu x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-openvino-2026.4.1-x64.tar.gz&quot;&gt;Ubuntu x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-sycl-fp32-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP32)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-ubuntu-sycl-fp16-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP16)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-linux-arm64-snapdragon.tar.gz&quot;&gt;Linux arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/linux.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Android:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-android-arm64.tar.gz&quot;&gt;Android arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-android-arm64-snapdragon.tar.gz&quot;&gt;Android arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/README.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-win-cpu-x64.zip&quot;&gt;Windows x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-win-cpu-arm64.zip&quot;&gt;Windows arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-win-opencl-adreno-arm64.zip&quot;&gt;Windows arm64 (OpenCL Adreno)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-win-cuda-12.4-x64.zip&quot;&gt;Windows x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/cudart-llama-bin-win-cuda-12.4-x64.zip&quot;&gt;CUDA 12.4 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-win-cuda-13.5-x64.zip&quot;&gt;Windows x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/cudart-llama-bin-win-cuda-13.5-x64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-win-cuda-13.5-arm64.zip&quot;&gt;Windows arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/cudart-llama-bin-win-cuda-13.5-arm64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-win-vulkan-x64.zip&quot;&gt;Windows x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-win-vulkan-arm64.zip&quot;&gt;Windows arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-win-openvino-2026.4.1-x64.zip&quot;&gt;Windows x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-win-sycl-x64.zip&quot;&gt;Windows x64 (SYCL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-bin-win-rocm-10.0-x64.zip&quot;&gt;Windows x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;openEuler:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23705&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23705/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openEuler x86 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler x86 (910b, ACL Graph)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (910b, ACL Graph)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12648/llama-b12648-ui.tar.gz&quot;&gt;UI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/612354784/b12647</id>
+    <updated>2026-11-23T03:22:56Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12647"/>
+    <title>b12647</title>
+    <content type="html">&lt;details open=&quot;&quot;&gt;
+&lt;p&gt;tests : compare only the guaranteed GDN snapshot slots (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6545375687&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ggml-org/llama.cpp/issues/32820&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/32820/hovercard&quot; href=&quot;https://github.com/ggml-org/llama.cpp/pull/32820&quot;&gt;#32820&lt;/a&gt;)&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://llama.app&quot; rel=&quot;nofollow&quot;&gt;https://llama.app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Attestations:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/attestations/70920365&quot;&gt;https://github.com/ggml-org/llama.cpp/attestations/70920365&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;macOS/iOS:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-macos-arm64.tar.gz&quot;&gt;macOS Apple Silicon (arm64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;macOS Apple Silicon (arm64, KleidiAI enabled) &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23780&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23780/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-macos-x64.tar.gz&quot;&gt;macOS Intel (x64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-xcframework.zip&quot;&gt;iOS XCFramework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-x64.tar.gz&quot;&gt;Ubuntu x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-s390x.tar.gz&quot;&gt;Ubuntu 24.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-26.04-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-zdnn-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (zDNN)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-vulkan-x64.tar.gz&quot;&gt;Ubuntu x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-vulkan-arm64.tar.gz&quot;&gt;Ubuntu arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/cudart-llama-b12647-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;CUDA 12.8 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/cudart-llama-b12647-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/cudart-llama-b12647-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-rocm-10.0-x64.tar.gz&quot;&gt;Ubuntu x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-openvino-2026.4.1-x64.tar.gz&quot;&gt;Ubuntu x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-sycl-fp32-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP32)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-ubuntu-sycl-fp16-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP16)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-linux-arm64-snapdragon.tar.gz&quot;&gt;Linux arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/linux.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Android:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-android-arm64.tar.gz&quot;&gt;Android arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-android-arm64-snapdragon.tar.gz&quot;&gt;Android arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/README.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-win-cpu-x64.zip&quot;&gt;Windows x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-win-cpu-arm64.zip&quot;&gt;Windows arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-win-opencl-adreno-arm64.zip&quot;&gt;Windows arm64 (OpenCL Adreno)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-win-cuda-12.4-x64.zip&quot;&gt;Windows x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/cudart-llama-bin-win-cuda-12.4-x64.zip&quot;&gt;CUDA 12.4 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-win-cuda-13.5-x64.zip&quot;&gt;Windows x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/cudart-llama-bin-win-cuda-13.5-x64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-win-cuda-13.5-arm64.zip&quot;&gt;Windows arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/cudart-llama-bin-win-cuda-13.5-arm64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-win-vulkan-x64.zip&quot;&gt;Windows x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-win-vulkan-arm64.zip&quot;&gt;Windows arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-win-openvino-2026.4.1-x64.zip&quot;&gt;Windows x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-win-sycl-x64.zip&quot;&gt;Windows x64 (SYCL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-bin-win-rocm-10.0-x64.zip&quot;&gt;Windows x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;openEuler:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23705&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23705/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openEuler x86 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler x86 (910b, ACL Graph)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (910b, ACL Graph)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12647/llama-b12647-ui.tar.gz&quot;&gt;UI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/612354784/b12646</id>
+    <updated>2026-11-23T03:04:50Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12646"/>
+    <title>b12646</title>
+    <content type="html">&lt;details open=&quot;&quot;&gt;
+&lt;p&gt;ggml-backend : generic fallback in ggml_backend_tensor_memset  (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6479301522&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ggml-org/llama.cpp/issues/32574&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/32574/hovercard&quot; href=&quot;https://github.com/ggml-org/llama.cpp/pull/32574&quot;&gt;#32574&lt;/a&gt;)&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://llama.app&quot; rel=&quot;nofollow&quot;&gt;https://llama.app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Attestations:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/attestations/70916521&quot;&gt;https://github.com/ggml-org/llama.cpp/attestations/70916521&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;macOS/iOS:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-macos-arm64.tar.gz&quot;&gt;macOS Apple Silicon (arm64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;macOS Apple Silicon (arm64, KleidiAI enabled) &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23780&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23780/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-macos-x64.tar.gz&quot;&gt;macOS Intel (x64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-xcframework.zip&quot;&gt;iOS XCFramework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-x64.tar.gz&quot;&gt;Ubuntu x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-s390x.tar.gz&quot;&gt;Ubuntu 24.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-26.04-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-zdnn-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (zDNN)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-vulkan-x64.tar.gz&quot;&gt;Ubuntu x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-vulkan-arm64.tar.gz&quot;&gt;Ubuntu arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/cudart-llama-b12646-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;CUDA 12.8 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/cudart-llama-b12646-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/cudart-llama-b12646-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-rocm-10.0-x64.tar.gz&quot;&gt;Ubuntu x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-openvino-2026.4.1-x64.tar.gz&quot;&gt;Ubuntu x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-sycl-fp32-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP32)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-ubuntu-sycl-fp16-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP16)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-linux-arm64-snapdragon.tar.gz&quot;&gt;Linux arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/linux.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Android:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-android-arm64.tar.gz&quot;&gt;Android arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-android-arm64-snapdragon.tar.gz&quot;&gt;Android arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/README.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-win-cpu-x64.zip&quot;&gt;Windows x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-win-cpu-arm64.zip&quot;&gt;Windows arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-win-opencl-adreno-arm64.zip&quot;&gt;Windows arm64 (OpenCL Adreno)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-win-cuda-12.4-x64.zip&quot;&gt;Windows x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/cudart-llama-bin-win-cuda-12.4-x64.zip&quot;&gt;CUDA 12.4 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-win-cuda-13.5-x64.zip&quot;&gt;Windows x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/cudart-llama-bin-win-cuda-13.5-x64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-win-cuda-13.5-arm64.zip&quot;&gt;Windows arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/cudart-llama-bin-win-cuda-13.5-arm64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-win-vulkan-x64.zip&quot;&gt;Windows x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-win-vulkan-arm64.zip&quot;&gt;Windows arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-win-openvino-2026.4.1-x64.zip&quot;&gt;Windows x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-win-sycl-x64.zip&quot;&gt;Windows x64 (SYCL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-bin-win-rocm-10.0-x64.zip&quot;&gt;Windows x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;openEuler:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23705&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23705/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openEuler x86 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler x86 (910b, ACL Graph)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (910b, ACL Graph)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12646/llama-b12646-ui.tar.gz&quot;&gt;UI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/612354784/b12645</id>
+    <updated>2026-11-23T02:36:35Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12645"/>
+    <title>b12645</title>
+    <content type="html">&lt;details open=&quot;&quot;&gt;
+&lt;p&gt;chat: fix LFM2.5-VL template detection (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6549465739&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ggml-org/llama.cpp/issues/32843&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/32843/hovercard&quot; href=&quot;https://github.com/ggml-org/llama.cpp/pull/32843&quot;&gt;#32843&lt;/a&gt;)&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://llama.app&quot; rel=&quot;nofollow&quot;&gt;https://llama.app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Attestations:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/attestations/70910857&quot;&gt;https://github.com/ggml-org/llama.cpp/attestations/70910857&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;macOS/iOS:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-macos-arm64.tar.gz&quot;&gt;macOS Apple Silicon (arm64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;macOS Apple Silicon (arm64, KleidiAI enabled) &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23780&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23780/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-macos-x64.tar.gz&quot;&gt;macOS Intel (x64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-xcframework.zip&quot;&gt;iOS XCFramework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-x64.tar.gz&quot;&gt;Ubuntu x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-s390x.tar.gz&quot;&gt;Ubuntu 24.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-26.04-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-zdnn-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (zDNN)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-vulkan-x64.tar.gz&quot;&gt;Ubuntu x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-vulkan-arm64.tar.gz&quot;&gt;Ubuntu arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/cudart-llama-b12645-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;CUDA 12.8 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/cudart-llama-b12645-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/cudart-llama-b12645-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-rocm-10.0-x64.tar.gz&quot;&gt;Ubuntu x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-openvino-2026.4.1-x64.tar.gz&quot;&gt;Ubuntu x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-sycl-fp32-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP32)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-ubuntu-sycl-fp16-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP16)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-linux-arm64-snapdragon.tar.gz&quot;&gt;Linux arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/linux.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Android:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-android-arm64.tar.gz&quot;&gt;Android arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-android-arm64-snapdragon.tar.gz&quot;&gt;Android arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/README.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-win-cpu-x64.zip&quot;&gt;Windows x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-win-cpu-arm64.zip&quot;&gt;Windows arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-win-opencl-adreno-arm64.zip&quot;&gt;Windows arm64 (OpenCL Adreno)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-win-cuda-12.4-x64.zip&quot;&gt;Windows x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/cudart-llama-bin-win-cuda-12.4-x64.zip&quot;&gt;CUDA 12.4 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-win-cuda-13.5-x64.zip&quot;&gt;Windows x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/cudart-llama-bin-win-cuda-13.5-x64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-win-cuda-13.5-arm64.zip&quot;&gt;Windows arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/cudart-llama-bin-win-cuda-13.5-arm64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-win-vulkan-x64.zip&quot;&gt;Windows x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-win-vulkan-arm64.zip&quot;&gt;Windows arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-win-openvino-2026.4.1-x64.zip&quot;&gt;Windows x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-win-sycl-x64.zip&quot;&gt;Windows x64 (SYCL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-bin-win-rocm-10.0-x64.zip&quot;&gt;Windows x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;openEuler:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23705&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23705/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openEuler x86 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler x86 (910b, ACL Graph)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (910b, ACL Graph)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12645/llama-b12645-ui.tar.gz&quot;&gt;UI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/612354784/b12644</id>
+    <updated>2026-11-23T02:19:04Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12644"/>
+    <title>b12644</title>
+    <content type="html">&lt;details open=&quot;&quot;&gt;
+&lt;p&gt;mtmd: speed up shared audio FFT (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6544671842&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ggml-org/llama.cpp/issues/32815&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/32815/hovercard&quot; href=&quot;https://github.com/ggml-org/llama.cpp/pull/32815&quot;&gt;#32815&lt;/a&gt;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;mtmd: speed up shared audio FFT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Replace recursive radix-2 splitting with iterative stages and&lt;br&gt;
+batch the existing odd-size DFT across subsequences, preserving&lt;br&gt;
+the previous operation order.&lt;/p&gt;
+&lt;p&gt;Input buffers now hold only N real values for FFT&lt;br&gt;
+or 2N interleaved floats for inverse FFT.&lt;/p&gt;
+&lt;p&gt;Add test_audio_fft for forward and inverse transforms.&lt;/p&gt;
+&lt;p&gt;Assisted-by: Claude&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Co-authored-by: Xuan Son Nguyen &lt;a href=&quot;mailto:son@huggingface.co&quot;&gt;son@huggingface.co&lt;/a&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://llama.app&quot; rel=&quot;nofollow&quot;&gt;https://llama.app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Attestations:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/attestations/70906782&quot;&gt;https://github.com/ggml-org/llama.cpp/attestations/70906782&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;macOS/iOS:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-macos-arm64.tar.gz&quot;&gt;macOS Apple Silicon (arm64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;macOS Apple Silicon (arm64, KleidiAI enabled) &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23780&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23780/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-macos-x64.tar.gz&quot;&gt;macOS Intel (x64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-xcframework.zip&quot;&gt;iOS XCFramework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-x64.tar.gz&quot;&gt;Ubuntu x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-s390x.tar.gz&quot;&gt;Ubuntu 24.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-26.04-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-zdnn-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (zDNN)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-vulkan-x64.tar.gz&quot;&gt;Ubuntu x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-vulkan-arm64.tar.gz&quot;&gt;Ubuntu arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/cudart-llama-b12644-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;CUDA 12.8 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/cudart-llama-b12644-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/cudart-llama-b12644-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-rocm-10.0-x64.tar.gz&quot;&gt;Ubuntu x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-openvino-2026.4.1-x64.tar.gz&quot;&gt;Ubuntu x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-sycl-fp32-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP32)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-ubuntu-sycl-fp16-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP16)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-linux-arm64-snapdragon.tar.gz&quot;&gt;Linux arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/linux.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Android:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-android-arm64.tar.gz&quot;&gt;Android arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-android-arm64-snapdragon.tar.gz&quot;&gt;Android arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/README.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-win-cpu-x64.zip&quot;&gt;Windows x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-win-cpu-arm64.zip&quot;&gt;Windows arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-win-opencl-adreno-arm64.zip&quot;&gt;Windows arm64 (OpenCL Adreno)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-win-cuda-12.4-x64.zip&quot;&gt;Windows x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/cudart-llama-bin-win-cuda-12.4-x64.zip&quot;&gt;CUDA 12.4 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-win-cuda-13.5-x64.zip&quot;&gt;Windows x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/cudart-llama-bin-win-cuda-13.5-x64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-win-cuda-13.5-arm64.zip&quot;&gt;Windows arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/cudart-llama-bin-win-cuda-13.5-arm64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-win-vulkan-x64.zip&quot;&gt;Windows x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-win-vulkan-arm64.zip&quot;&gt;Windows arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-win-openvino-2026.4.1-x64.zip&quot;&gt;Windows x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-win-sycl-x64.zip&quot;&gt;Windows x64 (SYCL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-bin-win-rocm-10.0-x64.zip&quot;&gt;Windows x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;openEuler:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23705&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23705/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openEuler x86 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler x86 (910b, ACL Graph)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (910b, ACL Graph)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12644/llama-b12644-ui.tar.gz&quot;&gt;UI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/612354784/b12643</id>
+    <updated>2026-11-23T02:05:29Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ggml-org/llama.cpp/releases/tag/b12643"/>
+    <title>b12643</title>
+    <content type="html">&lt;details open=&quot;&quot;&gt;
+&lt;p&gt;mtmd: fix qwen3a audio tail (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6519368551&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ggml-org/llama.cpp/issues/32697&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/32697/hovercard&quot; href=&quot;https://github.com/ggml-org/llama.cpp/pull/32697&quot;&gt;#32697&lt;/a&gt;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;add: test to reporduce error reported in &lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6517618929&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ggml-org/llama.cpp/issues/32689&quot; data-hovercard-type=&quot;issue&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/issues/32689/hovercard&quot; href=&quot;https://github.com/ggml-org/llama.cpp/issues/32689&quot;&gt;#32689&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fix: remove extra tokens from zero-padding of Qwen3-Omni / Qwen3-ASR audio&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;add: qwen3a_tokens_for_frames instead of magic numbers&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;refactor: only ggml_pad when required&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;refactor: move qwen3a_tokens_for_frames as static member of mtmd_graph_qwen3a and add test&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;remove: trailing empty line&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Co-authored-by: george burton &lt;a href=&quot;mailto:georgeburton@georges-MacBook-Air.local&quot;&gt;georgeburton@georges-MacBook-Air.local&lt;/a&gt;&lt;/p&gt;
+&lt;/details&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://llama.app&quot; rel=&quot;nofollow&quot;&gt;https://llama.app&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Attestations:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/attestations/70903510&quot;&gt;https://github.com/ggml-org/llama.cpp/attestations/70903510&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;macOS/iOS:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-macos-arm64.tar.gz&quot;&gt;macOS Apple Silicon (arm64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;macOS Apple Silicon (arm64, KleidiAI enabled) &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23780&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23780/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-macos-x64.tar.gz&quot;&gt;macOS Intel (x64)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-xcframework.zip&quot;&gt;iOS XCFramework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Linux:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-x64.tar.gz&quot;&gt;Ubuntu x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-s390x.tar.gz&quot;&gt;Ubuntu 24.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-26.04-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-zdnn-s390x.tar.gz&quot;&gt;Ubuntu 26.04 s390x (zDNN)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-vulkan-x64.tar.gz&quot;&gt;Ubuntu x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-vulkan-arm64.tar.gz&quot;&gt;Ubuntu arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/cudart-llama-b12643-bin-ubuntu-cuda-12.8-x64.tar.gz&quot;&gt;CUDA 12.8 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;Ubuntu x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/cudart-llama-b12643-bin-ubuntu-cuda-13.5-x64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;Ubuntu arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/cudart-llama-b12643-bin-ubuntu-cuda-13.5-arm64.tar.gz&quot;&gt;CUDA 13.5 libraries&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-rocm-10.0-x64.tar.gz&quot;&gt;Ubuntu x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-openvino-2026.4.1-x64.tar.gz&quot;&gt;Ubuntu x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-sycl-fp32-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP32)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-ubuntu-sycl-fp16-x64.tar.gz&quot;&gt;Ubuntu x64 (SYCL FP16)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-linux-arm64-snapdragon.tar.gz&quot;&gt;Linux arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/linux.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Android:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-android-arm64.tar.gz&quot;&gt;Android arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-android-arm64-snapdragon.tar.gz&quot;&gt;Android arm64 (Snapdragon: CPU, Adreno GPU, Hexagon NPU)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/blob/master/docs/backend/snapdragon/README.md&quot;&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Windows:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-win-cpu-x64.zip&quot;&gt;Windows x64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-win-cpu-arm64.zip&quot;&gt;Windows arm64 (CPU)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-win-opencl-adreno-arm64.zip&quot;&gt;Windows arm64 (OpenCL Adreno)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-win-cuda-12.4-x64.zip&quot;&gt;Windows x64 (CUDA 12)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/cudart-llama-bin-win-cuda-12.4-x64.zip&quot;&gt;CUDA 12.4 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-win-cuda-13.5-x64.zip&quot;&gt;Windows x64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/cudart-llama-bin-win-cuda-13.5-x64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-win-cuda-13.5-arm64.zip&quot;&gt;Windows arm64 (CUDA 13)&lt;/a&gt; - &lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/cudart-llama-bin-win-cuda-13.5-arm64.zip&quot;&gt;CUDA 13.5 DLLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-win-vulkan-x64.zip&quot;&gt;Windows x64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-win-vulkan-arm64.zip&quot;&gt;Windows arm64 (Vulkan)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-win-openvino-2026.4.1-x64.zip&quot;&gt;Windows x64 (OpenVINO)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-win-sycl-x64.zip&quot;&gt;Windows x64 (SYCL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-bin-win-rocm-10.0-x64.zip&quot;&gt;Windows x64 (ROCm 10.0)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;openEuler:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/pull/23705&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ggml-org/llama.cpp/pull/23705/hovercard&quot;&gt;DISABLED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;openEuler x86 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler x86 (910b, ACL Graph)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (310p)&lt;/li&gt;
+&lt;li&gt;openEuler aarch64 (910b, ACL Graph)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;UI:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/releases/download/b12643/llama-b12643-ui.tar.gz&quot;&gt;UI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+</feed>

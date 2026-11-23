@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18",
+  "updated_at": "2026-11-23",
   "notes": "Fetch targets for the first pull. The pull records raw data only. Tagging and categorisation happen in a later pass. The model limit is 250 because a lab with a heavy release cadence passes 100 repositories inside the 90-day window, and a smaller page silently drops the tail.",
   "windows": {
     "feeds_days": 90,
@@ -9,7 +9,7 @@
   },
   "x": {
     "list_id": "2084302656580034676",
-    "members_snapshot": "data/raw/x/lists/2084302656580034676/2026-11-14.members.json"
+    "members_snapshot": "data/raw/x/lists/2084302656580034676/2026-11-23.members.json"
   },
   "hugging_face": {
     "blog_feed": "https://huggingface.co/blog/feed.xml",

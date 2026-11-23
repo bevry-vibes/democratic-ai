@@ -111,6 +111,7 @@
       "cline-pass",
       "cloudflare-ai-gateway",
       "cloudflare-workers-ai",
+      "concentrate",
       "cortecs",
       "deepinfra",
       "deepseek",
@@ -163,12 +164,14 @@
       "opencode-go",
       "openrouter",
       "phala",
+      "primalabs",
       "prime",
       "proxystacks",
       "refuseless",
       "requesty",
       "ruapi",
       "runcrate",
+      "sarvam",
       "scaleway",
       "scx-ai",
       "synthetic",
@@ -258,9 +261,9 @@
           "id": "deepseek/deepseek-v4.1-flash-1017",
           "name": "DeepSeek V4.1 Flash 1017",
           "cost": {
-            "input": 0.098,
-            "output": 0.294,
-            "cache_read": 0.0029,
+            "input": 0.045,
+            "output": 0.25,
+            "cache_read": 0.0025,
             "cache_write": 0
           }
         }
@@ -382,13 +385,33 @@
           }
         }
       ],
+      "concentrate": [
+        {
+          "id": "deepseek-v4-1-fast",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.6,
+            "output": 2.4,
+            "cache_read": 0.014
+          }
+        },
+        {
+          "id": "deepseek-v4-1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.375,
+            "output": 1.5,
+            "cache_read": 0.01
+          }
+        }
+      ],
       "cortecs": [
         {
           "id": "deepseek-v4.1-flash-1017",
           "name": "DeepSeek V4.1 Flash 1017",
           "cost": {
-            "input": 0.203,
-            "output": 0.609,
+            "input": 0.102,
+            "output": 0.613,
             "cache_read": 0.006
           }
         }
@@ -529,9 +552,9 @@
           "id": "scaleway/deepseek-v4.1-flash-1017",
           "name": "DeepSeek V4.1 Flash 1017 (Scaleway)",
           "cost": {
-            "input": 0.65934,
-            "output": 1.97802,
-            "cache_read": 0.131868
+            "input": 0.6594,
+            "output": 1.9782,
+            "cache_read": 0.13188
           }
         },
         {
@@ -587,8 +610,8 @@
           "id": "deepseek-v4.1-flash-1017",
           "name": "DeepSeek V4.1 Flash 1017",
           "cost": {
-            "input": 0.03,
-            "output": 0.12,
+            "input": 0.06,
+            "output": 0.24,
             "cache_read": 0.006
           }
         }
@@ -638,18 +661,18 @@
           "id": "accounts/fireworks/routers/deepseek-v4p1-flash-1017-spot",
           "name": "DeepSeek V4.1 Flash 1017 Spot",
           "cost": {
-            "input": 0.21,
-            "output": 0.84,
-            "cache_read": 0.0042
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
           }
         },
         {
           "id": "accounts/fireworks/routers/deepseek-v4p1-flash-1017-ultrafast",
           "name": "DeepSeek V4.1 Flash 1017 Ultra-fast",
           "cost": {
-            "input": 2.4,
-            "output": 9.6,
-            "cache_read": 0.048
+            "input": 1.2,
+            "output": 4.8,
+            "cache_read": 0.024
           }
         }
       ],
@@ -743,8 +766,8 @@
           "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
           "name": "DeepSeek V4.1 Flash 1017",
           "cost": {
-            "input": 0.3,
-            "output": 1.2,
+            "input": 0.1,
+            "output": 0.6,
             "cache_read": 0.006,
             "cache_write": 0
           }
@@ -1007,6 +1030,15 @@
           }
         },
         {
+          "id": "reka-ai/deepseek-v4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017 (reka-ai)",
+          "cost": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
+          }
+        },
+        {
           "id": "runware/deepseek-v4.1-flash-1017",
           "name": "DeepSeek V4.1 Flash 1017 (runware)",
           "cost": {
@@ -1019,9 +1051,9 @@
           "id": "sciforium/deepseek-v4.1-flash-1017",
           "name": "DeepSeek V4.1 Flash 1017 (sciforium)",
           "cost": {
-            "input": 0.15,
-            "output": 0.6,
-            "cache_read": 0.003
+            "input": 0.2,
+            "output": 0.8,
+            "cache_read": 0.004
           }
         },
         {
@@ -1313,9 +1345,9 @@
           "id": "deepseek-v4.1-flash",
           "name": "DeepSeek V4.1 Flash 1017",
           "cost": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache_read": 0.006
+            "input": 0.12,
+            "output": 0.48,
+            "cache_read": 0.0024
           }
         },
         {
@@ -1344,9 +1376,9 @@
           "id": "deepseek/deepseek-v4.1-flash-1017",
           "name": "DeepSeek V4.1 Flash 1017",
           "cost": {
-            "input": 0.036,
-            "output": 0.5,
-            "cache_read": 0.01
+            "input": 0.15,
+            "output": 0.6,
+            "cache_read": 0.003
           }
         }
       ],
@@ -1361,15 +1393,26 @@
           }
         }
       ],
+      "primalabs": [
+        {
+          "id": "primalabs-ai/DeepSeek-V4.1-Flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.24,
+            "output": 0.96,
+            "cache_read": 0.0048
+          }
+        }
+      ],
       "prime": [
         {
           "id": "deepseek/deepseek-v4.1-flash-1017",
           "name": "DeepSeek V4.1 Flash 1017",
           "cost": {
-            "input": 0.04368,
+            "input": 0.075,
             "output": 0.7,
-            "cache_read": 0.0024,
-            "cache_write": 0.04368
+            "cache_read": 0.007,
+            "cache_write": 0.075
           }
         }
       ],
@@ -1454,6 +1497,26 @@
             "input": 0.1029,
             "output": 0.3087,
             "cache_read": 0.003087
+          }
+        }
+      ],
+      "sarvam": [
+        {
+          "id": "deepseekv4.1-flash-1017",
+          "name": "DeepSeek V4.1 Flash 1017",
+          "cost": {
+            "input": 0.14893617,
+            "output": 0.58510638,
+            "cache_read": 0.00265957
+          }
+        },
+        {
+          "id": "deepseekv4.1-flash-1017-interactive",
+          "name": "DeepSeek V4.1 Flash 1017 Interactive",
+          "cost": {
+            "input": 0.26595745,
+            "output": 1.11702128,
+            "cache_read": 0.00531915
           }
         }
       ],
@@ -1734,7 +1797,7 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-23"
   },
   "builds": [
     {
@@ -1798,11 +1861,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-      "retrieved_at": "2026-11-19"
+      "retrieved_at": "2026-11-23"
     }
   ],
-  "verified_at": "2026-11-19",
-  "updated_at": "2026-11-19",
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
   "notes": "5 builds are attached.",
   "scorecard": {
     "overall": {
@@ -1963,7 +2026,7 @@
       "band": "strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-19",
+    "as_of": "2026-11-23",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

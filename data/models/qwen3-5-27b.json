@@ -1,0 +1,542 @@
+{
+  "schema_version": 1,
+  "id": "qwen3-5-27b",
+  "kind": "model",
+  "name": "Qwen3.5-27B",
+  "aliases": [
+    "Qwen/Qwen3.5-27B"
+  ],
+  "releases": [],
+  "organization": "qwen",
+  "released": "2026-02-24",
+  "summary": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+  "tags": [
+    "task:image-understanding",
+    "task:reasoning",
+    "task:tool-calling",
+    "domain:multimodal",
+    "domain:vision",
+    "modality:image",
+    "modality:pdf",
+    "modality:text",
+    "modality:video",
+    "access:openrouter",
+    "access:python",
+    "licensing:commercial-safe",
+    "license:apache-2.0",
+    "family:qwen"
+  ],
+  "capabilities": {
+    "tasks": [
+      "image-understanding",
+      "reasoning",
+      "tool-calling"
+    ],
+    "languages": [],
+    "modality": [
+      "image",
+      "pdf",
+      "text",
+      "video"
+    ],
+    "runtimes": [
+      "openrouter",
+      "python"
+    ],
+    "tool_calling": true,
+    "reasoning": true,
+    "structured_output": true,
+    "context_tokens": 262144
+  },
+  "footprint": {
+    "params_b": 27,
+    "runtimes": [
+      "python"
+    ]
+  },
+  "license": {
+    "id": "apache-2.0",
+    "class": "permissive",
+    "url": "https://huggingface.co/Qwen/Qwen3.5-27B"
+  },
+  "openness": {
+    "weights": "open-weight",
+    "training_data": "unknown",
+    "training_code": "unknown",
+    "tier": "shared",
+    "tier_method": "reciprocity-v1",
+    "evidence": [
+      "https://huggingface.co/Qwen/Qwen3.5-27B"
+    ]
+  },
+  "lineage": [],
+  "access": {
+    "hugging_face": "Qwen/Qwen3.5-27B",
+    "models_dev": "https://models.dev/models/alibaba/qwen3.5-27b",
+    "agent_detect": null,
+    "providers": [
+      "aihubmix",
+      "chutes",
+      "concentrate",
+      "deepinfra",
+      "empiriolabs",
+      "huggingface",
+      "jalapeno",
+      "kilo",
+      "llmgateway",
+      "llmgateway-providers",
+      "merge-gateway",
+      "mixlayer",
+      "nano-gpt",
+      "novita-ai",
+      "ofox",
+      "openrouter",
+      "orcarouter",
+      "phala",
+      "requesty",
+      "siliconflow",
+      "siliconflow-cn",
+      "watt"
+    ],
+    "provider_models": {
+      "aihubmix": [
+        {
+          "id": "qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.0846,
+            "output": 0.6768,
+            "tiers": [
+              {
+                "input": 0.2536,
+                "output": 2.0288,
+                "tier": {
+                  "type": "context",
+                  "size": 128000
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "chutes": [
+        {
+          "id": "Qwen/Qwen3.5-27B-TEE",
+          "name": "Qwen3.5 27B TEE",
+          "cost": {
+            "input": 0.2,
+            "output": 1.75,
+            "cache_read": 0.02
+          }
+        }
+      ],
+      "concentrate": [
+        {
+          "id": "qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.26,
+            "output": 2.6
+          }
+        }
+      ],
+      "deepinfra": [
+        {
+          "id": "Qwen/Qwen3.5-27B",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.26,
+            "output": 2.6
+          }
+        }
+      ],
+      "empiriolabs": [
+        {
+          "id": "qwen3-5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.086,
+            "output": 0.688,
+            "cache_read": 0.086,
+            "tiers": [
+              {
+                "input": 0.258,
+                "output": 2.064,
+                "cache_read": 0.258,
+                "tier": {
+                  "type": "context",
+                  "size": 128000
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "huggingface": [
+        {
+          "id": "Qwen/Qwen3.5-27B",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.3,
+            "output": 2.4
+          }
+        }
+      ],
+      "jalapeno": [
+        {
+          "id": "Qwen3.5-27B",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.3,
+            "output": 2.4
+          }
+        }
+      ],
+      "kilo": [
+        {
+          "id": "qwen/qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.195,
+            "output": 1.56
+          }
+        }
+      ],
+      "llmgateway": [
+        {
+          "id": "qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.3,
+            "output": 2.4
+          }
+        }
+      ],
+      "llmgateway-providers": [
+        {
+          "id": "alibaba/qwen3.5-27b",
+          "name": "Qwen3.5 27B (Alibaba Cloud)",
+          "cost": {
+            "input": 0.3,
+            "output": 2.4
+          }
+        }
+      ],
+      "merge-gateway": [
+        {
+          "id": "qwen/qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.086,
+            "output": 0.688,
+            "cache_read": 0.0172
+          }
+        }
+      ],
+      "mixlayer": [
+        {
+          "id": "qwen/qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.3,
+            "output": 2.4
+          }
+        }
+      ],
+      "nano-gpt": [
+        {
+          "id": "qwen/qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.2,
+            "output": 1.75,
+            "cache_read": 0.02
+          }
+        },
+        {
+          "id": "qwen/qwen3.5-27b:thinking",
+          "name": "Qwen3.5 27B Thinking",
+          "cost": {
+            "input": 0.2,
+            "output": 1.75,
+            "cache_read": 0.02
+          }
+        }
+      ],
+      "novita-ai": [
+        {
+          "id": "qwen/qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.3,
+            "output": 2.4
+          }
+        }
+      ],
+      "ofox": [
+        {
+          "id": "bailian/qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.29,
+            "output": 2.05,
+            "cache_read": 0.29
+          }
+        },
+        {
+          "id": "qwen/qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.29,
+            "output": 2.05,
+            "cache_read": 0.29
+          }
+        }
+      ],
+      "openrouter": [
+        {
+          "id": "qwen/qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.26,
+            "output": 2.6
+          }
+        }
+      ],
+      "orcarouter": [
+        {
+          "id": "qwen/qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.086,
+            "output": 0.688,
+            "tiers": [
+              {
+                "input": 0.258,
+                "output": 2.064,
+                "tier": {
+                  "type": "context",
+                  "size": 128000
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "phala": [
+        {
+          "id": "qwen/qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.3,
+            "output": 2.4,
+            "cache_read": 0.03
+          }
+        }
+      ],
+      "requesty": [
+        {
+          "id": "qwen3.5-27b",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.26,
+            "output": 2.6
+          }
+        }
+      ],
+      "siliconflow": [
+        {
+          "id": "Qwen/Qwen3.5-27B",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.25,
+            "output": 2
+          }
+        }
+      ],
+      "siliconflow-cn": [
+        {
+          "id": "Qwen/Qwen3.5-27B",
+          "name": "Qwen/Qwen3.5-27B",
+          "cost": {
+            "input": 0.08966849,
+            "output": 0.71734789,
+            "tiers": [
+              {
+                "input": 0.26900546,
+                "output": 2.15204368,
+                "tier": {
+                  "type": "context",
+                  "size": 128000
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "watt": [
+        {
+          "id": "Qwen3.5-27B",
+          "name": "Qwen3.5 27B",
+          "cost": {
+            "input": 0.3,
+            "output": 2.4
+          }
+        }
+      ]
+    },
+    "gated": null
+  },
+  "syndication": {
+    "score": 5,
+    "points": 5,
+    "band": "moderate",
+    "sources": [
+      {
+        "id": "models.dev",
+        "url": "https://models.dev/models/alibaba/qwen3.5-27b",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "openrouter",
+        "url": "https://openrouter.ai/qwen/qwen3.5-27b",
+        "weight": 2,
+        "kind": "aggregator",
+        "self": false
+      },
+      {
+        "id": "hugging-face",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-27B",
+        "weight": 0,
+        "kind": "host",
+        "self": true
+      }
+    ],
+    "checked_at": "2026-11-23"
+  },
+  "builds": [],
+  "sources": [
+    {
+      "kind": "hugging-face",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-27B",
+      "retrieved_at": "2026-11-23"
+    }
+  ],
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
+  "notes": "",
+  "scorecard": {
+    "overall": {
+      "score": 56.7,
+      "coverage": 2,
+      "weights": {
+        "syndication": 15,
+        "performance": 40,
+        "openness": 30,
+        "research": 15
+      },
+      "components": [
+        {
+          "key": "syndication",
+          "label": "Syndication",
+          "score": 50,
+          "weight": 15,
+          "included": true,
+          "effective_weight": 33.3,
+          "contribution": 16.7
+        },
+        {
+          "key": "performance",
+          "label": "Performance/Intelligence",
+          "score": null,
+          "weight": 40,
+          "included": false,
+          "effective_weight": 0,
+          "contribution": null
+        },
+        {
+          "key": "openness",
+          "label": "Openness/Morality",
+          "score": 60,
+          "weight": 30,
+          "included": true,
+          "effective_weight": 66.7,
+          "contribution": 40
+        },
+        {
+          "key": "research",
+          "label": "Citation/Research",
+          "score": null,
+          "weight": 15,
+          "included": false,
+          "effective_weight": 0,
+          "contribution": null
+        }
+      ],
+      "note": "Weighted mean of the available scorecard axes. Missing axes are excluded, not treated as zero. Coverage is shown so a sparse score is not mistaken for a complete one."
+    },
+    "openness_morality": {
+      "score": 60,
+      "tier": "shared",
+      "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed.",
+      "components": [
+        {
+          "label": "Weights",
+          "value": "open-weight",
+          "points": 50,
+          "max": 50
+        },
+        {
+          "label": "Training data",
+          "value": "unknown",
+          "points": 0,
+          "max": 25
+        },
+        {
+          "label": "Training code",
+          "value": "unknown",
+          "points": 0,
+          "max": 15
+        },
+        {
+          "label": "Licence",
+          "value": "apache-2.0",
+          "points": 10,
+          "max": 10
+        }
+      ]
+    },
+    "performance": {
+      "score": null,
+      "basis": null,
+      "match": null,
+      "inherited_from": null,
+      "benchmarks": [],
+      "own_benchmarks": [],
+      "metric": null,
+      "source": null,
+      "as_of": null,
+      "note": "Not measured. No current benchmark is recorded."
+    },
+    "research_citation": {
+      "score": null,
+      "basis": null,
+      "benchmarks": [],
+      "source": null,
+      "as_of": null,
+      "note": "Not measured. No current research benchmark is recorded.",
+      "citation": "not measured"
+    },
+    "syndication": {
+      "score": 5,
+      "max": 10,
+      "band": "moderate",
+      "note": "Independent listings, not quality. The model's own host has weight 0."
+    },
+    "as_of": "2026-11-23",
+    "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
+    "source": "internal://democratic-ai/scorecard-v2"
+  }
+}

@@ -9,7 +9,7 @@
   "releases": [],
   "organization": "moonshot-ai",
   "released": "2026-11-02",
-  "summary": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
+  "summary": "Multimodal Kimi model with 1M context and per-request reasoning (off by default on Wafer) for coding, 3D creation, financial research, and agentic work",
   "tags": [
     "task:image-understanding",
     "task:reasoning",
@@ -74,7 +74,7 @@
   "access": {
     "hugging_face": "moonshotai/Kimi-K3.1-Pro",
     "models_dev": "https://models.dev/models/moonshotai/kimi-k3.1-pro",
-    "agent_detect": null,
+    "agent_detect": "https://agent-detect.bevry.me/model/kimik31pro",
     "providers": [
       "302ai",
       "abliteratedllm",
@@ -85,6 +85,7 @@
       "cline-pass",
       "cloudflare-ai-gateway",
       "commandcode",
+      "concentrate",
       "cortecs",
       "crossmodel",
       "deepinfra",
@@ -110,6 +111,7 @@
       "logits",
       "lyceum",
       "merge-gateway",
+      "modal",
       "moonshotai",
       "moonshotai-cn",
       "morph",
@@ -123,6 +125,7 @@
       "ollama-cloud",
       "opencode-go",
       "openrouter",
+      "primalabs",
       "prime",
       "proxystacks",
       "requesty",
@@ -249,6 +252,28 @@
             "input": 2,
             "output": 10,
             "cache_read": 0.2
+          }
+        }
+      ],
+      "concentrate": [
+        {
+          "id": "kimi-k3-1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 11.2,
+            "cache_read": 0.24,
+            "cache_write": 2
+          }
+        },
+        {
+          "id": "kimi-k3-1-pro-highspeed",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 4,
+            "output": 20,
+            "cache_read": 0.2,
+            "cache_write": 5
           }
         }
       ],
@@ -519,6 +544,15 @@
           }
         },
         {
+          "id": "canopywave/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro (CanopyWave)",
+          "cost": {
+            "input": 1.9,
+            "output": 9.5,
+            "cache_read": 0.19
+          }
+        },
+        {
           "id": "fireworks/kimi-k3.1-pro",
           "name": "Kimi K3.1 Pro (Fireworks AI)",
           "cost": {
@@ -608,6 +642,17 @@
       "merge-gateway": [
         {
           "id": "moonshot/kimi-k3.1-pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 2,
+            "output": 10,
+            "cache_read": 0.2
+          }
+        }
+      ],
+      "modal": [
+        {
+          "id": "moonshotai/Kimi-K3.1-Pro",
           "name": "Kimi K3.1 Pro",
           "cost": {
             "input": 2,
@@ -828,6 +873,17 @@
             "input": 0.2403,
             "output": 8.4023,
             "cache_read": 0.2
+          }
+        }
+      ],
+      "primalabs": [
+        {
+          "id": "primalabs-ai/Kimi-K3.1-Pro",
+          "name": "Kimi K3.1 Pro",
+          "cost": {
+            "input": 1.8,
+            "output": 9,
+            "cache_read": 0.18
           }
         }
       ],
@@ -1061,13 +1117,20 @@
     "gated": null
   },
   "syndication": {
-    "score": 5,
-    "points": 5,
-    "band": "moderate",
+    "score": 8,
+    "points": 8,
+    "band": "strong",
     "sources": [
       {
         "id": "models.dev",
         "url": "https://models.dev/models/moonshotai/kimi-k3.1-pro",
+        "weight": 3,
+        "kind": "registry",
+        "self": false
+      },
+      {
+        "id": "agent-detect",
+        "url": "https://agent-detect.bevry.me/model/kimik31pro",
         "weight": 3,
         "kind": "registry",
         "self": false
@@ -1087,7 +1150,7 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-23"
   },
   "builds": [
     {
@@ -1106,15 +1169,15 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
-      "retrieved_at": "2026-11-19"
+      "retrieved_at": "2026-11-23"
     }
   ],
-  "verified_at": "2026-11-19",
-  "updated_at": "2026-11-19",
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
   "notes": "1 builds are attached.",
   "scorecard": {
     "overall": {
-      "score": 73.1,
+      "score": 77.6,
       "coverage": 4,
       "weights": {
         "syndication": 15,
@@ -1126,11 +1189,11 @@
         {
           "key": "syndication",
           "label": "Syndication",
-          "score": 50,
+          "score": 80,
           "weight": 15,
           "included": true,
           "effective_weight": 15,
-          "contribution": 7.5
+          "contribution": 12
         },
         {
           "key": "performance",
@@ -1358,12 +1421,12 @@
       "citation": "not measured"
     },
     "syndication": {
-      "score": 5,
+      "score": 8,
       "max": 10,
-      "band": "moderate",
+      "band": "strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-19",
+    "as_of": "2026-11-23",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

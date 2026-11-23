@@ -456,9 +456,9 @@
           "id": "glm-5.2",
           "name": "GLM-5.2",
           "cost": {
-            "input": 0.9,
-            "output": 3.24,
-            "cache_read": 0.189
+            "input": 1.3,
+            "output": 4.2,
+            "cache_read": 0.25
           }
         }
       ],
@@ -811,7 +811,7 @@
           "cost": {
             "input": 1.4,
             "output": 4.4,
-            "cache_read": 0.26
+            "cache_read": 0.14
           }
         },
         {
@@ -1019,18 +1019,18 @@
           "id": "z-ai/glm-5.2",
           "name": "GLM 5.2",
           "cost": {
-            "input": 0.42,
-            "output": 1.32,
-            "cache_read": 0.078
+            "input": 0.53,
+            "output": 1.79,
+            "cache_read": 0.1
           }
         },
         {
           "id": "z-ai/glm-5.2:thinking",
           "name": "GLM 5.2 Thinking",
           "cost": {
-            "input": 0.42,
-            "output": 1.32,
-            "cache_read": 0.078
+            "input": 0.53,
+            "output": 1.79,
+            "cache_read": 0.1
           }
         }
       ],
@@ -1116,9 +1116,9 @@
           "id": "z-ai/glm-5.2",
           "name": "GLM-5.2",
           "cost": {
-            "input": 0.007,
-            "output": 6.8,
-            "cache_read": 0.006
+            "input": 0.62,
+            "output": 2.42,
+            "cache_read": 0.14
           }
         }
       ],
@@ -1593,7 +1593,7 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-23"
   },
   "builds": [
     {
@@ -1612,11 +1612,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/zai-org/GLM-5.2",
-      "retrieved_at": "2026-11-19"
+      "retrieved_at": "2026-11-23"
     }
   ],
-  "verified_at": "2026-11-19",
-  "updated_at": "2026-11-19",
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
   "notes": "1 builds are attached.",
   "scorecard": {
     "overall": {
@@ -1741,7 +1741,7 @@
       "band": "strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-19",
+    "as_of": "2026-11-23",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

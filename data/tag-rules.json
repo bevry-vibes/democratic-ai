@@ -674,6 +674,12 @@
     ]
   },
   "model_overrides": {
+    "ricursiveAI/Ripple-65B-Preview": [
+      "task:text-generation",
+      "task:tool-calling",
+      "domain:language",
+      "modality:text"
+    ],
     "inworld/voice-isolator": [
       "task:speech-separation",
       "task:speech-enhancement",

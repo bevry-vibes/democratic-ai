@@ -9,9 +9,11 @@
   "releases": [],
   "organization": "desert-ant-labs",
   "released": "2026-11-05",
-  "summary": "",
+  "summary": "On-device face matching across a photo library or through a video.",
   "tags": [
-    "task:face-matching"
+    "task:face-matching",
+    "domain:vision",
+    "license:other"
   ],
   "capabilities": {
     "tasks": [
@@ -31,8 +33,8 @@
     "runtimes": []
   },
   "license": {
-    "id": "unknown",
-    "class": "unknown",
+    "id": "other",
+    "class": "use-restricted",
     "url": "https://huggingface.co/desert-ant-labs/face"
   },
   "openness": {
@@ -67,22 +69,36 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-23"
   },
   "builds": [],
+  "usage": [
+    {
+      "language": "swift",
+      "code": "import Face\n\nlet face = Face()\nlet faces = try await face.faces(contentsOf: photoURL)   // or UIImage, NSImage, CGImage, Data\nfaces.first?.box          // in 0...1 of the image, origin top left\nfaces.first?.faceprint    // Codable, or .data (512 bytes) for your own database\n\nvar library = FaceLibrary()\nlibrary.add(faces, photo: asset.id, date: asset.creationDate)\nfor person in library.people(.prominent) {               // or .all\n    show(person.name, library.face(person.keyFace)?.box)\n}\n\nlibrary.name(person.id, \"Noor\")\nlibrary.confirm(faceID, is: person.id)         // \"This is Noor\"\nlibrary.reject(faceID, from: person.id)        // \"This is not Noor\"\nlibrary.merge(other.id, into: person.id)       // \"These are the same person\"\nlibrary.newPerson(from: faceID, named: \"Ana\")  // \"This is Ana\", someone new\nlibrary.suggestions(for: person.id)            // \"Is this also Noor?\"\nlibrary.remove(photo: deletedAsset.id)\nlibrary.person(for: newFace.faceprint)?.name   // \"Noor\", or nil for someone new"
+    },
+    {
+      "language": "swift",
+      "code": "let pixels = try ImagePixels(width: w, height: h, rgba: bytes)\nlet faces = try await face.faces(in: pixels)"
+    },
+    {
+      "language": "kotlin",
+      "code": "import ai.desertant.face.Face\n\nFace(context).use { face ->\n    val library = face.library()                       // or face.library(saved), face.library(rows, names)\n    library.add(face.faces(bitmap), photo = assetId, date = takenAt)\n    for (person in library.people(prominent = true)) show(person)\n    library.name(person.id, \"Noor\")\n    library.reject(faceId, person.id)                  // \"This is not Noor\"\n    library.newPerson(faceId, \"Ana\")                   // \"This is Ana\", someone new\n    library.person(newFace.faceprint)?.name            // \"Noor\"\n    val saved = library.save()                         // JSONObject\n}"
+    }
+  ],
   "sources": [
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/desert-ant-labs/face",
-      "retrieved_at": "2026-11-19"
+      "retrieved_at": "2026-11-23"
     }
   ],
-  "verified_at": "2026-11-19",
-  "updated_at": "2026-11-19",
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
   "notes": "",
   "scorecard": {
     "overall": {
-      "score": 33.3,
+      "score": 36.7,
       "coverage": 2,
       "weights": {
         "syndication": 15,
@@ -112,11 +128,11 @@
         {
           "key": "openness",
           "label": "Openness/Morality",
-          "score": 50,
+          "score": 55,
           "weight": 30,
           "included": true,
           "effective_weight": 66.7,
-          "contribution": 33.3
+          "contribution": 36.7
         },
         {
           "key": "research",
@@ -131,7 +147,7 @@
       "note": "Weighted mean of the available scorecard axes. Missing axes are excluded, not treated as zero. Coverage is shown so a sparse score is not mistaken for a complete one."
     },
     "openness_morality": {
-      "score": 50,
+      "score": 55,
       "tier": "shared",
       "note": "The score counts only what the record can currently evidence. Unchecked training data and code add nothing; they are not treated as closed.",
       "components": [
@@ -155,8 +171,8 @@
         },
         {
           "label": "Licence",
-          "value": "unknown",
-          "points": 0,
+          "value": "other",
+          "points": 5,
           "max": 10
         }
       ]
@@ -188,7 +204,7 @@
       "band": "self-only",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-19",
+    "as_of": "2026-11-23",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

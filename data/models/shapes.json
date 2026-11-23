@@ -9,7 +9,7 @@
   "releases": [],
   "organization": "desert-ant-labs",
   "released": "2026-06-23",
-  "summary": "| | | | --- | --- | | Platforms | iOS, macOS, tvOS, visionOS, Android, Linux, Windows, Browser, Node | | Weights | v1.0.0 | | Demo | https://desertant.com/models/shapes/ | Shapes turns a hand-drawn stroke into a clean shape, connector, or arrow.",
+  "summary": "On-device shape recognition for pen, touch and mouse input.",
   "tags": [
     "task:image-classification",
     "domain:vision",
@@ -74,32 +74,32 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-23"
   },
   "builds": [],
   "usage": [
     {
       "language": "swift",
-      "code": "import Shapes\n\nlet shapes = Shapes()\nswitch try await shapes.recognize(points: strokePoints) {\ncase let .rectangle(corners)?: ...                        // [Point], around the perimeter\ncase let .arrow(from, _, _, to, startHead, endHead)?: ... // a cubic shaft and its heads\ncase let .scribble(hull)?: ...                            // delete what the hull covers\ncase let shape?: draw(shape.outline())                    // a polyline for any shape\ncase nil: ...                                             // not a shape: keep the ink\n}"
-    },
-    {
-      "language": "swift",
-      "code": "let shape = try await shapes.recognize(points: strokePoints, options: Options(rotation: .upright))"
+      "code": "import Shapes\n\nlet shapes = Shapes()\nlet shape = try await shapes.recognize(strokes: [\n    Stroke(points: across),                        // the strokes since the user paused, in drawing order\n    Stroke(points: down),\n])\nswitch shape {\ncase let .rectangle(corners)?: ...                 // [Point], around the perimeter\ncase let .arrow(from, _, _, to, startHead, endHead)?: ...\ncase let .plus(firstFrom, firstTo, secondFrom, secondTo)?: ...\ncase let .scribble(hull)?: ...                     // delete what the hull covers\ncase let shape?: draw(shape.paths())               // polylines for any shape\ncase nil: ...                                      // not a shape: keep the ink\n}"
     },
     {
       "language": "swift",
       "code": "canvasView.enableShapeSnapping()"
+    },
+    {
+      "language": "kotlin",
+      "code": "import ai.desertant.shapes.Options\nimport ai.desertant.shapes.Rotation\nimport ai.desertant.shapes.Shape\nimport ai.desertant.shapes.Shapes\nimport ai.desertant.shapes.Stroke\n\nShapes(context).use { shapes ->\n    val shape = shapes.recognize(listOf(Stroke(across), Stroke(down)), Options(rotation = Rotation.UPRIGHT))\n    when (shape) {\n        is Shape.Scribble -> eraseUnder(shape.hull)\n        is Shape.Arrow -> draw(shape.outline, shape.arrowheads(length = 12.0))\n        null -> keepInk()\n        else -> draw(shape.paths)\n    }\n}"
     }
   ],
   "sources": [
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/desert-ant-labs/shapes",
-      "retrieved_at": "2026-11-19"
+      "retrieved_at": "2026-11-23"
     }
   ],
-  "verified_at": "2026-11-19",
-  "updated_at": "2026-11-19",
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
   "notes": "",
   "scorecard": {
     "overall": {
@@ -209,7 +209,7 @@
       "band": "self-only",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-19",
+    "as_of": "2026-11-23",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

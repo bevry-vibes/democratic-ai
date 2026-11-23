@@ -100,6 +100,7 @@
       "cloudcode",
       "cloudflare-workers-ai",
       "commandcode",
+      "concentrate",
       "cortecs",
       "crossmodel",
       "deepinfra",
@@ -165,6 +166,7 @@
       "perplexity-agent",
       "phala",
       "powerspring",
+      "primalabs",
       "privatemode-ai",
       "proxystacks",
       "refuseless",
@@ -172,6 +174,7 @@
       "runcrate",
       "runinfra",
       "sandbase",
+      "sarvam",
       "scnet-token-plan",
       "scx-ai",
       "siliconflow",
@@ -312,9 +315,9 @@
           "id": "z-ai/glm-5.3-flash",
           "name": "GLM 5.3 Flash",
           "cost": {
-            "input": 0.15,
-            "output": 0.5,
-            "cache_read": 0.03
+            "input": 0.12,
+            "output": 0.4,
+            "cache_read": 0.024
           }
         }
       ],
@@ -465,6 +468,17 @@
             "input": 0.37,
             "output": 1.25,
             "cache_read": 0.075
+          }
+        }
+      ],
+      "concentrate": [
+        {
+          "id": "glm-5.3-flash",
+          "name": "GLM-5.3-Flash",
+          "cost": {
+            "input": 0.45,
+            "output": 1.5,
+            "cache_read": 0.09
           }
         }
       ],
@@ -670,8 +684,8 @@
           "id": "zai-org/GLM-5.3-Flash",
           "name": "GLM 5.3 Flash",
           "cost": {
-            "input": 0.16,
-            "output": 0.49,
+            "input": 0.17,
+            "output": 0.5,
             "cache_read": 0.04,
             "cache_write": 0
           }
@@ -864,15 +878,6 @@
         {
           "id": "canopywave/glm-5.3-flash",
           "name": "GLM-5.3 Flash (CanopyWave)",
-          "cost": {
-            "input": 0.15,
-            "output": 0.5,
-            "cache_read": 0.03
-          }
-        },
-        {
-          "id": "cloudflare/glm-5.3-flash",
-          "name": "GLM-5.3 Flash (Cloudflare)",
           "cost": {
             "input": 0.15,
             "output": 0.5,
@@ -1252,8 +1257,8 @@
           "id": "z-ai/glm-5.3-flash",
           "name": "GLM-5.3-Flash",
           "cost": {
-            "input": 0.1105,
-            "output": 0.3315
+            "input": 0.05187,
+            "output": 0.10192
           }
         }
       ],
@@ -1324,8 +1329,8 @@
           "id": "z-ai/glm-5.3-flash",
           "name": "GLM-5.3-Flash",
           "cost": {
-            "input": 0.15,
-            "output": 0.5,
+            "input": 0.0399,
+            "output": 0.074,
             "cache_read": 0.03
           }
         }
@@ -1401,6 +1406,17 @@
             "input": 0.1044414,
             "output": 0.36438444,
             "cache_read": 0.01856736
+          }
+        }
+      ],
+      "primalabs": [
+        {
+          "id": "primalabs-ai/GLM-5.3-Flash",
+          "name": "GLM-5.3-Flash",
+          "cost": {
+            "input": 0.15,
+            "output": 0.5,
+            "cache_read": 0.03
           }
         }
       ],
@@ -1497,6 +1513,17 @@
             "input": 0.15,
             "output": 0.5,
             "cache_read": 0.03
+          }
+        }
+      ],
+      "sarvam": [
+        {
+          "id": "glm5.3-flash",
+          "name": "GLM-5.3-Flash",
+          "cost": {
+            "input": 0.14361702,
+            "output": 0.4787234,
+            "cache_read": 0.02659574
           }
         }
       ],
@@ -2000,7 +2027,7 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-23"
   },
   "builds": [
     {
@@ -2052,11 +2079,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
-      "retrieved_at": "2026-11-19"
+      "retrieved_at": "2026-11-23"
     }
   ],
-  "verified_at": "2026-11-19",
-  "updated_at": "2026-11-19",
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
   "notes": "4 builds are attached.",
   "scorecard": {
     "overall": {
@@ -2174,7 +2201,7 @@
       "band": "strong",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-19",
+    "as_of": "2026-11-23",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }

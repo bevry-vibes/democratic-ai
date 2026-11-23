@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/ollama/ollama/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/ollama/ollama/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/ollama/ollama/releases.atom"/>
+  <title>Release notes from ollama</title>
+  <updated>2026-11-21T03:03:47Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.17</id>
+    <updated>2026-11-21T04:05:14Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.17"/>
+    <title>v0.40.17</title>
+    <content type="html">&lt;h2&gt;Inkling 2 Mini&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://ollama.com/library/inkling-2-mini&quot; rel=&quot;nofollow&quot;&gt;Inkling 2 Mini&lt;/a&gt; from Thinking Machines is a 26B parameter model with 5.4B active.&lt;/p&gt;
+&lt;p&gt;Its looped layers give it more computation per token than its size suggests, and it still fits on a Mac at about 20GB. It handles text and images, tool calls, and thinking, and scores 79.2% on SWE-Bench Verified).&lt;/p&gt;
+&lt;div class=&quot;snippet-clipboard-content notranslate position-relative overflow-auto&quot; data-snippet-clipboard-copy-content=&quot;  ollama run inkling-2-mini&quot;&gt;&lt;pre class=&quot;notranslate&quot;&gt;&lt;code&gt;  ollama run inkling-2-mini
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note: inkling-2-mini is supported on Apple silicon only in this release.  PC support will follow in an upcoming release.&lt;/p&gt;
+&lt;h2&gt;What&#39;s Changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ollama launch claude&lt;/code&gt; supports Claude Code&#39;s deferred tool loading, so MCP tools are loaded when needed instead of all at&lt;br&gt;
+once&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ollama on Apple silicon now serves multiple requests at once.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ollama launch opencode&lt;/code&gt; sets thinking options from the model&#39;s metadata&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ollama launch pi&lt;/code&gt; refreshes Pi&#39;s model list after sign-in and passes along prompt arguments&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ollama launch chatgpt --restore&lt;/code&gt; asks before switching an active profile and preserves existing settings and chat history;&lt;br&gt;
+quitting ChatGPT yourself now lets it exit through its own quit prompt&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Running &lt;code&gt;ollama&lt;/code&gt; with no arguments in a non-interactive shell prints help instead of erroring&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ctrl+C or Ctrl+G while in a multiline &lt;code&gt;&quot;&quot;&quot;&lt;/code&gt; block leaves multiline mode instead of swallowing the next line&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Changing the context shift setting no longer reloads the model&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vulkan now uses mmap for integrated GPUs, fixing &lt;code&gt;Failed to allocate pinned memory&lt;/code&gt; load failures on shared-memory GPUs&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;On Windows iGPUs, partially offloaded models no longer fail to allocate the KV cache&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tool definitions passed through the API keep JSON schema keywords Ollama doesn&#39;t model instead of dropping them&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Disabling thinking now maps to the model&#39;s lowest supported reasoning level rather than being ignored&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Source builds can use prebuilt MLX-C and XGrammar binaries&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/ollama/ollama/compare/v0.40.16...v0.40.17-rc3&quot;&gt;&lt;tt&gt;v0.40.16...v0.40.17-rc3&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.17-rc4</id>
+    <updated>2026-11-20T23:04:26Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.17-rc4"/>
+    <title>v0.40.17-rc4</title>
+    <content type="html">&lt;p&gt;Merge remote-tracking branch &#39;upstream/main&#39; into release_v0.40.17&lt;/p&gt;</content>
+    <author>
+      <name>dhiltgen</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4033016?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.17-rc3</id>
+    <updated>2026-11-20T18:37:07Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.17-rc3"/>
+    <title>v0.40.17-rc3</title>
+    <content type="html">&lt;p&gt;mlxrunner: add Inkling 2 Mini&lt;/p&gt;</content>
+    <author>
+      <name>dhiltgen</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4033016?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.17-rc2</id>
+    <updated>2026-11-19T23:41:42Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.17-rc2"/>
+    <title>v0.40.17-rc2: mlxrunner: adapt saved history to memory pressure (#19678)</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;mlxrunner: adapt saved history to memory pressure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Retain Metal prefix history using observed memory headroom and execution&lt;br&gt;
+workspace rather than a fixed 8 GiB allowance. Release unused buffers and&lt;br&gt;
+cold history when system compression grows, preserving reusable paths and&lt;br&gt;
+active requests.&lt;/p&gt;
+&lt;p&gt;Cover pressure reclamation, snapshot ownership, memory observation, and&lt;br&gt;
+cacheless request isolation.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;address comments&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;address comments&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>dhiltgen</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4033016?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.17-rc1</id>
+    <updated>2026-11-16T16:43:54Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.17-rc1"/>
+    <title>v0.40.17-rc1: mlxrunner: batch speculative verification (#19663)</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;mlxrunner: batch speculative verification&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Keep drafting active for concurrent generation by sharing target verification while preserving per-request sampling and cache rollback. Learn draft depth for each concurrent workload separately from isolated requests, and preserve probes that short requests never execute.&lt;/p&gt;
+&lt;p&gt;Materialize owned target features before a reader can pause, and cover acceptance, cancellation, handoffs, mixed decoding and retained-memory boundaries.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;address comments&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>dhiltgen</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4033016?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.17-rc0</id>
+    <updated>2026-11-10T21:42:11Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.17-rc0"/>
+    <title>v0.40.17-rc0</title>
+    <content type="html">&lt;p&gt;MLX, MLX-C: version bump (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6316056226&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/19647&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/19647/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/19647&quot;&gt;#19647&lt;/a&gt;)&lt;/p&gt;</content>
+    <author>
+      <name>dhiltgen</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/4033016?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.16</id>
+    <updated>2026-11-09T23:45:36Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.16"/>
+    <title>v0.40.16</title>
+    <content type="html">&lt;h2&gt;Ripple Preview&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://ollama.com/library/ripple-preview&quot; rel=&quot;nofollow&quot;&gt;Ripple Preview&lt;/a&gt; from Ricursive Intelligence is a 65B dense model built for agentic coding.&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell notranslate position-relative overflow-auto&quot; data-snippet-clipboard-copy-content=&quot;ollama run ripple-preview&quot;&gt;&lt;pre&gt;ollama run ripple-preview&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;What&#39;s Changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Qwen3.8 Flash Next uses about 27 GiB less memory on Apple silicon&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ollama launch claude&lt;/code&gt; always routes Claude Code to the selected model&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ollama launch&lt;/code&gt; explains when a cloud model has been retired&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/v1/responses&lt;/code&gt; respects &lt;code&gt;truncation&lt;/code&gt; and no longer silently truncates by default&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/v1/models&lt;/code&gt; returns an empty list instead of &lt;code&gt;null&lt;/code&gt; when no models are installed&lt;/li&gt;
+&lt;li&gt;CUDA 13.5 support for Windows on ARM&lt;/li&gt;
+&lt;li&gt;Updated llama.cpp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/ollama/ollama/compare/v0.40.15...v0.40.16&quot;&gt;&lt;tt&gt;v0.40.15...v0.40.16&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.16-rc0</id>
+    <updated>2026-11-08T00:36:53Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.16-rc0"/>
+    <title>v0.40.16-rc0: Add ripple preview support to the MLX runner (#19592)</title>
+    <content type="html">&lt;p&gt;Add the Ripple model, renderer, parser and import registration.&lt;br&gt;
+Support per-layer NoPE in DFlash drafts.&lt;br&gt;
+Fuse MLP activation, value blending and attention gating.&lt;br&gt;
+Add reference fixtures and model/runner regression tests.&lt;/p&gt;</content>
+    <author>
+      <name>pdevine</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/75239?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.15</id>
+    <updated>2026-11-06T01:47:18Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.15"/>
+    <title>v0.40.15</title>
+    <content type="html">&lt;h2&gt;MiMo V2.6&lt;/h2&gt;
+&lt;p&gt;Xiaomi MiMo&#39;s &lt;a href=&quot;https://ollama.com/library/mimo-v2.6&quot; rel=&quot;nofollow&quot;&gt;mimo-v2.6&lt;/a&gt;, a 9B model built for code and agent workflows, is now supported in Ollama.&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell notranslate position-relative overflow-auto&quot; data-snippet-clipboard-copy-content=&quot;ollama run mimo-v2.6&quot;&gt;&lt;pre&gt;ollama run mimo-v2.6&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;AutoTrust decision models&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://ollama.com/library/autotrust-jev&quot; rel=&quot;nofollow&quot;&gt;AutoTrust&lt;/a&gt; decision models read text and return choices, yes or no probabilities, and ratings for the questions you supply. The family includes 9b, 35b, and 27b-vl sizes — the 35b and 27b-vl sizes can also read images.&lt;/p&gt;
+&lt;div class=&quot;highlight highlight-source-shell notranslate position-relative overflow-auto&quot; data-snippet-clipboard-copy-content=&quot;ollama run autotrust-jev &amp;quot;A customer says their card was charged twice.&amp;quot; --ask &amp;quot;Is this a billing issue?&amp;quot;&quot;&gt;&lt;pre&gt;ollama run autotrust-jev &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;A customer says their card was charged twice.&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; --ask &lt;span class=&quot;pl-s&quot;&gt;&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;Is this a billing issue?&lt;span class=&quot;pl-pds&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note: autotrust-jev is supported on Apple silicon in this release.&lt;/p&gt;
+&lt;h2&gt;What&#39;s Changed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ollama launch now supports Kimi Code CLI — the successor to kimi-cli — and offers to migrate existing kimi-cli setups&lt;/li&gt;
+&lt;li&gt;ollama launch now fills in Pi&#39;s model list automatically so models can be picked inside Pi, and Claude Desktop&#39;s model&lt;br&gt;
+picker shows Ollama&#39;s actual model names&lt;/li&gt;
+&lt;li&gt;Recurrent and vision GGUF models can now serve more than one request at a time&lt;/li&gt;
+&lt;li&gt;Qwen3 and Qwen3.5 models using long-context (YaRN) scaling&lt;/li&gt;
+&lt;li&gt;Running ollama with no arguments opens the welcome launcher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/ollama/ollama/compare/v0.40.14...v0.40.15&quot;&gt;&lt;tt&gt;v0.40.14...v0.40.15&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/658928958/v0.40.15-rc2</id>
+    <updated>2026-11-05T21:41:21Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/ollama/ollama/releases/tag/v0.40.15-rc2"/>
+    <title>v0.40.15-rc2</title>
+    <content type="html">&lt;p&gt;cmd/launch: add Kimi Code CLI support (&lt;a class=&quot;issue-link js-issue-link&quot; data-error-text=&quot;Failed to load title&quot; data-id=&quot;6194448168&quot; data-permission-text=&quot;Title is private&quot; data-url=&quot;https://github.com/ollama/ollama/issues/19506&quot; data-hovercard-type=&quot;pull_request&quot; data-hovercard-url=&quot;/ollama/ollama/pull/19506/hovercard&quot; href=&quot;https://github.com/ollama/ollama/pull/19506&quot;&gt;#19506&lt;/a&gt;)&lt;/p&gt;</content>
+    <author>
+      <name>jberg5</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/21697246?s=60&amp;v=4"/>
+  </entry>
+</feed>

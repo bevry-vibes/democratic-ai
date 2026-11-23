@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-11-19T00:28:40.870Z",
-  "generated_on": "2026-11-19",
+  "updated_at": "2026-11-23T14:03:50.234Z",
+  "generated_on": "2026-11-23",
   "title": "Democratic AI Scorecard",
   "as_of": "2026-11-14",
-  "models": 256,
-  "openness_scored": 256,
-  "performance_scored": 38,
+  "models": 271,
+  "openness_scored": 271,
+  "performance_scored": 37,
   "research_scored": 13,
-  "average_overall": 42.2,
-  "overall_scored": 256,
+  "average_overall": 42.5,
+  "overall_scored": 271,
   "note": "Current values only. The scorecard computes openness from release terms and takes performance and research from current task benchmarks. Missing axes stay missing; they are not zero.",
   "applied": [
     {
@@ -61,11 +61,25 @@
       "overall": 76.4
     },
     {
+      "id": "kimi-k2-5",
+      "openness": 55,
+      "performance": null,
+      "research": null,
+      "overall": 63.3
+    },
+    {
       "id": "kimi-k3",
       "openness": 55,
       "performance": 88.3,
       "research": 93.1,
       "overall": 77.8
+    },
+    {
+      "id": "kimi-k3-1-pro",
+      "openness": 55,
+      "performance": 88.3,
+      "research": 92.1,
+      "overall": 77.6
     },
     {
       "id": "ling-3-0-flash",
@@ -138,6 +152,13 @@
       "overall": 70.6
     },
     {
+      "id": "step-5-preview",
+      "openness": 55,
+      "performance": 35.9,
+      "research": null,
+      "overall": 50.4
+    },
+    {
       "id": "ling-3-0-flash-fin",
       "openness": 60,
       "performance": 65.5,
@@ -166,6 +187,13 @@
       "overall": 60
     },
     {
+      "id": "muse-spark-open-816b-a42b",
+      "openness": 55,
+      "performance": null,
+      "research": null,
+      "overall": 56.7
+    },
+    {
       "id": "beam-1-0-501b-a23b",
       "openness": 60,
       "performance": 79,
@@ -180,13 +208,6 @@
       "overall": 48.9
     },
     {
-      "id": "kimi-k3-1-pro",
-      "openness": 55,
-      "performance": 88.3,
-      "research": 92.1,
-      "overall": 73.1
-    },
-    {
       "id": "ling-3-0-tiny",
       "openness": 60,
       "performance": 27.7,
@@ -194,7 +215,35 @@
       "overall": 43
     },
     {
+      "id": "motif-3",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 56.7
+    },
+    {
+      "id": "muse-glimmer-30b",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 56.7
+    },
+    {
       "id": "nex-n2-6",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 56.7
+    },
+    {
+      "id": "qwen3-5-27b",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 56.7
+    },
+    {
+      "id": "qwen3-5-35b-a3b",
       "openness": 60,
       "performance": null,
       "research": null,
@@ -213,13 +262,6 @@
       "performance": 77.2,
       "research": null,
       "overall": 64.6
-    },
-    {
-      "id": "step-5-preview",
-      "openness": 55,
-      "performance": 35.9,
-      "research": null,
-      "overall": 45.1
     },
     {
       "id": "flint",
@@ -299,18 +341,32 @@
       "overall": 64.5
     },
     {
-      "id": "ornith-1-5-35b-a3b",
-      "openness": 60,
-      "performance": 68.8,
-      "research": null,
-      "overall": 58.8
-    },
-    {
       "id": "qwen3-8-flash-next",
       "openness": 55,
       "performance": 77.2,
       "research": null,
       "overall": 61
+    },
+    {
+      "id": "daisyrose-27b",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 46.7
+    },
+    {
+      "id": "inkling-2-mini",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 46.7
+    },
+    {
+      "id": "ripple-65b-preview",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 46.7
     },
     {
       "id": "ace-step-webgpu-models",
@@ -325,13 +381,6 @@
       "performance": null,
       "research": null,
       "overall": 36.7
-    },
-    {
-      "id": "armorocr",
-      "openness": 60,
-      "performance": null,
-      "research": null,
-      "overall": 40
     },
     {
       "id": "audio8-asr-infinite",
@@ -538,13 +587,20 @@
     },
     {
       "id": "face",
-      "openness": 50,
+      "openness": 55,
       "performance": null,
       "research": null,
-      "overall": 33.3
+      "overall": 36.7
     },
     {
       "id": "fastdialoguesidon",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
+      "id": "fluid-speech-pro",
       "openness": 60,
       "performance": null,
       "research": null,
@@ -619,6 +675,41 @@
       "performance": null,
       "research": null,
       "overall": 36.7
+    },
+    {
+      "id": "julia-1",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
+      "id": "julia-1-5",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
+      "id": "julia-2",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
+      "id": "julia-2-flash",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
+      "id": "julia-2-nano",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
     },
     {
       "id": "kapitsa-27b",
@@ -720,13 +811,6 @@
     },
     {
       "id": "lfm2-2-6b-longevity",
-      "openness": 55,
-      "performance": null,
-      "research": null,
-      "overall": 36.7
-    },
-    {
-      "id": "lfm2-5-1-2b-base",
       "openness": 55,
       "performance": null,
       "research": null,
@@ -916,6 +1000,34 @@
     },
     {
       "id": "ling-mini-2-0",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
+      "id": "lingsante-3-1-air-vl",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
+      "id": "lingsante-3-1-flash",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
+      "id": "lingsante-3-1-flash-mxfp4",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
+      "id": "lingsante-pulse-1-0",
       "openness": 60,
       "performance": null,
       "research": null,
@@ -1258,6 +1370,13 @@
       "overall": 36.7
     },
     {
+      "id": "muse-glimmer-30b-assistant",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
       "id": "nllb-200-3-3b",
       "openness": 55,
       "performance": null,
@@ -1287,27 +1406,6 @@
     },
     {
       "id": "opus-mt-id-en",
-      "openness": 60,
-      "performance": null,
-      "research": null,
-      "overall": 40
-    },
-    {
-      "id": "ornith-1-5-397b",
-      "openness": 60,
-      "performance": null,
-      "research": null,
-      "overall": 40
-    },
-    {
-      "id": "ornith-1-5-9b",
-      "openness": 60,
-      "performance": null,
-      "research": null,
-      "overall": 40
-    },
-    {
-      "id": "orze-asr-3way",
       "openness": 60,
       "performance": null,
       "research": null,
@@ -1356,14 +1454,14 @@
       "overall": 36.7
     },
     {
-      "id": "qwen3-asr-1-7b-hf-beam4",
+      "id": "qwen2-1-5b-instruct",
       "openness": 60,
       "performance": null,
       "research": null,
       "overall": 40
     },
     {
-      "id": "qwen3-asr-1-7b-hf-orze",
+      "id": "qwen2-vl-2b-instruct",
       "openness": 60,
       "performance": null,
       "research": null,
@@ -1440,6 +1538,13 @@
       "overall": 40
     },
     {
+      "id": "rumble-2-flash",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
+    },
+    {
       "id": "sava",
       "openness": 60,
       "performance": null,
@@ -1466,13 +1571,6 @@
       "performance": null,
       "research": null,
       "overall": 36.7
-    },
-    {
-      "id": "singguard-2b",
-      "openness": 60,
-      "performance": null,
-      "research": null,
-      "overall": 40
     },
     {
       "id": "singvl-s1-4b",
@@ -1529,6 +1627,13 @@
       "performance": null,
       "research": null,
       "overall": 36.7
+    },
+    {
+      "id": "tml-d24-varloop-research",
+      "openness": 60,
+      "performance": null,
+      "research": null,
+      "overall": 40
     },
     {
       "id": "tongue",

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en-US">
+  <id>tag:github.com,2008:https://github.com/cline/cline/releases</id>
+  <link type="text/html" rel="alternate" href="https://github.com/cline/cline/releases"/>
+  <link type="application/atom+xml" rel="self" href="https://github.com/cline/cline/releases.atom"/>
+  <title>Release notes from cline</title>
+  <updated>2026-11-21T05:37:41Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/824874689/v4.1.27</id>
+    <updated>2026-11-21T06:05:06Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/cline/cline/releases/tag/v4.1.27"/>
+    <title>v4.1.27</title>
+    <content type="html">&lt;h3&gt;Added&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;LM Studio settings have an API key field, for servers with &quot;Require Authentication&quot; turned on.&lt;/li&gt;
+&lt;li&gt;The MCP tab shows a &quot;read-only&quot; badge on tools whose server declares them read-only.&lt;/li&gt;
+&lt;li&gt;The Account view has a Privacy settings link to the Cline web app&#39;s data-use preferences.&lt;/li&gt;
+&lt;li&gt;The extension package now includes its third-party license notices.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Changed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;With no saved model, the Cline provider now starts on the first free model instead of Claude Sonnet 5.5. Saved selections are untouched.&lt;/li&gt;
+&lt;li&gt;The reasoning effort dropdown shows the effort a new task will actually use, and has a Default entry that clears the saved setting.&lt;/li&gt;
+&lt;li&gt;A provider&#39;s model list refreshes after you save its API key or base URL, and a failed refresh (such as a rejected key) shows as an error in the model picker.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;read_files&lt;/code&gt; results are no longer cut to 8k characters on the way to the model. A read now arrives in full, up to the tool&#39;s own limit of 2000 lines or about 48k characters.&lt;/li&gt;
+&lt;li&gt;Refreshed the model catalog. Adds 94 providers from models.dev and drops Lilac and Tempr. The Cline recommended list adds Muse Ember. The Cline free list drops Reflection Beam, Laguna S 2.1 and Solar Mini 4. ClinePass drops DeepSeek V4.1 Flash, Mimo V2.6 Flash, Mimo V2.6 Pro, MiniMax M3, Qwen3.7 Plus and Qwen3.7 Max. Default models change for 67 other providers, mostly to Kimi K3.1 Pro, Gemini 4 Neon (including the &lt;code&gt;gemini&lt;/code&gt; and &lt;code&gt;vertex&lt;/code&gt; providers) or DeepSeek V4.1 Flash 1017.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Fixed&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Picking &quot;None&quot; for reasoning effort is now saved and sent. Before, GPT-6 on Azure kept its default effort and rejected tool calls.&lt;/li&gt;
+&lt;li&gt;Turning reasoning off now reaches custom models that have saved Model Configuration overrides. Before, gpt-5.6 and gpt-6 chat-completions endpoints rejected every tool call.&lt;/li&gt;
+&lt;li&gt;On the native OpenAI provider, the reasoning level is fitted to what each model supports, so &lt;code&gt;max&lt;/code&gt; and Extra High are no longer rejected by GPT-5.x and o-series models.&lt;/li&gt;
+&lt;li&gt;Reflection Beam no longer fails every turn with &lt;code&gt;400 Missing required parameter: &#39;messages[n].reasoning_content&#39;&lt;/code&gt; after a compaction or a model switch.&lt;/li&gt;
+&lt;li&gt;Compaction no longer falls back to the basic summary on models the catalog doesn&#39;t describe.&lt;/li&gt;
+&lt;li&gt;LiteLLM: the legacy &lt;code&gt;max_tokens&lt;/code&gt; field is no longer used as the input budget when the model reports &lt;code&gt;max_output_tokens&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Reasoning text from a turn that was cancelled or failed no longer shows up at the start of the next turn&#39;s reasoning.&lt;/li&gt;
+&lt;li&gt;Commit search passes your query to git as arguments instead of shell text, so a quoted search matches the exact phrase.&lt;/li&gt;
+&lt;li&gt;Security: undici raised to 7.30.1, which fixes two process-crash issues.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/cline/cline/compare/v4.1.26...v4.1.27&quot;&gt;&lt;tt&gt;v4.1.26...v4.1.27&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/824874689/sdk/ui/v0.2.1</id>
+    <updated>2026-11-21T05:19:12Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/cline/cline/releases/tag/sdk%2Fui%2Fv0.2.1"/>
+    <title>sdk/ui/v0.2.1</title>
+    <content type="html">&lt;p&gt;@cline/ui@0.2.1&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/824874689/sdk/shared/v0.2.1</id>
+    <updated>2026-11-21T05:19:03Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/cline/cline/releases/tag/sdk%2Fshared%2Fv0.2.1"/>
+    <title>sdk/shared/v0.2.1</title>
+    <content type="html">&lt;p&gt;@cline/shared@0.2.1&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/824874689/sdk/sdk/v0.2.1</id>
+    <updated>2026-11-21T05:19:22Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/cline/cline/releases/tag/sdk%2Fsdk%2Fv0.2.1"/>
+    <title>SDK v0.2.1</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;read_files&lt;/code&gt; results are no longer re-cut to the 8k tool-result cap on the way to the provider. They use the 50k file-content cap, so a read the tool reported in full arrives in full. Command, search, MCP and custom tool results keep the 8k cap, and an explicit tool-result cap still applies&lt;/li&gt;
+&lt;li&gt;Models that need interleaved reasoning get a placeholder &lt;code&gt;reasoning_content&lt;/code&gt; on assistant messages that have none. This fixes Reflection Beam&#39;s &lt;code&gt;400 Missing required parameter: &#39;messages[n].reasoning_content&#39;&lt;/code&gt; after compaction or a model switch. The fact is carried as &lt;code&gt;ModelInfo.metadata.interleavedReasoningField&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The summarizer now states a preference to go without reasoning instead of disabling it outright. The gateway disables it only for models whose catalog entry advertises an off option. Before, uncatalogued models got &lt;code&gt;reasoning_effort: &quot;none&quot;&lt;/code&gt;, which some endpoints reject, and compaction fell back to basic&lt;/li&gt;
+&lt;li&gt;A custom model with saved overrides now has &lt;code&gt;reasoning&lt;/code&gt; seeded into its capability list unless it sets &lt;code&gt;supportsReasoning: false&lt;/code&gt;, so an explicit reasoning disable reaches the provider. Before, gpt-5.6 and gpt-6 chat-completions endpoints rejected every tool call&lt;/li&gt;
+&lt;li&gt;The native OpenAI adapter fits the reasoning level to the model&#39;s advertised effort ladder, so &lt;code&gt;max&lt;/code&gt; and Extra High are no longer sent verbatim to GPT-5.x and o-series models that reject them&lt;/li&gt;
+&lt;li&gt;LiteLLM: the legacy &lt;code&gt;max_tokens&lt;/code&gt; is no longer used as the input budget when &lt;code&gt;max_output_tokens&lt;/code&gt; is set. Null limits are treated as missing&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;cline&lt;/code&gt; provider&#39;s bundled default is now the first bundled free model. &lt;code&gt;resolveClineDefaultModelId()&lt;/code&gt; in &lt;code&gt;@cline/core&lt;/code&gt; returns the first free model from the live recommended feed, then the bundled one, then &lt;code&gt;CLINE_DEFAULT_MODEL_ID&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CLINE_DEFAULT_MODEL_ID&lt;/code&gt; is now &lt;code&gt;anthropic/claude-sonnet-5.5&lt;/code&gt;, and the remaining hardcoded default-model literals use it. &lt;code&gt;@cline/shared&lt;/code&gt; adds &lt;code&gt;ANTHROPIC_DEFAULT_MODEL_ID&lt;/code&gt; for Anthropic&#39;s bare id format&lt;/li&gt;
+&lt;li&gt;A running compaction can be stopped, and cancellations are counted in telemetry&lt;/li&gt;
+&lt;li&gt;Session config and the hub RPC schema accept the &lt;code&gt;max&lt;/code&gt; reasoning effort&lt;/li&gt;
+&lt;li&gt;With tools and spawning enabled, core registers &lt;code&gt;ux_verifier&lt;/code&gt;, which delegates an ordered checklist to a subagent through the host&#39;s &lt;code&gt;spawn_agent&lt;/code&gt; executor. Disabling &lt;code&gt;spawn_agent&lt;/code&gt; disables it too&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;createUxVerificationReportTool()&lt;/code&gt; creates the opt-in &lt;code&gt;report_ux_verification&lt;/code&gt; tool for structured reports with captions, pass/fail/blocked results and screenshot references&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;createPublishArtifactsTool({ publish })&lt;/code&gt; creates the opt-in &lt;code&gt;publish_artifacts&lt;/code&gt; tool. &lt;code&gt;createArtifactPublisher&lt;/code&gt; from &lt;code&gt;@cline/core/cloud&lt;/code&gt; publishes to cloud sessions through signed upload policies. Artifact IDs default to the source filename&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;McpToolDescriptor.annotations&lt;/code&gt; carries a server&#39;s tool hints (&lt;code&gt;readOnlyHint&lt;/code&gt; and friends) through the stdio and URL clients and the manager cache. &lt;code&gt;task.tool_used&lt;/code&gt; telemetry gains &lt;code&gt;mode&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;session.resume&lt;/code&gt; starts a runtime for a saved session ID and reads history on the hub, instead of requiring &lt;code&gt;initialMessages&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Cloud task creation accepts &lt;code&gt;initialMessage&lt;/code&gt; to create and send in one call, and &lt;code&gt;localGit&lt;/code&gt; to launch from a captured Git snapshot&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HubCloudSessionClient.getArtifactDownloadUrl(sessionId, artifactId)&lt;/code&gt; returns a signed URL without starting the sandbox&lt;/li&gt;
+&lt;li&gt;Provider, model, MCP and MCP OAuth management are available as hub commands, with token authentication required for provider management&lt;/li&gt;
+&lt;li&gt;The hub can return session history in bounded chunks and archived cloud history&lt;/li&gt;
+&lt;li&gt;The hub validates caller accounts for cloud commands, and no longer re-sends a rejected Cline refresh token on every cloud poll&lt;/li&gt;
+&lt;li&gt;Hub cloud requests no longer duplicate the API prefix&lt;/li&gt;
+&lt;li&gt;Hub session handlers are retained when a session deletion fails&lt;/li&gt;
+&lt;li&gt;Confirmed cloud handoff publication is exported from &lt;code&gt;@cline/core/cloud&lt;/code&gt; for direct hosts&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@cline/shared&lt;/code&gt; adds &lt;code&gt;resolveClineAppUrl&lt;/code&gt;, and the account response carries &lt;code&gt;dataPrivacyPath&lt;/code&gt; for the web app&#39;s privacy settings page&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@cline/ui&lt;/code&gt; adds &lt;code&gt;SectionHeading&lt;/code&gt;, &lt;code&gt;Banner&lt;/code&gt;, &lt;code&gt;ItemCard&lt;/code&gt;, &lt;code&gt;DetailList&lt;/code&gt;, controlled &lt;code&gt;Dialog&lt;/code&gt; components and a UX verification report carousel with screenshot downloads. Buttons, badges and switches are refreshed (loading and pending states, a small switch size), along with the colour tokens and a new &lt;code&gt;text-xxs&lt;/code&gt; step&lt;/li&gt;
+&lt;li&gt;Removed the &lt;code&gt;CLINE_CAPTURE_*&lt;/code&gt; provider request capture, which wrote full request bodies to disk&lt;/li&gt;
+&lt;li&gt;Every SDK package now includes its license file&lt;/li&gt;
+&lt;li&gt;Refreshed the model catalog (6,457 → 7,621 models). Adds 94 providers from models.dev and drops Lilac and Tempr. The Cline recommended list adds Muse Ember. The Cline free list drops Reflection Beam, Laguna S 2.1 and Solar Mini 4, so the &lt;code&gt;cline&lt;/code&gt; provider&#39;s bundled default is Nemotron 3.5 Super VL. ClinePass drops DeepSeek V4.1 Flash, Mimo V2.6 Flash, Mimo V2.6 Pro, MiniMax M3, Qwen3.7 Plus and Qwen3.7 Max. Default models change for 67 other providers, mostly to Kimi K3.1 Pro, Gemini 4 Neon (including the &lt;code&gt;gemini&lt;/code&gt; and &lt;code&gt;vertex&lt;/code&gt; providers) or DeepSeek V4.1 Flash 1017. Qwen models now report tiered families such as &lt;code&gt;qwen-plus&lt;/code&gt; and &lt;code&gt;qwen-max&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/cline/cline/compare/sdk/sdk/v0.2.0...sdk/sdk/v0.2.1&quot;&gt;&lt;tt&gt;sdk/sdk/v0.2.0...sdk/sdk/v0.2.1&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/824874689/sdk/llms/v0.2.1</id>
+    <updated>2026-11-21T05:19:05Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/cline/cline/releases/tag/sdk%2Fllms%2Fv0.2.1"/>
+    <title>sdk/llms/v0.2.1</title>
+    <content type="html">&lt;p&gt;@cline/llms@0.2.1&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/824874689/sdk/core/v0.2.1</id>
+    <updated>2026-11-21T05:19:08Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/cline/cline/releases/tag/sdk%2Fcore%2Fv0.2.1"/>
+    <title>sdk/core/v0.2.1</title>
+    <content type="html">&lt;p&gt;@cline/core@0.2.1&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/824874689/sdk/agents/v0.2.1</id>
+    <updated>2026-11-21T05:19:07Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/cline/cline/releases/tag/sdk%2Fagents%2Fv0.2.1"/>
+    <title>sdk/agents/v0.2.1</title>
+    <content type="html">&lt;p&gt;@cline/agents@0.2.1&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/824874689/desktop-v0.0.50</id>
+    <updated>2026-11-21T05:54:15Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/cline/cline/releases/tag/desktop-v0.0.50"/>
+    <title>Desktop v0.0.50</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;The thinking picker offers &lt;strong&gt;Max&lt;/strong&gt; reasoning effort, for models whose top level is max&lt;/li&gt;
+&lt;li&gt;A manual &lt;code&gt;/compact&lt;/code&gt; can be stopped. Before, it could sit on &quot;Thinking…&quot; with no Stop button when the summarizer stalled&lt;/li&gt;
+&lt;li&gt;With no saved model, the Cline provider now starts on the first free model instead of Claude Sonnet 5.5. Saved selections are untouched&lt;/li&gt;
+&lt;li&gt;The Account view has a Privacy settings link to the Cline web app&#39;s data-use preferences&lt;/li&gt;
+&lt;li&gt;Settings → About has a &lt;strong&gt;Third-party notices&lt;/strong&gt; entry with the licenses for the open source software included in Cline&lt;/li&gt;
+&lt;li&gt;On macOS, Check for Updates from the menu runs once instead of twice&lt;/li&gt;
+&lt;li&gt;Refreshed colours and typography across the app&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;read_files&lt;/code&gt; results are no longer cut to 8k characters on the way to the model. A read now arrives in full, up to the tool&#39;s own limit of 2000 lines or about 48k characters&lt;/li&gt;
+&lt;li&gt;Reflection Beam no longer fails every turn with &lt;code&gt;400 Missing required parameter: &#39;messages[n].reasoning_content&#39;&lt;/code&gt; after a compaction or a model switch&lt;/li&gt;
+&lt;li&gt;Compaction no longer falls back to the basic summary on models the catalog doesn&#39;t describe. The summarizer was sending &lt;code&gt;reasoning_effort: &quot;none&quot;&lt;/code&gt;, which some endpoints reject&lt;/li&gt;
+&lt;li&gt;Turning reasoning off now reaches custom models that have saved Model Configuration overrides. Before, gpt-5.6 and gpt-6 chat-completions endpoints rejected every tool call&lt;/li&gt;
+&lt;li&gt;On the native OpenAI provider, the reasoning level is fitted to what each model supports, so &lt;code&gt;max&lt;/code&gt; and Extra High are no longer rejected by GPT-5.x and o-series models&lt;/li&gt;
+&lt;li&gt;LiteLLM: the legacy &lt;code&gt;max_tokens&lt;/code&gt; field is no longer used as the input budget when the model reports &lt;code&gt;max_output_tokens&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Refreshed the model catalog. Adds 94 providers from models.dev and drops Lilac and Tempr. The Cline recommended list adds Muse Ember. The Cline free list drops Reflection Beam, Laguna S 2.1 and Solar Mini 4. ClinePass drops DeepSeek V4.1 Flash, Mimo V2.6 Flash, Mimo V2.6 Pro, MiniMax M3, Qwen3.7 Plus and Qwen3.7 Max. Default models change for 67 other providers, mostly to Kimi K3.1 Pro, Gemini 4 Neon (including the &lt;code&gt;gemini&lt;/code&gt; and &lt;code&gt;vertex&lt;/code&gt; providers) or DeepSeek V4.1 Flash 1017&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/cline/cline/compare/desktop-v0.0.49...desktop-v0.0.50&quot;&gt;&lt;tt&gt;desktop-v0.0.49...desktop-v0.0.50&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/824874689/cli-v3.0.75</id>
+    <updated>2026-11-21T05:30:43Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/cline/cline/releases/tag/cli-v3.0.75"/>
+    <title>CLI v3.0.75</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;One-shot runs (a prompt argument or piped stdin) now start in yolo mode instead of act mode, since nobody is at the keyboard to approve tools. Act mode is kept when auto-approve is off (&lt;code&gt;--auto-approve false&lt;/code&gt; or the saved setting), when a mode flag is passed, when plan mode is saved, or when the prompt is a &lt;code&gt;/team&lt;/code&gt; prompt. Yolo mode has no team tools, so pass &lt;code&gt;--act&lt;/code&gt; when you need them&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--timeout&lt;/code&gt; and Ctrl+C now stop the first turn of a one-shot run. Before, neither could interrupt it&lt;/li&gt;
+&lt;li&gt;The CLI no longer reads &lt;code&gt;.env&lt;/code&gt; or &lt;code&gt;bunfig.toml&lt;/code&gt; from the directory it is launched in&lt;/li&gt;
+&lt;li&gt;With no saved model, the Cline provider now starts on the first free model instead of Claude Sonnet 5.5. Saved selections are untouched&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/account&lt;/code&gt; shows a Privacy settings link to the Cline web app&#39;s data-use preferences&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;read_files&lt;/code&gt; results are no longer cut to 8k characters on the way to the model. A read now arrives in full, up to the tool&#39;s own limit of 2000 lines or about 48k characters&lt;/li&gt;
+&lt;li&gt;Reflection Beam no longer fails every turn with &lt;code&gt;400 Missing required parameter: &#39;messages[n].reasoning_content&#39;&lt;/code&gt; after a compaction or a model switch&lt;/li&gt;
+&lt;li&gt;Compaction no longer falls back to the basic summary on models the catalog doesn&#39;t describe. The summarizer was sending &lt;code&gt;reasoning_effort: &quot;none&quot;&lt;/code&gt;, which some endpoints reject&lt;/li&gt;
+&lt;li&gt;Turning reasoning off now reaches custom models that have saved Model Configuration overrides. Before, gpt-5.6 and gpt-6 chat-completions endpoints rejected every tool call&lt;/li&gt;
+&lt;li&gt;On the native OpenAI provider, the reasoning level is fitted to what each model supports, so &lt;code&gt;max&lt;/code&gt; and Extra High are no longer rejected by GPT-5.x and o-series models&lt;/li&gt;
+&lt;li&gt;LiteLLM: the legacy &lt;code&gt;max_tokens&lt;/code&gt; field is no longer used as the input budget when the model reports &lt;code&gt;max_output_tokens&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Removed the &lt;code&gt;CLINE_CAPTURE_*&lt;/code&gt; debug variables, which wrote full provider request bodies to disk&lt;/li&gt;
+&lt;li&gt;Experimental: set &lt;code&gt;CLINE_CLOUD_SESSIONS=1&lt;/code&gt; to run tasks in Cline Cloud from the TUI. Ctrl+O toggles Local/Cloud, Ctrl+K picks the repo and branch, and &lt;code&gt;/model&lt;/code&gt; picks the cloud model&lt;/li&gt;
+&lt;li&gt;Each platform package now ships a &lt;code&gt;THIRD_PARTY_NOTICES.txt&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Security: undici raised to 7.30.1, which fixes two process-crash issues&lt;/li&gt;
+&lt;li&gt;Refreshed the model catalog. Adds 94 providers from models.dev and drops Lilac and Tempr. The Cline recommended list adds Muse Ember. The Cline free list drops Reflection Beam, Laguna S 2.1 and Solar Mini 4. ClinePass drops DeepSeek V4.1 Flash, Mimo V2.6 Flash, Mimo V2.6 Pro, MiniMax M3, Qwen3.7 Plus and Qwen3.7 Max. Default models change for 67 other providers, mostly to Kimi K3.1 Pro, Gemini 4 Neon (including the &lt;code&gt;gemini&lt;/code&gt; and &lt;code&gt;vertex&lt;/code&gt; providers) or DeepSeek V4.1 Flash 1017&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Full Changelog&lt;/strong&gt;: &lt;a class=&quot;commit-link&quot; href=&quot;https://github.com/cline/cline/compare/cli-v3.0.74...cli-v3.0.75&quot;&gt;&lt;tt&gt;cli-v3.0.74...cli-v3.0.75&lt;/tt&gt;&lt;/a&gt;&lt;/p&gt;</content>
+    <author>
+      <name>github-actions[bot]</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4"/>
+  </entry>
+  <entry>
+    <id>tag:github.com,2008:Repository/824874689/desktop-nightly-20261104233655</id>
+    <updated>2026-11-04T21:08:20Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/cline/cline/releases/tag/desktop-nightly-20261104233655"/>
+    <title>desktop-nightly-20261104233655: feat(core): delegate UX verification to subagents (#15523)</title>
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;feat(core): delegate UX verification to a subagent&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fix(agents): preserve delegated tool approval policies&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fix(core): preserve worker identity and proxied execution mode&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fix(core): preserve child identity across Hub event projection&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <author>
+      <name>abeatrix</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/68532117?s=60&amp;v=4"/>
+  </entry>
+</feed>

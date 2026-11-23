@@ -68,6 +68,7 @@
     "providers": [
       "cloudflare-ai-gateway",
       "commandcode",
+      "concentrate",
       "edenai",
       "infersia",
       "kenari",
@@ -105,6 +106,17 @@
             "input": 0,
             "output": 0,
             "cache_read": 0
+          }
+        }
+      ],
+      "concentrate": [
+        {
+          "id": "beam-1.0-501b-a23b",
+          "name": "Beam 1.0 501B A23B",
+          "cost": {
+            "input": 0.4,
+            "output": 1.2,
+            "cache_read": 0.04
           }
         }
       ],
@@ -229,9 +241,9 @@
           "id": "reflection/beam-1.0-501b-a23b",
           "name": "Beam 1.0 501B A23B",
           "cost": {
-            "input": 0.3,
+            "input": 0.25,
             "output": 1,
-            "cache_read": 0.04
+            "cache_read": 0.05
           }
         }
       ],
@@ -316,7 +328,7 @@
         "self": true
       }
     ],
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-23"
   },
   "builds": [
     {
@@ -362,11 +374,11 @@
     {
       "kind": "hugging-face",
       "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B",
-      "retrieved_at": "2026-11-19"
+      "retrieved_at": "2026-11-23"
     }
   ],
-  "verified_at": "2026-11-19",
-  "updated_at": "2026-11-19",
+  "verified_at": "2026-11-23",
+  "updated_at": "2026-11-23",
   "notes": "4 builds are attached.",
   "scorecard": {
     "overall": {
@@ -520,7 +532,7 @@
       "band": "moderate",
       "note": "Independent listings, not quality. The model's own host has weight 0."
     },
-    "as_of": "2026-11-19",
+    "as_of": "2026-11-23",
     "method": "Openness/Morality is computed from current release terms. Performance/Intelligence is the model's current task or benchmark result. Citation/Research uses current research benchmarks and does not claim citation accuracy. Syndication is current independent listings. The axes are independent; a missing score is not zero.",
     "source": "internal://democratic-ai/scorecard-v2"
   }
